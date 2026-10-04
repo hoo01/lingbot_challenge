@@ -5,6 +5,9 @@
 当前路径已经在 A100 40GB 上验证：真实 6B 权重加载、partial Action Expert 更新、
 checkpoint 保存、断点恢复、完整 HF 权重导出、SwanLab 续接和 HF 私有仓库备份。
 
+`setup_train.sh` 会安装已验证的 SwanLab `0.10.1`，但登录凭据不会随仓库迁移。每台新
+训练机仍需由使用者执行一次 `swanlab login`，密钥不得写入脚本或 YAML。
+
 训练器目前是**单 GPU 实现**。计划使用的 4 张 A800 到位后，必须先实现并验证
 DDP/FSDP，再增加正式多卡配置。不要直接用 `torchrun` 启动当前脚本，否则多个进程
 会各自训练并争用同一输出目录。
@@ -13,6 +16,7 @@ DDP/FSDP，再增加正式多卡配置。不要直接用 `torchrun` 启动当前
 
 ```bash
 bash train/setup_train.sh /data/lingbot-vla-robotwin
+swanlab login
 PROJECT_ROOT=/data/lingbot-vla-robotwin \
   bash train/train.sh train/configs/train_smoke.yaml --allow-subset
 PROJECT_ROOT=/data/lingbot-vla-robotwin \

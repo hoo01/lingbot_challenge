@@ -30,6 +30,7 @@ fi
 
 source "$CONDA_ROOT/etc/profile.d/conda.sh"
 conda activate lingbot-vla
+python -m pip install "swanlab==0.10.1"
 
 python - <<'PY'
 import torch
