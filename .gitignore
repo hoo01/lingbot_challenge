@@ -1,1 +1,13 @@
 .history/
+.cache/
+__pycache__/
+*.py[cod]
+.env
+models/
+artifacts/
+runs/
+swanlog/
+data/raw/
+data/raw_archives/
+data/lerobot/
+server_patch/full/
