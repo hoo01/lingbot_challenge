@@ -1,50 +1,87 @@
-# LingBot-VLA × RoboTwin 训练交付
+# LingBot-VLA × RoboTwin 比赛工程
 
-本仓库保存比赛准备期的训练、数据审计和复现材料。训练实现基于参考工程
-[`EclipseaHime017/lingbot-vla-robotwin`](https://github.com/EclipseaHime017/lingbot-vla-robotwin)。
+本仓库是队内的工程交付仓，用来组织 RoboTwin clean 数据准备、LingBot-VLA 后训练、
+评测接口以及复现文档。实际模型代码基于参考工程
+[`EclipseaHime017/lingbot-vla-robotwin`](https://github.com/EclipseaHime017/lingbot-vla-robotwin)，
+两个仓库在训练机上分开放置，本仓库提供脚本、配置、审计结果和交接说明。
 
-## 当前状态
-
-- A100 40GB 上已完成真实 6B 单卡训练、保存、断点恢复和 HF 权重导出。
-- SwanLab 初始化、指标上传及同一 run 断点续接已验证。
-- Hugging Face 私有仓库备份、回下载和 SHA-256 一致性校验已验证。
-- `open_microwave` 的 50 条 clean demonstrations 已完成端到端冒烟。
-- 50 任务 × 50 条 clean 数据的归一化统计已完成独立审计。
-- 全量数据转换、最终 provenance 和多卡训练尚未执行。
-
-详细记录见 [`杨_进度.md`](./杨_进度.md)，比赛约束和分工见
-[`队内任务书_1008.md`](./队内任务书_1008.md)。
-
-## 目录
+## 工程流程
 
 ```text
-train/                       训练环境、启动、恢复和备份入口
-data/                        clean 数据准备、校验和归一化统计
-robotwin_clean_data_audit/   50 任务 clean 数据专项审计
-server_patch/                已在云端验证的 SwanLab 接入补丁和完整文件
-官方文档/                   赛题规则与常见问题
+官方 RoboTwin clean 数据
+        │
+        ▼
+data/：下载、转换、划分、归一化统计与完整性校验
+        │
+        ├── clean_manifest.json
+        ├── norm_stats_clean.json
+        └── norm_stats_clean.provenance.json
+        │
+        ▼
+train/：环境、训练、日志、断点恢复、导出与异地备份
+        │
+        ├── training.pt（可恢复状态）
+        └── hf_ckpt/（评测/提交权重）
+        │
+        ▼
+eval/：仿真评测与官方复测入口（由评测负责人维护）
 ```
 
-## 推荐流程
+## 模块分工
+
+| 模块 | 负责内容 | 当前状态 | 详细说明 |
+| --- | --- | --- | --- |
+| `data/` | clean 数据下载、LeRobot v3.0 转换、manifest、norm stats、provenance 和校验 | 脚本已交付；全量转换等 A800 平台执行 | [`data/README.md`](./data/README.md) |
+| `train/` | 环境安装、训练入口、恢复、SwanLab 日志、HF checkpoint 备份 | 单卡链路已验证；4 卡 DDP/FSDP 待实现 | [`train/README.md`](./train/README.md) |
+| `eval/` | 仿真环境、子集评测、`eval.sh` 和结果记录 | 由队友夏维护，当前尚未合入 | `eval/README.md`（待添加） |
+| `robotwin_clean_data_audit/` | 50×50 clean 数据兼容性、关节角和归一化统计审计 | 已完成 | 目录内报告 |
+| `server_patch/` | 已验证但尚未进入上游训练工程的补丁 | SwanLab 补丁已保存 | patch 文件 |
+
+## 两个仓库的关系
+
+建议在训练机上使用以下布局：
+
+```text
+/data/lingbot_challenge/        # 本交付仓库
+/data/lingbot-vla-robotwin/     # 实际训练工程、模型和数据
+```
+
+本仓库不保存基座权重、原始数据、转换后视频、checkpoint、token 或 SwanLab 本地日志。
+脚本通过参数或 `PROJECT_ROOT` 操作实际训练工程。
+
+## 从新机器开始
 
 ```bash
-# 在本交付仓库根目录执行，训练工程位于另一目录
+git clone https://github.com/hoo01/lingbot_challenge.git /data/lingbot_challenge
+# 另行取得参考训练工程到 /data/lingbot-vla-robotwin
+
+cd /data/lingbot_challenge
 bash train/setup_train.sh /data/lingbot-vla-robotwin
+swanlab login
+
+# A800 正式平台：下载并转换完整 50×50 clean 数据
 bash data/prepare_data.sh /data/lingbot-vla-robotwin
+
+# 数据验收通过后才能训练
 PROJECT_ROOT=/data/lingbot-vla-robotwin \
   bash train/train.sh train/configs/train_single_gpu.yaml
 ```
 
-正式训练前必须先完成 README 中标注的检查，尤其是：
+当前训练器只验证过单 GPU。上面的单卡配置用于链路验证和候选参数测试；正式 4 卡长训
+必须先实现并验证 DDP/FSDP，不能直接用 `torchrun` 启动当前脚本。
 
-1. manifest 必须包含 50 个任务、每任务 50 个 clean episodes；
-2. norm stats、provenance sidecar 和 manifest 必须互相绑定并记录 SHA-256；
-3. 训练与推理必须使用同一份 norm stats；
-4. 当前训练器只验证过单 GPU，不能直接用 `torchrun` 冒充四卡训练；
-5. token、模型权重、原始数据、checkpoint 和 SwanLab 本地日志不得提交到 Git。
+## 关键约束
 
-## 最终交接
+1. 训练数据只能包含 50 个任务、每任务 50 条的 clean demonstrations。
+2. manifest、norm stats 和 provenance sidecar 必须绑定并记录 SHA-256。
+3. 训练与推理必须使用同一份 norm stats。
+4. 正式长训前必须验证 SwanLab、checkpoint 恢复和外部备份。
+5. LoRA 路线如被采用，提交前必须合并回基座并导出全量权重。
+6. `eval.sh` 和最终提交目录结构仍需结合官方说明完成。
 
-每个候选 checkpoint 至少要一起交接：训练配置、clean manifest、norm stats、
-provenance sidecar、上述文件的 SHA-256、推理配置、SwanLab run ID 和恢复说明。
-LoRA 路线如被采用，提交前必须合并回基座并导出全量权重。
+## 文档入口
+
+- 比赛分工与交付清单：[`队内任务书_1008.md`](./队内任务书_1008.md)
+- 杨在临时 A100 上完成的冒烟测试及 A800 交接：[`杨_进度.md`](./杨_进度.md)
+- 个人研究思路与待验证方向：`自查.md`（不属于工程 README）
+- 官方规则整理：`官方文档/`

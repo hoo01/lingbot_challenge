@@ -1,6 +1,48 @@
 # 数据端
 
-## 硬约束
+## 这个模块做什么
+
+`data/` 负责把官方 RoboTwin 2.0 clean demonstrations 变成训练器可以安全读取、可以
+追溯的数据输入。它不仅做格式转换，还负责阻止以下静默错误：混入 randomized 数据、
+任务或 episode 缺失、LeRobot 版本不兼容、训练/推理归一化统计不一致，以及 provenance
+和实际文件不匹配。
+
+处理流程：
+
+```text
+Hugging Face 官方 clean 原始包
+        ↓ 下载和校验
+原始 episode 数据
+        ↓ prepare_data.py
+LeRobot v3.0 数据集 + 训练/验证划分
+        ↓ 全量统计
+manifest + norm stats + provenance sidecar
+        ↓ verify_clean_data.py
+通过验收后交给 train/
+```
+
+## 输入与输出
+
+输入是官方 `TianxingChen/RoboTwin2.0` 中 Aloha-AgileX 的 50×50 clean demonstrations。
+
+| 输出 | 作用 | 是否进入 Git |
+| --- | --- | --- |
+| `data/lerobot/` | 转换后的图像、状态、动作和指令 | 否，体积大 |
+| `clean_manifest.json` | 任务、episode、路径及 clean-only 状态 | 正式版本需要交接 |
+| `norm_stats_clean.json` | 动作/状态归一化与反归一化 | 是 |
+| `norm_stats_clean.provenance.json` | 绑定 manifest、验证划分和 norm SHA | 正式生成后交接 |
+| `SHA256SUMS` | 锁定交接文件版本 | 是 |
+
+## 文件说明
+
+| 文件 | 作用 |
+| --- | --- |
+| `prepare_data.sh` | 在实际训练工程中下载并转换完整 clean 数据，同时生成统计与 provenance |
+| `verify_clean_data.py` | fail-closed 验收任务数、episode 数、格式、clean-only 和 SHA 绑定 |
+| `norm_stats_clean.json` | 基于 50×50 HF clean 包得到的独立审计统计副本 |
+| `SHA256SUMS` | 当前审计统计副本的哈希；正式重算后必须更新 |
+
+## 数据硬约束
 
 - 只允许 RoboTwin 2.0 Aloha-AgileX clean demonstrations；禁止混入 randomized 数据。
 - 完整规格是 50 tasks × 50 episodes。
@@ -8,9 +50,9 @@
 - 训练和推理必须使用同一份 clean norm stats。
 - norm stats 必须和最终 manifest、验证集划分及 provenance sidecar 一起锁定。
 
-## 准备
+## 操作流程
 
-在 `lingbot-vla-robotwin` 工程根目录运行：
+在本交付仓库根目录运行；脚本通过参数操作实际训练工程：
 
 ```bash
 bash data/prepare_data.sh /data/lingbot-vla-robotwin
@@ -19,7 +61,9 @@ bash data/prepare_data.sh /data/lingbot-vla-robotwin
 脚本不带任务过滤器，因此面向完整 clean 数据。正式启动长训前必须再运行：
 
 ```bash
-python data/verify_clean_data.py
+python data/verify_clean_data.py \
+  --manifest /data/lingbot-vla-robotwin/data/clean_manifest.json \
+  --norm-stats /data/lingbot-vla-robotwin/data/norm_stats_clean.json
 ```
 
 校验器采用 fail-closed 策略：任务数、episode 数、clean-only、LeRobot 版本、provenance
