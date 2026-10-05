@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "default_server": "rented-5090",
+  "servers": {
+    "rented-5090": {
+      "label": "租用 5090",
+      "ssh": {
+        "host": "ssh.bj8.bz1.paratera.com",
+        "port": 2233,
+        "user": "root@ackcs-00gjhs2c",
+        "preferred_authentications": "password",
+        "address_family": "inet"
+      },
+      "reuse_runtime": "/root/shared-nvme/lingbot-eval",
+      "runtime_root": "/root/shared-nvme/lingbot-eval-team",
+      "web_port": 8788,
+      "local_port": 18788,
+      "gpu": "0",
+      "note": "默认评测服务器"
+    }
+  }
+}

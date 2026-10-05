@@ -1,0 +1,1411 @@
+{
+  "protocol": "official_defaults_all50_valid5_v1",
+  "groups": [
+    {
+      "task": "adjust_bottle",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100015
+      ]
+    },
+    {
+      "task": "adjust_bottle",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "beat_block_hammer",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "beat_block_hammer",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "blocks_ranking_rgb",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "blocks_ranking_rgb",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "blocks_ranking_size",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "blocks_ranking_size",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "click_alarmclock",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "click_alarmclock",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "click_bell",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "click_bell",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100013,
+        100016,
+        100017,
+        100019
+      ]
+    },
+    {
+      "task": "grab_roller",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "grab_roller",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "handover_mic",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "handover_mic",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "hanging_mug",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "hanging_mug",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "lift_pot",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "lift_pot",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100011,
+        100012,
+        100014,
+        100016,
+        100017
+      ]
+    },
+    {
+      "task": "move_can_pot",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_can_pot",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100012,
+        100015,
+        100016,
+        100017
+      ]
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "move_playingcard_away",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_playingcard_away",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_stapler_pad",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_stapler_pad",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "open_laptop",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "open_laptop",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "open_microwave",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "open_microwave",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "pick_diverse_bottles",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100012,
+        100013,
+        100014,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "pick_diverse_bottles",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100013,
+        100020,
+        100024,
+        100025
+      ]
+    },
+    {
+      "task": "pick_dual_bottles",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "pick_dual_bottles",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100015
+      ]
+    },
+    {
+      "task": "place_a2b_left",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_a2b_left",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_a2b_right",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_a2b_right",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_bread_basket",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_bread_basket",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_bread_skillet",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_bread_skillet",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "place_burger_fries",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_burger_fries",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100012,
+        100014,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "place_can_basket",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_can_basket",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_cans_plasticbox",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_cans_plasticbox",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_container_plate",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_container_plate",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100015
+      ]
+    },
+    {
+      "task": "place_dual_shoes",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "place_dual_shoes",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_empty_cup",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_empty_cup",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_fan",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_fan",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_mouse_pad",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_mouse_pad",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "place_object_basket",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_object_basket",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100014,
+        100018
+      ]
+    },
+    {
+      "task": "place_object_scale",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_object_scale",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_object_stand",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_object_stand",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_phone_stand",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_phone_stand",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "place_shoe",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_shoe",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "press_stapler",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "press_stapler",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100015,
+        100016,
+        100017,
+        100018
+      ]
+    },
+    {
+      "task": "put_object_cabinet",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "put_object_cabinet",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "rotate_qrcode",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "rotate_qrcode",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100011,
+        100013,
+        100014,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "scan_object",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "scan_object",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100012,
+        100013,
+        100014,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "shake_bottle",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100013,
+        100015,
+        100018,
+        100020,
+        100021
+      ]
+    },
+    {
+      "task": "shake_bottle",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "shake_bottle_horizontally",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100013,
+        100015,
+        100018,
+        100020,
+        100021
+      ]
+    },
+    {
+      "task": "shake_bottle_horizontally",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "stack_blocks_three",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_blocks_three",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_blocks_two",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_blocks_two",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_bowls_three",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_bowls_three",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100012,
+        100014,
+        100015,
+        100016,
+        100018
+      ]
+    },
+    {
+      "task": "stack_bowls_two",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_bowls_two",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "stamp_seal",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stamp_seal",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100015
+      ]
+    },
+    {
+      "task": "turn_switch",
+      "setting": "demo_clean",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "turn_switch",
+      "setting": "demo_randomized",
+      "target_valid": 5,
+      "valid": 5,
+      "missing": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    }
+  ],
+  "valid": 500,
+  "attempted": 581,
+  "successes": 52,
+  "initialization_failures": 81,
+  "selection": "First 5 valid scenes in the fixed scan and ascending supplements; independent of policy success",
+  "completed_at": "2026-10-05T00:44:26.158732+00:00"
+}

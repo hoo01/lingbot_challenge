@@ -1,0 +1,1501 @@
+{
+  "description": "Raw pretrained LingBot-VLA v2; official inference defaults, unfiltered development scenes",
+  "official_benchmark": false,
+  "model": {
+    "repo": "robbyant/lingbot-vla-v2-6b",
+    "revision": "11c703bf6a5c1f45b3b69168482da11fdbba53d7",
+    "robotwin_sft": false
+  },
+  "inference": {
+    "dtype": "fp32",
+    "execute": 50,
+    "matmul_precision": "high",
+    "moe_backend": "official",
+    "vision_device": "cuda",
+    "embedding_device": "cuda",
+    "flow_noise_generation": "upstream_native",
+    "sampling_seed_at_process_start": 42,
+    "sampling_seed_per_episode": null,
+    "use_compile": true,
+    "image_size": 256,
+    "num_steps": 10,
+    "vit_attn_implementation": "flash_attention_2",
+    "precompute_grid_thw": true,
+    "inference_profile": "official_defaults_v1",
+    "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+    "normalization_sha256": "9663de18b706c0faf4236f96dcfc977c11d3771245a18c61ee16bdc7ad4071b8"
+  },
+  "completion": {
+    "complete": true,
+    "valid": 500,
+    "successes": 52,
+    "attempted": 584,
+    "recorded_attempts": 581,
+    "initialization_failures": 81,
+    "execution_errors": 0,
+    "preserved_execution_error_attempts": 3,
+    "unrecorded_execution_attempts": [
+      {
+        "task": "handover_mic",
+        "setting": "demo_clean",
+        "seed": 100011,
+        "time": "2026-10-03T19:15:46.792793+00:00",
+        "error": "RuntimeError('Isolated simulator worker exited -11; preserve its records')",
+        "status": "infrastructure_interruption"
+      },
+      {
+        "task": "lift_pot",
+        "setting": "demo_randomized",
+        "seed": 100011,
+        "time": "2026-10-03T20:43:24.607209+00:00",
+        "error": "RuntimeError('Isolated simulator worker exited -11; preserve its records')",
+        "status": "infrastructure_interruption"
+      },
+      {
+        "task": "open_microwave",
+        "setting": "demo_clean",
+        "seed": 100011,
+        "time": "2026-10-03T23:45:13.386446+00:00",
+        "error": "TimeoutError('Episode exceeded 900s; PID 53541')",
+        "status": "infrastructure_interruption"
+      }
+    ],
+    "groups_completed": 100,
+    "groups_total": 100
+  },
+  "success_rate": 0.104,
+  "by_setting": {
+    "demo_clean": {
+      "valid": 250,
+      "successes": 27,
+      "initialization_failures": 20
+    },
+    "demo_randomized": {
+      "valid": 250,
+      "successes": 25,
+      "initialization_failures": 61
+    }
+  },
+  "time": {
+    "first_queue_utc": "2026-10-03T17:24:47.665751+00:00",
+    "completion_utc": "2026-10-05T00:44:26.163142+00:00",
+    "calendar_elapsed_seconds": 112778.497391,
+    "valid_episode_seconds_sum": 87229.94056941941,
+    "initialization_seconds_sum": 1490.5632923319936,
+    "valid_seconds_mean": 174.45988113883882,
+    "valid_seconds_median": 141.01857528463006
+  },
+  "groups": [
+    {
+      "task": "adjust_bottle",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100015
+      ]
+    },
+    {
+      "task": "adjust_bottle",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 2,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "beat_block_hammer",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "beat_block_hammer",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "blocks_ranking_rgb",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "blocks_ranking_rgb",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "blocks_ranking_size",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "blocks_ranking_size",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "click_alarmclock",
+      "setting": "demo_clean",
+      "successes": 1,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "click_alarmclock",
+      "setting": "demo_randomized",
+      "successes": 2,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "click_bell",
+      "setting": "demo_clean",
+      "successes": 1,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "click_bell",
+      "setting": "demo_randomized",
+      "successes": 2,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 2,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 5,
+      "valid_seeds": [
+        100010,
+        100013,
+        100016,
+        100017,
+        100019
+      ]
+    },
+    {
+      "task": "grab_roller",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "grab_roller",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 2,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "handover_mic",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "handover_mic",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "hanging_mug",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "hanging_mug",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "lift_pot",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "lift_pot",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 3,
+      "valid_seeds": [
+        100011,
+        100012,
+        100014,
+        100016,
+        100017
+      ]
+    },
+    {
+      "task": "move_can_pot",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_can_pot",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 3,
+      "valid_seeds": [
+        100010,
+        100012,
+        100015,
+        100016,
+        100017
+      ]
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "move_playingcard_away",
+      "setting": "demo_clean",
+      "successes": 1,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_playingcard_away",
+      "setting": "demo_randomized",
+      "successes": 1,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_stapler_pad",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "move_stapler_pad",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "open_laptop",
+      "setting": "demo_clean",
+      "successes": 1,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "open_laptop",
+      "setting": "demo_randomized",
+      "successes": 2,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "open_microwave",
+      "setting": "demo_clean",
+      "successes": 5,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "open_microwave",
+      "setting": "demo_randomized",
+      "successes": 4,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "pick_diverse_bottles",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 2,
+      "valid_seeds": [
+        100012,
+        100013,
+        100014,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "pick_diverse_bottles",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 11,
+      "valid_seeds": [
+        100010,
+        100013,
+        100020,
+        100024,
+        100025
+      ]
+    },
+    {
+      "task": "pick_dual_bottles",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "pick_dual_bottles",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100015
+      ]
+    },
+    {
+      "task": "place_a2b_left",
+      "setting": "demo_clean",
+      "successes": 2,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_a2b_left",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_a2b_right",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_a2b_right",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_bread_basket",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_bread_basket",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_bread_skillet",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_bread_skillet",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "place_burger_fries",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_burger_fries",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 2,
+      "valid_seeds": [
+        100010,
+        100012,
+        100014,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "place_can_basket",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_can_basket",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_cans_plasticbox",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_cans_plasticbox",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_container_plate",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_container_plate",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100015
+      ]
+    },
+    {
+      "task": "place_dual_shoes",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100011,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "place_dual_shoes",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_empty_cup",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_empty_cup",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_fan",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_fan",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_mouse_pad",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_mouse_pad",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "place_object_basket",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_object_basket",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 4,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100014,
+        100018
+      ]
+    },
+    {
+      "task": "place_object_scale",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_object_scale",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_object_stand",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_object_stand",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_phone_stand",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_phone_stand",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "place_shoe",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "place_shoe",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100012,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "press_stapler",
+      "setting": "demo_clean",
+      "successes": 5,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "press_stapler",
+      "setting": "demo_randomized",
+      "successes": 5,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 4,
+      "valid_seeds": [
+        100010,
+        100015,
+        100016,
+        100017,
+        100018
+      ]
+    },
+    {
+      "task": "put_object_cabinet",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "put_object_cabinet",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "rotate_qrcode",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "rotate_qrcode",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 2,
+      "valid_seeds": [
+        100011,
+        100013,
+        100014,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "scan_object",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "scan_object",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 2,
+      "valid_seeds": [
+        100012,
+        100013,
+        100014,
+        100015,
+        100016
+      ]
+    },
+    {
+      "task": "shake_bottle",
+      "setting": "demo_clean",
+      "successes": 4,
+      "valid": 5,
+      "initialization_failures": 7,
+      "valid_seeds": [
+        100013,
+        100015,
+        100018,
+        100020,
+        100021
+      ]
+    },
+    {
+      "task": "shake_bottle",
+      "setting": "demo_randomized",
+      "successes": 2,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "shake_bottle_horizontally",
+      "setting": "demo_clean",
+      "successes": 3,
+      "valid": 5,
+      "initialization_failures": 7,
+      "valid_seeds": [
+        100013,
+        100015,
+        100018,
+        100020,
+        100021
+      ]
+    },
+    {
+      "task": "shake_bottle_horizontally",
+      "setting": "demo_randomized",
+      "successes": 3,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "stack_blocks_three",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_blocks_three",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_blocks_two",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_blocks_two",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_bowls_three",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_bowls_three",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 4,
+      "valid_seeds": [
+        100012,
+        100014,
+        100015,
+        100016,
+        100018
+      ]
+    },
+    {
+      "task": "stack_bowls_two",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stack_bowls_two",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100013,
+        100014,
+        100015
+      ]
+    },
+    {
+      "task": "stamp_seal",
+      "setting": "demo_clean",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "stamp_seal",
+      "setting": "demo_randomized",
+      "successes": 0,
+      "valid": 5,
+      "initialization_failures": 1,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100015
+      ]
+    },
+    {
+      "task": "turn_switch",
+      "setting": "demo_clean",
+      "successes": 4,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    },
+    {
+      "task": "turn_switch",
+      "setting": "demo_randomized",
+      "successes": 4,
+      "valid": 5,
+      "initialization_failures": 0,
+      "valid_seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ]
+    }
+  ],
+  "evidence": {
+    "frozen_manifest_sha256": "7fa143b30d25c9ae4175e1bfdf1ed9839d5bfa2174a5c8bbc27d2f623cde5d83",
+    "protocol_sha256": "d480a54a5e70e87331a2766fa842cb638f344bab2a47fd7a1b2e9055da8f5c83",
+    "source_episode_records_sha256": "d7bbae9f3d13be98911f61024335323c45e3bcc2fe46b7995de1278caf35c7bd",
+    "original_verification_sha256": "334daba2b341c6c799936d4a0ba4b5cd5ed8750efdc89c6ff7ebdadebb521b68",
+    "total_action_chunks": 5685,
+    "total_executed_actions": 282726,
+    "initial_final_pngs_decoded": 3000,
+    "videos_metadata_checked": 59,
+    "videos_fully_decoded_sample": 3
+  }
+}

@@ -1,0 +1,7 @@
+# Versions recorded from the existing evaluation web environment.
+fastapi==0.142.2
+uvicorn==0.54.0
+PyYAML==6.0.3
+# Local contract/API tests only; no torch/model/simulator import in this env.
+httpx==0.28.1
+pytest==9.1.1
