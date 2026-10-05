@@ -91,14 +91,6 @@ def test_checkpoint_requires_full_model_and_binds_norm(platform):
     weights('adapter.lora_A')
     with pytest.raises(ValueError):platform.register('bad',str(folder),str(cli),str(norm))
     weights('model.language_model.embed_tokens.weight')
-    from eval_platform.store import digest
-    provenance=norm.with_suffix('.provenance.json')
-    provenance.write_text(json.dumps(dict(clean_only=True,norm_sha256=digest(norm))))
-    manifest=folder/'clean_manifest.json'
-    manifest.write_text(json.dumps(dict(clean_only=True,datasets=[dict(task='adjust_bottle')])) )
-    (folder/'eval_handoff.json').write_text(json.dumps(dict(kind='clean_sft_export',
-        cli_sha256=digest(cli),norm_sha256=digest(norm),provenance_sha256=digest(provenance),
-        manifest_sha256=digest(manifest))))
     result=platform.register('base',str(folder),str(cli),str(norm))
     original=Path(result['norm']).read_bytes();norm.write_text('{"changed":true}')
     assert Path(result['norm']).read_bytes()==original

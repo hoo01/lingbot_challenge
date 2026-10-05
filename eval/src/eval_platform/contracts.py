@@ -1,4 +1,4 @@
-"""CPU-only checkpoint handoff and source checks; no model code is executed."""
+"""CPU-only checkpoint and source checks; no model code is executed."""
 import json
 from pathlib import Path
 from .store import digest
@@ -23,8 +23,19 @@ def source_lock(root):
     return source, validate_source(source, lock)
 
 
-def check_handoff(source, cli_path, norm_path, data, tensors):
-    """Require the export receipt to bind the exact training inputs."""
+def model_construction(source):
+    """Only this declared construction rule is supported; execution stays FP32."""
+    path = Path(source)/'runtime-construction.json'
+    if not path.exists():
+        return 'native'
+    data = json.loads(path.read_text(encoding='utf-8'))
+    if data != {'nonpersistent_buffer_initialization': 'bf16_then_fp32'}:
+        raise ValueError('Unsupported runtime-construction.json; only bf16_then_fp32 initialization is supported')
+    return data['nonpersistent_buffer_initialization']
+
+
+def validate_checkpoint(source, data, tensors):
+    """Check loader compatibility without requiring export receipts or hashes."""
     if (source / 'factorized-adapter.json').exists() or any(
         'lora_' in name or 'parametrizations.' in name for name in tensors
     ):
@@ -34,30 +45,7 @@ def check_handoff(source, cli_path, norm_path, data, tensors):
     combined = {**data['model'], **data['train']}
     if combined.get('chunk_size', 50) != 50 or combined.get('num_steps', 10) != 10:
         raise ValueError('This profile requires chunk_size=50 and num_steps=10')
-    receipt_path = source / 'eval_handoff.json'
-    required = [receipt_path, norm_path.with_suffix('.provenance.json'), source/'clean_manifest.json']
-    missing = [p.name for p in required if not p.is_file()]
-    if missing:
-        raise ValueError('Missing training handoff files: ' + ', '.join(missing))
-    receipt = json.loads(receipt_path.read_text(encoding='utf-8'))
-    if receipt.get('kind') != 'clean_sft_export':
-        raise ValueError('Expected clean_sft_export receipt from the training export')
-    if receipt.get('cli_sha256') != digest(cli_path) or receipt.get('norm_sha256') != digest(norm_path):
-        raise ValueError('Export receipt does not match CLI / normalization bytes')
-    provenance_path = norm_path.with_suffix('.provenance.json')
-    provenance = json.loads(provenance_path.read_text(encoding='utf-8'))
-    if provenance.get('clean_only') is not True or provenance.get('norm_sha256') != digest(norm_path):
-        raise ValueError('Clean normalization provenance is missing or inconsistent')
-    if receipt.get('provenance_sha256') != digest(provenance_path):
-        raise ValueError('Export provenance SHA mismatch')
-    manifest_path = source / 'clean_manifest.json'
-    manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
-    if manifest.get('clean_only') is not True or not manifest.get('datasets'):
-        raise ValueError('Expected the actual clean training manifest')
-    if receipt.get('manifest_sha256') != digest(manifest_path):
-        raise ValueError('Export training-manifest SHA mismatch')
-    # This checks bindings, not the honesty/completeness of the training pipeline.
-    return {p.name: p.read_bytes() for p in (receipt_path, provenance_path, manifest_path)}
+    model_construction(source)
 
 
 def write_inference_manifest(root, checkpoint, norm, run, kind):

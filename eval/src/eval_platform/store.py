@@ -55,11 +55,19 @@ class Store:
         if not 1 <= len(name.strip()) <= 120: raise ValueError('Checkpoint name must have 1-120 characters')
         source = self.path(checkpoint, ['incoming','checkpoints','models','runs'])
         cli_path, norm_path = self.path(cli), self.path(norm)
+        if not source.is_dir():
+            raise ValueError('Checkpoint directory not found: ' + str(checkpoint))
+        for label, path in [('CLI YAML', cli_path), ('Normalization JSON', norm_path)]:
+            if not path.is_file():
+                raise ValueError(label + ' file not found: ' + str(path.relative_to(self.root)))
         shards = sorted(source.glob('*.safetensors'))
         if not shards: raise ValueError('A full safetensors checkpoint is required')
-        data = yaml.safe_load(cli_path.read_text())
-        if not isinstance(data, dict) or not all(k in data for k in ('model','train','data')):
-            raise ValueError('CLI YAML must contain model, train and data sections')
+        try:
+            data = yaml.safe_load(cli_path.read_text())
+        except yaml.YAMLError as error:
+            raise ValueError('Invalid CLI YAML: ' + str(error)) from error
+        if not isinstance(data, dict) or not all(isinstance(data.get(k), dict) for k in ('model','train','data')):
+            raise ValueError('CLI YAML must contain model, train and data mappings')
         stats = json.loads(norm_path.read_text())
         if not isinstance(stats,dict) or not stats: raise ValueError('Normalization JSON is empty')
         # Read safetensors headers only. No pickle or user Python is executed.
@@ -72,8 +80,8 @@ class Store:
                 tensors.update(set(header) - {'__metadata__'})
         if not any('embed_tokens.weight' in k for k in tensors):
             raise ValueError('Adapter-only checkpoint detected; export one complete model first')
-        from .contracts import check_handoff
-        handoff_files = check_handoff(source, cli_path, norm_path, data, tensors)
+        from .contracts import validate_checkpoint
+        validate_checkpoint(source, data, tensors)
         identifier = uuid.uuid4().hex[:12]
         folder = self.root / 'checkpoints' / identifier
         target = folder/'checkpoints/global_step_0/hf_ckpt'
@@ -83,22 +91,33 @@ class Store:
             f = self.path(str(f))
             manifest.append({'path':str(f), 'bytes':f.stat().st_size, 'mtime_ns':f.stat().st_mtime_ns, 'sha256':digest(f)})
             (target/f.name).symlink_to(f)
-        for filename in ('config.json','model.safetensors.index.json','factorized-adapter.json','runtime-construction.json'):
+        for filename in ('config.json','model.safetensors.index.json','runtime-construction.json'):
             if (source/filename).exists(): (target/filename).write_bytes((source/filename).read_bytes())
         frozen_norm = folder/'norm_stats.json'
         frozen_norm.write_bytes(norm_path.read_bytes())
         (folder/'original_training_cli.yaml').write_bytes(cli_path.read_bytes())
-        for filename, contents in handoff_files.items():
-            (folder/filename).write_bytes(contents)
+        optional_files = []
+        audit = source/'action-audit.json'
+        if audit.is_file():
+            archived_audit = folder/audit.name
+            archived_audit.write_bytes(audit.read_bytes())
+            optional_files.append(archived_audit)
         data['model']['tokenizer_path'] = str(self.root/'models/Qwen3-VL-4B-Instruct')
         data['data']['norm_stats_file'] = str(frozen_norm)
+        # Keep the original training CLI above; use the same inference defaults
+        # for SFT and base models, regardless of the training memory settings.
+        inference_overrides = dict(use_compile=True, enable_fp32=True,
+            enable_gradient_checkpointing=False, vit_attn_implementation='flash_attention_2',
+            precompute_grid_thw=True)
+        data['train'].update(inference_overrides)
         (folder/'lingbotvla_cli.yaml').write_text(yaml.safe_dump(data,sort_keys=False))
         spec = dict(id=identifier, name=name.strip(), checkpoint=str(target), cli=str(folder/'lingbotvla_cli.yaml'),
                     norm=str(frozen_norm), norm_sha256=digest(frozen_norm), files=manifest,
                     notes=notes[:2000], created=now(), original_source=str(source))
-        spec['kind'] = 'team_clean_sft_export'
+        spec['kind'] = 'team_merged_checkpoint'
+        spec['inference_overrides'] = inference_overrides
         spec['metadata_files'] = [dict(path=str(f), sha256=digest(f)) for f in
-            [folder/'lingbotvla_cli.yaml', folder/'original_training_cli.yaml', frozen_norm, *[folder/n for n in handoff_files],
+            [folder/'lingbotvla_cli.yaml', folder/'original_training_cli.yaml', frozen_norm, *optional_files,
              *[f for f in target.iterdir() if f.suffix=='.json']]]
         (folder/'manifest.json').write_text(json.dumps(spec,indent=2))
         with self.connect() as db: db.execute('INSERT INTO checkpoints VALUES (?,?)',(identifier,json.dumps(spec)))

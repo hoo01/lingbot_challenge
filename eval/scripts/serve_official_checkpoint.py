@@ -1,4 +1,4 @@
-"""Serve untouched upstream inference with the RoboTwin release defaults."""
+"""Serve pinned upstream inference with fixed defaults and declared construction."""
 import argparse
 import hashlib
 import json
@@ -17,8 +17,23 @@ sys.path.insert(0,str(source))
 import torch
 from deploy.lingbot_vla_v2_policy import LingbotVLAv2Server
 from deploy.websocket_policy_server import WebsocketPolicyServer
+from eval_platform.contracts import model_construction
 
-base=LingbotVLAv2Server(path_to_pi_model=manifest['checkpoint'],use_length=50,
+construction=model_construction(manifest['checkpoint'])
+if manifest['kind']=='original_pretrained_base_official_inference_defaults' and construction!='native':
+    raise ValueError('Original base must use native construction')
+
+
+class ExportServer(LingbotVLAv2Server):
+    def load_model_weights(self, path_to_pi_model, strict=True):
+        if construction=='bf16_then_fp32':
+            # Restore construction-time rounding of nonpersistent buffers BEFORE
+            # loading saved FP32 tensors, so learned weights are never rounded.
+            self.vla.bfloat16().float()
+        return super().load_model_weights(path_to_pi_model, strict=strict)
+
+
+base=ExportServer(path_to_pi_model=manifest['checkpoint'],use_length=50,
     robot_norm_path=manifest['normalization'],
     chunk_ret=True,use_bf16=False,use_fp32=True,use_compile=True)
 assert base.data_config.img_size==256 and base.config.num_steps==10
@@ -33,6 +48,7 @@ metadata={'checkpoint':manifest['checkpoint'],'dtype':'fp32','execute':50,
           'vit_attn_implementation':base.config.vit_attn_implementation,
           'precompute_grid_thw':base.config.precompute_grid_thw,
           'inference_profile':'official_defaults_v1','upstream_revision':manifest['official_revision'],
+          'nonpersistent_buffer_initialization':construction,
           'normalization_sha256':manifest['normalization_sha256']}
 (a.run/'server-runtime.json').write_text(json.dumps(metadata,indent=2))
 print(json.dumps({'event':'official_server_ready','metadata':metadata}),flush=True)

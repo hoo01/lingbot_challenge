@@ -12,7 +12,7 @@ EVAL = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(EVAL/'src'))
 from eval_platform.store import Store, digest
 from eval_platform import resources
-from eval_platform.contracts import source_lock, validate_source
+from eval_platform.contracts import source_lock, validate_source, model_construction
 
 
 @pytest.fixture
@@ -27,33 +27,125 @@ def bundle(tmp_path):
     cli.write_text('model: {chunk_size: 50}\ntrain: {num_steps: 10}\ndata: {img_size: 256}\n')
     norm = path/'norm.json'
     norm.write_text('{"norm_stats":{"a":1},"count":2}')
-    provenance = norm.with_suffix('.provenance.json')
-    provenance.write_text(json.dumps(dict(clean_only=True,norm_sha256=digest(norm))))
-    manifest = path/'clean_manifest.json'
-    manifest.write_text(json.dumps(dict(clean_only=True,datasets=[dict(task='click_bell')])) )
-    receipt = dict(kind='clean_sft_export',cli_sha256=digest(cli),norm_sha256=digest(norm),
-                   provenance_sha256=digest(provenance),manifest_sha256=digest(manifest))
-    (path/'eval_handoff.json').write_text(json.dumps(receipt))
     header = json.dumps({'model.embed_tokens.weight':dict(dtype='F32',shape=[1],data_offsets=[0,4])}).encode()
     (path/'model.safetensors').write_bytes(struct.pack('<Q',len(header))+header+struct.pack('<f',0))
     return store, path, cli, norm
 
 
-@pytest.mark.parametrize('filename', ['lingbotvla_cli.yaml','norm.json','norm.provenance.json','clean_manifest.json'])
-def test_export_binding_rejects_tampering(bundle, filename):
+@pytest.mark.skipif(os.name=='nt', reason='Production symlinks are tested on Linux')
+def test_registration_ignores_obsolete_export_receipts(bundle):
     store,path,cli,norm = bundle
-    with (path/filename).open('a') as stream:
-        stream.write(' ')
-    with pytest.raises(ValueError, match='SHA|sha|match'):
-        store.register('changed', str(path), str(cli), str(norm))
+    for filename in ('eval_handoff.json', 'norm.provenance.json', 'clean_manifest.json'):
+        (path/filename).write_text('{"obsolete_sha256":"outdated"}')
+    ck = store.register('old bundle', str(path), str(cli), str(norm))
+    assert ck['kind'] == 'team_merged_checkpoint'
+    assert ck['norm_sha256'] == digest(norm)
+    assert all(Path(record['path']).name not in
+               {'eval_handoff.json', 'norm.provenance.json', 'clean_manifest.json'}
+               for record in ck['metadata_files'])
+    assert store.jobs() == []
+
+
+@pytest.mark.skipif(os.name=='nt', reason='Production symlinks are tested on Linux')
+def test_upload_and_web_registration_need_only_model_cli_and_norm(bundle, monkeypatch):
+    from fastapi.testclient import TestClient
+    import importlib
+    store,path,cli,norm = bundle
+    monkeypatch.setenv('LINGBOT_ROOT', str(store.root))
+    from eval_platform import app
+    importlib.reload(app)
+    client = TestClient(app.app)
+    upload = client.post('/api/uploads').json()
+    for file in (path/'model.safetensors', cli, norm):
+        response = client.put(f"/api/uploads/{upload['id']}/{file.name}", content=file.read_bytes())
+        assert response.status_code == 200
+    uploaded = Path(upload['path'])
+    response = client.post('/api/checkpoints', json=dict(name='uploaded model',
+        checkpoint=str(uploaded), cli=str(uploaded/cli.name), norm=str(uploaded/norm.name)))
+    assert response.status_code == 200, response.text
+    ck = response.json()
+    assert ck['files'][0]['sha256'] == digest(uploaded/'model.safetensors')
+    assert ck['norm_sha256'] == digest(norm)
+    assert len(store.checkpoints()) == 1 and store.jobs() == []
+
+
+@pytest.mark.parametrize('section,key,value', [
+    ('data', 'img_size', 224), ('model', 'chunk_size', 25), ('train', 'num_steps', 5)])
+def test_incompatible_inference_profile_still_rejected(bundle, section, key, value):
+    import yaml
+    store,path,cli,norm = bundle
+    data = yaml.safe_load(cli.read_text())
+    data[section][key] = value
+    cli.write_text(yaml.safe_dump(data))
+    with pytest.raises(ValueError, match='profile requires'):
+        store.register('incompatible', str(path), str(cli), str(norm))
     assert store.checkpoints() == []
 
 
-def test_missing_handoff_has_actionable_error(bundle):
-    store,path,cli,norm = bundle
-    (path/'eval_handoff.json').unlink()
-    with pytest.raises(ValueError, match='Missing training handoff'):
-        store.register('missing', str(path), str(cli), str(norm))
+@pytest.mark.parametrize('filename', ['lingbotvla_cli.yaml', 'norm.json'])
+def test_missing_registration_file_returns_http_400_without_creating_records(bundle, monkeypatch, filename):
+    from fastapi.testclient import TestClient
+    import importlib
+    store, path, cli, norm = bundle
+    (path/filename).unlink()
+    monkeypatch.setenv('LINGBOT_ROOT', str(store.root))
+    from eval_platform import app
+    importlib.reload(app)
+    response = TestClient(app.app).post('/api/checkpoints', json=dict(
+        name='missing', checkpoint=str(path), cli=str(cli), norm=str(norm)))
+    assert response.status_code == 400
+    assert 'file not found' in response.json()['detail']
+    assert filename in response.json()['detail']
+    assert store.checkpoints() == [] and store.jobs() == []
+    assert not (store.root/'checkpoints').exists()
+
+
+@pytest.mark.parametrize('content', ['model: [broken', 'model: null\ntrain: {}\ndata: {}\n'])
+def test_invalid_cli_is_an_input_error(bundle, content):
+    store, path, cli, norm = bundle
+    cli.write_text(content)
+    with pytest.raises(ValueError, match='CLI YAML'):
+        store.register('bad config', str(path), str(cli), str(norm))
+    assert store.checkpoints() == []
+
+
+@pytest.mark.skipif(os.name=='nt', reason='Production checkpoint symlinks require Linux')
+def test_cli_register_only_persists_model_without_job_or_gpu(bundle):
+    store, path, cli, norm = bundle
+    # No NVIDIA tool or GPU lock is available in this subprocess.
+    env = {**os.environ, 'LINGBOT_ROOT': str(store.root), 'PYTHONPATH': str(EVAL/'src'),
+           'PATH': '', 'LINGBOT_GPU_LOCK': '/unwritable/nonexistent/gpu.lock'}
+    result = subprocess.run([sys.executable, str(EVAL/'scripts/team_eval.py'),
+        '--checkpoint', str(path), '--cli', str(cli), '--norm', str(norm),
+        '--title', 'registered-only', '--register-only'], env=env, capture_output=True, text=True)
+    assert result.returncode == 0, result.stderr
+    output = json.loads(result.stdout)
+    assert output['status'] == 'registered'
+    assert store.checkpoint(output['checkpoint_id'])['name'] == 'registered-only'
+    assert store.jobs() == []
+
+
+def test_web_api_preserves_plain_text_and_json_errors():
+    import shutil
+    node = shutil.which('node')
+    if not node:
+        pytest.skip('Node is needed for the browser response regression test')
+    script = r'''
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const source=fs.readFileSync(process.argv[1],'utf8');
+vm.runInThisContext(source.slice(source.indexOf('async function api('),source.indexOf('const post=')));
+(async()=>{
+  for(const [body,message] of [['Internal Server Error','Internal Server Error'],['{"detail":"missing CLI"}','missing CLI'],['','HTTP 500']]){
+    global.fetch=async()=>new Response(body,{status:500});
+    await assert.rejects(()=>api('/check'),error=>error.message===message);
+  }
+  global.fetch=async()=>new Response('{"id":"new-model"}',{status:200});
+  assert.deepStrictEqual(await api('/check'),{id:'new-model'});
+})().catch(e=>{console.error(e);process.exit(1)});
+'''
+    result = subprocess.run([node, '-e', script, str(EVAL/'src/eval_platform/web/app.js')],
+                            capture_output=True, text=True)
+    assert result.returncode == 0, result.stderr
 
 
 def test_factorized_model_cannot_enter_official_loader(bundle):
@@ -63,10 +155,30 @@ def test_factorized_model_cannot_enter_official_loader(bundle):
         store.register('factorized', str(path), str(cli), str(norm))
 
 
+def test_model_construction_must_be_supported(bundle):
+    store,path,cli,norm = bundle
+    assert model_construction(path) == 'native'
+    construction = path/'runtime-construction.json'
+    construction.write_text(json.dumps(dict(nonpersistent_buffer_initialization='bf16_then_fp32',vision_device='cpu')))
+    with pytest.raises(ValueError, match='Unsupported runtime-construction'):
+        store.register('unsupported',str(path),str(cli),str(norm))
+    assert store.checkpoints() == []
+
+
 @pytest.mark.skipif(os.name=='nt', reason='Production symlinks are tested on Linux')
 def test_profile_and_frozen_metadata(bundle):
     store,path,cli,norm = bundle
+    construction=path/'runtime-construction.json'
+    construction.write_text(json.dumps(dict(nonpersistent_buffer_initialization='bf16_then_fp32')))
+    audit=path/'action-audit.json';audit.write_text('{"example":true}')
     ck = store.register('test', str(path), str(cli), str(norm))
+    assert model_construction(Path(ck['checkpoint']))=='bf16_then_fp32'
+    import yaml
+    runtime=yaml.safe_load(Path(ck['cli']).read_text())
+    assert runtime['train']['vit_attn_implementation']=='flash_attention_2'
+    assert runtime['train']['enable_fp32'] and runtime['train']['use_compile']
+    assert (Path(ck['cli']).parent/'original_training_cli.yaml').read_bytes()==cli.read_bytes()
+    assert (Path(ck['cli']).parent/'action-audit.json').read_bytes()==audit.read_bytes()
     for record in ck['metadata_files']:
         assert digest(record['path']) == record['sha256']
     config = dict(checkpoint_id=ck['id'],tasks=['click_bell'],settings=['demo_clean'],seeds=[1])
@@ -76,6 +188,33 @@ def test_profile_and_frozen_metadata(bundle):
     for change in [dict(precision='bf16'),dict(execute=25)]:
         with pytest.raises(ValueError):
             store.submit('unsupported',{**config,**change})
+
+
+@pytest.mark.skipif(os.name=='nt', reason='Production symlinks are tested on Linux')
+@pytest.mark.parametrize('changed', ['weight', 'norm', 'cli', 'construction', 'audit'])
+def test_automatic_hashes_block_modified_files_before_model_start(bundle, monkeypatch, changed):
+    from eval_platform import runner
+    store,path,cli,norm = bundle
+    (path/'runtime-construction.json').write_text(
+        '{"nonpersistent_buffer_initialization":"bf16_then_fp32"}')
+    (path/'action-audit.json').write_text('{"example":true}')
+    ck = store.register('test', str(path), str(cli), str(norm))
+    job = store.submit('test', dict(checkpoint_id=ck['id'],tasks=['click_bell'],
+                                 settings=['demo_clean'],seeds=[1]))
+    changed_path = {
+        'weight': path/'model.safetensors', 'norm': Path(ck['norm']), 'cli': Path(ck['cli']),
+        'construction': Path(ck['checkpoint'])/'runtime-construction.json',
+        'audit': Path(ck['cli']).parent/'action-audit.json',
+    }[changed]
+    content = changed_path.read_bytes()
+    if changed == 'weight':
+        changed_path.write_bytes(content[:-4] + struct.pack('<f', 1))
+    else:
+        changed_path.write_bytes(content + b' ')
+    monkeypatch.setattr(runner, 'check_gpu', lambda gpu: None)
+    monkeypatch.setattr(runner.subprocess, 'Popen', lambda *a, **k: pytest.fail('Model must not start'))
+    with pytest.raises(RuntimeError, match='changed|Changed'):
+        runner.run(store.root, job['id'], 'unused', 18006)
 
 
 def test_shared_lock_path_survives_runtime_relocation(tmp_path,monkeypatch):

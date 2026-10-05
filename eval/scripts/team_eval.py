@@ -58,11 +58,13 @@ def main():
     parser.add_argument('--title', default='Team development evaluation')
     parser.add_argument('--gpu', default='0')
     parser.add_argument('--port', type=int, default=18100)
-    parser.add_argument('--enqueue', action='store_true', help='Only queue for the UI worker')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--enqueue', action='store_true', help='Only queue for the UI worker')
+    mode.add_argument('--register-only', action='store_true', help='Register the model without creating a job or using the GPU')
     args = parser.parse_args()
     store = Store(ROOT)
 
-    def submit():
+    def register():
         if args.base:
             model = register_base(store)
         elif args.checkpoint:
@@ -71,12 +73,20 @@ def main():
             model = store.register(args.title, args.checkpoint, args.cli, args.norm)
         else:
             model = store.checkpoint(args.checkpoint_id)
+        return model
+
+    def submit():
+        model = register()
         tasks = store.tasks() if args.all_tasks else args.tasks
         if args.all_tasks and len(tasks) != 50:
             raise ValueError('Expected all 50 RoboTwin tasks')
         return store.submit(args.title, dict(checkpoint_id=model['id'], tasks=tasks,
             settings=args.settings, seeds=args.seeds, video=args.video))
 
+    if args.register_only:
+        model = register()
+        print(json.dumps(dict(checkpoint_id=model['id'], name=model['name'], status='registered'), ensure_ascii=False))
+        return 0
     if args.enqueue:
         job = submit()
         print(json.dumps(dict(job_id=job['id'], server=job['config']['server_id'], status='queued', output=str(store.run_folder(job['id'])))))
