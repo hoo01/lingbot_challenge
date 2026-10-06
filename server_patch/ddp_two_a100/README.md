@@ -6,6 +6,8 @@
 1. `0001-*.patch`：已经在单张 A100 40GB 上验证过的冒烟训练基线（含 SwanLab）。
 2. `0002-*.patch`：单机双卡 DDP、分布式采样、全局 loss 归一化、多 rank RNG
    断点恢复、rank 0 日志/导出以及双卡配置。
+3. `0003-*.patch`：将 SwanLab 改成上游固定依赖安装完成后的独立安装步骤，避免
+   protobuf 版本在同一次 pip 求解中冲突。
 
 本地实现提交为 `6448c36`，分支名为 `feat/ddp-two-a100`。由于当前 GitHub
 账号对完整训练仓库没有写权限，补丁是这次交接的可移植来源；不要只复制单个
@@ -18,7 +20,8 @@ git clone https://github.com/EclipseaHime017/lingbot-vla-robotwin.git
 cd lingbot-vla-robotwin
 git checkout 02ba532
 git am /path/to/ddp_two_a100/0001-*.patch \
-       /path/to/ddp_two_a100/0002-*.patch
+       /path/to/ddp_two_a100/0002-*.patch \
+       /path/to/ddp_two_a100/0003-*.patch
 git log -3 --oneline
 git status --short
 ```

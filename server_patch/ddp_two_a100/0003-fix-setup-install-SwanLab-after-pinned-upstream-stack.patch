@@ -1,0 +1,52 @@
+From e90f3b2ede9fbcfb9e62cec2c415ae6376d27e14 Mon Sep 17 00:00:00 2001
+From: hoo01 <497458301@qq.com>
+Date: Tue, 6 Oct 2026 12:47:40 +0800
+Subject: [PATCH] fix(setup): install SwanLab after pinned upstream stack
+
+---
+ README.md              | 2 ++
+ requirements-extra.txt | 1 -
+ scripts/bootstrap.sh   | 5 +++++
+ 3 files changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index bccd318..b097f51 100644
+--- a/README.md
++++ b/README.md
+@@ -53,6 +53,8 @@ source scripts/activate.sh
+ 
+ `bootstrap.sh` 将 Miniconda 安装到 **`~/miniconda3`**，创建 `lingbot-vla` 环境，获取固定版本的 LingBot-VLA 和 RoboTwin 源码并安装依赖。已有 Miniconda 时复用该安装；设置 `CONDA_ROOT` 可指定其他 Linux Conda 前缀。
+ 
++SwanLab 在上游依赖安装完成后由脚本单独安装，因为 SwanLab 0.10 与 LingBot 固定依赖声明请求不同 protobuf 主版本，放在同一次 pip 求解中会得到 `ResolutionImpossible`。该组合已经通过真实数据 SwanLab 冒烟；不要为了消除 `pip check` 的元数据提示而整体升级 Torch、LeRobot 或 LingBot 依赖。
++
+ | 环境 | Python | 主要依赖 | 用途 |
+ |---|---|---|---|
+ | `lingbot-vla` | 3.12 | PyTorch 2.8.0 / CUDA 12.8、Transformers 4.57.3、LeRobot 0.4.2 | 数据准备、训练、推理 |
+diff --git a/requirements-extra.txt b/requirements-extra.txt
+index bc04276..f8da8eb 100644
+--- a/requirements-extra.txt
++++ b/requirements-extra.txt
+@@ -7,4 +7,3 @@ gymnasium==0.29.1
+ rerun-sdk==0.22.1
+ python-dotenv==1.1.1
+ json-numpy==2.1.1
+-swanlab==0.10.1
+diff --git a/scripts/bootstrap.sh b/scripts/bootstrap.sh
+index 3323755..3994de1 100755
+--- a/scripts/bootstrap.sh
++++ b/scripts/bootstrap.sh
+@@ -60,6 +60,11 @@ prepare_upstream_source vendor/lingbot-vla-v2 https://github.com/Robbyant/lingbo
+ prepare_upstream_source vendor/RoboTwin https://github.com/RoboTwin-Platform/RoboTwin.git "$ROBOTWIN_REV"
+ "${CONDA_PREFIX}/bin/python" -m pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://pypi.org/simple
+ "${CONDA_PREFIX}/bin/python" -m pip install -r vendor/lingbot-vla-v2/requirements.txt -r requirements-extra.txt
++# SwanLab 0.10 uses protobuf 6 while the pinned LingBot dependency set asks
++# pip for protobuf 3.20. Install it in a separate transaction after resolving
++# the upstream stack. This is the same combination exercised by the real-data
++# SwanLab smoke test; installing both requirement sets together is impossible.
++"${CONDA_PREFIX}/bin/python" -m pip install swanlab==0.10.1
+ "${CONDA_PREFIX}/bin/python" -m pip install numpydantic==1.9.0 --no-deps
+ "${CONDA_PREFIX}/bin/python" -m pip install --no-deps 'lerobot @ https://github.com/huggingface/lerobot/archive/refs/tags/v0.4.2.tar.gz'
+ "${CONDA_PREFIX}/bin/python" -m pip install --no-deps -e vendor/lingbot-vla-v2
+-- 
+2.45.1.windows.1
+
