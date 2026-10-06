@@ -1,0 +1,122 @@
+From 27a083c9673aad672d502866805e43b73ddb24ae Mon Sep 17 00:00:00 2001
+From: hoo01 <497458301@qq.com>
+Date: Tue, 6 Oct 2026 10:02:38 +0800
+Subject: [PATCH 1/2] feat(train): preserve verified single-A100 smoke baseline
+
+---
+ configs/train_expert.yaml |  9 +++++++
+ src/lrvla/training.py     | 53 ++++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 61 insertions(+), 1 deletion(-)
+
+diff --git a/configs/train_expert.yaml b/configs/train_expert.yaml
+index 1898f47..0ffab16 100644
+--- a/configs/train_expert.yaml
++++ b/configs/train_expert.yaml
+@@ -31,3 +31,12 @@ eval_batches: 8
+ save_every: 100
+ export: true
+ export_dtype: bfloat16
++
++swanlab:
++  enabled: true
++  project: lingbot_cha
++  workspace: Elowynnn
++  experiment_name: null
++  description: LingBot-VLA clean-only Action Expert training
++  public: false
++  run_id: null
+diff --git a/src/lrvla/training.py b/src/lrvla/training.py
+index bea92ca..f4a1db7 100644
+--- a/src/lrvla/training.py
++++ b/src/lrvla/training.py
+@@ -208,6 +208,40 @@ def train(config, *, dry_run=False):
+     state = {"global_step": 0, "epoch": 0, "batch_offset": 0}
+     if config.get("resume"):
+         state = resume_training_checkpoint(policy, optimizer, scheduler, resolve_path(config["resume"]), expected_metadata=metadata)
++
++    swanlab_module = None
++    swanlab_run = None
++    swanlab_config = config.get("swanlab", {})
++    if swanlab_config.get("enabled", False):
++        import swanlab as swanlab_module
++
++        run_id_path = output / "swanlab_run_id.txt"
++        run_id = swanlab_config.get("run_id")
++        if config.get("resume") and not run_id and run_id_path.is_file():
++            run_id = run_id_path.read_text().strip()
++
++        tracked_config = json.loads(json.dumps(config, default=str))
++        tracked_config.update({
++            "manifest_sha256": manifest_digest,
++            "manifest_content_sha256": manifest_content_sha256(manifest),
++            "norm_sha256": metadata["norm_sha256"],
++            "trainable_parameters": report["trainable_parameters"],
++            "total_parameters": report["total_parameters"],
++        })
++        init_kwargs = {
++            "project": swanlab_config.get("project", "lingbot_cha"),
++            "workspace": swanlab_config.get("workspace", "Elowynnn"),
++            "experiment_name": swanlab_config.get("experiment_name") or output.name,
++            "description": swanlab_config.get("description", "LingBot-VLA clean-only post-training"),
++            "public": bool(swanlab_config.get("public", False)),
++            "config": tracked_config,
++        }
++        if run_id:
++            init_kwargs.update(id=run_id, resume="must")
++        swanlab_run = swanlab_module.init(**init_kwargs)
++        run_id_path.write_text(swanlab_run.id + "\n")
++        print(json.dumps({"swanlab_run_id": swanlab_run.id}), flush=True)
++
+     batch_size, accumulation = int(config.get("batch_size", 1)), int(config.get("gradient_accumulation", 16))
+     if max_steps <= 0 or batch_size <= 0 or accumulation <= 0:
+         raise ValueError("max_steps, batch_size and gradient_accumulation must be positive.")
+@@ -261,6 +295,18 @@ def train(config, *, dry_run=False):
+         print(json.dumps(record), flush=True)
+         with metrics_path.open("a") as log:
+             log.write(json.dumps(record) + "\n")
++        if swanlab_run is not None:
++            swan_metrics = {
++                "train/loss": record["loss"],
++                "train/grad_norm": record["grad_norm"],
++                "train/learning_rate": record["lr"],
++                "train/valid_action_coordinates": record["valid_action_coordinates"],
++                "performance/step_seconds": record["step_seconds"],
++                "performance/peak_gpu_gib": record["peak_gpu_gib"],
++            }
++            if "validation_bc_loss" in record:
++                swan_metrics["validation/bc_loss"] = record["validation_bc_loss"]
++            swanlab_module.log(swan_metrics, step=step)
+         if step % int(config.get("save_every", 100)) == 0 or step == max_steps:
+             checkpoint_dir = output / "checkpoints" / f"global_step_{step}"
+             checkpoint_dir.mkdir(parents=True, exist_ok=True)
+@@ -271,6 +317,8 @@ def train(config, *, dry_run=False):
+         exported = export_hf_checkpoint(policy, checkpoint_dir / "hf_ckpt",
+                                         dtype=getattr(torch, config.get("export_dtype", "bfloat16")), processor=processor)
+         print(json.dumps({"exported_hf_ckpt": str(exported), "official_cli": str(output / "lingbotvla_cli.yaml")}), flush=True)
++    if swanlab_run is not None:
++        swanlab_module.finish()
+     return state
+ 
+ 
+@@ -292,14 +340,17 @@ def main(argv=None):
+     parser.add_argument("--dry-run", action="store_true", help="Construct on meta and report parameter memory; no 6B weights loaded.")
+     parser.add_argument("--allow-subset", action="store_true", help="Debug with fewer than 50 tasks; resulting run is marked as a subset.")
+     parser.add_argument("--smoke", action="store_true", help="Train/export/reload a tiny synthetic model, without using competition assets.")
++    parser.add_argument("--no-export", action="store_true", help="Skip the full HF export; useful for short integration tests.")
+     args = parser.parse_args(argv)
+     if args.smoke:
+         from .training_smoke import run_smoke
+         return run_smoke(resolve_path(args.output_dir or "artifacts/training_smoke"), args.device or "cpu", args.max_steps or 30)
+     config = yaml.safe_load(resolve_path(args.config).read_text())
+     for key, value in vars(args).items():
+-        if key not in {"config", "dry_run", "smoke", "allow_subset"} and value is not None:
++        if key not in {"config", "dry_run", "smoke", "allow_subset", "no_export"} and value is not None:
+             config[key] = value
+     if args.allow_subset:
+         config["allow_subset"] = True
++    if args.no_export:
++        config["export"] = False
+     return train(config, dry_run=args.dry_run)
+-- 
+2.45.1.windows.1
+

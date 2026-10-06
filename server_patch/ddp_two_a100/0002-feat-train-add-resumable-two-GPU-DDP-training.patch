@@ -1,0 +1,924 @@
+From 6448c366af4ebdff088dae42810740ed4fca856c Mon Sep 17 00:00:00 2001
+From: hoo01 <497458301@qq.com>
+Date: Tue, 6 Oct 2026 10:12:42 +0800
+Subject: [PATCH 2/2] feat(train): add resumable two-GPU DDP training
+
+---
+ README.md                          |  25 +++-
+ configs/train_expert_ddp.yaml      |  42 +++++++
+ requirements-extra.txt             |   1 +
+ scripts/train_ddp.sh               |  22 ++++
+ src/lrvla/training.py              | 192 ++++++++++++++++++++---------
+ src/lrvla/training_checkpoint.py   |  56 +++++++--
+ src/lrvla/training_data.py         |  35 +++++-
+ src/lrvla/training_distributed.py  | 107 ++++++++++++++++
+ src/lrvla/training_identity.py     |  16 +++
+ tests/test_training.py             |  15 ++-
+ tests/test_training_distributed.py |  90 ++++++++++++++
+ 11 files changed, 524 insertions(+), 77 deletions(-)
+ create mode 100644 configs/train_expert_ddp.yaml
+ create mode 100755 scripts/train_ddp.sh
+ create mode 100644 src/lrvla/training_distributed.py
+ create mode 100644 tests/test_training_distributed.py
+
+diff --git a/README.md b/README.md
+index c48c30e..bccd318 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # LingBot-VLA 2.0 × RoboTwin
+ 
+-基于 `robbyant/lingbot-vla-v2-6b` 的单 GPU 后训练工程，支持 RoboTwin 2.0 Aloha-AgileX clean 示范数据的下载、转换、训练和动作预测评估。模型以三路 RGB、关节状态和任务指令为输入，通过 flow-matching 行为克隆（BC）学习动作块。
++基于 `robbyant/lingbot-vla-v2-6b` 的单机单 GPU / DDP 后训练工程，支持 RoboTwin 2.0 Aloha-AgileX clean 示范数据的下载、转换、训练和动作预测评估。模型以三路 RGB、关节状态和任务指令为输入，通过 flow-matching 行为克隆（BC）学习动作块。
+ 
+ 当前提供两种训练方式：action attention 的 **LoRA** 微调，以及 **Action Expert** 的部分层或全部层微调。两种方式都冻结视觉语言模型（VLM），支持梯度累积、梯度检查点、训练状态恢复和完整推理权重导出。导出时自动合并 LoRA。仓库另提供离线动作预测和 RoboTwin 闭环仿真入口。
+ 
+@@ -160,7 +160,7 @@ source scripts/activate.sh
+ | `eval_batches` | `8` | 每次验证最多处理的小 batch 数 |
+ | `export` / `export_dtype` | `true` / `bfloat16` | 结束后导出完整推理权重及其精度 |
+ 
+-有效 batch 约为 `batch_size × gradient_accumulation`。例如 `batch_size=8`、累积 4 次、`max_steps=2500`，共执行 **10,000 个小 batch、2,500 次参数更新**。这里的 step、预热、验证和保存间隔都按优化器更新计数。
++单卡有效 batch 为 `batch_size × gradient_accumulation`；DDP 的 global batch 为 `world_size × batch_size × gradient_accumulation`。例如两卡、每卡 batch 16、累积1次时，global batch 为32。这里的 step、预热、验证和保存间隔都按优化器更新计数。
+ 
+ `action_chunk_tail: mask` 保留轨迹末端观测，padding 不参与损失；累积梯度按整个更新窗口的有效动作坐标数统一归一化。`drop` 只保留训练集的完整动作窗口，验证集仍保留全部观测。截断会减少末段观测作为训练起点的覆盖。
+ 
+@@ -234,9 +234,26 @@ bash train.sh --config configs/train_expert.yaml \
+ bash train.sh --config configs/train_expert.yaml --device cpu --dry-run
+ ```
+ 
+-`--dry-run` 需要已安装的源码与 Qwen 配置资源，其显存下界不包含激活、KV cache 和临时工作区。全部 Action Expert 的 FP32 梯度及 AdamW 状态需求较大，当前预设面向本地部分层微调；训练入口会在权重和优化器状态下界超过可用显存时拒绝启动。当前入口为单 GPU，未实现 DDP/FSDP 训练。
++`--dry-run` 需要已安装的源码与 Qwen 配置资源，其显存下界不包含激活、KV cache 和临时工作区。全部 Action Expert 的 FP32 梯度及 AdamW 状态需求较大，当前预设面向部分层微调；训练入口会在权重和优化器状态下界超过单卡可用显存时拒绝启动。DDP不会合并显存，放不进单张卡的配置仍需要FSDP/ZeRO。
+ 
+-### 3.4 保存、恢复与导出
++### 3.4 双卡 DDP
++
++DDP预设见 `configs/train_expert_ddp.yaml`。其中 `batch_size` 是**每卡**batch，默认两张卡各16、梯度累积1，global batch为32：
++
++```bash
++source scripts/activate.sh
++bash scripts/train_ddp.sh --max-steps 10 --batch-size 1 \
++  --gradient-accumulation 1 --allow-subset --no-export \
++  --output-dir runs/ddp-smoke
++```
++
++入口使用 `torchrun` 启动两个rank。每个epoch先生成同一份全局随机顺序，再为每个rank切分互不重叠的batch；不足一个完整global batch的短尾会被丢弃。梯度按所有rank的有效动作坐标总数归一化。只有rank 0写SwanLab、日志、checkpoint和完整HF导出；checkpoint同时保存所有rank的随机状态，恢复时要求相同world size、每卡batch和梯度累积。
++
++`run_metadata.json` 和 SwanLab config 会记录 Git commit、工作区是否有未提交修改、world size 与 global batch。正式训练应从干净且已提交的工作树启动；若 `source.dirty=true`，先停止并保存改动，避免生成无法复现的长训结果。
++
++在目标机器先扫描每卡batch 16/24/32。若从每卡16提高到32，并希望保持约96万处理样本，应把30k optimizer steps相应减到15k。DDP提高吞吐，不代表固定step数时训练量不变。
++
++### 3.5 保存、恢复与导出
+ 
+ ```text
+ runs/<experiment>/
+diff --git a/configs/train_expert_ddp.yaml b/configs/train_expert_ddp.yaml
+new file mode 100644
+index 0000000..cfd53a6
+--- /dev/null
++++ b/configs/train_expert_ddp.yaml
+@@ -0,0 +1,42 @@
++# Two-A100 DDP baseline: per-device batch 16 x 2 ranks = global batch 32.
++# After the target-machine profiler passes, batch_size may be raised to 32 and
++# max_steps reduced to 15000 to preserve the same ~960k processed samples.
++mode: expert
++expert_last_n_layers: 2
++base_checkpoint: models/lingbot-vla-v2-6b
++qwen_path: models/Qwen3-VL-4B-Instruct
++architecture_yaml: vendor/lingbot-vla-v2/configs/vla/robotwin/robotwin.yaml
++manifest: data/clean_manifest.json
++norm_stats: data/clean_norm_stats.json
++output_dir: runs/e0_expert_partial_ddp
++device: cuda
++train_projections: true
++batch_size: 16
++gradient_accumulation: 1
++gradient_checkpointing: true
++chunk_size: 50
++action_chunk_tail: mask
++img_size: 256
++image_augment: false
++num_workers: 4
++val_episodes: 5
++seed: 42
++lr: 0.00005
++weight_decay: 0.01
++max_grad_norm: 1.0
++warmup_steps: 100
++max_steps: 30000
++eval_every: 500
++eval_batches: 8
++save_every: 1000
++export: true
++export_dtype: bfloat16
++
++swanlab:
++  enabled: true
++  project: lingbot_cha
++  workspace: Elowynnn
++  experiment_name: e0-expert-partial-ddp
++  description: LingBot-VLA clean-only 2xA100 DDP E0 baseline
++  public: false
++  run_id: null
+diff --git a/requirements-extra.txt b/requirements-extra.txt
+index f8da8eb..bc04276 100644
+--- a/requirements-extra.txt
++++ b/requirements-extra.txt
+@@ -7,3 +7,4 @@ gymnasium==0.29.1
+ rerun-sdk==0.22.1
+ python-dotenv==1.1.1
+ json-numpy==2.1.1
++swanlab==0.10.1
+diff --git a/scripts/train_ddp.sh b/scripts/train_ddp.sh
+new file mode 100755
+index 0000000..4156282
+--- /dev/null
++++ b/scripts/train_ddp.sh
+@@ -0,0 +1,22 @@
++#!/usr/bin/env bash
++set -euo pipefail
++
++ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
++cd "$ROOT"
++
++NPROC_PER_NODE="${NPROC_PER_NODE:-2}"
++if [[ "$NPROC_PER_NODE" -lt 2 ]]; then
++  echo "ERROR: train_ddp.sh requires at least two local CUDA processes." >&2
++  exit 2
++fi
++
++export PYTORCH_CUDA_ALLOC_CONF="${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}"
++export OMP_NUM_THREADS="${OMP_NUM_THREADS:-8}"
++export MKL_NUM_THREADS="${MKL_NUM_THREADS:-8}"
++
++exec torchrun \
++  --standalone \
++  --nproc_per_node="$NPROC_PER_NODE" \
++  scripts/train.py \
++  --config configs/train_expert_ddp.yaml \
++  "$@"
+diff --git a/src/lrvla/training.py b/src/lrvla/training.py
+index f4a1db7..6175cb6 100644
+--- a/src/lrvla/training.py
++++ b/src/lrvla/training.py
+@@ -1,7 +1,8 @@
+-"""Single-GPU, clean-only supervised post-training of LingBot-VLA v2."""
++"""Single-node, clean-only supervised post-training of LingBot-VLA v2."""
+ from __future__ import annotations
+ 
+ import argparse
++from contextlib import nullcontext
+ import hashlib
+ import json
+ import math
+@@ -11,19 +12,33 @@ import shutil
+ import time
+ 
+ import torch
++from torch import nn
++from torch.nn.parallel import DistributedDataParallel
+ from torch.utils.data import DataLoader
+ import yaml
+ 
+-from .training_checkpoint import export_hf_checkpoint, resume_training_checkpoint, save_training_checkpoint
++from .training_checkpoint import (capture_rng_state, export_hf_checkpoint,
++                                  resume_training_checkpoint, save_training_checkpoint)
+ from .training_data import build_clean_datasets, epoch_dataloader, model_collate
++from .training_distributed import DistributedContext, distributed_metadata
+ from .training_models import configure_trainable, flow_matching_bc, memory_report, normalize_bc_gradients
+-from .training_identity import base_checkpoint_identity, manifest_content_sha256
++from .training_identity import base_checkpoint_identity, manifest_content_sha256, repository_identity
+ from .training_runtime import add_vendor_path, build_policy, enable_action_checkpointing
+ 
+ 
+ PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ 
+ 
++class BCTrainingModule(nn.Module):
++    """Give DDP a real forward boundary while keeping export/checkpoint names stable."""
++    def __init__(self, policy):
++        super().__init__()
++        self.policy = policy
++
++    def forward(self, batch, reduction="sum"):
++        return flow_matching_bc(self.policy, batch, reduction=reduction)
++
++
+ def resolve_path(value):
+     path = Path(value).expanduser()
+     return path.resolve() if path.is_absolute() else (PROJECT_ROOT / path).resolve()
+@@ -113,7 +128,7 @@ def portable_inference_cli(cli):
+     return result
+ 
+ 
+-def train(config, *, dry_run=False):
++def _train(config, context, *, dry_run=False):
+     action_chunk_tail = config.get("action_chunk_tail", "mask")
+     if action_chunk_tail not in {"mask", "drop"}:
+         raise ValueError("action_chunk_tail must be 'mask' or 'drop'.")
+@@ -127,11 +142,9 @@ def train(config, *, dry_run=False):
+     random.seed(int(config.get("seed", 42)))
+     import numpy as np
+     np.random.seed(int(config.get("seed", 42)))
+-    device = config.get("device", "cuda")
+-    if torch.device(device).type != "cuda" and not dry_run:
++    device = context.device
++    if device.type != "cuda" and not dry_run:
+         raise ValueError("The full 6B model training entrypoint needs CUDA; use --smoke for CPU validation.")
+-    if torch.device(device).type == "cuda" and not torch.cuda.is_available():
+-        raise RuntimeError("CUDA unavailable in this environment.")
+     base, qwen = resolve_path(config["base_checkpoint"]), resolve_path(config["qwen_path"])
+     if "robotwin" in base.name.lower():
+         raise ValueError("Use robbyant/lingbot-vla-v2-6b base weights; official RoboTwin post-trained initialization is forbidden.")
+@@ -146,19 +159,27 @@ def train(config, *, dry_run=False):
+         if not manifest.get("complete_50_tasks") and not config.get("allow_subset", False):
+             raise ValueError("Competition co-training requires all 50 clean tasks. Use --allow-subset only to debug the pipeline.")
+         output = resolve_path(config["output_dir"])
+-        data_config, robot_config, manifest_digest = prepare_runtime_files(config, architecture, manifest_path, norm_path, output)
+-        print("Verifying frozen base shard SHA-256 identity before model loading...", flush=True)
+-        base_identity = base_checkpoint_identity(base)
++        prepared = None
++        if context.is_main:
++            data_config, robot_config, manifest_digest = prepare_runtime_files(
++                config, architecture, manifest_path, norm_path, output)
++            print("Verifying frozen base shard SHA-256 identity before model loading...", flush=True)
++            prepared = (data_config, str(robot_config), manifest_digest, base_checkpoint_identity(base))
++        data_config, robot_config_value, manifest_digest, base_identity = context.broadcast_object(prepared)
++        robot_config = Path(robot_config_value)
++        context.barrier()
+     policy = build_policy(PROJECT_ROOT, architecture, base, qwen, device=device, load_weights=not dry_run)
+     selection = configure_trainable(policy, config)
+     report = memory_report(policy)
+     concise_selection = {k: v for k, v in selection.items() if k not in {"trainable_names", "lora_modules"}}
+     concise_selection["lora_module_count"] = len(selection["lora_modules"])
+-    print(json.dumps({"selection": concise_selection,
+-                      "memory": report, "dry_run": dry_run}, ensure_ascii=False), flush=True)
++    if context.is_main:
++        print(json.dumps({"selection": concise_selection,
++                          "memory": report, "dry_run": dry_run,
++                          "distributed": {"world_size": context.world_size}}, ensure_ascii=False), flush=True)
+     if dry_run:
+         return report
+-    total_gpu_gib = torch.cuda.get_device_properties(torch.device(device)).total_memory / 2**30
++    total_gpu_gib = torch.cuda.get_device_properties(device).total_memory / 2**30
+     if report["adamw_training_lower_bound_gib"] > total_gpu_gib * 0.92:
+         raise RuntimeError(f"Weight/gradient/AdamW lower bound {report['adamw_training_lower_bound_gib']:.2f} GiB exceeds safe space on {total_gpu_gib:.2f} GiB GPU. Use LoRA or fewer expert_last_n_layers, or move to a larger server GPU.")
+     from transformers import AutoProcessor
+@@ -166,9 +187,10 @@ def train(config, *, dry_run=False):
+     datasets, validation, splits = build_clean_datasets(manifest, data_config, policy.config, processor,
+                                                        robot_config, int(config.get("val_episodes", 5)),
+                                                        action_chunk_tail=action_chunk_tail)
+-    print(json.dumps({"training_samples": len(datasets),
+-                      "validation_samples": len(validation) if validation is not None else 0,
+-                      "action_chunk_tail": action_chunk_tail}, ensure_ascii=False), flush=True)
++    if context.is_main:
++        print(json.dumps({"training_samples": len(datasets),
++                          "validation_samples": len(validation) if validation is not None else 0,
++                          "action_chunk_tail": action_chunk_tail}, ensure_ascii=False), flush=True)
+     if config.get("gradient_checkpointing", True):
+         enable_action_checkpointing(policy)
+     train_values = {**architecture["train"], **policy.config.to_dict()}
+@@ -178,13 +200,17 @@ def train(config, *, dry_run=False):
+            "train": train_values, "data": data_config}
+     # Qwen processor/config assets are small and contain no duplicate VLM weights.
+     qwen_assets = output / "assets" / "qwen3_vl"
+-    processor.save_pretrained(qwen_assets)
+-    shutil.copy2(qwen / "config.json", qwen_assets / "config.json")
+-    saved_cli = portable_inference_cli(cli)
+-    saved_cli["train"]["tokenizer_path"] = "assets/qwen3_vl"
+-    (output / "lingbotvla_cli.yaml").write_text(yaml.safe_dump(saved_cli, sort_keys=False))
+-    (output / "training_config.yaml").write_text(yaml.safe_dump(config, sort_keys=False))
+-    (output / "episode_splits.json").write_text(json.dumps(splits, indent=2))
++    if context.is_main:
++        processor.save_pretrained(qwen_assets)
++        shutil.copy2(qwen / "config.json", qwen_assets / "config.json")
++        saved_cli = portable_inference_cli(cli)
++        saved_cli["train"]["tokenizer_path"] = "assets/qwen3_vl"
++        (output / "lingbotvla_cli.yaml").write_text(yaml.safe_dump(saved_cli, sort_keys=False))
++        (output / "training_config.yaml").write_text(yaml.safe_dump(config, sort_keys=False))
++        (output / "episode_splits.json").write_text(json.dumps(splits, indent=2))
++    context.barrier()
++    batch_size, accumulation = int(config.get("batch_size", 1)), int(config.get("gradient_accumulation", 16))
++    topology = distributed_metadata(context, batch_size, accumulation)
+     metadata = {"base_checkpoint": str(base), "base_identity": base_identity,
+                 "manifest_sha256": manifest_digest, "manifest_content_sha256": manifest_content_sha256(manifest),
+                 "selection": selection,
+@@ -194,11 +220,14 @@ def train(config, *, dry_run=False):
+                                   "val_episodes": int(config.get("val_episodes", 5)),
+                                   "seed": int(config.get("seed", 42)), "batch_size": int(config.get("batch_size", 1)),
+                                   "gradient_accumulation": int(config.get("gradient_accumulation", 16))},
++                "distributed": topology,
++                "source": repository_identity(PROJECT_ROOT),
+                 "memory": report, "norm_sha256": hashlib.sha256(norm_path.read_bytes()).hexdigest(),
+                 "qwen_config_sha256": hashlib.sha256((qwen / "config.json").read_bytes()).hexdigest(),
+                 "model_geometry": {"chunk_size": policy.config.chunk_size, "max_action_dim": policy.config.max_action_dim,
+                                    "max_state_dim": policy.config.max_state_dim, "img_size": data_config["img_size"]}}
+-    (output / "run_metadata.json").write_text(json.dumps(metadata, indent=2))
++    if context.is_main:
++        (output / "run_metadata.json").write_text(json.dumps(metadata, indent=2))
+     params = [p for p in policy.parameters() if p.requires_grad]
+     optimizer = torch.optim.AdamW(params, lr=float(config.get("lr", 1e-4)),
+                                   weight_decay=float(config.get("weight_decay", 0.01)), foreach=False)
+@@ -207,12 +236,19 @@ def train(config, *, dry_run=False):
+     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda step: schedule_multiplier(step, max_steps, warmup))
+     state = {"global_step": 0, "epoch": 0, "batch_offset": 0}
+     if config.get("resume"):
+-        state = resume_training_checkpoint(policy, optimizer, scheduler, resolve_path(config["resume"]), expected_metadata=metadata)
++        state = resume_training_checkpoint(policy, optimizer, scheduler, resolve_path(config["resume"]),
++                                           expected_metadata=metadata, rank=context.rank, device=device)
++    else:
++        rank_seed = int(config.get("seed", 42)) + context.rank * 100003
++        torch.manual_seed(rank_seed)
++        torch.cuda.manual_seed(rank_seed)
++        random.seed(rank_seed)
++        np.random.seed(rank_seed % 2**32)
+ 
+     swanlab_module = None
+     swanlab_run = None
+     swanlab_config = config.get("swanlab", {})
+-    if swanlab_config.get("enabled", False):
++    if context.is_main and swanlab_config.get("enabled", False):
+         import swanlab as swanlab_module
+ 
+         run_id_path = output / "swanlab_run_id.txt"
+@@ -225,6 +261,10 @@ def train(config, *, dry_run=False):
+             "manifest_sha256": manifest_digest,
+             "manifest_content_sha256": manifest_content_sha256(manifest),
+             "norm_sha256": metadata["norm_sha256"],
++            "source_commit": metadata["source"]["commit"],
++            "source_dirty": metadata["source"]["dirty"],
++            "world_size": topology["world_size"],
++            "global_batch_size": topology["global_batch_size"],
+             "trainable_parameters": report["trainable_parameters"],
+             "total_parameters": report["total_parameters"],
+         })
+@@ -242,26 +282,32 @@ def train(config, *, dry_run=False):
+         run_id_path.write_text(swanlab_run.id + "\n")
+         print(json.dumps({"swanlab_run_id": swanlab_run.id}), flush=True)
+ 
+-    batch_size, accumulation = int(config.get("batch_size", 1)), int(config.get("gradient_accumulation", 16))
+     if max_steps <= 0 or batch_size <= 0 or accumulation <= 0:
+         raise ValueError("max_steps, batch_size and gradient_accumulation must be positive.")
+     workers = int(config.get("num_workers", 0))
+-    if workers > 0 and config.get("resume") and config.get("image_augment", False):
++    if context.is_main and workers > 0 and config.get("resume") and config.get("image_augment", False):
+         print("Resume preserves consumed batches and main RNG; worker augmentation RNG replay is not guaranteed.", flush=True)
+ 
+     def iterator():
+         return iter(epoch_dataloader(datasets, batch_size, int(config.get("seed", 42)),
+-                                    state["epoch"], state["batch_offset"], workers))
++                                    state["epoch"], state["batch_offset"], workers,
++                                    rank=context.rank, world_size=context.world_size))
+ 
+     batches = iterator()
+-    validation_loader = DataLoader(validation, batch_size=batch_size, collate_fn=model_collate, num_workers=0) if validation else None
+-    policy.train()
++    validation_loader = (DataLoader(validation, batch_size=batch_size, collate_fn=model_collate, num_workers=0)
++                         if validation and context.is_main else None)
++    training_model = BCTrainingModule(policy)
++    if context.distributed:
++        training_model = DistributedDataParallel(
++            training_model, device_ids=[context.local_rank], output_device=context.local_rank,
++            broadcast_buffers=False, find_unused_parameters=False)
++    training_model.train()
+     optimizer.zero_grad(set_to_none=True)
+     metrics_path = output / "metrics.jsonl"
+     while state["global_step"] < max_steps:
+         start = time.monotonic()
+         loss_numerator, valid_count = 0.0, 0.0
+-        for _ in range(accumulation):
++        for micro_step in range(accumulation):
+             try:
+                 batch = next(batches)
+             except StopIteration:
+@@ -270,14 +316,22 @@ def train(config, *, dry_run=False):
+                 batches = iterator()
+                 batch = next(batches)
+             state["batch_offset"] += 1
+-            with torch.autocast(device_type="cuda", dtype=torch.bfloat16):
+-                loss = flow_matching_bc(policy, move_batch(batch, device), reduction="sum")
+-            if not torch.isfinite(loss):
+-                raise FloatingPointError(f"Nonfinite BC loss at step {state['global_step']}")
+-            loss.backward()
++            synchronization = (training_model.no_sync()
++                               if context.distributed and micro_step < accumulation - 1 else nullcontext())
++            with synchronization:
++                with torch.autocast(device_type="cuda", dtype=torch.bfloat16):
++                    loss = training_model(move_batch(batch, device), reduction="sum")
++                if not context.all_true(bool(torch.isfinite(loss).item())):
++                    raise FloatingPointError(
++                        f"Nonfinite BC loss on at least one rank at step {state['global_step']}")
++                loss.backward()
+             loss_numerator += float(loss.detach())
+             valid_count += float(batch["joint_mask"].float().sum())
+-        normalize_bc_gradients(params, valid_count)
++        global_loss_numerator = context.sum_scalar(loss_numerator)
++        global_valid_count = context.sum_scalar(valid_count)
++        # DDP averages gradients across ranks; divide by global_count/world_size
++        # to recover the exact global summed-loss / global-coordinate gradient.
++        normalize_bc_gradients(params, global_valid_count / context.world_size)
+         grad = torch.nn.utils.clip_grad_norm_(params, float(config.get("max_grad_norm", 1)))
+         if not torch.isfinite(grad):
+             raise FloatingPointError("Nonfinite gradient norm; optimizer step aborted.")
+@@ -286,16 +340,25 @@ def train(config, *, dry_run=False):
+         optimizer.zero_grad(set_to_none=True)
+         state["global_step"] += 1
+         step = state["global_step"]
+-        record = {"step": step, "loss": loss_numerator / valid_count, "grad_norm": float(grad),
+-                  "valid_action_coordinates": valid_count,
+-                  "lr": optimizer.param_groups[0]["lr"], "step_seconds": time.monotonic() - start,
+-                  "peak_gpu_gib": torch.cuda.max_memory_allocated(torch.device(device)) / 2**30}
+-        if validation_loader and step % int(config.get("eval_every", 100)) == 0:
+-            record["validation_bc_loss"] = validate(policy, validation_loader, device, int(config.get("eval_batches", 8)))
+-        print(json.dumps(record), flush=True)
+-        with metrics_path.open("a") as log:
+-            log.write(json.dumps(record) + "\n")
+-        if swanlab_run is not None:
++        torch.cuda.synchronize(device)
++        elapsed = context.max_scalar(time.monotonic() - start)
++        peak_gpu = context.max_scalar(torch.cuda.max_memory_allocated(device) / 2**30)
++        record = {"step": step, "loss": global_loss_numerator / global_valid_count, "grad_norm": float(grad),
++                  "valid_action_coordinates": global_valid_count,
++                  "lr": optimizer.param_groups[0]["lr"], "step_seconds": elapsed,
++                  "peak_gpu_gib": peak_gpu, "world_size": context.world_size,
++                  "global_batch_size": topology["global_batch_size"]}
++        if validation and step % int(config.get("eval_every", 100)) == 0:
++            context.barrier()
++            if context.is_main:
++                record["validation_bc_loss"] = validate(
++                    policy, validation_loader, device, int(config.get("eval_batches", 8)))
++            context.barrier()
++        if context.is_main:
++            print(json.dumps(record), flush=True)
++            with metrics_path.open("a") as log:
++                log.write(json.dumps(record) + "\n")
++        if context.is_main and swanlab_run is not None:
+             swan_metrics = {
+                 "train/loss": record["loss"],
+                 "train/grad_norm": record["grad_norm"],
+@@ -309,19 +372,33 @@ def train(config, *, dry_run=False):
+             swanlab_module.log(swan_metrics, step=step)
+         if step % int(config.get("save_every", 100)) == 0 or step == max_steps:
+             checkpoint_dir = output / "checkpoints" / f"global_step_{step}"
+-            checkpoint_dir.mkdir(parents=True, exist_ok=True)
+-            save_training_checkpoint(policy, optimizer, scheduler, checkpoint_dir / "training.pt", dict(state), metadata)
+-            (output / "latest_checkpoint.txt").write_text(str(checkpoint_dir / "training.pt") + "\n")
++            rank_rng_states = context.gather_objects(capture_rng_state(device))
++            if context.is_main:
++                checkpoint_dir.mkdir(parents=True, exist_ok=True)
++                save_training_checkpoint(policy, optimizer, scheduler, checkpoint_dir / "training.pt",
++                                         dict(state), metadata, rank_rng_states=rank_rng_states)
++                (output / "latest_checkpoint.txt").write_text(str(checkpoint_dir / "training.pt") + "\n")
++            context.barrier()
+     if config.get("export", True):
+         checkpoint_dir = output / "checkpoints" / f"global_step_{state['global_step']}"
+-        exported = export_hf_checkpoint(policy, checkpoint_dir / "hf_ckpt",
+-                                        dtype=getattr(torch, config.get("export_dtype", "bfloat16")), processor=processor)
+-        print(json.dumps({"exported_hf_ckpt": str(exported), "official_cli": str(output / "lingbotvla_cli.yaml")}), flush=True)
+-    if swanlab_run is not None:
++        if context.is_main:
++            exported = export_hf_checkpoint(policy, checkpoint_dir / "hf_ckpt",
++                                            dtype=getattr(torch, config.get("export_dtype", "bfloat16")), processor=processor)
++            print(json.dumps({"exported_hf_ckpt": str(exported), "official_cli": str(output / "lingbotvla_cli.yaml")}), flush=True)
++        context.barrier()
++    if context.is_main and swanlab_run is not None:
+         swanlab_module.finish()
+     return state
+ 
+ 
++def train(config, *, dry_run=False):
++    context = DistributedContext.from_environment(config.get("device", "cuda"), dry_run=dry_run)
++    try:
++        return _train(config, context, dry_run=dry_run)
++    finally:
++        context.close()
++
++
+ def main(argv=None):
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--config", default="configs/train_lora.yaml")
+@@ -341,13 +418,14 @@ def main(argv=None):
+     parser.add_argument("--allow-subset", action="store_true", help="Debug with fewer than 50 tasks; resulting run is marked as a subset.")
+     parser.add_argument("--smoke", action="store_true", help="Train/export/reload a tiny synthetic model, without using competition assets.")
+     parser.add_argument("--no-export", action="store_true", help="Skip the full HF export; useful for short integration tests.")
++    parser.add_argument("--local-rank", type=int, help=argparse.SUPPRESS)
+     args = parser.parse_args(argv)
+     if args.smoke:
+         from .training_smoke import run_smoke
+         return run_smoke(resolve_path(args.output_dir or "artifacts/training_smoke"), args.device or "cpu", args.max_steps or 30)
+     config = yaml.safe_load(resolve_path(args.config).read_text())
+     for key, value in vars(args).items():
+-        if key not in {"config", "dry_run", "smoke", "allow_subset", "no_export"} and value is not None:
++        if key not in {"config", "dry_run", "smoke", "allow_subset", "no_export", "local_rank"} and value is not None:
+             config[key] = value
+     if args.allow_subset:
+         config["allow_subset"] = True
+diff --git a/src/lrvla/training_checkpoint.py b/src/lrvla/training_checkpoint.py
+index 1c18ec8..e98e351 100644
+--- a/src/lrvla/training_checkpoint.py
++++ b/src/lrvla/training_checkpoint.py
+@@ -135,22 +135,40 @@ def export_hf_checkpoint(model, output, *, dtype=torch.bfloat16, max_shard_bytes
+     return output
+ 
+ 
+-def save_training_checkpoint(model, optimizer, scheduler, output, state, metadata):
++def capture_rng_state(device=None):
++    numpy_rng = np.random.get_state()
++    cuda_rng = None
++    if torch.cuda.is_available():
++        cuda_rng = torch.cuda.get_rng_state(device if device is not None else torch.cuda.current_device())
++    return {"torch_rng": torch.get_rng_state(), "cuda_rng": cuda_rng,
++            "python_rng": random.getstate(),
++            "numpy_rng": (numpy_rng[0], torch.from_numpy(numpy_rng[1].astype(np.int64)), *numpy_rng[2:])}
++
++
++def restore_rng_state(state, device=None):
++    torch.set_rng_state(state["torch_rng"])
++    random.setstate(state["python_rng"])
++    numpy_rng = state["numpy_rng"]
++    np.random.set_state((numpy_rng[0], numpy_rng[1].numpy().astype(np.uint32), *numpy_rng[2:]))
++    if state.get("cuda_rng") is not None and torch.cuda.is_available():
++        torch.cuda.set_rng_state(state["cuda_rng"], device if device is not None else torch.cuda.current_device())
++
++
++def save_training_checkpoint(model, optimizer, scheduler, output, state, metadata, *, rank_rng_states=None):
+     output = Path(output)
+     output.parent.mkdir(parents=True, exist_ok=True)
+     weights = {name: p.detach().cpu() for name, p in model.named_parameters() if p.requires_grad}
+-    numpy_rng = np.random.get_state()
++    local_rng = capture_rng_state()
+     payload = {"trainable_state": weights, "optimizer": optimizer.state_dict(), "scheduler": scheduler.state_dict(),
+-               "state": state, "metadata": metadata, "torch_rng": torch.get_rng_state(),
+-               "cuda_rng": torch.cuda.get_rng_state_all() if torch.cuda.is_available() else [],
+-               "python_rng": random.getstate(),
+-               "numpy_rng": (numpy_rng[0], torch.from_numpy(numpy_rng[1].astype(np.int64)), *numpy_rng[2:])}
++               "state": state, "metadata": metadata, **local_rng}
++    if rank_rng_states is not None:
++        payload["rank_rng_states"] = rank_rng_states
+     temporary = output.with_suffix(".tmp")
+     torch.save(payload, temporary)
+     temporary.replace(output)
+ 
+ 
+-def resume_training_checkpoint(model, optimizer, scheduler, checkpoint, *, expected_metadata):
++def resume_training_checkpoint(model, optimizer, scheduler, checkpoint, *, expected_metadata, rank=0, device=None):
+     payload = torch.load(checkpoint, map_location="cpu", weights_only=True)
+     # A run may change max_steps or checkpoint intervals; parameter/data identity must match.
+     for key in ("base_identity", "manifest_content_sha256"):
+@@ -163,6 +181,12 @@ def resume_training_checkpoint(model, optimizer, scheduler, checkpoint, *, expec
+         if payload["metadata"].get(key) != expected_metadata.get(key):
+             raise ValueError(f"Resume mismatch for {key}; use the same loss normalization and data sampling. "
+                              "Checkpoints predating the tail/normalization fix cannot provide an exact resume.")
++    saved_distributed = payload["metadata"].get("distributed")
++    expected_distributed = expected_metadata.get("distributed")
++    legacy_single_gpu = (saved_distributed is None and expected_distributed is not None and
++                         expected_distributed.get("world_size") == 1)
++    if saved_distributed != expected_distributed and not legacy_single_gpu:
++        raise ValueError("Resume mismatch for distributed topology or global batch configuration.")
+     parameters = dict(model.named_parameters())
+     trainable = {name for name, p in parameters.items() if p.requires_grad}
+     if set(payload["trainable_state"]) != trainable:
+@@ -172,10 +196,16 @@ def resume_training_checkpoint(model, optimizer, scheduler, checkpoint, *, expec
+             parameters[name].copy_(value)
+     optimizer.load_state_dict(payload["optimizer"])
+     scheduler.load_state_dict(payload["scheduler"])
+-    torch.set_rng_state(payload["torch_rng"])
+-    random.setstate(payload["python_rng"])
+-    numpy_rng = payload["numpy_rng"]
+-    np.random.set_state((numpy_rng[0], numpy_rng[1].numpy().astype(np.uint32), *numpy_rng[2:]))
+-    if payload["cuda_rng"] and torch.cuda.is_available():
+-        torch.cuda.set_rng_state_all(payload["cuda_rng"])
++    rank_states = payload.get("rank_rng_states")
++    if rank_states is not None:
++        if not 0 <= rank < len(rank_states):
++            raise ValueError("Checkpoint does not contain RNG state for this distributed rank.")
++        restore_rng_state(rank_states[rank], device)
++    else:
++        # Backward compatibility with verified single-GPU checkpoints.
++        legacy_cuda = payload.get("cuda_rng")
++        if isinstance(legacy_cuda, list):
++            legacy_cuda = legacy_cuda[0] if legacy_cuda else None
++        restore_rng_state({"torch_rng": payload["torch_rng"], "cuda_rng": legacy_cuda,
++                           "python_rng": payload["python_rng"], "numpy_rng": payload["numpy_rng"]}, device)
+     return payload["state"]
+diff --git a/src/lrvla/training_data.py b/src/lrvla/training_data.py
+index 9886878..83f0f57 100644
+--- a/src/lrvla/training_data.py
++++ b/src/lrvla/training_data.py
+@@ -191,8 +191,39 @@ class EpochBatchSampler(Sampler):
+         return max(0, (self.length + self.batch_size - 1) // self.batch_size - self.offset)
+ 
+ 
+-def epoch_dataloader(dataset, batch_size, seed, epoch=0, offset=0, num_workers=0, collate_fn=model_collate):
+-    sampler = EpochBatchSampler(len(dataset), batch_size, seed, epoch, offset)
++class DistributedEpochBatchSampler(Sampler):
++    """Deterministic disjoint per-rank batches with an exactly resumable offset."""
++    def __init__(self, length, batch_size, seed, rank, world_size, epoch=0, offset=0):
++        if length <= 0 or batch_size <= 0:
++            raise ValueError("Dataset length and batch size must be positive.")
++        if world_size <= 1 or not 0 <= rank < world_size:
++            raise ValueError("Distributed sampler requires world_size > 1 and a valid rank.")
++        self.length, self.batch_size, self.seed = length, batch_size, seed
++        self.rank, self.world_size = rank, world_size
++        self.epoch, self.offset = epoch, offset
++        self.global_batches = length // (batch_size * world_size)
++        if self.global_batches <= 0:
++            raise ValueError("Dataset must contain at least one complete distributed global batch.")
++        if not 0 <= offset <= self.global_batches:
++            raise ValueError("Distributed batch offset is outside this epoch.")
++
++    def __iter__(self):
++        order = torch.randperm(self.length, generator=torch.Generator().manual_seed(self.seed + self.epoch)).tolist()
++        width = self.batch_size * self.world_size
++        for batch_index in range(self.offset, self.global_batches):
++            global_batch = order[batch_index * width:(batch_index + 1) * width]
++            start = self.rank * self.batch_size
++            yield global_batch[start:start + self.batch_size]
++
++    def __len__(self):
++        return self.global_batches - self.offset
++
++
++def epoch_dataloader(dataset, batch_size, seed, epoch=0, offset=0, num_workers=0,
++                     collate_fn=model_collate, rank=0, world_size=1):
++    sampler = (EpochBatchSampler(len(dataset), batch_size, seed, epoch, offset)
++               if world_size == 1 else
++               DistributedEpochBatchSampler(len(dataset), batch_size, seed, rank, world_size, epoch, offset))
+     # DataLoader draws its worker/base seed even with num_workers=0. Isolate that
+     # draw so constructing a resumed iterator does not change saved FM noise RNG.
+     worker_rng = torch.Generator().manual_seed(seed + 100000 + epoch)
+diff --git a/src/lrvla/training_distributed.py b/src/lrvla/training_distributed.py
+new file mode 100644
+index 0000000..b2b2672
+--- /dev/null
++++ b/src/lrvla/training_distributed.py
+@@ -0,0 +1,107 @@
++"""Small torchrun/DDP primitives kept separate from the training policy."""
++from __future__ import annotations
++
++from dataclasses import dataclass
++import os
++
++import torch
++import torch.distributed as dist
++
++
++@dataclass(frozen=True)
++class DistributedContext:
++    rank: int
++    local_rank: int
++    world_size: int
++    device: torch.device
++    initialized_here: bool = False
++
++    @property
++    def distributed(self):
++        return self.world_size > 1
++
++    @property
++    def is_main(self):
++        return self.rank == 0
++
++    @classmethod
++    def from_environment(cls, requested_device="cuda", *, dry_run=False):
++        world_size = int(os.environ.get("WORLD_SIZE", "1"))
++        rank = int(os.environ.get("RANK", "0"))
++        local_rank = int(os.environ.get("LOCAL_RANK", "0"))
++        if world_size <= 0 or not 0 <= rank < world_size or local_rank < 0:
++            raise ValueError("Invalid torchrun WORLD_SIZE/RANK/LOCAL_RANK environment.")
++        requested = torch.device(requested_device)
++        if world_size > 1 and requested.type != "cuda":
++            raise ValueError("Multi-process training requires CUDA/NCCL.")
++        if requested.type == "cuda" and not torch.cuda.is_available() and not dry_run:
++            raise RuntimeError("CUDA unavailable in this environment.")
++        initialized_here = False
++        if world_size > 1:
++            if local_rank >= torch.cuda.device_count():
++                raise RuntimeError(f"LOCAL_RANK={local_rank} but only {torch.cuda.device_count()} CUDA devices are visible.")
++            torch.cuda.set_device(local_rank)
++            if not dist.is_initialized():
++                dist.init_process_group(backend="nccl", init_method="env://")
++                initialized_here = True
++            device = torch.device("cuda", local_rank)
++        elif requested.type == "cuda" and torch.cuda.is_available():
++            index = requested.index if requested.index is not None else 0
++            torch.cuda.set_device(index)
++            device = torch.device("cuda", index)
++        elif requested.type == "cuda" and dry_run:
++            device = requested
++        else:
++            device = requested
++        return cls(rank, local_rank, world_size, device, initialized_here)
++
++    def barrier(self):
++        if self.distributed:
++            dist.barrier()
++
++    def broadcast_object(self, value, source=0):
++        if not self.distributed:
++            return value
++        values = [value if self.rank == source else None]
++        dist.broadcast_object_list(values, src=source)
++        return values[0]
++
++    def sum_scalar(self, value):
++        tensor = torch.tensor(float(value), dtype=torch.float64, device=self.device)
++        if self.distributed:
++            dist.all_reduce(tensor, op=dist.ReduceOp.SUM)
++        return float(tensor.item())
++
++    def max_scalar(self, value):
++        tensor = torch.tensor(float(value), dtype=torch.float64, device=self.device)
++        if self.distributed:
++            dist.all_reduce(tensor, op=dist.ReduceOp.MAX)
++        return float(tensor.item())
++
++    def all_true(self, value):
++        tensor = torch.tensor(1 if value else 0, dtype=torch.int32, device=self.device)
++        if self.distributed:
++            dist.all_reduce(tensor, op=dist.ReduceOp.MIN)
++        return bool(tensor.item())
++
++    def gather_objects(self, value):
++        if not self.distributed:
++            return [value]
++        output = [None] * self.world_size if self.is_main else None
++        dist.gather_object(value, output, dst=0)
++        return output
++
++    def close(self):
++        if self.initialized_here and dist.is_initialized():
++            dist.destroy_process_group()
++
++
++def distributed_metadata(context, per_device_batch, accumulation):
++    return {
++        "backend": "nccl" if context.distributed else None,
++        "world_size": context.world_size,
++        "per_device_batch_size": per_device_batch,
++        "gradient_accumulation": accumulation,
++        "global_batch_size": per_device_batch * accumulation * context.world_size,
++        "sampler": "global_shuffle_rank_slice_drop_last" if context.distributed else "epoch_batch_sampler",
++    }
+diff --git a/src/lrvla/training_identity.py b/src/lrvla/training_identity.py
+index 6bff485..2d2ac2d 100644
+--- a/src/lrvla/training_identity.py
++++ b/src/lrvla/training_identity.py
+@@ -5,6 +5,7 @@ from copy import deepcopy
+ import hashlib
+ import json
+ from pathlib import Path
++import subprocess
+ 
+ 
+ def canonical_sha256(value):
+@@ -34,3 +35,18 @@ def base_checkpoint_identity(checkpoint):
+                 digest.update(block)
+         inventory.append({"file": path.name, "size": path.stat().st_size, "sha256": digest.hexdigest()})
+     return {"sha256": canonical_sha256(inventory), "shards": inventory}
++
++
++def repository_identity(repository):
++    """Return the exact source revision without making Git a runtime requirement."""
++    repository = Path(repository)
++    try:
++        commit = subprocess.check_output(
++            ["git", "-C", str(repository), "rev-parse", "HEAD"],
++            text=True, stderr=subprocess.DEVNULL).strip()
++        status = subprocess.check_output(
++            ["git", "-C", str(repository), "status", "--porcelain", "--untracked-files=no"],
++            text=True, stderr=subprocess.DEVNULL)
++    except (FileNotFoundError, subprocess.CalledProcessError):
++        return {"commit": None, "dirty": None}
++    return {"commit": commit, "dirty": bool(status.strip())}
+diff --git a/tests/test_training.py b/tests/test_training.py
+index 72f7fc5..ef4fe4b 100644
+--- a/tests/test_training.py
++++ b/tests/test_training.py
+@@ -10,7 +10,8 @@ import pytest
+ import torch
+ from torch import nn
+ 
+-from lrvla.training_data import EpochBatchSampler, LocalCleanDataset, MODEL_KEYS, episode_split, epoch_dataloader
++from lrvla.training_data import (DistributedEpochBatchSampler, EpochBatchSampler,
++                                 LocalCleanDataset, MODEL_KEYS, episode_split, epoch_dataloader)
+ from lrvla.training_models import LoRALinear, configure_trainable, fused_storage_torch_forward, masked_bc_loss, sdpa_attention
+ from lrvla.training_smoke import TinyPolicy, run_smoke
+ from lrvla.training_checkpoint import resume_training_checkpoint, save_training_checkpoint
+@@ -135,6 +136,18 @@ def test_resumable_sampler_and_episode_holdout():
+     assert set(train).isdisjoint(validation)
+ 
+ 
++def test_distributed_sampler_is_disjoint_complete_and_resumable():
++    rank0 = list(DistributedEpochBatchSampler(29, 4, 42, rank=0, world_size=2, epoch=3))
++    rank1 = list(DistributedEpochBatchSampler(29, 4, 42, rank=1, world_size=2, epoch=3))
++    assert len(rank0) == len(rank1) == 3
++    assert all(len(batch) == 4 for batch in rank0 + rank1)
++    used0, used1 = set(sum(rank0, [])), set(sum(rank1, []))
++    assert used0.isdisjoint(used1)
++    assert len(used0 | used1) == 24  # final five rows are dropped globally
++    assert list(DistributedEpochBatchSampler(29, 4, 42, 0, 2, epoch=3, offset=2)) == rank0[2:]
++    assert list(DistributedEpochBatchSampler(29, 4, 42, 1, 2, epoch=3, offset=2)) == rank1[2:]
++
++
+ def test_resumed_data_iterator_preserves_next_batch_and_noise_rng():
+     from torch.utils.data import TensorDataset, default_collate
+     dataset = TensorDataset(torch.arange(20))
+diff --git a/tests/test_training_distributed.py b/tests/test_training_distributed.py
+new file mode 100644
+index 0000000..8a16cc5
+--- /dev/null
++++ b/tests/test_training_distributed.py
+@@ -0,0 +1,90 @@
++"""CPU checks for DDP metadata and rank-specific checkpoint RNG state."""
++from copy import deepcopy
++from pathlib import Path
++import random
++import sys
++
++import numpy as np
++import torch
++from torch import nn
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
++
++from lrvla.training_checkpoint import (capture_rng_state, resume_training_checkpoint,
++                                       save_training_checkpoint)
++from lrvla.training_distributed import DistributedContext, distributed_metadata
++from lrvla.training_identity import repository_identity
++
++
++def metadata(world_size=2):
++    return {
++        "base_identity": {"sha256": "base"},
++        "manifest_content_sha256": "clean",
++        "selection": {"mode": "expert"},
++        "norm_sha256": "norm",
++        "model_geometry": {"chunk_size": 50},
++        "qwen_config_sha256": "qwen",
++        "loss_normalization": "valid_action_coordinate_mean_v1",
++        "data_sampling": {"action_chunk_tail": "mask", "batch_size": 16},
++        "distributed": distributed_metadata(
++            DistributedContext(0, 0, world_size, torch.device("cpu")), 16, 1),
++    }
++
++
++def test_distributed_metadata_tracks_effective_global_batch():
++    data = metadata(2)["distributed"]
++    assert data["world_size"] == 2
++    assert data["per_device_batch_size"] == 16
++    assert data["global_batch_size"] == 32
++    assert data["sampler"] == "global_shuffle_rank_slice_drop_last"
++
++
++def test_repository_identity_records_revision(tmp_path):
++    import subprocess
++    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
++    (tmp_path / "tracked.txt").write_text("baseline\n")
++    subprocess.run(["git", "-C", str(tmp_path), "add", "tracked.txt"], check=True)
++    subprocess.run(["git", "-C", str(tmp_path), "-c", "user.name=test", "-c", "user.email=test@example.com",
++                    "commit", "-qm", "baseline"], check=True)
++    clean = repository_identity(tmp_path)
++    assert len(clean["commit"]) == 40
++    assert clean["dirty"] is False
++    (tmp_path / "tracked.txt").write_text("changed\n")
++    assert repository_identity(tmp_path) == {**clean, "dirty": True}
++
++
++def test_checkpoint_restores_the_selected_rank_rng(tmp_path):
++    model = nn.Linear(2, 1)
++    optimizer = torch.optim.AdamW(model.parameters())
++    scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda _: 1)
++    states = []
++    expected = []
++    for seed in (101, 202):
++        torch.manual_seed(seed); random.seed(seed); np.random.seed(seed)
++        states.append(capture_rng_state())
++        expected.append((torch.rand(2), random.random(), np.random.rand()))
++    checkpoint = tmp_path / "training.pt"
++    save_training_checkpoint(model, optimizer, scheduler, checkpoint, {"global_step": 4},
++                             metadata(), rank_rng_states=states)
++    for rank in (0, 1):
++        clone = deepcopy(model)
++        clone_optimizer = torch.optim.AdamW(clone.parameters())
++        clone_scheduler = torch.optim.lr_scheduler.LambdaLR(clone_optimizer, lambda _: 1)
++        resume_training_checkpoint(clone, clone_optimizer, clone_scheduler, checkpoint,
++                                   expected_metadata=metadata(), rank=rank)
++        actual = (torch.rand(2), random.random(), np.random.rand())
++        torch.testing.assert_close(actual[0], expected[rank][0])
++        assert actual[1:] == expected[rank][1:]
++
++
++def test_resume_rejects_changed_world_size(tmp_path):
++    model = nn.Linear(2, 1)
++    optimizer = torch.optim.AdamW(model.parameters())
++    scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda _: 1)
++    checkpoint = tmp_path / "training.pt"
++    save_training_checkpoint(model, optimizer, scheduler, checkpoint, {"global_step": 1}, metadata())
++    changed = metadata()
++    changed["distributed"] = {**changed["distributed"], "world_size": 4, "global_batch_size": 64}
++    import pytest
++    with pytest.raises(ValueError, match="distributed topology"):
++        resume_training_checkpoint(model, optimizer, scheduler, checkpoint, expected_metadata=changed)
+-- 
+2.45.1.windows.1
+
