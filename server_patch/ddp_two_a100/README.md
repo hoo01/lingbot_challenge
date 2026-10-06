@@ -8,8 +8,10 @@
    断点恢复、rank 0 日志/导出以及双卡配置。
 3. `0003-*.patch`：将 SwanLab 改成上游固定依赖安装完成后的独立安装步骤，避免
    protobuf 版本在同一次 pip 求解中冲突。
+4. `0004-*.patch`：让资产下载脚本同时用 `HF_ENDPOINT` 构造元数据 API 与文件
+   下载地址，可切换到 Hugging Face 镜像并续传已有 `.part` 文件。
 
-本地实现提交为 `6448c36`，分支名为 `feat/ddp-two-a100`。由于当前 GitHub
+本地实现最新提交为 `3f836f3`，分支名为 `feat/ddp-two-a100`。由于当前 GitHub
 账号对完整训练仓库没有写权限，补丁是这次交接的可移植来源；不要只复制单个
 `training.py`。
 
@@ -21,12 +23,14 @@ cd lingbot-vla-robotwin
 git checkout 02ba532
 git am /path/to/ddp_two_a100/0001-*.patch \
        /path/to/ddp_two_a100/0002-*.patch \
-       /path/to/ddp_two_a100/0003-*.patch
-git log -3 --oneline
+       /path/to/ddp_two_a100/0003-*.patch \
+       /path/to/ddp_two_a100/0004-*.patch
+git log -4 --oneline
 git status --short
 ```
 
-应看到最新提交 `6448c36` 对应的提交标题，且工作树为空。不同机器重新应用补丁后
+应看到最新提交标题为 `fix(download): honor configurable Hugging Face endpoint`，
+且工作树为空。不同机器重新应用补丁后
 commit SHA 可能保持不变；正式训练以机器上的 `git rev-parse HEAD` 为准。
 
 ## 租卡后先做双卡冒烟
