@@ -134,5 +134,23 @@ GitHub 保存：补丁、配置、复现说明和本交接文档。GitHub 不保
 转换视频、token、SwanLab 本地目录或大 checkpoint。本轮使用 `--no-export`，没有为
 10-step DDP 冒烟生成需要异地备份的正式 checkpoint。
 
+### GitHub、Hugging Face 与本地磁盘的归档边界
+
+| 位置 | 应保存 | 不应保存 |
+| --- | --- | --- |
+| GitHub `hoo01/lingbot_challenge` | `0001`–`0005` 补丁、YAML、脚本、README、实验设计、脱敏后的短测日志与小型运行元数据、SHA-256 清单 | token、账号缓存、基座权重、训练 checkpoint、原始/转换视频、`swanlog/` |
+| HF 私有模型仓库 `HumaLog/lingbot-vla-checkpoints` | 正式实验的 `training.pt`、最终候选 `hf_ckpt/`、训练配置、源码身份、manifest/norm/provenance、episode split、SwanLab run ID 和哈希清单 | 官方基座的重复副本、RoboTwin 原始数据、无候选价值的每步完整导出 |
+| HF Dataset 或平台快照（可选） | 仅在许可证允许且确实需要跨机器复用时保存 3.9 GB LeRobot 转换数据 | 未核实再分发许可的数据；不能因方便而公开发布官方数据衍生物 |
+| 训练机本地磁盘 | pinned 基座、raw archives、解压 raw、转换数据、下载/转换缓存、SwanLab 本地缓存 | 明文 token 写入项目配置或可提交目录 |
+
+本次 DDP 验收的三个输出目录均使用 `--no-export`，没有正式 checkpoint 或 HF 权重可
+上传，因此 **本阶段 Hugging Face 无新增上传项**。SwanLab 已在线保存曲线；GitHub 只需
+补充脱敏后的 `train_ddp_smoke.log`、global batch 32/64 日志及对应 `run_metadata.json`
+（若文件存在）。上传前必须扫描 token、Authorization、密码和代理凭据。
+
+`clean_manifest.json` 含训练机绝对路径，不作为可直接迁移的 GitHub 运行输入；正式
+checkpoint 备份时应和 norm/provenance 一起上传 HF，用于身份审计，恢复到新机器后
+仍需由数据准备脚本生成本机路径对应的 manifest，并验证 content SHA。
+
 后续若决定正式训练，应另立实验输出目录并复核 checkpoint 策略和评测门槛；
 global batch 64 已固化为已验证默认值，但正式长训仍不属于本次双卡迁移验收。
