@@ -54,6 +54,20 @@ eval/：仿真评测与官方复测入口（由评测负责人维护）
 不重复上传。转换数据仅在许可证允许且确有跨机器复用需求时进入私有 Dataset 仓库或
 平台快照。详细矩阵见 `训练端_双A100_DDP冒烟交接.md`。
 
+### 当前归档状态（2026-10-07）
+
+- 双 A100 的 global batch 2、32、64 三组真实数据短测日志、配置、运行元数据、
+  episode split、SwanLab run ID 和 SHA-256 清单已经归档到
+  [`train/evidence/two_a100_2026-10-07/`](./train/evidence/two_a100_2026-10-07/)。
+- 最终默认值为每卡 batch 32、两卡 global batch 64；补丁链为 `0001`–`0005`。
+- 三组短测均为 3/10-step smoke，使用 `--no-export`；即使本地存在短测
+  `training.pt`，也不作为可恢复候选上传 Hugging Face。
+- 本阶段 **Hugging Face 无新增上传项**。正式训练开始后，才将重要
+  `training.pt`、候选 `hf_ckpt/` 及其配置/数据身份/哈希清单上传到私有仓库
+  `HumaLog/lingbot-vla-checkpoints`。
+- 3.9 GB LeRobot 转换数据优先随平台数据盘或快照保存；在未核实再分发许可前，
+  不上传公开 HF Dataset。基座、官方 raw archives 与解压 raw 均不重复上传。
+
 ## 从新机器开始
 
 ```bash
