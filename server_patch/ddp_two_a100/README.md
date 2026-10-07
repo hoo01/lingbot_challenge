@@ -81,3 +81,20 @@ bash scripts/train_ddp.sh \
 正式长训前还需确认：50 个任务均已转换、`complete_50_tasks=true`、全量 clean
 norm stats 的 provenance 匹配当前 manifest、SwanLab 登录成功、HF 私有仓库上传
 和恢复路径可用。
+
+## 2026-10-07 双 A100 真机验收结果
+
+补丁链已经在单机 `2×NVIDIA A100-SXM4-40GB`（GPU 间拓扑为 PHB）上完成真实数据
+验收。本阶段只验证双卡迁移，不启动正式长训。
+
+- 全量数据：50 tasks、2500 clean episodes，训练 episode 0–44，验证 episode 45–49；
+- norm 输入：494,328 个训练 frame；manifest 与 norm provenance SHA-256 均匹配；
+- 自动化测试：训练与 DDP 相关测试共 31 项通过；
+- DDP 冒烟：10/10 step 完成，`world_size=2`、`global_batch_size=2`；
+- 稳态 step time 约 2.05 秒，单卡峰值显存约 14.15 GiB；
+- loss 与 grad norm 全部有限，无 OOM、NCCL hang 或 rank 不同步；
+- SwanLab 只创建一个 run，run ID 为 `f0unq1gg`，上传完成。
+
+PyTorch 关于 `init_process_group` 未显式传入 device id 的输出属于警告，本次 current
+device、双 rank 训练和 collective 均正常；torchvision video deprecation 同样不影响
+本次验收。完整操作和结果见仓库根目录 `训练端_双A100_DDP冒烟交接.md`。
