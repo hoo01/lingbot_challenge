@@ -92,8 +92,10 @@ norm stats 的 provenance 匹配当前 manifest、SwanLab 登录成功、HF 私�
 - 自动化测试：训练与 DDP 相关测试共 31 项通过；
 - DDP 冒烟：10/10 step 完成，`world_size=2`、`global_batch_size=2`；
 - 稳态 step time 约 2.05 秒，单卡峰值显存约 14.15 GiB；
+- 目标配置短测：每卡 batch 16、`global_batch_size=32` 完成 3/3 step，稳态约
+  2.52 秒/step（约 12.7 samples/s），单卡峰值显存约 23.15 GiB；
 - loss 与 grad norm 全部有限，无 OOM、NCCL hang 或 rank 不同步；
-- SwanLab 只创建一个 run，run ID 为 `f0unq1gg`，上传完成。
+- 两次短测的 SwanLab 均各自只创建一个 run，上传完成。
 
 PyTorch 关于 `init_process_group` 未显式传入 device id 的输出属于警告，本次 current
 device、双 rank 训练和 collective 均正常；torchvision video deprecation 同样不影响

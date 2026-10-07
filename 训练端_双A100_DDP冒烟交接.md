@@ -92,6 +92,22 @@ bash scripts/train_ddp.sh \
 10 步全部完成，无 OOM、NCCL hang、nonfinite 或 rank 不同步。首步包含初始化，后续
 稳态约 2.05 秒/step。SwanLab 只创建一个 run：`f0unq1gg`，并显示上传 142 条记录完成。
 
+### 目标全局 batch 32 短测
+
+在相同全量数据上进一步使用每卡 batch 16、`world_size=2`、gradient accumulation 1，
+即 `global_batch_size=32`，完成 3-step 短测：
+
+| step | loss | grad norm | step time | 单卡峰值显存 |
+| ---: | ---: | ---: | ---: | ---: |
+| 1 | 0.354039 | 0.599217 | 4.812 s | 22.015 GiB |
+| 2 | 0.370527 | 0.793681 | 2.657 s | 23.153 GiB |
+| 3 | 0.342442 | 0.691312 | 2.388 s | 23.153 GiB |
+
+排除首步初始化后，稳态约 2.52 秒/step，即约 12.7 samples/s。3 步均正常完成，
+没有 OOM、NCCL hang、nonfinite 或 rank 不同步；显存仍有约 16.8 GiB 余量。
+SwanLab run ID 为 `9kwghjty`，上传 75 条记录完成。由此确认双卡目标全局 batch 32
+在当前 partial Action Expert 配置与完整 clean 数据上可运行。
+
 `init_process_group` 未显式传 device id 和 torchvision video deprecation 均为警告，
 不影响本次验收结论。
 
@@ -101,5 +117,5 @@ GitHub 保存：补丁、配置、复现说明和本交接文档。GitHub 不保
 转换视频、token、SwanLab 本地目录或大 checkpoint。本轮使用 `--no-export`，没有为
 10-step DDP 冒烟生成需要异地备份的正式 checkpoint。
 
-后续若决定正式训练，应另立实验输出目录并重新确定 batch、训练预算、checkpoint
-策略和评测门槛；这些不属于本次双卡迁移验收。
+后续若决定正式训练，应另立实验输出目录并重新确定训练预算、checkpoint 策略和
+评测门槛；全局 batch 32 已完成短测，但正式长训仍不属于本次双卡迁移验收。
