@@ -1,0 +1,3 @@
+{"step": 1, "loss": 0.3317051691919354, "grad_norm": 0.5252119302749634, "valid_action_coordinates": 38948.0, "lr": 3.3333333333333335e-05, "step_seconds": 7.56370874500135, "peak_gpu_gib": 31.5440092086792, "world_size": 2, "global_batch_size": 64}
+{"step": 2, "loss": 0.3450064491401818, "grad_norm": 0.5855391025543213, "valid_action_coordinates": 38780.0, "lr": 5e-05, "step_seconds": 3.260833045002073, "peak_gpu_gib": 32.682490825653076, "world_size": 2, "global_batch_size": 64}
+{"step": 3, "loss": 0.3304616746188088, "grad_norm": 0.4938584864139557, "valid_action_coordinates": 39088.0, "lr": 5e-05, "step_seconds": 3.2249942110065604, "peak_gpu_gib": 32.682490825653076, "world_size": 2, "global_batch_size": 64}

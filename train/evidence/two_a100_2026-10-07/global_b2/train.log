@@ -1,0 +1,57 @@
+Verifying frozen base shard SHA-256 identity before model loading...
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+Overwriting feature type 'VideoFrame' (VideoFrame -> VideoFrame)
+Overwriting feature type 'VideoFrame' (VideoFrame -> VideoFrame)
+[INFO][lingbotvla.models.vla.lingbot_vla.qwen3vl_in_vla:114] 10/07/2026 10:01:29 >> apply Qwen3-VL Lingbot patch
+=====Action Expert V2 init 36 Layers, hidden=768, q_heads=32, kv_heads=8, head_dim=128.=====
+=====Action Expert V2 init 36 Layers, hidden=768, q_heads=32, kv_heads=8, head_dim=128.=====
+`torch_dtype` is deprecated! Use `dtype` instead!
+=====Using Eager Attn=====
+=====Using Eager Attn=====
+{"selection": {"mode": "expert", "expert_last_n_layers": 2, "lora": null, "lora_module_count": 0}, "memory": {"total_parameters": 6375906359, "trainable_parameters": 101159479, "weight_gib": 12.064475264400244, "adamw_training_lower_bound_gib": 13.195020541548729, "excludes": "activations, VLM KV caches, temporary tensors, CUDA context, allocator fragmentation"}, "dry_run": false, "distributed": {"world_size": 2}}
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+{"training_samples": 494328, "validation_samples": 55459, "action_chunk_tail": "mask"}
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+swanlab: Tracking run with swanlab version 0.10.1
+swanlab: 💾 Run data saved at /data/lingbot-vla-robotwin/swanlog/run-20261007_100156-f0unq1gg
+swanlab: 📁 View project at https://swanlab.cn/@Elowynnn/lingbot_cha
+swanlab: 🚀 View run e0-expert-partial-ddp at https://swanlab.cn/@Elowynnn/lingbot_cha/runs/f0unq1gg
+{"swanlab_run_id": "f0unq1gg"}
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+{"step": 1, "loss": 0.2773321616549452, "grad_norm": 1.5998597145080566, "valid_action_coordinates": 952.0, "lr": 1e-05, "step_seconds": 4.249397720006527, "peak_gpu_gib": 13.728819847106934, "world_size": 2, "global_batch_size": 2}
+{"step": 2, "loss": 0.33728902544294087, "grad_norm": 2.299790620803833, "valid_action_coordinates": 1400.0, "lr": 1.5e-05, "step_seconds": 1.7734420000051614, "peak_gpu_gib": 14.143367767333984, "world_size": 2, "global_batch_size": 2}
+{"step": 3, "loss": 0.2407508778627918, "grad_norm": 2.254878044128418, "valid_action_coordinates": 854.0, "lr": 2e-05, "step_seconds": 2.271358867001254, "peak_gpu_gib": 14.143369197845459, "world_size": 2, "global_batch_size": 2}
+{"step": 4, "loss": 0.2731576974051339, "grad_norm": 2.3133342266082764, "valid_action_coordinates": 1400.0, "lr": 2.5e-05, "step_seconds": 2.096544147003442, "peak_gpu_gib": 14.147791862487793, "world_size": 2, "global_batch_size": 2}
+{"step": 5, "loss": 0.41239469701593573, "grad_norm": 1.635575771331787, "valid_action_coordinates": 1232.0, "lr": 3e-05, "step_seconds": 2.046732496994082, "peak_gpu_gib": 14.147791862487793, "world_size": 2, "global_batch_size": 2}
+{"step": 6, "loss": 0.4872718555376433, "grad_norm": 1.9072169065475464, "valid_action_coordinates": 1134.0, "lr": 3.5e-05, "step_seconds": 2.0703619659907417, "peak_gpu_gib": 14.14785385131836, "world_size": 2, "global_batch_size": 2}
+{"step": 7, "loss": 0.396248978175474, "grad_norm": 1.899057149887085, "valid_action_coordinates": 1246.0, "lr": 4e-05, "step_seconds": 2.061520551011199, "peak_gpu_gib": 14.14785385131836, "world_size": 2, "global_batch_size": 2}
+{"step": 8, "loss": 0.3226483590262277, "grad_norm": 1.8348188400268555, "valid_action_coordinates": 1400.0, "lr": 4.5e-05, "step_seconds": 2.048363772002631, "peak_gpu_gib": 14.14785385131836, "world_size": 2, "global_batch_size": 2}
+{"step": 9, "loss": 0.4070406668526786, "grad_norm": 1.7231812477111816, "valid_action_coordinates": 1400.0, "lr": 5e-05, "step_seconds": 2.0478511750116013, "peak_gpu_gib": 14.14785385131836, "world_size": 2, "global_batch_size": 2}
+{"step": 10, "loss": 0.3150888213765324, "grad_norm": 1.3702116012573242, "valid_action_coordinates": 882.0, "lr": 5e-05, "step_seconds": 2.0550055250059813, "peak_gpu_gib": 14.14785385131836, "world_size": 2, "global_batch_size": 2}
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/linux/anaconda3/envs/lingbot-vla/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+swanlab: 📁 View project at https://swanlab.cn/@Elowynnn/lingbot_cha
+swanlab: 🚀 View run e0-expert-partial-ddp at https://swanlab.cn/@Elowynnn/lingbot_cha/runs/f0unq1gg
+swanlab: Upload complete: 142 records

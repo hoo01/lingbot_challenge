@@ -1,0 +1,38 @@
+mode: expert
+expert_last_n_layers: 2
+base_checkpoint: models/lingbot-vla-v2-6b
+qwen_path: models/Qwen3-VL-4B-Instruct
+architecture_yaml: vendor/lingbot-vla-v2/configs/vla/robotwin/robotwin.yaml
+manifest: data/clean_manifest.json
+norm_stats: data/clean_norm_stats.json
+output_dir: artifacts/ddp_smoke_global_b64
+device: cuda
+train_projections: true
+batch_size: 32
+gradient_accumulation: 1
+gradient_checkpointing: true
+chunk_size: 50
+action_chunk_tail: mask
+img_size: 256
+image_augment: false
+num_workers: 4
+val_episodes: 5
+seed: 42
+lr: 5.0e-05
+weight_decay: 0.01
+max_grad_norm: 1.0
+warmup_steps: 100
+max_steps: 3
+eval_every: 500
+eval_batches: 8
+save_every: 1000
+export: false
+export_dtype: bfloat16
+swanlab:
+  enabled: true
+  project: lingbot_cha
+  workspace: Elowynnn
+  experiment_name: e0-expert-partial-ddp
+  description: LingBot-VLA clean-only 2xA100 DDP E0 baseline
+  public: false
+  run_id: null
