@@ -1,0 +1,73 @@
+From 2650d9dc5d832ccdcea46827088379f1f9914255 Mon Sep 17 00:00:00 2001
+From: hoo01 <497458301@qq.com>
+Date: Wed, 7 Oct 2026 10:18:30 +0800
+Subject: [PATCH] config(train): promote verified global batch 64 DDP preset
+
+---
+ README.md                     |  4 ++--
+ configs/train_expert_ddp.yaml | 15 +++++++--------
+ 2 files changed, 9 insertions(+), 10 deletions(-)
+
+diff --git a/README.md b/README.md
+index b097f51..0294ddf 100644
+--- a/README.md
++++ b/README.md
+@@ -162,7 +162,7 @@ source scripts/activate.sh
+ | `eval_batches` | `8` | 每次验证最多处理的小 batch 数 |
+ | `export` / `export_dtype` | `true` / `bfloat16` | 结束后导出完整推理权重及其精度 |
+ 
+-单卡有效 batch 为 `batch_size × gradient_accumulation`；DDP 的 global batch 为 `world_size × batch_size × gradient_accumulation`。例如两卡、每卡 batch 16、累积1次时，global batch 为32。这里的 step、预热、验证和保存间隔都按优化器更新计数。
++单卡有效 batch 为 `batch_size × gradient_accumulation`；DDP 的 global batch 为 `world_size × batch_size × gradient_accumulation`。例如两卡、每卡 batch 32、累积1次时，global batch 为64。这里的 step、预热、验证和保存间隔都按优化器更新计数。
+ 
+ `action_chunk_tail: mask` 保留轨迹末端观测，padding 不参与损失；累积梯度按整个更新窗口的有效动作坐标数统一归一化。`drop` 只保留训练集的完整动作窗口，验证集仍保留全部观测。截断会减少末段观测作为训练起点的覆盖。
+ 
+@@ -240,7 +240,7 @@ bash train.sh --config configs/train_expert.yaml --device cpu --dry-run
+ 
+ ### 3.4 双卡 DDP
+ 
+-DDP预设见 `configs/train_expert_ddp.yaml`。其中 `batch_size` 是**每卡**batch，默认两张卡各16、梯度累积1，global batch为32：
++DDP预设见 `configs/train_expert_ddp.yaml`。其中 `batch_size` 是**每卡**batch；该配置已在两张 A100-SXM4-40GB 上用完整 50-task clean 数据实测为每卡32、梯度累积1，global batch为64：
+ 
+ ```bash
+ source scripts/activate.sh
+diff --git a/configs/train_expert_ddp.yaml b/configs/train_expert_ddp.yaml
+index cfd53a6..7e776fc 100644
+--- a/configs/train_expert_ddp.yaml
++++ b/configs/train_expert_ddp.yaml
+@@ -1,6 +1,5 @@
+-# Two-A100 DDP baseline: per-device batch 16 x 2 ranks = global batch 32.
+-# After the target-machine profiler passes, batch_size may be raised to 32 and
+-# max_steps reduced to 15000 to preserve the same ~960k processed samples.
++# Verified two-A100 DDP baseline: per-device batch 32 x 2 ranks = global batch 64.
++# 15k optimizer steps preserve the original ~960k processed-sample budget.
+ mode: expert
+ expert_last_n_layers: 2
+ base_checkpoint: models/lingbot-vla-v2-6b
+@@ -11,7 +10,7 @@ norm_stats: data/clean_norm_stats.json
+ output_dir: runs/e0_expert_partial_ddp
+ device: cuda
+ train_projections: true
+-batch_size: 16
++batch_size: 32
+ gradient_accumulation: 1
+ gradient_checkpointing: true
+ chunk_size: 50
+@@ -24,11 +23,11 @@ seed: 42
+ lr: 0.00005
+ weight_decay: 0.01
+ max_grad_norm: 1.0
+-warmup_steps: 100
+-max_steps: 30000
+-eval_every: 500
++warmup_steps: 50
++max_steps: 15000
++eval_every: 250
+ eval_batches: 8
+-save_every: 1000
++save_every: 500
+ export: true
+ export_dtype: bfloat16
+ 
+-- 
+2.45.1.windows.1
+

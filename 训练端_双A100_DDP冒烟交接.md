@@ -8,7 +8,7 @@
 ## 结论
 
 双 A100 DDP 迁移已经完成并通过真实数据冒烟，可以作为后续实验的已验证基线。
-补丁以 `server_patch/ddp_two_a100/0001` 至 `0004` 保存；不要只复制某个 Python 文件。
+补丁以 `server_patch/ddp_two_a100/0001` 至 `0005` 保存；不要只复制某个 Python 文件。
 
 ## 机器与环境
 
@@ -23,7 +23,7 @@
 
 ## 代码与环境验收
 
-- 依次应用 `0001`–`0004` 补丁；
+- 依次应用 `0001`–`0005` 补丁；
 - `training.py`、`training_data.py`、`training_checkpoint.py`、
   `training_distributed.py` 均通过 `py_compile`；
 - `tests/test_training.py`、`tests/test_training_distributed.py`、
@@ -108,6 +108,23 @@ bash scripts/train_ddp.sh \
 SwanLab run ID 为 `9kwghjty`，上传 75 条记录完成。由此确认双卡目标全局 batch 32
 在当前 partial Action Expert 配置与完整 clean 数据上可运行。
 
+### 最终默认 global batch 64
+
+继续使用每卡 batch 32、两张 GPU、gradient accumulation 1，完成 global batch 64
+的 3-step 短测：
+
+| step | loss | grad norm | step time | 单卡峰值显存 |
+| ---: | ---: | ---: | ---: | ---: |
+| 1 | 0.331705 | 0.525212 | 7.564 s | 31.544 GiB |
+| 2 | 0.345006 | 0.585539 | 3.261 s | 32.682 GiB |
+| 3 | 0.330462 | 0.493858 | 3.225 s | 32.682 GiB |
+
+排除首步初始化后，稳态约 3.24 秒/step，即约 19.7 samples/s，显存余量约
+7.3 GiB。没有 OOM、NCCL hang、nonfinite 或 rank 不同步；SwanLab run ID
+`53olal33` 上传完成。因此最终将双卡默认定为每卡 batch 32、global batch 64。
+为保持原 global batch 32 × 30k steps 约 96 万样本的预算，默认配置同步调整为
+15k steps，并将 warmup/eval/save 的更新步数间隔减半。
+
 `init_process_group` 未显式传 device id 和 torchvision video deprecation 均为警告，
 不影响本次验收结论。
 
@@ -117,5 +134,5 @@ GitHub 保存：补丁、配置、复现说明和本交接文档。GitHub 不保
 转换视频、token、SwanLab 本地目录或大 checkpoint。本轮使用 `--no-export`，没有为
 10-step DDP 冒烟生成需要异地备份的正式 checkpoint。
 
-后续若决定正式训练，应另立实验输出目录并重新确定训练预算、checkpoint 策略和
-评测门槛；全局 batch 32 已完成短测，但正式长训仍不属于本次双卡迁移验收。
+后续若决定正式训练，应另立实验输出目录并复核 checkpoint 策略和评测门槛；
+global batch 64 已固化为已验证默认值，但正式长训仍不属于本次双卡迁移验收。

@@ -10,6 +10,8 @@
    protobuf 版本在同一次 pip 求解中冲突。
 4. `0004-*.patch`：让资产下载脚本同时用 `HF_ENDPOINT` 构造元数据 API 与文件
    下载地址，可切换到 Hugging Face 镜像并续传已有 `.part` 文件。
+5. `0005-*.patch`：将真机验证通过的每卡 batch 32（global batch 64）固化为双卡
+   默认配置，并按处理样本数将 30k 更新预算折算为 15k。
 
 本地实现最新提交为 `3f836f3`，分支名为 `feat/ddp-two-a100`。由于当前 GitHub
 账号对完整训练仓库没有写权限，补丁是这次交接的可移植来源；不要只复制单个
@@ -24,8 +26,9 @@ git checkout 02ba532
 git am /path/to/ddp_two_a100/0001-*.patch \
        /path/to/ddp_two_a100/0002-*.patch \
        /path/to/ddp_two_a100/0003-*.patch \
-       /path/to/ddp_two_a100/0004-*.patch
-git log -4 --oneline
+       /path/to/ddp_two_a100/0004-*.patch \
+       /path/to/ddp_two_a100/0005-*.patch
+git log -5 --oneline
 git status --short
 ```
 
@@ -66,11 +69,11 @@ bash scripts/train_ddp.sh \
 - `run_metadata.json` 的 `source.dirty` 为 `false`；
 - SwanLab 只出现一个 run，不是两个重复 run。
 
-## 再测实际 batch
+## 已完成的实际 batch 短测
 
-冒烟通过后依次测试每卡 batch 16、24、32，每组约 20 个 step。不要直接假定
-40GB A100 能放下每卡 32；DDP 不会合并两张卡的显存。正式预设在
-`configs/train_expert_ddp.yaml`，默认每卡 batch 16、global batch 32。
+目标机器已经依次验证每卡 batch 16（global batch 32）和每卡 batch 32
+（global batch 64）。最终预设在 `configs/train_expert_ddp.yaml`，默认每卡 batch 32、
+global batch 64；DDP 不会合并两张卡的显存，换用其他 GPU 型号时仍需重新短测。
 
 固定约 96 万处理样本时：
 
@@ -94,6 +97,8 @@ norm stats 的 provenance 匹配当前 manifest、SwanLab 登录成功、HF 私�
 - 稳态 step time 约 2.05 秒，单卡峰值显存约 14.15 GiB；
 - 目标配置短测：每卡 batch 16、`global_batch_size=32` 完成 3/3 step，稳态约
   2.52 秒/step（约 12.7 samples/s），单卡峰值显存约 23.15 GiB；
+- 最终默认短测：每卡 batch 32、`global_batch_size=64` 完成 3/3 step，稳态约
+  3.24 秒/step（约 19.7 samples/s），单卡峰值显存约 32.68 GiB；
 - loss 与 grad norm 全部有限，无 OOM、NCCL hang 或 rank 不同步；
 - 两次短测的 SwanLab 均各自只创建一个 run，上传完成。
 

@@ -61,7 +61,8 @@ git checkout 02ba532
 git am /data/lingbot_challenge/server_patch/ddp_two_a100/0001-*.patch \
        /data/lingbot_challenge/server_patch/ddp_two_a100/0002-*.patch \
        /data/lingbot_challenge/server_patch/ddp_two_a100/0003-*.patch \
-       /data/lingbot_challenge/server_patch/ddp_two_a100/0004-*.patch
+       /data/lingbot_challenge/server_patch/ddp_two_a100/0004-*.patch \
+       /data/lingbot_challenge/server_patch/ddp_two_a100/0005-*.patch
 
 cd /data/lingbot_challenge
 bash train/setup_train.sh /data/lingbot-vla-robotwin
