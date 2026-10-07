@@ -14,8 +14,8 @@
 data/：下载、转换、划分、归一化统计与完整性校验
         │
         ├── clean_manifest.json
-        ├── norm_stats_clean.json
-        └── norm_stats_clean.provenance.json
+        ├── clean_norm_stats.json
+        └── clean_norm_stats.provenance.json
         │
         ▼
 train/：环境、训练、日志、断点恢复、导出与异地备份
@@ -34,8 +34,13 @@ eval/：仿真评测与官方复测入口（由评测负责人维护）
 | `data/` | clean 数据下载、LeRobot v3.0 转换、manifest、norm stats、provenance 和校验 | 双 A100 机器已完成全量 50×50 数据及 SHA 验收 | [`data/README.md`](./data/README.md) |
 | `train/` | 环境安装、训练入口、恢复、SwanLab 日志、HF checkpoint 备份 | 单卡全链路与双 A100 DDP 真实数据冒烟均已验证 | [`train/README.md`](./train/README.md) |
 | `eval/` | 仿真环境、子集评测、`eval.sh` 和结果记录 | 已合入；当前 52/500（10.4%）仅为内部固定开发协议，不是官方成绩 | [`eval/README.md`](./eval/README.md) |
-| `robotwin_clean_data_audit/` | 50×50 clean 数据兼容性、关节角和归一化统计审计 | 已完成 | 目录内报告 |
+| `robotwin_clean_data_audit/` | 历史数据审计证据：兼容性、关节角与归一化统计对比 | 已完成；非正式训练输入 | 目录内报告 |
 | `server_patch/` | 已验证或待目标机器验证、但尚未进入上游训练工程的补丁 | 单卡基线及双 A100 DDP 补丁已保存 | [`server_patch/ddp_two_a100/README.md`](./server_patch/ddp_two_a100/README.md) |
+
+> `robotwin_clean_data_audit/` 仅用于追溯早期审计结论，不得将其中的
+> `data/analysis/norm_stats_clean.json` 作为正式训练输入。正式训练以
+> `/data/lingbot-vla-robotwin/data/clean_manifest.json`、`clean_norm_stats.json`
+> 及与之匹配的 provenance 校验结果为准。
 
 ## 两个仓库的关系
 

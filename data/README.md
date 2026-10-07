@@ -69,15 +69,17 @@ python data/verify_clean_data.py \
 校验器采用 fail-closed 策略：任务数、episode 数、clean-only、LeRobot 版本、provenance
 或 norm SHA 任一不符合都会退出非零。
 
-## `norm_stats_clean.json`
+## 历史审计副本：`norm_stats_clean.json`
 
 仓库中的统计量来自 Hugging Face `RoboTwin_lerobot_v30.zip` 的全部 2500 条 clean
 episodes，共 548,893 帧；计算口径和详细对比见
 `robotwin_clean_data_audit/data/analysis/lerobot_compat_and_norm_report.md`。
 
-该文件可作为独立审计参考。正式训练仍应由 `prepare_data.py` 针对最终 manifest 和
+该文件仅作为独立历史审计参考，**不是当前正式训练输入**。正式训练应由 `prepare_data.py` 针对最终 manifest 和
 验证集划分重新生成 norm stats 及 `.provenance.json`，然后运行校验器并记录 SHA-256。
 不要手工伪造 provenance，也不要回退到基于 randomized 数据的官方 `robotwin.json`。
+双 A100 正式流程当前使用 `/data/lingbot-vla-robotwin/data/clean_norm_stats.json`
+及与之匹配的 provenance。
 
 当前审计副本的 SHA-256 记录在 `SHA256SUMS`。正式重新生成后必须同步更新该清单。
 
