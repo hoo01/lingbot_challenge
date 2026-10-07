@@ -74,7 +74,7 @@ eval/：仿真评测与官方复测入口（由评测负责人维护）
 git clone https://github.com/hoo01/lingbot_challenge.git /data/lingbot_challenge
 git clone https://github.com/EclipseaHime017/lingbot-vla-robotwin.git /data/lingbot-vla-robotwin
 
-# 在完整训练工程上依次应用已验证单卡基线和双卡 DDP 补丁
+# 在完整训练工程上依次应用双卡补丁链（0001 是后续 DDP 补丁的基线依赖）
 cd /data/lingbot-vla-robotwin
 git checkout 02ba532
 git am /data/lingbot_challenge/server_patch/ddp_two_a100/0001-*.patch \
@@ -83,8 +83,9 @@ git am /data/lingbot_challenge/server_patch/ddp_two_a100/0001-*.patch \
        /data/lingbot_challenge/server_patch/ddp_two_a100/0004-*.patch \
        /data/lingbot_challenge/server_patch/ddp_two_a100/0005-*.patch
 
-cd /data/lingbot_challenge
-bash train/setup_train.sh /data/lingbot-vla-robotwin
+export CONDA_ROOT=/home/linux/anaconda3
+bash scripts/bootstrap.sh
+source scripts/activate.sh
 swanlab login
 
 # 正式双 A100 平台：下载并转换完整 50×50 clean 数据
