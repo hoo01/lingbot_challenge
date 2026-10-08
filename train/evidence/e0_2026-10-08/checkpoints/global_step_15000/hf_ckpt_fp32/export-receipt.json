@@ -1,0 +1,16 @@
+{
+  "step": 15000,
+  "dtype": "torch.float32",
+  "checkpoint": "${TRAIN_ROOT}/runs/e0_jiali_20261008_004327/checkpoints/global_step_15000/training.pt",
+  "checkpoint_sha256": "b9a4fd22933e76bd27d7ec9d0d0d71f77f4514451f935884cf291f770fea8469",
+  "base_identity_sha256": "2e727a4c9be84d1a9fe8952544fed421df65fd32b8e543f0bc468f6aeb508a81",
+  "norm_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+  "source_commit": "e8b21d6c9460005f4a6ae9a5e642cc1d69c88f18",
+  "cli_sha256": "bf36d4e6300e42cd3b03af3af14b39e738b027bad166f97f78699012ad7c21a6",
+  "trainable_values_exact": true,
+  "trainable_tensor_count": 59,
+  "shards": 50,
+  "tensors": 1708,
+  "action_consistency_audit": "not_run",
+  "created_at": "2026-10-08T14:12:12.553846+00:00"
+}
