@@ -4,6 +4,10 @@
 带 SHA-256 的真机冒烟证据。训练实现、启动脚本和默认 YAML 均以完整训练仓库
 `/data/lingbot-vla-robotwin` 为准，不在两个仓库中维护重复副本。
 
+所有正式训练产物必须遵守仓库根目录的
+[`Checkpoint与模型归档守则.md`](../Checkpoint与模型归档守则.md)：按实验 ID 和
+`global_step` 使用不可变目录，禁止用新模型覆盖旧 checkpoint。
+
 ## 当前内容
 
 | 路径 | 用途 |
