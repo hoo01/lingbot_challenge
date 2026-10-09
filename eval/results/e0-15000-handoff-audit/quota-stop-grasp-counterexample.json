@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-09T11:13:33.691985+00:00",
+  "counterexample_confirmed": true,
+  "official_source_sha256": "added37d121535c964950491d4587d76d785554f291c6717937c85f03994a194",
+  "wrapper_sha256": "e28f276eb49e481470f1f88b17c9c0cdcbed2cc158ec7d94db191087170961c0",
+  "fixture": "First contact has ten Failure candidates; the second has Success candidates.",
+  "official": {
+    "contacts_visited": [
+      0,
+      1
+    ],
+    "planner_calls": 2,
+    "returned_valid_poses": true
+  },
+  "current_wrapper": {
+    "contacts_visited": [
+      0
+    ],
+    "planner_calls": 1,
+    "premature_rejection": true,
+    "reason": "Official left_plan_multi_path returned Failure for all 10 grasp candidates"
+  },
+  "scope": "CPU control-flow counterexample, not a real-scene success test; no model or simulator calls.",
+  "affected_production_rejection_count_not_yet_determined": true
+}

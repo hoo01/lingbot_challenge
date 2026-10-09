@@ -1,0 +1,21 @@
+{
+  "dispatched_at": "2026-10-09T09:26:33.644965+00:00",
+  "job_id": "843758599804",
+  "segment": "user-accepted-bf16-20261009",
+  "manager_pid": 147313,
+  "worker_pids": [
+    147323,
+    147324
+  ],
+  "maintenance_released": true,
+  "new_job_created": false,
+  "preserved_candidates": 507,
+  "preserved_valid": 369,
+  "remaining_valid": 131,
+  "completion_basis": "valid",
+  "planned_valid": 500,
+  "historical_interruptions": 10,
+  "historical_runtime_errors": 4,
+  "prior_rng_restored": false,
+  "manifest_sha256": "cb23c6be9d84edc05d6c247ab32cb133c117cdb60367718316247afdb5fcd56a"
+}

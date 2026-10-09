@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-09T13:43:44.107756+00:00",
+  "job_id": "843758599804",
+  "execution_segment": "expert-outer-exception-20261009",
+  "checks": [
+    {
+      "shard": 0,
+      "task": "hanging_mug",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "expert_launches": [],
+      "initial_inputs_match_original_and_frozen_diagnostic": true,
+      "inherited_expert_launches": 5,
+      "first_action_shape": [
+        50,
+        14
+      ],
+      "finite": true,
+      "completed_chunks": 6,
+      "actions": 300,
+      "dual_video_started": true,
+      "full_episode_verified": false
+    },
+    {
+      "shard": 1,
+      "task": "place_a2b_right",
+      "setting": "demo_clean",
+      "seed": 100017,
+      "expert_launches": [
+        {
+          "event": "expert_launch_reserved",
+          "task": "place_a2b_right",
+          "setting": "demo_clean",
+          "seed": 100017,
+          "policy_index": 4,
+          "launch_number": 2
+        }
+      ],
+      "initial_inputs_match_original_and_frozen_diagnostic": null,
+      "inherited_expert_launches": 1,
+      "first_action_shape": [
+        50,
+        14
+      ],
+      "finite": true,
+      "completed_chunks": 7,
+      "actions": 350,
+      "dual_video_started": true,
+      "full_episode_verified": false
+    }
+  ],
+  "counts": {
+    "attempted": 591,
+    "valid": 396,
+    "successes": 46,
+    "expert_rejections": 129,
+    "expert_exceptions": 1,
+    "resolved_original_expert_errors": 1,
+    "execution_errors": 0,
+    "historical_interruptions": 16,
+    "historical_runtime_errors": 6,
+    "actual_attempts": 604
+  },
+  "scope": "First formal action blocks, hanging original policy-only inputs and expert-budget persistence; full-episode acceptance follows separately."
+}

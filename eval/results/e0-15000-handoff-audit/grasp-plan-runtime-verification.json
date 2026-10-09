@@ -1,0 +1,70 @@
+{
+  "checked_at": "2026-10-09T10:50:06.957323+00:00",
+  "passed": true,
+  "job_id": "843758599804",
+  "execution_segment": "expert-grasp-plan-20261009",
+  "formal_expert_result": {
+    "task": "lift_pot",
+    "setting": "demo_randomized",
+    "seed": 100019,
+    "status": "expert_rejected",
+    "expert": {
+      "seed": 100019,
+      "phase": "completed",
+      "passed": false,
+      "setup_seconds": 17.30724060535431,
+      "plan_success": false,
+      "success": false,
+      "raw_plan_success": true,
+      "rejection_reason": "expert_grasp_planning_failed",
+      "rejection_detail": "Official left_plan_multi_path returned Failure for all 10 grasp candidates",
+      "execution_seconds": 0.6293288543820381,
+      "total_seconds": 17.94592347368598
+    }
+  },
+  "policy_checks": [
+    {
+      "shard": 0,
+      "episode": "dump_bin_bigbin/demo_randomized/100019",
+      "first_block_actions": 50,
+      "actions_shape": [
+        50,
+        14
+      ],
+      "finite": true,
+      "trajectory_matches": true,
+      "episode_completed_at_check": false,
+      "both_video_frame_logs_started": true,
+      "original_instruction_unchanged": true,
+      "original_parameters_unchanged": true,
+      "original_initial_joints_unchanged": true,
+      "original_three_camera_pixels_unchanged": true
+    },
+    {
+      "shard": 1,
+      "episode": "lift_pot/demo_randomized/100021",
+      "first_block_actions": 50,
+      "actions_shape": [
+        50,
+        14
+      ],
+      "finite": true,
+      "trajectory_matches": true,
+      "episode_completed_at_check": false,
+      "both_video_frame_logs_started": true
+    }
+  ],
+  "counts": {
+    "attempted": 531,
+    "valid": 380,
+    "successes": 46,
+    "setup_errors": 65,
+    "expert_rejections": 86,
+    "execution_errors": 0,
+    "historical_interruptions": 12,
+    "historical_runtime_errors": 5,
+    "actual_attempts": 542
+  },
+  "disk_free_bytes": 209137434624,
+  "scope": "Formal recovered expert result, original sibling inputs, and first completed action blocks on both GPUs; complete new videos are checked after episode completion."
+}

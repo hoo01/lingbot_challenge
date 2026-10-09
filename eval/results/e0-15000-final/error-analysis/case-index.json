@@ -1,0 +1,1409 @@
+{
+  "created_at": "2026-10-09T05:24:48.147052+00:00",
+  "job_id": "843758599804",
+  "final": false,
+  "selection": "Five completed policy failures spanning task types, plus one successful clean alarmclock example. Qualitative examples, not failure-frequency estimates.",
+  "model_or_simulator_calls": 0,
+  "cases": [
+    {
+      "case_id": "click_alarmclock-demo_clean-100011",
+      "task": "click_alarmclock",
+      "setting": "demo_clean",
+      "seed": 100011,
+      "success": true,
+      "metrics": "click_alarmclock-demo_clean-100011/metrics.json",
+      "artifact_root": "segments/expert-plan-failure-20261009/shards/0/evaluation",
+      "episode_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_clean/100011/episode.json",
+      "trajectory_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_clean/100011/trajectory.jsonl",
+      "videos": {
+        "head_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_clean/100011/episode.mp4",
+          "bytes": 154678,
+          "sha256": "285582063ac256f6fddfedbb09f49bd7e814935828cbaa4a3b608e7430cf6fe9",
+          "frames": 333,
+          "video_seconds": 33.3,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 0.30899568274617195,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "click_alarmclock-demo_clean-100011/head_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 2
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 6
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 50,
+              "simulation_seconds": 5.0000002374872565,
+              "action_count": 9
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 12
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 83,
+              "simulation_seconds": 8.300000394228846,
+              "action_count": 14
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 133,
+              "simulation_seconds": 13.300000631716102,
+              "action_count": 22
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 24
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 183,
+              "simulation_seconds": 18.30000086920336,
+              "action_count": 29
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 233,
+              "simulation_seconds": 23.300001106690615,
+              "action_count": 37
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 283,
+              "simulation_seconds": 28.300001344177872,
+              "action_count": 43
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 46
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 306,
+              "simulation_seconds": 30.60000145342201,
+              "action_count": 47
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 323,
+              "simulation_seconds": 32.30000153416768,
+              "action_count": 50
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 330,
+              "simulation_seconds": 33.00000156741589,
+              "action_count": 51
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 332,
+              "simulation_seconds": 33.180001575965434,
+              "action_count": 51
+            }
+          ]
+        },
+        "observer_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_clean/100011/observer.mp4",
+          "bytes": 192436,
+          "sha256": "dd661e6cec6feb79896dc9f417ad853567986a6936a8386843ab1224f1a9df7b",
+          "frames": 333,
+          "video_seconds": 33.3,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 0.17751050740480423,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "click_alarmclock-demo_clean-100011/observer_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 2
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 6
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 50,
+              "simulation_seconds": 5.0000002374872565,
+              "action_count": 9
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 12
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 83,
+              "simulation_seconds": 8.300000394228846,
+              "action_count": 14
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 133,
+              "simulation_seconds": 13.300000631716102,
+              "action_count": 22
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 24
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 183,
+              "simulation_seconds": 18.30000086920336,
+              "action_count": 29
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 233,
+              "simulation_seconds": 23.300001106690615,
+              "action_count": 37
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 283,
+              "simulation_seconds": 28.300001344177872,
+              "action_count": 43
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 46
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 306,
+              "simulation_seconds": 30.60000145342201,
+              "action_count": 47
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 323,
+              "simulation_seconds": 32.30000153416768,
+              "action_count": 50
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 330,
+              "simulation_seconds": 33.00000156741589,
+              "action_count": 51
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 332,
+              "simulation_seconds": 33.180001575965434,
+              "action_count": 51
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "click_alarmclock-demo_randomized-100011",
+      "task": "click_alarmclock",
+      "setting": "demo_randomized",
+      "seed": 100011,
+      "success": false,
+      "metrics": "click_alarmclock-demo_randomized-100011/metrics.json",
+      "artifact_root": "segments/expert-plan-failure-20261009/shards/0/evaluation",
+      "episode_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_randomized/100011/episode.json",
+      "trajectory_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_randomized/100011/trajectory.jsonl",
+      "videos": {
+        "head_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_randomized/100011/episode.mp4",
+          "bytes": 1906928,
+          "sha256": "3c02ae4c53732271c15c5610872685fa8b072bdefeb00c3308ada58da648ee3a",
+          "frames": 2268,
+          "video_seconds": 226.8,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 0.6541955061256886,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "click_alarmclock-demo_randomized-100011/head_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 3
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 6
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 12
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 24
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 48
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 340,
+              "simulation_seconds": 34.000001614913344,
+              "action_count": 53
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 567,
+              "simulation_seconds": 56.70000269310549,
+              "action_count": 96
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 907,
+              "simulation_seconds": 90.70000430801883,
+              "action_count": 160
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 1247,
+              "simulation_seconds": 124.70000592293218,
+              "action_count": 215
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 1588,
+              "simulation_seconds": 158.80000754259527,
+              "action_count": 276
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 1928,
+              "simulation_seconds": 192.8000091575086,
+              "action_count": 339
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 2087,
+              "simulation_seconds": 208.7000099127181,
+              "action_count": 368
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 2200,
+              "simulation_seconds": 220.0000104494393,
+              "action_count": 389
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 2245,
+              "simulation_seconds": 224.50001066317782,
+              "action_count": 397
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 2267,
+              "simulation_seconds": 226.67601076653227,
+              "action_count": 400
+            }
+          ]
+        },
+        "observer_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_randomized/100011/observer.mp4",
+          "bytes": 2740355,
+          "sha256": "417d69f9e8e134b314b5918662474b3b7bfc877537aa83b64a3bf479e1cf8c81",
+          "frames": 2268,
+          "video_seconds": 226.8,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 0.7254466041922569,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "click_alarmclock-demo_randomized-100011/observer_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 3
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 6
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 12
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 24
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 48
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 340,
+              "simulation_seconds": 34.000001614913344,
+              "action_count": 53
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 567,
+              "simulation_seconds": 56.70000269310549,
+              "action_count": 96
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 907,
+              "simulation_seconds": 90.70000430801883,
+              "action_count": 160
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 1247,
+              "simulation_seconds": 124.70000592293218,
+              "action_count": 215
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 1588,
+              "simulation_seconds": 158.80000754259527,
+              "action_count": 276
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 1928,
+              "simulation_seconds": 192.8000091575086,
+              "action_count": 339
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 2087,
+              "simulation_seconds": 208.7000099127181,
+              "action_count": 368
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 2200,
+              "simulation_seconds": 220.0000104494393,
+              "action_count": 389
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 2245,
+              "simulation_seconds": 224.50001066317782,
+              "action_count": 397
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 2267,
+              "simulation_seconds": 226.67601076653227,
+              "action_count": 400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "pick_dual_bottles-demo_clean-100010",
+      "task": "pick_dual_bottles",
+      "setting": "demo_clean",
+      "seed": 100010,
+      "success": false,
+      "metrics": "pick_dual_bottles-demo_clean-100010/metrics.json",
+      "artifact_root": "segments/expert-plan-failure-20261009/shards/1/evaluation",
+      "episode_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/pick_dual_bottles/demo_clean/100010/episode.json",
+      "trajectory_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/pick_dual_bottles/demo_clean/100010/trajectory.jsonl",
+      "videos": {
+        "head_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/pick_dual_bottles/demo_clean/100010/episode.mp4",
+          "bytes": 3225975,
+          "sha256": "bcc430c41ad33e98c0bf51d43a8557c38b4cf904f02bb6e0d5ea0b4db1835182",
+          "frames": 2395,
+          "video_seconds": 239.5,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 1.0185788348317146,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "pick_dual_bottles-demo_clean-100010/head_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 2
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 5
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 11
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 22
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 44
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 359,
+              "simulation_seconds": 35.9000017051585,
+              "action_count": 53
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 599,
+              "simulation_seconds": 59.90000284509733,
+              "action_count": 96
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 958,
+              "simulation_seconds": 95.80000455025584,
+              "action_count": 155
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 1317,
+              "simulation_seconds": 131.70000625541434,
+              "action_count": 216
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 1676,
+              "simulation_seconds": 167.60000796057284,
+              "action_count": 277
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 2036,
+              "simulation_seconds": 203.60000967048109,
+              "action_count": 338
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 2203,
+              "simulation_seconds": 220.30001046368852,
+              "action_count": 366
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 2323,
+              "simulation_seconds": 232.30001103365794,
+              "action_count": 388
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 2371,
+              "simulation_seconds": 237.1000112616457,
+              "action_count": 397
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 2394,
+              "simulation_seconds": 239.31201136671007,
+              "action_count": 400
+            }
+          ]
+        },
+        "observer_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/pick_dual_bottles/demo_clean/100010/observer.mp4",
+          "bytes": 1684695,
+          "sha256": "2df01c78f7d2f09a0c17aa96552004393fed517ad03bf3d650149a2bc6f70b13",
+          "frames": 2395,
+          "video_seconds": 239.5,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 0.6131148859858513,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "pick_dual_bottles-demo_clean-100010/observer_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 2
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 5
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 11
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 22
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 44
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 359,
+              "simulation_seconds": 35.9000017051585,
+              "action_count": 53
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 599,
+              "simulation_seconds": 59.90000284509733,
+              "action_count": 96
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 958,
+              "simulation_seconds": 95.80000455025584,
+              "action_count": 155
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 1317,
+              "simulation_seconds": 131.70000625541434,
+              "action_count": 216
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 1676,
+              "simulation_seconds": 167.60000796057284,
+              "action_count": 277
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 2036,
+              "simulation_seconds": 203.60000967048109,
+              "action_count": 338
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 2203,
+              "simulation_seconds": 220.30001046368852,
+              "action_count": 366
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 2323,
+              "simulation_seconds": 232.30001103365794,
+              "action_count": 388
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 2371,
+              "simulation_seconds": 237.1000112616457,
+              "action_count": 397
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 2394,
+              "simulation_seconds": 239.31201136671007,
+              "action_count": 400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "place_can_basket-demo_clean-100010",
+      "task": "place_can_basket",
+      "setting": "demo_clean",
+      "seed": 100010,
+      "success": false,
+      "metrics": "place_can_basket-demo_clean-100010/metrics.json",
+      "artifact_root": "segments/expert-plan-failure-20261009/shards/1/evaluation",
+      "episode_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/place_can_basket/demo_clean/100010/episode.json",
+      "trajectory_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/place_can_basket/demo_clean/100010/trajectory.jsonl",
+      "videos": {
+        "head_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/place_can_basket/demo_clean/100010/episode.mp4",
+          "bytes": 4821158,
+          "sha256": "e52ab350a8c7f7ac824b8e6008a06703bba25990ad680298d899d4691355f385",
+          "frames": 4203,
+          "video_seconds": 420.3,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 1.5704346969723701,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "place_can_basket-demo_clean-100010/head_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 3
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 5
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 11
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 22
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 49
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 630,
+              "simulation_seconds": 63.00000299233943,
+              "action_count": 104
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 1051,
+              "simulation_seconds": 105.10000499198213,
+              "action_count": 179
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 1681,
+              "simulation_seconds": 168.10000798432156,
+              "action_count": 279
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 2312,
+              "simulation_seconds": 231.20001098141074,
+              "action_count": 383
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 2942,
+              "simulation_seconds": 294.2000139737502,
+              "action_count": 489
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 3573,
+              "simulation_seconds": 357.30001697083935,
+              "action_count": 597
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 3867,
+              "simulation_seconds": 386.7000183672644,
+              "action_count": 644
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 4077,
+              "simulation_seconds": 407.7000193647109,
+              "action_count": 680
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 4161,
+              "simulation_seconds": 416.1000197636895,
+              "action_count": 694
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 4202,
+              "simulation_seconds": 420.1760199572891,
+              "action_count": 700
+            }
+          ]
+        },
+        "observer_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/place_can_basket/demo_clean/100010/observer.mp4",
+          "bytes": 2904661,
+          "sha256": "2efdb0bf670ff4aab3d612160ef4c3cc3ba4e321a707776829cf5f7a01317707",
+          "frames": 4203,
+          "video_seconds": 420.3,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 1.0181863270699978,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "place_can_basket-demo_clean-100010/observer_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 3
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 5
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 11
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 22
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 49
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 630,
+              "simulation_seconds": 63.00000299233943,
+              "action_count": 104
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 1051,
+              "simulation_seconds": 105.10000499198213,
+              "action_count": 179
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 1681,
+              "simulation_seconds": 168.10000798432156,
+              "action_count": 279
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 2312,
+              "simulation_seconds": 231.20001098141074,
+              "action_count": 383
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 2942,
+              "simulation_seconds": 294.2000139737502,
+              "action_count": 489
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 3573,
+              "simulation_seconds": 357.30001697083935,
+              "action_count": 597
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 3867,
+              "simulation_seconds": 386.7000183672644,
+              "action_count": 644
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 4077,
+              "simulation_seconds": 407.7000193647109,
+              "action_count": 680
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 4161,
+              "simulation_seconds": 416.1000197636895,
+              "action_count": 694
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 4202,
+              "simulation_seconds": 420.1760199572891,
+              "action_count": 700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "open_laptop-demo_clean-100010",
+      "task": "open_laptop",
+      "setting": "demo_clean",
+      "seed": 100010,
+      "success": false,
+      "metrics": "open_laptop-demo_clean-100010/metrics.json",
+      "artifact_root": "segments/expert-plan-failure-20261009/shards/0/evaluation",
+      "episode_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/open_laptop/demo_clean/100010/episode.json",
+      "trajectory_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/open_laptop/demo_clean/100010/trajectory.jsonl",
+      "videos": {
+        "head_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/open_laptop/demo_clean/100010/episode.mp4",
+          "bytes": 4407567,
+          "sha256": "445157d2f1c549de8f84ba621c53bdb21df26dd5ece9cff6b37b05b939850f92",
+          "frames": 4230,
+          "video_seconds": 423.0,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 1.6434627398848534,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "open_laptop-demo_clean-100010/head_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 2
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 4
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 10
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 21
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 47
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 634,
+              "simulation_seconds": 63.40000301133841,
+              "action_count": 103
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 1058,
+              "simulation_seconds": 105.80000502523035,
+              "action_count": 174
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 1692,
+              "simulation_seconds": 169.20000803656876,
+              "action_count": 277
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 2326,
+              "simulation_seconds": 232.60001104790717,
+              "action_count": 381
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 2961,
+              "simulation_seconds": 296.10001406399533,
+              "action_count": 488
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 3596,
+              "simulation_seconds": 359.6000170800835,
+              "action_count": 594
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 3892,
+              "simulation_seconds": 389.20001848600805,
+              "action_count": 643
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 4103,
+              "simulation_seconds": 410.30001948820427,
+              "action_count": 678
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 4188,
+              "simulation_seconds": 418.8000198919326,
+              "action_count": 693
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 4229,
+              "simulation_seconds": 422.83202008344233,
+              "action_count": 700
+            }
+          ]
+        },
+        "observer_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/open_laptop/demo_clean/100010/observer.mp4",
+          "bytes": 2602724,
+          "sha256": "b29bd337179eb8173684c4e3f7efb1c12bc741e14d9c0858a3bee18f2b4bab81",
+          "frames": 4230,
+          "video_seconds": 423.0,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 1.0349335186183453,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "open_laptop-demo_clean-100010/observer_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 2
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 4
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 10
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 21
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 47
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 634,
+              "simulation_seconds": 63.40000301133841,
+              "action_count": 103
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 1058,
+              "simulation_seconds": 105.80000502523035,
+              "action_count": 174
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 1692,
+              "simulation_seconds": 169.20000803656876,
+              "action_count": 277
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 2326,
+              "simulation_seconds": 232.60001104790717,
+              "action_count": 381
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 2961,
+              "simulation_seconds": 296.10001406399533,
+              "action_count": 488
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 3596,
+              "simulation_seconds": 359.6000170800835,
+              "action_count": 594
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 3892,
+              "simulation_seconds": 389.20001848600805,
+              "action_count": 643
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 4103,
+              "simulation_seconds": 410.30001948820427,
+              "action_count": 678
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 4188,
+              "simulation_seconds": 418.8000198919326,
+              "action_count": 693
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 4229,
+              "simulation_seconds": 422.83202008344233,
+              "action_count": 700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "stack_blocks_two-demo_randomized-100011",
+      "task": "stack_blocks_two",
+      "setting": "demo_randomized",
+      "seed": 100011,
+      "success": false,
+      "metrics": "stack_blocks_two-demo_randomized-100011/metrics.json",
+      "artifact_root": "segments/expert-plan-failure-20261009/shards/1/evaluation",
+      "episode_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/stack_blocks_two/demo_randomized/100011/episode.json",
+      "trajectory_url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/stack_blocks_two/demo_randomized/100011/trajectory.jsonl",
+      "videos": {
+        "head_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/stack_blocks_two/demo_randomized/100011/episode.mp4",
+          "bytes": 7012600,
+          "sha256": "51dbfeda5df58dfd0fb2071985380a8744b6cf8fdbcc33e27ffc0df716547dff",
+          "frames": 4499,
+          "video_seconds": 449.9,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 1.9655377231538296,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "stack_blocks_two-demo_randomized-100011/head_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 2
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 4
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 10
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 21
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 47
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 675,
+              "simulation_seconds": 67.50000320607796,
+              "action_count": 108
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 1125,
+              "simulation_seconds": 112.50000534346327,
+              "action_count": 187
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 1800,
+              "simulation_seconds": 180.00000854954123,
+              "action_count": 313
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 2474,
+              "simulation_seconds": 247.40001175086945,
+              "action_count": 441
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 3149,
+              "simulation_seconds": 314.9000149569474,
+              "action_count": 564
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 3824,
+              "simulation_seconds": 382.4000181630254,
+              "action_count": 686
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 4139,
+              "simulation_seconds": 413.9000196591951,
+              "action_count": 742
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 4364,
+              "simulation_seconds": 436.40002072788775,
+              "action_count": 778
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 4454,
+              "simulation_seconds": 445.4000211553648,
+              "action_count": 794
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 4498,
+              "simulation_seconds": 449.70402135979384,
+              "action_count": 800
+            }
+          ]
+        },
+        "observer_camera": {
+          "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/stack_blocks_two/demo_randomized/100011/observer.mp4",
+          "bytes": 4799318,
+          "sha256": "1363c00e7e351d5d8135c09ea46a79d0878ac7b12647b3300ff07b5082481250",
+          "frames": 4499,
+          "video_seconds": 449.9,
+          "full_cpu_decode_passed": true,
+          "decode_seconds": 1.2671171613037586,
+          "returncode": 0,
+          "decode_method": "FFmpeg decodes the entire video without an input time limit; select only limits saved review frames. Last review frame is the original final frame.",
+          "contact_sheet": "stack_blocks_two-demo_randomized-100011/observer_camera-sequence.jpg",
+          "sampled_frames": [
+            {
+              "file": "frame-001.jpg",
+              "frame": 0,
+              "simulation_seconds": 0.0,
+              "action_count": 0
+            },
+            {
+              "file": "frame-002.jpg",
+              "frame": 10,
+              "simulation_seconds": 1.0000000474974513,
+              "action_count": 2
+            },
+            {
+              "file": "frame-003.jpg",
+              "frame": 30,
+              "simulation_seconds": 3.000000142492354,
+              "action_count": 4
+            },
+            {
+              "file": "frame-004.jpg",
+              "frame": 70,
+              "simulation_seconds": 7.000000332482159,
+              "action_count": 10
+            },
+            {
+              "file": "frame-005.jpg",
+              "frame": 150,
+              "simulation_seconds": 15.00000071246177,
+              "action_count": 21
+            },
+            {
+              "file": "frame-006.jpg",
+              "frame": 300,
+              "simulation_seconds": 30.00000142492354,
+              "action_count": 47
+            },
+            {
+              "file": "frame-007.jpg",
+              "frame": 675,
+              "simulation_seconds": 67.50000320607796,
+              "action_count": 108
+            },
+            {
+              "file": "frame-008.jpg",
+              "frame": 1125,
+              "simulation_seconds": 112.50000534346327,
+              "action_count": 187
+            },
+            {
+              "file": "frame-009.jpg",
+              "frame": 1800,
+              "simulation_seconds": 180.00000854954123,
+              "action_count": 313
+            },
+            {
+              "file": "frame-010.jpg",
+              "frame": 2474,
+              "simulation_seconds": 247.40001175086945,
+              "action_count": 441
+            },
+            {
+              "file": "frame-011.jpg",
+              "frame": 3149,
+              "simulation_seconds": 314.9000149569474,
+              "action_count": 564
+            },
+            {
+              "file": "frame-012.jpg",
+              "frame": 3824,
+              "simulation_seconds": 382.4000181630254,
+              "action_count": 686
+            },
+            {
+              "file": "frame-013.jpg",
+              "frame": 4139,
+              "simulation_seconds": 413.9000196591951,
+              "action_count": 742
+            },
+            {
+              "file": "frame-014.jpg",
+              "frame": 4364,
+              "simulation_seconds": 436.40002072788775,
+              "action_count": 778
+            },
+            {
+              "file": "frame-015.jpg",
+              "frame": 4454,
+              "simulation_seconds": 445.4000211553648,
+              "action_count": 794
+            },
+            {
+              "file": "frame-016.jpg",
+              "frame": 4498,
+              "simulation_seconds": 449.70402135979384,
+              "action_count": 800
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "passed": true,
+  "disk_free_bytes": 209723588608
+}

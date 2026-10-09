@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "video_entries": 12,
+  "method": "GET Range bytes=0-0, one byte per entry; no video download or decode",
+  "initial_sandbox_socket_denied": true,
+  "head_method_unsupported_405": true,
+  "checks": [
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_clean/100011/episode.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/154678"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_clean/100011/observer.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/192436"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_randomized/100011/episode.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/1906928"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/click_alarmclock/demo_randomized/100011/observer.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/2740355"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/pick_dual_bottles/demo_clean/100010/episode.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/3225975"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/pick_dual_bottles/demo_clean/100010/observer.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/1684695"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/place_can_basket/demo_clean/100010/episode.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/4821158"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/place_can_basket/demo_clean/100010/observer.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/2904661"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/open_laptop/demo_clean/100010/episode.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/4407567"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/0/evaluation/open_laptop/demo_clean/100010/observer.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/2602724"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/stack_blocks_two/demo_randomized/100011/episode.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/7012600"
+    },
+    {
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-plan-failure-20261009/shards/1/evaluation/stack_blocks_two/demo_randomized/100011/observer.mp4",
+      "status": 206,
+      "content_range": "bytes 0-0/4799318"
+    }
+  ]
+}

@@ -1,0 +1,863 @@
+{
+  "checkpoint_id": "bf8e4034d112",
+  "tasks": [
+    "adjust_bottle",
+    "beat_block_hammer",
+    "blocks_ranking_rgb",
+    "blocks_ranking_size",
+    "click_alarmclock",
+    "click_bell",
+    "dump_bin_bigbin",
+    "grab_roller",
+    "handover_block",
+    "handover_mic",
+    "hanging_mug",
+    "lift_pot",
+    "move_can_pot",
+    "move_pillbottle_pad",
+    "move_playingcard_away",
+    "move_stapler_pad",
+    "open_laptop",
+    "open_microwave",
+    "pick_diverse_bottles",
+    "pick_dual_bottles",
+    "place_a2b_left",
+    "place_a2b_right",
+    "place_bread_basket",
+    "place_bread_skillet",
+    "place_burger_fries",
+    "place_can_basket",
+    "place_cans_plasticbox",
+    "place_container_plate",
+    "place_dual_shoes",
+    "place_empty_cup",
+    "place_fan",
+    "place_mouse_pad",
+    "place_object_basket",
+    "place_object_scale",
+    "place_object_stand",
+    "place_phone_stand",
+    "place_shoe",
+    "press_stapler",
+    "put_bottles_dustbin",
+    "put_object_cabinet",
+    "rotate_qrcode",
+    "scan_object",
+    "shake_bottle",
+    "shake_bottle_horizontally",
+    "stack_blocks_three",
+    "stack_blocks_two",
+    "stack_bowls_three",
+    "stack_bowls_two",
+    "stamp_seal",
+    "turn_switch"
+  ],
+  "settings": [
+    "demo_clean",
+    "demo_randomized"
+  ],
+  "seeds": [
+    100010,
+    100011,
+    100012,
+    100013,
+    100014
+  ],
+  "execute": 50,
+  "precision": "fp32",
+  "video": true,
+  "video_fps": 10,
+  "protocol": "user_pending_policy_expert5_v1",
+  "inference_profile": "official_defaults_v1",
+  "moe_backend": "official",
+  "vision_device": "cuda",
+  "embedding_device": "cuda",
+  "expert_check": true,
+  "server_id": "rented-5090",
+  "shards": [
+    {
+      "id": 0,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ]
+    },
+    {
+      "id": 1,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ]
+    }
+  ],
+  "parallelism": 2,
+  "partition": "round_robin_groups_v1",
+  "gpu_uuids": [
+    "GPU-e671f67e-da97-128a-eb48-93b84c49c25d",
+    "GPU-1f87cc42-5bae-1104-eb63-f6ae441fcf84"
+  ],
+  "valid_per_group": 5,
+  "max_consecutive_nonvalid": 20,
+  "expert_quota": {
+    "version": "pending_policy_expert5_v1",
+    "limit": 5,
+    "scope": "task_setting_pending_policy_index",
+    "user_authorization": "2026-10-09: preserve 385 prior policy outcomes; per pending policy episode maximum five expert initiations across seeds; exhausted budget still executes policy.",
+    "inherited": [
+      {
+        "task": "adjust_bottle",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 7
+      },
+      {
+        "task": "adjust_bottle",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 7
+      },
+      {
+        "task": "beat_block_hammer",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "beat_block_hammer",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 6
+      },
+      {
+        "task": "blocks_ranking_rgb",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "blocks_ranking_rgb",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 6
+      },
+      {
+        "task": "blocks_ranking_size",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "blocks_ranking_size",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "click_alarmclock",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "click_alarmclock",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 6
+      },
+      {
+        "task": "click_bell",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "click_bell",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "dump_bin_bigbin",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 7
+      },
+      {
+        "task": "dump_bin_bigbin",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 11
+      },
+      {
+        "task": "grab_roller",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "grab_roller",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 7
+      },
+      {
+        "task": "handover_block",
+        "setting": "demo_clean",
+        "policy_index": 4,
+        "launches": 20,
+        "candidate_count": 25
+      },
+      {
+        "task": "handover_block",
+        "setting": "demo_randomized",
+        "policy_index": 3,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "handover_mic",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 6
+      },
+      {
+        "task": "handover_mic",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 6
+      },
+      {
+        "task": "hanging_mug",
+        "setting": "demo_clean",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "policy_index": 1,
+        "launches": 4,
+        "candidate_count": 5
+      },
+      {
+        "task": "lift_pot",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 13
+      },
+      {
+        "task": "lift_pot",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 14
+      },
+      {
+        "task": "move_can_pot",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "move_can_pot",
+        "setting": "demo_randomized",
+        "policy_index": 2,
+        "launches": 2,
+        "candidate_count": 5
+      },
+      {
+        "task": "move_pillbottle_pad",
+        "setting": "demo_clean",
+        "policy_index": 3,
+        "launches": 17,
+        "candidate_count": 20
+      },
+      {
+        "task": "move_pillbottle_pad",
+        "setting": "demo_randomized",
+        "policy_index": 3,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "move_playingcard_away",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "move_playingcard_away",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "move_stapler_pad",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "move_stapler_pad",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "open_laptop",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "open_laptop",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "open_microwave",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "open_microwave",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "pick_diverse_bottles",
+        "setting": "demo_clean",
+        "policy_index": 2,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "policy_index": 1,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "pick_dual_bottles",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "pick_dual_bottles",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_a2b_left",
+        "setting": "demo_clean",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_a2b_left",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_a2b_right",
+        "setting": "demo_clean",
+        "policy_index": 3,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_a2b_right",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_bread_basket",
+        "setting": "demo_clean",
+        "policy_index": 3,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_bread_basket",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_bread_skillet",
+        "setting": "demo_clean",
+        "policy_index": 3,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "policy_index": 2,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_burger_fries",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_burger_fries",
+        "setting": "demo_randomized",
+        "policy_index": 3,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_can_basket",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_can_basket",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_cans_plasticbox",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_cans_plasticbox",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_container_plate",
+        "setting": "demo_clean",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_container_plate",
+        "setting": "demo_randomized",
+        "policy_index": 2,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_dual_shoes",
+        "setting": "demo_clean",
+        "policy_index": 2,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_dual_shoes",
+        "setting": "demo_randomized",
+        "policy_index": 3,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_empty_cup",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_empty_cup",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_fan",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_fan",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_mouse_pad",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_mouse_pad",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_object_basket",
+        "setting": "demo_clean",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_object_basket",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_object_scale",
+        "setting": "demo_clean",
+        "policy_index": 3,
+        "launches": 2,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_object_scale",
+        "setting": "demo_randomized",
+        "policy_index": 3,
+        "launches": 2,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_object_stand",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_object_stand",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_phone_stand",
+        "setting": "demo_clean",
+        "policy_index": 3,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_phone_stand",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_shoe",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "place_shoe",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "press_stapler",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "press_stapler",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "put_bottles_dustbin",
+        "setting": "demo_clean",
+        "policy_index": 2,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "put_bottles_dustbin",
+        "setting": "demo_randomized",
+        "policy_index": 1,
+        "launches": 4,
+        "candidate_count": 5
+      },
+      {
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "policy_index": 0,
+        "launches": 5,
+        "candidate_count": 5
+      },
+      {
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "policy_index": 0,
+        "launches": 5,
+        "candidate_count": 5
+      },
+      {
+        "task": "rotate_qrcode",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "rotate_qrcode",
+        "setting": "demo_randomized",
+        "policy_index": 2,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "policy_index": 1,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "policy_index": 2,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "shake_bottle",
+        "setting": "demo_clean",
+        "policy_index": 1,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "shake_bottle",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_clean",
+        "policy_index": 1,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "stack_blocks_three",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "stack_blocks_three",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "stack_blocks_two",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "stack_blocks_two",
+        "setting": "demo_randomized",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "stack_bowls_three",
+        "setting": "demo_clean",
+        "policy_index": 1,
+        "launches": 3,
+        "candidate_count": 5
+      },
+      {
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "policy_index": 1,
+        "launches": 2,
+        "candidate_count": 5
+      },
+      {
+        "task": "stack_bowls_two",
+        "setting": "demo_clean",
+        "policy_index": 2,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "stack_bowls_two",
+        "setting": "demo_randomized",
+        "policy_index": 3,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "stamp_seal",
+        "setting": "demo_clean",
+        "policy_index": 3,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "stamp_seal",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 1,
+        "candidate_count": 5
+      },
+      {
+        "task": "turn_switch",
+        "setting": "demo_clean",
+        "policy_index": 5,
+        "launches": 0,
+        "candidate_count": 5
+      },
+      {
+        "task": "turn_switch",
+        "setting": "demo_randomized",
+        "policy_index": 4,
+        "launches": 1,
+        "candidate_count": 5
+      }
+    ]
+  }
+}

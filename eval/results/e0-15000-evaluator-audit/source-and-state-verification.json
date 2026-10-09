@@ -1,0 +1,22 @@
+{
+  "source_file_count": 704,
+  "line_endings": "CRLF normalized to LF",
+  "mismatches": [],
+  "job_status": "failed",
+  "report": {
+    "attempted": 571,
+    "valid": 385,
+    "successes": 46,
+    "setup_errors": 65,
+    "expert_rejections": 121,
+    "execution_errors": 0,
+    "historical_interruptions": 12,
+    "actual_attempts": 582
+  },
+  "active_resume": {
+    "manifest": "resume-requests/expert-grasp-plan-20261009/manifest.json",
+    "sha256": "2775339eaa592473763bcfbca47ad6a2061283c3909627f2488cbf75a363a294"
+  },
+  "disk_free_gib": 194.7216796875,
+  "production_eval_expert_sha256": "e28f276eb49e481470f1f88b17c9c0cdcbed2cc158ec7d94db191087170961c0"
+}

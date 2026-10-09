@@ -1,0 +1,284 @@
+{
+  "checked_at": "2026-10-09T10:37:42.708197+00:00",
+  "passed": true,
+  "previously_verified_policy_episodes": 369,
+  "new_completed_policy_video_checks": [
+    {
+      "episode": "blocks_ranking_rgb/demo_randomized/100015",
+      "shard": 0,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 7213,
+          "bytes": 5507042,
+          "duration_seconds": 721.3,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 7213,
+          "bytes": 4340580,
+          "duration_seconds": 721.3,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "click_alarmclock/demo_randomized/100015",
+      "shard": 0,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 1200,
+          "bytes": 663598,
+          "duration_seconds": 120.0,
+          "terminal_action_count": 202,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 1200,
+          "bytes": 704288,
+          "duration_seconds": 120.0,
+          "terminal_action_count": 202,
+          "passed": true
+        }
+      },
+      "actions": 202,
+      "action_blocks": 5,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "dump_bin_bigbin/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 3599,
+          "bytes": 3682430,
+          "duration_seconds": 359.9,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 3599,
+          "bytes": 2657713,
+          "duration_seconds": 359.9,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "dump_bin_bigbin/demo_clean/100016",
+      "shard": 0,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 3620,
+          "bytes": 2176620,
+          "duration_seconds": 362.0,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 3620,
+          "bytes": 3137163,
+          "duration_seconds": 362.0,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "dump_bin_bigbin/demo_randomized/100016",
+      "shard": 0,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 3603,
+          "bytes": 1591061,
+          "duration_seconds": 360.3,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 3603,
+          "bytes": 2454033,
+          "duration_seconds": 360.3,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "handover_mic/demo_clean/100015",
+      "shard": 1,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 3570,
+          "bytes": 3100016,
+          "duration_seconds": 357.0,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 3570,
+          "bytes": 2184381,
+          "duration_seconds": 357.0,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "handover_mic/demo_randomized/100015",
+      "shard": 1,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 3615,
+          "bytes": 3290284,
+          "duration_seconds": 361.5,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 3615,
+          "bytes": 2352211,
+          "duration_seconds": 361.5,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "lift_pot/demo_clean/100019",
+      "shard": 1,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2453,
+          "bytes": 2477421,
+          "duration_seconds": 245.3,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2453,
+          "bytes": 1638066,
+          "duration_seconds": 245.3,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "lift_pot/demo_clean/100020",
+      "shard": 1,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2405,
+          "bytes": 2463917,
+          "duration_seconds": 240.5,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2405,
+          "bytes": 1571191,
+          "duration_seconds": 240.5,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "lift_pot/demo_clean/100022",
+      "shard": 1,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2367,
+          "bytes": 2912054,
+          "duration_seconds": 236.7,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2367,
+          "bytes": 1629546,
+          "duration_seconds": 236.7,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "lift_pot/demo_randomized/100017",
+      "shard": 1,
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2386,
+          "bytes": 2256551,
+          "duration_seconds": 238.6,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2386,
+          "bytes": 1537090,
+          "duration_seconds": 238.6,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  ],
+  "disk_free_bytes": 209160503296,
+  "scope": "Completed policy episodes only; current failure and interrupted sibling remain separate."
+}

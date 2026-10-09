@@ -1,0 +1,131 @@
+{
+  "expert_original": {
+    "checked_at": "2026-10-09T10:38:51.528789+00:00",
+    "passed": true,
+    "scored": false,
+    "model_inference_calls": 0,
+    "seed": 100019,
+    "task": "lift_pot",
+    "setting": "demo_randomized",
+    "grasp_calls": [
+      {
+        "arm": "left",
+        "id": 0,
+        "pose_is_none": true,
+        "annotation_present": true,
+        "contact_ids": [
+          0,
+          1
+        ],
+        "position": [
+          0.049233969300985336,
+          0.027343809604644775,
+          0.7766508460044861
+        ]
+      }
+    ],
+    "planner_calls": [
+      {
+        "arm": "left",
+        "targets": 10,
+        "statuses": [
+          "Failure",
+          "Failure",
+          "Failure",
+          "Failure",
+          "Failure",
+          "Failure",
+          "Failure",
+          "Failure",
+          "Failure",
+          "Failure"
+        ],
+        "plan_success": true
+      }
+    ],
+    "error": "target_pose cannot be None for move action.",
+    "traceback": "Traceback (most recent call last):\n  File \"/root/shared-nvme/lingbot-eval-team/artifacts/e0-hf-eval-20261009/incidents/20261009-175116/diagnose_expert.py\", line 50, in <module>\n    screen_scene(env,environment_config('lift_pot','demo_randomized'),9,100019,output,row,lambda e:print(e,flush=True))\n  File \"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\", line 104, in screen_scene\n    info = env.play_once()\n  File \"/root/shared-nvme/lingbot-eval-team/third_party/RoboTwin/envs/lift_pot.py\", line 38, in play_once\n    self.grasp_actor(self.pot, left_arm_tag, pre_grasp_dis=0.035, contact_point_id=0),\n  File \"/root/shared-nvme/lingbot-eval-team/third_party/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/root/shared-nvme/lingbot-eval-team/third_party/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+    "expert": {
+      "seed": 100019,
+      "phase": "execution",
+      "passed": false,
+      "setup_seconds": 18.984806891530752,
+      "error_type": "AssertionError",
+      "total_seconds": 19.68713578209281
+    },
+    "same_failure_reproduced": true,
+    "all_grasp_candidates_failed": true
+  },
+  "expert_after_fix": {
+    "checked_at": "2026-10-09T10:42:57.990560+00:00",
+    "passed": true,
+    "scored": false,
+    "model_inference_calls": 0,
+    "seed": 100019,
+    "task": "lift_pot",
+    "setting": "demo_randomized",
+    "object_position": [
+      0.049233969300985336,
+      0.027343809604644775,
+      0.7766508460044861
+    ],
+    "contact_ids": [
+      0,
+      1
+    ],
+    "expert": {
+      "seed": 100019,
+      "phase": "completed",
+      "passed": false,
+      "setup_seconds": 18.12740944698453,
+      "plan_success": false,
+      "success": false,
+      "raw_plan_success": true,
+      "rejection_reason": "expert_grasp_planning_failed",
+      "rejection_detail": "Official left_plan_multi_path returned Failure for all 10 grasp candidates",
+      "execution_seconds": 0.7029667049646378,
+      "total_seconds": 18.830466087907553
+    },
+    "same_seed_and_object": true,
+    "expert_guard_removed": true
+  },
+  "interrupted_sibling": {
+    "checked_at": "2026-10-09T10:44:19.518166+00:00",
+    "passed": true,
+    "seed": 100019,
+    "task": "dump_bin_bigbin",
+    "setting": "demo_randomized",
+    "scored": false,
+    "model_inference_calls": 0,
+    "purpose": "Verify original sibling scene and replay the first saved chunk without model calls",
+    "initial_cameras": {
+      "head_camera": {
+        "equal": true,
+        "rgb_sha256": "96091e488a76cca2f92dae08b3d98973ea0fcef9ab92242e2d8cb234e977f408"
+      },
+      "left_camera": {
+        "equal": true,
+        "rgb_sha256": "f9e3f536d2375914dc8c40c8c3c70295572ae75c0b75f4af0f2dff154dc615cc"
+      },
+      "right_camera": {
+        "equal": true,
+        "rgb_sha256": "06ba8d367f88681310c4095260d2dd69ef5a941658770aa655c948ad684909d4"
+      }
+    },
+    "instruction_unchanged": true,
+    "joints_unchanged": true,
+    "instruction": "Take the smooth plastic tabletrashbin and empty into big bin",
+    "instruction_parameters": {
+      "{A}": "063_tabletrashbin/base10"
+    },
+    "replayed_actions": 50,
+    "check_success_callable": true,
+    "diagnostic_success": false
+  },
+  "cpu_tests": {
+    "passed": 122,
+    "skipped": 1
+  },
+  "model_inference_calls_during_diagnosis": 0,
+  "diagnosis_scored": false
+}

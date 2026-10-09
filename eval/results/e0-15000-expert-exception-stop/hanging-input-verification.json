@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "scored": false,
+  "model_calls": 0,
+  "expert_calls": 0,
+  "cases": [
+    {
+      "task": "hanging_mug",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "scored": false,
+      "expert_calls": 0,
+      "model_calls": 0,
+      "diagnostic": "Replay first saved 50 actions after exact original policy-only input checks.",
+      "input_identity": {
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "instruction": "Lift the dark mug with a curved handle, rotate it, put it down, then attach it to the medium-sized rack.",
+        "instruction_parameters": {
+          "{A}": "039_mug/base8",
+          "{B}": "040_rack/base0"
+        },
+        "camera_rgb_sha256": {
+          "head_camera": "9d325502d4b77e530cbb180277b4755498c2a92c749c7db0976a16b34b429d9f",
+          "left_camera": "20daebacf43c09e24c0958f58b749fa273b06dbbbec82d79e9479e495645ad35",
+          "right_camera": "080ac2e9ba9d2b08bb562cead06b8c770204acd45221fa140a3acab1676c32e2"
+        },
+        "initial_joints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "entry": {
+        "flow": "pinned_object_templates_and_score_prelude_v1",
+        "task_source_sha256": "8793ed6be6a80b18a10690767a1910c3c49a7a9e4887ecbdd48a191ca3e03034",
+        "instruction_source": "official_object_only_templates",
+        "score_state": {},
+        "expert_called": false,
+        "simulation_steps_added": 0
+      },
+      "initial_check_success": false,
+      "entry_changes_rgb_or_joints": false,
+      "official_methods_unchanged": true,
+      "original_instruction_and_parameters_equal": true,
+      "saved_action_source": "/root/shared-nvme/lingbot-eval-team/runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/predictions.jsonl",
+      "original_initial_rgb_and_joints_equal": true,
+      "actions": 50,
+      "final_check_success": false,
+      "passed": true,
+      "seconds": 43.25431479513645
+    }
+  ],
+  "production_deployed": false
+}

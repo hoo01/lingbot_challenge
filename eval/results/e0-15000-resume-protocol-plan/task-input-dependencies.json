@@ -1,0 +1,879 @@
+{
+  "method": "Static AST inventory of pinned official task classes; potential dependencies, not a runtime proof. No task, scene, model or renderer is imported or called.",
+  "task_count": 50,
+  "potential_scoring_state_dependencies": [
+    "open_laptop",
+    "place_object_scale",
+    "put_object_cabinet"
+  ],
+  "info_after_motion_count": 43,
+  "tasks": [
+    {
+      "task": "adjust_bottle",
+      "path": "third_party/RoboTwin/envs/adjust_bottle.py",
+      "sha256": "252d730d86760695ed45c74625e87f475c45c9af5f5aee06efe48a501a2617ce",
+      "check_success_line": 63,
+      "play_once_line": 36,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 43,
+      "info_assignments": [
+        {
+          "line": 57,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"001_bottle/base{self.model_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "beat_block_hammer",
+      "path": "third_party/RoboTwin/envs/beat_block_hammer.py",
+      "sha256": "b1f38c4c4d26dc656fddc2bdc02c9dc7d3f5aef9b58054bdd02405f71a6eb92a",
+      "check_success_line": 82,
+      "play_once_line": 56,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 63,
+      "info_assignments": [
+        {
+          "line": 79,
+          "expression": "self.info[\"info\"] = {\"{A}\": \"020_hammer/base0\", \"{a}\": str(arm_tag)}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "blocks_ranking_rgb",
+      "path": "third_party/RoboTwin/envs/blocks_ranking_rgb.py",
+      "sha256": "60fd55cc223b6332eb12519e81682b32762762f2f46d20c32e17c3b98b1f4879",
+      "check_success_line": 155,
+      "play_once_line": 106,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": null,
+      "info_assignments": [
+        {
+          "line": 116,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": \"red block\",\n            \"{B}\": \"green block\",\n            \"{C}\": \"blue block\",\n            \"{a}\": arm_tag1,\n            \"{b}\": arm_tag2,\n            \"{c}\": arm_tag3,\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": false
+    },
+    {
+      "task": "blocks_ranking_size",
+      "path": "third_party/RoboTwin/envs/blocks_ranking_size.py",
+      "sha256": "ddb5a8dc46e16b14d7bb0b22771f7c3ac16f68b4a0efa43e361b2e5194dda72a",
+      "check_success_line": 149,
+      "play_once_line": 101,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": null,
+      "info_assignments": [
+        {
+          "line": 110,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": \"large block\",\n            \"{B}\": \"medium block\",\n            \"{C}\": \"small block\",\n            \"{a}\": arm_tag1,\n            \"{b}\": arm_tag2,\n            \"{c}\": arm_tag3,\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": false
+    },
+    {
+      "task": "click_alarmclock",
+      "path": "third_party/RoboTwin/envs/click_alarmclock.py",
+      "sha256": "e36dbb0cc7abe5b168885bd603c2f5fa9a7c151feda9d6408ce00fc3e1d7a33a",
+      "check_success_line": 80,
+      "play_once_line": 42,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 49,
+      "info_assignments": [
+        {
+          "line": 73,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"046_alarm-clock/base{self.alarmclock_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "click_bell",
+      "path": "third_party/RoboTwin/envs/click_bell.py",
+      "sha256": "6f1276dd1719e526f8156580a1453898fda282472031d69667d4ea017ec8cc1b",
+      "check_success_line": 71,
+      "play_once_line": 39,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 46,
+      "info_assignments": [
+        {
+          "line": 67,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"050_bell/base{self.bell_id}\", \"{a}\": str(arm_tag)}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "path": "third_party/RoboTwin/envs/dump_bin_bigbin.py",
+      "sha256": "3f450f35cdb86a83a8b9060685cd6ba9e0aa7054739ef0b0dfdbc7f555be391c",
+      "check_success_line": 153,
+      "play_once_line": 92,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 102,
+      "info_assignments": [
+        {
+          "line": 150,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"063_tabletrashbin/base{self.deskbin_id}\"}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "grab_roller",
+      "path": "third_party/RoboTwin/envs/grab_roller.py",
+      "sha256": "1ade9da8d247b110c2c11121c720ff6154bfc48612225495a91eca6806a132ba",
+      "check_success_line": 55,
+      "play_once_line": 34,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 40,
+      "info_assignments": [
+        {
+          "line": 52,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"102_roller/base{self.model_id}\"}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "handover_block",
+      "path": "third_party/RoboTwin/envs/handover_block.py",
+      "sha256": "43ce154d5027c12328e7cb707ed99ca29d0a621cd0677ef5b0a54d7eb115a03e",
+      "check_success_line": 111,
+      "play_once_line": 49,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 56,
+      "info_assignments": [],
+      "all_info_assignments_after_first_motion": false
+    },
+    {
+      "task": "handover_mic",
+      "path": "third_party/RoboTwin/envs/handover_mic.py",
+      "sha256": "551527844c46a6bc43e34fa4164d654226f7ec31bbed9dd7530d2fc856973894",
+      "check_success_line": 99,
+      "play_once_line": 40,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 47,
+      "info_assignments": [
+        {
+          "line": 92,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"018_microphone/base{self.microphone_id}\",\n            \"{a}\": str(grasp_arm_tag),\n            \"{b}\": str(handover_arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "hanging_mug",
+      "path": "third_party/RoboTwin/envs/hanging_mug.py",
+      "sha256": "21c880dd8994b6f3f1c418b77b9cddc8f7de8f9cd90b808ce819f1d03fe38b47",
+      "check_success_line": 81,
+      "play_once_line": 41,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 47,
+      "info_assignments": [
+        {
+          "line": 78,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"039_mug/base{self.mug_id}\", \"{B}\": \"040_rack/base0\"}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "lift_pot",
+      "path": "third_party/RoboTwin/envs/lift_pot.py",
+      "sha256": "bfd0ed168556e230f711198f5c92fa76e4121471b479574b66053b139fbc3c7e",
+      "check_success_line": 50,
+      "play_once_line": 28,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 32,
+      "info_assignments": [
+        {
+          "line": 47,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"{self.model_name}/base{self.model_id}\"}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "move_can_pot",
+      "path": "third_party/RoboTwin/envs/move_can_pot.py",
+      "sha256": "a612f22d8b6f166f9a538858c35815cb2a8f42133d3bca75c80f41265729bca3",
+      "check_success_line": 95,
+      "play_once_line": 72,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 75,
+      "info_assignments": [
+        {
+          "line": 88,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"060_kitchenpot/base{self.pot_id}\",\n            \"{B}\": f\"105_sauce-can/base{self.can_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "path": "third_party/RoboTwin/envs/move_pillbottle_pad.py",
+      "sha256": "4ad50d3464ee3e39727688b899ed8a704dec42147081556e9f8b48862c1cfcab",
+      "check_success_line": 97,
+      "play_once_line": 68,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 73,
+      "info_assignments": [
+        {
+          "line": 90,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"080_pillbottle/base{self.pillbottle_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "move_playingcard_away",
+      "path": "third_party/RoboTwin/envs/move_playingcard_away.py",
+      "sha256": "371146b314215ad4bb0643ea18f2e75e6fff85263885050acbd431914df2518a",
+      "check_success_line": 62,
+      "play_once_line": 45,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 50,
+      "info_assignments": [
+        {
+          "line": 56,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"081_playingcards/base{self.playingcards_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "move_stapler_pad",
+      "path": "third_party/RoboTwin/envs/move_stapler_pad.py",
+      "sha256": "0a3a5ae640a4751fbaad5a421e76ac973b12018f169d5bed24af0b5012d7b729",
+      "check_success_line": 113,
+      "play_once_line": 86,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 91,
+      "info_assignments": [
+        {
+          "line": 106,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"048_stapler/base{self.stapler_id}\",\n            \"{B}\": self.color_name,\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "open_laptop",
+      "path": "third_party/RoboTwin/envs/open_laptop.py",
+      "sha256": "1ad25917eb4573f2a181e97fc796f370aae9e6d395a7107dbb0e23493a769008",
+      "check_success_line": 61,
+      "play_once_line": 32,
+      "check_reads_play_only_assignments": [
+        "arm_tag"
+      ],
+      "attribute_source_lines": {
+        "arm_tag": [
+          35
+        ]
+      },
+      "first_motion_line": 38,
+      "info_assignments": [
+        {
+          "line": 55,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"{self.model_name}/base{self.model_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "open_microwave",
+      "path": "third_party/RoboTwin/envs/open_microwave.py",
+      "sha256": "95bee66191d855caa740d495346d200cc552fd352022681c8981a8017b406dcb",
+      "check_success_line": 102,
+      "play_once_line": 31,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 35,
+      "info_assignments": [
+        {
+          "line": 96,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"{self.model_name}/base{self.model_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "pick_diverse_bottles",
+      "path": "third_party/RoboTwin/envs/pick_diverse_bottles.py",
+      "sha256": "810b1179b1dcc7fde04885437ffc1eed2cb97bf1e7ea9e95a2777a47c4e4ef6f",
+      "check_success_line": 94,
+      "play_once_line": 49,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 55,
+      "info_assignments": [
+        {
+          "line": 88,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"001_bottle/base{self.bottle1_id}\",\n            \"{B}\": f\"001_bottle/base{self.bottle2_id}\",\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "pick_dual_bottles",
+      "path": "third_party/RoboTwin/envs/pick_dual_bottles.py",
+      "sha256": "c1e747deb32e65354059139134e58c931b906411620453c66dabd8782d12ec9c",
+      "check_success_line": 92,
+      "play_once_line": 50,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 56,
+      "info_assignments": [
+        {
+          "line": 89,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"001_bottle/base13\", \"{B}\": f\"001_bottle/base16\"}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_a2b_left",
+      "path": "third_party/RoboTwin/envs/place_a2b_left.py",
+      "sha256": "1a95fc11d0b99ff31f459c77a42829d335863ae325173247905ad3428655744c",
+      "check_success_line": 147,
+      "play_once_line": 123,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 128,
+      "info_assignments": [
+        {
+          "line": 140,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"{self.selected_modelname_A}/base{self.selected_model_id_A}\",\n            \"{B}\": f\"{self.selected_modelname_B}/base{self.selected_model_id_B}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_a2b_right",
+      "path": "third_party/RoboTwin/envs/place_a2b_right.py",
+      "sha256": "df2f678fc631702c78578639bf1c6bd4b181b01918e01bf4f3accdcd3f3d59c5",
+      "check_success_line": 148,
+      "play_once_line": 124,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 129,
+      "info_assignments": [
+        {
+          "line": 141,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"{self.selected_modelname_A}/base{self.selected_model_id_A}\",\n            \"{B}\": f\"{self.selected_modelname_B}/base{self.selected_model_id_B}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_bread_basket",
+      "path": "third_party/RoboTwin/envs/place_bread_basket.py",
+      "sha256": "56531ae64f3a070eb3939c70af2762a4499713fd62c87f11f278bff27551545b",
+      "check_success_line": 190,
+      "play_once_line": 92,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 98,
+      "info_assignments": [
+        {
+          "line": 180,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"076_breadbasket/base{self.basket_id}\",\n            \"{B}\": f\"075_bread/base{self.bread_id[0]}\",\n            \"{a}\": arm_info,\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_bread_skillet",
+      "path": "third_party/RoboTwin/envs/place_bread_skillet.py",
+      "sha256": "ccec69fd816cb714c4445212c9dce2b2298a758bcc78a1eae7d497ac392eb12d",
+      "check_success_line": 114,
+      "play_once_line": 61,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 66,
+      "info_assignments": [
+        {
+          "line": 107,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"106_skillet/base{self.skillet_id}\",\n            \"{B}\": f\"075_bread/base{self.bread_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_burger_fries",
+      "path": "third_party/RoboTwin/envs/place_burger_fries.py",
+      "sha256": "e7c99a5ac1e8b07bd974e1ced867fad61a01232d78fa536d938d14fbd0a3af0e",
+      "check_success_line": 125,
+      "play_once_line": 72,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 77,
+      "info_assignments": [
+        {
+          "line": 118,
+          "expression": "self.info['info'] = {\n            \"{A}\": f\"006_hamburg/base{self.object1_id}\",\n            \"{B}\": f\"008_tray/base{self.tray_id}\",\n            \"{C}\": f\"005_french-fries/base{self.object2_id}\",\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_can_basket",
+      "path": "third_party/RoboTwin/envs/place_can_basket.py",
+      "sha256": "0e5d139de627d2884b3aab910f8321053e5d9156dd925379345f963e08ddf8d6",
+      "check_success_line": 141,
+      "play_once_line": 69,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 71,
+      "info_assignments": [
+        {
+          "line": 134,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"{self.can_name}/base{self.can_id}\",\n            \"{B}\": f\"{self.basket_name}/base{self.basket_id}\",\n            \"{a}\": str(self.arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_cans_plasticbox",
+      "path": "third_party/RoboTwin/envs/place_cans_plasticbox.py",
+      "sha256": "cbfed823bee06e6faf09d9ef5576d549d0b0b5b75af55ef36cc147d8d2a3a2bb",
+      "check_success_line": 127,
+      "play_once_line": 76,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 81,
+      "info_assignments": [
+        {
+          "line": 120,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"071_can/base{self.object1_id}\",\n            \"{B}\": f\"062_plasticbox/base{self.plasticbox_id}\",\n            \"{C}\": f\"071_can/base{self.object2_id}\",\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_container_plate",
+      "path": "third_party/RoboTwin/envs/place_container_plate.py",
+      "sha256": "8b4cfe84f19bbe375ac6924d0be4fb641dc7a2c1937a5677545199d4aff7d2bf",
+      "check_success_line": 93,
+      "play_once_line": 55,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 62,
+      "info_assignments": [
+        {
+          "line": 86,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"003_plate/base{self.plate_id}\",\n            \"{B}\": f\"{self.actor_name}/base{self.container_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_dual_shoes",
+      "path": "third_party/RoboTwin/envs/place_dual_shoes.py",
+      "sha256": "157d3d21ab6fd0ba01fe6d4be1f0c1a6117123a0374ce2479cff24932fdca5bc",
+      "check_success_line": 141,
+      "play_once_line": 90,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 94,
+      "info_assignments": [
+        {
+          "line": 135,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"041_shoe/base{self.shoe_id}\",\n            \"{B}\": f\"007_shoe-box/base0\",\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_empty_cup",
+      "path": "third_party/RoboTwin/envs/place_empty_cup.py",
+      "sha256": "aceba7214d6cda23effd02e04c5958b540740c080a676837991eecad1e8839d5",
+      "check_success_line": 90,
+      "play_once_line": 55,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 62,
+      "info_assignments": [
+        {
+          "line": 87,
+          "expression": "self.info[\"info\"] = {\"{A}\": \"021_cup/base0\", \"{B}\": \"019_coaster/base0\"}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_fan",
+      "path": "third_party/RoboTwin/envs/place_fan.py",
+      "sha256": "a37499d65900fa6307ca8d5dc498cbc4b2e17891e5fdf02b6b24e3b1c87670ca",
+      "check_success_line": 116,
+      "play_once_line": 89,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 94,
+      "info_assignments": [
+        {
+          "line": 109,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"099_fan/base{self.fan_id}\",\n            \"{B}\": self.color_name,\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_mouse_pad",
+      "path": "third_party/RoboTwin/envs/place_mouse_pad.py",
+      "sha256": "260c9f9941d2aeb3adbbd62a0ff9a57e9e9e4cc28d7db10bbea3bd8eb7a4c15c",
+      "check_success_line": 118,
+      "play_once_line": 89,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 94,
+      "info_assignments": [
+        {
+          "line": 111,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"047_mouse/base{self.mouse_id}\",\n            \"{B}\": f\"{self.color_name}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_object_basket",
+      "path": "third_party/RoboTwin/envs/place_object_basket.py",
+      "sha256": "7516d123eed05d3a7f4eb438588b00bcf0011dfe9c1cbe6549f78200985a506f",
+      "check_success_line": 141,
+      "play_once_line": 71,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 73,
+      "info_assignments": [
+        {
+          "line": 133,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"{self.object_name}/base{self.object_id}\",\n            \"{B}\": f\"{self.basket_name}/base{self.basket_id}\",\n            \"{a}\": str(self.arm_tag),\n            \"{b}\": str(self.arm_tag.opposite),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_object_scale",
+      "path": "third_party/RoboTwin/envs/place_object_scale.py",
+      "sha256": "0a215787d5843572f3287855e460e9ab539b1df258fcfd6d48a592f0ceb4e12a",
+      "check_success_line": 130,
+      "play_once_line": 100,
+      "check_reads_play_only_assignments": [
+        "arm_tag"
+      ],
+      "attribute_source_lines": {
+        "arm_tag": [
+          102
+        ]
+      },
+      "first_motion_line": 105,
+      "info_assignments": [
+        {
+          "line": 123,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"072_electronicscale/base{self.scale_id}\",\n            \"{B}\": f\"{self.selected_modelname}/base{self.selected_model_id}\",\n            \"{a}\": str(self.arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_object_stand",
+      "path": "third_party/RoboTwin/envs/place_object_stand.py",
+      "sha256": "6e07b9e65e406a9396b5795c7e5db1349d526ff4638c254db1681b96a18b69f3",
+      "check_success_line": 134,
+      "play_once_line": 104,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 109,
+      "info_assignments": [
+        {
+          "line": 127,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"{self.selected_modelname}/base{self.selected_model_id}\",\n            \"{B}\": f\"074_displaystand/base{self.displaystand_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_phone_stand",
+      "path": "third_party/RoboTwin/envs/place_phone_stand.py",
+      "sha256": "0cdeac71b67a46a0ecf35e47a4ff9fadefe5c4d9c1ef9759c62999ed97462d1c",
+      "check_success_line": 99,
+      "play_once_line": 71,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 76,
+      "info_assignments": [
+        {
+          "line": 92,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"077_phone/base{self.phone_id}\",\n            \"{B}\": f\"078_phonestand/base{self.stand_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "place_shoe",
+      "path": "third_party/RoboTwin/envs/place_shoe.py",
+      "sha256": "6b144e0ec1a12d1338e3a732f795b7d464b60867879730b52d632483935d4cf8",
+      "check_success_line": 90,
+      "play_once_line": 62,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 67,
+      "info_assignments": [
+        {
+          "line": 87,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"041_shoe/base{self.shoe_id}\", \"{a}\": str(arm_tag)}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "press_stapler",
+      "path": "third_party/RoboTwin/envs/press_stapler.py",
+      "sha256": "d3469316d64b4fcc14034c9c6520eb135eee26211816d96a7e4e95d325ea0e5b",
+      "check_success_line": 45,
+      "play_once_line": 30,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 35,
+      "info_assignments": [
+        {
+          "line": 42,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"048_stapler/base{self.stapler_id}\", \"{a}\": str(arm_tag)}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "path": "third_party/RoboTwin/envs/put_bottles_dustbin.py",
+      "sha256": "990685bc1f850da018e8085462599ea2072e634113523034543511899d159f53",
+      "check_success_line": 145,
+      "play_once_line": 73,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 89,
+      "info_assignments": [
+        {
+          "line": 126,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"114_bottle/base{self.bottle_id[0]}\",\n            \"{B}\": f\"114_bottle/base{self.bottle_id[1]}\",\n            \"{C}\": f\"114_bottle/base{self.bottle_id[2]}\",\n            \"{D}\": f\"011_dustbin/base0\",\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "put_object_cabinet",
+      "path": "third_party/RoboTwin/envs/put_object_cabinet.py",
+      "sha256": "6fff4c5d170a10a91c00010ef3c8621a76c0d8689d481bb6f55145d7158e9d7c",
+      "check_success_line": 118,
+      "play_once_line": 84,
+      "check_reads_play_only_assignments": [
+        "arm_tag",
+        "origin_z"
+      ],
+      "attribute_source_lines": {
+        "arm_tag": [
+          86
+        ],
+        "origin_z": [
+          87
+        ]
+      },
+      "first_motion_line": 90,
+      "info_assignments": [
+        {
+          "line": 110,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"{self.selected_modelname}/base{self.selected_model_id}\",\n            \"{B}\": f\"036_cabinet/base{0}\",\n            \"{a}\": str(arm_tag),\n            \"{b}\": str(arm_tag.opposite),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "rotate_qrcode",
+      "path": "third_party/RoboTwin/envs/rotate_qrcode.py",
+      "sha256": "0fd72bd7196efaa3295a60fe01faf626219905f8299829da9f683800044b0401",
+      "check_success_line": 70,
+      "play_once_line": 43,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 48,
+      "info_assignments": [
+        {
+          "line": 64,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"070_paymentsign/base{self.model_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "scan_object",
+      "path": "third_party/RoboTwin/envs/scan_object.py",
+      "sha256": "c034675842ba9298d7c55b4b6aa52355e18e824381be5663c13e533644a994d7",
+      "check_success_line": 103,
+      "play_once_line": 57,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 62,
+      "info_assignments": [
+        {
+          "line": 95,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"112_tea-box/base{self.object_id}\",\n            \"{B}\": f\"024_scanner/base{self.scanner_id}\",\n            \"{a}\": str(object_arm_tag),\n            \"{b}\": str(scanner_arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "shake_bottle",
+      "path": "third_party/RoboTwin/envs/shake_bottle.py",
+      "sha256": "98f2ca948c6935cdaaf3826506615ca55ca3a842082dfc1f7cf75e3163d9ccf8",
+      "check_success_line": 82,
+      "play_once_line": 42,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 47,
+      "info_assignments": [
+        {
+          "line": 76,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"001_bottle/base{self.bottle_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "shake_bottle_horizontally",
+      "path": "third_party/RoboTwin/envs/shake_bottle_horizontally.py",
+      "sha256": "6919fc52d7ce539111374a5fe70c9843926ce2881f949983e0693ad9701e62d9",
+      "check_success_line": 92,
+      "play_once_line": 42,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 47,
+      "info_assignments": [
+        {
+          "line": 86,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"001_bottle/base{self.bottle_id}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "stack_blocks_three",
+      "path": "third_party/RoboTwin/envs/stack_blocks_three.py",
+      "sha256": "347281bf6a7ca5ee364a2eb585be157f7a20949630946ab40149c4ca70dc51b8",
+      "check_success_line": 122,
+      "play_once_line": 64,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": null,
+      "info_assignments": [
+        {
+          "line": 77,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": \"red block\",\n            \"{B}\": \"green block\",\n            \"{C}\": \"blue block\",\n            \"{a}\": str(arm_tag1),\n            \"{b}\": str(arm_tag2),\n            \"{c}\": str(arm_tag3),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": false
+    },
+    {
+      "task": "stack_blocks_two",
+      "path": "third_party/RoboTwin/envs/stack_blocks_two.py",
+      "sha256": "dfc87deb9313fcd33a875ff2c313a384c2250bdc5aca04c2bd8f0984a8efa321",
+      "check_success_line": 116,
+      "play_once_line": 62,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": null,
+      "info_assignments": [
+        {
+          "line": 73,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": \"red block\",\n            \"{B}\": \"green block\",\n            \"{a}\": arm_tag1,\n            \"{b}\": arm_tag2,\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": false
+    },
+    {
+      "task": "stack_bowls_three",
+      "path": "third_party/RoboTwin/envs/stack_bowls_three.py",
+      "sha256": "fcc83106c212cae951d6f71348ddb99b0ef70fcc8a3e31dcf20cb59081dfadf2",
+      "check_success_line": 108,
+      "play_once_line": 94,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": null,
+      "info_assignments": [
+        {
+          "line": 105,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"002_bowl/base3\"}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": false
+    },
+    {
+      "task": "stack_bowls_two",
+      "path": "third_party/RoboTwin/envs/stack_bowls_two.py",
+      "sha256": "a73a9e33b8ffa3553b7f33b0a05ff2f1be2767e6ac62ffdaf70700399ea487fe",
+      "check_success_line": 110,
+      "play_once_line": 92,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": null,
+      "info_assignments": [
+        {
+          "line": 102,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"002_bowl/base3\",\n            \"{B}\": f\"002_bowl/base3\",\n            \"{a}\": str(arm_tag1),\n            \"{b}\": str(arm_tag2),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": false
+    },
+    {
+      "task": "stamp_seal",
+      "path": "third_party/RoboTwin/envs/stamp_seal.py",
+      "sha256": "feda5afa24584515cda7632daa94143f4adf391de1cb205213f41157f856835d",
+      "check_success_line": 131,
+      "play_once_line": 103,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 108,
+      "info_assignments": [
+        {
+          "line": 124,
+          "expression": "self.info[\"info\"] = {\n            \"{A}\": f\"100_seal/base{self.seal_id}\",\n            \"{B}\": f\"{self.color_name}\",\n            \"{a}\": str(arm_tag),\n        }"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    },
+    {
+      "task": "turn_switch",
+      "path": "third_party/RoboTwin/envs/turn_switch.py",
+      "sha256": "1d75a2fb159c6f2d696d57e22d4025bd9ab3613c5a80f677d3a9abe59adf0ac2",
+      "check_success_line": 40,
+      "play_once_line": 27,
+      "check_reads_play_only_assignments": [],
+      "attribute_source_lines": {},
+      "first_motion_line": 33,
+      "info_assignments": [
+        {
+          "line": 37,
+          "expression": "self.info[\"info\"] = {\"{A}\": f\"056_switch/base{self.model_id}\", \"{a}\": str(arm_tag)}"
+        }
+      ],
+      "all_info_assignments_after_first_motion": true
+    }
+  ]
+}

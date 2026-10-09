@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-09T11:16:08.438507+00:00",
+  "passed": true,
+  "official_search_preserved": true,
+  "contacts_visited": [
+    0,
+    1
+  ],
+  "planner_calls": 2,
+  "returned_valid_poses": true,
+  "local_wrapper_sha256": "a9cf12a0c07bef8ed9c2613f57163b2ce46d874763f97ba8e31c1a599d26ba1f",
+  "expert_unit_tests": {
+    "passed": 29
+  },
+  "deployed_to_production": false,
+  "scope": "CPU fixture and official search loop, no simulator or model calls; actual affected scenes still require audit."
+}

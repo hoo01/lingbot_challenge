@@ -1,0 +1,293 @@
+{
+  "passed": true,
+  "scored": false,
+  "model_calls": 0,
+  "expert_calls": 0,
+  "cases": [
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100035,
+      "scored": false,
+      "expert_calls": 0,
+      "model_calls": 0,
+      "diagnostic": "Initial entry and one saved/holding action block only; not a scored policy result.",
+      "input_identity": {
+        "task": "handover_block",
+        "setting": "demo_clean",
+        "seed": 100035,
+        "instruction": "Lift the block with the left arm, pass it to the right arm.",
+        "instruction_parameters": {},
+        "camera_rgb_sha256": {
+          "head_camera": "ba681938b62248a9dd31c6e6be0448560444f7447617d924de402bb3af00858a",
+          "left_camera": "9aef481670d757a2f3660d1a4383ad11f176d9bbc18d5afbcd519ed8e73eb665",
+          "right_camera": "5631a5f88fa0214ea64b27a6254dd4fcb386a862571949cb7a06fa58dba3acca"
+        },
+        "initial_joints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "entry": {
+        "flow": "pinned_object_templates_and_score_prelude_v1",
+        "task_source_sha256": "5439712296d7e143d41f8e78b4ab86cd4fad7fb98f40f5f5abb067a462d17650",
+        "instruction_source": "official_object_only_templates",
+        "score_state": {},
+        "expert_called": false,
+        "simulation_steps_added": 0
+      },
+      "initial_check_success": false,
+      "entry_changes_rgb_or_joints": false,
+      "official_methods_unchanged": true,
+      "action_probe": "Hold initial joints for 50 actions, no model/expert.",
+      "actions": 50,
+      "final_check_success": false,
+      "passed": true,
+      "seconds": 36.03029949590564
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100030,
+      "scored": false,
+      "expert_calls": 0,
+      "model_calls": 0,
+      "diagnostic": "Initial entry and one saved/holding action block only; not a scored policy result.",
+      "input_identity": {
+        "task": "move_pillbottle_pad",
+        "setting": "demo_clean",
+        "seed": 100030,
+        "instruction": "Pick the white bottle with ridged orange lid up and drop it onto the pad",
+        "instruction_parameters": {
+          "{A}": "080_pillbottle/base1"
+        },
+        "camera_rgb_sha256": {
+          "head_camera": "728ccdeffe65c95584280b3551e4a0bf72a321130cc2886af6b7dace821d1c95",
+          "left_camera": "cbca513e26481457366a6e1d324d1ed937c2745b7fb147a903ed0f1f76d56eea",
+          "right_camera": "7b3315ddbbbe0bf306277ff5cb4169e32e97c7dceb4965a5a1552018932b0f38"
+        },
+        "initial_joints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "entry": {
+        "flow": "pinned_object_templates_and_score_prelude_v1",
+        "task_source_sha256": "a5db7c65db15c2273d1f9e99fab8fc00533a27b740a45161c9402d43b8aa6824",
+        "instruction_source": "official_object_only_templates",
+        "score_state": {},
+        "expert_called": false,
+        "simulation_steps_added": 0
+      },
+      "initial_check_success": false,
+      "entry_changes_rgb_or_joints": false,
+      "official_methods_unchanged": true,
+      "action_probe": "Hold initial joints for 50 actions, no model/expert.",
+      "actions": 50,
+      "final_check_success": false,
+      "passed": true,
+      "seconds": 34.072546266019344
+    },
+    {
+      "task": "open_laptop",
+      "setting": "demo_clean",
+      "seed": 100010,
+      "scored": false,
+      "expert_calls": 0,
+      "model_calls": 0,
+      "diagnostic": "Initial entry and one saved/holding action block only; not a scored policy result.",
+      "input_identity": {
+        "task": "open_laptop",
+        "setting": "demo_clean",
+        "seed": 100010,
+        "instruction": "Lift the portable folding Toshiba laptop slightly.",
+        "instruction_parameters": {
+          "{A}": "015_laptop/base7"
+        },
+        "camera_rgb_sha256": {
+          "head_camera": "e8d0fbacae71d0a8862a633352f11d8633fdd47102542111380562ed6998bdbb",
+          "left_camera": "bdda33e1c9da838db56ed51786b60f0658ed85c53d39384767d8c45417ca076f",
+          "right_camera": "55c0b41c20249819eeb1bc8734a808e0eb118547eec7cef8fe75e2679b5db5c3"
+        },
+        "initial_joints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "entry": {
+        "flow": "pinned_object_templates_and_score_prelude_v1",
+        "task_source_sha256": "b826d4f36513dba6df3c17b65f1251bf3dbe2994857ba672f4d06c5900c0cac0",
+        "instruction_source": "official_object_only_templates",
+        "score_state": {
+          "arm_tag": "left"
+        },
+        "expert_called": false,
+        "simulation_steps_added": 0
+      },
+      "initial_check_success": false,
+      "entry_changes_rgb_or_joints": false,
+      "official_methods_unchanged": true,
+      "saved_action_source": "/root/shared-nvme/lingbot-eval-team/runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/0/evaluation/open_laptop/demo_clean/100010/predictions.jsonl",
+      "original_initial_rgb_and_joints_equal": true,
+      "actions": 50,
+      "final_check_success": false,
+      "passed": true,
+      "seconds": 37.31724761798978
+    },
+    {
+      "task": "place_object_scale",
+      "setting": "demo_clean",
+      "seed": 100010,
+      "scored": false,
+      "expert_calls": 0,
+      "model_calls": 0,
+      "diagnostic": "Initial entry and one saved/holding action block only; not a scored policy result.",
+      "input_identity": {
+        "task": "place_object_scale",
+        "setting": "demo_clean",
+        "seed": 100010,
+        "instruction": "Pick up the bell shaped like half-circle dome and set it on the electronicscale with rubber feet",
+        "instruction_parameters": {
+          "{A}": "072_electronicscale/base5",
+          "{B}": "050_bell/base0"
+        },
+        "camera_rgb_sha256": {
+          "head_camera": "70c8ce87c3bc5b8b71f3555c577deef2fa46d6bc61d6b6a4d12bbecd3bc4d91f",
+          "left_camera": "240897c4b6abfbecb9b8ce843c8b6dfcb8c6673fc62698e4214e7189710350d2",
+          "right_camera": "882fada907f8c56c0eab9ee8dcd882d1323ff3923710fd6ca755260b888fe447"
+        },
+        "initial_joints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "entry": {
+        "flow": "pinned_object_templates_and_score_prelude_v1",
+        "task_source_sha256": "555f04a2a2fa0a41ad8dfccd771579d1cc2686fc65ad6c7ef297c98f4c9ba310",
+        "instruction_source": "official_object_only_templates",
+        "score_state": {
+          "arm_tag": "right"
+        },
+        "expert_called": false,
+        "simulation_steps_added": 0
+      },
+      "initial_check_success": false,
+      "entry_changes_rgb_or_joints": false,
+      "official_methods_unchanged": true,
+      "saved_action_source": "/root/shared-nvme/lingbot-eval-team/runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/1/evaluation/place_object_scale/demo_clean/100010/predictions.jsonl",
+      "original_initial_rgb_and_joints_equal": true,
+      "actions": 50,
+      "final_check_success": false,
+      "passed": true,
+      "seconds": 35.781226579099894
+    },
+    {
+      "task": "put_object_cabinet",
+      "setting": "demo_clean",
+      "seed": 100015,
+      "scored": false,
+      "expert_calls": 0,
+      "model_calls": 0,
+      "diagnostic": "Initial entry and one saved/holding action block only; not a scored policy result.",
+      "input_identity": {
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "instruction": "Access the cabinet with gray sides's drawer and set the mouse with two buttons and a scroll wheel inside.",
+        "instruction_parameters": {
+          "{A}": "047_mouse/base2",
+          "{B}": "036_cabinet/base0"
+        },
+        "camera_rgb_sha256": {
+          "head_camera": "efbeba3f4e9b8052810fa85b0f712da50e5bad1a7bd36e5db8f1eb9d3e131881",
+          "left_camera": "98c8ed0a0eef1435b548dc7c07ed13d90e7eb173c0b11cb7660ff4356b997deb",
+          "right_camera": "e915f7913eeffd2a4fb4f475f3ff10776347d37404e67632e6203f9c94f6a6c9"
+        },
+        "initial_joints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "entry": {
+        "flow": "pinned_object_templates_and_score_prelude_v1",
+        "task_source_sha256": "1de25dd513b4ad29e158440eefb28fb050be95d557c7df1b87578168ff35a7b2",
+        "instruction_source": "official_object_only_templates",
+        "score_state": {
+          "arm_tag": "left",
+          "origin_z": "0.741093"
+        },
+        "expert_called": false,
+        "simulation_steps_added": 0
+      },
+      "initial_check_success": false,
+      "entry_changes_rgb_or_joints": false,
+      "official_methods_unchanged": true,
+      "action_probe": "Hold initial joints for 50 actions, no model/expert.",
+      "actions": 50,
+      "final_check_success": false,
+      "passed": true,
+      "seconds": 35.834897466003895
+    }
+  ],
+  "production_deployed": false
+}

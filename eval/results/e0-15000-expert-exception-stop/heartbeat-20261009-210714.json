@@ -1,0 +1,404 @@
+{
+  "checked_at": "2026-10-09T13:07:14.873675+00:00",
+  "job_id": "843758599804",
+  "status": "running",
+  "counts": {
+    "planned": 500,
+    "attempted": 590,
+    "valid": 396,
+    "successes": 46,
+    "setup_errors": 65,
+    "expert_rejections": 129,
+    "execution_errors": 0,
+    "record_error": null,
+    "historical_interruptions": 14,
+    "historical_runtime_errors": 5,
+    "actual_attempts": 602
+  },
+  "disk_free_bytes": 208958128128,
+  "prior_video_receipts": [
+    "heartbeat-20261009-0210.json",
+    "heartbeat-20261009-0310.json",
+    "heartbeat-20261009-0412.json",
+    "heartbeat-20261009-062102.json",
+    "heartbeat-20261009-073229.json",
+    "heartbeat-20261009-082037.json",
+    "heartbeat-20261009-093215.json",
+    "heartbeat-20261009-102042.json",
+    "heartbeat-20261009-112110.json",
+    "heartbeat-20261009-123609.json",
+    "heartbeat-20261009-132224.json",
+    "heartbeat-20261009-133742.json",
+    "heartbeat-20261009-142316.json",
+    "heartbeat-20261009-152403.json",
+    "heartbeat-20261009-163353.json",
+    "heartbeat-20261009-164829.json",
+    "heartbeat-20261009-173023.json",
+    "heartbeat-20261009-185020.json",
+    "heartbeat-20261009-204936.json",
+    "heartbeat-20261009-205351.json",
+    "heartbeat-checker-completed-shard-20261009.json",
+    "incidents/20261009-043940/resume-launch-verification.json",
+    "incidents/20261009-062217/resume-launch-verification.json",
+    "incidents/20261009-091101/resume-launch-verification.json",
+    "incidents/20261009-121010/resume-launch-verification.json",
+    "incidents/20261009-175116/resume-launch-verification.json",
+    "protocol-plan-20261009/resume-launch-verification.json",
+    "user-resume-20261009/resume-launch-verification.json",
+    "valid500-extension/resume-launch-verification.json",
+    "incidents/20261009-091101/completed-policy-verification.json",
+    "incidents/20261009-121010/completed-policy-verification.json",
+    "incidents/20261009-175116/completed-policy-verification.json",
+    "incidents/20261009-190505/completed-policy-verification.json"
+  ],
+  "previously_verified_policy_episodes": 388,
+  "new_completed_policy_video_checks": [
+    {
+      "episode": "handover_block/demo_randomized/100015",
+      "shard": 0,
+      "artifact_root": "segments/expert-quota5-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 4826,
+          "bytes": 3459444,
+          "duration_seconds": 482.6,
+          "terminal_action_count": 800,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 4826,
+          "bytes": 3284203,
+          "duration_seconds": 482.6,
+          "terminal_action_count": 800,
+          "passed": true
+        }
+      },
+      "actions": 800,
+      "action_blocks": 16,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "handover_block/demo_randomized/100018",
+      "shard": 0,
+      "artifact_root": "segments/expert-quota5-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 4790,
+          "bytes": 2095714,
+          "duration_seconds": 479.0,
+          "terminal_action_count": 800,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 4790,
+          "bytes": 3025234,
+          "duration_seconds": 479.0,
+          "terminal_action_count": 800,
+          "passed": true
+        }
+      },
+      "actions": 800,
+      "action_blocks": 16,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "hanging_mug/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "segments/expert-quota5-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 5231,
+          "bytes": 5534340,
+          "duration_seconds": 523.1,
+          "terminal_action_count": 900,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 5231,
+          "bytes": 3563069,
+          "duration_seconds": 523.1,
+          "terminal_action_count": 900,
+          "passed": true
+        }
+      },
+      "actions": 900,
+      "action_blocks": 18,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "move_pillbottle_pad/demo_randomized/100015",
+      "shard": 1,
+      "artifact_root": "segments/expert-quota5-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2521,
+          "bytes": 1913402,
+          "duration_seconds": 252.1,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2521,
+          "bytes": 1594628,
+          "duration_seconds": 252.1,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "move_pillbottle_pad/demo_randomized/100017",
+      "shard": 1,
+      "artifact_root": "segments/expert-quota5-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2441,
+          "bytes": 1374848,
+          "duration_seconds": 244.1,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2441,
+          "bytes": 1412446,
+          "duration_seconds": 244.1,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "move_stapler_pad/demo_randomized/100016",
+      "shard": 1,
+      "artifact_root": "segments/expert-quota5-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2412,
+          "bytes": 1604431,
+          "duration_seconds": 241.2,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2412,
+          "bytes": 1228796,
+          "duration_seconds": 241.2,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "pick_dual_bottles/demo_randomized/100015",
+      "shard": 1,
+      "artifact_root": "segments/expert-quota5-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2392,
+          "bytes": 1276954,
+          "duration_seconds": 239.2,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2392,
+          "bytes": 1628004,
+          "duration_seconds": 239.2,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "place_a2b_right/demo_clean/100015",
+      "shard": 1,
+      "artifact_root": "segments/expert-quota5-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2421,
+          "bytes": 2254791,
+          "duration_seconds": 242.1,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2421,
+          "bytes": 1499020,
+          "duration_seconds": 242.1,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  ],
+  "initial_candidate_plan_size": 500,
+  "completion_basis": "valid",
+  "unique_recorded_candidates": 590,
+  "prefix_checks": [
+    {
+      "shard": 0,
+      "original_records_unchanged": true,
+      "seeded_prefix_unchanged": true
+    },
+    {
+      "shard": 1,
+      "original_records_unchanged": true,
+      "seeded_prefix_unchanged": true
+    }
+  ],
+  "model_processes": [
+    {
+      "shard": 0,
+      "pid": 162190,
+      "alive": true,
+      "process_start_ticks": "1859286589",
+      "same_recovery_process": true,
+      "shard_status": "running",
+      "candidate_records": 290,
+      "planned_candidates": 250,
+      "completed_plan_matches": false
+    },
+    {
+      "shard": 1,
+      "pid": 162189,
+      "alive": true,
+      "process_start_ticks": "1859286589",
+      "same_recovery_process": true,
+      "shard_status": "running",
+      "candidate_records": 300,
+      "planned_candidates": 250,
+      "completed_plan_matches": false
+    }
+  ],
+  "progresses": [
+    {
+      "event": "chunk_completed",
+      "time": "2026-10-09T13:07:11.944538+00:00",
+      "task": "hanging_mug",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "chunks": 8,
+      "actions": 400,
+      "shard": 0
+    },
+    {
+      "event": "expert_setup_started",
+      "time": "2026-10-09T13:07:14.256486+00:00",
+      "task": "place_a2b_right",
+      "setting": "demo_clean",
+      "seed": 100016,
+      "shard": 1
+    }
+  ],
+  "execution_segment": "expert-quota5-20261009",
+  "ancestor_checks": [
+    {
+      "source": "segments/user-accepted-bf16-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/user-accepted-bf16-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "segments/valid500-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/valid500-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-plan-failure-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-plan-failure-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-contact-id-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-contact-id-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-no-grasp-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-no-grasp-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "segments/reuse-task-env-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/reuse-task-env-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "shards/1",
+      "unchanged": true
+    }
+  ],
+  "recovered_episodes": [
+    {
+      "task": "open_laptop",
+      "setting": "demo_clean",
+      "seed": 100010,
+      "status": "policy_completed",
+      "success": false,
+      "actions": 700,
+      "chunks": 14,
+      "recovery_scene_verified": true,
+      "execution_segment": "reuse-task-env-20261009",
+      "artifact_root": "segments/expert-quota5-20261009/shards/0/evaluation"
+    },
+    {
+      "task": "open_microwave",
+      "setting": "demo_clean",
+      "seed": 100011,
+      "status": "policy_completed",
+      "success": false,
+      "actions": 1500,
+      "chunks": 30,
+      "recovery_scene_verified": true,
+      "execution_segment": "reuse-task-env-20261009",
+      "artifact_root": "segments/expert-quota5-20261009/shards/1/evaluation"
+    }
+  ],
+  "issues": [],
+  "passed": true,
+  "scope": "Incremental completed-policy metadata, terminal PNG pixels, dual-view clocks and action records; no model or simulation executed. Full video decoding reused from the prior recording acceptance."
+}

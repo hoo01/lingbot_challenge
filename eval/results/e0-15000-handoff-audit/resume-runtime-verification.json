@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-09T09:30:19.769722+00:00",
+  "passed": true,
+  "job_id": "843758599804",
+  "execution_segment": "user-accepted-bf16-20261009",
+  "policy_checks": [
+    {
+      "shard": 0,
+      "episode": "blocks_ranking_rgb/demo_randomized/100015",
+      "first_block_actions": 50,
+      "actions_shape": [
+        50,
+        14
+      ],
+      "finite": true,
+      "trajectory_matches": true,
+      "episode_completed_at_check": false,
+      "both_video_frame_logs_started": true
+    },
+    {
+      "shard": 1,
+      "episode": "handover_mic/demo_clean/100015",
+      "first_block_actions": 50,
+      "actions_shape": [
+        50,
+        14
+      ],
+      "finite": true,
+      "trajectory_matches": true,
+      "episode_completed_at_check": false,
+      "both_video_frame_logs_started": true,
+      "original_instruction_unchanged": true,
+      "original_parameters_unchanged": true,
+      "original_initial_joints_unchanged": true,
+      "original_three_camera_pixels_unchanged": true
+    }
+  ],
+  "counts": {
+    "attempted": 507,
+    "valid": 369,
+    "successes": 45,
+    "setup_errors": 60,
+    "expert_rejections": 78,
+    "execution_errors": 0,
+    "historical_interruptions": 10,
+    "historical_runtime_errors": 4,
+    "actual_attempts": 516
+  },
+  "disk_free_bytes": 209309401088,
+  "scope": "Original recovered sibling inputs, and first completed action blocks on both GPUs; complete new videos are checked after episode completion."
+}

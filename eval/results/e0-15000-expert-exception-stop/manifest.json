@@ -1,0 +1,1584 @@
+{
+  "checked_at": "2026-10-09T13:09:48.767710+00:00",
+  "job": {
+    "id": "843758599804",
+    "title": "E0 \u00b7 15000 \u6b65 \u00b7 50\u00d72\u00d75 \u6709\u6548\u56de\u5408 \u00b7 \u4e13\u5bb6\u7b5b\u9009\u4e0e\u5f55\u50cf",
+    "config": {
+      "checkpoint_id": "bf8e4034d112",
+      "tasks": [
+        "adjust_bottle",
+        "beat_block_hammer",
+        "blocks_ranking_rgb",
+        "blocks_ranking_size",
+        "click_alarmclock",
+        "click_bell",
+        "dump_bin_bigbin",
+        "grab_roller",
+        "handover_block",
+        "handover_mic",
+        "hanging_mug",
+        "lift_pot",
+        "move_can_pot",
+        "move_pillbottle_pad",
+        "move_playingcard_away",
+        "move_stapler_pad",
+        "open_laptop",
+        "open_microwave",
+        "pick_diverse_bottles",
+        "pick_dual_bottles",
+        "place_a2b_left",
+        "place_a2b_right",
+        "place_bread_basket",
+        "place_bread_skillet",
+        "place_burger_fries",
+        "place_can_basket",
+        "place_cans_plasticbox",
+        "place_container_plate",
+        "place_dual_shoes",
+        "place_empty_cup",
+        "place_fan",
+        "place_mouse_pad",
+        "place_object_basket",
+        "place_object_scale",
+        "place_object_stand",
+        "place_phone_stand",
+        "place_shoe",
+        "press_stapler",
+        "put_bottles_dustbin",
+        "put_object_cabinet",
+        "rotate_qrcode",
+        "scan_object",
+        "shake_bottle",
+        "shake_bottle_horizontally",
+        "stack_blocks_three",
+        "stack_blocks_two",
+        "stack_bowls_three",
+        "stack_bowls_two",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "execute": 50,
+      "precision": "fp32",
+      "video": true,
+      "video_fps": 10,
+      "protocol": "user_pending_policy_expert5_v1",
+      "inference_profile": "official_defaults_v1",
+      "moe_backend": "official",
+      "vision_device": "cuda",
+      "embedding_device": "cuda",
+      "expert_check": true,
+      "server_id": "rented-5090",
+      "shards": [
+        {
+          "id": 0,
+          "tasks": [
+            "adjust_bottle",
+            "blocks_ranking_rgb",
+            "click_alarmclock",
+            "dump_bin_bigbin",
+            "handover_block",
+            "hanging_mug",
+            "move_can_pot",
+            "move_playingcard_away",
+            "open_laptop",
+            "pick_diverse_bottles",
+            "place_a2b_left",
+            "place_bread_basket",
+            "place_burger_fries",
+            "place_cans_plasticbox",
+            "place_dual_shoes",
+            "place_fan",
+            "place_object_basket",
+            "place_object_stand",
+            "place_shoe",
+            "put_bottles_dustbin",
+            "rotate_qrcode",
+            "shake_bottle",
+            "stack_blocks_three",
+            "stack_bowls_three",
+            "stamp_seal"
+          ],
+          "settings": [
+            "demo_clean",
+            "demo_randomized"
+          ]
+        },
+        {
+          "id": 1,
+          "tasks": [
+            "beat_block_hammer",
+            "blocks_ranking_size",
+            "click_bell",
+            "grab_roller",
+            "handover_mic",
+            "lift_pot",
+            "move_pillbottle_pad",
+            "move_stapler_pad",
+            "open_microwave",
+            "pick_dual_bottles",
+            "place_a2b_right",
+            "place_bread_skillet",
+            "place_can_basket",
+            "place_container_plate",
+            "place_empty_cup",
+            "place_mouse_pad",
+            "place_object_scale",
+            "place_phone_stand",
+            "press_stapler",
+            "put_object_cabinet",
+            "scan_object",
+            "shake_bottle_horizontally",
+            "stack_blocks_two",
+            "stack_bowls_two",
+            "turn_switch"
+          ],
+          "settings": [
+            "demo_clean",
+            "demo_randomized"
+          ]
+        }
+      ],
+      "parallelism": 2,
+      "partition": "round_robin_groups_v1",
+      "gpu_uuids": [
+        "GPU-e671f67e-da97-128a-eb48-93b84c49c25d",
+        "GPU-1f87cc42-5bae-1104-eb63-f6ae441fcf84"
+      ],
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "expert_quota": {
+        "version": "pending_policy_expert5_v1",
+        "limit": 5,
+        "scope": "task_setting_pending_policy_index",
+        "user_authorization": "2026-10-09: preserve 385 prior policy outcomes; per pending policy episode maximum five expert initiations across seeds; exhausted budget still executes policy.",
+        "inherited": [
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 11
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 20,
+            "candidate_count": 25
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 4,
+            "candidate_count": 5
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 13
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 14
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 17,
+            "candidate_count": 20
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 4,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_clean",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_randomized",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 3,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          }
+        ]
+      }
+    },
+    "status": "failed",
+    "created": "2026-10-08T17:07:49.574674+00:00",
+    "updated": "2026-10-09T13:07:39.905188+00:00",
+    "gpu": "GPU-e671f67e-da97-128a-eb48-93b84c49c25d,GPU-1f87cc42-5bae-1104-eb63-f6ae441fcf84",
+    "pid": null,
+    "error": "Shard 1 exited 1; see logs"
+  },
+  "active_resume": {
+    "manifest": "resume-requests/expert-quota5-20261009/manifest.json",
+    "sha256": "9df3c3fcc321b8f3356c27e1ef520a4b241df6ae15524247bea49456354451da"
+  },
+  "files": [
+    {
+      "path": "runs/eval-843758599804/active-resume.json",
+      "bytes": 152,
+      "sha256": "955a9e84d6bd39220b301b5351d0f7ac8ab8a39f21c266aeaf8db679b73ae3aa"
+    },
+    {
+      "path": "runs/eval-843758599804/resume-requests/expert-quota5-20261009/manifest.json",
+      "bytes": 19687,
+      "sha256": "9df3c3fcc321b8f3356c27e1ef520a4b241df6ae15524247bea49456354451da"
+    },
+    {
+      "path": "configs/runtime.json",
+      "bytes": 94,
+      "sha256": "78bfae462d46c39e4c9c358a5cdd61b37c9732d835085e8c2599cc34896c880c"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/checkpoint.json",
+      "bytes": 3857,
+      "sha256": "0661f624452432a2019ee5c4bbfa57ff949390d456fe58aa5de66b4725ec409c"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation.log",
+      "bytes": 153059,
+      "sha256": "5f6c772d3c5683133bd0892f2c4f15a880dc62e56c290da4439f082a5de82032"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/official-defaults-manifest.json",
+      "bytes": 960,
+      "sha256": "c879c19be18f160ce5bdbe1943eddea0eca86882b6ecb0a40f068b4d5ee71891"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/process-segment.json",
+      "bytes": 1066,
+      "sha256": "863e1f6e23cda5be3b1c8d621b07c24120af41069f593e2e07ba57530c0b8a69"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/request.json",
+      "bytes": 18369,
+      "sha256": "a6921c81895d19a4c90016101aff91428ef9458b4edd9034de9e3c0f14e1992e"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/runner.pid",
+      "bytes": 6,
+      "sha256": "41452095fb30b5b7b3cf95b74f8842d13bde5ab179b01468950f8aee7d5e9516"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/server-runtime.json",
+      "bytes": 794,
+      "sha256": "92ced2d49e56ddd07d18cba85b14d1b5cb34d1965c40928d240ef822d1eeb5fd"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/server.log",
+      "bytes": 7716,
+      "sha256": "eea67fe5799070084dffab2ed754f433f9e5606e0fbff26d3ab193f040f9e015"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/timing.json",
+      "bytes": 152,
+      "sha256": "06a64940e44d3d472566a754ba09d5927494bebc17fc090e6c5b7522cd782b7e"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/worker.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/episodes.jsonl",
+      "bytes": 755459,
+      "sha256": "4a114698d1f081f71971be55a1f1858a54be018136fb499f5cb21dd74f3cb004"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/execution-events.jsonl",
+      "bytes": 20356,
+      "sha256": "22ca2e227d4c784d2038ed8ca9c85b46b962f05f93ac44e43c399bcfd70cc2e9"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/expert-launches.jsonl",
+      "bytes": 871,
+      "sha256": "139be4b6a5d24dc693c5ed9e9a7aebfb23689fded9d705332473ceca7b63ac63"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/protocol.json",
+      "bytes": 20375,
+      "sha256": "00976505a35602bfc7134164b1c459648f3d9d6b0fe8e6d8c09ee16110ca3537"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/resume-protocol-20261009T124528.json",
+      "bytes": 20483,
+      "sha256": "3182fa95aa3ec4204164367c533d0ae94f7852542d0ef672af01b91cdd9e630b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/resume-protocol-20261009T125002.json",
+      "bytes": 20483,
+      "sha256": "3182fa95aa3ec4204164367c533d0ae94f7852542d0ef672af01b91cdd9e630b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/resume-protocol-20261009T125429.json",
+      "bytes": 20483,
+      "sha256": "3182fa95aa3ec4204164367c533d0ae94f7852542d0ef672af01b91cdd9e630b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/resume-protocol-20261009T125501.json",
+      "bytes": 20483,
+      "sha256": "3182fa95aa3ec4204164367c533d0ae94f7852542d0ef672af01b91cdd9e630b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/resume-protocol-20261009T125531.json",
+      "bytes": 20483,
+      "sha256": "3182fa95aa3ec4204164367c533d0ae94f7852542d0ef672af01b91cdd9e630b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/resume-protocol-20261009T125955.json",
+      "bytes": 20483,
+      "sha256": "3182fa95aa3ec4204164367c533d0ae94f7852542d0ef672af01b91cdd9e630b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/resume-protocol-20261009T130434.json",
+      "bytes": 20483,
+      "sha256": "3182fa95aa3ec4204164367c533d0ae94f7852542d0ef672af01b91cdd9e630b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/summary.json",
+      "bytes": 10923,
+      "sha256": "54575d588d2e6f6adb8fc79914b869c9ff837c30660f6862e218030a9ad63aea"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/worker-progress.json",
+      "bytes": 170,
+      "sha256": "dc25769e427837c2ff4b124db63559b752669997751d6d9a1abca20e5e0c3436"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-000-left-wrist.png",
+      "bytes": 71180,
+      "sha256": "855fb96ca3ff40d5e64e1aa1b4f4bf095eb3f70f074994f79c25e753e11a1124"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-000-right-wrist.png",
+      "bytes": 64774,
+      "sha256": "d381289a499ac65065042a7198d279cc6f446bdf82e7f3e71ac548f6f1eb4d77"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-000.png",
+      "bytes": 91144,
+      "sha256": "494664290a7424fec88e2ef88342236776119921c776f2826a50a73bbe5a02cb"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-001-left-wrist.png",
+      "bytes": 39150,
+      "sha256": "12a2749fe8e7b74234dfd16292b3c275ffc31b4b582ed0119edea328237b8aec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-001-right-wrist.png",
+      "bytes": 69228,
+      "sha256": "47ae8fa3c00cd5323bd26297a803d9cf0b739eef1dd4f21e4c66f22418c80483"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-001.png",
+      "bytes": 93073,
+      "sha256": "a2c7a35f29b51901914aee9ed34c974c66f18e49582d4699464ee31e60b42f70"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-002-left-wrist.png",
+      "bytes": 62618,
+      "sha256": "5886a4a1d95943f43235b3d3fd36cebdba6f46558240de4848cdb683e9ff3695"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-002-right-wrist.png",
+      "bytes": 62672,
+      "sha256": "194bb25fc79a44d8b6c580efb92c80a470ed4fb49025638aaf2db559a6af9443"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-002.png",
+      "bytes": 93336,
+      "sha256": "d9c3e2b0d54f23edc2f7cad19e211d814a8145d64384478220db28b2441010f2"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-003-left-wrist.png",
+      "bytes": 78806,
+      "sha256": "dfb6760512f4170fefb2ed34f1b87fca47bcf18727c09055d0999559bbf9679d"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-003-right-wrist.png",
+      "bytes": 57180,
+      "sha256": "f0481ba53059ba9f2093a1b7f45b5c2848590b844e137614ee0e6d906e732c8c"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-003.png",
+      "bytes": 92915,
+      "sha256": "fe238cb707014fea80b30167ed5b8f9e4c5b4f225ea1301d0f1e4803a13df246"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-004-left-wrist.png",
+      "bytes": 62335,
+      "sha256": "c1ea42f0d2cb6559f297ce77d41cd30b3d427eec973f93f2122318c9753d8c8c"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-004-right-wrist.png",
+      "bytes": 66881,
+      "sha256": "ac51f961cda6bbb8067438a5685ff2e5ce5f59b8f3c2bf68eec6f98ecdbd745a"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-004.png",
+      "bytes": 93174,
+      "sha256": "915eab20abfa8c552acecc32a25739b23edf0a7f3a582a12459270afb254a297"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-005-left-wrist.png",
+      "bytes": 73157,
+      "sha256": "8edaa298354cc75c77980b209bc41819792f62c1c917460d73955510dde2d7e5"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-005-right-wrist.png",
+      "bytes": 67273,
+      "sha256": "50cec95f89c4105fff29996a9a17704bda189c4c75bfada238123e141c14f12b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-005.png",
+      "bytes": 93569,
+      "sha256": "b12268eaf0bf0e59ed8de5d066ac013b5c8d99feb1529b7166f7c46f2ede3794"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-006-left-wrist.png",
+      "bytes": 65277,
+      "sha256": "4ff299515b48ad5e97fdfb8e84ea8e44f1ab7048e6e83d225fabb83eac4d8947"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-006-right-wrist.png",
+      "bytes": 68260,
+      "sha256": "fcc4d937030eb91efbce34048ef9fed58b0dc0d251bf32114306e62d28b9c5bf"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-006.png",
+      "bytes": 92514,
+      "sha256": "480814678917e5fe4a2d3aab960b723f6114f37690026fcc97a519a4070bbccb"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-007-left-wrist.png",
+      "bytes": 55370,
+      "sha256": "ccd7b054064fbc56d11c0e78f1e1ec760bfea6f96d7c145d462cad200b0e8915"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-007-right-wrist.png",
+      "bytes": 66697,
+      "sha256": "da507f44cbf9bca7a831e7ea283c5aa6ce4bbfd7b98742e79225c6af5113de0b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-007.png",
+      "bytes": 91497,
+      "sha256": "76b4259d0e90db9e9c676e11e7af954c8685a95590325c36fe481e9b123c4060"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-008-left-wrist.png",
+      "bytes": 64994,
+      "sha256": "52035cc2acaad500881989714880e9e7d40af05e2e7c77460fbd13257ed005d9"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-008-right-wrist.png",
+      "bytes": 66719,
+      "sha256": "8bfcf085c2dbf2089359b4945afee952bad12f6c6cd584d4b6c35647349db88d"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-008.png",
+      "bytes": 92278,
+      "sha256": "e77cc72c24fa8a2813ee87e21a1e1dcce54dca86180bcbfd22cc83efbd729443"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-009-left-wrist.png",
+      "bytes": 59522,
+      "sha256": "742b059847e8575cc69d9dbf9e467b2271f96c4f9f53413801e4081f789311b1"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-009-right-wrist.png",
+      "bytes": 52578,
+      "sha256": "b12a6153588751a676eae922a221d1ab41cd4df1d1f97090a2797b38fa616a2c"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/chunk-009.png",
+      "bytes": 92040,
+      "sha256": "cf9ae3de0954df3e81d0ca9db3cdd288dd9fd250f4463f6b5457d7515ea2a4f2"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/episode.mp4",
+      "bytes": 3016250,
+      "sha256": "3535cd83ed440da8266d8c0f12f09b6ffc069d482a96282055d2aa56ba061482"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/expert.json",
+      "bytes": 467,
+      "sha256": "6cb58aec4f948d29fae430019566ff76b96a24cd79b7647310f8b939bb8faf54"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/ffmpeg-observer.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/instruction.json",
+      "bytes": 257,
+      "sha256": "82754a31c70419c7af137738115c6415da2143b1a529b22074e4670df405ec93"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/observer-video-frames.jsonl",
+      "bytes": 833926,
+      "sha256": "3ea3a8e3caac0d63d2f890520750c445ad39d43bad229989a6f8afcc981d4b42"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/observer.mp4",
+      "bytes": 1856827,
+      "sha256": "9d88d774b6fd8ea5ae017eab58a855c077dcb56275e5e885c09da7216d24accd"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/predictions.jsonl",
+      "bytes": 161276,
+      "sha256": "4e0653465abb16e60d994fbafa5b7490e321326e812cc0a2e76c8c835294a890"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/trajectory.jsonl",
+      "bytes": 152691,
+      "sha256": "b38e1d4ded19376ae7b36db5956ac34ad16765fc05ebe55b36c0254d41d37d8c"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015/video-frames.jsonl",
+      "bytes": 834206,
+      "sha256": "3830a126f7893f35b9e6f71d516e38dd5b445275412b264eb66e973c3af5ae70"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/checkpoint.json",
+      "bytes": 3857,
+      "sha256": "0661f624452432a2019ee5c4bbfa57ff949390d456fe58aa5de66b4725ec409c"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation.log",
+      "bytes": 169492,
+      "sha256": "a1759a30f34d2374c530cc2aa727ff800d7761959646cb294c4c1bc8349feebe"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/official-defaults-manifest.json",
+      "bytes": 960,
+      "sha256": "c879c19be18f160ce5bdbe1943eddea0eca86882b6ecb0a40f068b4d5ee71891"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/process-segment.json",
+      "bytes": 1071,
+      "sha256": "a9092b687e1736d3687fa2db198d9991a62da06cd21c67dea666067a79b1f8df"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/report.json",
+      "bytes": 1017261,
+      "sha256": "bae1a558738d5f3edd50cab19d64838fb974740ae17f0a93c03bc4139e456e2e"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/request.json",
+      "bytes": 18374,
+      "sha256": "0aed9ea907c0774c589f3b3caa850d1fe08edb54191d625600e3b90c4a7386bb"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/runner.pid",
+      "bytes": 6,
+      "sha256": "0dc9a58436e004c05de9eb223bd45baf4b2b01134e094b6a896ed7c8e6b5fe59"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/scores.csv",
+      "bytes": 3506,
+      "sha256": "ec3b992866d277c25057886226c61c4e4e62f68514f12662f1ded341755f4219"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/server-runtime.json",
+      "bytes": 794,
+      "sha256": "92ced2d49e56ddd07d18cba85b14d1b5cb34d1965c40928d240ef822d1eeb5fd"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/server.log",
+      "bytes": 6389,
+      "sha256": "d61164c2b9258e455f6a241eb00d97250a5c3047fd5a6e10136ce1f11d844b7a"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/timing.json",
+      "bytes": 201,
+      "sha256": "257c58881f5f7470194c8798f655b373344930c5c41d93398fd7a0866a29cba3"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/worker.log",
+      "bytes": 682,
+      "sha256": "1a8a42057cd66d11cbf15787f425ceecc4806c0a31f1d17a8f642ebba4e97b33"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/episodes.jsonl",
+      "bytes": 783346,
+      "sha256": "d76ab147c111c8d1b9e20553a2d998ad5d1c22bd1c0a019aa9a71116a40f54b7"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/execution-events.jsonl",
+      "bytes": 40942,
+      "sha256": "7bf4b0c300669d67164076cb3cba473465c657b92095b9b5b1f69bdbc3622dc1"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/expert-launches.jsonl",
+      "bytes": 1925,
+      "sha256": "33337552021ce386623ebdb569b885d3c34b37f4627ae6a90716045f46f55be6"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/protocol.json",
+      "bytes": 20380,
+      "sha256": "a16f631cbd1a00122d800843f345e9e796418b361b429d0782a2bf12b1493e06"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T124531.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T124818.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T124859.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T124932.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T125012.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T125050.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T125320.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T125558.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T125633.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T125907.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T125940.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T130207.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T130447.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/resume-protocol-20261009T130703.json",
+      "bytes": 20488,
+      "sha256": "1db4d67e16ec9c0e2d9b3e33b21de862c12292f2f2a8e236cc0217c43803e6ec"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/summary.json",
+      "bytes": 10955,
+      "sha256": "3f4e1fece561bc6d261b878e656a2f6d0235832e243bf96eda55aafc2f94b8e7"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/worker-progress.json",
+      "bytes": 175,
+      "sha256": "eca3223c0df1f0c425035ca31781382a07a7a1a9d2187370ee65ea1ab6b38d65"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/place_a2b_right/demo_clean/100016/episode.json",
+      "bytes": 3149,
+      "sha256": "f928c5779a9207f705d45702c999875e646e6d4b84a96e3f0fd962f793304ff4"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/place_a2b_right/demo_clean/100016/expert.json",
+      "bytes": 1078,
+      "sha256": "7002abb7548aa9866c19ff239b6ccf2280f106b10525830a045c0bfb06f923e2"
+    },
+    {
+      "path": "scripts/eval_expert.py",
+      "bytes": 3383,
+      "sha256": "c991033fd91aa337ea837cf2b792a5300301c8b3a67782edef7fa9899c0060ea"
+    },
+    {
+      "path": "scripts/eval_dev_suite.py",
+      "bytes": 28631,
+      "sha256": "051eaf1b9a81ce083f9dfbefa1de9195da89fa9053a811bd40d7e3098724ab64"
+    },
+    {
+      "path": "scripts/eval_official_flow.py",
+      "bytes": 5837,
+      "sha256": "daf89aca66a954f074b672f784cdb9043f911faa34cf47e5f98570e861f22dc0"
+    },
+    {
+      "path": "scripts/eval_policy_entry.py",
+      "bytes": 2394,
+      "sha256": "0e67fc4b3abeb8052ca3d09488ed59c9e4176bf0b47f0398cab750f9ec3bd703"
+    },
+    {
+      "path": "scripts/eval_policy_entry_sources.json",
+      "bytes": 15322,
+      "sha256": "485f7a6792aa4987c32ce68c6edbfbba5cf3d92ae71b3ee1c101ed7fc8e1781d"
+    },
+    {
+      "path": "scripts/eval_isolated.py",
+      "bytes": 6160,
+      "sha256": "638eb0089e3df147bc42b8f3d34f5d187893d21a9945436425f386be25980c5b"
+    },
+    {
+      "path": "src/eval_platform/expert_quota.py",
+      "bytes": 4956,
+      "sha256": "ed1b137ed2afa3f2df32b24e54414cac02f342a4484f0f8f7dd9b601f0c0277e"
+    },
+    {
+      "path": "src/eval_platform/resume.py",
+      "bytes": 10016,
+      "sha256": "d24a71b026ccb92dd8193badc2bb3e4a9c1419d1dac8f8b31eb293eb8a704a96"
+    },
+    {
+      "path": "src/eval_platform/planning.py",
+      "bytes": 4130,
+      "sha256": "eac58176a8cfbb85ff2781098c21c1ddc0629de9f58e7e87b5bd9bffe819a933"
+    },
+    {
+      "path": "src/eval_platform/runner.py",
+      "bytes": 7249,
+      "sha256": "2fbb05ea78145525d53d3eb77e600a635eae987fcdae9e7c1f8b2ad45c896ce1"
+    },
+    {
+      "path": "third_party/RoboTwin/envs/place_a2b_right.py",
+      "bytes": 5890,
+      "sha256": "1225e32207912e15855deff8aa9d4fd2cf425b4c5eeaeaf1eb795daaba4ac6ae"
+    },
+    {
+      "path": "third_party/RoboTwin/envs/_base_task.py",
+      "bytes": 69247,
+      "sha256": "448f7152b65cb9102217cf5463aa821d72810ca56f63d5a797ec7bd43e23e101"
+    },
+    {
+      "path": "third_party/RoboTwin/envs/utils/action.py",
+      "bytes": 2862,
+      "sha256": "7bf69e226b98ae7f5b21a523f722271530885cf4778873900f3564003a9b591d"
+    }
+  ],
+  "model_processes": [
+    {
+      "shard": 0,
+      "pid": 162190,
+      "alive": false,
+      "start_ticks": null
+    },
+    {
+      "shard": 1,
+      "pid": 162189,
+      "alive": false,
+      "start_ticks": null
+    }
+  ],
+  "counts_by_shard": [
+    {
+      "shard": 0,
+      "records": 290,
+      "valid": 193,
+      "errors": []
+    },
+    {
+      "shard": 1,
+      "records": 301,
+      "valid": 203,
+      "errors": [
+        {
+          "task": "place_a2b_right",
+          "setting": "demo_clean",
+          "seed": 100016,
+          "success": false,
+          "expert_attempts": 1,
+          "sampling_seed": null,
+          "sampling_seed_at_process_start": 42,
+          "inference_profile": "official_defaults_v1",
+          "execution_segment": "expert-quota5-20261009",
+          "execution_flow": "lingbot_upstream_single_episode_v1",
+          "policy_episode_index": 4,
+          "language_seed": 100016,
+          "instruction_template_count": 5,
+          "video_requested": true,
+          "requested_video_fps": 10,
+          "quota_flow": "pending_policy_expert5_v1",
+          "expert_budget": {
+            "scope": "task_setting_pending_policy_index",
+            "policy_index": 4,
+            "limit": 5,
+            "used_before": 0,
+            "expert_permitted": true,
+            "inherited_over_limit": 0,
+            "used_after": 1
+          },
+          "simulator_openblas_threads": "1",
+          "expert": {
+            "seed": 100016,
+            "phase": "execution",
+            "passed": false,
+            "flow": "upstream_play_once_no_internal_hooks_v1",
+            "exception_policy": "record_and_stop",
+            "setup_seconds": 18.707008723169565,
+            "error_type": "AssertionError",
+            "error": "Traceback (most recent call last):\n  File \"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\", line 48, in screen_scene\n    info = env.play_once()\n  File \"/root/shared-nvme/lingbot-eval-team/third_party/RoboTwin/envs/place_a2b_right.py\", line 129, in play_once\n    self.move(self.grasp_actor(self.object, arm_tag=arm_tag, pre_grasp_dis=0.1))\n  File \"/root/shared-nvme/lingbot-eval-team/third_party/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/root/shared-nvme/lingbot-eval-team/third_party/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+            "total_seconds": 18.92516851425171
+          },
+          "status": "infrastructure_error",
+          "error": "Traceback (most recent call last):\n  File \"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\", line 287, in main\n    forced_policy, parameters = select_policy_entry(env, config, episode, seed, folder, row,\n  File \"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\", line 26, in select_policy_entry\n    parameters = screen_scene(env, config, episode, seed, folder, row, progress)\n  File \"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\", line 48, in screen_scene\n    info = env.play_once()\n  File \"/root/shared-nvme/lingbot-eval-team/third_party/RoboTwin/envs/place_a2b_right.py\", line 129, in play_once\n    self.move(self.grasp_actor(self.object, arm_tag=arm_tag, pre_grasp_dis=0.1))\n  File \"/root/shared-nvme/lingbot-eval-team/third_party/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/root/shared-nvme/lingbot-eval-team/third_party/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+          "seconds": 18.93436523526907
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "shard": 0,
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/hanging_mug/demo_randomized/100015",
+      "files": [
+        "chunk-000-left-wrist.png",
+        "chunk-000-right-wrist.png",
+        "chunk-000.png",
+        "chunk-001-left-wrist.png",
+        "chunk-001-right-wrist.png",
+        "chunk-001.png",
+        "chunk-002-left-wrist.png",
+        "chunk-002-right-wrist.png",
+        "chunk-002.png",
+        "chunk-003-left-wrist.png",
+        "chunk-003-right-wrist.png",
+        "chunk-003.png",
+        "chunk-004-left-wrist.png",
+        "chunk-004-right-wrist.png",
+        "chunk-004.png",
+        "chunk-005-left-wrist.png",
+        "chunk-005-right-wrist.png",
+        "chunk-005.png",
+        "chunk-006-left-wrist.png",
+        "chunk-006-right-wrist.png",
+        "chunk-006.png",
+        "chunk-007-left-wrist.png",
+        "chunk-007-right-wrist.png",
+        "chunk-007.png",
+        "chunk-008-left-wrist.png",
+        "chunk-008-right-wrist.png",
+        "chunk-008.png",
+        "chunk-009-left-wrist.png",
+        "chunk-009-right-wrist.png",
+        "chunk-009.png",
+        "episode.mp4",
+        "expert.json",
+        "ffmpeg-observer.log",
+        "ffmpeg.log",
+        "instruction.json",
+        "observer-video-frames.jsonl",
+        "observer.mp4",
+        "predictions.jsonl",
+        "trajectory.jsonl",
+        "video-frames.jsonl"
+      ],
+      "event_tail": [],
+      "trajectory_rows": 9,
+      "prediction_rows": 10
+    },
+    {
+      "shard": 1,
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/place_a2b_right/demo_clean/100016",
+      "files": [
+        "episode.json",
+        "expert.json"
+      ],
+      "event_tail": [],
+      "trajectory_rows": 0,
+      "prediction_rows": 0
+    }
+  ],
+  "disk_free_bytes": 208953933824,
+  "job_changed": false,
+  "model_restarted": false,
+  "expert_or_model_calls": 0
+}

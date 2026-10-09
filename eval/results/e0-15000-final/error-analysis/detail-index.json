@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "details": [
+    {
+      "case_id": "click_alarmclock-demo_randomized-100011",
+      "view": "head_camera",
+      "frame_indices": [
+        1450,
+        1470,
+        1490,
+        1510,
+        1530,
+        1550,
+        1570,
+        1590,
+        1610,
+        1630,
+        1650,
+        1670,
+        1690,
+        1710,
+        1730,
+        1750
+      ],
+      "returncode": 0,
+      "sheet": "click_alarmclock-demo_randomized-100011/head-detail.jpg"
+    },
+    {
+      "case_id": "pick_dual_bottles-demo_clean-100010",
+      "view": "head_camera",
+      "frame_indices": [
+        200,
+        230,
+        260,
+        290,
+        320,
+        350,
+        380,
+        410,
+        440,
+        470,
+        500,
+        530,
+        560,
+        590,
+        620,
+        650
+      ],
+      "returncode": 0,
+      "sheet": "pick_dual_bottles-demo_clean-100010/head-detail.jpg"
+    },
+    {
+      "case_id": "place_can_basket-demo_clean-100010",
+      "view": "head_camera",
+      "frame_indices": [
+        1300,
+        1330,
+        1360,
+        1390,
+        1420,
+        1450,
+        1480,
+        1510,
+        1540,
+        1570,
+        1600,
+        1630,
+        1660,
+        1690,
+        1720,
+        1750
+      ],
+      "returncode": 0,
+      "sheet": "place_can_basket-demo_clean-100010/head-detail.jpg"
+    },
+    {
+      "case_id": "open_laptop-demo_clean-100010",
+      "view": "head_camera",
+      "frame_indices": [
+        150,
+        170,
+        190,
+        210,
+        230,
+        250,
+        270,
+        290,
+        310,
+        330,
+        350,
+        370,
+        390,
+        410,
+        430,
+        450
+      ],
+      "returncode": 0,
+      "sheet": "open_laptop-demo_clean-100010/head-detail.jpg"
+    }
+  ]
+}

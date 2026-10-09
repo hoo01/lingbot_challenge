@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "prepared_at": "2026-10-09T13:37:48.831867+00:00",
+  "production_changed": false,
+  "model_calls": 0,
+  "unchanged_prefixes": true,
+  "preserved_candidates": 591,
+  "preserved_valid": 396,
+  "checks": [
+    {
+      "shard": 0,
+      "first_remaining": {
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100015
+      },
+      "budget": {
+        "scope": "task_setting_pending_policy_index",
+        "policy_index": 1,
+        "limit": 5,
+        "used_before": 5,
+        "expert_permitted": false,
+        "inherited_over_limit": 0
+      }
+    },
+    {
+      "shard": 1,
+      "first_remaining": {
+        "task": "place_a2b_right",
+        "setting": "demo_clean",
+        "seed": 100017
+      },
+      "budget": {
+        "scope": "task_setting_pending_policy_index",
+        "policy_index": 4,
+        "limit": 5,
+        "used_before": 1,
+        "expert_permitted": true,
+        "inherited_over_limit": 0
+      }
+    }
+  ]
+}

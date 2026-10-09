@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "boundary_tests": 7,
+  "old_sha256": "58fd4d0c5118c86e3332f193b3611d3a106066f200ecba65b25ed94311c05336",
+  "new_sha256": "bfe8a57c86d3f36a6dae2cdf58ce7a1ceda072f1b86a50563bb24427aff36c50",
+  "scope": "Read-only verification of legacy versus new expert-budget policy entries"
+}

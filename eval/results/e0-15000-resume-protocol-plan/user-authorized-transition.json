@@ -1,0 +1,15 @@
+{
+  "job_id": "843758599804",
+  "preserve_old_valid": 385,
+  "preserve_old_candidates": 571,
+  "target_valid": 500,
+  "user_replies": [
+    "已经跑的就算了，用新的标准跑后面的，明确前面的问题",
+    "按每个待补策略回合最多5次执行（推荐）"
+  ],
+  "local_interpretation": true,
+  "expert_limit": 5,
+  "quota_scope": "task_setting_pending_policy_index",
+  "exhaustion_policy": "Fifth normal expert failure: policy on same seed. UnStable initialization: next integer seed without another expert. Legacy candidates immutable; next unrecorded/original interrupted seed inherits budget.",
+  "policy_entry": "Official object-only templates and verbatim pre-motion score initializers, no task method replacement."
+}

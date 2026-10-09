@@ -1,0 +1,15 @@
+{
+  "prepared": true,
+  "job_id": "843758599804",
+  "segment": "expert-quota5-20261009",
+  "sha256": "9df3c3fcc321b8f3356c27e1ef520a4b241df6ae15524247bea49456354451da",
+  "manifest": "/root/shared-nvme/lingbot-eval-team/runs/eval-843758599804/resume-requests/expert-quota5-20261009/manifest.json",
+  "preserved_candidates": 571,
+  "preserved_valid": 385,
+  "successes": 46,
+  "remaining_valid": 115,
+  "historical_interruptions": 14,
+  "historical_runtime_errors": 5,
+  "actual_attempts": 583,
+  "prior_rng_restored": false
+}

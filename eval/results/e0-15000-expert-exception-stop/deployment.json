@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "deployed_at": "2026-10-09T13:38:33.780014+00:00",
+  "old_manager_pid": 162153,
+  "old_workers": [
+    162164,
+    162163
+  ],
+  "maintenance_owner": "e0-outer-exception-20261009",
+  "changes": [
+    {
+      "path": "scripts/eval_expert.py",
+      "before_sha256": "c991033fd91aa337ea837cf2b792a5300301c8b3a67782edef7fa9899c0060ea",
+      "after_sha256": "59a0a3aefcd3f507225a61bc9c105faa84fff66efc836f26650b132628b02258"
+    },
+    {
+      "path": "scripts/eval_dev_suite.py",
+      "before_sha256": "051eaf1b9a81ce083f9dfbefa1de9195da89fa9053a811bd40d7e3098724ab64",
+      "after_sha256": "cca2d09fe131286c608edd1cfeeb8c6a50ea564d9ec3866a1a7b2e234f7047a3"
+    },
+    {
+      "path": "scripts/eval_isolated.py",
+      "before_sha256": "638eb0089e3df147bc42b8f3d34f5d187893d21a9945436425f386be25980c5b",
+      "after_sha256": "9bfa34ca53c00feaa48b7607e5d2df43ab87a8cd94201415f014ca4a43597962"
+    },
+    {
+      "path": "src/eval_platform/expert_outcomes.py",
+      "before_sha256": null,
+      "after_sha256": "de649ec13318fb19e4c1de7c15ec57ee3a9aeaebd7cad8b709448251d2f69387"
+    },
+    {
+      "path": "src/eval_platform/expert_quota.py",
+      "before_sha256": "ed1b137ed2afa3f2df32b24e54414cac02f342a4484f0f8f7dd9b601f0c0277e",
+      "after_sha256": "a6589c02315cf8b04e71ea58c9dc10405e759eed79a97e7b7286295ea22b2888"
+    },
+    {
+      "path": "src/eval_platform/planning.py",
+      "before_sha256": "eac58176a8cfbb85ff2781098c21c1ddc0629de9f58e7e87b5bd9bffe819a933",
+      "after_sha256": "3ccdff9104ccfb7180b92cb58864b00db4e5803fe489971bc5e066bba2c99c63"
+    },
+    {
+      "path": "src/eval_platform/resume.py",
+      "before_sha256": "d24a71b026ccb92dd8193badc2bb3e4a9c1419d1dac8f8b31eb293eb8a704a96",
+      "after_sha256": "af8e8bbe2afb6c7f507385d8ac01cb1eaa0b90f8e751e0d2a490b060e5e1c0ea"
+    },
+    {
+      "path": "src/eval_platform/runner.py",
+      "before_sha256": "2fbb05ea78145525d53d3eb77e600a635eae987fcdae9e7c1f8b2ad45c896ce1",
+      "after_sha256": "576f082ecc9e15146c094ffce6560a08fd66d81fc57252ff8cab8b22d5520174"
+    },
+    {
+      "path": "src/eval_platform/reports.py",
+      "before_sha256": "9f9c396965699091761bc2ec27021530a51fedeb4e8330ddd9fbe8e6f43454ac",
+      "after_sha256": "3005225b7e942c75287a6a3b044f84208e0a8ee9189b789ecd6b695c930dcbea"
+    },
+    {
+      "path": "src/eval_platform/web/app.js",
+      "before_sha256": "36e87297fba05a4980d608bd184958e84a917d927f13de7e9186ee159caa0c21",
+      "after_sha256": "9de2dc752d9736fbc074ef7f1b996a9c318aedabe22919d86ed5230f3f36992b"
+    }
+  ],
+  "model_calls": 0
+}

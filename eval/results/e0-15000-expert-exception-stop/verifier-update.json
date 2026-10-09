@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "change": "Include expert_exceptions and resolved_original_expert_errors in incremental counts; no validation relaxation.",
+  "before_sha256": "bfe8a57c86d3f36a6dae2cdf58ce7a1ceda072f1b86a50563bb24427aff36c50",
+  "after_sha256": "f65a42625d0fe834ae72ae2bd5a82a8fdeb00c801b86085aa77559a7f9e70ec7"
+}

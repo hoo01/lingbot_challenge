@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "job_id": "843758599804",
+  "formal_resumed": true,
+  "local_interpretation": "per pending policy episode at most five expert initiations across seeds; inherited launches not refunded",
+  "old_valid_preserved": 385,
+  "old_candidate_prefix_preserved": 571,
+  "target_valid": 500,
+  "new_policy_entry_verification": "policy-entry-verification.json",
+  "cpu_tests": {
+    "source_expert_quota_passed": 49,
+    "linux_platform_passed": 97,
+    "skipped": 1,
+    "incremental_checker_boundaries": 7
+  },
+  "runtime_verification": "resume-runtime-verification.json",
+  "latest_heartbeat": "heartbeat-20261009-204936.json",
+  "full_new_policy_episodes_verified": 1,
+  "formal_counts": {
+    "planned": 500,
+    "attempted": 574,
+    "valid": 386,
+    "successes": 46,
+    "setup_errors": 65,
+    "expert_rejections": 123,
+    "execution_errors": 0,
+    "record_error": null,
+    "historical_interruptions": 14,
+    "historical_runtime_errors": 5,
+    "actual_attempts": 586
+  },
+  "manifest_sha256": "9df3c3fcc321b8f3356c27e1ef520a4b241df6ae15524247bea49456354451da",
+  "formal_errors_since_transition": 0,
+  "diagnostics": {
+    "expert_calls": 0,
+    "model_calls": 0,
+    "passed_entry_checks": 5,
+    "holding_action_blocks": 3,
+    "saved_action_replay_blocks": 2,
+    "initial_failed_reader_setup_checks": 1
+  },
+  "code_files": [
+    {
+      "path": "scripts/eval_expert.py",
+      "before_sha256": "e28f276eb49e481470f1f88b17c9c0cdcbed2cc158ec7d94db191087170961c0",
+      "after_sha256": "c991033fd91aa337ea837cf2b792a5300301c8b3a67782edef7fa9899c0060ea"
+    },
+    {
+      "path": "scripts/eval_official_flow.py",
+      "before_sha256": null,
+      "after_sha256": "daf89aca66a954f074b672f784cdb9043f911faa34cf47e5f98570e861f22dc0"
+    },
+    {
+      "path": "scripts/eval_dev_suite.py",
+      "before_sha256": "bcdbe19307e9a775b8b787b7a1f1404153f80ea1f1b38b8d611035e9303ca7a3",
+      "after_sha256": "051eaf1b9a81ce083f9dfbefa1de9195da89fa9053a811bd40d7e3098724ab64"
+    },
+    {
+      "path": "scripts/eval_policy_entry.py",
+      "before_sha256": null,
+      "after_sha256": "0e67fc4b3abeb8052ca3d09488ed59c9e4176bf0b47f0398cab750f9ec3bd703"
+    },
+    {
+      "path": "scripts/eval_policy_entry_sources.json",
+      "before_sha256": null,
+      "after_sha256": "485f7a6792aa4987c32ce68c6edbfbba5cf3d92ae71b3ee1c101ed7fc8e1781d"
+    },
+    {
+      "path": "src/eval_platform/expert_quota.py",
+      "before_sha256": null,
+      "after_sha256": "ed1b137ed2afa3f2df32b24e54414cac02f342a4484f0f8f7dd9b601f0c0277e"
+    },
+    {
+      "path": "src/eval_platform/planning.py",
+      "before_sha256": "8d83c3248aba558e714dfbb1e8ab91eef5f402d47d6c8fb727914b14cb406c70",
+      "after_sha256": "eac58176a8cfbb85ff2781098c21c1ddc0629de9f58e7e87b5bd9bffe819a933"
+    },
+    {
+      "path": "src/eval_platform/resume.py",
+      "before_sha256": "27bd03ee0adff7d4045976d0faf34500d346ce50a26b50df96cac3dd5a3cc4c3",
+      "after_sha256": "d24a71b026ccb92dd8193badc2bb3e4a9c1419d1dac8f8b31eb293eb8a704a96"
+    },
+    {
+      "path": "src/eval_platform/runner.py",
+      "before_sha256": "d3a89725a9b7214d4cdbdcdf6071ff7f6a9b1eadb42f8d5f2964e2be6bad931b",
+      "after_sha256": "2fbb05ea78145525d53d3eb77e600a635eae987fcdae9e7c1f8b2ad45c896ce1"
+    },
+    {
+      "path": "src/eval_platform/reports.py",
+      "before_sha256": "871e4d52dad8cd0318ee1dad99f5e9e86c4483aa1f5a9a063201292da0a8c474",
+      "after_sha256": "9f9c396965699091761bc2ec27021530a51fedeb4e8330ddd9fbe8e6f43454ac"
+    }
+  ],
+  "production_commit": false,
+  "push": false
+}

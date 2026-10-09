@@ -1,0 +1,24 @@
+{
+  "task": "place_a2b_right",
+  "setting": "demo_clean",
+  "seed": 100016,
+  "policy_index": 4,
+  "scored": false,
+  "setup_diagnostic_calls": 1,
+  "expert_calls": 0,
+  "planner_calls": 0,
+  "model_calls": 0,
+  "action_calls": 0,
+  "production_mutated": false,
+  "object_A": "077_phone/base3",
+  "object_B": "057_toycar/base2",
+  "contact_point_ids": [
+    0,
+    1
+  ],
+  "configured_contact_points": 2,
+  "initial_plan_success": true,
+  "asset": "third_party/RoboTwin/assets/objects/077_phone/model_data3.json",
+  "asset_sha256": "fea6aa40ff10e8fae40009ddd9da8b851156880fc78fbb7e671fedd14f9d07f2",
+  "passed": true
+}

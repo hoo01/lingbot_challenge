@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-09T13:37:48.817074+00:00",
+  "job_id": "843758599804",
+  "user_reply": "按官方外层处理并恢复（推荐）",
+  "question": "Adopt official outer expert exception handling: record exceptions separately, consume the five-initiation budget, execute policy after exhaustion, preserve original error and 396 completed policy episodes, and recover.",
+  "preserved_valid": 396,
+  "target_valid": 500,
+  "new_job": false,
+  "model_changed": false,
+  "expert_scope": "task_setting_pending_policy_index",
+  "limit": 5,
+  "no_new_expert_for_hanging_mug_100015": true,
+  "place_a2b_right_next_seed": 100017,
+  "remaining_place_expert_launches": 4
+}

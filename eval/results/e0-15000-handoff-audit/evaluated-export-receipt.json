@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "checkpoint_step": 15000,
+  "repo": "HumaLog/lingbot-vla-checkpoints",
+  "revision": "49d5b1022845a812470a51f6a442b732f9ac7aba",
+  "training_checkpoint_sha256": "b9a4fd22933e76bd27d7ec9d0d0d71f77f4514451f935884cf291f770fea8469",
+  "training_mode": "expert",
+  "base_identity": {
+    "sha256": "2e727a4c9be84d1a9fe8952544fed421df65fd32b8e543f0bc468f6aeb508a81",
+    "shards": [
+      {
+        "file": "model-00001-of-00006.safetensors",
+        "size": 4987151072,
+        "sha256": "4afb52b06a13df8b738a156ae5c8196d3bfe6b3ca931cecbd701e44cb9674e45"
+      },
+      {
+        "file": "model-00002-of-00006.safetensors",
+        "size": 4985113408,
+        "sha256": "ec131afa26a340db94c0dba8ec00e990be5f3d842ce6532070f0c8e26a067501"
+      },
+      {
+        "file": "model-00003-of-00006.safetensors",
+        "size": 4928593216,
+        "sha256": "7dccb068ca66c11fa514476d64661eeead56e2e80e1c0572c9ea82aa0d9ecf27"
+      },
+      {
+        "file": "model-00004-of-00006.safetensors",
+        "size": 4990740540,
+        "sha256": "1c2cb78066b69ae11255db851df95071e2cd69a3a4bc5020b3fd3b13b17819fb"
+      },
+      {
+        "file": "model-00005-of-00006.safetensors",
+        "size": 4990095864,
+        "sha256": "8fe36bf1f4f617869954bdfa1ad12e16abd8b0235a5fa99c88d571d4cddf4a17"
+      },
+      {
+        "file": "model-00006-of-00006.safetensors",
+        "size": 622195024,
+        "sha256": "3cf613d592dad64b1e2a1b1bb34a6f556a7fa05eacdb9972d73e0ea4882555a0"
+      }
+    ]
+  },
+  "trainable_tensors": 59,
+  "trainable_parameters": 101159479,
+  "dtype": "bfloat16",
+  "export_dtype_source": "training_config.yaml",
+  "trainable_rounding_max_abs": 0.006281852722167969,
+  "tensors": 1708,
+  "all_exported_tensors_equal_expected": true,
+  "files": [
+    {
+      "file": "model-00001-of-00006.safetensors",
+      "tensors": 419,
+      "bytes": 2493607592,
+      "sha256": "9eb6d2bc83c94ac732495dc8e04e982c519cddc83c9dd855573e43a663833d51"
+    },
+    {
+      "file": "model-00002-of-00006.safetensors",
+      "tensors": 301,
+      "bytes": 2492579800,
+      "sha256": "28a0e3a1f439c4846fdc65c983dfacc5b91892d4cac77a2e797bcea4aeb2fa13"
+    },
+    {
+      "file": "model-00003-of-00006.safetensors",
+      "tensors": 369,
+      "bytes": 2464324832,
+      "sha256": "b54d5d280f2569f4141a2f8078387c04652f8976cef61dd1ff4070c2969fac6b"
+    },
+    {
+      "file": "model-00004-of-00006.safetensors",
+      "tensors": 361,
+      "bytes": 2495397462,
+      "sha256": "7f74d35d0bd842f32f247e4776c6518380008a95a55977668fdb14fa20326553"
+    },
+    {
+      "file": "model-00005-of-00006.safetensors",
+      "tensors": 222,
+      "bytes": 2495065016,
+      "sha256": "ebe941c9d4837a17a2c4870a17dd5dd386950e647bf34fc2cc875ebaf6949978"
+    },
+    {
+      "file": "model-00006-of-00006.safetensors",
+      "tensors": 36,
+      "bytes": 311100256,
+      "sha256": "40e524bc1414df45b4db0a4fdae9f6d43f5b65e13a292af3207d36d74de46dad"
+    }
+  ],
+  "processor_check": {
+    "passed": true,
+    "checks": {
+      "backend_tokenizer_equal": true,
+      "chat_template_equal": true,
+      "special_tokens_equal": true,
+      "rendered_prompt_equal": true,
+      "all_input_tensors_equal": true
+    },
+    "input_shapes": {
+      "input_ids": [
+        1,
+        221
+      ],
+      "attention_mask": [
+        1,
+        221
+      ],
+      "pixel_values": [
+        768,
+        1536
+      ],
+      "image_grid_thw": [
+        3,
+        3
+      ]
+    },
+    "note": "Saved processor serialization differs; compare loaded BPE, template, special tokens, image pixels and input IDs."
+  },
+  "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+  "seconds": 80.9064977131784,
+  "output": "/root/shared-nvme/lingbot-eval-team/incoming/e0-15000-49d5b102"
+}

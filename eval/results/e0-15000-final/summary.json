@@ -1,0 +1,87 @@
+{
+  "job_id": "843758599804",
+  "model_id": "bf8e4034d112",
+  "status": "completed",
+  "created": "2026-10-08T17:07:49.574674+00:00",
+  "completed": "2026-10-09T18:02:54.980834+00:00",
+  "wall_elapsed_seconds_including_holds": 89705.40616,
+  "completed_policy_recorded_seconds_sum": 92629.53735129908,
+  "candidate_recorded_seconds_sum": 99139.7263016291,
+  "counts": {
+    "planned": 500,
+    "attempted": 815,
+    "valid": 500,
+    "successes": 54,
+    "setup_errors": 107,
+    "expert_rejections": 202,
+    "expert_exceptions": 6,
+    "resolved_original_expert_errors": 1,
+    "execution_errors": 0,
+    "record_error": null,
+    "historical_interruptions": 16,
+    "historical_runtime_errors": 6,
+    "actual_attempts": 828
+  },
+  "settings": {
+    "demo_clean": {
+      "valid": 250,
+      "successes": 33,
+      "candidate_records": 401,
+      "statuses": {
+        "policy_completed": 250,
+        "expert_rejected": 124,
+        "setup_error": 26,
+        "infrastructure_error": 1
+      }
+    },
+    "demo_randomized": {
+      "valid": 250,
+      "successes": 21,
+      "candidate_records": 414,
+      "statuses": {
+        "policy_completed": 250,
+        "setup_error": 81,
+        "expert_rejected": 78,
+        "expert_exception": 5
+      }
+    }
+  },
+  "protocol_stages": {
+    "legacy_screening": {
+      "attempted": 571,
+      "valid": 385,
+      "successes": 46,
+      "expert_rejections": 121,
+      "setup_errors": 65,
+      "forced_policy": 0,
+      "expert_exceptions": 0
+    },
+    "pending_policy_expert5_v1": {
+      "attempted": 20,
+      "valid": 11,
+      "successes": 0,
+      "expert_rejections": 8,
+      "setup_errors": 0,
+      "forced_policy": 2,
+      "expert_exceptions": 1
+    },
+    "pending_policy_expert5_outer_exception_v2": {
+      "attempted": 224,
+      "valid": 104,
+      "successes": 8,
+      "expert_rejections": 73,
+      "setup_errors": 42,
+      "forced_policy": 18,
+      "expert_exceptions": 5
+    }
+  },
+  "media_actions": {
+    "video_files": 980,
+    "head_only_episodes": 20,
+    "action_blocks": 5728,
+    "actions": 285009,
+    "dual_view_episodes": 480
+  },
+  "execution_segments": 10,
+  "scope": "Mixed-protocol development evaluation; not a uniform competition result."
+}

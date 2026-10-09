@@ -1,0 +1,144 @@
+{
+  "checked_at": "2026-10-09T13:40:27.383612+00:00",
+  "passed": true,
+  "job_id": "843758599804",
+  "status": "running",
+  "execution_segment": "expert-outer-exception-20261009",
+  "model_segments": [
+    {
+      "gpu_uuid": "GPU-e671f67e-da97-128a-eb48-93b84c49c25d",
+      "server_pid": 167325,
+      "port": 18100,
+      "shard": 0,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "sampling_seed_at_process_start": 42,
+      "sampling_seed_per_episode": null,
+      "cpu_threads": 8,
+      "started_at": 1791553186.9175954,
+      "execution_segment": "expert-outer-exception-20261009",
+      "prior_rng_restored": false,
+      "alive": true,
+      "process_start_ticks": "1859619893"
+    },
+    {
+      "gpu_uuid": "GPU-1f87cc42-5bae-1104-eb63-f6ae441fcf84",
+      "server_pid": 167324,
+      "port": 18101,
+      "shard": 1,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "sampling_seed_at_process_start": 42,
+      "sampling_seed_per_episode": null,
+      "cpu_threads": 8,
+      "started_at": 1791553186.915703,
+      "execution_segment": "expert-outer-exception-20261009",
+      "prior_rng_restored": false,
+      "alive": true,
+      "process_start_ticks": "1859619893"
+    }
+  ],
+  "prefix_checks": [
+    {
+      "shard": 0,
+      "original_records_unchanged": true,
+      "seeded_prefix_unchanged": true,
+      "preserved_results": 290
+    },
+    {
+      "shard": 1,
+      "original_records_unchanged": true,
+      "seeded_prefix_unchanged": true,
+      "preserved_results": 301
+    }
+  ],
+  "counts": {
+    "attempted": 591,
+    "valid": 396,
+    "successes": 46,
+    "setup_errors": 65,
+    "expert_rejections": 129,
+    "expert_exceptions": 1,
+    "resolved_original_expert_errors": 1,
+    "execution_errors": 0,
+    "historical_interruptions": 16,
+    "historical_runtime_errors": 6,
+    "actual_attempts": 604
+  },
+  "previously_verified_policy_episodes": 396,
+  "new_completed_policy_video_checks": [],
+  "disk_free_bytes": 208934010880,
+  "scope": "Recovery launch, live model process identity and preserved prefixes; runtime first-block acceptance follows separately."
+}

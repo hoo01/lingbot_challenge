@@ -1,0 +1,392 @@
+{
+  "checked_at": "2026-10-09T11:41:28.956232+00:00",
+  "scored": false,
+  "model_calls": 0,
+  "expert_diagnostic_attempts": 2,
+  "production_source_sha256": "e28f276eb49e481470f1f88b17c9c0cdcbed2cc158ec7d94db191087170961c0",
+  "cases": [
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100015,
+      "events": [
+        "expert_setup_started",
+        "expert_started",
+        "expert_completed"
+      ],
+      "grasp_returns": [
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "left"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 0,
+          "arm": "left"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "left"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 1,
+          "arm": "left"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": true,
+          "contact_point_id": null,
+          "arm": "left"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": true,
+          "contact_point_id": 2,
+          "arm": "left"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": true,
+          "contact_point_id": null,
+          "arm": "left"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": true,
+          "contact_point_id": 3,
+          "arm": "left"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 4,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": true,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": true,
+          "contact_point_id": 5,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 6,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": true,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": true,
+          "contact_point_id": 7,
+          "arm": "right"
+        }
+      ],
+      "model_calls": 0,
+      "original_expert_sha256": "26008ef54523b410b072e7346e26d8e4b463fe31cc1c3dd9b2a21e1a3507440e",
+      "original_expert": {
+        "seed": 100015,
+        "phase": "completed",
+        "passed": false,
+        "setup_seconds": 18.759212262928486,
+        "plan_success": false,
+        "success": false,
+        "raw_plan_success": true,
+        "rejection_reason": "expert_grasp_planning_failed",
+        "rejection_detail": "Official left_plan_multi_path returned Failure for all 10 grasp candidates",
+        "execution_seconds": 0.25660834461450577,
+        "total_seconds": 19.024160854518414
+      },
+      "outcome": "official_expert_passed",
+      "seconds": 30.490102171897888,
+      "expert": {
+        "seed": 100015,
+        "phase": "completed",
+        "passed": true,
+        "flow": "upstream_play_once_no_internal_hooks_v1",
+        "exception_policy": "record_and_stop",
+        "setup_seconds": 26.168446119874716,
+        "execution_seconds": 4.24626175314188,
+        "plan_success": true,
+        "success": true,
+        "instruction_parameters": {},
+        "total_seconds": 30.415093697607517
+      }
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100015,
+      "events": [
+        "expert_setup_started",
+        "expert_started",
+        "expert_completed"
+      ],
+      "grasp_returns": [
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 0,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 1,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": true,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": true,
+          "contact_point_id": 2,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": true,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": true,
+          "contact_point_id": 3,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": true,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": true,
+          "contact_point_id": 4,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": true,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": true,
+          "contact_point_id": 5,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": true,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": true,
+          "contact_point_id": 6,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 7,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 8,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 9,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 10,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 11,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 12,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 13,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 14,
+          "arm": "right"
+        },
+        {
+          "method": "choose_best_pose",
+          "returned_none": false,
+          "contact_point_id": null,
+          "arm": "right"
+        },
+        {
+          "method": "get_grasp_pose",
+          "returned_none": false,
+          "contact_point_id": 15,
+          "arm": "right"
+        }
+      ],
+      "model_calls": 0,
+      "original_expert_sha256": "c7c79aaa716e2b5c6c1cb26587e762f01f87a37044abbd367ae9c3fc6c8e61bf",
+      "original_expert": {
+        "seed": 100015,
+        "phase": "completed",
+        "passed": false,
+        "setup_seconds": 16.33756774663925,
+        "plan_success": false,
+        "success": false,
+        "raw_plan_success": true,
+        "rejection_reason": "expert_grasp_planning_failed",
+        "rejection_detail": "Official right_plan_multi_path returned Failure for all 10 grasp candidates",
+        "execution_seconds": 1.3212838023900986,
+        "total_seconds": 17.667400881648064
+      },
+      "outcome": "official_expert_passed",
+      "seconds": 24.976237662136555,
+      "expert": {
+        "seed": 100015,
+        "phase": "completed",
+        "passed": true,
+        "flow": "upstream_play_once_no_internal_hooks_v1",
+        "exception_policy": "record_and_stop",
+        "setup_seconds": 19.942886047065258,
+        "execution_seconds": 4.967849168926477,
+        "plan_success": true,
+        "success": true,
+        "instruction_parameters": {
+          "{A}": "080_pillbottle/base3",
+          "{a}": "right"
+        },
+        "total_seconds": 24.910817824304104
+      }
+    }
+  ],
+  "scope": "Diagnostic expert attempts only; not scored or quota-reset candidates.",
+  "gpu_before": {
+    "total_mib": 32607,
+    "used_mib": 1
+  },
+  "completed": true,
+  "production_unchanged": true,
+  "scored_counts_unchanged": true
+}

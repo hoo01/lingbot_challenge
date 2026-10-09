@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-09T09:31:16.151230+00:00",
+  "passed": true,
+  "id": "lingbot",
+  "status": "ACTIVE",
+  "kind": "heartbeat",
+  "target_thread_id": "01a0fcce-794a-7c93-812d-697f283170db",
+  "prompt_sha256": "539f38858b69fe600289eb03d3dcbc6b28cf20117c4f063598acaf027d2e731c",
+  "reason": "User explicitly requested resuming the same BF16 export evaluation with disclosure in the report.",
+  "completion": "500 valid episodes plus final verification, error analysis and local report commit; no push"
+}

@@ -1,0 +1,297 @@
+{
+  "production_results_modified": false,
+  "policy_calls": 0,
+  "affected_count": 36,
+  "confirmed_false_rejections": 2,
+  "remaining_unreviewed": 34,
+  "rows": [
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100015,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unmodified_official_expert_passed_in_unscored_diagnostic"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100016,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100017,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100018,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100019,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100020,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100021,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100022,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100023,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100024,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100025,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100026,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100027,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100028,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100029,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100030,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100031,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100032,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100033,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100034,
+      "shard": 0,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "lift_pot",
+      "setting": "demo_randomized",
+      "seed": 100019,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100015,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unmodified_official_expert_passed_in_unscored_diagnostic"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100016,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100017,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100018,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100019,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100020,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100021,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100022,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100023,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100024,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100025,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100026,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100027,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100028,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100029,
+      "shard": 1,
+      "original_status": "expert_rejected",
+      "audit_status": "unreviewed"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "scored": false,
+  "model_calls": 0,
+  "diagnostic_policy_replays": 1,
+  "task": "beat_block_hammer",
+  "setting": "demo_clean",
+  "seed": 100013,
+  "original_episode_sha256": "56ec589b21f272d60cbd46f44d2817c0cfa6c6f9df8f492371e78554399814a6",
+  "observations": [
+    {
+      "chunk": 0,
+      "three_cameras_equal": true,
+      "joints_equal": true,
+      "instruction_equal": true
+    },
+    {
+      "chunk": 1,
+      "three_cameras_equal": true,
+      "joints_equal": true,
+      "instruction_equal": true
+    },
+    {
+      "chunk": 2,
+      "three_cameras_equal": true,
+      "joints_equal": true,
+      "instruction_equal": true
+    }
+  ],
+  "passed": true,
+  "checked_at": "2026-10-09T11:51:30.828463+00:00",
+  "actions": 145,
+  "chunks": 3,
+  "success": true,
+  "video_capture": {
+    "version": "head_camera_simulation_time_v2",
+    "camera": "head_camera",
+    "fps": 10,
+    "shared_clock": "policy_simulation_steps",
+    "sampling": "initial frame + every 0.1 simulation seconds + terminal state",
+    "time_axis": "simulation time",
+    "playback_speed": 1.0,
+    "physics_timestep_seconds": 0.004000000189989805,
+    "simulation_steps": 21220,
+    "simulation_seconds": 84.88000403158367,
+    "video_duration_seconds": 85.0,
+    "max_sampling_lag_seconds": 4.0277838735391924e-06,
+    "frames": 850,
+    "changed_frames": 849,
+    "terminal_frame_included": true,
+    "last_action_count": 145,
+    "terminal_rgb_sha256": "5db0b9764bce6b20099e5b722037a0a04aad77713c08b2667b0c23cdeb88cd59",
+    "extra_physics_steps": 0,
+    "extra_policy_observations": 0
+  },
+  "production_counts_unchanged": true
+}

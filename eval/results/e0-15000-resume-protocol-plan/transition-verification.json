@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "scored": false,
+  "job_id": "843758599804",
+  "user_authorization": {
+    "job_id": "843758599804",
+    "preserve_old_valid": 385,
+    "preserve_old_candidates": 571,
+    "target_valid": 500,
+    "user_replies": [
+      "\u5df2\u7ecf\u8dd1\u7684\u5c31\u7b97\u4e86\uff0c\u7528\u65b0\u7684\u6807\u51c6\u8dd1\u540e\u9762\u7684\uff0c\u660e\u786e\u524d\u9762\u7684\u95ee\u9898",
+      "\u6309\u6bcf\u4e2a\u5f85\u8865\u7b56\u7565\u56de\u5408\u6700\u591a5\u6b21\u6267\u884c\uff08\u63a8\u8350\uff09"
+    ],
+    "local_interpretation": true,
+    "expert_limit": 5,
+    "quota_scope": "task_setting_pending_policy_index",
+    "exhaustion_policy": "Fifth normal expert failure: policy on same seed. UnStable initialization: next integer seed without another expert. Legacy candidates immutable; next unrecorded/original interrupted seed inherits budget.",
+    "policy_entry": "Official object-only templates and verbatim pre-motion score initializers, no task method replacement."
+  },
+  "policy_entry_verified": true,
+  "budget_persistence_verified": true,
+  "expert_calls": 0,
+  "model_calls": 0,
+  "cpu_tests": "49 source/expert/quota + 97 platform passed; 1 skipped",
+  "entry_verification": "artifacts/e0-hf-eval-20261009/protocol-plan-20261009/policy-entry-verification.json",
+  "initial_diagnostic_reader_error": "First laptop probe used a wrong saved-action field; original log preserved; corrected reader passed without production changes."
+}

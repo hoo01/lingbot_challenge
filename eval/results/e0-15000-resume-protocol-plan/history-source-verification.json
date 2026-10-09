@@ -1,0 +1,202 @@
+{
+  "passed": true,
+  "production_writes": false,
+  "files": [
+    {
+      "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/0/evaluation.log",
+      "bytes": 106701,
+      "sha256": "bc36053fb2af66f045cd8afed331aecf17e52d264109b61b13c23bfc2aa176e2",
+      "shard": 0,
+      "local_path": "history-sources/0/evaluation.log",
+      "unchanged_since_incident_archive": true,
+      "tail": [
+        "{\"time\": \"2026-10-09T11:04:01.138279+00:00\", \"event\": \"isolated_episode_completed\", \"count\": 282, \"episode\": {\"task\": \"handover_block\", \"setting\": \"demo_clean\", \"seed\": 100032, \"success\": false, \"expert_attempts\": 1, \"sampling_seed\": null, \"sampling_seed_at_process_start\": 42, \"inference_profile\": \"official_defaults_v1\", \"execution_segment\": \"expert-grasp-plan-20261009\", \"video_requested\": true, \"requested_video_fps\": 10, \"simulator_openblas_threads\": \"1\", \"expert\": {\"seed\": 100032, \"phase\": \"completed\", \"passed\": false, \"setup_seconds\": 18.863402482122183, \"plan_success\": false, \"success\": false, \"raw_plan_success\": true, \"rejection_reason\": \"expert_grasp_planning_failed\", \"rejection_detail\": \"Official left_plan_multi_path returned Failure for all 10 grasp candidates\", \"execution_seconds\": 1.7987855449318886, \"total_seconds\": 20.67225893214345}, \"status\": \"expert_rejected\", \"error\": \"Traceback (most recent call last):\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\\\", line 266, in main\\n    parameters = screen_scene(env, config, episode, seed, folder, row,\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\\\", line 187, in screen_scene\\n    raise ExpertRejected('Expert did not pass this planned scene')\\neval_expert.ExpertRejected: Expert did not pass this planned scene\\n\", \"seconds\": 20.680638883262873}, \"episode_timeout\": 900, \"stall_timeout\": 240}",
+        "missing pytorch3d",
+        "{\"event\": \"setup_started\", \"task\": \"handover_block\", \"setting\": \"demo_clean\", \"seed\": 100033}",
+        "Warp DeprecationWarning: The symbol `warp.torch.device_from_torch` will soon be removed from the public API. Use `warp.device_from_torch` instead.",
+        "{\"task\": \"handover_block\", \"setting\": \"demo_clean\", \"seed\": 100033, \"success\": false, \"expert_attempts\": 1, \"sampling_seed\": null, \"sampling_seed_at_process_start\": 42, \"inference_profile\": \"official_defaults_v1\", \"execution_segment\": \"expert-grasp-plan-20261009\", \"video_requested\": true, \"requested_video_fps\": 10, \"simulator_openblas_threads\": \"1\", \"expert\": {\"seed\": 100033, \"phase\": \"completed\", \"passed\": false, \"setup_seconds\": 18.811641443520784, \"plan_success\": false, \"success\": false, \"raw_plan_success\": true, \"rejection_reason\": \"expert_grasp_planning_failed\", \"rejection_detail\": \"Official left_plan_multi_path returned Failure for all 10 grasp candidates\", \"execution_seconds\": 1.7093684412539005, \"total_seconds\": 20.529421474784613}, \"status\": \"expert_rejected\", \"error\": \"Traceback (most recent call last):\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\\\", line 266, in main\\n    parameters = screen_scene(env, config, episode, seed, folder, row,\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\\\", line 187, in screen_scene\\n    raise ExpertRejected('Expert did not pass this planned scene')\\neval_expert.ExpertRejected: Expert did not pass this planned scene\\n\", \"seconds\": 20.538155272603035}",
+        "{\"time\": \"2026-10-09T11:04:35.212646+00:00\", \"event\": \"isolated_episode_completed\", \"count\": 283, \"episode\": {\"task\": \"handover_block\", \"setting\": \"demo_clean\", \"seed\": 100033, \"success\": false, \"expert_attempts\": 1, \"sampling_seed\": null, \"sampling_seed_at_process_start\": 42, \"inference_profile\": \"official_defaults_v1\", \"execution_segment\": \"expert-grasp-plan-20261009\", \"video_requested\": true, \"requested_video_fps\": 10, \"simulator_openblas_threads\": \"1\", \"expert\": {\"seed\": 100033, \"phase\": \"completed\", \"passed\": false, \"setup_seconds\": 18.811641443520784, \"plan_success\": false, \"success\": false, \"raw_plan_success\": true, \"rejection_reason\": \"expert_grasp_planning_failed\", \"rejection_detail\": \"Official left_plan_multi_path returned Failure for all 10 grasp candidates\", \"execution_seconds\": 1.7093684412539005, \"total_seconds\": 20.529421474784613}, \"status\": \"expert_rejected\", \"error\": \"Traceback (most recent call last):\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\\\", line 266, in main\\n    parameters = screen_scene(env, config, episode, seed, folder, row,\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\\\", line 187, in screen_scene\\n    raise ExpertRejected('Expert did not pass this planned scene')\\neval_expert.ExpertRejected: Expert did not pass this planned scene\\n\", \"seconds\": 20.538155272603035}, \"episode_timeout\": 900, \"stall_timeout\": 240}",
+        "missing pytorch3d",
+        "{\"event\": \"setup_started\", \"task\": \"handover_block\", \"setting\": \"demo_clean\", \"seed\": 100034}",
+        "Warp DeprecationWarning: The symbol `warp.torch.device_from_torch` will soon be removed from the public API. Use `warp.device_from_torch` instead.",
+        "{\"task\": \"handover_block\", \"setting\": \"demo_clean\", \"seed\": 100034, \"success\": false, \"expert_attempts\": 1, \"sampling_seed\": null, \"sampling_seed_at_process_start\": 42, \"inference_profile\": \"official_defaults_v1\", \"execution_segment\": \"expert-grasp-plan-20261009\", \"video_requested\": true, \"requested_video_fps\": 10, \"simulator_openblas_threads\": \"1\", \"expert\": {\"seed\": 100034, \"phase\": \"completed\", \"passed\": false, \"setup_seconds\": 19.216965414583683, \"plan_success\": false, \"success\": false, \"raw_plan_success\": true, \"rejection_reason\": \"expert_grasp_planning_failed\", \"rejection_detail\": \"Official left_plan_multi_path returned Failure for all 10 grasp candidates\", \"execution_seconds\": 0.32323748618364334, \"total_seconds\": 19.54999402910471}, \"status\": \"expert_rejected\", \"error\": \"Traceback (most recent call last):\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\\\", line 266, in main\\n    parameters = screen_scene(env, config, episode, seed, folder, row,\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\\\", line 187, in screen_scene\\n    raise ExpertRejected('Expert did not pass this planned scene')\\neval_expert.ExpertRejected: Expert did not pass this planned scene\\n\", \"seconds\": 19.5585297383368}",
+        "{\"time\": \"2026-10-09T11:05:05.264464+00:00\", \"event\": \"isolated_episode_completed\", \"count\": 284, \"episode\": {\"task\": \"handover_block\", \"setting\": \"demo_clean\", \"seed\": 100034, \"success\": false, \"expert_attempts\": 1, \"sampling_seed\": null, \"sampling_seed_at_process_start\": 42, \"inference_profile\": \"official_defaults_v1\", \"execution_segment\": \"expert-grasp-plan-20261009\", \"video_requested\": true, \"requested_video_fps\": 10, \"simulator_openblas_threads\": \"1\", \"expert\": {\"seed\": 100034, \"phase\": \"completed\", \"passed\": false, \"setup_seconds\": 19.216965414583683, \"plan_success\": false, \"success\": false, \"raw_plan_success\": true, \"rejection_reason\": \"expert_grasp_planning_failed\", \"rejection_detail\": \"Official left_plan_multi_path returned Failure for all 10 grasp candidates\", \"execution_seconds\": 0.32323748618364334, \"total_seconds\": 19.54999402910471}, \"status\": \"expert_rejected\", \"error\": \"Traceback (most recent call last):\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\\\", line 266, in main\\n    parameters = screen_scene(env, config, episode, seed, folder, row,\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\\\", line 187, in screen_scene\\n    raise ExpertRejected('Expert did not pass this planned scene')\\neval_expert.ExpertRejected: Expert did not pass this planned scene\\n\", \"seconds\": 19.5585297383368}, \"episode_timeout\": 900, \"stall_timeout\": 240}",
+        "{\"time\": \"2026-10-09T11:05:05.278346+00:00\", \"event\": \"infrastructure_interruption\", \"error\": \"RuntimeError('handover_block/demo_clean: 20 consecutive nonvalid candidates; diagnose before continuing')\", \"last_progress\": {\"event\": \"episode_recorded\", \"time\": \"2026-10-09T11:05:03.056934+00:00\", \"task\": \"handover_block\", \"setting\": \"demo_clean\", \"seed\": 100034, \"status\": \"expert_rejected\"}, \"note\": \"Stopped without selecting another seed or changing completed outcomes\"}"
+      ]
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/0/evaluation/execution-events.jsonl",
+      "bytes": 35694,
+      "sha256": "266d01154e7a05c206ef56d9de7d1566ee6e1d868eb20904a4e44d3b1046985d",
+      "shard": 0,
+      "local_path": "history-sources/0/execution-events.jsonl",
+      "unchanged_since_incident_archive": true,
+      "last_events": [
+        {
+          "time": "2026-10-09T11:05:05.264464+00:00",
+          "event": "isolated_episode_completed",
+          "count": 284,
+          "episode": {
+            "task": "handover_block",
+            "setting": "demo_clean",
+            "seed": 100034,
+            "success": false,
+            "expert_attempts": 1,
+            "sampling_seed": null,
+            "sampling_seed_at_process_start": 42,
+            "inference_profile": "official_defaults_v1",
+            "execution_segment": "expert-grasp-plan-20261009",
+            "video_requested": true,
+            "requested_video_fps": 10,
+            "simulator_openblas_threads": "1",
+            "expert": {
+              "seed": 100034,
+              "phase": "completed",
+              "passed": false,
+              "setup_seconds": 19.216965414583683,
+              "plan_success": false,
+              "success": false,
+              "raw_plan_success": true,
+              "rejection_reason": "expert_grasp_planning_failed",
+              "rejection_detail": "Official left_plan_multi_path returned Failure for all 10 grasp candidates",
+              "execution_seconds": 0.32323748618364334,
+              "total_seconds": 19.54999402910471
+            },
+            "status": "expert_rejected",
+            "error": "Traceback (most recent call last):\n  File \"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\", line 266, in main\n    parameters = screen_scene(env, config, episode, seed, folder, row,\n  File \"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\", line 187, in screen_scene\n    raise ExpertRejected('Expert did not pass this planned scene')\neval_expert.ExpertRejected: Expert did not pass this planned scene\n",
+            "seconds": 19.5585297383368
+          },
+          "episode_timeout": 900,
+          "stall_timeout": 240
+        },
+        {
+          "time": "2026-10-09T11:05:05.278346+00:00",
+          "event": "infrastructure_interruption",
+          "error": "RuntimeError('handover_block/demo_clean: 20 consecutive nonvalid candidates; diagnose before continuing')",
+          "last_progress": {
+            "event": "episode_recorded",
+            "time": "2026-10-09T11:05:03.056934+00:00",
+            "task": "handover_block",
+            "setting": "demo_clean",
+            "seed": 100034,
+            "status": "expert_rejected"
+          },
+          "note": "Stopped without selecting another seed or changing completed outcomes"
+        }
+      ]
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/0/evaluation/worker-progress.json",
+      "bytes": 169,
+      "sha256": "4691dc6afe483fcc4cff16cb9533aebbb2c4d0772beec7c35356a49decd14f5c",
+      "shard": 0,
+      "local_path": "history-sources/0/worker-progress.json",
+      "unchanged_since_incident_archive": true,
+      "progress": {
+        "event": "episode_recorded",
+        "time": "2026-10-09T11:05:03.056934+00:00",
+        "task": "handover_block",
+        "setting": "demo_clean",
+        "seed": 100034,
+        "status": "expert_rejected"
+      }
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/1/evaluation.log",
+      "bytes": 107085,
+      "sha256": "04ae681e527410ee7d8cfe097a0ec714489b5d8561d062a50dd661a86d65ba58",
+      "shard": 1,
+      "local_path": "history-sources/1/evaluation.log",
+      "unchanged_since_incident_archive": true,
+      "tail": [
+        "Warp DeprecationWarning: The symbol `warp.torch.device_from_torch` will soon be removed from the public API. Use `warp.device_from_torch` instead.",
+        "{\"task\": \"move_pillbottle_pad\", \"setting\": \"demo_clean\", \"seed\": 100028, \"success\": false, \"expert_attempts\": 1, \"sampling_seed\": null, \"sampling_seed_at_process_start\": 42, \"inference_profile\": \"official_defaults_v1\", \"execution_segment\": \"expert-grasp-plan-20261009\", \"video_requested\": true, \"requested_video_fps\": 10, \"simulator_openblas_threads\": \"1\", \"expert\": {\"seed\": 100028, \"phase\": \"completed\", \"passed\": false, \"setup_seconds\": 18.756869174540043, \"plan_success\": false, \"success\": false, \"raw_plan_success\": true, \"rejection_reason\": \"expert_grasp_planning_failed\", \"rejection_detail\": \"Official left_plan_multi_path returned Failure for all 10 grasp candidates\", \"execution_seconds\": 1.779342871159315, \"total_seconds\": 20.544693030416965}, \"status\": \"expert_rejected\", \"error\": \"Traceback (most recent call last):\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\\\", line 266, in main\\n    parameters = screen_scene(env, config, episode, seed, folder, row,\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\\\", line 187, in screen_scene\\n    raise ExpertRejected('Expert did not pass this planned scene')\\neval_expert.ExpertRejected: Expert did not pass this planned scene\\n\", \"seconds\": 20.552891578525305}",
+        "{\"time\": \"2026-10-09T11:04:15.124343+00:00\", \"event\": \"isolated_episode_completed\", \"count\": 286, \"episode\": {\"task\": \"move_pillbottle_pad\", \"setting\": \"demo_clean\", \"seed\": 100028, \"success\": false, \"expert_attempts\": 1, \"sampling_seed\": null, \"sampling_seed_at_process_start\": 42, \"inference_profile\": \"official_defaults_v1\", \"execution_segment\": \"expert-grasp-plan-20261009\", \"video_requested\": true, \"requested_video_fps\": 10, \"simulator_openblas_threads\": \"1\", \"expert\": {\"seed\": 100028, \"phase\": \"completed\", \"passed\": false, \"setup_seconds\": 18.756869174540043, \"plan_success\": false, \"success\": false, \"raw_plan_success\": true, \"rejection_reason\": \"expert_grasp_planning_failed\", \"rejection_detail\": \"Official left_plan_multi_path returned Failure for all 10 grasp candidates\", \"execution_seconds\": 1.779342871159315, \"total_seconds\": 20.544693030416965}, \"status\": \"expert_rejected\", \"error\": \"Traceback (most recent call last):\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\\\", line 266, in main\\n    parameters = screen_scene(env, config, episode, seed, folder, row,\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\\\", line 187, in screen_scene\\n    raise ExpertRejected('Expert did not pass this planned scene')\\neval_expert.ExpertRejected: Expert did not pass this planned scene\\n\", \"seconds\": 20.552891578525305}, \"episode_timeout\": 900, \"stall_timeout\": 240}",
+        "missing pytorch3d",
+        "{\"event\": \"setup_started\", \"task\": \"move_pillbottle_pad\", \"setting\": \"demo_clean\", \"seed\": 100029}",
+        "Warp DeprecationWarning: The symbol `warp.torch.device_from_torch` will soon be removed from the public API. Use `warp.device_from_torch` instead.",
+        "{\"task\": \"move_pillbottle_pad\", \"setting\": \"demo_clean\", \"seed\": 100029, \"success\": false, \"expert_attempts\": 1, \"sampling_seed\": null, \"sampling_seed_at_process_start\": 42, \"inference_profile\": \"official_defaults_v1\", \"execution_segment\": \"expert-grasp-plan-20261009\", \"video_requested\": true, \"requested_video_fps\": 10, \"simulator_openblas_threads\": \"1\", \"expert\": {\"seed\": 100029, \"phase\": \"completed\", \"passed\": false, \"setup_seconds\": 17.152851954102516, \"plan_success\": false, \"success\": false, \"raw_plan_success\": true, \"rejection_reason\": \"expert_grasp_planning_failed\", \"rejection_detail\": \"Official left_plan_multi_path returned Failure for all 10 grasp candidates\", \"execution_seconds\": 1.0514795817434788, \"total_seconds\": 18.214905701577663}, \"status\": \"expert_rejected\", \"error\": \"Traceback (most recent call last):\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\\\", line 266, in main\\n    parameters = screen_scene(env, config, episode, seed, folder, row,\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\\\", line 187, in screen_scene\\n    raise ExpertRejected('Expert did not pass this planned scene')\\neval_expert.ExpertRejected: Expert did not pass this planned scene\\n\", \"seconds\": 18.223481334745884}",
+        "{\"time\": \"2026-10-09T11:04:47.183828+00:00\", \"event\": \"isolated_episode_completed\", \"count\": 287, \"episode\": {\"task\": \"move_pillbottle_pad\", \"setting\": \"demo_clean\", \"seed\": 100029, \"success\": false, \"expert_attempts\": 1, \"sampling_seed\": null, \"sampling_seed_at_process_start\": 42, \"inference_profile\": \"official_defaults_v1\", \"execution_segment\": \"expert-grasp-plan-20261009\", \"video_requested\": true, \"requested_video_fps\": 10, \"simulator_openblas_threads\": \"1\", \"expert\": {\"seed\": 100029, \"phase\": \"completed\", \"passed\": false, \"setup_seconds\": 17.152851954102516, \"plan_success\": false, \"success\": false, \"raw_plan_success\": true, \"rejection_reason\": \"expert_grasp_planning_failed\", \"rejection_detail\": \"Official left_plan_multi_path returned Failure for all 10 grasp candidates\", \"execution_seconds\": 1.0514795817434788, \"total_seconds\": 18.214905701577663}, \"status\": \"expert_rejected\", \"error\": \"Traceback (most recent call last):\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\\\", line 266, in main\\n    parameters = screen_scene(env, config, episode, seed, folder, row,\\n  File \\\"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\\\", line 187, in screen_scene\\n    raise ExpertRejected('Expert did not pass this planned scene')\\neval_expert.ExpertRejected: Expert did not pass this planned scene\\n\", \"seconds\": 18.223481334745884}, \"episode_timeout\": 900, \"stall_timeout\": 240}",
+        "missing pytorch3d",
+        "{\"event\": \"setup_started\", \"task\": \"move_pillbottle_pad\", \"setting\": \"demo_clean\", \"seed\": 100030}",
+        "Warp DeprecationWarning: The symbol `warp.torch.device_from_torch` will soon be removed from the public API. Use `warp.device_from_torch` instead.",
+        "{\"time\": \"2026-10-09T11:05:08.052589+00:00\", \"event\": \"infrastructure_interruption\", \"error\": \"SystemExit(143)\", \"last_progress\": {\"event\": \"expert_setup_started\", \"time\": \"2026-10-09T11:04:57.794506+00:00\", \"task\": \"move_pillbottle_pad\", \"setting\": \"demo_clean\", \"seed\": 100030}, \"note\": \"Stopped without selecting another seed or changing completed outcomes\"}"
+      ]
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/1/evaluation/execution-events.jsonl",
+      "bytes": 34853,
+      "sha256": "55168e752ca08423ad7302d9b2981143cbe692372a8d55f04820679acf99b097",
+      "shard": 1,
+      "local_path": "history-sources/1/execution-events.jsonl",
+      "unchanged_since_incident_archive": true,
+      "last_events": [
+        {
+          "time": "2026-10-09T11:04:47.183828+00:00",
+          "event": "isolated_episode_completed",
+          "count": 287,
+          "episode": {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_clean",
+            "seed": 100029,
+            "success": false,
+            "expert_attempts": 1,
+            "sampling_seed": null,
+            "sampling_seed_at_process_start": 42,
+            "inference_profile": "official_defaults_v1",
+            "execution_segment": "expert-grasp-plan-20261009",
+            "video_requested": true,
+            "requested_video_fps": 10,
+            "simulator_openblas_threads": "1",
+            "expert": {
+              "seed": 100029,
+              "phase": "completed",
+              "passed": false,
+              "setup_seconds": 17.152851954102516,
+              "plan_success": false,
+              "success": false,
+              "raw_plan_success": true,
+              "rejection_reason": "expert_grasp_planning_failed",
+              "rejection_detail": "Official left_plan_multi_path returned Failure for all 10 grasp candidates",
+              "execution_seconds": 1.0514795817434788,
+              "total_seconds": 18.214905701577663
+            },
+            "status": "expert_rejected",
+            "error": "Traceback (most recent call last):\n  File \"/root/shared-nvme/lingbot-eval-team/scripts/eval_dev_suite.py\", line 266, in main\n    parameters = screen_scene(env, config, episode, seed, folder, row,\n  File \"/root/shared-nvme/lingbot-eval-team/scripts/eval_expert.py\", line 187, in screen_scene\n    raise ExpertRejected('Expert did not pass this planned scene')\neval_expert.ExpertRejected: Expert did not pass this planned scene\n",
+            "seconds": 18.223481334745884
+          },
+          "episode_timeout": 900,
+          "stall_timeout": 240
+        },
+        {
+          "time": "2026-10-09T11:05:08.052589+00:00",
+          "event": "infrastructure_interruption",
+          "error": "SystemExit(143)",
+          "last_progress": {
+            "event": "expert_setup_started",
+            "time": "2026-10-09T11:04:57.794506+00:00",
+            "task": "move_pillbottle_pad",
+            "setting": "demo_clean",
+            "seed": 100030
+          },
+          "note": "Stopped without selecting another seed or changing completed outcomes"
+        }
+      ]
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/1/evaluation/worker-progress.json",
+      "bytes": 149,
+      "sha256": "2cbc437a096c6c9eb9e81cdad384b39b735ca4a595139ae7509746223c8354fa",
+      "shard": 1,
+      "local_path": "history-sources/1/worker-progress.json",
+      "unchanged_since_incident_archive": true,
+      "progress": {
+        "event": "expert_setup_started",
+        "time": "2026-10-09T11:04:57.794506+00:00",
+        "task": "move_pillbottle_pad",
+        "setting": "demo_clean",
+        "seed": 100030
+      }
+    }
+  ]
+}

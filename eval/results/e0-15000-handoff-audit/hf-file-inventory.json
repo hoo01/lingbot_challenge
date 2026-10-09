@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-09T08:45:26.481434+00:00",
+  "repo": "HumaLog/lingbot-vla-checkpoints",
+  "weights_downloaded": false,
+  "operation": "read_repository_file_list",
+  "status": "read",
+  "revision": "49d5b1022845a812470a51f6a442b732f9ac7aba",
+  "file_count": 29,
+  "e0_files": [
+    "e0_jiali_20261008_004327/assets/clean_manifest.json",
+    "e0_jiali_20261008_004327/assets/norm_stats.json",
+    "e0_jiali_20261008_004327/assets/norm_stats.provenance.json",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/added_tokens.json",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/chat_template.jinja",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/config.json",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/merges.txt",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/preprocessor_config.json",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/special_tokens_map.json",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/tokenizer.json",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/tokenizer_config.json",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/video_preprocessor_config.json",
+    "e0_jiali_20261008_004327/assets/qwen3_vl/vocab.json",
+    "e0_jiali_20261008_004327/backup_sha256.txt",
+    "e0_jiali_20261008_004327/backup_sha256_step_10000.txt",
+    "e0_jiali_20261008_004327/backup_sha256_step_5000.txt",
+    "e0_jiali_20261008_004327/checkpoints/global_step_10000/training.pt",
+    "e0_jiali_20261008_004327/checkpoints/global_step_12500/training.pt",
+    "e0_jiali_20261008_004327/checkpoints/global_step_15000/training.pt",
+    "e0_jiali_20261008_004327/checkpoints/global_step_5000/training.pt",
+    "e0_jiali_20261008_004327/configs/robot_configs/robotwin.yaml",
+    "e0_jiali_20261008_004327/episode_splits.json",
+    "e0_jiali_20261008_004327/lingbotvla_cli.yaml",
+    "e0_jiali_20261008_004327/metrics.jsonl",
+    "e0_jiali_20261008_004327/run_metadata.json",
+    "e0_jiali_20261008_004327/swanlab_run_id.txt",
+    "e0_jiali_20261008_004327/training_config.yaml"
+  ],
+  "fp32_paths_anywhere": [],
+  "e0_step_15000": [
+    "e0_jiali_20261008_004327/checkpoints/global_step_15000/training.pt"
+  ]
+}

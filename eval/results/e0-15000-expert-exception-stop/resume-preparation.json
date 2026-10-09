@@ -1,0 +1,15 @@
+{
+  "prepared": true,
+  "job_id": "843758599804",
+  "segment": "expert-outer-exception-20261009",
+  "sha256": "10d0ce723b93dc8bdf63db1d81cfcaaa9a870811c98659aad271f54fe75aadcc",
+  "manifest": "/root/shared-nvme/lingbot-eval-team/runs/eval-843758599804/resume-requests/expert-outer-exception-20261009/manifest.json",
+  "preserved_candidates": 591,
+  "preserved_valid": 396,
+  "successes": 46,
+  "remaining_valid": 104,
+  "historical_interruptions": 16,
+  "historical_runtime_errors": 6,
+  "actual_attempts": 604,
+  "prior_rng_restored": false
+}

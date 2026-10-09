@@ -1,0 +1,179 @@
+{
+  "checked_at": "2026-10-09T09:30:23.643977+00:00",
+  "job_id": "843758599804",
+  "status": "running",
+  "counts": {
+    "planned": 500,
+    "attempted": 507,
+    "valid": 369,
+    "successes": 45,
+    "setup_errors": 60,
+    "expert_rejections": 78,
+    "execution_errors": 0,
+    "record_error": null,
+    "historical_interruptions": 10,
+    "historical_runtime_errors": 4,
+    "actual_attempts": 516
+  },
+  "disk_free_bytes": 209309401088,
+  "prior_video_receipts": [
+    "heartbeat-20261009-0210.json",
+    "heartbeat-20261009-0310.json",
+    "heartbeat-20261009-0412.json",
+    "heartbeat-20261009-062102.json",
+    "heartbeat-20261009-073229.json",
+    "heartbeat-20261009-082037.json",
+    "heartbeat-20261009-093215.json",
+    "heartbeat-20261009-102042.json",
+    "heartbeat-20261009-112110.json",
+    "heartbeat-20261009-123609.json",
+    "heartbeat-20261009-132224.json",
+    "heartbeat-20261009-133742.json",
+    "heartbeat-20261009-142316.json",
+    "heartbeat-20261009-152403.json",
+    "heartbeat-20261009-163353.json",
+    "heartbeat-20261009-164829.json",
+    "heartbeat-checker-completed-shard-20261009.json",
+    "incidents/20261009-043940/resume-launch-verification.json",
+    "incidents/20261009-062217/resume-launch-verification.json",
+    "incidents/20261009-091101/resume-launch-verification.json",
+    "incidents/20261009-121010/resume-launch-verification.json",
+    "user-resume-20261009/resume-launch-verification.json",
+    "valid500-extension/resume-launch-verification.json"
+  ],
+  "previously_verified_policy_episodes": 369,
+  "new_completed_policy_video_checks": [],
+  "initial_candidate_plan_size": 500,
+  "completion_basis": "valid",
+  "unique_recorded_candidates": 507,
+  "prefix_checks": [
+    {
+      "shard": 0,
+      "original_records_unchanged": true,
+      "seeded_prefix_unchanged": true
+    },
+    {
+      "shard": 1,
+      "original_records_unchanged": true,
+      "seeded_prefix_unchanged": true
+    }
+  ],
+  "model_processes": [
+    {
+      "shard": 0,
+      "pid": 147340,
+      "alive": true,
+      "process_start_ticks": "1858101821",
+      "same_recovery_process": true,
+      "shard_status": "running",
+      "candidate_records": 254,
+      "planned_candidates": 250,
+      "completed_plan_matches": false
+    },
+    {
+      "shard": 1,
+      "pid": 147341,
+      "alive": true,
+      "process_start_ticks": "1858101950",
+      "same_recovery_process": true,
+      "shard_status": "running",
+      "candidate_records": 253,
+      "planned_candidates": 250,
+      "completed_plan_matches": false
+    }
+  ],
+  "progresses": [
+    {
+      "event": "chunk_completed",
+      "time": "2026-10-09T09:30:10.882036+00:00",
+      "task": "blocks_ranking_rgb",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "chunks": 4,
+      "actions": 200,
+      "shard": 0
+    },
+    {
+      "event": "chunk_completed",
+      "time": "2026-10-09T09:30:15.622637+00:00",
+      "task": "handover_mic",
+      "setting": "demo_clean",
+      "seed": 100015,
+      "chunks": 4,
+      "actions": 200,
+      "shard": 1
+    }
+  ],
+  "execution_segment": "user-accepted-bf16-20261009",
+  "ancestor_checks": [
+    {
+      "source": "segments/expert-plan-failure-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-plan-failure-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-contact-id-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-contact-id-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-no-grasp-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/expert-no-grasp-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "segments/reuse-task-env-20261009/shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "segments/reuse-task-env-20261009/shards/1",
+      "unchanged": true
+    },
+    {
+      "source": "shards/0",
+      "unchanged": true
+    },
+    {
+      "source": "shards/1",
+      "unchanged": true
+    }
+  ],
+  "recovered_episodes": [
+    {
+      "task": "open_laptop",
+      "setting": "demo_clean",
+      "seed": 100010,
+      "status": "policy_completed",
+      "success": false,
+      "actions": 700,
+      "chunks": 14,
+      "recovery_scene_verified": true,
+      "execution_segment": "reuse-task-env-20261009",
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/0/evaluation"
+    },
+    {
+      "task": "open_microwave",
+      "setting": "demo_clean",
+      "seed": 100011,
+      "status": "policy_completed",
+      "success": false,
+      "actions": 1500,
+      "chunks": 30,
+      "recovery_scene_verified": true,
+      "execution_segment": "reuse-task-env-20261009",
+      "artifact_root": "segments/user-accepted-bf16-20261009/shards/1/evaluation"
+    }
+  ],
+  "issues": [],
+  "passed": true,
+  "scope": "Incremental completed-policy metadata, terminal PNG pixels, dual-view clocks and action records; no model or simulation executed. Full video decoding reused from the prior recording acceptance."
+}

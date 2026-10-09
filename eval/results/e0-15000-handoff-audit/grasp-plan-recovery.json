@@ -1,0 +1,15 @@
+{
+  "prepared": true,
+  "job_id": "843758599804",
+  "segment": "expert-grasp-plan-20261009",
+  "manifest": "/root/shared-nvme/lingbot-eval-team/runs/eval-843758599804/resume-requests/expert-grasp-plan-20261009/manifest.json",
+  "sha256": "2775339eaa592473763bcfbca47ad6a2061283c3909627f2488cbf75a363a294",
+  "preserved_candidate_results": 529,
+  "valid": 380,
+  "successes": 46,
+  "historical_interruptions": 12,
+  "historical_runtime_errors": 5,
+  "actual_attempts": 540,
+  "model_variant": "BF16 saved export, FP32 execution; not trainer FP32-preserving export",
+  "remaining_valid": 120
+}

@@ -1,0 +1,134 @@
+{
+  "checked_at": "2026-10-09T11:18:09.553793+00:00",
+  "passed": true,
+  "previously_verified_policy_episodes": 380,
+  "new_completed_policy_video_checks": [
+    {
+      "episode": "dump_bin_bigbin/demo_randomized/100019",
+      "shard": 0,
+      "artifact_root": "segments/expert-grasp-plan-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 3503,
+          "bytes": 10191769,
+          "duration_seconds": 350.3,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 3503,
+          "bytes": 10989089,
+          "duration_seconds": 350.3,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "dump_bin_bigbin/demo_randomized/100020",
+      "shard": 0,
+      "artifact_root": "segments/expert-grasp-plan-20261009/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 3723,
+          "bytes": 2898154,
+          "duration_seconds": 372.3,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 3723,
+          "bytes": 3160244,
+          "duration_seconds": 372.3,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "lift_pot/demo_randomized/100021",
+      "shard": 1,
+      "artifact_root": "segments/expert-grasp-plan-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2477,
+          "bytes": 1953990,
+          "duration_seconds": 247.7,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2477,
+          "bytes": 1872822,
+          "duration_seconds": 247.7,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "lift_pot/demo_randomized/100022",
+      "shard": 1,
+      "artifact_root": "segments/expert-grasp-plan-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2398,
+          "bytes": 2261903,
+          "duration_seconds": 239.8,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2398,
+          "bytes": 1563376,
+          "duration_seconds": 239.8,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "lift_pot/demo_randomized/100023",
+      "shard": 1,
+      "artifact_root": "segments/expert-grasp-plan-20261009/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 2485,
+          "bytes": 1910635,
+          "duration_seconds": 248.5,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 2485,
+          "bytes": 1622680,
+          "duration_seconds": 248.5,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  ],
+  "disk_free_bytes": 209083957248,
+  "scope": "Completed policy episodes only; current failure and interrupted sibling remain separate."
+}

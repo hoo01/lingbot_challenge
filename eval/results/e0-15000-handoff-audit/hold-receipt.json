@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-09T08:41:00.661670+00:00",
+  "job_id": "843758599804",
+  "status": "cancelled",
+  "reason": "Confirmed evaluated BF16 export differs from the trainable-preserving FP32 handoff; stopped by audit, not a model/runtime failure.",
+  "scores_preserved": true,
+  "counts": {
+    "attempted": 507,
+    "valid": 369,
+    "successes": 45,
+    "setup_errors": 60,
+    "expert_rejections": 78,
+    "execution_errors": 0,
+    "historical_interruptions": 8,
+    "historical_runtime_errors": 4,
+    "actual_attempts": 514
+  },
+  "audit_hold_candidates": [
+    {
+      "shard": 0,
+      "event": "expert_setup_started",
+      "time": "2026-10-09T08:40:53.178668+00:00",
+      "task": "blocks_ranking_rgb",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "kind": "audit_hold_model_export_mismatch",
+      "counts_as_attempt": true
+    },
+    {
+      "shard": 1,
+      "event": "chunk_completed",
+      "time": "2026-10-09T08:40:52.255580+00:00",
+      "task": "handover_mic",
+      "setting": "demo_clean",
+      "seed": 100015,
+      "chunks": 9,
+      "actions": 450,
+      "kind": "audit_hold_model_export_mismatch",
+      "counts_as_attempt": true
+    }
+  ],
+  "extra_attempts_due_to_this_audit_hold": 2,
+  "historical_failure_counts_unchanged": true,
+  "count_note": "API historical counts include earlier manifest incidents only; these audit-stop attempts are separate in this receipt.",
+  "all_shards_terminal": true,
+  "archived_file_count": 30
+}

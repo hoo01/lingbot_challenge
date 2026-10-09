@@ -1,0 +1,551 @@
+{
+  "version": 1,
+  "job_id": "843758599804",
+  "segment": "expert-outer-exception-20261009",
+  "purpose": "expert_exception_transition",
+  "created_at": "2026-10-09T13:39:17.330907+00:00",
+  "source_config": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/source-config.json",
+  "parent_resume": {
+    "manifest": "resume-requests/expert-quota5-20261009/manifest.json",
+    "sha256": "9df3c3fcc321b8f3356c27e1ef520a4b241df6ae15524247bea49456354451da"
+  },
+  "config_sha256": "63e4d0370368318b780053acc0d61e005cd7a764aa981aed96bd744aef69cc87",
+  "diagnosis": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/transition-verification.json",
+  "historical_interruptions": [
+    {
+      "shard": 0,
+      "task": "open_laptop",
+      "setting": "demo_clean",
+      "seed": 100010,
+      "kind": "policy_runtime_error",
+      "completed_chunks": 0,
+      "predictions": 1
+    },
+    {
+      "shard": 1,
+      "task": "open_microwave",
+      "setting": "demo_clean",
+      "seed": 100011,
+      "kind": "sibling_cancelled",
+      "completed_chunks": 26,
+      "completed_actions": 1300,
+      "predictions": 27
+    },
+    {
+      "shard": 0,
+      "task": "place_a2b_left",
+      "setting": "demo_clean",
+      "seed": 100011,
+      "kind": "expert_runtime_error",
+      "candidate_started": true,
+      "counts_as_attempt": true,
+      "completed_chunks": 0,
+      "predictions": 0,
+      "execution_segment": "reuse-task-env-20261009",
+      "error": "AssertionError: target_pose cannot be None for move action.",
+      "source": "segments/reuse-task-env-20261009/shards/0/evaluation/place_a2b_left/demo_clean/100011/episode.json"
+    },
+    {
+      "shard": 1,
+      "task": "pick_dual_bottles",
+      "setting": "demo_randomized",
+      "seed": 100011,
+      "kind": "sibling_cancelled_before_candidate",
+      "candidate_started": false,
+      "counts_as_attempt": false,
+      "completed_chunks": 0,
+      "predictions": 0,
+      "execution_segment": "reuse-task-env-20261009",
+      "source": "segments/reuse-task-env-20261009/shards/1/evaluation/execution-events.jsonl"
+    },
+    {
+      "shard": 1,
+      "task": "place_container_plate",
+      "setting": "demo_clean",
+      "seed": 100013,
+      "kind": "expert_runtime_error",
+      "candidate_started": true,
+      "counts_as_attempt": true,
+      "completed_chunks": 0,
+      "predictions": 0,
+      "execution_segment": "expert-no-grasp-20261009",
+      "error": "AssertionError: target_pose cannot be None for move action.",
+      "source": "segments/expert-no-grasp-20261009/shards/1/evaluation/place_container_plate/demo_clean/100013/episode.json"
+    },
+    {
+      "shard": 0,
+      "task": "place_cans_plasticbox",
+      "setting": "demo_randomized",
+      "seed": 100011,
+      "kind": "sibling_cancelled",
+      "candidate_started": true,
+      "counts_as_attempt": true,
+      "completed_chunks": 3,
+      "completed_actions": 150,
+      "predictions": 4,
+      "execution_segment": "expert-no-grasp-20261009",
+      "source": "segments/expert-no-grasp-20261009/shards/0/evaluation/execution-events.jsonl"
+    },
+    {
+      "shard": 0,
+      "task": "put_bottles_dustbin",
+      "setting": "demo_clean",
+      "seed": 100011,
+      "kind": "expert_runtime_error",
+      "candidate_started": true,
+      "counts_as_attempt": true,
+      "completed_chunks": 0,
+      "predictions": 0,
+      "execution_segment": "expert-contact-id-20261009",
+      "error": "IndexError: list index out of range",
+      "source": "segments/expert-contact-id-20261009/shards/0/evaluation/put_bottles_dustbin/demo_clean/100011/episode.json"
+    },
+    {
+      "shard": 1,
+      "task": "stack_blocks_two",
+      "setting": "demo_randomized",
+      "seed": 100011,
+      "kind": "sibling_cancelled",
+      "candidate_started": true,
+      "counts_as_attempt": true,
+      "completed_chunks": 7,
+      "completed_actions": 350,
+      "predictions": 8,
+      "execution_segment": "expert-contact-id-20261009",
+      "source": "segments/expert-contact-id-20261009/shards/1/evaluation/execution-events.jsonl"
+    },
+    {
+      "shard": 0,
+      "event": "expert_setup_started",
+      "time": "2026-10-09T08:40:53.178668+00:00",
+      "task": "blocks_ranking_rgb",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "kind": "audit_hold_model_export_mismatch",
+      "counts_as_attempt": true,
+      "execution_segment": "valid500-20261009",
+      "candidate_started": true,
+      "source": "artifacts/e0-hf-eval-20261009/handoff-review/hold-receipt.json"
+    },
+    {
+      "shard": 1,
+      "event": "chunk_completed",
+      "time": "2026-10-09T08:40:52.255580+00:00",
+      "task": "handover_mic",
+      "setting": "demo_clean",
+      "seed": 100015,
+      "chunks": 9,
+      "actions": 450,
+      "kind": "audit_hold_model_export_mismatch",
+      "counts_as_attempt": true,
+      "execution_segment": "valid500-20261009",
+      "candidate_started": true,
+      "source": "artifacts/e0-hf-eval-20261009/handoff-review/hold-receipt.json",
+      "completed_chunks": 9,
+      "completed_actions": 450,
+      "predictions": 10
+    },
+    {
+      "shard": 1,
+      "task": "lift_pot",
+      "setting": "demo_randomized",
+      "seed": 100019,
+      "kind": "expert_runtime_error",
+      "candidate_started": true,
+      "counts_as_attempt": true,
+      "completed_chunks": 0,
+      "predictions": 0,
+      "execution_segment": "user-accepted-bf16-20261009",
+      "error": "AssertionError: target_pose cannot be None for move action.",
+      "source": "segments/user-accepted-bf16-20261009/shards/1/evaluation/lift_pot/demo_randomized/100019/episode.json"
+    },
+    {
+      "shard": 0,
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100019,
+      "kind": "sibling_cancelled",
+      "candidate_started": true,
+      "counts_as_attempt": true,
+      "completed_chunks": 10,
+      "completed_actions": 500,
+      "predictions": 11,
+      "execution_segment": "user-accepted-bf16-20261009",
+      "source": "segments/user-accepted-bf16-20261009/shards/0/evaluation/execution-events.jsonl"
+    },
+    {
+      "shard": 0,
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": null,
+      "last_completed_seed": 100034,
+      "kind": "scheduler_nonvalid_guard_stop",
+      "time": "2026-10-09T11:05:05.278346+00:00",
+      "candidate_started": false,
+      "counts_as_attempt": false,
+      "completed_actions": 0,
+      "predictions": 0,
+      "execution_segment": "expert-grasp-plan-20261009",
+      "source": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/0/evaluation/execution-events.jsonl",
+      "source_sha256": "266d01154e7a05c206ef56d9de7d1566ee6e1d868eb20904a4e44d3b1046985d",
+      "recorded_exception": "RuntimeError('handover_block/demo_clean: 20 consecutive nonvalid candidates; diagnose before continuing')"
+    },
+    {
+      "shard": 1,
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100030,
+      "last_completed_seed": null,
+      "kind": "sibling_cancelled",
+      "time": "2026-10-09T11:05:08.052589+00:00",
+      "candidate_started": true,
+      "counts_as_attempt": true,
+      "completed_actions": 0,
+      "predictions": 0,
+      "execution_segment": "expert-grasp-plan-20261009",
+      "source": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/1/evaluation/execution-events.jsonl",
+      "source_sha256": "55168e752ca08423ad7302d9b2981143cbe692372a8d55f04820679acf99b097",
+      "recorded_exception": "SystemExit(143)"
+    },
+    {
+      "shard": 0,
+      "task": "hanging_mug",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "time": "2026-10-09T13:07:39.087599+00:00",
+      "kind": "sibling_cancelled",
+      "counts_as_attempt": true,
+      "candidate_started": true,
+      "expert_launches": 1,
+      "policy_index": 1,
+      "launch_number": 5,
+      "expert_passed": false,
+      "instruction_record": {
+        "instruction": "Lift the dark mug with a curved handle, rotate it, put it down, then attach it to the medium-sized rack.",
+        "parameters": {
+          "{A}": "039_mug/base8",
+          "{B}": "040_rack/base0"
+        },
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100015
+      },
+      "error_type": "SystemExit",
+      "completed_chunks": 9,
+      "completed_actions": 450,
+      "prediction_rows": 10,
+      "last_video_frame": {
+        "frame": 2985,
+        "action_count": 493,
+        "source": "simulation_tick",
+        "rgb_sha256": "bb4629d401a73fa00da9527af4a82ca8b1e7d7c565c304e61c536af3b681e0eb",
+        "changed_from_previous": true,
+        "simulation_step": 74625,
+        "simulation_time_seconds": 298.5000141779892,
+        "video_time_seconds": 298.5
+      },
+      "source": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/execution-events.jsonl",
+      "source_sha256": "22ca2e227d4c784d2038ed8ca9c85b46b962f05f93ac44e43c399bcfd70cc2e9",
+      "expert_json_sha256": "6cb58aec4f948d29fae430019566ff76b96a24cd79b7647310f8b939bb8faf54",
+      "execution_segment": "expert-quota5-20261009"
+    },
+    {
+      "shard": 1,
+      "task": "place_a2b_right",
+      "setting": "demo_clean",
+      "seed": 100016,
+      "time": "2026-10-09T13:07:35.750552+00:00",
+      "kind": "expert_runtime_error",
+      "counts_as_attempt": false,
+      "candidate_started": true,
+      "expert_launches": 1,
+      "policy_index": 4,
+      "launch_number": 1,
+      "expert_passed": false,
+      "instruction_record": null,
+      "error_type": "AssertionError",
+      "completed_chunks": 0,
+      "completed_actions": 0,
+      "prediction_rows": 0,
+      "last_video_frame": null,
+      "source": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/execution-events.jsonl",
+      "source_sha256": "7bf4b0c300669d67164076cb3cba473465c657b92095b9b5b1f69bdbc3622dc1",
+      "expert_json_sha256": "7002abb7548aa9866c19ff239b6ccf2280f106b10525830a045c0bfb06f923e2",
+      "execution_segment": "expert-quota5-20261009",
+      "counted_in_candidate_records": true,
+      "disposition": "Original error row preserved unchanged; user authorized upstream outer exception branch. Counts once in candidate records and once in expert budget."
+    }
+  ],
+  "model_process_segment_number": 10,
+  "original_rng_restored": false,
+  "restarted_model_seed": 42,
+  "sampling_seed_per_episode": null,
+  "user_request": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/user-authorized-transition.json",
+  "reason": "Preserve all 591 raw candidate rows, including original expert error and 396 completed policy outcomes. User approved official outer expert exception handling with durable five-launch budget. Hanging resumes same seed with zero expert calls; place continues next seed with four launches remaining.",
+  "required_files": [
+    {
+      "path": "runs/eval-843758599804/resume-requests/expert-quota5-20261009/manifest.json",
+      "sha256": "9df3c3fcc321b8f3356c27e1ef520a4b241df6ae15524247bea49456354451da"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/transition-verification.json",
+      "sha256": "55ffa7dc9a876986b5bd9b19d7efccfd8de2113843c22b548ce1253e1a5ebd5b"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/source-config.json",
+      "sha256": "868e4a8fdac63092fabd4e97b3df97849de8ae6a2eaf4d0d4eda5be5f3ee72b5"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/new-config.json",
+      "sha256": "1607d1307f77cb7e19d6d87fc9d3545c14a77cc4311e6283f2ea4c158651fb93"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/user-authorized-transition.json",
+      "sha256": "fc09203f77fc85a9eae886b0ebf32811eb830f009bfddaffb74aeb64f455e317"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/history-ledger.json",
+      "sha256": "f6803b1342a7622968923ee7facb84227a36e196fcfbbd7da9e29e9b2bd2efe8"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/configuration-verification.json",
+      "sha256": "3df7ca7439b9f59000cf0b320f348938e132ee8900342cdf430e3ae7e64333c3"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/hanging-input-verification.json",
+      "sha256": "0f48118f7c6e926f219735268ea4508f2867948ff897b009a3f13f0fb2d2d685"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/outer-tests-v2.log",
+      "sha256": "6110bc811ff1187f1c2ac7dad9d718cbb018b40aa2a133cf8da190136b3e62ef"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/outer-tests-v2.xml",
+      "sha256": "22d050654671792bb3b97e67e545345cb0f92139bacc4d5b8d37c52f2f637cd3"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/platform-tests.log",
+      "sha256": "44984f0b4ee9d5eac9a83a689817b7eea657ecfe496a271f0b46442b54f0bead"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/platform-tests.xml",
+      "sha256": "2930e6dcd1fbdd54ead8c628bb89841ec8510ccc773486d1339b74fdcece86b1"
+    },
+    {
+      "path": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/deployment.json",
+      "sha256": "22a46672c5db645f5ec2ba9ef8b969a660af9d568bf0cd46b74eaeb5b36296f1"
+    },
+    {
+      "path": "scripts/eval_expert.py",
+      "sha256": "59a0a3aefcd3f507225a61bc9c105faa84fff66efc836f26650b132628b02258"
+    },
+    {
+      "path": "scripts/eval_dev_suite.py",
+      "sha256": "cca2d09fe131286c608edd1cfeeb8c6a50ea564d9ec3866a1a7b2e234f7047a3"
+    },
+    {
+      "path": "scripts/eval_isolated.py",
+      "sha256": "9bfa34ca53c00feaa48b7607e5d2df43ab87a8cd94201415f014ca4a43597962"
+    },
+    {
+      "path": "src/eval_platform/expert_outcomes.py",
+      "sha256": "de649ec13318fb19e4c1de7c15ec57ee3a9aeaebd7cad8b709448251d2f69387"
+    },
+    {
+      "path": "src/eval_platform/expert_quota.py",
+      "sha256": "a6589c02315cf8b04e71ea58c9dc10405e759eed79a97e7b7286295ea22b2888"
+    },
+    {
+      "path": "src/eval_platform/planning.py",
+      "sha256": "3ccdff9104ccfb7180b92cb58864b00db4e5803fe489971bc5e066bba2c99c63"
+    },
+    {
+      "path": "src/eval_platform/resume.py",
+      "sha256": "af8e8bbe2afb6c7f507385d8ac01cb1eaa0b90f8e751e0d2a490b060e5e1c0ea"
+    },
+    {
+      "path": "src/eval_platform/runner.py",
+      "sha256": "576f082ecc9e15146c094ffce6560a08fd66d81fc57252ff8cab8b22d5520174"
+    },
+    {
+      "path": "src/eval_platform/reports.py",
+      "sha256": "3005225b7e942c75287a6a3b044f84208e0a8ee9189b789ecd6b695c930dcbea"
+    },
+    {
+      "path": "src/eval_platform/web/app.js",
+      "sha256": "9de2dc752d9736fbc074ef7f1b996a9c318aedabe22919d86ed5230f3f36992b"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/0/evaluation/episodes.jsonl",
+      "sha256": "96b0516a999351dafeb9ac1d4ba063d951e8e17fafa28cfd138e661a07cddac8"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/1/evaluation/episodes.jsonl",
+      "sha256": "3c97b9706d32eaff1caa7255dd7d7da49773fefaf76dce1dbc05bc41c25bf8d2"
+    },
+    {
+      "path": "runs/eval-843758599804/resume-requests/expert-grasp-plan-20261009/manifest.json",
+      "sha256": "2775339eaa592473763bcfbca47ad6a2061283c3909627f2488cbf75a363a294"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/user-accepted-bf16-20261009/shards/0/evaluation/episodes.jsonl",
+      "sha256": "cbf47d0ac307c70d3d109468766a574d8e58ef9ec6b3d6ad2021316613062ba1"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/user-accepted-bf16-20261009/shards/1/evaluation/episodes.jsonl",
+      "sha256": "eea4ece7d4e262163f4802b86f1a62f7af691e785a6ce1f4ba5579fda7727740"
+    },
+    {
+      "path": "runs/eval-843758599804/resume-requests/user-accepted-bf16-20261009/manifest.json",
+      "sha256": "cb23c6be9d84edc05d6c247ab32cb133c117cdb60367718316247afdb5fcd56a"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/valid500-20261009/shards/0/evaluation/episodes.jsonl",
+      "sha256": "7955ae274af6ecf58a115d94aa55a5ddc8bff851916c9b12da1bb062eb798bd0"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/valid500-20261009/shards/1/evaluation/episodes.jsonl",
+      "sha256": "2c9cc23ac2a6b21be5d221d62e0c29b8192324d3d78b6f74f07681f431874842"
+    },
+    {
+      "path": "runs/eval-843758599804/resume-requests/valid500-20261009/manifest.json",
+      "sha256": "de15942d02525e75e334ee830a62a3ce24bbae8f6e6ff5097b707a788cd4b2ea"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-plan-failure-20261009/shards/0/evaluation/episodes.jsonl",
+      "sha256": "e8760388ed9f883bac5fca49e5f19e18bfa77411ba590b4a682112cae00ca75d"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-plan-failure-20261009/shards/1/evaluation/episodes.jsonl",
+      "sha256": "b5d8bcce874d60ca2f439dc2d9d3916a90aa9be89554cdfe0135ea9bf289d351"
+    },
+    {
+      "path": "runs/eval-843758599804/resume-requests/expert-plan-failure-20261009/manifest.json",
+      "sha256": "8b4adc6aadb490fb8f4fcfb2a7273cdfc742f3d90773e4d6b2fede6de61e1afd"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-contact-id-20261009/shards/0/evaluation/episodes.jsonl",
+      "sha256": "8b31a698612232da95b964ca4b34c296a6021eda6101840481b9f8a7adca42e3"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-contact-id-20261009/shards/1/evaluation/episodes.jsonl",
+      "sha256": "dfe6fb299d01c79a02283e13d86711ccfe721a05a389104f35bbc7f34f259f0f"
+    },
+    {
+      "path": "runs/eval-843758599804/resume-requests/expert-contact-id-20261009/manifest.json",
+      "sha256": "50e6af458f1d45779a05badeb72ac94d701e35cf242a58c9412cf0c59ce7302f"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-no-grasp-20261009/shards/0/evaluation/episodes.jsonl",
+      "sha256": "226cdba2b7fabda43bb4f17d3d27335e352d800f7b5d5af8352f27419c60eb24"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-no-grasp-20261009/shards/1/evaluation/episodes.jsonl",
+      "sha256": "59792d732ea6eba5234f3df48c4bf91c9e906d8e413854b40c0a48e0dbce9e31"
+    },
+    {
+      "path": "runs/eval-843758599804/resume-requests/expert-no-grasp-20261009/manifest.json",
+      "sha256": "806b0d0953d29bd64dd424b64ccf78b3fdf99d6ca390b025719297046b22ca2f"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/reuse-task-env-20261009/shards/0/evaluation/episodes.jsonl",
+      "sha256": "488a3006b4ec700816edc52bed7024c86e35ffbc1c901033e82d0da2340db22e"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/reuse-task-env-20261009/shards/1/evaluation/episodes.jsonl",
+      "sha256": "084bb47af329746dd027714f22cd225399dbcfda6907d6990d18ca0458aaa27c"
+    },
+    {
+      "path": "runs/eval-843758599804/resume-requests/reuse-task-env-20261009/manifest.json",
+      "sha256": "bc436299141c71fedf5b44346b65051c65541de986de884b5caec7ca11d3dde1"
+    },
+    {
+      "path": "runs/eval-843758599804/shards/0/evaluation/episodes.jsonl",
+      "sha256": "623dac095a717e37f9eef04713b172f06be8fc62d08b2d8005fb103c77143a86"
+    },
+    {
+      "path": "runs/eval-843758599804/shards/1/evaluation/episodes.jsonl",
+      "sha256": "2ea3f59c9b22ed0cbe0066b92d8cbbced46036fe6dac18f41152c06ba53b16f6"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/episodes.jsonl",
+      "sha256": "4a114698d1f081f71971be55a1f1858a54be018136fb499f5cb21dd74f3cb004"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/protocol.json",
+      "sha256": "00976505a35602bfc7134164b1c459648f3d9d6b0fe8e6d8c09ee16110ca3537"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/episodes.jsonl",
+      "sha256": "d76ab147c111c8d1b9e20553a2d998ad5d1c22bd1c0a019aa9a71116a40f54b7"
+    },
+    {
+      "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/protocol.json",
+      "sha256": "a16f631cbd1a00122d800843f345e9e796418b361b429d0782a2bf12b1493e06"
+    }
+  ],
+  "shards": [
+    {
+      "id": 0,
+      "output": "segments/expert-outer-exception-20261009/shards/0",
+      "seeded_records": 290,
+      "seeded_records_sha256": "4a114698d1f081f71971be55a1f1858a54be018136fb499f5cb21dd74f3cb004",
+      "source_output": "segments/expert-quota5-20261009/shards/0",
+      "source_records": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/episodes.jsonl",
+      "original_records_sha256": "4a114698d1f081f71971be55a1f1858a54be018136fb499f5cb21dd74f3cb004",
+      "first_remaining": {
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100015
+      }
+    },
+    {
+      "id": 1,
+      "output": "segments/expert-outer-exception-20261009/shards/1",
+      "seeded_records": 301,
+      "seeded_records_sha256": "d76ab147c111c8d1b9e20553a2d998ad5d1c22bd1c0a019aa9a71116a40f54b7",
+      "source_output": "segments/expert-quota5-20261009/shards/1",
+      "source_records": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/episodes.jsonl",
+      "original_records_sha256": "d76ab147c111c8d1b9e20553a2d998ad5d1c22bd1c0a019aa9a71116a40f54b7",
+      "first_remaining": {
+        "task": "place_a2b_right",
+        "setting": "demo_clean",
+        "seed": 100017
+      }
+    }
+  ],
+  "scene_checks": [
+    {
+      "task": "hanging_mug",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "instruction": "Lift the dark mug with a curved handle, rotate it, put it down, then attach it to the medium-sized rack.",
+      "instruction_parameters": {
+        "{A}": "039_mug/base8",
+        "{B}": "040_rack/base0"
+      },
+      "camera_rgb_sha256": {
+        "head_camera": "9d325502d4b77e530cbb180277b4755498c2a92c749c7db0976a16b34b429d9f",
+        "left_camera": "20daebacf43c09e24c0958f58b749fa273b06dbbbec82d79e9479e495645ad35",
+        "right_camera": "080ac2e9ba9d2b08bb562cead06b8c770204acd45221fa140a3acab1676c32e2"
+      },
+      "initial_joints": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "scene_check_limitations": "Hanging mug matches saved original policy-only instruction, parameters, RGB and joints. Place100017 is a new candidate; no comparison to nonexistent old policy inputs is claimed."
+}

@@ -1,0 +1,4844 @@
+[
+  {
+    "segment": "original",
+    "shard": 0,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/shards/0/evaluation/protocol.json",
+    "bytes": 2941,
+    "sha256": "eff09ccf42c25e27ffd3c66a2a8c7ee37b92fe2598538f8b10752c9c32d743e7"
+  },
+  {
+    "segment": "original",
+    "shard": 1,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/shards/1/evaluation/protocol.json",
+    "bytes": 2946,
+    "sha256": "78bb0923062c3afab4017ba795d9ea2eefcb5cbb3a6fd5b5286fcbb7afc3e0bf"
+  },
+  {
+    "segment": "expert-contact-id-20261009",
+    "shard": 0,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/segments/expert-contact-id-20261009/shards/0/evaluation/protocol.json",
+    "bytes": 2941,
+    "sha256": "eff09ccf42c25e27ffd3c66a2a8c7ee37b92fe2598538f8b10752c9c32d743e7"
+  },
+  {
+    "segment": "expert-contact-id-20261009",
+    "shard": 1,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/segments/expert-contact-id-20261009/shards/1/evaluation/protocol.json",
+    "bytes": 2946,
+    "sha256": "78bb0923062c3afab4017ba795d9ea2eefcb5cbb3a6fd5b5286fcbb7afc3e0bf"
+  },
+  {
+    "segment": "expert-grasp-plan-20261009",
+    "shard": 0,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5
+    },
+    "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/0/evaluation/protocol.json",
+    "bytes": 3034,
+    "sha256": "045d768a1b49d346a4ca5b7a44c692eac955e34fea755a0faa4cb169fc984aab"
+  },
+  {
+    "segment": "expert-grasp-plan-20261009",
+    "shard": 1,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5
+    },
+    "path": "runs/eval-843758599804/segments/expert-grasp-plan-20261009/shards/1/evaluation/protocol.json",
+    "bytes": 3039,
+    "sha256": "8bb4a0f9bd63a7e421ddd11f98d5e032bef88da424f41234a2c1a4478e0d7950"
+  },
+  {
+    "segment": "expert-no-grasp-20261009",
+    "shard": 0,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/segments/expert-no-grasp-20261009/shards/0/evaluation/protocol.json",
+    "bytes": 2941,
+    "sha256": "eff09ccf42c25e27ffd3c66a2a8c7ee37b92fe2598538f8b10752c9c32d743e7"
+  },
+  {
+    "segment": "expert-no-grasp-20261009",
+    "shard": 1,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/segments/expert-no-grasp-20261009/shards/1/evaluation/protocol.json",
+    "bytes": 2946,
+    "sha256": "78bb0923062c3afab4017ba795d9ea2eefcb5cbb3a6fd5b5286fcbb7afc3e0bf"
+  },
+  {
+    "segment": "expert-outer-exception-20261009",
+    "shard": 0,
+    "protocol": {
+      "protocol": "user_pending_policy_expert5_outer_exception_v2",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5,
+      "expert_quota": {
+        "version": "pending_policy_expert5_v1",
+        "limit": 5,
+        "scope": "task_setting_pending_policy_index",
+        "user_authorization": "2026-10-09: preserve 385 prior policy outcomes; per pending policy episode maximum five expert initiations across seeds; exhausted budget still executes policy.",
+        "inherited": [
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 11
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 26
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 9
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 13
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 14
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 26
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 8
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 7
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 4,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_clean",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_randomized",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 3,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          }
+        ]
+      },
+      "execution_flow": "lingbot_upstream_single_episode_v1",
+      "expert_flow": "upstream_play_once_no_internal_hooks_v1",
+      "expert_exception_policy": "official_outer_exception_counted_v1",
+      "language_rng": "python_per_scene_seed_isolated_numpy_from_setup",
+      "fallback_policy_entry": "pinned_object_templates_and_score_prelude_v1",
+      "settled_expert_errors": [
+        {
+          "task": "place_a2b_right",
+          "setting": "demo_clean",
+          "seed": 100016,
+          "canonical_sha256": "3d9e88a4633ba477fcc318a328801e2de8fb6c28150cfc0a9632f21ad504fcac",
+          "user_authorization": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/user-authorized-transition.json",
+          "disposition": "Preserved original expert error; counted exception, continue next seed with remaining budget"
+        }
+      ]
+    },
+    "path": "runs/eval-843758599804/segments/expert-outer-exception-20261009/shards/0/evaluation/protocol.json",
+    "bytes": 20870,
+    "sha256": "e91b1fa4bbbe2d00045a47a2e2e17706918b20ad3a8b5631665d9b41fbf52204"
+  },
+  {
+    "segment": "expert-outer-exception-20261009",
+    "shard": 1,
+    "protocol": {
+      "protocol": "user_pending_policy_expert5_outer_exception_v2",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5,
+      "expert_quota": {
+        "version": "pending_policy_expert5_v1",
+        "limit": 5,
+        "scope": "task_setting_pending_policy_index",
+        "user_authorization": "2026-10-09: preserve 385 prior policy outcomes; per pending policy episode maximum five expert initiations across seeds; exhausted budget still executes policy.",
+        "inherited": [
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 11
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 26
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 9
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 13
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 14
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 26
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 8
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 7
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 4,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_clean",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_randomized",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 3,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          }
+        ]
+      },
+      "execution_flow": "lingbot_upstream_single_episode_v1",
+      "expert_flow": "upstream_play_once_no_internal_hooks_v1",
+      "expert_exception_policy": "official_outer_exception_counted_v1",
+      "language_rng": "python_per_scene_seed_isolated_numpy_from_setup",
+      "fallback_policy_entry": "pinned_object_templates_and_score_prelude_v1",
+      "settled_expert_errors": [
+        {
+          "task": "place_a2b_right",
+          "setting": "demo_clean",
+          "seed": 100016,
+          "canonical_sha256": "3d9e88a4633ba477fcc318a328801e2de8fb6c28150cfc0a9632f21ad504fcac",
+          "user_authorization": "artifacts/e0-hf-eval-20261009/incidents/20261009-210733/user-authorized-transition.json",
+          "disposition": "Preserved original expert error; counted exception, continue next seed with remaining budget"
+        }
+      ]
+    },
+    "path": "runs/eval-843758599804/segments/expert-outer-exception-20261009/shards/1/evaluation/protocol.json",
+    "bytes": 20875,
+    "sha256": "2bcc67a3063e61e13405df776a46300639733dab6be379e20ed40eff3b84271e"
+  },
+  {
+    "segment": "expert-plan-failure-20261009",
+    "shard": 0,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/segments/expert-plan-failure-20261009/shards/0/evaluation/protocol.json",
+    "bytes": 2941,
+    "sha256": "eff09ccf42c25e27ffd3c66a2a8c7ee37b92fe2598538f8b10752c9c32d743e7"
+  },
+  {
+    "segment": "expert-plan-failure-20261009",
+    "shard": 1,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/segments/expert-plan-failure-20261009/shards/1/evaluation/protocol.json",
+    "bytes": 2946,
+    "sha256": "78bb0923062c3afab4017ba795d9ea2eefcb5cbb3a6fd5b5286fcbb7afc3e0bf"
+  },
+  {
+    "segment": "expert-quota5-20261009",
+    "shard": 0,
+    "protocol": {
+      "protocol": "user_pending_policy_expert5_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5,
+      "expert_quota": {
+        "version": "pending_policy_expert5_v1",
+        "limit": 5,
+        "scope": "task_setting_pending_policy_index",
+        "user_authorization": "2026-10-09: preserve 385 prior policy outcomes; per pending policy episode maximum five expert initiations across seeds; exhausted budget still executes policy.",
+        "inherited": [
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 11
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 20,
+            "candidate_count": 25
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 4,
+            "candidate_count": 5
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 13
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 14
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 17,
+            "candidate_count": 20
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 4,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_clean",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_randomized",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 3,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          }
+        ]
+      },
+      "execution_flow": "lingbot_upstream_single_episode_v1",
+      "expert_flow": "upstream_play_once_no_internal_hooks_v1",
+      "expert_exception_policy": "record_and_stop",
+      "language_rng": "python_per_scene_seed_isolated_numpy_from_setup",
+      "fallback_policy_entry": "pinned_object_templates_and_score_prelude_v1"
+    },
+    "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/protocol.json",
+    "bytes": 20375,
+    "sha256": "00976505a35602bfc7134164b1c459648f3d9d6b0fe8e6d8c09ee16110ca3537"
+  },
+  {
+    "segment": "expert-quota5-20261009",
+    "shard": 1,
+    "protocol": {
+      "protocol": "user_pending_policy_expert5_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5,
+      "expert_quota": {
+        "version": "pending_policy_expert5_v1",
+        "limit": 5,
+        "scope": "task_setting_pending_policy_index",
+        "user_authorization": "2026-10-09: preserve 385 prior policy outcomes; per pending policy episode maximum five expert initiations across seeds; exhausted budget still executes policy.",
+        "inherited": [
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "adjust_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "beat_block_hammer",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_rgb",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "blocks_ranking_size",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_alarmclock",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "click_bell",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "dump_bin_bigbin",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 11
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "grab_roller",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 7
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 20,
+            "candidate_count": 25
+          },
+          {
+            "task": "handover_block",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "handover_mic",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 6
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "hanging_mug",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 4,
+            "candidate_count": 5
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 13
+          },
+          {
+            "task": "lift_pot",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 14
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_can_pot",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 17,
+            "candidate_count": 20
+          },
+          {
+            "task": "move_pillbottle_pad",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_playingcard_away",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "move_stapler_pad",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_laptop",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "open_microwave",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_diverse_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "pick_dual_bottles",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_left",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_a2b_right",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_bread_skillet",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_burger_fries",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_can_basket",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_cans_plasticbox",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_container_plate",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_dual_shoes",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_empty_cup",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_fan",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_mouse_pad",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_clean",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_basket",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_scale",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_object_stand",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_phone_stand",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "place_shoe",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "press_stapler",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_bottles_dustbin",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 4,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_clean",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "put_object_cabinet",
+            "setting": "demo_randomized",
+            "policy_index": 0,
+            "launches": 5,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "rotate_qrcode",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "scan_object",
+            "setting": "demo_randomized",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "shake_bottle_horizontally",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_three",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_blocks_two",
+            "setting": "demo_randomized",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_clean",
+            "policy_index": 1,
+            "launches": 3,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_three",
+            "setting": "demo_randomized",
+            "policy_index": 1,
+            "launches": 2,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_clean",
+            "policy_index": 2,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "stack_bowls_two",
+            "setting": "demo_randomized",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_clean",
+            "policy_index": 3,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "stamp_seal",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_clean",
+            "policy_index": 5,
+            "launches": 0,
+            "candidate_count": 5
+          },
+          {
+            "task": "turn_switch",
+            "setting": "demo_randomized",
+            "policy_index": 4,
+            "launches": 1,
+            "candidate_count": 5
+          }
+        ]
+      },
+      "execution_flow": "lingbot_upstream_single_episode_v1",
+      "expert_flow": "upstream_play_once_no_internal_hooks_v1",
+      "expert_exception_policy": "record_and_stop",
+      "language_rng": "python_per_scene_seed_isolated_numpy_from_setup",
+      "fallback_policy_entry": "pinned_object_templates_and_score_prelude_v1"
+    },
+    "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/protocol.json",
+    "bytes": 20380,
+    "sha256": "a16f631cbd1a00122d800843f345e9e796418b361b429d0782a2bf12b1493e06"
+  },
+  {
+    "segment": "reuse-task-env-20261009",
+    "shard": 0,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/segments/reuse-task-env-20261009/shards/0/evaluation/protocol.json",
+    "bytes": 2941,
+    "sha256": "eff09ccf42c25e27ffd3c66a2a8c7ee37b92fe2598538f8b10752c9c32d743e7"
+  },
+  {
+    "segment": "reuse-task-env-20261009",
+    "shard": 1,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "fixed_planned_seeds_no_replacement",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training."
+    },
+    "path": "runs/eval-843758599804/segments/reuse-task-env-20261009/shards/1/evaluation/protocol.json",
+    "bytes": 2946,
+    "sha256": "78bb0923062c3afab4017ba795d9ea2eefcb5cbb3a6fd5b5286fcbb7afc3e0bf"
+  },
+  {
+    "segment": "user-accepted-bf16-20261009",
+    "shard": 0,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5
+    },
+    "path": "runs/eval-843758599804/segments/user-accepted-bf16-20261009/shards/0/evaluation/protocol.json",
+    "bytes": 3034,
+    "sha256": "045d768a1b49d346a4ca5b7a44c692eac955e34fea755a0faa4cb169fc984aab"
+  },
+  {
+    "segment": "user-accepted-bf16-20261009",
+    "shard": 1,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5
+    },
+    "path": "runs/eval-843758599804/segments/user-accepted-bf16-20261009/shards/1/evaluation/protocol.json",
+    "bytes": 3039,
+    "sha256": "8bb4a0f9bd63a7e421ddd11f98d5e032bef88da424f41234a2c1a4478e0d7950"
+  },
+  {
+    "segment": "valid500-20261009",
+    "shard": 0,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "adjust_bottle",
+        "blocks_ranking_rgb",
+        "click_alarmclock",
+        "dump_bin_bigbin",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_playingcard_away",
+        "open_laptop",
+        "pick_diverse_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_burger_fries",
+        "place_cans_plasticbox",
+        "place_dual_shoes",
+        "place_fan",
+        "place_object_basket",
+        "place_object_stand",
+        "place_shoe",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "shake_bottle",
+        "stack_blocks_three",
+        "stack_bowls_three",
+        "stamp_seal"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5
+    },
+    "path": "runs/eval-843758599804/segments/valid500-20261009/shards/0/evaluation/protocol.json",
+    "bytes": 3034,
+    "sha256": "045d768a1b49d346a4ca5b7a44c692eac955e34fea755a0faa4cb169fc984aab"
+  },
+  {
+    "segment": "valid500-20261009",
+    "shard": 1,
+    "protocol": {
+      "protocol": "team_official_defaults_fixed_expert_screened_v1",
+      "official_benchmark": false,
+      "tasks": [
+        "beat_block_hammer",
+        "blocks_ranking_size",
+        "click_bell",
+        "grab_roller",
+        "handover_mic",
+        "lift_pot",
+        "move_pillbottle_pad",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_right",
+        "place_bread_skillet",
+        "place_can_basket",
+        "place_container_plate",
+        "place_empty_cup",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "press_stapler",
+        "put_object_cabinet",
+        "scan_object",
+        "shake_bottle_horizontally",
+        "stack_blocks_two",
+        "stack_bowls_two",
+        "turn_switch"
+      ],
+      "seeds": [
+        100010,
+        100011,
+        100012,
+        100013,
+        100014
+      ],
+      "settings": [
+        "demo_clean",
+        "demo_randomized"
+      ],
+      "instruction_types": {
+        "demo_clean": "seen",
+        "demo_randomized": "unseen"
+      },
+      "expert_check": true,
+      "scene_sampling": "ascending_seeds_until_valid_target",
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      },
+      "video": "head-camera frames sampled on simulation time at 10 fps; 1x simulation playback",
+      "recording": {
+        "enabled": true,
+        "fps": 10,
+        "time_axis": "simulation time"
+      },
+      "render_device": "cuda:0",
+      "renderer": {
+        "version": "2.3.3",
+        "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+        "asset_url": "https://github.com/RenderKit/oidn/releases/download/v2.3.3/oidn-2.3.3.x86_64.linux.tar.gz",
+        "sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+        "library_directory": "/data/lingbotvla/third_party/oidn-2.3.3.x86_64.linux/lib",
+        "loader_backup": "/data/lingbotvla/envs/sim/lib/python3.10/site-packages/sapien/_oidn_tricks.py.original",
+        "reason": "SAPIEN bundled OIDN 2.0.1 reports unsupported CUDA device on RTX 5090"
+      },
+      "execution": {
+        "simulator_process": "one_episode"
+      },
+      "failure_images": "All three cameras before each policy request and at end; no extra simulation steps.",
+      "diagnostics": "Read-only privileged actor poses/contact/door position; never passed to policy or training.",
+      "valid_per_group": 5,
+      "max_consecutive_nonvalid": 20,
+      "instruction_template_count": 5
+    },
+    "path": "runs/eval-843758599804/segments/valid500-20261009/shards/1/evaluation/protocol.json",
+    "bytes": 3039,
+    "sha256": "8bb4a0f9bd63a7e421ddd11f98d5e032bef88da424f41234a2c1a4478e0d7950"
+  }
+]

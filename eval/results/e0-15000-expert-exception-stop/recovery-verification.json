@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-09T13:45:59.662821+00:00",
+  "job_id": "843758599804",
+  "execution_segment": "expert-outer-exception-20261009",
+  "source_files_match_deployment": true,
+  "cpu_tests_passed": 165,
+  "cpu_tests_skipped": 1,
+  "preserved_policy_episodes": 396,
+  "raw_candidate_prefix": 591,
+  "original_expert_error_retained": true,
+  "historical_interruptions": 16,
+  "historical_runtime_errors": 6,
+  "actual_attempts_at_resume": 604,
+  "remaining_valid_at_resume": 104,
+  "expert_budget_refunded": false,
+  "model_changed": false,
+  "model_calls_for_diagnosis": 0,
+  "expert_calls_for_diagnosis": 0,
+  "replay_actions": 50,
+  "production_first_blocks_verified": true,
+  "whole_new_episode_verification": "incremental heartbeat receipts",
+  "initial_test_issues": [
+    "One CPU fixture used single-shard output instead of production dual-shard layout; corrected and all 68 passed.",
+    "Initial staging helper stopped on mkdir of existing incident directory before upload/deployment; explicit stat then staging passed."
+  ],
+  "no_new_job": true,
+  "commit_created": false,
+  "pushed": false
+}

@@ -1,0 +1,15 @@
+{
+  "prepared": true,
+  "job_id": "843758599804",
+  "segment": "user-accepted-bf16-20261009",
+  "manifest": "/root/shared-nvme/lingbot-eval-team/runs/eval-843758599804/resume-requests/user-accepted-bf16-20261009/manifest.json",
+  "sha256": "cb23c6be9d84edc05d6c247ab32cb133c117cdb60367718316247afdb5fcd56a",
+  "preserved_candidate_results": 507,
+  "valid": 369,
+  "successes": 45,
+  "historical_interruptions": 10,
+  "historical_runtime_errors": 4,
+  "actual_attempts": 516,
+  "model_variant": "BF16 saved export, FP32 execution; not trainer FP32-preserving export",
+  "remaining_valid": 131
+}

@@ -1,0 +1,1902 @@
+[
+  {
+    "segment": "expert-outer-exception-20261009",
+    "shard": 0,
+    "events": [
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100019,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100020,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100021,
+        "policy_index": 3,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100022,
+        "policy_index": 3,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100023,
+        "policy_index": 3,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100024,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_can_pot",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_can_pot",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_can_pot",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "open_laptop",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "open_laptop",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_clean",
+        "seed": 100018,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_clean",
+        "seed": 100019,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_clean",
+        "seed": 100020,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_clean",
+        "seed": 100021,
+        "policy_index": 4,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 1,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 1,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 1,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 1,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100021,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100022,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100023,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100024,
+        "policy_index": 2,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100025,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100026,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_diverse_bottles",
+        "setting": "demo_randomized",
+        "seed": 100027,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_a2b_left",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_basket",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_basket",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_burger_fries",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_burger_fries",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_cans_plasticbox",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_dual_shoes",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_dual_shoes",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_dual_shoes",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_dual_shoes",
+        "setting": "demo_clean",
+        "seed": 100018,
+        "policy_index": 3,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_dual_shoes",
+        "setting": "demo_clean",
+        "seed": 100019,
+        "policy_index": 3,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_dual_shoes",
+        "setting": "demo_clean",
+        "seed": 100020,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_dual_shoes",
+        "setting": "demo_clean",
+        "seed": 100021,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_dual_shoes",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_dual_shoes",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_fan",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_fan",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_fan",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_fan",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 4,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_basket",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_basket",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_basket",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_basket",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_basket",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_shoe",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 1,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_randomized",
+        "seed": 100019,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_randomized",
+        "seed": 100020,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_bottles_dustbin",
+        "setting": "demo_randomized",
+        "seed": 100021,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "rotate_qrcode",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "rotate_qrcode",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "rotate_qrcode",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 1,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle",
+        "setting": "demo_clean",
+        "seed": 100018,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle",
+        "setting": "demo_clean",
+        "seed": 100019,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle",
+        "setting": "demo_clean",
+        "seed": 100020,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle",
+        "setting": "demo_clean",
+        "seed": 100021,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_blocks_three",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 1,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_clean",
+        "seed": 100018,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_clean",
+        "seed": 100019,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_clean",
+        "seed": 100020,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 1,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 1,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100019,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100020,
+        "policy_index": 2,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100021,
+        "policy_index": 2,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100022,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100023,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_three",
+        "setting": "demo_randomized",
+        "seed": 100024,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stamp_seal",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stamp_seal",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stamp_seal",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 2
+      }
+    ],
+    "path": "runs/eval-843758599804/segments/expert-outer-exception-20261009/shards/0/evaluation/expert-launches.jsonl",
+    "bytes": 14408,
+    "sha256": "7492dcf2552229f4fe82b3a00595a8b40405dd6d932aa70a5d670068496d99e0"
+  },
+  {
+    "segment": "expert-outer-exception-20261009",
+    "shard": 1,
+    "events": [
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_a2b_right",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_a2b_right",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_clean",
+        "seed": 100018,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 2,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100019,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100020,
+        "policy_index": 3,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100021,
+        "policy_index": 3,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100022,
+        "policy_index": 3,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100023,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100024,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100025,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100026,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_bread_skillet",
+        "setting": "demo_randomized",
+        "seed": 100027,
+        "policy_index": 4,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_container_plate",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_container_plate",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_container_plate",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_container_plate",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_container_plate",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 3,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_container_plate",
+        "setting": "demo_randomized",
+        "seed": 100019,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_container_plate",
+        "setting": "demo_randomized",
+        "seed": 100020,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_mouse_pad",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_scale",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_scale",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_scale",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_scale",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_object_scale",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_phone_stand",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_phone_stand",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_phone_stand",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 1,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 1,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100018,
+        "policy_index": 1,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100019,
+        "policy_index": 1,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100020,
+        "policy_index": 1,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100021,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100022,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100023,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100024,
+        "policy_index": 2,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100025,
+        "policy_index": 2,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100026,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100027,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100028,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100029,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_clean",
+        "seed": 100030,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 1,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 1,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100019,
+        "policy_index": 1,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100020,
+        "policy_index": 1,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100021,
+        "policy_index": 1,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100022,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100023,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100024,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100025,
+        "policy_index": 2,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100026,
+        "policy_index": 2,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100027,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100028,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100029,
+        "policy_index": 3,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100030,
+        "policy_index": 3,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100031,
+        "policy_index": 3,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100033,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100034,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100035,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100036,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "put_object_cabinet",
+        "setting": "demo_randomized",
+        "seed": 100037,
+        "policy_index": 4,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 1,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 1,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 1,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100018,
+        "policy_index": 1,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100019,
+        "policy_index": 1,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100020,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100021,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100022,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100023,
+        "policy_index": 2,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100024,
+        "policy_index": 2,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100025,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100026,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100027,
+        "policy_index": 3,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100028,
+        "policy_index": 3,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100029,
+        "policy_index": 3,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100030,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100031,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100032,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100033,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_clean",
+        "seed": 100034,
+        "policy_index": 4,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 3,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100019,
+        "policy_index": 3,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100020,
+        "policy_index": 3,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100021,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100022,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100023,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100024,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "scan_object",
+        "setting": "demo_randomized",
+        "seed": 100025,
+        "policy_index": 4,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 1,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 2,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_clean",
+        "seed": 100018,
+        "policy_index": 2,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_clean",
+        "seed": 100019,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_clean",
+        "seed": 100020,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_clean",
+        "seed": 100021,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "shake_bottle_horizontally",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_two",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 2,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_two",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_two",
+        "setting": "demo_clean",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_two",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "stack_bowls_two",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "turn_switch",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "turn_switch",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 3
+      }
+    ],
+    "path": "runs/eval-843758599804/segments/expert-outer-exception-20261009/shards/1/evaluation/expert-launches.jsonl",
+    "bytes": 17077,
+    "sha256": "4162851ad7ddcbf435f64eabd27b2ca44d99b1bb64060aadf308d5b4a1f8384a"
+  },
+  {
+    "segment": "expert-quota5-20261009",
+    "shard": 0,
+    "events": [
+      {
+        "event": "expert_launch_reserved",
+        "task": "handover_block",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "handover_block",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "handover_block",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "handover_block",
+        "setting": "demo_randomized",
+        "seed": 100018,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "hanging_mug",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 1,
+        "launch_number": 5
+      }
+    ],
+    "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/0/evaluation/expert-launches.jsonl",
+    "bytes": 871,
+    "sha256": "139be4b6a5d24dc693c5ed9e9a7aebfb23689fded9d705332473ceca7b63ac63"
+  },
+  {
+    "segment": "expert-quota5-20261009",
+    "shard": 1,
+    "events": [
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_pillbottle_pad",
+        "setting": "demo_clean",
+        "seed": 100031,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_pillbottle_pad",
+        "setting": "demo_clean",
+        "seed": 100032,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_pillbottle_pad",
+        "setting": "demo_clean",
+        "seed": 100033,
+        "policy_index": 4,
+        "launch_number": 3
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_pillbottle_pad",
+        "setting": "demo_clean",
+        "seed": 100034,
+        "policy_index": 4,
+        "launch_number": 4
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_pillbottle_pad",
+        "setting": "demo_clean",
+        "seed": 100035,
+        "policy_index": 4,
+        "launch_number": 5
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_pillbottle_pad",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_pillbottle_pad",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_pillbottle_pad",
+        "setting": "demo_randomized",
+        "seed": 100017,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_stapler_pad",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "move_stapler_pad",
+        "setting": "demo_randomized",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "pick_dual_bottles",
+        "setting": "demo_randomized",
+        "seed": 100015,
+        "policy_index": 4,
+        "launch_number": 2
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_a2b_right",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "policy_index": 3,
+        "launch_number": 1
+      },
+      {
+        "event": "expert_launch_reserved",
+        "task": "place_a2b_right",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "policy_index": 4,
+        "launch_number": 1
+      }
+    ],
+    "path": "runs/eval-843758599804/segments/expert-quota5-20261009/shards/1/evaluation/expert-launches.jsonl",
+    "bytes": 1925,
+    "sha256": "33337552021ce386623ebdb569b885d3c34b37f4627ae6a90716045f46f55be6"
+  }
+]

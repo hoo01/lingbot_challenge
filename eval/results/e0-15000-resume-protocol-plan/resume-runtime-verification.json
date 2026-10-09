@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-09T12:48:40.098314+00:00",
+  "job_id": "843758599804",
+  "execution_segment": "expert-quota5-20261009",
+  "checks": [
+    {
+      "shard": 0,
+      "task": "handover_block",
+      "setting": "demo_clean",
+      "seed": 100035,
+      "expert_calls": 0,
+      "initial_inputs_match_frozen_diagnostic": true,
+      "first_action_shape": [
+        50,
+        14
+      ],
+      "finite": true,
+      "completed_chunks": 9,
+      "actions": 450,
+      "dual_video_started": true,
+      "full_episode_verified": false
+    },
+    {
+      "shard": 1,
+      "task": "move_pillbottle_pad",
+      "setting": "demo_clean",
+      "seed": 100030,
+      "expert_calls": 0,
+      "initial_inputs_match_frozen_diagnostic": true,
+      "first_action_shape": [
+        50,
+        14
+      ],
+      "finite": true,
+      "completed_chunks": 8,
+      "actions": 400,
+      "dual_video_started": true,
+      "full_episode_verified": false
+    }
+  ],
+  "counts": {
+    "attempted": 572,
+    "valid": 386,
+    "successes": 46,
+    "execution_errors": 0,
+    "historical_interruptions": 14,
+    "historical_runtime_errors": 5,
+    "actual_attempts": 584
+  },
+  "scope": "First formal action blocks and frozen new-entry inputs, not full episode/video acceptance"
+}

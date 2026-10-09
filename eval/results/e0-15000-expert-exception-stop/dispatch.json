@@ -1,0 +1,20 @@
+{
+  "dispatched_at": "2026-10-09T13:39:33.102103+00:00",
+  "job_id": "843758599804",
+  "segment": "expert-outer-exception-20261009",
+  "manager_pid": 167297,
+  "worker_pids": [
+    167308,
+    167307
+  ],
+  "new_job_created": false,
+  "preserved_candidates": 591,
+  "preserved_valid": 396,
+  "remaining_valid": 104,
+  "completion_basis": "valid",
+  "planned_valid": 500,
+  "historical_interruptions": 16,
+  "historical_runtime_errors": 6,
+  "prior_rng_restored": false,
+  "manifest_sha256": "10d0ce723b93dc8bdf63db1d81cfcaaa9a870811c98659aad271f54fe75aadcc"
+}
