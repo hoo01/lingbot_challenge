@@ -1,0 +1,73 @@
+{
+  "source": "metrics.jsonl",
+  "source_sha256": "1d37da06c08c133864ed0f6bc4ccd5c9b64737c016295cb155ae3fbfef8d67f0",
+  "record_count": 15000,
+  "first_step": 1,
+  "last_step": 15000,
+  "missing_steps": [],
+  "duplicate_steps": [],
+  "nonfinite_numeric_fields": [],
+  "world_size": 2,
+  "global_batch_size": 64,
+  "processed_samples_completed_steps": 960000,
+  "processed_samples_definition": "sample windows per completed optimizer step, including repeated draws; excludes validation and any unrecorded retry work",
+  "milestones": [
+    {
+      "step": 5000,
+      "loss": 0.08032746736377926,
+      "grad_norm": 0.3152167797088623,
+      "valid_action_coordinates": 40082.0,
+      "lr": 3.888621281112871e-05,
+      "step_seconds": 2.795642870998563,
+      "peak_gpu_gib": 32.30564212799072,
+      "world_size": 2,
+      "global_batch_size": 64,
+      "validation_bc_loss": 0.08368120050883157,
+      "processed_samples": 320000
+    },
+    {
+      "step": 10000,
+      "loss": 0.0748940619926948,
+      "grad_norm": 0.37016215920448303,
+      "valid_action_coordinates": 38500.0,
+      "lr": 1.6318313817907338e-05,
+      "step_seconds": 2.8796320330002345,
+      "peak_gpu_gib": 32.30564212799072,
+      "world_size": 2,
+      "global_batch_size": 64,
+      "validation_bc_loss": 0.06646513642451195,
+      "processed_samples": 640000
+    },
+    {
+      "step": 15000,
+      "loss": 0.08204702874129079,
+      "grad_norm": 0.25746119022369385,
+      "valid_action_coordinates": 43022.0,
+      "lr": 5e-06,
+      "step_seconds": 3.0068727869947907,
+      "peak_gpu_gib": 32.30564212799072,
+      "world_size": 2,
+      "global_batch_size": 64,
+      "validation_bc_loss": 0.062003598516977926,
+      "processed_samples": 960000
+    }
+  ],
+  "validation_records": 60,
+  "validation_batches_per_check": 8,
+  "best_recorded_validation": {
+    "step": 14500,
+    "loss": 0.06583058465008697,
+    "grad_norm": 0.21105054020881653,
+    "valid_action_coordinates": 41538.0,
+    "lr": 5.1240824369320615e-06,
+    "step_seconds": 2.808199817998684,
+    "peak_gpu_gib": 32.30564212799072,
+    "world_size": 2,
+    "global_batch_size": 64,
+    "validation_bc_loss": 0.0614201685090598
+  },
+  "final_100_steps_mean_train_loss": 0.06485411134927457,
+  "max_peak_gpu_gib": 32.30564212799072,
+  "resume_event_count": null,
+  "resume_evidence_limit": "No resume event log or process start command supplied. Contiguous metrics do not establish that no process restart occurred."
+}

@@ -1,0 +1,152 @@
+{
+  "policy": "Replace absolute training root in record files with ${TRAIN_ROOT}. Preserve metrics, statistics, hashes, run ID, process IDs and experiment identifiers. Auxiliary script copies retain their reviewed bytes and default path.",
+  "weight_files_included": false,
+  "ssh_configuration_included": false,
+  "credential_pattern_matches_in_distributed_evidence": 0,
+  "files": [
+    {
+      "file": "assets/clean_manifest.json",
+      "source_sha256": "45185fcfb34a36a17268c8987411a0583d36f91f973c89de5afa834527c7e0cb",
+      "distributed_sha256": "eaa16e4b66d7c178b9a7c9bf9d1a104a79b74f2e9990a7b4fb68083165e87558",
+      "source_size_bytes": 76612,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "assets/norm_stats.json",
+      "source_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+      "distributed_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+      "source_size_bytes": 6903,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "assets/norm_stats.provenance.json",
+      "source_sha256": "e131e7ee1481843a0e795949c85161fbf02d99a9f4b1359bc3e1b891d4a33274",
+      "distributed_sha256": "b107af6df093a76b6df2e28714b6fabbe2382494a5750f706bc0be458f991365",
+      "source_size_bytes": 904,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "checkpoints/global_step_10000/hf_ckpt_fp32/action-audit.json",
+      "source_sha256": "f1b18fb6ed198655cd6296857d1cf14b7569d187bd3d67e431991323e8d54457",
+      "distributed_sha256": "f1b18fb6ed198655cd6296857d1cf14b7569d187bd3d67e431991323e8d54457",
+      "source_size_bytes": 67950,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "checkpoints/global_step_10000/hf_ckpt_fp32/export-receipt.json",
+      "source_sha256": "b8d9bf0445c6a2e3a2f98d381f64cb1b907b3300afc913e49808584b21d40999",
+      "distributed_sha256": "60cd27d617791f2c615ddbc4f581a2e9392125472af31e83562c8e676b9b6485",
+      "source_size_bytes": 777,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "checkpoints/global_step_15000/hf_ckpt_fp32/action-audit.json",
+      "source_sha256": "bae44169055574b49b975ad0593701b5fd03c8aa63f15a43d9608d0cea716d7c",
+      "distributed_sha256": "bae44169055574b49b975ad0593701b5fd03c8aa63f15a43d9608d0cea716d7c",
+      "source_size_bytes": 67950,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "checkpoints/global_step_15000/hf_ckpt_fp32/export-receipt.json",
+      "source_sha256": "ce6c73953aaeb4006bf53256457cff7d15f051db32ed55c3d795abae3fc848e3",
+      "distributed_sha256": "d6406ca6aad9f10e6b12b474dac8b1d172a07c1efa3022d628f8b253f90012b8",
+      "source_size_bytes": 777,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "checkpoints/global_step_5000/hf_ckpt_fp32/action-audit.json",
+      "source_sha256": "d68c13398a9516a851f34e20a9b0e401d15f5653a675117cb6f7817d3e43724d",
+      "distributed_sha256": "d68c13398a9516a851f34e20a9b0e401d15f5653a675117cb6f7817d3e43724d",
+      "source_size_bytes": 67949,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "checkpoints/global_step_5000/hf_ckpt_fp32/export-receipt.json",
+      "source_sha256": "bcef9d19566ff9c130dd215b115d2bb2f7501e925469131197e4066b57741b4c",
+      "distributed_sha256": "ecb519690c4206a16151e84394bcdbb4db857272d175e66cc6ddb0d04cf3ec08",
+      "source_size_bytes": 775,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "episode_splits.json",
+      "source_sha256": "060d29312c267952f5395b2db798f4aabdd116f63ac72243b5179d9e28496a1d",
+      "distributed_sha256": "060d29312c267952f5395b2db798f4aabdd116f63ac72243b5179d9e28496a1d",
+      "source_size_bytes": 28223,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "latest_checkpoint.txt",
+      "source_sha256": "dfe1c7e74b72831e835af7bdef4e91b93a797d01cf737a756912ef7d0b3b4109",
+      "distributed_sha256": "00893eb58c94d9b65195d69c4026ae63422e9cd7122503cb73a4170c69f4d31b",
+      "source_size_bytes": 99,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "lingbotvla_cli.yaml",
+      "source_sha256": "bf36d4e6300e42cd3b03af3af14b39e738b027bad166f97f78699012ad7c21a6",
+      "distributed_sha256": "0eb925a88d728285e964f5311e3c6401ce92314e595ccad89ad2a0683180d5e1",
+      "source_size_bytes": 6452,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "metrics.jsonl",
+      "source_sha256": "1d37da06c08c133864ed0f6bc4ccd5c9b64737c016295cb155ae3fbfef8d67f0",
+      "distributed_sha256": "1d37da06c08c133864ed0f6bc4ccd5c9b64737c016295cb155ae3fbfef8d67f0",
+      "source_size_bytes": 3847688,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "run_metadata.json",
+      "source_sha256": "73c936e8e7527dabb3d73763fbbf8f1d4194b7a47a90b3e2f04955c60b9cb245",
+      "distributed_sha256": "8b17e5b17c1166befe5bf58f37d7d1242b5fc233a01a76d2ecf3593dacadf6ec",
+      "source_size_bytes": 7598,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "swanlab_run_id.txt",
+      "source_sha256": "9ff680f19f1e0c6f238adef37e08852f7c1341331d11fda86984d85e7a8c2ced",
+      "distributed_sha256": "9ff680f19f1e0c6f238adef37e08852f7c1341331d11fda86984d85e7a8c2ced",
+      "source_size_bytes": 9,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "training_config.yaml",
+      "source_sha256": "0c7c6d41039fcd8a8a2217032b6564e28c78950d1d6d71cc82eca633a98811cd",
+      "distributed_sha256": "0c7c6d41039fcd8a8a2217032b6564e28c78950d1d6d71cc82eca633a98811cd",
+      "source_size_bytes": 901,
+      "redacted": false,
+      "changes": []
+    }
+  ]
+}
