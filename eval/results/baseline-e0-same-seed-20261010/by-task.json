@@ -1,0 +1,2963 @@
+[
+  {
+    "task": "adjust_bottle",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "beat_block_hammer",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 1,
+    "e0_successes_target": 1,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 9,
+      "e0_only_success": 1
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 1,
+      "e0_successes_target": 1,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 4,
+        "e0_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "blocks_ranking_rgb",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 2,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 2
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "blocks_ranking_size",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 5,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 5
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 3,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 3
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    }
+  },
+  {
+    "task": "click_alarmclock",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 2,
+    "e0_successes_on_scored": 6,
+    "e0_successes_target": 6,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "e0_only_success": 5,
+      "both_success": 1,
+      "both_failure": 3,
+      "baseline_only_success": 1
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 1,
+      "e0_successes_on_scored": 5,
+      "e0_successes_target": 5,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "e0_only_success": 4,
+        "both_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 1,
+      "e0_successes_on_scored": 1,
+      "e0_successes_target": 1,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 3,
+        "baseline_only_success": 1,
+        "e0_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "click_bell",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 3,
+    "e0_successes_on_scored": 7,
+    "e0_successes_target": 7,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "e0_only_success": 6,
+      "both_success": 1,
+      "baseline_only_success": 2,
+      "both_failure": 1
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 1,
+      "e0_successes_on_scored": 5,
+      "e0_successes_target": 5,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "e0_only_success": 4,
+        "both_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 2,
+      "e0_successes_on_scored": 2,
+      "e0_successes_target": 2,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "e0_only_success": 2,
+        "baseline_only_success": 2,
+        "both_failure": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "dump_bin_bigbin",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 5,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 0,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "grab_roller",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    }
+  },
+  {
+    "task": "handover_block",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    }
+  },
+  {
+    "task": "handover_mic",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 1,
+    "e0_successes_target": 1,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "e0_only_success": 1,
+      "both_failure": 9
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 1,
+      "e0_successes_target": 1,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "e0_only_success": 1,
+        "both_failure": 4
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "hanging_mug",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "lift_pot",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "move_can_pot",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 1,
+    "e0_successes_target": 1,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 9,
+      "e0_only_success": 1
+    },
+    "inputs": {
+      "instruction_equal": 3,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 3
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 3,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 3
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 1,
+      "e0_successes_target": 1,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "e0_only_success": 1,
+        "both_failure": 4
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "move_pillbottle_pad",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    }
+  },
+  {
+    "task": "move_playingcard_away",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 2,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 8,
+      "baseline_only_success": 2
+    },
+    "inputs": {
+      "instruction_equal": 2,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 2
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 1,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 4,
+        "baseline_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 1,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "baseline_only_success": 1,
+        "both_failure": 4
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "move_stapler_pad",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 2,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 2
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "open_laptop",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 2,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "baseline_only_success": 2,
+      "both_failure": 8
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 1,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "baseline_only_success": 1,
+        "both_failure": 4
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 1,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 4,
+        "baseline_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "open_microwave",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 9,
+    "e0_successes_on_scored": 7,
+    "e0_successes_target": 7,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "baseline_only_success": 3,
+      "both_success": 6,
+      "e0_only_success": 1
+    },
+    "inputs": {
+      "instruction_equal": 2,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 2
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 5,
+      "e0_successes_on_scored": 3,
+      "e0_successes_target": 3,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "baseline_only_success": 2,
+        "both_success": 3
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 4,
+      "e0_successes_on_scored": 4,
+      "e0_successes_target": 4,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_success": 3,
+        "baseline_only_success": 1,
+        "e0_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "pick_diverse_bottles",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "pick_dual_bottles",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 3,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 3
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 3,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 3
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_a2b_left",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 1,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "baseline_only_success": 1,
+      "both_failure": 9
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 1,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "baseline_only_success": 1,
+        "both_failure": 4
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_a2b_right",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_bread_basket",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_bread_skillet",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_burger_fries",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_can_basket",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_cans_plasticbox",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_container_plate",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 2,
+    "e0_successes_target": 2,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 8,
+      "e0_only_success": 2
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 2,
+      "e0_successes_target": 2,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 3,
+        "e0_only_success": 2
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_dual_shoes",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_empty_cup",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 2,
+    "e0_successes_target": 2,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 8,
+      "e0_only_success": 2
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 1,
+      "e0_successes_target": 1,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 4,
+        "e0_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 1,
+      "e0_successes_target": 1,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 4,
+        "e0_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_fan",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 3,
+      "cameras_equal": 9,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 3
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 4,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    }
+  },
+  {
+    "task": "place_mouse_pad",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 2,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 2
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_object_basket",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_object_scale",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 2,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 2
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_object_stand",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "place_phone_stand",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    }
+  },
+  {
+    "task": "place_shoe",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "press_stapler",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 10,
+    "e0_successes_on_scored": 10,
+    "e0_successes_target": 10,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_success": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 5,
+      "e0_successes_on_scored": 5,
+      "e0_successes_target": 5,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_success": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 5,
+      "e0_successes_on_scored": 5,
+      "e0_successes_target": 5,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_success": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "put_bottles_dustbin",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 6,
+    "baseline_timeouts": 4,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 6,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 2,
+      "baseline_timeouts": 3,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 4,
+      "baseline_timeouts": 1,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 1,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "put_object_cabinet",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "rotate_qrcode",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 1,
+    "e0_successes_target": 1,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 9,
+      "e0_only_success": 1
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 1,
+      "e0_successes_target": 1,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 4,
+        "e0_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "scan_object",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    }
+  },
+  {
+    "task": "shake_bottle",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 6,
+    "e0_successes_on_scored": 6,
+    "e0_successes_target": 6,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "baseline_only_success": 2,
+      "both_success": 4,
+      "e0_only_success": 2,
+      "both_failure": 2
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 4,
+      "e0_successes_on_scored": 4,
+      "e0_successes_target": 4,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "baseline_only_success": 1,
+        "both_success": 3,
+        "e0_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 2,
+      "e0_successes_on_scored": 2,
+      "e0_successes_target": 2,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "e0_only_success": 1,
+        "baseline_only_success": 1,
+        "both_success": 1,
+        "both_failure": 2
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "shake_bottle_horizontally",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 6,
+    "e0_successes_on_scored": 6,
+    "e0_successes_target": 6,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "e0_only_success": 3,
+      "both_success": 3,
+      "both_failure": 1,
+      "baseline_only_success": 3
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 3,
+      "e0_successes_on_scored": 3,
+      "e0_successes_target": 3,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "e0_only_success": 1,
+        "both_success": 2,
+        "both_failure": 1,
+        "baseline_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 3,
+      "e0_successes_on_scored": 3,
+      "e0_successes_target": 3,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "baseline_only_success": 2,
+        "e0_only_success": 2,
+        "both_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "stack_blocks_three",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 3,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 3
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    }
+  },
+  {
+    "task": "stack_blocks_two",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    }
+  },
+  {
+    "task": "stack_bowls_three",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 0,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 0
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "stack_bowls_two",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 2,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 2
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 2,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 2
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "stamp_seal",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 0,
+    "e0_successes_on_scored": 0,
+    "e0_successes_target": 0,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "both_failure": 10
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 5
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  {
+    "task": "turn_switch",
+    "target": 10,
+    "scored": 10,
+    "pending": 0,
+    "baseline_successes": 8,
+    "e0_successes_on_scored": 4,
+    "e0_successes_target": 4,
+    "baseline_completed": 10,
+    "baseline_timeouts": 0,
+    "outcomes": {
+      "e0_only_success": 1,
+      "both_success": 3,
+      "baseline_only_success": 5,
+      "both_failure": 1
+    },
+    "inputs": {
+      "instruction_equal": 1,
+      "cameras_equal": 10,
+      "joints_equal": 10,
+      "recorded_policy_inputs_equal": 1
+    },
+    "clean": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 4,
+      "e0_successes_on_scored": 3,
+      "e0_successes_target": 3,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "e0_only_success": 1,
+        "both_success": 2,
+        "baseline_only_success": 2
+      },
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 0
+      }
+    },
+    "randomized": {
+      "target": 5,
+      "scored": 5,
+      "pending": 0,
+      "baseline_successes": 4,
+      "e0_successes_on_scored": 1,
+      "e0_successes_target": 1,
+      "baseline_completed": 5,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 1,
+        "baseline_only_success": 3,
+        "both_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 1,
+        "cameras_equal": 5,
+        "joints_equal": 5,
+        "recorded_policy_inputs_equal": 1
+      }
+    }
+  }
+]

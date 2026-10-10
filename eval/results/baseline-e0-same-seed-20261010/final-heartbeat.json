@@ -1,0 +1,194 @@
+{
+  "checked_at": "2026-10-10T10:04:51.089682+00:00",
+  "job_id": "5e6bb9b40356",
+  "status": "completed",
+  "counts": {
+    "planned": 88,
+    "attempted": 88,
+    "valid": 84,
+    "scored": 88,
+    "timeout_failures": 4,
+    "successes": 1,
+    "setup_errors": 0,
+    "execution_errors": 0,
+    "expert_attempts": 0,
+    "expert_rejections": 0
+  },
+  "models": [
+    {
+      "shard": 0,
+      "shard_status": "completed",
+      "server_pid": 219869,
+      "alive": false,
+      "gpu_uuid": "GPU-e671f67e-da97-128a-eb48-93b84c49c25d"
+    },
+    {
+      "shard": 1,
+      "shard_status": "completed",
+      "server_pid": 219868,
+      "alive": false,
+      "gpu_uuid": "GPU-1f87cc42-5bae-1104-eb63-f6ae441fcf84"
+    }
+  ],
+  "first_blocks": [
+    {
+      "shard": 0,
+      "task": "stamp_seal",
+      "setting": "demo_clean",
+      "seed": 100016,
+      "first_block_finite_50x14": true,
+      "prediction_trajectory_equal": true,
+      "instruction": "Stamp Silver after grabbing the rectangular stone seal with engraved top.",
+      "dual_video_logs_started": true
+    },
+    {
+      "shard": 1,
+      "task": "turn_switch",
+      "setting": "demo_randomized",
+      "seed": 100016,
+      "first_block_finite_50x14": true,
+      "prediction_trajectory_equal": true,
+      "instruction": "Press the beige switch with darker brown top using the right arm",
+      "dual_video_logs_started": true
+    }
+  ],
+  "previously_verified": 80,
+  "new_completed_policy_checks": [
+    {
+      "episode": "stack_bowls_three/demo_randomized/100023",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18576,
+          "bytes": 13797727,
+          "duration_seconds": 1857.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18576,
+          "bytes": 18173380,
+          "duration_seconds": 1857.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "stack_bowls_three/demo_randomized/100024",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18406,
+          "bytes": 13571969,
+          "duration_seconds": 1840.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18406,
+          "bytes": 17843522,
+          "duration_seconds": 1840.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "stamp_seal/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6263,
+          "bytes": 5309738,
+          "duration_seconds": 626.3,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6263,
+          "bytes": 6238794,
+          "duration_seconds": 626.3,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    },
+    {
+      "episode": "stamp_seal/demo_clean/100016",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6399,
+          "bytes": 5243738,
+          "duration_seconds": 639.9,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6399,
+          "bytes": 6611615,
+          "duration_seconds": 639.9,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  ],
+  "timeout_checks": [
+    {
+      "episode": "put_bottles_dustbin/demo_clean/100015",
+      "passed": true,
+      "score": 0,
+      "completed_policy": false,
+      "partial_evidence_sha256_verified": true
+    },
+    {
+      "episode": "put_bottles_dustbin/demo_clean/100016",
+      "passed": true,
+      "score": 0,
+      "completed_policy": false,
+      "partial_evidence_sha256_verified": true
+    },
+    {
+      "episode": "put_bottles_dustbin/demo_clean/100017",
+      "passed": true,
+      "score": 0,
+      "completed_policy": false,
+      "partial_evidence_sha256_verified": true
+    },
+    {
+      "episode": "put_bottles_dustbin/demo_randomized/100021",
+      "passed": true,
+      "score": 0,
+      "completed_policy": false,
+      "partial_evidence_sha256_verified": true
+    }
+  ],
+  "fixed_plan_88_unchanged": true,
+  "historical_record_files_unchanged": 21,
+  "disk_free_bytes": 205167525888,
+  "issues": [],
+  "passed": true,
+  "scope": "No model or simulation calls. Incremental actions, recording metadata, shared clocks, terminal RGB and preserved source records."
+}

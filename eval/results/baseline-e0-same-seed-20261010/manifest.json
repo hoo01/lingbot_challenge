@@ -1,0 +1,42 @@
+[
+  {
+    "name": "summary.json",
+    "bytes": 7167,
+    "sha256": "4327c4c45261d92d397e4be8c5e000362b860d081a6f90b1123e5dc528e70805"
+  },
+  {
+    "name": "comparisons.json",
+    "bytes": 2419672,
+    "sha256": "8e5935676a82c5868102a9dc430c85c2f7dee02712fa18abf95d1c7a4bef8e7b"
+  },
+  {
+    "name": "by-task.json",
+    "bytes": 69005,
+    "sha256": "ef22feae90074fe7421e5962d7bf725c39f8400ca1b12e442fc1bed4d12ae9dc"
+  },
+  {
+    "name": "verification.json",
+    "bytes": 2831,
+    "sha256": "7c3ac7b4552bbca5cd2a35ccf40df87d1d9c893bc455a7adeb6597c1c03878fe"
+  },
+  {
+    "name": "timeouts.json",
+    "bytes": 41387,
+    "sha256": "b7ed3ebcca36d1fced892d618c0777fa2f68e9be2eff2bfc3915baf34067eaa1"
+  },
+  {
+    "name": "excluded-old-88.json",
+    "bytes": 9940,
+    "sha256": "85f89103dc5ca26c1399bec83f0cf6e57eef57ce9f195904b861639597f7892a"
+  },
+  {
+    "name": "new-candidate-records.json",
+    "bytes": 382344,
+    "sha256": "1872555023e8f3269a9615a27b50ef30cd542dc88eb8f7b601a1e2066b4c2d60"
+  },
+  {
+    "name": "acceptance-checks.json",
+    "bytes": 75393,
+    "sha256": "2821e682b595488af9efed2994003a234d0ca0adf0a3e782c70e3ccfa09cf922"
+  }
+]

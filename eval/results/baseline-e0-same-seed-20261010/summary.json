@@ -1,0 +1,255 @@
+{
+  "checked_at": "2026-10-10T10:06:27.617763+00:00",
+  "final": true,
+  "supplement_status": "completed",
+  "overall": {
+    "target": 500,
+    "scored": 500,
+    "pending": 0,
+    "baseline_successes": 49,
+    "e0_successes_on_scored": 54,
+    "e0_successes_target": 54,
+    "baseline_completed": 496,
+    "baseline_timeouts": 4,
+    "outcomes": {
+      "both_failure": 425,
+      "e0_only_success": 26,
+      "both_success": 28,
+      "baseline_only_success": 21
+    },
+    "inputs": {
+      "instruction_equal": 50,
+      "cameras_equal": 490,
+      "joints_equal": 500,
+      "recorded_policy_inputs_equal": 50
+    }
+  },
+  "settings": {
+    "demo_clean": {
+      "target": 250,
+      "scored": 250,
+      "pending": 0,
+      "baseline_successes": 26,
+      "e0_successes_on_scored": 33,
+      "e0_successes_target": 33,
+      "baseline_completed": 247,
+      "baseline_timeouts": 3,
+      "outcomes": {
+        "both_failure": 208,
+        "e0_only_success": 16,
+        "both_success": 17,
+        "baseline_only_success": 9
+      },
+      "inputs": {
+        "instruction_equal": 39,
+        "cameras_equal": 250,
+        "joints_equal": 250,
+        "recorded_policy_inputs_equal": 39
+      }
+    },
+    "demo_randomized": {
+      "target": 250,
+      "scored": 250,
+      "pending": 0,
+      "baseline_successes": 23,
+      "e0_successes_on_scored": 21,
+      "e0_successes_target": 21,
+      "baseline_completed": 249,
+      "baseline_timeouts": 1,
+      "outcomes": {
+        "both_failure": 217,
+        "baseline_only_success": 12,
+        "e0_only_success": 10,
+        "both_success": 11
+      },
+      "inputs": {
+        "instruction_equal": 11,
+        "cameras_equal": 240,
+        "joints_equal": 250,
+        "recorded_policy_inputs_equal": 11
+      }
+    }
+  },
+  "source_subsets": {
+    "retained_412": {
+      "target": 412,
+      "scored": 412,
+      "pending": 0,
+      "baseline_successes": 48,
+      "e0_successes_on_scored": 52,
+      "e0_successes_target": 52,
+      "baseline_completed": 412,
+      "baseline_timeouts": 0,
+      "outcomes": {
+        "both_failure": 340,
+        "e0_only_success": 24,
+        "both_success": 28,
+        "baseline_only_success": 20
+      },
+      "inputs": {
+        "instruction_equal": 43,
+        "cameras_equal": 405,
+        "joints_equal": 412,
+        "recorded_policy_inputs_equal": 43
+      }
+    },
+    "supplement_88": {
+      "target": 88,
+      "scored": 88,
+      "pending": 0,
+      "baseline_successes": 1,
+      "e0_successes_on_scored": 2,
+      "e0_successes_target": 2,
+      "baseline_completed": 84,
+      "baseline_timeouts": 4,
+      "outcomes": {
+        "both_failure": 85,
+        "e0_only_success": 2,
+        "baseline_only_success": 1
+      },
+      "inputs": {
+        "instruction_equal": 7,
+        "cameras_equal": 85,
+        "joints_equal": 88,
+        "recorded_policy_inputs_equal": 7
+      }
+    },
+    "pending_supplement": {
+      "target": 0,
+      "scored": 0,
+      "pending": 0,
+      "baseline_successes": 0,
+      "e0_successes_on_scored": 0,
+      "e0_successes_target": 0,
+      "baseline_completed": 0,
+      "baseline_timeouts": 0,
+      "outcomes": {},
+      "inputs": {
+        "instruction_equal": 0,
+        "cameras_equal": 0,
+        "joints_equal": 0,
+        "recorded_policy_inputs_equal": 0
+      }
+    }
+  },
+  "supplement_created": "2026-10-09T18:19:22.120423+00:00",
+  "supplement_updated": "2026-10-10T10:02:04.044450+00:00",
+  "supplement_report": {
+    "planned": 88,
+    "attempted": 88,
+    "protocol_stages": {
+      "legacy_screening": {
+        "attempted": 52,
+        "valid": 52,
+        "successes": 0,
+        "expert_rejections": 0,
+        "setup_errors": 0,
+        "forced_policy": 0,
+        "expert_exceptions": 0,
+        "timeout_failures": 0
+      },
+      "wall900_zero_continue_v1": {
+        "attempted": 36,
+        "valid": 32,
+        "successes": 1,
+        "expert_rejections": 0,
+        "setup_errors": 0,
+        "forced_policy": 0,
+        "expert_exceptions": 0,
+        "timeout_failures": 4
+      }
+    },
+    "completion_basis": "attempted",
+    "valid": 84,
+    "scored": 88,
+    "timeout_failures": 4,
+    "successes": 1,
+    "success_rate": 0.011363636363636364,
+    "setup_errors": 0,
+    "expert_attempts": 0,
+    "expert_rejections": 0,
+    "expert_exceptions": 0,
+    "resolved_original_expert_errors": 0,
+    "execution_errors": 0,
+    "record_error": null,
+    "historical_interruptions": 2,
+    "historical_execution_attempts": [
+      {
+        "task": "put_bottles_dustbin",
+        "setting": "demo_clean",
+        "seed": 100015,
+        "kind": "episode_wall_timeout",
+        "time": "2026-10-09T21:07:51.382769+00:00",
+        "error": "TimeoutError('Episode exceeded 900s; PID 215086')",
+        "counts_as_attempt": false,
+        "counted_in_candidate_records": true,
+        "disposition": "Original interruption retained; separately scored zero without retry"
+      },
+      {
+        "task": "place_phone_stand",
+        "setting": "demo_clean",
+        "seed": 100016,
+        "kind": "sibling_cancelled_before_candidate",
+        "counts_as_attempt": false,
+        "time": "2026-10-09T21:07:55.048246+00:00",
+        "note": "Previous result was fully recorded; next candidate never started"
+      }
+    ],
+    "historical_runtime_errors": 0,
+    "historical_timeouts": 1,
+    "actual_attempts": 88,
+    "settings": {
+      "demo_clean": {
+        "macro_success_rate": 0.0,
+        "tasks_with_valid_episodes": 22,
+        "tasks_planned": 22,
+        "complete": true
+      },
+      "demo_randomized": {
+        "macro_success_rate": 0.04,
+        "tasks_with_valid_episodes": 25,
+        "tasks_planned": 25,
+        "complete": true
+      }
+    },
+    "progress": {
+      "event": "episode_recorded",
+      "time": "2026-10-10T10:01:59.704713+00:00",
+      "task": "stamp_seal",
+      "setting": "demo_clean",
+      "seed": 100016,
+      "status": "policy_completed",
+      "shard": 0
+    }
+  },
+  "historical_interruptions": [
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_clean",
+      "seed": 100015,
+      "kind": "episode_wall_timeout",
+      "time": "2026-10-09T21:07:51.382769+00:00",
+      "error": "TimeoutError('Episode exceeded 900s; PID 215086')",
+      "counts_as_attempt": false,
+      "counted_in_candidate_records": true,
+      "disposition": "Original interruption retained; separately scored zero without retry"
+    },
+    {
+      "task": "place_phone_stand",
+      "setting": "demo_clean",
+      "seed": 100016,
+      "kind": "sibling_cancelled_before_candidate",
+      "counts_as_attempt": false,
+      "time": "2026-10-09T21:07:55.048246+00:00",
+      "note": "Previous result was fully recorded; next candidate never started"
+    }
+  ],
+  "supplement_model_process_segments": 2,
+  "prior_rng_restored": false,
+  "baseline_recording_counts": {
+    "head_video": 139,
+    "observer_video": 88,
+    "explicitly_not_recorded": 361
+  },
+  "scope": "Same task/setting/seed development comparison; not matched instructions, all initial images, norm, model RNG, precision or expert protocol; wall900 timeouts score zero separately."
+}

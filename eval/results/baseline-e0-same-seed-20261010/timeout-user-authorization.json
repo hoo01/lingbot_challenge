@@ -1,0 +1,15 @@
+{
+  "job_id": "5e6bb9b40356",
+  "user_reply": "那你继续 不要停下啊",
+  "context": "User asked why exceeding 900s was not counted as failure; after the distinction was explained, requested continuation.",
+  "applied_interpretation": "Preserve 900s; settle current and future wall-clock timeouts as separate zero-score attempts and continue fixed scenes, without retry or seed replacement.",
+  "interpretation_announced": "保留900秒上限，把这次超时记为该回合失败，不重跑它，接着跑剩余35个固定场景。",
+  "keep_stall_timeout_seconds": 240,
+  "episode_timeout_seconds": 900,
+  "no_1500_extension": true,
+  "new_job": false,
+  "preserve_completed": 52,
+  "settle_timeout_zero": 1,
+  "remaining_unstarted": 35,
+  "do_not_claim_timeouts_policy_completed": true
+}

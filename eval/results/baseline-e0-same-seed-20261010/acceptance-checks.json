@@ -1,0 +1,2438 @@
+{
+  "adjust_bottle/demo_clean/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "adjust_bottle/demo_clean/100016",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6363,
+          "bytes": 5464140,
+          "duration_seconds": 636.3,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6363,
+          "bytes": 6368883,
+          "duration_seconds": 636.3,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "beat_block_hammer/demo_randomized/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "beat_block_hammer/demo_randomized/100015",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6452,
+          "bytes": 5795381,
+          "duration_seconds": 645.2,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6452,
+          "bytes": 6349126,
+          "duration_seconds": 645.2,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "click_alarmclock/demo_randomized/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "click_alarmclock/demo_randomized/100015",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6224,
+          "bytes": 4854060,
+          "duration_seconds": 622.4,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6224,
+          "bytes": 6362538,
+          "duration_seconds": 622.4,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "dump_bin_bigbin/demo_randomized/100020": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "dump_bin_bigbin/demo_randomized/100020",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 9242,
+          "bytes": 6686130,
+          "duration_seconds": 924.2,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 9242,
+          "bytes": 11236752,
+          "duration_seconds": 924.2,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "handover_block/demo_clean/100035": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "handover_block/demo_clean/100035",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 12543,
+          "bytes": 10487434,
+          "duration_seconds": 1254.3,
+          "terminal_action_count": 800,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 12543,
+          "bytes": 12778753,
+          "duration_seconds": 1254.3,
+          "terminal_action_count": 800,
+          "passed": true
+        }
+      },
+      "actions": 800,
+      "action_blocks": 16,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "handover_block/demo_randomized/100018": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "handover_block/demo_randomized/100018",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 12659,
+          "bytes": 9012896,
+          "duration_seconds": 1265.9,
+          "terminal_action_count": 800,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 12659,
+          "bytes": 13161698,
+          "duration_seconds": 1265.9,
+          "terminal_action_count": 800,
+          "passed": true
+        }
+      },
+      "actions": 800,
+      "action_blocks": 16,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "handover_mic/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "handover_mic/demo_clean/100015",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 9326,
+          "bytes": 7095877,
+          "duration_seconds": 932.6,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 9326,
+          "bytes": 9440022,
+          "duration_seconds": 932.6,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "hanging_mug/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "hanging_mug/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 13597,
+          "bytes": 11255931,
+          "duration_seconds": 1359.7,
+          "terminal_action_count": 900,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 13597,
+          "bytes": 13658902,
+          "duration_seconds": 1359.7,
+          "terminal_action_count": 900,
+          "passed": true
+        }
+      },
+      "actions": 900,
+      "action_blocks": 18,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "hanging_mug/demo_randomized/100018": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "hanging_mug/demo_randomized/100018",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 13968,
+          "bytes": 10169350,
+          "duration_seconds": 1396.8,
+          "terminal_action_count": 900,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 13968,
+          "bytes": 12883741,
+          "duration_seconds": 1396.8,
+          "terminal_action_count": 900,
+          "passed": true
+        }
+      },
+      "actions": 900,
+      "action_blocks": 18,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "hanging_mug/demo_randomized/100023": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "hanging_mug/demo_randomized/100023",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 13978,
+          "bytes": 9277131,
+          "duration_seconds": 1397.8,
+          "terminal_action_count": 900,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 13978,
+          "bytes": 12550750,
+          "duration_seconds": 1397.8,
+          "terminal_action_count": 900,
+          "passed": true
+        }
+      },
+      "actions": 900,
+      "action_blocks": 18,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "hanging_mug/demo_randomized/100024": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "hanging_mug/demo_randomized/100024",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 13739,
+          "bytes": 11099811,
+          "duration_seconds": 1373.9,
+          "terminal_action_count": 900,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 13739,
+          "bytes": 13664785,
+          "duration_seconds": 1373.9,
+          "terminal_action_count": 900,
+          "passed": true
+        }
+      },
+      "actions": 900,
+      "action_blocks": 18,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "lift_pot/demo_clean/100019": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "lift_pot/demo_clean/100019",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6323,
+          "bytes": 5267641,
+          "duration_seconds": 632.3,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6323,
+          "bytes": 6222148,
+          "duration_seconds": 632.3,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "lift_pot/demo_clean/100020": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "lift_pot/demo_clean/100020",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6223,
+          "bytes": 6105474,
+          "duration_seconds": 622.3,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6223,
+          "bytes": 7154429,
+          "duration_seconds": 622.3,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "lift_pot/demo_clean/100022": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "lift_pot/demo_clean/100022",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6156,
+          "bytes": 5303870,
+          "duration_seconds": 615.6,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6156,
+          "bytes": 6105391,
+          "duration_seconds": 615.6,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "lift_pot/demo_randomized/100021": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "lift_pot/demo_randomized/100021",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6035,
+          "bytes": 4922771,
+          "duration_seconds": 603.5,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6035,
+          "bytes": 7064327,
+          "duration_seconds": 603.5,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "lift_pot/demo_randomized/100022": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "lift_pot/demo_randomized/100022",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6061,
+          "bytes": 4610351,
+          "duration_seconds": 606.1,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6061,
+          "bytes": 5862776,
+          "duration_seconds": 606.1,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "lift_pot/demo_randomized/100023": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "lift_pot/demo_randomized/100023",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6484,
+          "bytes": 5144871,
+          "duration_seconds": 648.4,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6484,
+          "bytes": 6350688,
+          "duration_seconds": 648.4,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "move_pillbottle_pad/demo_clean/100030": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "move_pillbottle_pad/demo_clean/100030",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6388,
+          "bytes": 5373082,
+          "duration_seconds": 638.8,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6388,
+          "bytes": 6638115,
+          "duration_seconds": 638.8,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "move_pillbottle_pad/demo_clean/100035": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "move_pillbottle_pad/demo_clean/100035",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6209,
+          "bytes": 5597888,
+          "duration_seconds": 620.9,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6209,
+          "bytes": 6880300,
+          "duration_seconds": 620.9,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "move_pillbottle_pad/demo_randomized/100017": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "move_pillbottle_pad/demo_randomized/100017",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6599,
+          "bytes": 5963292,
+          "duration_seconds": 659.9,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6599,
+          "bytes": 8407411,
+          "duration_seconds": 659.9,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "move_stapler_pad/demo_randomized/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "move_stapler_pad/demo_randomized/100016",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6326,
+          "bytes": 4369694,
+          "duration_seconds": 632.6,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6326,
+          "bytes": 5359240,
+          "duration_seconds": 632.6,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "open_laptop/demo_randomized/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "open_laptop/demo_randomized/100016",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10645,
+          "bytes": 7015867,
+          "duration_seconds": 1064.5,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10645,
+          "bytes": 9264250,
+          "duration_seconds": 1064.5,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "pick_diverse_bottles/demo_clean/100022": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "pick_diverse_bottles/demo_clean/100022",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6273,
+          "bytes": 7337012,
+          "duration_seconds": 627.3,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6273,
+          "bytes": 7696377,
+          "duration_seconds": 627.3,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "pick_diverse_bottles/demo_randomized/100026": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "pick_diverse_bottles/demo_randomized/100026",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6198,
+          "bytes": 7115870,
+          "duration_seconds": 619.8,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6198,
+          "bytes": 9482079,
+          "duration_seconds": 619.8,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "pick_diverse_bottles/demo_randomized/100027": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "pick_diverse_bottles/demo_randomized/100027",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6364,
+          "bytes": 5216000,
+          "duration_seconds": 636.4,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6364,
+          "bytes": 8031365,
+          "duration_seconds": 636.4,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_a2b_left/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_a2b_left/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6391,
+          "bytes": 5991993,
+          "duration_seconds": 639.1,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6391,
+          "bytes": 6337735,
+          "duration_seconds": 639.1,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_a2b_right/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_a2b_right/demo_clean/100015",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6464,
+          "bytes": 5440511,
+          "duration_seconds": 646.4,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6464,
+          "bytes": 6255260,
+          "duration_seconds": 646.4,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_a2b_right/demo_clean/100017": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_a2b_right/demo_clean/100017",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6236,
+          "bytes": 5070208,
+          "duration_seconds": 623.6,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6236,
+          "bytes": 6121377,
+          "duration_seconds": 623.6,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_a2b_right/demo_randomized/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_a2b_right/demo_randomized/100015",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6095,
+          "bytes": 4727876,
+          "duration_seconds": 609.5,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6095,
+          "bytes": 6247294,
+          "duration_seconds": 609.5,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_bread_basket/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_bread_basket/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10858,
+          "bytes": 9841152,
+          "duration_seconds": 1085.8,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10858,
+          "bytes": 11109328,
+          "duration_seconds": 1085.8,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_bread_basket/demo_clean/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_bread_basket/demo_clean/100016",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10528,
+          "bytes": 10427205,
+          "duration_seconds": 1052.8,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10528,
+          "bytes": 10772682,
+          "duration_seconds": 1052.8,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_bread_skillet/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_bread_skillet/demo_clean/100015",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 8025,
+          "bytes": 7203326,
+          "duration_seconds": 802.5,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 8025,
+          "bytes": 8265299,
+          "duration_seconds": 802.5,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_bread_skillet/demo_clean/100018": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_bread_skillet/demo_clean/100018",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 7851,
+          "bytes": 6275605,
+          "duration_seconds": 785.1,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 7851,
+          "bytes": 8195692,
+          "duration_seconds": 785.1,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_bread_skillet/demo_randomized/100017": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_bread_skillet/demo_randomized/100017",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 7804,
+          "bytes": 5911490,
+          "duration_seconds": 780.4,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 7804,
+          "bytes": 7600191,
+          "duration_seconds": 780.4,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_bread_skillet/demo_randomized/100022": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_bread_skillet/demo_randomized/100022",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 7855,
+          "bytes": 5429583,
+          "duration_seconds": 785.5,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 7855,
+          "bytes": 8658859,
+          "duration_seconds": 785.5,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_bread_skillet/demo_randomized/100027": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_bread_skillet/demo_randomized/100027",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 7703,
+          "bytes": 6374211,
+          "duration_seconds": 770.3,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 7703,
+          "bytes": 9077548,
+          "duration_seconds": 770.3,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_cans_plasticbox/demo_randomized/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_cans_plasticbox/demo_randomized/100015",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 12801,
+          "bytes": 9373578,
+          "duration_seconds": 1280.1,
+          "terminal_action_count": 800,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 12801,
+          "bytes": 12209243,
+          "duration_seconds": 1280.1,
+          "terminal_action_count": 800,
+          "passed": true
+        }
+      },
+      "actions": 800,
+      "action_blocks": 16,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_container_plate/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_container_plate/demo_clean/100015",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 5818,
+          "bytes": 5178059,
+          "duration_seconds": 581.8,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 5818,
+          "bytes": 5827588,
+          "duration_seconds": 581.8,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_container_plate/demo_randomized/100018": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_container_plate/demo_randomized/100018",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6403,
+          "bytes": 4792098,
+          "duration_seconds": 640.3,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6403,
+          "bytes": 6015596,
+          "duration_seconds": 640.3,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_container_plate/demo_randomized/100020": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_container_plate/demo_randomized/100020",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6184,
+          "bytes": 5957791,
+          "duration_seconds": 618.4,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6184,
+          "bytes": 8496038,
+          "duration_seconds": 618.4,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_dual_shoes/demo_clean/100019": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_dual_shoes/demo_clean/100019",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 9244,
+          "bytes": 7739154,
+          "duration_seconds": 924.4,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 9244,
+          "bytes": 9395647,
+          "duration_seconds": 924.4,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_dual_shoes/demo_clean/100021": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_dual_shoes/demo_clean/100021",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 9329,
+          "bytes": 8891118,
+          "duration_seconds": 932.9,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 9329,
+          "bytes": 9335561,
+          "duration_seconds": 932.9,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_dual_shoes/demo_randomized/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_dual_shoes/demo_randomized/100015",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 9336,
+          "bytes": 6503249,
+          "duration_seconds": 933.6,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 9336,
+          "bytes": 8649885,
+          "duration_seconds": 933.6,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_dual_shoes/demo_randomized/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-210020.json",
+    "receipt_sha256": "fee4b501fe36dfa7ede9ade9411f027ac7cc3dcee58a59a65e4f764e23e1302a",
+    "check": {
+      "episode": "place_dual_shoes/demo_randomized/100016",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 9292,
+          "bytes": 5755247,
+          "duration_seconds": 929.2,
+          "terminal_action_count": 600,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 9292,
+          "bytes": 7995466,
+          "duration_seconds": 929.2,
+          "terminal_action_count": 600,
+          "passed": true
+        }
+      },
+      "actions": 600,
+      "action_blocks": 12,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_fan/demo_randomized/100019": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_fan/demo_randomized/100019",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 5947,
+          "bytes": 13762680,
+          "duration_seconds": 594.7,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 5947,
+          "bytes": 21225171,
+          "duration_seconds": 594.7,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_object_basket/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-210020.json",
+    "receipt_sha256": "fee4b501fe36dfa7ede9ade9411f027ac7cc3dcee58a59a65e4f764e23e1302a",
+    "check": {
+      "episode": "place_object_basket/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10865,
+          "bytes": 10339343,
+          "duration_seconds": 1086.5,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10865,
+          "bytes": 11040396,
+          "duration_seconds": 1086.5,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_object_scale/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_object_scale/demo_clean/100015",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6345,
+          "bytes": 4936753,
+          "duration_seconds": 634.5,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6345,
+          "bytes": 6364303,
+          "duration_seconds": 634.5,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_object_scale/demo_clean/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_object_scale/demo_clean/100016",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6254,
+          "bytes": 6666562,
+          "duration_seconds": 625.4,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6254,
+          "bytes": 6746664,
+          "duration_seconds": 625.4,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_object_scale/demo_randomized/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+    "receipt_sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47",
+    "check": {
+      "episode": "place_object_scale/demo_randomized/100015",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6462,
+          "bytes": 5533444,
+          "duration_seconds": 646.2,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6462,
+          "bytes": 6597976,
+          "duration_seconds": 646.2,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_object_scale/demo_randomized/100017": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-210020.json",
+    "receipt_sha256": "fee4b501fe36dfa7ede9ade9411f027ac7cc3dcee58a59a65e4f764e23e1302a",
+    "check": {
+      "episode": "place_object_scale/demo_randomized/100017",
+      "shard": 1,
+      "artifact_root": "shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6187,
+          "bytes": 4914274,
+          "duration_seconds": 618.7,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6187,
+          "bytes": 6331748,
+          "duration_seconds": 618.7,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_phone_stand/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-234642.json",
+    "receipt_sha256": "aca5cc76ebd6f7c6a24069dc415de305d22b39b28b7b41c57c6b49a2d8a8a29d",
+    "check": {
+      "episode": "place_phone_stand/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6128,
+          "bytes": 4490051,
+          "duration_seconds": 612.8,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6128,
+          "bytes": 5838322,
+          "duration_seconds": 612.8,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "place_phone_stand/demo_clean/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-234642.json",
+    "receipt_sha256": "aca5cc76ebd6f7c6a24069dc415de305d22b39b28b7b41c57c6b49a2d8a8a29d",
+    "check": {
+      "episode": "place_phone_stand/demo_clean/100016",
+      "shard": 0,
+      "artifact_root": "shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6163,
+          "bytes": 4825431,
+          "duration_seconds": 616.3,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6163,
+          "bytes": 6197214,
+          "duration_seconds": 616.3,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 11064,
+          "bytes": 10627914,
+          "duration_seconds": 1106.4,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 11064,
+          "bytes": 8931745,
+          "duration_seconds": 1106.4,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_clean/100020": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_clean/100020",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10389,
+          "bytes": 7847266,
+          "duration_seconds": 1038.9,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10389,
+          "bytes": 8154006,
+          "duration_seconds": 1038.9,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_clean/100025": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_clean/100025",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10993,
+          "bytes": 9476588,
+          "duration_seconds": 1099.3,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10993,
+          "bytes": 9004961,
+          "duration_seconds": 1099.3,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_clean/100026": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_clean/100026",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10983,
+          "bytes": 9501201,
+          "duration_seconds": 1098.3,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10983,
+          "bytes": 9174546,
+          "duration_seconds": 1098.3,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_clean/100030": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_clean/100030",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10278,
+          "bytes": 9059499,
+          "duration_seconds": 1027.8,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10278,
+          "bytes": 7743473,
+          "duration_seconds": 1027.8,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_randomized/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_randomized/100016",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 11133,
+          "bytes": 7200287,
+          "duration_seconds": 1113.3,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 11133,
+          "bytes": 8220794,
+          "duration_seconds": 1113.3,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_randomized/100021": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_randomized/100021",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10657,
+          "bytes": 8721231,
+          "duration_seconds": 1065.7,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10657,
+          "bytes": 8847200,
+          "duration_seconds": 1065.7,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_randomized/100026": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_randomized/100026",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10840,
+          "bytes": 9990999,
+          "duration_seconds": 1084.0,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10840,
+          "bytes": 9019874,
+          "duration_seconds": 1084.0,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_randomized/100032": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_randomized/100032",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 11070,
+          "bytes": 9705196,
+          "duration_seconds": 1107.0,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 11070,
+          "bytes": 9471521,
+          "duration_seconds": 1107.0,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "put_object_cabinet/demo_randomized/100038": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "put_object_cabinet/demo_randomized/100038",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 10650,
+          "bytes": 7609484,
+          "duration_seconds": 1065.0,
+          "terminal_action_count": 700,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 10650,
+          "bytes": 8923918,
+          "duration_seconds": 1065.0,
+          "terminal_action_count": 700,
+          "passed": true
+        }
+      },
+      "actions": 700,
+      "action_blocks": 14,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "rotate_qrcode/demo_randomized/100017": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "rotate_qrcode/demo_randomized/100017",
+      "shard": 1,
+      "artifact_root": "segments/timeout-zero-20261010/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6211,
+          "bytes": 5511954,
+          "duration_seconds": 621.1,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6211,
+          "bytes": 6230635,
+          "duration_seconds": 621.1,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "scan_object/demo_clean/100019": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "scan_object/demo_clean/100019",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 8106,
+          "bytes": 8446850,
+          "duration_seconds": 810.6,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 8106,
+          "bytes": 8960234,
+          "duration_seconds": 810.6,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "scan_object/demo_clean/100024": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "scan_object/demo_clean/100024",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 7600,
+          "bytes": 5984363,
+          "duration_seconds": 760.0,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 7600,
+          "bytes": 7373108,
+          "duration_seconds": 760.0,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "scan_object/demo_clean/100029": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "scan_object/demo_clean/100029",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 7974,
+          "bytes": 6283622,
+          "duration_seconds": 797.4,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 7974,
+          "bytes": 7881797,
+          "duration_seconds": 797.4,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "scan_object/demo_clean/100034": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "scan_object/demo_clean/100034",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 7988,
+          "bytes": 8690764,
+          "duration_seconds": 798.8,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 7988,
+          "bytes": 8469520,
+          "duration_seconds": 798.8,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "scan_object/demo_randomized/100020": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "scan_object/demo_randomized/100020",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 7242,
+          "bytes": 4842691,
+          "duration_seconds": 724.2,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 7242,
+          "bytes": 7860199,
+          "duration_seconds": 724.2,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "scan_object/demo_randomized/100025": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "scan_object/demo_randomized/100025",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 8005,
+          "bytes": 5914445,
+          "duration_seconds": 800.5,
+          "terminal_action_count": 500,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 8005,
+          "bytes": 7471858,
+          "duration_seconds": 800.5,
+          "terminal_action_count": 500,
+          "passed": true
+        }
+      },
+      "actions": 500,
+      "action_blocks": 10,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_blocks_three/demo_randomized/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "stack_blocks_three/demo_randomized/100015",
+      "shard": 1,
+      "artifact_root": "segments/timeout-zero-20261010/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18721,
+          "bytes": 14295352,
+          "duration_seconds": 1872.1,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18721,
+          "bytes": 18237932,
+          "duration_seconds": 1872.1,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_three/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "stack_bowls_three/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18786,
+          "bytes": 15451963,
+          "duration_seconds": 1878.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18786,
+          "bytes": 19194076,
+          "duration_seconds": 1878.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_three/demo_clean/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "stack_bowls_three/demo_clean/100016",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18494,
+          "bytes": 14298935,
+          "duration_seconds": 1849.4,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18494,
+          "bytes": 17634281,
+          "duration_seconds": 1849.4,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_three/demo_clean/100017": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "stack_bowls_three/demo_clean/100017",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18220,
+          "bytes": 14669127,
+          "duration_seconds": 1822.0,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18220,
+          "bytes": 18186009,
+          "duration_seconds": 1822.0,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_three/demo_clean/100020": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "stack_bowls_three/demo_clean/100020",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18225,
+          "bytes": 13309992,
+          "duration_seconds": 1822.5,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18225,
+          "bytes": 17938907,
+          "duration_seconds": 1822.5,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_three/demo_randomized/100021": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092831.json",
+    "receipt_sha256": "a4c11759b791f3d3f39e6718782666cf473ca495921299032bcb76ab98189fb0",
+    "check": {
+      "episode": "stack_bowls_three/demo_randomized/100021",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18373,
+          "bytes": 11064342,
+          "duration_seconds": 1837.3,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18373,
+          "bytes": 18658798,
+          "duration_seconds": 1837.3,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_three/demo_randomized/100023": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-100451.json",
+    "receipt_sha256": "d6a796c18855dc9a74680b76d5aa70e2566b5771264bb2ed8364d48aee4e6333",
+    "check": {
+      "episode": "stack_bowls_three/demo_randomized/100023",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18576,
+          "bytes": 13797727,
+          "duration_seconds": 1857.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18576,
+          "bytes": 18173380,
+          "duration_seconds": 1857.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_three/demo_randomized/100024": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-100451.json",
+    "receipt_sha256": "d6a796c18855dc9a74680b76d5aa70e2566b5771264bb2ed8364d48aee4e6333",
+    "check": {
+      "episode": "stack_bowls_three/demo_randomized/100024",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 18406,
+          "bytes": 13571969,
+          "duration_seconds": 1840.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 18406,
+          "bytes": 17843522,
+          "duration_seconds": 1840.6,
+          "terminal_action_count": 1200,
+          "passed": true
+        }
+      },
+      "actions": 1200,
+      "action_blocks": 24,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_two/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "stack_bowls_two/demo_clean/100015",
+      "shard": 1,
+      "artifact_root": "segments/timeout-zero-20261010/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 14402,
+          "bytes": 12464378,
+          "duration_seconds": 1440.2,
+          "terminal_action_count": 900,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 14402,
+          "bytes": 14886200,
+          "duration_seconds": 1440.2,
+          "terminal_action_count": 900,
+          "passed": true
+        }
+      },
+      "actions": 900,
+      "action_blocks": 18,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_two/demo_clean/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "stack_bowls_two/demo_clean/100016",
+      "shard": 1,
+      "artifact_root": "segments/timeout-zero-20261010/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 13512,
+          "bytes": 11803108,
+          "duration_seconds": 1351.2,
+          "terminal_action_count": 900,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 13512,
+          "bytes": 13371704,
+          "duration_seconds": 1351.2,
+          "terminal_action_count": 900,
+          "passed": true
+        }
+      },
+      "actions": 900,
+      "action_blocks": 18,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_two/demo_clean/100017": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "stack_bowls_two/demo_clean/100017",
+      "shard": 1,
+      "artifact_root": "segments/timeout-zero-20261010/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 13744,
+          "bytes": 10830552,
+          "duration_seconds": 1374.4,
+          "terminal_action_count": 900,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 13744,
+          "bytes": 13368884,
+          "duration_seconds": 1374.4,
+          "terminal_action_count": 900,
+          "passed": true
+        }
+      },
+      "actions": 900,
+      "action_blocks": 18,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stack_bowls_two/demo_randomized/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "stack_bowls_two/demo_randomized/100016",
+      "shard": 1,
+      "artifact_root": "segments/timeout-zero-20261010/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 13422,
+          "bytes": 8250387,
+          "duration_seconds": 1342.2,
+          "terminal_action_count": 900,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 13422,
+          "bytes": 11845418,
+          "duration_seconds": 1342.2,
+          "terminal_action_count": 900,
+          "passed": true
+        }
+      },
+      "actions": 900,
+      "action_blocks": 18,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stamp_seal/demo_clean/100015": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-100451.json",
+    "receipt_sha256": "d6a796c18855dc9a74680b76d5aa70e2566b5771264bb2ed8364d48aee4e6333",
+    "check": {
+      "episode": "stamp_seal/demo_clean/100015",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6263,
+          "bytes": 5309738,
+          "duration_seconds": 626.3,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6263,
+          "bytes": 6238794,
+          "duration_seconds": 626.3,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "stamp_seal/demo_clean/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-100451.json",
+    "receipt_sha256": "d6a796c18855dc9a74680b76d5aa70e2566b5771264bb2ed8364d48aee4e6333",
+    "check": {
+      "episode": "stamp_seal/demo_clean/100016",
+      "shard": 0,
+      "artifact_root": "segments/timeout-zero-20261010/shards/0/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 6399,
+          "bytes": 5243738,
+          "duration_seconds": 639.9,
+          "terminal_action_count": 400,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 6399,
+          "bytes": 6611615,
+          "duration_seconds": 639.9,
+          "terminal_action_count": 400,
+          "passed": true
+        }
+      },
+      "actions": 400,
+      "action_blocks": 8,
+      "actions_passed": true,
+      "passed": true
+    }
+  },
+  "turn_switch/demo_randomized/100016": {
+    "receipt": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+    "receipt_sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e",
+    "check": {
+      "episode": "turn_switch/demo_randomized/100016",
+      "shard": 1,
+      "artifact_root": "segments/timeout-zero-20261010/shards/1/evaluation",
+      "views": {
+        "head_camera": {
+          "frames": 1774,
+          "bytes": 1288201,
+          "duration_seconds": 177.4,
+          "terminal_action_count": 117,
+          "passed": true
+        },
+        "observer_camera": {
+          "frames": 1774,
+          "bytes": 1689571,
+          "duration_seconds": 177.4,
+          "terminal_action_count": 117,
+          "passed": true
+        }
+      },
+      "actions": 117,
+      "action_blocks": 3,
+      "actions_passed": true,
+      "passed": true
+    }
+  }
+}

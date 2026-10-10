@@ -1,0 +1,213 @@
+{
+  "checked_at": "2026-10-10T10:12:39.403821+00:00",
+  "passed": true,
+  "snapshot_sha256": "3495dec15039c3dd5568012b0e3adc1c18919bccbedf0c4100bbf13c3441d39e",
+  "paired_keys": 500,
+  "task_setting_groups": 100,
+  "baseline_successes": 49,
+  "e0_successes": 54,
+  "full_baseline_episodes": 496,
+  "baseline_timeout_zeros": 4,
+  "all_50_task_counts_reconciled": true,
+  "success_index_entries": 103,
+  "paired_index_entries": 500,
+  "local_links": [
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/successful-tasks.png"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/summary.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/by-task.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/comparisons.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/paired-outcomes.md"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/timeouts.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/excluded-old-88.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/successful-episodes.md"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/reference-pre-eval-checks.md"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/verification.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/acceptance-checks.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/new-candidate-records.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/final-heartbeat.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/timeout-user-authorization.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "baseline-e0-same-seed-20261010/delivery-verification.json"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "e0-15000-final.md"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "e0-15000-final/error-analysis/index.html"
+    },
+    {
+      "source": "baseline-e0-same-seed-20261010.md",
+      "target": "e0-15000-handoff-audit.md"
+    }
+  ],
+  "media_route_checks": [
+    {
+      "key": [
+        "adjust_bottle",
+        "demo_clean",
+        100010
+      ],
+      "side": "baseline",
+      "field": "head_video",
+      "url": "http://127.0.0.1:18788/api/jobs/ba5e50000002/files/evaluation/adjust_bottle/demo_clean/100010/episode.mp4",
+      "status": 206,
+      "bytes_read": 1,
+      "content_range": "bytes 0-0/72204"
+    },
+    {
+      "key": [
+        "adjust_bottle",
+        "demo_clean",
+        100012
+      ],
+      "side": "baseline",
+      "field": "initial",
+      "url": "http://127.0.0.1:18788/api/jobs/ba5e50000002/files/evaluation/adjust_bottle/demo_clean/100012/chunk-000.png",
+      "status": 206,
+      "bytes_read": 1,
+      "content_range": "bytes 0-0/46235"
+    },
+    {
+      "key": [
+        "adjust_bottle",
+        "demo_clean",
+        100012
+      ],
+      "side": "baseline",
+      "field": "trajectory",
+      "url": "http://127.0.0.1:18788/api/jobs/ba5e50000002/files/evaluation/adjust_bottle/demo_clean/100012/trajectory.jsonl",
+      "status": 206,
+      "bytes_read": 1,
+      "content_range": "bytes 0-0/126020"
+    },
+    {
+      "key": [
+        "turn_switch",
+        "demo_randomized",
+        100016
+      ],
+      "side": "baseline",
+      "field": "head_video",
+      "url": "http://127.0.0.1:18788/api/jobs/5e6bb9b40356/files/segments/timeout-zero-20261010/shards/1/evaluation/turn_switch/demo_randomized/100016/episode.mp4",
+      "status": 206,
+      "bytes_read": 1,
+      "content_range": "bytes 0-0/1288201"
+    },
+    {
+      "key": [
+        "turn_switch",
+        "demo_randomized",
+        100016
+      ],
+      "side": "baseline",
+      "field": "observer_video",
+      "url": "http://127.0.0.1:18788/api/jobs/5e6bb9b40356/files/segments/timeout-zero-20261010/shards/1/evaluation/turn_switch/demo_randomized/100016/observer.mp4",
+      "status": 206,
+      "bytes_read": 1,
+      "content_range": "bytes 0-0/1689571"
+    },
+    {
+      "key": [
+        "put_bottles_dustbin",
+        "demo_clean",
+        100015
+      ],
+      "side": "baseline",
+      "field": "head_video",
+      "url": "http://127.0.0.1:18788/api/jobs/5e6bb9b40356/files/segments/timeout-zero-20261010/shards/1/evaluation/put_bottles_dustbin/demo_clean/100015/episode.mp4",
+      "status": 206,
+      "bytes_read": 1,
+      "content_range": "bytes 0-0/18801504"
+    },
+    {
+      "key": [
+        "put_bottles_dustbin",
+        "demo_clean",
+        100015
+      ],
+      "side": "baseline",
+      "field": "observer_video",
+      "url": "http://127.0.0.1:18788/api/jobs/5e6bb9b40356/files/segments/timeout-zero-20261010/shards/1/evaluation/put_bottles_dustbin/demo_clean/100015/observer.mp4",
+      "status": 206,
+      "bytes_read": 1,
+      "content_range": "bytes 0-0/24086580"
+    },
+    {
+      "key": [
+        "click_alarmclock",
+        "demo_clean",
+        100010
+      ],
+      "side": "e0",
+      "field": "head_video",
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-outer-exception-20261009/shards/0/evaluation/click_alarmclock/demo_clean/100010/episode.mp4",
+      "status": 206,
+      "bytes_read": 1,
+      "content_range": "bytes 0-0/172749"
+    },
+    {
+      "key": [
+        "click_alarmclock",
+        "demo_clean",
+        100010
+      ],
+      "side": "e0",
+      "field": "observer_video",
+      "url": "http://127.0.0.1:18788/api/jobs/843758599804/files/segments/expert-outer-exception-20261009/shards/0/evaluation/click_alarmclock/demo_clean/100010/observer.mp4",
+      "status": 206,
+      "bytes_read": 1,
+      "content_range": "bytes 0-0/192483"
+    }
+  ],
+  "file_existence_checks_reused_from_snapshot": 3207,
+  "chart_visually_reviewed": true,
+  "old_unrecorded_baseline_episodes": 361,
+  "source_document_sha256": "c98a1922cce38dca3baa1037642f2abd301fcc7d4d1d93f4805b5e0fa91670e4",
+  "initial_snapshot_checker_issue": "Initial read-only collector incorrectly expected video in every old baseline episode. Corrected to honor explicit video_requested=false; no production record, score, or run changed.",
+  "scope": "Report cross-checks and one-byte read-only media checks. No new model, expert, simulator, or video decoding calls."
+}

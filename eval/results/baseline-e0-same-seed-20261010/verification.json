@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-10T10:06:27.617763+00:00",
+  "passed": true,
+  "final": true,
+  "target_keys": 500,
+  "retained_keys": 412,
+  "fixed_supplement_keys": 88,
+  "supplement_scored": 88,
+  "supplement_completed": 84,
+  "supplement_timeout": 4,
+  "groups": 100,
+  "target_per_group": 5,
+  "retained_and_supplement_disjoint": true,
+  "all_target_keys_accounted_or_explicitly_pending": true,
+  "historical_record_files_unchanged": 21,
+  "prefixes": [
+    {
+      "shard": 0,
+      "source_records": "runs/eval-5e6bb9b40356/shards/0/evaluation/episodes.jsonl",
+      "source_sha256": "bdf32c9b8f33e2fd587455ba18e701069bbf8238ea2ab1ef3d1f1081623d8270",
+      "seeded_prefix_sha256": "bdf32c9b8f33e2fd587455ba18e701069bbf8238ea2ab1ef3d1f1081623d8270",
+      "candidate_count": 48,
+      "fixed_order": true
+    },
+    {
+      "shard": 1,
+      "source_records": "runs/eval-5e6bb9b40356/shards/1/evaluation/episodes.jsonl",
+      "source_sha256": "08037ec8b83aec2e9a5b6e1e089df20dd55ef14111199f07a55494911c94e792",
+      "seeded_prefix_sha256": "b46d57c5fefbde49c224ab3a87623ce301fcc0515c7a2b3c922890caf10b0a78",
+      "candidate_count": 40,
+      "fixed_order": true
+    }
+  ],
+  "completed_episode_acceptance_coverage": 84,
+  "acceptance_receipts": [
+    {
+      "path": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-204844.json",
+      "sha256": "8e26a16790e0216ad3f30dbe075788b9406506e41cc41ba59b7912c880780d47"
+    },
+    {
+      "path": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-210020.json",
+      "sha256": "fee4b501fe36dfa7ede9ade9411f027ac7cc3dcee58a59a65e4f764e23e1302a"
+    },
+    {
+      "path": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261009-234642.json",
+      "sha256": "aca5cc76ebd6f7c6a24069dc415de305d22b39b28b7b41c57c6b49a2d8a8a29d"
+    },
+    {
+      "path": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092537.json",
+      "sha256": "d239cbbd1cb29f4a9724d558e592dda21f7106c08bc532361bcbaa8f159d009e"
+    },
+    {
+      "path": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-092831.json",
+      "sha256": "a4c11759b791f3d3f39e6718782666cf473ca495921299032bcb76ab98189fb0"
+    },
+    {
+      "path": "artifacts/baseline-e0-alignment-20261010/heartbeat-20261010-100451.json",
+      "sha256": "d6a796c18855dc9a74680b76d5aa70e2566b5771264bb2ed8364d48aee4e6333"
+    }
+  ],
+  "active_resume": {
+    "manifest": "resume-requests/timeout-zero-20261010/manifest.json",
+    "sha256": "791c02254b0096076076eff55a28986cc4a00351f11aa0560d473f934c6f208b"
+  },
+  "all_500_e0_frozen_episode_hashes_verified": true,
+  "original_412_baseline_episode_hashes_verified": true,
+  "partial_timeout_hashes_verified": true,
+  "video_frame_trajectory_link_files_existing": 3207,
+  "no_model_simulator_or_expert_calls": true,
+  "no_raw_history_deleted": true
+}

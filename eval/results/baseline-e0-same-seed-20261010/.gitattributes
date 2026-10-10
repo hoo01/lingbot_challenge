@@ -1,0 +1,2 @@
+# Preserve the exact bytes referenced by the evidence SHA-256 manifests.
+* -text
