@@ -1,0 +1,113 @@
+{
+  "checked_at": "2026-10-10T19:25:49.950267+08:00",
+  "scope": "Team GitHub repository evaluator deliverables; no competition submission requirements.",
+  "git_operation_fields_as_of": "checked_at, before the user-authorized documentation commit and push",
+  "primary_requirement_source": "队内任务书_10.7前第一阶段.md",
+  "sources": [
+    {
+      "path": "队内任务书_10.7前第一阶段.md",
+      "bytes": 16186,
+      "sha256": "91a8027633286c616b566e3e234b7032fb50db84efafa07984746a9bcb9c1bf8",
+      "sha256_lf_normalized": "08a7aa15bd7c41744b7d1bba9563771f05b325e7d7aa668e6b9ac32f8b73eb37",
+      "purpose": "A8 and B6: evaluator deliverables and reproducibility acceptance"
+    },
+    {
+      "path": "Checkpoint与模型归档守则.md",
+      "bytes": 2569,
+      "sha256": "a2c67cc1ecda67a2d746956138f1b500d05f04ea1c2eeb036c0ee1c06d52900b",
+      "sha256_lf_normalized": "b87c4d95f6a649c22d3f4308b05c6c11f5424e8193864f1df36a910f738bb05f",
+      "purpose": "GitHub code/evidence vs private HF weights, immutable revisions and SHA"
+    },
+    {
+      "path": "训练与评测精度守则.md",
+      "bytes": 2836,
+      "sha256": "1d964072684b79c107a77a556246938df88fa847aeac45174ef8c0f3124abb8e",
+      "sha256_lf_normalized": "ec9ea26c9003ab40704473f45d31a6340890c3eee56060d1deb8c2aa23bf9ec4",
+      "purpose": "Precision and model/norm identity requirements"
+    },
+    {
+      "path": "训练端_E0正式训练交接.md",
+      "bytes": 18708,
+      "sha256": "a56d583ce990ecb98ac7e2115c2f1fb375c30710c13ceaa14ddf8ea45353dba4",
+      "sha256_lf_normalized": "1460ad81cf1ffd7f64e7149d37096b064b16aee13da98d1288e866d2016d8640",
+      "purpose": "E0 checkpoint, configuration, normalization and audit handoff"
+    }
+  ],
+  "supplementary_source": {
+    "path": "eval/results/baseline-e0-same-seed-20261010/reference-pre-eval-checks.md",
+    "bytes": 9519,
+    "sha256": "c98a1922cce38dca3baa1037642f2abd301fcc7d4d1d93f4805b5e0fa91670e4",
+    "sha256_lf_normalized": "c98a1922cce38dca3baa1037642f2abd301fcc7d4d1d93f4805b5e0fa91670e4",
+    "role": "Numerical checks supplied by the user; not the primary repository delivery checklist",
+    "correction": "User states F1 training is not complete; no F1 evaluation is claimed"
+  },
+  "required_repository_files": [
+    {
+      "path": "eval/setup_eval.sh",
+      "requirement": "A8/B6 reproducible environment installation",
+      "status": "exists_runtime_reuse_used_blank_machine_rebuild_not_independently_verified",
+      "exists": true
+    },
+    {
+      "path": "eval/run_eval.sh",
+      "requirement": "B6 evaluation launch script",
+      "status": "exists_development_evaluation_used",
+      "exists": true
+    },
+    {
+      "path": "eval/eval.sh",
+      "requirement": "B6 reproducible evaluation entry",
+      "status": "exists_forwards_to_development_entry_independent_environment_reproduction_pending",
+      "exists": true
+    },
+    {
+      "path": "eval/README.md",
+      "requirement": "A8 image/GPU, Vulkan, environments, WebSocket, timing and troubleshooting; B6 usage",
+      "status": "documented_environment_rebuild_acceptance_incomplete",
+      "exists": true
+    },
+    {
+      "path": "eval/subset_config.yaml",
+      "requirement": "B6 iterative subset definition",
+      "status": "not_provided_not_validated",
+      "exists": false
+    },
+    {
+      "path": "eval/results/baseline_official.json",
+      "requirement": "B6 own measurement of official base weights",
+      "status": "existing_historical_development_result_preserved",
+      "exists": true
+    },
+    {
+      "path": "eval/results/subset_validation.md",
+      "requirement": "B6 subset/full-evaluation correlation",
+      "status": "gap_documented_no_validated_correlation_claim",
+      "exists": true
+    },
+    {
+      "path": "eval/results/inference_sweep.md",
+      "requirement": "B6 inference strategy comparison",
+      "status": "fixed_runtime_and_gap_documented_no_controlled_sweep_claim",
+      "exists": true
+    }
+  ],
+  "additional_completed_evidence": [
+    "eval/results/baseline-e0-same-seed-20261010.md",
+    "eval/results/baseline-e0-same-seed-20261010/comparisons.json",
+    "eval/results/baseline-e0-same-seed-20261010/by-task.json",
+    "eval/results/baseline-e0-same-seed-20261010/successful-episodes.md",
+    "eval/results/baseline-e0-same-seed-20261010/verification.json",
+    "eval/results/e0-15000-final.md",
+    "eval/results/e0-15000-final/verification.json",
+    "eval/delivery/20261010/e0-runtime-evidence.json"
+  ],
+  "archive_destinations": {
+    "github": "Reproducible scripts, source, configs, documentation, redacted results and lightweight evidence",
+    "private_hf": "Matching complete checkpoints and resumable training state with revision/config/norm/SHA; no new upload in this update",
+    "evaluation_server": "Original logs, trajectories, videos and large runtime artifacts; reference through evidence and access-controlled links"
+  },
+  "stage_performed": false,
+  "commit_performed": false,
+  "push_performed": false,
+  "remote_upload_performed": false
+}

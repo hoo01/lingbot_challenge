@@ -1,0 +1,189 @@
+{
+  "checked_at": "2026-10-10T19:25:49.950267+08:00",
+  "scope": "Team GitHub repository documentation and existing evidence inventory, based on A8/B6. No competition submission checklist, new experiment, production-code edit, stage, commit, push or remote upload.",
+  "head_unchanged": "b24c47437f85fb9b039e28e602dd471d337df93d",
+  "changed_files": [
+    "README.md",
+    "eval/README.md",
+    "eval/交付与提交清单.md",
+    "eval/results/README.md",
+    "eval/results/subset_validation.md",
+    "eval/results/inference_sweep.md",
+    "eval/delivery/20261010/.gitattributes",
+    "eval/delivery/20261010/requirements-check.json",
+    "eval/delivery/20261010/e0-runtime-evidence.json",
+    "eval/delivery/20261010/manifest.json"
+  ],
+  "local_markdown_links_checked": 79,
+  "preexisting_other_dirty_files_unchanged": 39,
+  "reference_files": [
+    {
+      "path": "队内任务书_10.7前第一阶段.md",
+      "bytes": 16186,
+      "sha256": "91a8027633286c616b566e3e234b7032fb50db84efafa07984746a9bcb9c1bf8",
+      "sha256_lf_normalized": "08a7aa15bd7c41744b7d1bba9563771f05b325e7d7aa668e6b9ac32f8b73eb37"
+    },
+    {
+      "path": "Checkpoint与模型归档守则.md",
+      "bytes": 2569,
+      "sha256": "a2c67cc1ecda67a2d746956138f1b500d05f04ea1c2eeb036c0ee1c06d52900b",
+      "sha256_lf_normalized": "b87c4d95f6a649c22d3f4308b05c6c11f5424e8193864f1df36a910f738bb05f"
+    },
+    {
+      "path": "训练端_E0正式训练交接.md",
+      "bytes": 18708,
+      "sha256": "a56d583ce990ecb98ac7e2115c2f1fb375c30710c13ceaa14ddf8ea45353dba4",
+      "sha256_lf_normalized": "1460ad81cf1ffd7f64e7149d37096b064b16aee13da98d1288e866d2016d8640"
+    },
+    {
+      "path": "训练与评测精度守则.md",
+      "bytes": 2836,
+      "sha256": "1d964072684b79c107a77a556246938df88fa847aeac45174ef8c0f3124abb8e",
+      "sha256_lf_normalized": "ec9ea26c9003ab40704473f45d31a6340890c3eee56060d1deb8c2aa23bf9ec4"
+    },
+    {
+      "path": "eval/setup_eval.sh",
+      "bytes": 214,
+      "sha256": "658fa34c30eaa9c0113fcb413a9d9b093a3d2889d66512e48f9aab31fea4a7b9",
+      "sha256_lf_normalized": "658fa34c30eaa9c0113fcb413a9d9b093a3d2889d66512e48f9aab31fea4a7b9"
+    },
+    {
+      "path": "eval/run_eval.sh",
+      "bytes": 145,
+      "sha256": "e4e6d6170f4ef10c909a200dfd1754143bbc6fea24da11aa1ac0dd65ebbdc864",
+      "sha256_lf_normalized": "e4e6d6170f4ef10c909a200dfd1754143bbc6fea24da11aa1ac0dd65ebbdc864"
+    },
+    {
+      "path": "eval/eval.sh",
+      "bytes": 176,
+      "sha256": "8f539c4dcfc522ccc6ccdc8db52eaa86e48891fa8628f1d48667048bf3e83775",
+      "sha256_lf_normalized": "8f539c4dcfc522ccc6ccdc8db52eaa86e48891fa8628f1d48667048bf3e83775"
+    },
+    {
+      "path": "eval/requirements-web.txt",
+      "bytes": 219,
+      "sha256": "68f6160383d12dfb58b13b04e9ec111433b8ff7568900bf985a7cd43808ddf90",
+      "sha256_lf_normalized": "68f6160383d12dfb58b13b04e9ec111433b8ff7568900bf985a7cd43808ddf90"
+    },
+    {
+      "path": "eval/configs/upstream-lock.json",
+      "bytes": 1115,
+      "sha256": "a7d63198fceacb6e51aa61adc2a061d05ff8c6d96c4e5bd6b8c59237a4a8096f",
+      "sha256_lf_normalized": "a7d63198fceacb6e51aa61adc2a061d05ff8c6d96c4e5bd6b8c59237a4a8096f"
+    },
+    {
+      "path": "eval/results/baseline-e0-same-seed-20261010.md",
+      "bytes": 16029,
+      "sha256": "a8c2f0f98af69f905fcf176a4d16b7385b79dda7c1c5a1ab15edd5f38c295c42",
+      "sha256_lf_normalized": "a8c2f0f98af69f905fcf176a4d16b7385b79dda7c1c5a1ab15edd5f38c295c42"
+    },
+    {
+      "path": "eval/results/baseline-e0-same-seed-20261010/summary.json",
+      "bytes": 7167,
+      "sha256": "4327c4c45261d92d397e4be8c5e000362b860d081a6f90b1123e5dc528e70805",
+      "sha256_lf_normalized": "4327c4c45261d92d397e4be8c5e000362b860d081a6f90b1123e5dc528e70805"
+    },
+    {
+      "path": "eval/results/baseline-e0-same-seed-20261010/verification.json",
+      "bytes": 2831,
+      "sha256": "7c3ac7b4552bbca5cd2a35ccf40df87d1d9c893bc455a7adeb6597c1c03878fe",
+      "sha256_lf_normalized": "7c3ac7b4552bbca5cd2a35ccf40df87d1d9c893bc455a7adeb6597c1c03878fe"
+    },
+    {
+      "path": "eval/results/e0-15000-final/verification.json",
+      "bytes": 19562,
+      "sha256": "21477fd1bf180aaccf8618d58a2937ff7d6e8947d4477b49ea42bdae1a26ccc4",
+      "sha256_lf_normalized": "21477fd1bf180aaccf8618d58a2937ff7d6e8947d4477b49ea42bdae1a26ccc4"
+    },
+    {
+      "path": "eval/results/e0-15000-final/protocols.json",
+      "bytes": 154661,
+      "sha256": "0efc78665d86282d0f019014b0139b5b3a0d9cf2f7af803883b49923a9952ccf",
+      "sha256_lf_normalized": "0efc78665d86282d0f019014b0139b5b3a0d9cf2f7af803883b49923a9952ccf"
+    },
+    {
+      "path": "eval/results/e0-15000-handoff-audit/weight-comparison.json",
+      "bytes": 29834,
+      "sha256": "aa7720285acf5a658333fb368379ac7c0ca30e75c5d6b538c6ac45114fd8419b",
+      "sha256_lf_normalized": "aa7720285acf5a658333fb368379ac7c0ca30e75c5d6b538c6ac45114fd8419b"
+    },
+    {
+      "path": "eval/results/baseline-e0-same-seed-20261010/reference-pre-eval-checks.md",
+      "bytes": 9519,
+      "sha256": "c98a1922cce38dca3baa1037642f2abd301fcc7d4d1d93f4805b5e0fa91670e4",
+      "sha256_lf_normalized": "c98a1922cce38dca3baa1037642f2abd301fcc7d4d1d93f4805b5e0fa91670e4"
+    }
+  ],
+  "delivery_document_files": [
+    {
+      "path": "README.md",
+      "bytes": 8352,
+      "sha256": "3aff0012dd15df6f93eaa7db169ea1871f9aceac30cb0b31d3fc19f1f2f5a381",
+      "sha256_lf_normalized": "c6c03cc1102fce30bb357eff874744fde38108438f4d946e212aaa2284b73de5"
+    },
+    {
+      "path": "eval/README.md",
+      "bytes": 19072,
+      "sha256": "ce44e9dcefebab87f6e696fd8c7b52d56aa7400efbc8d52acab80baf3beb3fdd",
+      "sha256_lf_normalized": "ce44e9dcefebab87f6e696fd8c7b52d56aa7400efbc8d52acab80baf3beb3fdd"
+    },
+    {
+      "path": "eval/交付与提交清单.md",
+      "bytes": 6792,
+      "sha256": "bf7e070c6bf73f175234f90b87d0dd348030cdc6ff3bc1fdc67f3d9e9293a726",
+      "sha256_lf_normalized": "bf7e070c6bf73f175234f90b87d0dd348030cdc6ff3bc1fdc67f3d9e9293a726"
+    },
+    {
+      "path": "eval/results/README.md",
+      "bytes": 2428,
+      "sha256": "fe33fd4e7db62afbfd27a734457abbd57a6436deaadc0807acea25085f0db945",
+      "sha256_lf_normalized": "fe33fd4e7db62afbfd27a734457abbd57a6436deaadc0807acea25085f0db945"
+    },
+    {
+      "path": "eval/results/subset_validation.md",
+      "bytes": 989,
+      "sha256": "2e887e8a4d2629856668a76d4fb16682c8cf915446e6db0975e98ed7109cfd99",
+      "sha256_lf_normalized": "2e887e8a4d2629856668a76d4fb16682c8cf915446e6db0975e98ed7109cfd99"
+    },
+    {
+      "path": "eval/results/inference_sweep.md",
+      "bytes": 1117,
+      "sha256": "95ad776783e4ef3c7cd546d72067664318f810cae96bd86f0ac0c183a4d35c6b",
+      "sha256_lf_normalized": "95ad776783e4ef3c7cd546d72067664318f810cae96bd86f0ac0c183a4d35c6b"
+    },
+    {
+      "path": "eval/delivery/20261010/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "sha256_lf_normalized": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "eval/delivery/20261010/requirements-check.json",
+      "bytes": 5065,
+      "sha256": "237ccb8f01e3cd85c672ec4aee6a998d665269ce9b88a6cbc53ef741096fb22a",
+      "sha256_lf_normalized": "237ccb8f01e3cd85c672ec4aee6a998d665269ce9b88a6cbc53ef741096fb22a"
+    },
+    {
+      "path": "eval/delivery/20261010/e0-runtime-evidence.json",
+      "bytes": 4370,
+      "sha256": "34555419d6a02e2ec2404623a705e0e73f3f35222de5ebd2250a12252e788f30",
+      "sha256_lf_normalized": "34555419d6a02e2ec2404623a705e0e73f3f35222de5ebd2250a12252e788f30"
+    }
+  ],
+  "readiness": {
+    "same_seed_report": "accepted_development_comparison",
+    "e0_numerical_chain": "partially_verified_see_matrix",
+    "f1_evaluation": "not_available",
+    "blank_machine_reproduction": "not_independently_accepted",
+    "subset_rank_validation": "not_validated",
+    "inference_sweep": "no_controlled_sweep_claim",
+    "independent_evaluation_reproduction": "development_entry_exists_independent_environment_acceptance_pending",
+    "repository_requirements_mapping": "documented_completed_items_and_gaps_not_all_deliverables_accepted"
+  },
+  "stage_performed": false,
+  "commit_performed": false,
+  "push_performed": false,
+  "remote_upload_performed": false,
+  "requirements_source": "eval/delivery/20261010/requirements-check.json",
+  "git_operation_fields_as_of": "checked_at, before the user-authorized documentation commit and push"
+}

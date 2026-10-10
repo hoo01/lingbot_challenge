@@ -1,0 +1,109 @@
+{
+  "scope": "Read-only extraction from frozen accepted evidence; not a new process launch or numeric audit.",
+  "e0_job": "843758599804",
+  "e0_model": "bf8e4034d112",
+  "hf_repository": "HumaLog/lingbot-vla-checkpoints",
+  "frozen_revision": "49d5b1022845a812470a51f6a442b732f9ac7aba",
+  "training_checkpoint_sha256": "b9a4fd22933e76bd27d7ec9d0d0d71f77f4514451f935884cf291f770fea8469",
+  "actual_export_dtype": "bfloat16",
+  "trainable_tensors": 59,
+  "complete_tensors": 1708,
+  "max_trainable_rounding_abs": 0.006281852722167969,
+  "official_fp32_export_is_not_the_evaluated_export": true,
+  "latest_segment": "expert-outer-exception-20261009",
+  "runtime_server_records": [
+    {
+      "shard": 0,
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      }
+    },
+    {
+      "shard": 1,
+      "server": {
+        "checkpoint": "/root/shared-nvme/lingbot-eval-team/checkpoints/bf8e4034d112/checkpoints/global_step_0/hf_ckpt",
+        "dtype": "fp32",
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "vision_device": "cuda",
+        "embedding_device": "cuda",
+        "flow_noise_generation": "upstream_native",
+        "sampling_seed_at_process_start": 42,
+        "sampling_seed_per_episode": null,
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "precompute_grid_thw": true,
+        "inference_profile": "official_defaults_v1",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+        "nonpersistent_buffer_initialization": "native",
+        "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3"
+      }
+    }
+  ],
+  "runtime_fields_not_fully_independently_audited": [
+    "max_action_dim",
+    "arm_subtract_state",
+    "gripper_subtract_state",
+    "norm_type",
+    "loss_type",
+    "complete_normalized_to_physical_action_equivalence"
+  ],
+  "deploy_full_action_1e6_parity_verified": false,
+  "f1_evaluation_available": false,
+  "timing": {
+    "e0_completed_500": {
+      "count": 500,
+      "mean_seconds": 185.25907470259816,
+      "median_seconds": 154.42161689698696,
+      "summed_seconds": 92629.53735129908
+    },
+    "baseline_supplement_completed_84": {
+      "count": 84,
+      "mean_seconds": 412.3657613977169,
+      "median_seconds": 350.0015543513,
+      "summed_seconds": 34638.72395740822
+    }
+  },
+  "timing_note": "Candidate wall-clock seconds include initialization, expert stage when present, policy and cleanup; omit separately rejected/failed-init candidates here. Not pure GPU inference time.",
+  "mechanical_e0_10000_episodes_two_shards_hours": 257.3042704202752,
+  "source_files": [
+    {
+      "path": "eval/results/e0-15000-final/protocols.json",
+      "sha256": "0efc78665d86282d0f019014b0139b5b3a0d9cf2f7af803883b49923a9952ccf"
+    },
+    {
+      "path": "eval/results/e0-15000-handoff-audit/evaluated-export-receipt.json",
+      "sha256": "f9d4e84e7a5818e9316f3e2b17c667227ac159e63f74ce888ac7d575bede6a2c"
+    },
+    {
+      "path": "eval/results/baseline-e0-same-seed-20261010/comparisons.json",
+      "sha256": "8e5935676a82c5868102a9dc430c85c2f7dee02712fa18abf95d1c7a4bef8e7b"
+    },
+    {
+      "path": "eval/results/e0-15000-final/verification.json",
+      "sha256": "21477fd1bf180aaccf8618d58a2937ff7d6e8947d4477b49ea42bdae1a26ccc4"
+    }
+  ],
+  "latest_segment_basis": "Final acceptance manifest_chain[0], not protocol file ordering"
+}

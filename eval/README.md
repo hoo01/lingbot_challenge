@@ -1,6 +1,18 @@
 # LingBot-VLA 评测
 
-提供 LingBot-VLA v2 / RoboTwin 2.0 的命令行评测和网页平台。默认运行在租用 RTX 5090 上，可通过配置连接其他服务器。已完成的基座评测见[基座结果](results/baseline.md)。
+提供 LingBot-VLA v2 / RoboTwin 2.0 的命令行评测和网页平台。默认运行在租用 RTX 5090 上，可通过配置连接其他服务器。
+
+## 最新结果与交付范围
+
+截至2026-10-10，E0与基座同seed补测已结束，自动跟进已暂停；查看报告无需启动GPU任务。
+
+|结果|基座|E0|范围|
+|---|---:|---:|---|
+|[同seed对照](results/baseline-e0-same-seed-20261010.md)|49/500，9.8%|54/500，10.8%|500相同键；基座496完整策略回合+4超时0分|
+|[E0完整报告](results/e0-15000-final.md)|—|54/500，10.8%|500完整策略回合，混合专家筛选协议|
+|[历史基座](results/baseline.md)|52/500，10.4%|—|原始500键保留，不等于本次对齐集合|
+
+[结果索引](results/README.md)提供逐任务、成功seed、图表、案例和验收JSON。[GitHub交付清单](交付与提交清单.md)按队内任务书A8/B6逐项列出应交付文件、现有证据和未完成项。当前`eval.sh`是开发复现入口，`setup_eval.sh`复用既有Linux运行环境，并非已验证的空机安装器；子集相关性和受控推理扫描也仍待验证。
 
 ## 连接服务器
 
@@ -20,11 +32,13 @@ python eval/connect.py tunnel     # 建立隧道，保持终端运行
 
 1. 在“模型与数据”选择已注册模型，或上传自己的完整模型目录。大文件也可通过 SFTP 放到服务器运行目录的 `incoming/`。
 2. 新模型需要注册权重目录、训练 CLI YAML 和归一化 JSON，文件要求见下节。
-3. 点击“新建评测”，选择模型、任务、Clean/Randomized 和固定 seeds，然后加入队列。
-4. Worker 按顺序执行任务。同一 GPU 同时运行一个评测；等待中表示尚未领取。
+3. 点击“新建评测”，选择模型、任务、Clean/Randomized 和固定 seeds，可勾选“专家筛选”，然后加入队列。
+4. 默认使用双卡并行，也可选择单卡。任务组按固定顺序分配到两张 GPU；每张卡同时运行一个模型服务和一个仿真进程，结果汇总为一份报告。
 5. 打开报告查看成功/有效回合、初始化失败、运行错误、三相机图片和动作轨迹，下载分任务 CSV。
 
-录像默认关闭；开启后为 **10 fps、仿真时间 1× 原速**。无论是否录像，三相机关键帧和动作记录都会保存。取消任务会保留已完成回合。
+录像默认关闭；开启后同步保存 **头部相机与全局 `observer_camera`**，均为 **10 fps、仿真时间 1× 原速**。在回放窗口切换视角会保留时间位置，也可以点击“定位末帧”或打开终帧图片。全局相机用于回放，模型输入仍为头部、左腕、右腕三路图像。
+
+回合在任务成功判定触发或动作达到上限时结束，录像包含实际终态。成功条件由对应 RoboTwin 任务定义。记录中的回合耗时是墙钟时间，视频长度按仿真时间计算。每路视频保存帧数、仿真时间和末帧记录；三相机关键帧和动作记录始终保存。取消任务会保留已完成回合。
 
 ### 模型文件要求
 
@@ -103,10 +117,18 @@ bash run_eval.sh --checkpoint incoming/experiment-001/hf_ckpt \
   --tasks click_bell --seeds 100010 --title sft-smoke
 
 # 50任务 × 2环境 × 2个seed，共200次计划尝试
-bash run_eval.sh --checkpoint-id MODEL_ID --all-tasks --seeds 100010 100011
+bash run_eval.sh --checkpoint-id MODEL_ID --all-tasks --seeds 100010 100011 --expert-check
 ```
 
-`eval.sh` 是 `run_eval.sh` 的同功能入口。CLI 默认直接运行，`--enqueue` 提交到队列，`--register-only` 注册模型并返回 ID。模型路径和 ID 属于所选服务器；使用网页或 SFTP 上传本地权重后，再运行连接脚本。每次评测创建独立任务和输出目录。
+`eval.sh` 是 `run_eval.sh` 的同功能入口。CLI 默认按服务器配置使用双卡直接运行，`--parallelism 1` 使用单卡，`--gpu 1` 指定单张卡；`--enqueue` 提交到队列，`--register-only` 注册模型并返回 ID。模型路径和 ID 属于所选服务器；使用网页或 SFTP 上传本地权重后，再运行连接脚本。每次评测创建独立任务和输出目录。
+
+### 双卡调度
+
+服务器配置 `"gpus": ["0", "1"]` 启用双卡，改为 `["0"]` 使用单卡。修改后重启网页管理进程。脚本和网页使用同一调度器。
+
+一次评测按任务交错分成两份；只有一个任务时，按 Clean/Randomized 分组。未发生恢复时，每组seed在同一模型进程中执行，分配表随请求保存。显式恢复会形成新的模型进程段，不能声称整个任务始终使用同一噪声流。各卡独立记录动作、录像、日志和 GPU UUID，报告自动汇总；取消任务会停止两份工作，未处置运行错误会停止该任务尚未完成的部分并保留现场。
+
+每份工作启动一个 seed 42 的模型进程，随后沿用上游连续随机数。比较模型时使用相同的并行度、任务顺序和 seed；单卡与双卡的随机数进程分段不同。
 
 ### 推理配置
 
@@ -127,20 +149,31 @@ CLI 和网页共用固定的 `official_defaults_v1` 推理配置。LoRA rank 和
 
 注册记录的 `inference_overrides` 保存上述五个 YAML 覆盖项；每次运行的 `server-runtime.json` 保存实际精度、设备、采样和构建模式等信息。比较结果时核对这些记录、归一化统计和场景 seed。重启模型会开始新的随机数进程段。
 
+本机诊断中，上游 fused MoE 在固定输入与噪声的重复计算中仍有动作数值波动。动作一致性检查应固定计算后端，并记录重复计算本身的误差。
+
 ### 官方代码与统计口径
 
 推理核心直接调用固定上游版本 `be969b8f` 的 [`LingbotVLAv2Server`](https://github.com/Robbyant/lingbot-vla-v2/blob/be969b8fd117fb70550c5d4bf4bc328211b5b1b6/deploy/lingbot_vla_v2_policy.py)。模型注册、网页、队列、超时保护和构建兼容处理由本项目实现。
 
-仿真端沿用官方任务、观测与动作接口，采用固定任务、环境和 seed 的开发评测协议。上游[评测客户端](https://github.com/Robbyant/lingbot-vla-v2/blob/be969b8fd117fb70550c5d4bf4bc328211b5b1b6/experiment/robotwin/eval_policy_client_lingbotvla.py)另有专家执行与场景筛选流程。平台结果用于开发阶段的模型比较，正式复测按赛事协议执行。
+仿真端沿用官方任务、观测与动作接口，专家正常路径直接调用固定上游的`setup_demo/play_once/close_env`与成功检查，不再替换抓取搜索、规划器或`move`内部方法。专家通过后，同一任务对象重置同seed并生成策略指令。完整上游批处理入口与本地队列并不相同，正式复测还需冻结接口与配额映射。
 
-成功率为“成功回合 / 有效策略回合”。策略失败计入有效分母；初始化失败和运行错误另列。每个计划 seed 尝试一次，有效回合数以实际完成的策略回合为准。
+仅勾选“专家筛选”或添加`--expert-check`，不等于自动获得下列特定恢复协议。实际按任务的`config`、`protocol.json`和显式恢复清单判定：
+
+|协议|结束与统计口径|
+|---|---|
+|默认固定候选|按计划seed尝试；成功/完整策略回合，初始化失败、专家拒绝、运行错误另列|
+|E0后段的五次预算|按用户批准的每个待补策略回合累计专家发起，跨seed/恢复不清零；耗尽仍执行policy。普通专家异常在已启用的外层计数模式中单列并占预算，策略/写盘/清理错误仍停机|
+|基座固定88场景的900秒计0继续|仅显式启用`wall900_zero_continue_v1`且具有可核合法策略前缀的整回合超时记0；`scored=valid+timeout_failures`，成功率分母为scored。超时不称完整有效回合，不换seed或重跑|
+
+正常策略失败计入分母。初始化失败和专家失败的补seed行为必须由已冻结的协议允许，不能为了提高分数自动换场景。E0旧385与新115回合、基座旧412与补88的规则差异见各自报告。赛事FAQ对五次发起计数的说明不等同于确认本地“待补回合”映射。
 
 ## 查看输出与处理错误
 
-每个任务写入服务器的 `runs/eval-ID/`：
+每个任务写入服务器的 `runs/eval-ID/`。顶层保存请求、汇总报告与 CSV；双卡时，每份工作的下列模型、日志和回合文件分别保存在 `shards/0/`、`shards/1/`，单卡时直接保存在任务目录：
 
 ```text
 request.json, checkpoint.json, official-defaults-manifest.json, server-runtime.json
+process-segment.json
 report.json, scores.csv, timing.json
 worker.log, server.log, evaluation.log
 evaluation/episodes.jsonl, summary.json, execution-events.jsonl
@@ -149,7 +182,7 @@ evaluation/<task>/<setting>/<seed>/
   chunk-*.png, final*.png, [episode.mp4]
 ```
 
-单回合上限900秒，连续240秒没有完整动作块进展会停止。出现运行错误后查看报告和日志，保留现场；故障排除后，用原 seed 新建任务重试，原运行错误单独记录。重新启动模型会形成新的随机数进程段。
+默认单回合上限900秒、连续240秒没有完整动作块进展即停机。仅上述已授权的固定场景超时协议允许900秒记0继续，240秒无进展或程序/证据错误仍停机。先保存日志、动作、视频及专家发起账，再诊断；恢复必须使用绑定原记录SHA、原seed和预算的显式清单，保留全部旧输出，不通过新建任务或改名目录绕过恢复检查。已结算策略失败或超时0分不重跑。模型重启会形成新的RNG段。
 
 网页打不开时，先检查隧道终端和远端网页进程；任务一直等待时，检查 Worker 是否在线及 GPU 是否被其他任务占用。模型相关问题按发生阶段处理：
 
@@ -174,7 +207,8 @@ evaluation/<task>/<setting>/<seed>/
   "runtime_root": "/srv/lingbot-eval",
   "web_port": 8788,
   "local_port": 18789,
-  "gpu": "0"
+  "gpu": "0",
+  "gpus": ["0", "1"]
 }
 ```
 
@@ -198,7 +232,7 @@ bash eval/setup_eval.sh --server rented-5090 --check  # 只读预检查
 bash eval/setup_eval.sh --server rented-5090          # 安装到配置中的新目录
 
 cd /root/shared-nvme/lingbot-eval-team
-bash start_web.sh --with-worker                      # 网页和单GPU Worker
+bash start_web.sh --with-worker                      # 网页和配置中的各 GPU Worker
 # 只查看结果、上传或排队时，可运行 bash start_web.sh
 ```
 
@@ -218,3 +252,14 @@ bash start_web.sh --with-worker                      # 网页和单GPU Worker
 服务仅监听回环地址，通过 SSH 隧道访问。长期运行可使用 tmux 或进程管理服务；每个运行目录只启动一个网页管理进程。GPU 锁和显存检查会阻止与其他任务争用同一张卡。
 
 CPU测试可在安装网页依赖后，从仓库根目录执行 `python -m pytest eval/tests -q`。
+
+## 实测耗时与排期边界
+
+来自已冻结的回合`seconds`字段；包含该候选的初始化、专家路径（启用时）、策略与收尾，不是单次模型推理延迟。
+
+|样本|回合数|平均秒|中位秒|累计回合耗时|
+|---|---:|---:|---:|---:|
+|E0完整策略回合|500|185.3|154.4|25.73小时|
+|基座新补测中的完整回合|84|412.4|350.0|9.62小时|
+
+新88是历史缺失场景的定向补测，不是随机耗时样本；另4个900秒超时单列。两张卡可重叠执行，累计回合耗时不能直接当日历时长。若仅按E0平均值机械外推10,000个完成回合，累计约514.6回合小时，理想双卡均分约257.3小时；这还没有计入专家拒绝、初始化失败、模型启动/编译、负载不均或停机，不能当作完成时间承诺。计时来源和计算见[交付运行摘要](delivery/20261010/e0-runtime-evidence.json)。

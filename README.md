@@ -5,6 +5,13 @@
 [`EclipseaHime017/lingbot-vla-robotwin`](https://github.com/EclipseaHime017/lingbot-vla-robotwin)，
 两个仓库在训练机上分开放置，本仓库提供脚本、配置、审计结果和交接说明。
 
+## 最新评测与交付（2026-10-10）
+
+- [原始基座与 E0 同种子对照](eval/results/baseline-e0-same-seed-20261010.md)：500个相同 task/setting/seed，基座49/500（9.8%）、E0 54/500（10.8%）。基座含4个900秒超时0分，双方输入与协议差异在报告中单列。
+- [E0 15000步完整报告](eval/results/e0-15000-final.md)：500个完整策略回合、54成功；这是分阶段开发评测，不是统一赛事成绩。实际评测模型为BF16保存、FP32执行版本，不等同于训练者保留FP32原值的导出。
+- [评测结果索引](eval/results/README.md)：成绩、成功seed、失败案例、精度审计和轻量证据。
+- [评测端GitHub交付清单](eval/交付与提交清单.md)：按队内任务书A8/B6列出脚本、文档、结果和验证材料，区分已完成项与缺口。权重按仓库归档守则存放。F1尚未训练完成，本仓库没有F1评测结果。
+
 ## 工程流程
 
 ```text
@@ -33,7 +40,7 @@ eval/：仿真评测与官方复测入口（由评测负责人维护）
 | --- | --- | --- | --- |
 | `data/` | clean 数据下载、LeRobot v3.0 转换、manifest、norm stats、provenance 和校验 | 双 A100 机器已完成全量 50×50 数据及 SHA 验收 | [`data/README.md`](./data/README.md) |
 | `train/` | 环境安装、训练入口、恢复、SwanLab 日志、HF checkpoint 备份 | 单卡全链路与双 A100 DDP 真实数据冒烟均已验证 | [`train/README.md`](./train/README.md) |
-| `eval/` | 仿真环境、子集评测、`eval.sh` 和结果记录 | 已合入；当前 52/500（10.4%）仅为内部固定开发协议，不是官方成绩 | [`eval/README.md`](./eval/README.md) |
+| `eval/` | 仿真环境、评测入口、结果与数值链路验收 | 基座/E0同seed开发对照完成；空机重建、子集/推理对比和数值验收缺口见交付清单 | [`eval/README.md`](./eval/README.md) |
 | `robotwin_clean_data_audit/` | 历史数据审计证据：兼容性、关节角与归一化统计对比 | 已完成；非正式训练输入 | 目录内报告 |
 | `server_patch/` | 已验证或待目标机器验证、但尚未进入上游训练工程的补丁 | 单卡基线及双 A100 DDP 补丁已保存 | [`server_patch/ddp_two_a100/README.md`](./server_patch/ddp_two_a100/README.md) |
 
@@ -125,7 +132,8 @@ bash scripts/train_ddp.sh \
 
 ## 文档入口
 
-- 比赛分工与交付清单：[`队内任务书_1008.md`](./队内任务书_1008.md)
+- 比赛分工与阶段交付清单：[`队内任务书_10.7前第一阶段.md`](./队内任务书_10.7前第一阶段.md)
+- 当前评测端GitHub交付清单：[`eval/交付与提交清单.md`](./eval/交付与提交清单.md)
 - 正式训练路线与实验矩阵：[`实验设计文档.md`](./实验设计文档.md)
 - 双 A100 全量数据与 DDP 真机冒烟交接：[`训练端_双A100_DDP冒烟交接.md`](./训练端_双A100_DDP冒烟交接.md)
 - 双 A100 代码补丁与真机验收：[`server_patch/ddp_two_a100/README.md`](./server_patch/ddp_two_a100/README.md)
