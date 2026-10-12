@@ -1,0 +1,145 @@
+{
+  "base_checkpoint": "/data/lingbot-vla-robotwin/models/lingbot-vla-v2-6b",
+  "base_identity": {
+    "sha256": "2e727a4c9be84d1a9fe8952544fed421df65fd32b8e543f0bc468f6aeb508a81",
+    "shards": [
+      {
+        "file": "model-00001-of-00006.safetensors",
+        "size": 4987151072,
+        "sha256": "4afb52b06a13df8b738a156ae5c8196d3bfe6b3ca931cecbd701e44cb9674e45"
+      },
+      {
+        "file": "model-00002-of-00006.safetensors",
+        "size": 4985113408,
+        "sha256": "ec131afa26a340db94c0dba8ec00e990be5f3d842ce6532070f0c8e26a067501"
+      },
+      {
+        "file": "model-00003-of-00006.safetensors",
+        "size": 4928593216,
+        "sha256": "7dccb068ca66c11fa514476d64661eeead56e2e80e1c0572c9ea82aa0d9ecf27"
+      },
+      {
+        "file": "model-00004-of-00006.safetensors",
+        "size": 4990740540,
+        "sha256": "1c2cb78066b69ae11255db851df95071e2cd69a3a4bc5020b3fd3b13b17819fb"
+      },
+      {
+        "file": "model-00005-of-00006.safetensors",
+        "size": 4990095864,
+        "sha256": "8fe36bf1f4f617869954bdfa1ad12e16abd8b0235a5fa99c88d571d4cddf4a17"
+      },
+      {
+        "file": "model-00006-of-00006.safetensors",
+        "size": 622195024,
+        "sha256": "3cf613d592dad64b1e2a1b1bb34a6f556a7fa05eacdb9972d73e0ea4882555a0"
+      }
+    ]
+  },
+  "manifest_sha256": "45185fcfb34a36a17268c8987411a0583d36f91f973c89de5afa834527c7e0cb",
+  "manifest_content_sha256": "9ea0522ab58a7e187ed60fd47fb8d83ecd330c0d2ea4a13850b5f12a0880fd67",
+  "selection": {
+    "mode": "expert",
+    "lora_modules": [],
+    "trainable_names": [
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.self_attn.q_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.self_attn.q_proj.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.self_attn.k_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.self_attn.k_proj.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.self_attn.v_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.self_attn.v_proj.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.self_attn.o_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.mlp.gate.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.mlp.experts.gate_proj",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.mlp.experts.up_proj",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.mlp.experts.down_proj",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.mlp.shared_expert.gate_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.mlp.shared_expert.up_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.mlp.shared_expert.down_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.input_layernorm.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.input_layernorm.gamma.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.input_layernorm.gamma.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.input_layernorm.beta.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.input_layernorm.beta.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.post_attention_layernorm.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.post_attention_layernorm.gamma.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.post_attention_layernorm.gamma.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.post_attention_layernorm.beta.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.34.post_attention_layernorm.beta.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.self_attn.q_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.self_attn.q_proj.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.self_attn.k_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.self_attn.k_proj.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.self_attn.v_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.self_attn.v_proj.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.self_attn.o_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.mlp.gate.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.mlp.experts.gate_proj",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.mlp.experts.up_proj",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.mlp.experts.down_proj",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.mlp.shared_expert.gate_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.mlp.shared_expert.up_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.mlp.shared_expert.down_proj.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.input_layernorm.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.input_layernorm.gamma.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.input_layernorm.gamma.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.input_layernorm.beta.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.input_layernorm.beta.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.post_attention_layernorm.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.post_attention_layernorm.gamma.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.post_attention_layernorm.gamma.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.post_attention_layernorm.beta.weight",
+      "model.qwenvl_with_expert.qwen_expert.model.layers.35.post_attention_layernorm.beta.bias",
+      "model.qwenvl_with_expert.qwen_expert.model.norm.weight",
+      "model.state_proj.weight",
+      "model.state_proj.bias",
+      "model.action_in_proj.weight",
+      "model.action_in_proj.bias",
+      "model.action_out_proj.weight",
+      "model.action_out_proj.bias",
+      "model.action_time_mlp_in.weight",
+      "model.action_time_mlp_in.bias",
+      "model.action_time_mlp_out.weight",
+      "model.action_time_mlp_out.bias"
+    ],
+    "expert_last_n_layers": 2,
+    "lora": null
+  },
+  "training_method": "clean_only_behavior_cloning",
+  "competition_all_50_tasks": true,
+  "loss_normalization": "valid_action_coordinate_mean_v1",
+  "data_sampling": {
+    "action_chunk_tail": "mask",
+    "validation_action_chunk_tail": "mask",
+    "val_episodes": 5,
+    "seed": 42,
+    "batch_size": 32,
+    "gradient_accumulation": 1
+  },
+  "distributed": {
+    "backend": "nccl",
+    "world_size": 2,
+    "per_device_batch_size": 32,
+    "gradient_accumulation": 1,
+    "global_batch_size": 64,
+    "sampler": "global_shuffle_rank_slice_drop_last"
+  },
+  "source": {
+    "commit": "e8b21d6c9460005f4a6ae9a5e642cc1d69c88f18",
+    "dirty": false
+  },
+  "memory": {
+    "total_parameters": 6375906359,
+    "trainable_parameters": 101159479,
+    "weight_gib": 12.064475264400244,
+    "adamw_training_lower_bound_gib": 13.195020541548729,
+    "excludes": "activations, VLM KV caches, temporary tensors, CUDA context, allocator fragmentation"
+  },
+  "norm_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+  "qwen_config_sha256": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d",
+  "model_geometry": {
+    "chunk_size": 50,
+    "max_action_dim": 55,
+    "max_state_dim": 55,
+    "img_size": 256
+  }
+}

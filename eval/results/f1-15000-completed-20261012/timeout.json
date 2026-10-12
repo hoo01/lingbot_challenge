@@ -1,0 +1,94 @@
+{
+  "task": "adjust_bottle",
+  "setting": "demo_randomized",
+  "seed": 100012,
+  "status": "policy_timeout",
+  "success": false,
+  "scored": true,
+  "policy_completed": false,
+  "timeout_policy": "paired_wall900_stall240_zero_continue_v1",
+  "timeout_kind": "action_chunk_stall",
+  "timeout_seconds": 240,
+  "timeout_phase": "policy_started",
+  "expert_attempts": 1,
+  "expert": {
+    "seed": 100012,
+    "phase": "completed",
+    "passed": true,
+    "flow": "upstream_play_once_no_internal_hooks_v1",
+    "exception_policy": "record_and_stop",
+    "setup_seconds": 19.382321946322918,
+    "execution_seconds": 7.005412075668573,
+    "plan_success": true,
+    "success": true,
+    "instruction_parameters": {
+      "{A}": "001_bottle/base13",
+      "{a}": "right"
+    },
+    "total_seconds": 26.408545270562172
+  },
+  "paired_input_check": {
+    "source_job": "843758599804",
+    "instruction_equal": true,
+    "initial_state_equal": true,
+    "camera_sha256": {
+      "head_camera": "762a65f0d42ded59912f57c2988f57eaad1591ccef50ad9f0d3de1d5f50775d1",
+      "left_camera": "39e797d85d8c7c0b4c1a06a0723e275d414687f843798678f542de02bca1e285",
+      "right_camera": "2479326717c65f0ae406256ffed61662fb73f659f8b4295a71068afecd17ad42"
+    },
+    "camera_equal": {
+      "head_camera": true,
+      "left_camera": true,
+      "right_camera": true
+    },
+    "reference_episode": {
+      "path": "runs/eval-843758599804/segments/expert-outer-exception-20261009/shards/0/evaluation/adjust_bottle/demo_randomized/100012/episode.json",
+      "bytes": 1604,
+      "sha256": "a6e03e8039a2d710602c24810badb79e4ac3def140da8d5b7edcfd877ac0af14"
+    }
+  },
+  "seconds": 277.8205,
+  "error": "TimeoutError('No completed action chunk for 240s; PID 280321')",
+  "instruction": "Pick up the plastic soda bottle carefully using the right arm",
+  "execution_segment": "timeout-continue-20261011",
+  "protocol_stage": "paired_wall900_stall240_zero_continue_v1",
+  "actions": 0,
+  "chunks": 0,
+  "prediction_blocks": 1,
+  "last_observed_action": 22,
+  "last_observed_action_may_be_incomplete": true,
+  "video_complete": false,
+  "partial_videos": {
+    "head_camera": "adjust_bottle/demo_randomized/100012/episode.mp4",
+    "observer_camera": "adjust_bottle/demo_randomized/100012/observer.mp4"
+  },
+  "timeout_evidence": {
+    "files_sha256": {
+      "chunk-000-left-wrist.png": "0bbe507be2ed75333a3088fe69bc7c56bfe0d9ea2f9dbdf713b1ba4cd64b0031",
+      "chunk-000-right-wrist.png": "a2a339fffe869b327952c96364f26c25ee06b883a1338be4cb427002969a0e84",
+      "chunk-000.png": "ee8e253a40d2af9316537ea69e80b49033f152e404cf667f395653db3d482d74",
+      "episode.mp4": "158c09bbf89ab3639714a296d4f6f964bb82d12ce3028f7db7ee2741bd621244",
+      "expert.json": "c2744a5561b667772c9ff29cb15970afe9f65fd806dddc6741d9e9912f97dc51",
+      "ffmpeg-observer.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ffmpeg.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "instruction.json": "e6ece0dafe85b5e5478e8bb3cdc0f9927c32fa421ce015ba30ee0c9684a217f3",
+      "observer-video-frames.jsonl": "d38af0e4e498fe545ebf3baafdad1e230e3d09d97cf8bd3dd6850570093a6a89",
+      "observer.mp4": "15b673dca189c9352c221fae1dc5c5db7d5f881fdcb17175ce7f763c95fff756",
+      "paired-input-check.json": "aa3f355e2b23661319dc820959cf998ef732519f21143d1cc888fad8f8c92f08",
+      "predictions.jsonl": "0a574d86e10ae5f686b289f0f560d63fd597c636e1c0c86e1709a8c81f5f75f7",
+      "video-frames.jsonl": "3e2ea1df0cf0aedacbd3bac4b09607eee828bc7119151715d80d86ee3a1bc935"
+    },
+    "last_progress": {
+      "event": "policy_started",
+      "time": "2026-10-10T16:46:31.616482+00:00",
+      "task": "adjust_bottle",
+      "setting": "demo_randomized",
+      "seed": 100012
+    },
+    "note": "Interrupted data; no complete trajectory or terminal frame claim."
+  },
+  "timeout_origin_segment": "original",
+  "elapsed_estimated_from_supervisor_events": true,
+  "shard": 0,
+  "artifact_root": "segments/report-fixed-20261012-0750/shards/0/evaluation"
+}

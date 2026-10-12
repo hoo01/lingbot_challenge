@@ -1,0 +1,46 @@
+{
+  "job_id": "a263b1d335d2",
+  "read_only_report_export": true,
+  "additional_evaluations": 0,
+  "model_or_video_downloaded": false,
+  "api_source": "http://127.0.0.1:18788/api/jobs/a263b1d335d2",
+  "api_raw_sha256": "57a954cb3a182f2c37e76fe4ae67b06591e136d426192acc936e53de4909c894",
+  "api_raw_bytes": 2504622,
+  "source_files": [
+    {
+      "eval_copy": "verification.json",
+      "source_relative_to_workspace": "artifacts/f1-15000-eval-20261010/completed-20261012-1156/receipt.json",
+      "sha256": "2d35a08170507e3284748dc4218cc20217634c349084b2dab2dcc6ded7782fe6",
+      "bytes": 5798
+    },
+    {
+      "eval_copy": "paired-reference.json",
+      "source_relative_to_workspace": "artifacts/f1-15000-eval-20261010/paired-reference.json",
+      "sha256": "ec14ae2092bca38a689feca77b98dc89317bf9add20b820dd67e2d4bd503dd20",
+      "bytes": 654676
+    },
+    {
+      "eval_copy": "training_config.yaml",
+      "source_relative_to_workspace": "artifacts/f1-15000-eval-20261010/metadata/training_config.yaml",
+      "sha256": "f6a362f883d014c6c4393334ab1628af232d656b453138530788a294f1075366",
+      "bytes": 925
+    },
+    {
+      "eval_copy": "run_metadata.json",
+      "source_relative_to_workspace": "artifacts/f1-15000-eval-20261010/metadata/run_metadata.json",
+      "sha256": "73c936e8e7527dabb3d73763fbbf8f1d4194b7a47a90b3e2f04955c60b9cb245",
+      "bytes": 7598
+    }
+  ],
+  "e0_scene_source": {
+    "repository_path": "eval/results/e0-15000-final/scenes.json",
+    "sha256": "fb5b3fb4d3f0b44ad407ba93167f9c388df4a50c0b5255f38f06ac645ce0f1b2"
+  },
+  "outside_eval_restored": {
+    "repository_path": "训练端_F1正式训练交接.md",
+    "head_before": "ddb244cf2a779312ed9e602dfa520319c638c36e",
+    "original_worktree_sha256": "49ffc50c9e3aa73b8218853a78c4a3b7b1ab37aa13925a1c5ffd46dbeb809ee6",
+    "restored_head_blob_sha256": "8dd97e98286d8b0c8437e4cef7b084d5ced06bab32b58040c457550f7ef2d64d",
+    "archived_addendum": "eval-handoff-addendum.md"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "job_id": "a263b1d335d2",
+  "model_id": "2b05f4a89146",
+  "status": "completed",
+  "created_at": "2026-10-10T16:28:41.547036+00:00",
+  "completed_at": "2026-10-12T02:12:51.855337+00:00",
+  "wall_elapsed_seconds_including_holds": 121450.308301,
+  "counts": {
+    "planned": 500,
+    "attempted": 500,
+    "valid": 499,
+    "scored": 500,
+    "timeout_failures": 1,
+    "successes": 49,
+    "execution_errors": 0,
+    "record_error": null,
+    "expert_attempts": 16,
+    "expert_rejections": 0
+  },
+  "by_setting": [
+    {
+      "setting": "demo_clean",
+      "scored": 250,
+      "policy_completed": 250,
+      "timeouts": 0,
+      "successes": 29,
+      "success_rate": 0.116
+    },
+    {
+      "setting": "demo_randomized",
+      "scored": 250,
+      "policy_completed": 249,
+      "timeouts": 1,
+      "successes": 20,
+      "success_rate": 0.08
+    }
+  ],
+  "reference_job": "843758599804",
+  "reference_sha256": "ec14ae2092bca38a689feca77b98dc89317bf9add20b820dd67e2d4bd503dd20",
+  "normalization_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+  "hf_revision": "42b20c657c57729af322376a56e03f8eb355414c",
+  "final_segment": "report-fixed-20261012-0750",
+  "e0_comparison": {
+    "e0_successes": 54,
+    "f1_successes": 49,
+    "scored_keys": 500,
+    "delta_successes": -5,
+    "delta_percentage_points": -1.0,
+    "both_success": 37,
+    "e0_only_success": 17,
+    "f1_only_success": 12,
+    "both_failure": 434,
+    "tasks_f1_higher": 5,
+    "tasks_f1_lower": 9,
+    "tasks_equal_total": 36
+  },
+  "camera_differences": [
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100010,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100013,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100016,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100019,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100020,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "place_fan",
+      "setting": "demo_randomized",
+      "seed": 100019,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "seed": 100010,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "seed": 100017,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "seed": 100021,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    }
+  ],
+  "normalization_representation": "12 absolute joint targets + 2 absolute gripper targets; subtract_state false",
+  "model_rng_restored": false,
+  "report_source_api_sha256": "57a954cb3a182f2c37e76fe4ae67b06591e136d426192acc936e53de4909c894",
+  "report_source_api_bytes": 2504622,
+  "full_policy_video_views_in_metadata": 998,
+  "video_decode_repeated": false,
+  "limitations": [
+    "Development fixed-scene evaluation, not an official challenge submission",
+    "Some E0-paired scenes have known image/layout or light differences; matching seeds/instructions/joints does not prove identical rendering",
+    "Legacy timeout lacks an explicit episode-index field",
+    "Original model RNG stream was not restored across restarts",
+    "Sixteen early expert-check outcomes are retained; subsequent 484 outcomes have no expert calls",
+    "E0 learned tensors were previously rounded to BF16; F1 keeps learned FP32 values",
+    "The 499 completed episodes have video metadata; this report does not repeat video decoding or a frame-by-frame review"
+  ]
+}

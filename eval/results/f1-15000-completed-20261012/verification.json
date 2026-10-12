@@ -1,0 +1,214 @@
+{
+  "passed": true,
+  "verified_at": "2026-10-12T04:04:50.793924+00:00",
+  "completed_at": "2026-10-12T02:12:51.855337+00:00",
+  "job_id": "a263b1d335d2",
+  "status": "completed",
+  "model_id": "2b05f4a89146",
+  "hf_revision": "42b20c657c57729af322376a56e03f8eb355414c",
+  "segment": "report-fixed-20261012-0750",
+  "counts": {
+    "planned": 500,
+    "attempted": 500,
+    "valid": 499,
+    "scored": 500,
+    "timeout_failures": 1,
+    "successes": 49,
+    "execution_errors": 0,
+    "record_error": null,
+    "expert_attempts": 16,
+    "expert_rejections": 0
+  },
+  "success_rate": 0.098,
+  "by_setting": [
+    {
+      "setting": "demo_clean",
+      "scored": 250,
+      "policy_completed": 250,
+      "timeouts": 0,
+      "successes": 29,
+      "success_rate": 0.116
+    },
+    {
+      "setting": "demo_randomized",
+      "scored": 250,
+      "policy_completed": 249,
+      "timeouts": 1,
+      "successes": 20,
+      "success_rate": 0.08
+    }
+  ],
+  "unique_fixed_keys": 500,
+  "exact_reference_coverage": true,
+  "groups_all_five": 100,
+  "reference_sha256": "ec14ae2092bca38a689feca77b98dc89317bf9add20b820dd67e2d4bd503dd20",
+  "reference_expert_passed": 480,
+  "reference_budget_exhausted": 20,
+  "instructions_and_parameters_equal": 500,
+  "initial_joints_equal": 500,
+  "index_equal_with_explicit_fields": 499,
+  "index_metadata_limitation": [
+    {
+      "task": "adjust_bottle",
+      "setting": "demo_randomized",
+      "seed": 100012,
+      "reason": "Retained legacy timeout record has no index field; no metadata is fabricated"
+    }
+  ],
+  "new_zero_expert_records": 484,
+  "retained_legacy_expert_records": 16,
+  "camera_mismatched_scene_count": 10,
+  "camera_differences": [
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100010,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100013,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100016,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100019,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "setting": "demo_randomized",
+      "seed": 100020,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "place_fan",
+      "setting": "demo_randomized",
+      "seed": 100019,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "seed": 100010,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "seed": 100015,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "seed": 100017,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "setting": "demo_randomized",
+      "seed": 100021,
+      "camera_equal": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      }
+    }
+  ],
+  "prefixes": [
+    {
+      "shard": 0,
+      "retained": 221,
+      "final_records": 250,
+      "source_prefix_sha256": "0703e11ddc774d121315dfd5b07d221db8e844b931c8bceadf3c4d8fb425c233",
+      "final_records_sha256": "2c6f7ccbb6192e50febc7f1868f0b3771ab65055f0aff96ce87469e6b084544d",
+      "prefix_bytes_unchanged": true
+    },
+    {
+      "shard": 1,
+      "retained": 250,
+      "final_records": 250,
+      "source_prefix_sha256": "6ffc499016bae5e3ebee8d211874a5a054887439f09c60a03f9606c4ac8b431e",
+      "final_records_sha256": "6ffc499016bae5e3ebee8d211874a5a054887439f09c60a03f9606c4ac8b431e",
+      "prefix_bytes_unchanged": true
+    }
+  ],
+  "runtime_evidence": [
+    {
+      "shard": 0,
+      "fp32_elements": 6375906359,
+      "norm_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+      "learned_values_exact": true
+    },
+    {
+      "shard": 1,
+      "fp32_elements": 6375906359,
+      "norm_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+      "learned_values_exact": true
+    }
+  ],
+  "timeout_key": {
+    "task": "adjust_bottle",
+    "setting": "demo_randomized",
+    "seed": 100012,
+    "success": false,
+    "scored": true,
+    "policy_completed": false,
+    "video_complete": false
+  },
+  "model_rng_restored": false,
+  "weights_reread": false,
+  "history_preserved": true,
+  "limitations": [
+    "Development fixed-scene evaluation, not an official challenge submission",
+    "Some E0-paired scenes have known image/layout or light differences; matching seeds/instructions/joints does not prove identical rendering",
+    "Legacy timeout lacks an explicit episode-index field",
+    "Original model RNG stream was not restored across restarts",
+    "Sixteen early expert-check outcomes are retained; subsequent 484 outcomes have no expert calls"
+  ]
+}
