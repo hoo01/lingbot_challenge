@@ -14,6 +14,7 @@
 - [逐任务成绩JSON](baseline-e0-same-seed-20261010/by-task.json)、[成功任务图](baseline-e0-same-seed-20261010/successful-tasks.png)。
 - [500个配对结果](baseline-e0-same-seed-20261010/paired-outcomes.md)、[103条模型成功记录](baseline-e0-same-seed-20261010/successful-episodes.md)（基座49+E0 54，双方成功的相同键可各出现一次）。
 - [E0失败案例与成功参照](e0-15000-final/error-analysis/index.html)、[4个基座超时部分证据](baseline-e0-same-seed-20261010/timeouts.json)。
+- [E0人工视频复核表（2026-10-12）](e0-15000-final/error-analysis/manual-review-20261012/README.md)：14个失败案例已复核，6个成功对照视频待核；含关键截图、日志核对与候选训练建议。
 - [对照验收](baseline-e0-same-seed-20261010/verification.json)、[交付链接核验](baseline-e0-same-seed-20261010/delivery-verification.json)、[E0完整验收](e0-15000-final/verification.json)。
 
 视频/远端关键帧链接需本机18788隧道在线。旧基座361个复用回合原本未录像，仅提供已保存的关键帧和轨迹；超时视频只承诺部分记录。
