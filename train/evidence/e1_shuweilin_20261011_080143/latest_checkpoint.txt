@@ -1,0 +1,1 @@
+${TRAIN_ROOT}/runs/e1_shuweilin_20261011_080143/checkpoints/global_step_15000/training.pt

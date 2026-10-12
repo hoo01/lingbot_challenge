@@ -1,0 +1,185 @@
+{
+  "policy": "Replace absolute training and conda roots in record files with ${TRAIN_ROOT} and ${CONDA_ROOT}; preserve the source launcher script bytes. Source and distributed SHA-256 are distinct identities.",
+  "weight_files_included": false,
+  "ssh_configuration_included": false,
+  "credential_pattern_matches_in_distributed_evidence": 0,
+  "files": [
+    {
+      "file": "assets/clean_manifest.json",
+      "source_sha256": "45185fcfb34a36a17268c8987411a0583d36f91f973c89de5afa834527c7e0cb",
+      "distributed_sha256": "eaa16e4b66d7c178b9a7c9bf9d1a104a79b74f2e9990a7b4fb68083165e87558",
+      "source_size_bytes": 76612,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "assets/norm_stats.json",
+      "source_sha256": "7e6ac279d147cb8422108d36216768111c19bb2113ca9eee1a23df22df238df0",
+      "distributed_sha256": "7e6ac279d147cb8422108d36216768111c19bb2113ca9eee1a23df22df238df0",
+      "source_size_bytes": 159019,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "assets/norm_stats.provenance.json",
+      "source_sha256": "d1c6097ccf69bc0298e5326241a9814b0d666c8b2d399b984d8793dec217863c",
+      "distributed_sha256": "451735546875a96c8f9625f4b0b9f93c3b2b6fa811d3427a4430800013fdf905",
+      "source_size_bytes": 2177,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "checkpoints/global_step_15000/hf_ckpt_fp32/export.json",
+      "source_sha256": "1397c0bb1e89f6b245dd595c3c3b807ee8ce7d1cff9d3b0c1e68cb95d0c311ca",
+      "distributed_sha256": "1397c0bb1e89f6b245dd595c3c3b807ee8ce7d1cff9d3b0c1e68cb95d0c311ca",
+      "source_size_bytes": 149,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "conda-explicit.txt",
+      "source_sha256": "7b2f53fcb361d1174e442713a50272730a4ef52a7d4aa4f7882047f0c0ff5a79",
+      "distributed_sha256": "7b2f53fcb361d1174e442713a50272730a4ef52a7d4aa4f7882047f0c0ff5a79",
+      "source_size_bytes": 15487,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "configs/robot_configs/robotwin.yaml",
+      "source_sha256": "49d07e5dcff216df70abfed89c2eaf13c6a2aa12eba3d024d7b83a89e3bf70b5",
+      "distributed_sha256": "49d07e5dcff216df70abfed89c2eaf13c6a2aa12eba3d024d7b83a89e3bf70b5",
+      "source_size_bytes": 1014,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "configs/robot_configs/robotwin_e1_relative.yaml",
+      "source_sha256": "51c4e204e764d04881396560ed6e11ab33354c7c2ea316a482cc1f24eca6f5d0",
+      "distributed_sha256": "51c4e204e764d04881396560ed6e11ab33354c7c2ea316a482cc1f24eca6f5d0",
+      "source_size_bytes": 1191,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "configs/train_e1_relative_ddp.yaml",
+      "source_sha256": "3440ce4764c8778eea7f8e899909f539419e31a5a96a27a3a519a72897c0482a",
+      "distributed_sha256": "3440ce4764c8778eea7f8e899909f539419e31a5a96a27a3a519a72897c0482a",
+      "source_size_bytes": 1140,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "episode_splits.json",
+      "source_sha256": "060d29312c267952f5395b2db798f4aabdd116f63ac72243b5179d9e28496a1d",
+      "distributed_sha256": "060d29312c267952f5395b2db798f4aabdd116f63ac72243b5179d9e28496a1d",
+      "source_size_bytes": 28223,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "exit_code",
+      "source_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "distributed_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "source_size_bytes": 2,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "latest_checkpoint.txt",
+      "source_sha256": "44fac7ae90b5795384561ceb1b9d67d4cb2ced67018d8eba3b52cf980807b93d",
+      "distributed_sha256": "814936421842780529eb7ced5ab349136dd67f6951d89873285eb95612ded375",
+      "source_size_bytes": 103,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "launch_record.txt",
+      "source_sha256": "cbaa47f8c2a52f1c8f17c63764a599bf4471a1134ecffdeb92cc42de581e9aab",
+      "distributed_sha256": "c793955ef7d138a76a754be3887c648522beac65f5451ccd701b0e0c2088aa04",
+      "source_size_bytes": 1065,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "lingbotvla_cli.yaml",
+      "source_sha256": "03c4c9bb5e75ac85c4cfede60e0337e05956d715b9d04b8f144b3e17e687bcff",
+      "distributed_sha256": "f148aed2f060c16b387958cc77d5188a5af71bb58cf99b8a3ed6b087b64362cc",
+      "source_size_bytes": 6456,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "metrics.jsonl",
+      "source_sha256": "cd91311d6b78dd1aa3d551f521a70bd5ee454a16a72b96aa6fe00701b6581d4b",
+      "distributed_sha256": "cd91311d6b78dd1aa3d551f521a70bd5ee454a16a72b96aa6fe00701b6581d4b",
+      "source_size_bytes": 3864202,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "eval-protocol.json",
+      "source_sha256": "aadd43a1d6a24e4bf593cb7647c974e85f3612640a0758975b9915377def6999",
+      "distributed_sha256": "aadd43a1d6a24e4bf593cb7647c974e85f3612640a0758975b9915377def6999",
+      "source_size_bytes": 1934,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "run_metadata.json",
+      "source_sha256": "15cda96d1b63b78524693a3fc805515ac9e13830e10afcc0c13cfaecccb8dbf8",
+      "distributed_sha256": "c90b5a294b0973a00436c84ada8d34f9c3a59756d01e20b1979808b0b959fdb8",
+      "source_size_bytes": 8054,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "scripts/launch_e1_screen.sh",
+      "source_sha256": "975b2d1dee027e1f3303ea92a55938c8b6d6ff87ba5f9e62831e097c89d79bcb",
+      "distributed_sha256": "975b2d1dee027e1f3303ea92a55938c8b6d6ff87ba5f9e62831e097c89d79bcb",
+      "source_size_bytes": 4767,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "swanlab_run_id.txt",
+      "source_sha256": "136dcb36f5d026504e592f139bcfabc3dc631d1d6620ddf93dd918922de9daeb",
+      "distributed_sha256": "136dcb36f5d026504e592f139bcfabc3dc631d1d6620ddf93dd918922de9daeb",
+      "source_size_bytes": 9,
+      "redacted": false,
+      "changes": []
+    },
+    {
+      "file": "train.log",
+      "source_sha256": "4d59102a71f2062c4a6c777a282b92f3ade340a06d87f2b3b341d685a9024e46",
+      "distributed_sha256": "11f40f0b8a9d86ad1dca7f32f15557a09467d31aa428ce4d9b87b5c9ba573457",
+      "source_size_bytes": 3873881,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder",
+        "absolute_conda_root_to_placeholder"
+      ]
+    },
+    {
+      "file": "training_config.yaml",
+      "source_sha256": "a4d6a41e5735c774d8961ddac6bad4b1b6a1a8eca38a4076f9f83150e289afaa",
+      "distributed_sha256": "8b124d0680d114a7bedfbd73808bc773040f1f6001fad86dd7f23ff0051384ae",
+      "source_size_bytes": 1024,
+      "redacted": true,
+      "changes": [
+        "absolute_training_root_to_placeholder"
+      ]
+    }
+  ]
+}

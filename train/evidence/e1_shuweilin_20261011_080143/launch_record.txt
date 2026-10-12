@@ -1,0 +1,13 @@
+experiment_id=e1_shuweilin_20261011_080143
+started_at=2026-10-11T08:01:43+08:00
+source_commit=c10b7d5db65cb98483b4628426c9278ab38881b1
+source_dirty=false
+free_gib_at_launch=130
+storage_policy=all_500_step_training_pt_final_fp32_export_only
+eval_protocol_path=${TRAIN_ROOT}/runs/e1_preflight/eval-protocol.json
+3440ce4764c8778eea7f8e899909f539419e31a5a96a27a3a519a72897c0482a  ${TRAIN_ROOT}/configs/train_e1_relative_ddp.yaml
+45185fcfb34a36a17268c8987411a0583d36f91f973c89de5afa834527c7e0cb  data/clean_manifest.json
+7e6ac279d147cb8422108d36216768111c19bb2113ca9eee1a23df22df238df0  data/clean_norm_stats_e1_relative_h50.json
+51c4e204e764d04881396560ed6e11ab33354c7c2ea316a482cc1f24eca6f5d0  configs/robot_configs/robotwin_e1_relative.yaml
+aadd43a1d6a24e4bf593cb7647c974e85f3612640a0758975b9915377def6999  ${TRAIN_ROOT}/runs/e1_preflight/eval-protocol.json
+command=bash scripts/train_ddp.sh --config configs/train_e1_relative_ddp.yaml --output-dir ${TRAIN_ROOT}/runs/e1_shuweilin_20261011_080143 --max-steps 15000

@@ -1,0 +1,8 @@
+{
+  "format": "official_lingbot_vla_v2",
+  "merged_lora": false,
+  "lora_modules": 0,
+  "dtype": "torch.float32",
+  "tensors": 1708,
+  "shards": 50
+}

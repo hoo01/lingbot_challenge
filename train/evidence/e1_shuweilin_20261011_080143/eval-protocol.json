@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "decision_date": "2026-10-11",
+  "decision_status": "frozen_training_comparison_policy_evaluation_not_yet_validated",
+  "experiments": ["e0_jiali_20261008_004327", "f1_jiali_20261009_140229", "e1_shuweilin_YYYYMMDD_HHMMSS"],
+  "comparison_model": {
+    "complete_hf_export_tensor_dtype": "float32",
+    "trainable_parameter_values": "preserve_float32_training_checkpoint_values_without_bfloat16_rounding",
+    "frozen_parameter_values": "bfloat16_precision_values_stored_as_float32",
+    "e0_existing_bfloat16_export_score": "historical_only_not_a_matched_comparator",
+    "e0_fp32_export_requires_matched_reevaluation": true,
+    "f1_closed_loop_evaluation_available": false
+  },
+  "planned_matched_evaluation": {
+    "execution_dtype": "float32",
+    "matmul_precision": "high",
+    "vision_attention": "flash_attention_2",
+    "moe_backend": "official_fused",
+    "all_model_components_on_cuda": true,
+    "use_compile": true,
+    "image_size": 256,
+    "action_chunk_size": 50,
+    "execute_actions": 50,
+    "flow_steps": 10,
+    "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+    "task_setting_seed_keys_source": "eval/results/baseline-e0-same-seed-20261010/comparisons.json",
+    "task_setting_seed_keys_source_sha256": "8e5935676a82c5868102a9dc430c85c2f7dee02712fa18abf95d1c7a4bef8e7b",
+    "task_setting_seed_keys_count": 500,
+    "e0_and_f1_action_protocol": "clean_absolute_arm_and_gripper_with_e0_clean_norm",
+    "e1_action_protocol": "relative_arm_with_e1_horizon_norm_absolute_gripper",
+    "e1_deployment_robot_config_verification": "required_before_evaluation",
+    "weight_and_model_construction_action_audit": "required_before_evaluation"
+  },
+  "scope": "Freeze numerical comparison intent before E1 training. Evaluation implementation, model registration, runtime checks, and matched E0 reevaluation are deferred; this file does not claim that evaluation is ready."
+}
