@@ -1,5 +1,6 @@
 # H0 is the experiment name; the training runtime calls this recipe G2.
 # Always pass a unique absolute --output-dir from the launcher.
+experiment_phase: h0-a
 mode: expert
 expert_last_n_layers: -1
 distributed_strategy: upstream_fsdp2
@@ -29,6 +30,8 @@ val_episodes: 5
 seed: 42
 
 lr: 5.0e-05
+lr_schedule: cosine
+lr_minimum_multiplier: 0.1
 weight_decay: 0.01
 max_grad_norm: 1.0
 warmup_steps: 50

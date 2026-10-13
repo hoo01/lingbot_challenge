@@ -25,6 +25,7 @@ from .training_distributed import DistributedContext, distributed_metadata
 from .training_models import configure_trainable, flow_matching_bc, memory_report, normalize_bc_gradients
 from .training_identity import base_checkpoint_identity, manifest_content_sha256, repository_identity
 from .training_runtime import add_vendor_path, build_policy, enable_action_checkpointing
+from .training_schedule import schedule_multiplier
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -57,13 +58,6 @@ def resolve_path(value):
 
 def move_batch(batch, device):
     return {key: value.to(device, non_blocking=True) for key, value in batch.items()}
-
-
-def schedule_multiplier(step, max_steps, warmup, minimum=0.1):
-    if warmup and step < warmup:
-        return max(1, step + 1) / warmup
-    progress = min(1, max(0, (step - warmup) / max(1, max_steps - warmup)))
-    return minimum + (1 - minimum) * 0.5 * (1 + math.cos(math.pi * progress))
 
 
 def validate(model, loader, device, max_batches=8, loss_fn=flow_matching_bc):
@@ -140,6 +134,7 @@ def portable_inference_cli(cli):
 
 
 def _train(config, context, *, dry_run=False):
+    training_started = time.monotonic()
     strategy = config.get("distributed_strategy", "ddp")
     if strategy not in {"ddp", "upstream_fsdp2"}:
         raise ValueError("distributed_strategy must be ddp or upstream_fsdp2.")
@@ -294,7 +289,20 @@ def _train(config, context, *, dry_run=False):
     if not 1 <= stop_after_step <= max_steps:
         raise ValueError("stop_after_step must be between 1 and max_steps")
     warmup = min(int(config.get("warmup_steps", 100)), max_steps)
-    scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda step: schedule_multiplier(step, max_steps, warmup))
+    schedule_mode = config.get("lr_schedule", "cosine")
+    schedule_constant = config.get("lr_constant_multiplier")
+    schedule_minimum = float(config.get("lr_minimum_multiplier", 0.1))
+    scheduler = torch.optim.lr_scheduler.LambdaLR(
+        optimizer,
+        lambda step: schedule_multiplier(
+            step,
+            max_steps,
+            warmup,
+            minimum=schedule_minimum,
+            mode=schedule_mode,
+            constant=schedule_constant,
+        ),
+    )
     state = {"global_step": 0, "epoch": 0, "batch_offset": 0}
     if config.get("resume"):
         if strategy == "upstream_fsdp2":
@@ -304,6 +312,14 @@ def _train(config, context, *, dry_run=False):
         else:
             state = resume_training_checkpoint(policy, optimizer, scheduler, resolve_path(config["resume"]),
                                                expected_metadata=metadata, rank=context.rank, device=device)
+        expected_resume_lr = config.get("expected_resume_lr")
+        if expected_resume_lr is not None:
+            actual_lrs = [group["lr"] for group in optimizer.param_groups]
+            if any(not math.isclose(lr, float(expected_resume_lr), rel_tol=1e-9, abs_tol=1e-12)
+                   for lr in actual_lrs):
+                raise ValueError(
+                    f"Resume learning rate {actual_lrs} differs from expected {expected_resume_lr}"
+                )
     else:
         rank_seed = int(config.get("seed", 42)) + context.rank * 100003
         torch.manual_seed(rank_seed)
@@ -365,6 +381,8 @@ def _train(config, context, *, dry_run=False):
     training_model.train()
     optimizer.zero_grad(set_to_none=True)
     metrics_path = output / "metrics.jsonl"
+    initial_global_step = state["global_step"]
+    setup_seconds = context.max_scalar(time.monotonic() - training_started)
     while state["global_step"] < stop_after_step:
         start = time.monotonic()
         loss_numerator, valid_count, data_load_seconds = 0.0, 0.0, 0.0
@@ -418,6 +436,8 @@ def _train(config, context, *, dry_run=False):
                   "lr": optimizer.param_groups[0]["lr"], "step_seconds": elapsed,
                   "peak_gpu_gib": peak_gpu, "world_size": context.world_size,
                   "global_batch_size": topology["global_batch_size"]}
+        if step == initial_global_step + 1:
+            record["setup_seconds"] = setup_seconds
         if strategy == "upstream_fsdp2":
             record["distributed_strategy"] = strategy
             record["num_workers_per_rank"] = workers
@@ -425,6 +445,7 @@ def _train(config, context, *, dry_run=False):
             record["peak_gpu_reserved_gib"] = context.max_scalar(
                 torch.cuda.max_memory_reserved(device) / 2**30)
         if validation and step % int(config.get("eval_every", 100)) == 0:
+            validation_start = time.monotonic()
             context.barrier()
             if strategy == "upstream_fsdp2":
                 validation_loss = validate(
@@ -436,23 +457,9 @@ def _train(config, context, *, dry_run=False):
                 record["validation_bc_loss"] = validate(
                     policy, validation_loader, device, int(config.get("eval_batches", 8)))
             context.barrier()
-        if context.is_main:
-            print(json.dumps(record), flush=True)
-            with metrics_path.open("a") as log:
-                log.write(json.dumps(record) + "\n")
-        if context.is_main and swanlab_run is not None:
-            swan_metrics = {
-                "train/loss": record["loss"],
-                "train/grad_norm": record["grad_norm"],
-                "train/learning_rate": record["lr"],
-                "train/valid_action_coordinates": record["valid_action_coordinates"],
-                "performance/step_seconds": record["step_seconds"],
-                "performance/peak_gpu_gib": record["peak_gpu_gib"],
-            }
-            if "validation_bc_loss" in record:
-                swan_metrics["validation/bc_loss"] = record["validation_bc_loss"]
-            swanlab_module.log(swan_metrics, step=step)
+            record["validation_seconds"] = context.max_scalar(time.monotonic() - validation_start)
         if config.get("checkpoint", True) and (step % int(config.get("save_every", 100)) == 0 or step == max_steps):
+            checkpoint_start = time.monotonic()
             checkpoint_dir = output / "checkpoints" / f"global_step_{step}"
             if strategy == "upstream_fsdp2":
                 save_fsdp_checkpoint(training_model, optimizer, scheduler, checkpoint_dir,
@@ -473,6 +480,26 @@ def _train(config, context, *, dry_run=False):
                                              dict(state), metadata, rank_rng_states=rank_rng_states)
                     (output / "latest_checkpoint.txt").write_text(str(checkpoint_dir / "training.pt") + "\n")
             context.barrier()
+            record["checkpoint_seconds"] = context.max_scalar(time.monotonic() - checkpoint_start)
+        if context.is_main:
+            print(json.dumps(record), flush=True)
+            with metrics_path.open("a") as log:
+                log.write(json.dumps(record) + "\n")
+        if context.is_main and swanlab_run is not None:
+            swan_metrics = {
+                "train/loss": record["loss"],
+                "train/grad_norm": record["grad_norm"],
+                "train/learning_rate": record["lr"],
+                "train/valid_action_coordinates": record["valid_action_coordinates"],
+                "performance/step_seconds": record["step_seconds"],
+                "performance/peak_gpu_gib": record["peak_gpu_gib"],
+            }
+            if "validation_bc_loss" in record:
+                swan_metrics["validation/bc_loss"] = record["validation_bc_loss"]
+                swan_metrics["performance/validation_seconds"] = record["validation_seconds"]
+            if "checkpoint_seconds" in record:
+                swan_metrics["performance/checkpoint_seconds"] = record["checkpoint_seconds"]
+            swanlab_module.log(swan_metrics, step=step)
     if config.get("export", True) and state["global_step"] == max_steps:
         checkpoint_dir = output / "checkpoints" / f"global_step_{state['global_step']}"
         if strategy == "upstream_fsdp2":

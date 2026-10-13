@@ -146,6 +146,35 @@ class LauncherIntegrationTests(unittest.TestCase):
         self.assertEqual(result.returncode, 2)
         self.assertIn("Usage:", result.stderr)
 
+    def test_c1_continuation_uses_fresh_run_and_records_parent(self) -> None:
+        parent_run = Path(self.temporary.name) / "h0-a"
+        checkpoint = parent_run / "checkpoints" / "global_step_15000"
+        checkpoint.mkdir(parents=True)
+        (checkpoint / "COMPLETED.json").write_text("{}\n", encoding="utf-8")
+        output = Path(self.temporary.name) / "h0-c1"
+
+        result = self.run_launcher(
+            "--continue-c1", shell_path(checkpoint), H0_OUTPUT_DIR=shell_path(output)
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        record = (output / "launch_record.txt").read_text(encoding="utf-8")
+        self.assertIn("phase=h0-c1", record)
+        self.assertIn(f"resume={shell_path(checkpoint)}", record.replace("\\", "/"))
+        self.assertTrue((output / "preflight_receipt.json").is_file())
+
+    def test_c1_interrupted_run_has_in_place_resume_mode(self) -> None:
+        run = Path(self.temporary.name) / "h0-c1"
+        checkpoint = run / "checkpoints" / "global_step_15500"
+        checkpoint.mkdir(parents=True)
+        (checkpoint / "COMPLETED.json").write_text("{}\n", encoding="utf-8")
+        (run / "preflight_receipt.json").write_text('{"original": true}\n', encoding="utf-8")
+
+        result = self.run_launcher("--resume-c1", shell_path(checkpoint))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual((run / "preflight_receipt.json").read_text(encoding="utf-8"),
+                         '{"original": true}\n')
+        self.assertEqual(len(list(run.glob("preflight_resume_*.json"))), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

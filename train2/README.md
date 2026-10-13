@@ -2,7 +2,9 @@
 
 ## 当前结论
 
-`H0` 是本仓库的实验名称；训练运行时代码将同一配方称为 `G2`。本目录现在只维护一条可执行路线：
+`H0` 是本仓库的实验名称；训练运行时代码将同一配方称为 `G2`。本目录维护同一实验的三个冻结阶段：H0-A（0–15k）、H0-C1（15k–25k）和 H0-C2（25k–40k）。
+
+设计假设、变量控制、效果判定和失败后的决策见 [`H0_G2_实验设计文档.md`](H0_G2_实验设计文档.md)；本文只维护可执行操作步骤。
 
 ```text
 LingBot-VLA-v2-6b 原始基座
@@ -17,16 +19,22 @@ LingBot-VLA-v2-6b 原始基座
 
 第一轮不加入 Randomized 数据、图像增广、动态 seen-instruction 采样或 VLM 解冻。这样相对 E0 的主要变化只有 Action Expert 从最后两层扩大到完整 Expert。
 
-## 唯一正式配置
+## 冻结配置
 
-正式配置为 [`configs/train_h0_full_expert_2gpu.yaml`](configs/train_h0_full_expert_2gpu.yaml)：
+H0-A 正式配置为 [`configs/train_h0_full_expert_2gpu.yaml`](configs/train_h0_full_expert_2gpu.yaml)：
 
 - `expert_last_n_layers: -1`：训练完整 Action Expert；
 - `distributed_strategy: upstream_fsdp2`：使用已接入的上游 FSDP2；
 - `batch_size: 8`、`gradient_accumulation: 4`、两张 GPU：global batch 为 64；
 - `image_augment: false`：第一轮不混入新的视觉变量；
-- `save_every: 500`：滚动保存，永久保留 5k、10k、15k；
+- `save_every: 500`：H0-A 滚动保存并永久保留 5k、10k、15k；
 - 最终保存 FP32 HF 导出并执行 action audit。
+
+只有第 10.2 节的冻结判据通过时才启用 continuation：
+
+- [`configs/train_h0_c1_2gpu.yaml`](configs/train_h0_c1_2gpu.yaml)：从 H0-A 15k DCP 恢复到累计 25k；
+- [`configs/train_h0_c2_2gpu.yaml`](configs/train_h0_c2_2gpu.yaml)：从 H0-C1 25k DCP 恢复到累计 40k；
+- 两段 continuation 都沿用 optimizer/RNG 状态，并将 H0-A 末端的 `5e-6` 学习率无 warmup 恒定延续；每个阶段使用新的 run 目录，不覆盖父阶段。
 
 运行时代码当前明确要求 `world_size == 2`，DCP 恢复也要求保存和恢复时 world size 相同。因此不提供 8 卡配置，也不安排 2 卡到 8 卡接力。
 
@@ -54,7 +62,7 @@ git clone \
 
 ## 空机器初始化
 
-建议数据盘至少提供 300 GiB 空间；正式输出所在文件系统在模型和数据准备完成后仍须保留至少 120 GiB。以下命令只准备训练环境、固定版本源码、原始基座、Qwen processor 和 50 任务 Clean 数据，不下载 teacher 权重或仿真资源：
+建议数据盘至少提供 300 GiB 空间；正式输出所在文件系统在模型和数据准备完成后仍须保留至少 120 GiB。300 GiB 是 H0-A 的开机下限，不是 H0-C 的容量证明；首次 `--resume-test` 后必须按设计文档第 8.3 节用实测 DCP 大小复核 continuation 空间。以下命令只准备训练环境、固定版本源码、原始基座、Qwen processor 和 50 任务 Clean 数据，不下载 teacher 权重或仿真资源：
 
 ```bash
 cd /data/lingbot_challenge/training/lingbot-vla-robotwin
@@ -98,6 +106,7 @@ data/clean_norm_stats.provenance.json
 - 目标输出文件系统至少有 120 GiB 可用空间且可写；该门槛覆盖最多 4 份同时存在的
   full-Expert DCP、最终约 23.75 GiB FP32 导出及保存临时余量。首次真实
   `--resume-test` 后应记录实际 DCP 大小再复核，但不得未经测量向下调门槛。
+- continuation 还会核对父 DCP 的阶段边界、两卡拓扑、原始基座 identity、完成标记、FP32 导出和 action audit，并按实测父 DCP/导出大小检查新阶段空间。
 
 它不把 [`action_mode`](configs/train_h0_full_expert_2gpu.yaml) 字符串当作动作语义证据，而是检查运行时真正读取的 vendor robot config。
 
@@ -157,25 +166,26 @@ bash train2/scripts/launch_h0.sh --state-test
 bash train2/scripts/launch_h0.sh --smoke
 ```
 
-在正式开训前再跑 100 steps：
+在正式开训前再跑 100 steps，并显式保存路径：
 
 ```bash
-bash train2/scripts/launch_h0.sh --smoke 100
+SMOKE_RUN=/data/lingbot_challenge/training/lingbot-vla-robotwin/runs/h0_smoke100
+H0_OUTPUT_DIR="$SMOKE_RUN" bash train2/scripts/launch_h0.sh --smoke 100
 ```
 
-通过条件包括：两卡都参与、FSDP2 无错误、Expert 0–35 全部被包裹、loss/grad norm 有限，并记录峰值 allocated/reserved 显存与 step time。
+通过条件包括：两卡都参与、FSDP2 无错误、Expert 0–35 全部被包裹、loss/grad norm 有限，并记录峰值 allocated/reserved 显存与 step time。启动器会用 step 21–99 自动写出 `h0_timing_budget_initial.json/.md`；此时尚无真实 DCP 保存耗时，所以报告明确标记为 provisional，不能据此正式开训。
 
 ### 4. 真实模型 upstream FSDP2 恢复验收
 
 该测试先训练到 step 1 并保存 DCP，再启动两个新进程恢复并训练到 step 2：
 
 ```bash
-bash train2/scripts/launch_h0.sh --resume-test
+H0_SMOKE_RUN="$SMOKE_RUN" bash train2/scripts/launch_h0.sh --resume-test
 ```
 
-这一步和 toy DCP 测试不同：它会加载正式模型与 Clean 数据，并经过生产训练入口的 composable FSDP2 包装。
+这一步和 toy DCP 测试不同：它会加载正式模型与 Clean 数据，并经过生产训练入口的 composable FSDP2 包装。设置 `H0_SMOKE_RUN` 后，启动器会把真实 DCP 保存耗时并入 smoke 统计，覆盖生成完整的 `h0_timing_budget.json/.md`；只有其中 `timing_gate_complete: true` 才通过时间门槛。
 
-### 5. 正式 15k 训练
+### 5. 正式 H0-A：15k 对齐阶段
 
 建议在外层 `screen` 或 `tmux` 中前台运行启动器：
 
@@ -186,6 +196,16 @@ bash train2/scripts/launch_h0.sh --launch
 ```
 
 启动器创建唯一 run 目录，记录 source commit、配置 SHA、provenance 路径、日志和退出码。不要复用已有输出目录。
+
+到 step 500 后，使用正式 8-batch validation 和首次正式 DCP 耗时更新预算：
+
+```bash
+python train2/scripts/plan_h0_timing.py \
+  --metrics /data/lingbot_challenge/training/lingbot-vla-robotwin/runs/<H0-A-run>/metrics.jsonl \
+  --current-step 500 \
+  --elapsed-rental-hours <开机至今小时数> \
+  --output /data/lingbot_challenge/training/lingbot-vla-robotwin/runs/<H0-A-run>/h0_timing_budget_step500.json
+```
 
 正式启动前的所有身份检查会原子写入 `preflight_receipt.json`，包括源码 commit、
 基座 identity、Qwen config、vendor revision、manifest、Norm、robot config、world size
@@ -200,6 +220,26 @@ bash train2/scripts/launch_h0.sh --resume \
 
 恢复会回到原 run 目录，并由训练器核对 frozen base、manifest、norm、trainable selection、模型几何、采样配置和双卡拓扑。
 
+### 7. 15k 后的 continuation 决策
+
+15k 是与 E0 对齐的第一个完整里程碑，不是预设的最终终点。如果设计文档第 10.2 节预先冻结的 Clean validation 判据在 15k 达到至少 1% 的窗口改善，并且六天时间与实测 DCP 存储预算允许，应进入独立的 H0-C continuation 阶段，预留 25k、40k 累计 step 候选。
+
+H0-C 的独立配置、恒定 `5e-6` scheduler、父 checkpoint 身份/容量检查和独立输出协议已经实现。达到冻结判据后启动 C1：
+
+```bash
+bash train2/scripts/launch_h0.sh --continue-c1 \
+  /data/lingbot_challenge/training/lingbot-vla-robotwin/runs/<H0-A-run>/checkpoints/global_step_15000
+```
+
+C1 中断后用 `--resume-c1 <C1-checkpoint>` 原目录恢复。25k 仍达到相同改善判据且预算允许时启动 C2：
+
+```bash
+bash train2/scripts/launch_h0.sh --continue-c2 \
+  /data/lingbot_challenge/training/lingbot-vla-robotwin/runs/<H0-C1-run>/checkpoints/global_step_25000
+```
+
+C2 中断后用 `--resume-c2 <C2-checkpoint>`。不得直接修改 `max_steps` 后复用 H0-A 的 `--resume`，否则 cosine 学习率会在恢复后向上跳变。
+
 ## 正式开训门槛
 
 在 15k run 前必须全部满足：
@@ -208,10 +248,11 @@ bash train2/scripts/launch_h0.sh --resume \
 2. `--state-test` 的 toy DCP 保存与新进程恢复完全一致；
 3. 10-step smoke 通过；
 4. 100-step smoke 通过，显存和吞吐可接受；
-5. `--resume-test` 的真实模型 upstream FSDP2 恢复通过；
-6. 启动日志确认完整 36 层 Expert 和 projections 可训练、VLM/vision 冻结；
-7. 数据、norm、源码和配置 SHA 已记录；
-8. 团队确认本轮仍从原始基座启动，而不是临时改为 E0 warm start。
+5. 100-step 稳态 step time 与真实 DCP 耗时已生成六天时间预算，且 `timing_gate_complete: true`；
+6. `--resume-test` 的真实模型 upstream FSDP2 恢复通过；
+7. 启动日志确认完整 36 层 Expert 和 projections 可训练、VLM/vision 冻结；
+8. 数据、norm、源码和配置 SHA 已记录；
+9. 团队确认本轮仍从原始基座启动，而不是临时改为 E0 warm start。
 
 ## 暂不并入本轮
 

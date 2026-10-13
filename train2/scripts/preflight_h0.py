@@ -21,6 +21,30 @@ import yaml
 EXPECTED_BASE_IDENTITY = "2e727a4c9be84d1a9fe8952544fed421df65fd32b8e543f0bc468f6aeb508a81"
 EXPECTED_QWEN_CONFIG_SHA256 = "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d"
 
+PHASE_RECIPES = {
+    "h0-a": {
+        "max_steps": 15000,
+        "warmup_steps": 50,
+        "lr_schedule": "cosine",
+        "checkpoint_keep_steps": [5000, 10000, 15000],
+        "parent_range": (1, 15000),
+    },
+    "h0-c1": {
+        "max_steps": 25000,
+        "warmup_steps": 0,
+        "lr_schedule": "constant",
+        "checkpoint_keep_steps": [25000],
+        "parent_range": (15000, 25000),
+    },
+    "h0-c2": {
+        "max_steps": 40000,
+        "warmup_steps": 0,
+        "lr_schedule": "constant",
+        "checkpoint_keep_steps": [40000],
+        "parent_range": (25000, 40000),
+    },
+}
+
 
 def require(condition: bool, message: str) -> None:
     if not condition:
@@ -184,6 +208,117 @@ def validate_storage(output_dir: Path, min_free_gib: int) -> dict[str, Any]:
     }
 
 
+def directory_size(path: Path) -> int:
+    return sum(item.stat().st_size for item in path.rglob("*") if item.is_file())
+
+
+def validate_parent_checkpoint(
+    checkpoint: Path,
+    *,
+    phase: str,
+    world_size: int,
+    expected_step: int | None = None,
+    expected_parent_phase: str | None = None,
+) -> dict[str, Any]:
+    checkpoint = checkpoint.resolve()
+    require(checkpoint.is_dir(), f"parent checkpoint directory missing: {checkpoint}")
+    marker_path = checkpoint / "COMPLETED.json"
+    require(marker_path.is_file(), f"parent checkpoint is incomplete: {checkpoint}")
+    marker = load_json(marker_path)
+    require(marker.get("format") == "lrvla_upstream_fsdp2_dcp_v1",
+            "parent checkpoint format is not upstream FSDP2 DCP")
+    require(marker.get("world_size") == world_size,
+            "parent checkpoint world size differs from the requested topology")
+    step = marker.get("global_step")
+    require(isinstance(step, int), "parent checkpoint global_step is invalid")
+    lower, upper = PHASE_RECIPES[phase]["parent_range"]
+    require(lower <= step <= upper,
+            f"parent step {step} is outside the allowed {phase} range {lower}..{upper}")
+    if expected_step is not None:
+        require(step == expected_step,
+                f"parent step is {step}, expected the frozen stage boundary {expected_step}")
+    require(marker.get("base_sha256") == EXPECTED_BASE_IDENTITY,
+            "parent checkpoint was not created from the pinned original base")
+    run_config_path = checkpoint.parent.parent / "training_config.yaml"
+    require(run_config_path.is_file(), "parent run has no archived training_config.yaml")
+    parent_phase = load_yaml(run_config_path).get("experiment_phase")
+    require(parent_phase in PHASE_RECIPES, "parent run has no recognized experiment phase")
+    if expected_parent_phase is not None:
+        require(parent_phase == expected_parent_phase,
+                f"parent run phase is {parent_phase}, expected {expected_parent_phase}")
+    dcp_bytes = directory_size(checkpoint) - directory_size(checkpoint / "hf_ckpt_fp32")
+    export_bytes = directory_size(checkpoint / "hf_ckpt_fp32")
+    if expected_step is not None:
+        require(export_bytes > 0, "frozen parent stage has no completed FP32 HF export")
+        require((checkpoint.parent.parent / "action_audit_reference.pt").is_file(),
+                "frozen parent stage has no action audit reference")
+    return {
+        "path": str(checkpoint),
+        "global_step": step,
+        "experiment_phase": parent_phase,
+        "marker_sha256": sha256(marker_path),
+        "dcp_bytes": dcp_bytes,
+        "export_bytes": export_bytes,
+    }
+
+
+def validate_recipe(cfg: dict[str, Any], phase: str, world_size: int) -> int:
+    require(phase in PHASE_RECIPES, f"unknown H0 phase: {phase}")
+    expected = PHASE_RECIPES[phase]
+    require(cfg.get("experiment_phase") == phase, f"config experiment_phase must be {phase}")
+    require(cfg["mode"] == "expert", "mode must be expert")
+    require(cfg["expert_last_n_layers"] == -1, "full Expert must use expert_last_n_layers=-1")
+    require(cfg.get("distributed_strategy") == "upstream_fsdp2", "must use upstream_fsdp2")
+    require(cfg.get("base_checkpoint") == "models/lingbot-vla-v2-6b", "H0 must use the pinned original base")
+    require(cfg.get("qwen_path") == "models/Qwen3-VL-4B-Instruct", "Qwen processor path changed")
+    require(cfg.get("architecture_yaml") == "vendor/lingbot-vla-v2/configs/vla/robotwin/robotwin.yaml",
+            "robot architecture path changed")
+    require(cfg.get("manifest") == "data/clean_manifest.json", "Clean manifest path changed")
+    require(cfg.get("norm_stats") == "data/clean_norm_stats.json", "Clean norm path changed")
+    require(cfg.get("action_mode") == "absolute", "action mode must be absolute")
+    require(cfg.get("train_projections") is True, "projections must be trainable")
+    require(cfg.get("gradient_checkpointing") is True, "gradient checkpointing must be enabled")
+    require(cfg.get("image_augment") is False, "H0 must not add image augmentation")
+    require(cfg.get("num_workers") == 2, "validated H0 recipe uses two workers per rank")
+    require(cfg.get("chunk_size") == 50, "chunk_size must remain 50")
+    require(cfg.get("action_chunk_tail") == "mask", "chunk tail must be masked")
+    require(cfg.get("val_episodes") == 5, "each task must hold out episodes 45..49")
+    require(cfg.get("action_audit") is True, "final export action audit must be enabled")
+    require(cfg.get("export") is True, "formal FP32 export must be enabled")
+    require(cfg.get("checkpoint") is True, "DCP checkpointing must be enabled")
+    require(cfg.get("save_every") == 500, "formal checkpoints must be written every 500 steps")
+    require(cfg.get("checkpoint_keep_steps") == expected["checkpoint_keep_steps"],
+            f"{phase} milestone retention changed")
+    require(cfg.get("warmup_steps") == expected["warmup_steps"], f"{phase} warmup changed")
+    require(cfg.get("max_steps") == expected["max_steps"], f"{phase} target step changed")
+    require(cfg.get("lr") == 5e-5, "base learning rate must remain 5e-5")
+    require(cfg.get("weight_decay") == 0.01, "weight decay must remain 0.01")
+    require(cfg.get("max_grad_norm") == 1.0, "gradient clipping must remain 1.0")
+    require(cfg.get("lr_schedule") == expected["lr_schedule"], f"{phase} LR schedule changed")
+    require(cfg.get("lr_minimum_multiplier") == 0.1, "minimum LR multiplier must remain 0.1")
+    if phase == "h0-a":
+        require("lr_constant_multiplier" not in cfg, "H0-A must use its cosine schedule")
+        require("expected_resume_lr" not in cfg, "H0-A must not declare a continuation LR")
+    else:
+        require(cfg.get("lr_constant_multiplier") == 0.1,
+                "continuation must use a constant 0.1 LR multiplier")
+        require(cfg.get("expected_resume_lr") == 5e-6,
+                "continuation resume LR must remain 5e-6")
+    require(cfg.get("export_dtype") == "float32", "formal export must be float32")
+    require(cfg.get("eval_every") == 250, "Clean validation interval must remain 250 steps")
+    require(cfg.get("eval_batches") == 8, "formal Clean validation must use 8 batches")
+    require(cfg.get("img_size") == 256, "image size must remain 256")
+    require(cfg.get("seed") == 42, "training seed must remain 42")
+    require(cfg.get("device") == "cuda", "formal training device must be CUDA")
+    require(cfg.get("output_dir") is None, "output_dir must be supplied explicitly by the launcher")
+    require(cfg.get("min_free_disk_gib") == 120, "formal minimum free disk must remain 120 GiB")
+    require(cfg.get("batch_size") == 8, "validated per-rank batch size is 8")
+    require(cfg.get("gradient_accumulation") == 4, "validated gradient accumulation is 4")
+    global_batch = int(cfg["batch_size"]) * world_size * int(cfg["gradient_accumulation"])
+    require(global_batch == 64, f"global batch is {global_batch}, expected 64")
+    return global_batch
+
+
 def validate_clean_manifest(root: Path, manifest: dict[str, Any]) -> tuple[int, int]:
     """Validate both the manifest declaration and the files it points to."""
     require(manifest.get("clean_only") is True, "manifest is not explicitly clean_only=true")
@@ -302,6 +437,10 @@ def main() -> None:
     parser.add_argument("--world-size", default=2, type=int, choices=(2,))
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--receipt", type=Path)
+    parser.add_argument("--phase", choices=tuple(PHASE_RECIPES), default="h0-a")
+    parser.add_argument("--parent-checkpoint", type=Path)
+    parser.add_argument("--expected-parent-step", type=int)
+    parser.add_argument("--expected-parent-phase", choices=tuple(PHASE_RECIPES))
     args = parser.parse_args()
 
     root = args.training_root.resolve()
@@ -316,42 +455,37 @@ def main() -> None:
         root / "src" / "lrvla" / "training.py",
         root / "src" / "lrvla" / "training_checkpoint.py",
         root / "src" / "lrvla" / "training_distributed.py",
+        root / "src" / "lrvla" / "training_schedule.py",
     )
     for path in required_runtime:
         require(path.is_file(), f"training runtime file missing: {path}")
 
     cfg = load_yaml(config_path)
-    require(cfg["mode"] == "expert", "mode must be expert")
-    require(cfg["expert_last_n_layers"] == -1, "full Expert must use expert_last_n_layers=-1")
-    require(cfg.get("distributed_strategy") == "upstream_fsdp2", "must use upstream_fsdp2")
-    require(cfg.get("base_checkpoint") == "models/lingbot-vla-v2-6b", "H0 must start from the pinned original base")
-    require(cfg.get("qwen_path") == "models/Qwen3-VL-4B-Instruct", "Qwen processor path changed")
-    require(cfg.get("action_mode") == "absolute", "action mode must be absolute")
-    require(cfg.get("train_projections") is True, "projections must be trainable")
-    require(cfg.get("gradient_checkpointing") is True, "gradient checkpointing must be enabled")
-    require(cfg.get("image_augment") is False, "first H0 recipe must not add image augmentation")
-    require(cfg.get("num_workers") == 2, "validated first H0 recipe uses two workers per rank")
-    require(cfg.get("chunk_size") == 50, "chunk_size must remain 50")
-    require(cfg.get("action_chunk_tail") == "mask", "chunk tail must be masked")
-    require(cfg.get("val_episodes") == 5, "each task must hold out episodes 45..49")
-    require(cfg.get("action_audit") is True, "final export action audit must be enabled")
-    require(cfg.get("checkpoint") is True, "DCP checkpointing must be enabled")
-    require(cfg.get("save_every") == 500, "formal checkpoints must be written every 500 steps")
-    require(cfg.get("checkpoint_keep_steps") == [5000, 10000, 15000], "milestone retention changed")
-    require(cfg.get("warmup_steps") == 50, "validated warmup is 50 optimizer steps")
-    require(cfg.get("max_steps") == 15000, "formal H0 target must remain 15000 steps")
-    require(cfg.get("export_dtype") == "float32", "formal export must be float32")
-    require(cfg.get("output_dir") is None, "output_dir must be supplied explicitly by the launcher")
-    require(cfg.get("min_free_disk_gib") == 120, "formal H0 minimum free disk must remain 120 GiB")
-
-    require(cfg.get("batch_size") == 8, "validated per-rank batch size is 8")
-    require(cfg.get("gradient_accumulation") == 4, "validated gradient accumulation is 4")
-    global_batch = int(cfg["batch_size"]) * args.world_size * int(cfg["gradient_accumulation"])
-    require(global_batch == 64, f"global batch is {global_batch}, expected 64")
+    global_batch = validate_recipe(cfg, args.phase, args.world_size)
+    require(args.phase == "h0-a" or args.parent_checkpoint is not None,
+            f"{args.phase} requires a parent checkpoint")
+    require(args.expected_parent_step is None or args.parent_checkpoint is not None,
+            "expected parent step requires a parent checkpoint")
+    require(args.expected_parent_phase is None or args.parent_checkpoint is not None,
+            "expected parent phase requires a parent checkpoint")
 
     base_shards, base_identity, qwen_config_sha = validate_model_assets(root, cfg)
     output_dir = (args.output_dir.resolve() if args.output_dir is not None else (root / "runs").resolve())
     storage = validate_storage(output_dir, cfg["min_free_disk_gib"])
+    parent = None
+    if args.parent_checkpoint is not None:
+        parent = validate_parent_checkpoint(
+            args.parent_checkpoint,
+            phase=args.phase,
+            world_size=args.world_size,
+            expected_step=args.expected_parent_step,
+            expected_parent_phase=args.expected_parent_phase,
+        )
+        if args.phase != "h0-a":
+            continuation_required = math.ceil(1.2 * (2 * parent["dcp_bytes"] + parent["export_bytes"]))
+            require(storage["free_bytes"] >= continuation_required,
+                    "output filesystem lacks measured continuation checkpoint/export headroom")
+            storage["continuation_required_free_bytes"] = continuation_required
 
     manifest_path = resolve(root, cfg["manifest"])
     norm_path = resolve(root, cfg["norm_stats"])
@@ -420,6 +554,7 @@ def main() -> None:
             "base_checkpoint": cfg["base_checkpoint"],
             "distributed_strategy": cfg["distributed_strategy"],
             "expert_last_n_layers": cfg["expert_last_n_layers"],
+            "experiment_phase": args.phase,
         },
         "base": {
             "path": str(resolve(root, cfg["base_checkpoint"])),
@@ -459,6 +594,8 @@ def main() -> None:
         },
         "storage": storage,
     }
+    if parent is not None:
+        receipt["parent_checkpoint"] = parent
     if args.receipt is not None:
         receipt_path = args.receipt.resolve()
         write_json_atomic(receipt_path, receipt)
