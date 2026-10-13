@@ -1,0 +1,54 @@
+# H0 is the experiment name; the training runtime calls this recipe G2.
+# Always pass a unique absolute --output-dir from the launcher.
+experiment_phase: h0-a
+mode: expert
+expert_last_n_layers: -1
+distributed_strategy: upstream_fsdp2
+base_checkpoint: models/lingbot-vla-v2-6b
+qwen_path: models/Qwen3-VL-4B-Instruct
+architecture_yaml: vendor/lingbot-vla-v2/configs/vla/robotwin/robotwin.yaml
+manifest: data/clean_manifest.json
+action_mode: absolute
+action_audit: true
+norm_stats: data/clean_norm_stats.json
+output_dir: null
+min_free_disk_gib: 120
+device: cuda
+train_projections: true
+
+# 8 samples/rank × 2 ranks × 4 microbatches = global batch 64.
+batch_size: 8
+gradient_accumulation: 4
+gradient_checkpointing: true
+
+chunk_size: 50
+action_chunk_tail: mask
+img_size: 256
+image_augment: false
+num_workers: 2
+val_episodes: 5
+seed: 42
+
+lr: 5.0e-05
+lr_schedule: cosine
+lr_minimum_multiplier: 0.1
+weight_decay: 0.01
+max_grad_norm: 1.0
+warmup_steps: 50
+max_steps: 15000
+eval_every: 250
+eval_batches: 8
+save_every: 500
+
+checkpoint: true
+checkpoint_keep_steps: [5000, 10000, 15000]
+export: true
+export_dtype: float32
+swanlab:
+  enabled: true
+  project: lingbot_cha
+  workspace: Elowynnn
+  experiment_name: null
+  description: H0/G2 clean-only absolute-action full Expert, upstream FSDP2, 2 GPUs
+  public: false
+  run_id: null
