@@ -1,0 +1,45 @@
+mode: expert
+expert_last_n_layers: 36
+base_checkpoint: models/lingbot-vla-v2-6b
+qwen_path: models/Qwen3-VL-4B-Instruct
+architecture_yaml: vendor/lingbot-vla-v2/configs/vla/robotwin/robotwin.yaml
+manifest: data/clean_manifest.json
+action_mode: absolute
+robot_config: train2/configs/robotwin_absolute.yaml
+norm_stats: data/clean_norm_stats.json
+output_dir: ${TRAIN_ROOT}/runs/h0_full_expert_clean
+device: cuda
+train_projections: true
+
+# 1 × 8 GPUs × 8 accumulation = global batch 64.
+batch_size: 1
+gradient_accumulation: 8
+gradient_checkpointing: true
+
+chunk_size: 50
+action_chunk_tail: mask
+img_size: 256
+image_augment: true
+num_workers: 4
+val_episodes: 5
+seed: 42
+
+lr: 5.0e-05
+weight_decay: 0.01
+max_grad_norm: 1.0
+warmup_steps: 500
+max_steps: 15000
+eval_every: 500
+eval_batches: 8
+save_every: 1000
+
+export: true
+export_dtype: float32
+swanlab:
+  enabled: true
+  project: lingbot_cha
+  workspace: Elowynnn
+  experiment_name: null
+  description: H0 clean-only full 36-layer Action Expert, absolute action, 8 GPU continuation
+  public: false
+  run_id: null
