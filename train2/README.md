@@ -1,110 +1,224 @@
-# H0 主力训练：Clean-only 完整 Action Expert
+# H0/G2：双卡 Clean-only 完整 Action Expert
 
-## 1. 结论
+## 当前结论
 
-这一轮不再做 E0/E1 式的小变量试验，而是训练一个可正式评测的主力模型：
+`H0` 是本仓库的实验名称；训练运行时代码将同一配方称为 `G2`。本目录现在只维护一条可执行路线：
 
 ```text
 LingBot-VLA-v2-6b 原始基座
-+ 官方 50 任务 Clean demonstration（仅 Clean）
++ 官方 50 任务 Clean demonstration
 + absolute joint action
 + Clean absolute-action norm / bounds_99_woclip
 + L1 flow-matching
-+ 完整 36 层 Action Expert
++ 完整 Action Expert
 + state/action/time projections
-+ 合法训练期图像增广
++ 两卡 upstream FSDP2
 ```
 
-本方案刻意不使用 Randomized 数据，不用 Randomized 计算 norm、筛选样本、生成 observation 或选择 checkpoint。Randomized 只用于方案冻结后的测试。
+第一轮不加入 Randomized 数据、图像增广、动态 seen-instruction 采样或 VLM 解冻。这样相对 E0 的主要变化只有 Action Expert 从最后两层扩大到完整 Expert。
 
-## 2. 为什么这样改
+## 唯一正式配置
 
-E0 只训练 Action Expert 最后 2 层和 projections，共约 101M 参数；F1 在相同训练范围上增加 photometric augmentation，最终为 49/500（9.8%），没有超过 E0 的 54/500（10.8%）。E1 改为 relative arm action，但训练范围仍是最后 2 层。因此下一轮的主要矛盾不应继续押在单个动作表示或单独增广上，而应提高动作模型的可训练容量。
+正式配置为 [`configs/train_h0_full_expert_2gpu.yaml`](configs/train_h0_full_expert_2gpu.yaml)：
 
-完整 Action Expert 是现有自建训练入口已经能表达的最大可靠扩展：`mode: expert`、`expert_last_n_layers: 36`。当前证据仓库没有 `/data/lingbot-vla-robotwin` 的 `lrvla` 源码，不能确认“VLM 后 8 层分组解冻”、状态扰动或 seen 指令替换已有真实实现；未确认前不得通过增加无效 YAML 字段假装启用。
+- `expert_last_n_layers: -1`：训练完整 Action Expert；
+- `distributed_strategy: upstream_fsdp2`：使用已接入的上游 FSDP2；
+- `batch_size: 8`、`gradient_accumulation: 4`、两张 GPU：global batch 为 64；
+- `image_augment: false`：第一轮不混入新的视觉变量；
+- `save_every: 500`：滚动保存，永久保留 5k、10k、15k；
+- 最终保存 FP32 HF 导出并执行 action audit。
 
-## 3. 正式配置
+运行时代码当前明确要求 `world_size == 2`，DCP 恢复也要求保存和恢复时 world size 相同。因此不提供 8 卡配置，也不安排 2 卡到 8 卡接力。
 
-- 两张 A100 80G：[`configs/train_h0_full_expert_2gpu.yaml`](configs/train_h0_full_expert_2gpu.yaml)
-- 八卡接力：[`configs/train_h0_full_expert_8gpu.yaml`](configs/train_h0_full_expert_8gpu.yaml)
-- absolute robot config：[`configs/robotwin_absolute.yaml`](configs/robotwin_absolute.yaml)
+## 仓库布局
 
-两套配置保持：
+训练运行时已并入 `main`，新机器直接克隆主分支：
+
+```bash
+git clone \
+  --branch main \
+  --single-branch \
+  https://github.com/hoo01/lingbot_challenge.git \
+  /data/lingbot_challenge
+```
+
+随后目录关系为：
 
 ```text
-global batch = per-rank batch × world size × gradient accumulation = 64
+/data/lingbot_challenge/                         Git 根目录
+/data/lingbot_challenge/train2/                  H0 配方和启动器
+/data/lingbot_challenge/training/lingbot-vla-robotwin/  训练运行时
 ```
 
-安全起点均为每卡 batch 1：
+启动器默认按这个布局寻找训练运行时；若位置不同，再显式设置 `TRAIN_ROOT`。
 
-- 2 卡：`1 × 2 × 32 = 64`
-- 8 卡：`1 × 8 × 8 = 64`
+## 空机器初始化
 
-冒烟确认显存充足后，可以提高每卡 batch，同时等比例降低梯度累积；global batch 必须仍为 64。不要因为换成 8 卡而直接改变优化口径。
-
-## 4. 六天安排
-
-1. 第 0–0.5 天：复制本目录到训练机，固定代码 commit，运行 preflight 和 100-step 冒烟；保存并重载一次 checkpoint。
-2. 第 0.5–5.5 天：只运行 H0，不再启动其它配方。正式目标先设 15,000 optimizer steps，即与 E0 相同的 960,000 processed samples。
-3. 保存 1k、2.5k、5k、7.5k、10k、12.5k、15k 中可实现的里程碑；现有入口若只能固定周期，使用 `save_every: 1000`。
-4. 第 5.5–6 天：导出最终 FP32 HF 模型、动作审计、固定 Clean 小开发集评测。Randomized 只在模型和 checkpoint 冻结之后测试。
-5. 若 15k 提前完成且固定 Clean 验证仍改善，保留 15k 后另开 continuation run；不要覆盖 15k。
-
-## 5. 启动前必须通过
-
-在训练工程根目录可用且数据就位后：
+建议数据盘至少提供 300 GiB 空间；正式输出所在文件系统在模型和数据准备完成后仍须保留至少 120 GiB。以下命令只准备训练环境、固定版本源码、原始基座、Qwen processor 和 50 任务 Clean 数据，不下载 teacher 权重或仿真资源：
 
 ```bash
-export TRAIN_ROOT=/data/lingbot-vla-robotwin
-export H0_NORM_PROVENANCE=/absolute/path/to/clean_norm_stats.provenance.json
+cd /data/lingbot_challenge/training/lingbot-vla-robotwin
 
-python train2/scripts/preflight_h0.py \
-  --training-root "$TRAIN_ROOT" \
-  --config train2/configs/train_h0_full_expert_2gpu.yaml \
-  --norm-provenance "$H0_NORM_PROVENANCE" \
-  --world-size 2
+bash scripts/bootstrap.sh
+source scripts/activate.sh lingbot-vla
+
+python scripts/download_assets.py --asset all --plan
+python scripts/download_assets.py --asset all --workers 3
+python scripts/prepare_data.py
 ```
 
-随后先检查而不启动：
+下载和数据转换都支持复用已经验证的文件；中断后重新执行同一命令即可。`prepare_data.py` 完成后应生成：
+
+```text
+data/clean_manifest.json
+data/clean_manifest.txt
+data/clean_norm_stats.json
+data/clean_norm_stats.provenance.json
+```
+
+这些目录均被 Git 忽略，不得把模型、数据、环境或训练产物提交到仓库。环境和数据准备不等于训练验收，随后仍须按下文顺序完成 preflight、DCP、真实 smoke 和真实恢复测试。
+
+## preflight 检查什么
+
+[`scripts/preflight_h0.py`](scripts/preflight_h0.py) 会 fail closed 地检查：
+
+- 配方确实为双卡 upstream FSDP2、完整 Expert、global batch 64；
+- 运行时所需源码存在；
+- 原始基座的 safetensors 文件与索引一致，并逐字节匹配 E0/F1 已验证使用的
+  `robbyant/lingbot-vla-v2-6b@11c703bf...` 六分片身份；
+- Qwen processor 必需文件齐全，`config.json` 匹配固定的
+  `Qwen/Qwen3-VL-4B-Instruct@ebb281ec...`；
+- LingBot vendor 固定在 `be969b8fd117fb70550c5d4bf4bc328211b5b1b6`；
+- 实际被训练代码读取的 vendor `robotwin.yaml` 中 arm 和 gripper 都是 absolute action；
+- manifest 是完整 50 任务 Clean-only 数据，并逐项确认数据目录、LeRobot v3.0
+  `meta/info.json` 和 manifest 声明的 parquet 文件实际存在；
+- norm provenance 与 manifest、episode 0–44/45–49 划分及 norm SHA 一致；Norm
+  本身必须是有限、分位数有序的 absolute 14-D state/action 结构，样本数也必须与 provenance 一致；
+- checkpoint、FP32 export 和 action audit 已开启。
+- 目标输出文件系统至少有 120 GiB 可用空间且可写；该门槛覆盖最多 4 份同时存在的
+  full-Expert DCP、最终约 23.75 GiB FP32 导出及保存临时余量。首次真实
+  `--resume-test` 后应记录实际 DCP 大小再复核，但不得未经测量向下调门槛。
+
+它不把 [`action_mode`](configs/train_h0_full_expert_2gpu.yaml) 字符串当作动作语义证据，而是检查运行时真正读取的 vendor robot config。
+
+preflight 的无 GPU 单元测试可在本机运行：
 
 ```bash
-bash train2/scripts/launch_h0.sh --check 2
+python -m unittest discover -s train2/tests -v
 ```
 
-确认输出和记录目录正确后再启动：
+## 执行顺序
+
+以下命令都从 Git 根目录执行。启动器会拒绝在 tracked files dirty 时运行。
+
+### 1. 静态和数据检查
 
 ```bash
-bash train2/scripts/launch_h0.sh --launch 2
+cd /data/lingbot_challenge
+bash train2/scripts/launch_h0.sh --check
 ```
 
-八卡接力前，必须先用 2 卡产生的早期 checkpoint 做一次“8 卡加载后继续 20–50 step”的恢复测试。DCP/FSDP 理论能力不能替代本工程实测；当前自建入口历史上使用 DDP，若 8 卡工程改用 FSDP2，需要训练工程提供并验收相应入口，不能直接把 `data_parallel_mode: fsdp2` 写进当前 YAML 后默认生效。
+`--check` 不查询或占用 GPU；它会读取基座分片计算哈希，但不会加载模型。默认检查
+`$TRAIN_ROOT/runs` 所在文件系统；若正式输出使用其它盘，设置 `H0_OUTPUT_DIR` 后重新执行。
 
-## 6. 100-step 冒烟的通过条件
+默认 provenance 路径为：
 
-- 两卡均参与训练，CUDA/NCCL 无错误；
-- trainable inventory 包含 Expert 的 `layers.0` 到 `layers.35`，而不只是 34、35；
-- `trainable_parameters` 明显大于 E0 的 `101,159,479`；
-- VLM/vision 参数保持冻结，除非后续有经过代码审计的新实现；
-- 峰值显存不超过每卡约 75 GiB，留出 allocator/保存余量；
-- loss、grad norm 全部有限；
-- 100 step 后 checkpoint 可在新进程恢复；
-- manifest 为 50 个 Clean 任务，norm SHA 与 Clean provenance 相符；
-- robot config 中 arm 和 gripper 均为 `subtract_state: false`；
-- 模型物理动作仍为完整 `50×14`。
+```text
+training/lingbot-vla-robotwin/data/clean_norm_stats.provenance.json
+```
 
-如果每卡 batch 1 仍 OOM，不缩短 chunk、不改变动作语义；先确认 gradient checkpointing 生效，再转 FSDP2。不要悄悄退回最后两层后继续把 run 叫作 H0。
+不同位置可显式覆盖：
 
-## 7. 选模规则
+```bash
+H0_NORM_PROVENANCE=/absolute/path/to/provenance.json \
+  bash train2/scripts/launch_h0.sh --check
+```
 
-训练期只用 Clean validation BC loss 和固定 Clean 小开发集选 checkpoint。建议只闭环评测三个候选：早期、中期、最终。最终 checkpoint 冻结后再报告 Clean 和 Randomized；不得用 Randomized 反复选择增强强度、训练步数或 checkpoint。
+静态检查通过后，可以在仍无空闲 GPU 时预演正式启动。该命令同时确认目标 run
+目录尚不存在，只打印最终命令，不创建文件：
 
-## 8. 暂不并入本轮的功能
+```bash
+bash train2/scripts/launch_h0.sh --dry-run
+```
 
-以下方向规则允许，但现有证据仓库没有可审计实现：
+### 2. 两卡 toy DCP save/resume 单元验收
 
-- 输入 robot state 小噪声；
-- 同任务 `seen_instructions` 池内随机替换；
-- Action Expert 与 VLM 后层的参数组学习率；
-- FSDP2 下跨 2 卡/8 卡 world-size 恢复。
+该测试使用 toy model，不需要正式模型和数据：
 
-若训练工程补齐实现，必须先提交代码、单元测试和实际生效日志，再决定是否并入；不要在正式 run 中临时修改。
+```bash
+bash train2/scripts/launch_h0.sh --state-test
+```
+
+### 3. 真实模型和真实 Clean 数据 smoke
+
+默认 10 optimizer steps，不写 checkpoint、不导出、不连接 SwanLab：
+
+```bash
+bash train2/scripts/launch_h0.sh --smoke
+```
+
+在正式开训前再跑 100 steps：
+
+```bash
+bash train2/scripts/launch_h0.sh --smoke 100
+```
+
+通过条件包括：两卡都参与、FSDP2 无错误、Expert 0–35 全部被包裹、loss/grad norm 有限，并记录峰值 allocated/reserved 显存与 step time。
+
+### 4. 真实模型 upstream FSDP2 恢复验收
+
+该测试先训练到 step 1 并保存 DCP，再启动两个新进程恢复并训练到 step 2：
+
+```bash
+bash train2/scripts/launch_h0.sh --resume-test
+```
+
+这一步和 toy DCP 测试不同：它会加载正式模型与 Clean 数据，并经过生产训练入口的 composable FSDP2 包装。
+
+### 5. 正式 15k 训练
+
+建议在外层 `screen` 或 `tmux` 中前台运行启动器：
+
+```bash
+screen -S h0
+cd /data/lingbot_challenge
+bash train2/scripts/launch_h0.sh --launch
+```
+
+启动器创建唯一 run 目录，记录 source commit、配置 SHA、provenance 路径、日志和退出码。不要复用已有输出目录。
+
+正式启动前的所有身份检查会原子写入 `preflight_receipt.json`，包括源码 commit、
+基座 identity、Qwen config、vendor revision、manifest、Norm、robot config、world size
+和 global batch。恢复训练会另存带时间戳的 `preflight_resume_*.json`，不会覆盖原始收据。
+
+### 6. 同为两卡的 DCP 恢复
+
+```bash
+bash train2/scripts/launch_h0.sh --resume \
+  /data/lingbot_challenge/training/lingbot-vla-robotwin/runs/<run>/checkpoints/global_step_<N>
+```
+
+恢复会回到原 run 目录，并由训练器核对 frozen base、manifest、norm、trainable selection、模型几何、采样配置和双卡拓扑。
+
+## 正式开训门槛
+
+在 15k run 前必须全部满足：
+
+1. `--check` 通过；
+2. `--state-test` 的 toy DCP 保存与新进程恢复完全一致；
+3. 10-step smoke 通过；
+4. 100-step smoke 通过，显存和吞吐可接受；
+5. `--resume-test` 的真实模型 upstream FSDP2 恢复通过；
+6. 启动日志确认完整 36 层 Expert 和 projections 可训练、VLM/vision 冻结；
+7. 数据、norm、源码和配置 SHA 已记录；
+8. 团队确认本轮仍从原始基座启动，而不是临时改为 E0 warm start。
+
+## 暂不并入本轮
+
+- 动态 `seen_instructions` 采样；
+- 图像或状态增广；
+- VLM 后层解冻和参数组学习率；
+- E0 权重 warm start；
+- 8 卡训练或跨 world-size 恢复。
+
+这些可以分别实现和验收，但不得在正式 run 中临时加入。

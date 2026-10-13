@@ -2,84 +2,245 @@
 set -Eeuo pipefail
 
 usage() {
-    echo "Usage: TRAIN_ROOT=/data/lingbot-vla-robotwin H0_NORM_PROVENANCE=/path/provenance.json bash $0 --check|--launch 2|8" >&2
+    cat >&2 <<'EOF'
+Usage:
+  bash train2/scripts/launch_h0.sh --check
+  bash train2/scripts/launch_h0.sh --dry-run
+  bash train2/scripts/launch_h0.sh --state-test [OUTPUT_DIR]
+  bash train2/scripts/launch_h0.sh --smoke [STEPS]
+  bash train2/scripts/launch_h0.sh --resume-test [OUTPUT_DIR]
+  bash train2/scripts/launch_h0.sh --launch
+  bash train2/scripts/launch_h0.sh --resume CHECKPOINT_DIR
+
+Optional environment:
+  TRAIN_ROOT             Runtime root (default: <challenge>/training/lingbot-vla-robotwin)
+  H0_NORM_PROVENANCE     Norm provenance (default: <runtime>/data/clean_norm_stats.provenance.json)
+  H0_OUTPUT_DIR          Explicit fresh run directory for --smoke or --launch
+  H0_RUN_ID              Fresh run name when H0_OUTPUT_DIR is unset
+EOF
     exit 2
 }
 
-[[ $# -eq 2 ]] || usage
-MODE="$1"
-WORLD_SIZE="$2"
-[[ "$MODE" == --check || "$MODE" == --launch ]] || usage
-[[ "$WORLD_SIZE" == 2 || "$WORLD_SIZE" == 8 ]] || usage
-
-: "${TRAIN_ROOT:?Set TRAIN_ROOT to the actual training repository root}"
-: "${H0_NORM_PROVENANCE:?Set H0_NORM_PROVENANCE to the Clean norm provenance JSON}"
-
 SELF_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-CONFIG="$SELF_ROOT/configs/train_h0_full_expert_${WORLD_SIZE}gpu.yaml"
+CHALLENGE_ROOT="$(cd "$SELF_ROOT/.." && pwd)"
+TRAIN_ROOT="${TRAIN_ROOT:-${CHALLENGE_ROOT}/training/lingbot-vla-robotwin}"
+H0_NORM_PROVENANCE="${H0_NORM_PROVENANCE:-${TRAIN_ROOT}/data/clean_norm_stats.provenance.json}"
+CONFIG="$SELF_ROOT/configs/train_h0_full_expert_2gpu.yaml"
 PREFLIGHT="$SELF_ROOT/scripts/preflight_h0.py"
+WORLD_SIZE=2
 
-[[ -d "$TRAIN_ROOT/.git" ]] || { echo "Not a git training repository: $TRAIN_ROOT" >&2; exit 1; }
-[[ -x "$TRAIN_ROOT/scripts/train_ddp.sh" || -f "$TRAIN_ROOT/scripts/train_ddp.sh" ]] || {
-    echo "Missing existing training entry: $TRAIN_ROOT/scripts/train_ddp.sh" >&2
-    exit 1
-}
+[[ $# -ge 1 && $# -le 2 ]] || usage
+MODE="$1"
+ARGUMENT="${2:-}"
+case "$MODE" in
+    --check|--dry-run|--launch) [[ -z "$ARGUMENT" ]] || usage ;;
+    --smoke) [[ -z "$ARGUMENT" || "$ARGUMENT" =~ ^[1-9][0-9]*$ ]] || usage ;;
+    --state-test|--resume-test) ;;
+    --resume) [[ -n "$ARGUMENT" ]] || usage ;;
+    *) usage ;;
+esac
+
+[[ -d "$TRAIN_ROOT" ]] || { echo "Training runtime missing: $TRAIN_ROOT" >&2; exit 1; }
+[[ -f "$TRAIN_ROOT/scripts/activate.sh" ]] || { echo "Activation script missing under $TRAIN_ROOT" >&2; exit 1; }
 
 cd "$TRAIN_ROOT"
-[[ -z "$(git status --porcelain)" ]] || {
-    echo "Training repository is dirty. Commit and record the exact source before a formal run." >&2
+source scripts/activate.sh lingbot-vla
+
+GIT_ROOT="$(git -C "$TRAIN_ROOT" rev-parse --show-toplevel 2>/dev/null)" || {
+    echo "Training runtime is not inside a Git checkout: $TRAIN_ROOT" >&2
+    exit 1
+}
+[[ -z "$(git -C "$GIT_ROOT" status --porcelain --untracked-files=no)" ]] || {
+    echo "Tracked files are dirty. Commit the exact source before any H0/G2 run." >&2
     exit 1
 }
 
-python "$PREFLIGHT" \
-    --training-root "$TRAIN_ROOT" \
-    --config "$CONFIG" \
-    --norm-provenance "$H0_NORM_PROVENANCE" \
-    --world-size "$WORLD_SIZE"
+if [[ "$MODE" != --check && "$MODE" != --dry-run ]]; then
+    GPU_COUNT="$(nvidia-smi --query-gpu=index --format=csv,noheader | wc -l | tr -d ' ')"
+    [[ "$GPU_COUNT" -eq "$WORLD_SIZE" ]] || {
+        echo "H0/G2 currently requires exactly two visible GPUs; found $GPU_COUNT." >&2
+        exit 1
+    }
+fi
 
-GPU_COUNT="$(nvidia-smi --query-gpu=index --format=csv,noheader | wc -l | tr -d ' ')"
-[[ "$GPU_COUNT" -ge "$WORLD_SIZE" ]] || {
-    echo "Found $GPU_COUNT GPUs, need $WORLD_SIZE." >&2
-    exit 1
+SOURCE_COMMIT="$(git -C "$GIT_ROOT" rev-parse HEAD)"
+export PYTORCH_CUDA_ALLOC_CONF="${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}"
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-8}"
+export MKL_NUM_THREADS="${MKL_NUM_THREADS:-8}"
+PYTHON="${CONDA_PREFIX}/bin/python"
+PREFLIGHT_RECEIPT=""
+PLANNED_RUN_DIR=""
+CHECKPOINT=""
+
+cleanup() {
+    [[ -z "$PREFLIGHT_RECEIPT" ]] || rm -f -- "$PREFLIGHT_RECEIPT"
 }
+trap cleanup EXIT
 
-SOURCE_COMMIT="$(git rev-parse HEAD)"
+if [[ "$MODE" == --state-test ]]; then
+    STATE_DIR="${ARGUMENT:-/data/tmp/h0_fsdp_state_$(TZ=Asia/Shanghai date +%Y%m%d_%H%M%S)}"
+    [[ ! -e "$STATE_DIR" ]] || { echo "State-test output already exists: $STATE_DIR" >&2; exit 1; }
+    "$PYTHON" -m torch.distributed.run --standalone --nproc_per_node=2 \
+        scripts/test_g2_fsdp_state.py --phase save --output "$STATE_DIR"
+    "$PYTHON" -m torch.distributed.run --standalone --nproc_per_node=2 \
+        scripts/test_g2_fsdp_state.py --phase resume --output "$STATE_DIR"
+    printf 'Two-rank toy DCP save/resume test passed: %s\n' "$STATE_DIR"
+    exit 0
+fi
+
+case "$MODE" in
+    --check)
+        PLANNED_RUN_DIR="${H0_OUTPUT_DIR:-${TRAIN_ROOT}/runs}"
+        ;;
+    --dry-run|--launch)
+        RUN_ID="${H0_RUN_ID:-h0_full_expert_$(TZ=Asia/Shanghai date +%Y%m%d_%H%M%S)}"
+        PLANNED_RUN_DIR="${H0_OUTPUT_DIR:-${TRAIN_ROOT}/runs/${RUN_ID}}"
+        ;;
+    --smoke)
+        RUN_ID="${H0_RUN_ID:-h0_fsdp_smoke_$(TZ=Asia/Shanghai date +%Y%m%d_%H%M%S)}"
+        PLANNED_RUN_DIR="${H0_OUTPUT_DIR:-${TRAIN_ROOT}/runs/${RUN_ID}}"
+        ;;
+    --resume-test)
+        RUN_ID="${H0_RUN_ID:-h0_fsdp_resume_test_$(TZ=Asia/Shanghai date +%Y%m%d_%H%M%S)}"
+        PLANNED_RUN_DIR="${ARGUMENT:-${H0_OUTPUT_DIR:-${TRAIN_ROOT}/runs/${RUN_ID}}}"
+        ;;
+    --resume)
+        [[ -d "$ARGUMENT" ]] || { echo "DCP checkpoint directory missing: $ARGUMENT" >&2; exit 1; }
+        CHECKPOINT="$(cd "$ARGUMENT" && pwd)"
+        [[ -f "$CHECKPOINT/COMPLETED.json" ]] || { echo "Incomplete DCP checkpoint: $CHECKPOINT" >&2; exit 1; }
+        PLANNED_RUN_DIR="$(cd "$CHECKPOINT/../.." && pwd)"
+        ;;
+esac
+
+PREFLIGHT_ARGS=(
+    --training-root "$TRAIN_ROOT"
+    --config "$CONFIG"
+    --norm-provenance "$H0_NORM_PROVENANCE"
+    --world-size 2
+    --output-dir "$PLANNED_RUN_DIR"
+)
+if [[ "$MODE" != --check && "$MODE" != --dry-run ]]; then
+    PREFLIGHT_RECEIPT="$(mktemp "${TMPDIR:-/tmp}/h0-preflight.XXXXXX")"
+    PREFLIGHT_ARGS+=(--receipt "$PREFLIGHT_RECEIPT")
+fi
+"$PYTHON" "$PREFLIGHT" "${PREFLIGHT_ARGS[@]}"
+if [[ -n "$PREFLIGHT_RECEIPT" ]]; then
+    [[ -s "$PREFLIGHT_RECEIPT" ]] || {
+        echo "Preflight did not produce a non-empty receipt: $PREFLIGHT_RECEIPT" >&2
+        exit 1
+    }
+fi
+
 CONFIG_SHA="$(sha256sum "$CONFIG" | awk '{print $1}')"
-printf 'Preflight complete: source=%s config_sha=%s world_size=%s\n' "$SOURCE_COMMIT" "$CONFIG_SHA" "$WORLD_SIZE"
+printf 'Preflight complete: source=%s config_sha=%s world_size=2\n' "$SOURCE_COMMIT" "$CONFIG_SHA"
 
-[[ "$MODE" == --launch ]] || exit 0
+[[ "$MODE" != --check ]] || exit 0
 
-RUN_ID="h0_full_expert_$(TZ=Asia/Shanghai date +%Y%m%d_%H%M%S)"
-RUN_DIR="$TRAIN_ROOT/runs/$RUN_ID"
-mkdir -- "$RUN_DIR"
+if [[ "$MODE" == --dry-run ]]; then
+    RUN_DIR="$PLANNED_RUN_DIR"
+    [[ ! -e "$RUN_DIR" ]] || { echo "Formal output already exists: $RUN_DIR" >&2; exit 1; }
+    COMMAND=(
+        "$PYTHON" -m torch.distributed.run --standalone --nproc_per_node=2
+        scripts/train.py --config "$CONFIG" --output-dir "$RUN_DIR"
+    )
+    printf 'DRY RUN PASSED: no files created and no training started.\n'
+    printf 'source_commit=%s\nrun_dir=%s\ncommand=' "$SOURCE_COMMIT" "$RUN_DIR"
+    printf ' %q' "${COMMAND[@]}"
+    printf '\n'
+    exit 0
+fi
+
+if [[ "$MODE" == --smoke ]]; then
+    STEPS="${ARGUMENT:-10}"
+    RUN_DIR="$PLANNED_RUN_DIR"
+    [[ ! -e "$RUN_DIR" ]] || { echo "Smoke output already exists: $RUN_DIR" >&2; exit 1; }
+    mkdir -p "$RUN_DIR"
+    mv -- "$PREFLIGHT_RECEIPT" "$RUN_DIR/preflight_receipt.json"
+    PREFLIGHT_RECEIPT=""
+    "$PYTHON" -m torch.distributed.run --standalone --nproc_per_node=2 \
+        scripts/train.py \
+        --config configs/train_g2_fsdp_smoke.yaml \
+        --output-dir "$RUN_DIR" \
+        --max-steps "$STEPS" 2>&1 | tee "$RUN_DIR/train.log"
+    exit "${PIPESTATUS[0]}"
+fi
+
+if [[ "$MODE" == --resume-test ]]; then
+    RUN_DIR="$PLANNED_RUN_DIR"
+    [[ ! -e "$RUN_DIR" ]] || { echo "Resume-test output already exists: $RUN_DIR" >&2; exit 1; }
+    mkdir -p "$RUN_DIR"
+    mv -- "$PREFLIGHT_RECEIPT" "$RUN_DIR/preflight_receipt.json"
+    PREFLIGHT_RECEIPT=""
+    set +e
+    "$PYTHON" -m torch.distributed.run --standalone --nproc_per_node=2 \
+        scripts/train.py \
+        --config configs/train_g2_fsdp_state_test.yaml \
+        --output-dir "$RUN_DIR" \
+        --stop-after-step 1 \
+        --no-export 2>&1 | tee "$RUN_DIR/phase1.log"
+    PHASE1_STATUS="${PIPESTATUS[0]}"
+    set -e
+    [[ "$PHASE1_STATUS" -eq 0 ]] || exit "$PHASE1_STATUS"
+    CHECKPOINT="$RUN_DIR/checkpoints/global_step_1"
+    [[ -f "$CHECKPOINT/COMPLETED.json" ]] || {
+        echo "Phase 1 did not create a complete checkpoint: $CHECKPOINT" >&2
+        exit 1
+    }
+    set +e
+    "$PYTHON" -m torch.distributed.run --standalone --nproc_per_node=2 \
+        scripts/train.py \
+        --config configs/train_g2_fsdp_state_test.yaml \
+        --output-dir "$RUN_DIR" \
+        --resume "$CHECKPOINT" \
+        --no-export 2>&1 | tee "$RUN_DIR/phase2.log"
+    PHASE2_STATUS="${PIPESTATUS[0]}"
+    set -e
+    [[ "$PHASE2_STATUS" -eq 0 ]] || exit "$PHASE2_STATUS"
+    [[ -f "$RUN_DIR/checkpoints/global_step_2/COMPLETED.json" ]] || {
+        echo "Phase 2 did not create a complete checkpoint at step 2." >&2
+        exit 1
+    }
+    printf 'Real-model upstream FSDP2 save/resume test passed: %s\n' "$RUN_DIR"
+    exit 0
+fi
+
+if [[ "$MODE" == --resume ]]; then
+    RUN_DIR="$PLANNED_RUN_DIR"
+    LOG_PATH="$RUN_DIR/resume_$(TZ=Asia/Shanghai date +%Y%m%d_%H%M%S).log"
+else
+    RUN_DIR="$PLANNED_RUN_DIR"
+    [[ ! -e "$RUN_DIR" ]] || { echo "Formal output already exists: $RUN_DIR" >&2; exit 1; }
+    mkdir -p "$RUN_DIR"
+    LOG_PATH="$RUN_DIR/train.log"
+fi
+
+if [[ "$MODE" == --resume ]]; then
+    RECEIPT_PATH="$RUN_DIR/preflight_resume_$(TZ=Asia/Shanghai date +%Y%m%d_%H%M%S_%N).json"
+    [[ ! -e "$RECEIPT_PATH" ]] || { echo "Resume receipt already exists: $RECEIPT_PATH" >&2; exit 1; }
+else
+    RECEIPT_PATH="$RUN_DIR/preflight_receipt.json"
+fi
+mv -- "$PREFLIGHT_RECEIPT" "$RECEIPT_PATH"
+PREFLIGHT_RECEIPT=""
 
 {
-    printf 'experiment_id=%s\n' "$RUN_ID"
     printf 'started_at=%s\n' "$(date -Is)"
-    printf 'source_commit=%s\n' "$SOURCE_COMMIT"
-    printf 'source_dirty=false\nworld_size=%s\n' "$WORLD_SIZE"
-    printf 'config=%s\nconfig_sha256=%s\n' "$CONFIG" "$CONFIG_SHA"
+    printf 'source_commit=%s\nsource_dirty=false\n' "$SOURCE_COMMIT"
+    printf 'config=%s\nconfig_sha256=%s\nworld_size=2\n' "$CONFIG" "$CONFIG_SHA"
     printf 'norm_provenance=%s\n' "$H0_NORM_PROVENANCE"
-    sha256sum data/clean_manifest.json data/clean_norm_stats.json "$H0_NORM_PROVENANCE" "$SELF_ROOT/configs/robotwin_absolute.yaml"
-    printf 'command=bash scripts/train_ddp.sh --config %s --output-dir %s --max-steps 15000\n' "$CONFIG" "$RUN_DIR"
-} > "$RUN_DIR/launch_record.txt"
+    printf 'preflight_receipt=%s\n' "$RECEIPT_PATH"
+    [[ -z "$CHECKPOINT" ]] || printf 'resume=%s\n' "$CHECKPOINT"
+} >> "$RUN_DIR/launch_record.txt"
 
-GPU_LIST="$(seq -s, 0 $((WORLD_SIZE - 1)))"
-screen -dmS "$RUN_ID" bash -lc "
-    set -uo pipefail
-    cd '$TRAIN_ROOT'
-    source scripts/activate.sh lingbot-vla
-    export CUDA_VISIBLE_DEVICES='$GPU_LIST'
-    bash scripts/train_ddp.sh --config '$CONFIG' --output-dir '$RUN_DIR' --max-steps 15000 > '$RUN_DIR/train.log' 2>&1
-    code=\$?
-    printf '%s\n' \"\$code\" > '$RUN_DIR/exit_code'
-    exit \"\$code\"
-"
+COMMAND=(
+    "$PYTHON" -m torch.distributed.run --standalone --nproc_per_node=2
+    scripts/train.py --config "$CONFIG" --output-dir "$RUN_DIR"
+)
+[[ -z "$CHECKPOINT" ]] || COMMAND+=(--resume "$CHECKPOINT")
 
-sleep 3
-if screen -ls | grep -Fq ".$RUN_ID"; then
-    printf 'H0 launched: screen=%s\nlog=%s/train.log\n' "$RUN_ID" "$RUN_DIR"
-else
-    echo "H0 did not remain alive. Inspect $RUN_DIR/train.log" >&2
-    exit 1
-fi
+set +e
+"${COMMAND[@]}" 2>&1 | tee "$LOG_PATH"
+STATUS="${PIPESTATUS[0]}"
+set -e
+printf '%s\n' "$STATUS" > "$RUN_DIR/exit_code"
+exit "$STATUS"
