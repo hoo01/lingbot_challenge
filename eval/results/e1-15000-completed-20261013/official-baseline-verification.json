@@ -1,0 +1,341 @@
+{
+  "passed": true,
+  "verified_at": "2026-10-13T01:50:17.058998+00:00",
+  "job_id": "38f3e78541fd",
+  "model_id": "03f35caec66c",
+  "title": "官方 RoboTwin 后训练 · E0固定50×2×5 · 绝对关节 · 无专家",
+  "status": "completed",
+  "created": "2026-10-12T18:29:46.385548+00:00",
+  "completed_updated": "2026-10-13T01:01:58.816791+00:00",
+  "unique_keys": 500,
+  "groups": 100,
+  "scored": 500,
+  "completed": 500,
+  "timeout_zero": 0,
+  "success": 449,
+  "success_by_setting": {
+    "demo_clean": 226,
+    "demo_randomized": 223
+  },
+  "denominator_by_setting": {
+    "demo_clean": 250,
+    "demo_randomized": 250
+  },
+  "total_actions": 120187,
+  "finite_prediction_chunks": 2631,
+  "initial_rgb_pngs_checked": 1500,
+  "terminal_rgb_pngs_checked": 500,
+  "head_video_files_metadata_checked": 500,
+  "all_expert_attempts": 0,
+  "camera_scenes": {
+    "one_or_more_different": 500
+  },
+  "camera_equal_by_view": {},
+  "camera_different_by_view": {
+    "head_camera": 500,
+    "left_camera": 500,
+    "right_camera": 500
+  },
+  "asset_enumeration_scenes_checked": 50,
+  "checks": {
+    "job_completed": 1,
+    "reference_unique500": 1,
+    "reference_sha": 1,
+    "config_fixed500": 1,
+    "config_precision": 1,
+    "config_checkpoint_id": 1,
+    "config_expert_check": 1,
+    "config_observer_video": 1,
+    "config_video": 1,
+    "config_video_fps": 1,
+    "config_execute": 1,
+    "config_release_unused_cuda_cache": 1,
+    "config_protocol": 1,
+    "config_inference_profile": 1,
+    "config_moe_backend": 1,
+    "config_paired_entry": 1,
+    "timeout_config": 1,
+    "scene_replay_sha": 1,
+    "camera_authorization_sha": 1,
+    "E0_enumeration_sha": 1,
+    "enumeration_module_sha": 1,
+    "shard_completed": 1,
+    "runtime_exists": 1,
+    "runtime_all_fp32": 1,
+    "runtime_all_original_fp32_values": 1,
+    "runtime_own_norm": 1,
+    "runtime_absolute_arm_gripper": 1,
+    "runtime_robot_yaml": 1,
+    "runtime_norm_shapes": 1,
+    "runtime_execute": 1,
+    "runtime_matmul_precision": 1,
+    "runtime_moe_backend": 1,
+    "runtime_flow_noise_generation": 1,
+    "runtime_use_compile": 1,
+    "runtime_image_size": 1,
+    "runtime_num_steps": 1,
+    "runtime_vit_attn_implementation": 1,
+    "runtime_upstream_revision": 1,
+    "shard_500": 1,
+    "first200_byte_prefix": 1,
+    "key_in_reference": 500,
+    "complete_policy": 500,
+    "no_unresolved_episode_error": 500,
+    "expert_not_launched": 500,
+    "reference_expert_provenance": 500,
+    "policy_index": 500,
+    "setup_language_seed": 500,
+    "instruction": 500,
+    "fixed_instruction_source": 500,
+    "episode_exists": 500,
+    "ledger_episode_equal": 500,
+    "instruction_exists": 500,
+    "instruction_parameters": 500,
+    "paired_guard": 500,
+    "reference_episode_binding": 500,
+    "true_camera_equal_flags": 500,
+    "camera_policy_authorized": 500,
+    "true_pixel_identity_flags": 500,
+    "scene_replay_policy_only": 500,
+    "entry_policy_only": 500,
+    "E0_source_record_bytes": 500,
+    "head_only_video_request": 500,
+    "paired_receipt_exists": 500,
+    "paired_receipt_equal": 500,
+    "trajectory_exists": 500,
+    "completed_chunk_count": 500,
+    "action_budget": 500,
+    "actual_initial_joints": 500,
+    "finite_50x14_prediction": 2631,
+    "action_block_progress": 2631,
+    "final_action_count": 500,
+    "initial_png_exists": 1500,
+    "actual_initial_rgb_sha": 1500,
+    "head_only_video_metadata": 500,
+    "complete_head_video_recorded": 500,
+    "video_no_extra_simulation": 500,
+    "terminal_png_exists": 500,
+    "actual_terminal_rgb_sha": 500,
+    "affected_tasks_E0_enumeration": 50,
+    "completed_unique500": 1,
+    "100_groups5": 1,
+    "archived_unscored_error_ledger_sha": 2,
+    "controller_completed_intentionally": 1,
+    "controller_exited": 1,
+    "no_user_stop_marker": 1,
+    "no_official_maintenance": 1,
+    "old_lab_hold_unchanged": 1,
+    "no_compute_processes": 1,
+    "current_boot_kernel_readable": 1,
+    "no_current_boot_Xid": 1,
+    "verified_615_boot_unchanged": 1,
+    "loaded_615_driver": 1
+  },
+  "issues": [],
+  "folders": [
+    "/data/lingbotvla/eval-team-official-robotwin-20261012/runs/eval-38f3e78541fd/segments/auto615-20261012-220939/shards/0"
+  ],
+  "paired_reference_sha256": "ec14ae2092bca38a689feca77b98dc89317bf9add20b820dd67e2d4bd503dd20",
+  "scene_replay_sha256": "7f6ac2211bed4d8d61a552f43779c0bd027b5537792c3d8bf14776f87f0f9a09",
+  "camera_authorization_sha256": "a856b7ef20a2be7a3b9b939dfa1c3f6a910a3db9af62062b175990f66563dfe7",
+  "enumeration_binding_sha256": "a8007f917479f259ac1191595dce5761ab5b4125f295ca8e051ac119deeca3d9",
+  "enumeration_module_sha256": "c7915fc0e0618b8a22566f088af1f8bb5c8c3aa8ab041da6b4f389caf30ae3ae",
+  "retained_first200_sha256": [
+    "b32827c1df7ec7e66940e4a47c66005edbbf81dc21555dc3ae4d11741ca47fa2"
+  ],
+  "archived_unscored_error_ledgers": {
+    "episodes.original-201.jsonl": {
+      "path": "/data/lingbotvla/eval-team-official-robotwin-20261012/artifacts/model-data-order-repair-20261013-0546/episodes.original-201.jsonl",
+      "bytes": 1031447,
+      "sha256": "417c873b06d353e609f0a7cc2fae1e124e49d9f9f2b3011d9d027a57d7f295e3"
+    },
+    "episodes.symlink-attempt-201.jsonl": {
+      "path": "/data/lingbotvla/eval-team-official-robotwin-20261012/artifacts/model-data-order-repair-20261013-0546/episodes.symlink-attempt-201.jsonl",
+      "bytes": 1031469,
+      "sha256": "ec54997454e78ffa02b34dd4f8b32e4df96168aacc6a5949fc8b0456eb01627a"
+    }
+  },
+  "runtime": [
+    {
+      "shard": 0,
+      "path": "/data/lingbotvla/eval-team-official-robotwin-20261012/runs/eval-38f3e78541fd/segments/auto615-20261012-220939/shards/0/server-runtime.json",
+      "sha256": "49aad0d9b172afe33d2736af5dd2b645084bf6afcda5ad8b2bdd677ba8bb5092",
+      "dtype": "fp32",
+      "parameter_numel": {
+        "torch.float32": 6375906359
+      },
+      "parameter_tensors": {
+        "torch.float32": 1672
+      },
+      "learned_precision": {
+        "learned_tensors": 1672,
+        "exact_saved_fp32_values": true,
+        "audit_scope": "all_saved_model_parameters",
+        "binding_sha256": "8fde5466e8eb64697223cb77015eb33828e7543f5f6d4de19d00f6ad4dfd84a3"
+      },
+      "contract": {
+        "robot_config_path": "/data/lingbotvla/eval-team-official-robotwin-20261012/checkpoints/03f35caec66c/robot_config.yaml",
+        "robot_config_sha256": "2c2a26509fc9662a8ada64adaa7fa959627dd6dadc6b48b680c4285da2d8ffd8",
+        "normalization_sha256": "488ec6569c30dd69419358241efdb2e6c3488117768e7028a1e891be83e10db8",
+        "norm_type": [
+          "{'arm.position': 'bounds_99_woclip'}",
+          "{'end.position': 'bounds_99_woclip'}",
+          "{'effector.position': 'bounds_99_woclip'}"
+        ],
+        "action_subtract_state": {
+          "action.arm.position": false,
+          "action.effector.position": false
+        },
+        "action_relative_type": {
+          "action.arm.position": "quaternion_local",
+          "action.effector.position": "quaternion_local"
+        },
+        "action_features": [
+          "action.arm.position",
+          "action.effector.position"
+        ],
+        "state_features": [
+          "observation.state.arm.position",
+          "observation.state.effector.position"
+        ],
+        "chunk_size": 50,
+        "statistic_shapes": {
+          "action.arm.position": {
+            "mean": [
+              12
+            ],
+            "std": [
+              12
+            ],
+            "q01": [
+              12
+            ],
+            "q99": [
+              12
+            ],
+            "q02": [
+              12
+            ],
+            "q98": [
+              12
+            ]
+          },
+          "action.effector.position": {
+            "mean": [
+              2
+            ],
+            "std": [
+              2
+            ],
+            "q01": [
+              2
+            ],
+            "q99": [
+              2
+            ],
+            "q02": [
+              2
+            ],
+            "q98": [
+              2
+            ]
+          },
+          "observation.state.arm.position": {
+            "mean": [
+              12
+            ],
+            "std": [
+              12
+            ],
+            "q01": [
+              12
+            ],
+            "q99": [
+              12
+            ],
+            "q02": [
+              12
+            ],
+            "q98": [
+              12
+            ]
+          },
+          "observation.state.effector.position": {
+            "mean": [
+              2
+            ],
+            "std": [
+              2
+            ],
+            "q01": [
+              2
+            ],
+            "q99": [
+              2
+            ],
+            "q02": [
+              2
+            ],
+            "q98": [
+              2
+            ]
+          }
+        }
+      },
+      "official_runtime": {
+        "execute": 50,
+        "matmul_precision": "high",
+        "moe_backend": "official",
+        "flow_noise_generation": "upstream_native",
+        "use_compile": true,
+        "image_size": 256,
+        "num_steps": 10,
+        "vit_attn_implementation": "flash_attention_2",
+        "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6"
+      }
+    }
+  ],
+  "source_ledgers": [
+    {
+      "path": "/data/lingbotvla/eval-team-official-robotwin-20261012/runs/eval-38f3e78541fd/segments/auto615-20261012-220939/shards/0/evaluation/episodes.jsonl",
+      "bytes": 2620510,
+      "sha256": "3c80eb5bbf866faec4387153bfa16cb818599c0febc4ad8f4d5baee1251996e1"
+    }
+  ],
+  "controller": {
+    "stage": "formal_completed",
+    "time": 1791853330.588406,
+    "controller_pid": 62270,
+    "job_id": "38f3e78541fd"
+  },
+  "controller_command_now": null,
+  "persistent_retry_ledger": {
+    "retries": {
+      "[\"38f3e78541fd\", {\"seed\": 100010, \"setting\": \"demo_clean\", \"task\": \"place_a2b_left\"}]": 2
+    },
+    "last_recovery": 1791842979.5277057,
+    "blocked_signature": null,
+    "seen_active": [
+      "38f3e78541fd",
+      "c26e45be2ae3"
+    ]
+  },
+  "user_stop_marker": false,
+  "official_maintenance_exists": false,
+  "old_lab_status": "cancelled",
+  "old_lab_maintenance_sha256": "47dff756eec44e4585f1be13bb7c2e409dcce2e908eb73e958dcba0206f3d5d6",
+  "driver_version": "615.71.09",
+  "boot_id": "da77abb9-6b53-4911-a986-dce03c3817ce",
+  "current_boot_Xid_entries": 0,
+  "gpu_compute_processes": "",
+  "disk_free_bytes": 2545749839872,
+  "verification_scope": "CPU metadata and all initial/terminal PNG RGB SHA; nonempty head-video file metadata only; no model-weight reread, simulation, video decoding or extra evaluation",
+  "limits": [
+    "Cross-host RGB differences were explicitly authorized and truthfully recorded; E0 pixel identity is not claimed",
+    "E0 historical inference used BF16 whereas this evaluation used actual FP32; this is not an identical-precision pairing",
+    "Model processes started RNG independently; the previous model RNG stream was not restored",
+    "The enumeration repair explains the frozen-object input mismatch, not the earlier Xid109 root cause; no underlying hardware/driver root cause is proven",
+    "The four acceptance episodes and eight driver-validation episodes are separate and never enter the formal500 denominator",
+    "Development evaluation, not an official competition submission"
+  ]
+}

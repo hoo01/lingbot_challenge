@@ -1,0 +1,417 @@
+{
+  "passed": true,
+  "verified_at": "2026-10-12T23:54:18.364481+00:00",
+  "job_id": "232fb68a8d15",
+  "model_id": "1b6e09f23423",
+  "title": "E1 · 15000 步 · E0固定50×2×5 · 相对关节 · 无专家与录像",
+  "status": "completed",
+  "job_time_fields": {},
+  "unique_keys": 500,
+  "groups": 100,
+  "completed": 500,
+  "timeout_zero": 0,
+  "success": 51,
+  "success_by_setting": {
+    "demo_clean": 28,
+    "demo_randomized": 23
+  },
+  "denominator_by_setting": {
+    "demo_clean": 250,
+    "demo_randomized": 250
+  },
+  "total_actions": 286538,
+  "finite_prediction_chunks": 5752,
+  "initial_rgb_pngs_checked": 1500,
+  "all_expert_attempts": 0,
+  "checks": {
+    "job_completed": 1,
+    "reference_unique500": 1,
+    "reference_sha": 1,
+    "config_fixed500": 1,
+    "config_precision": 1,
+    "config_checkpoint_id": 1,
+    "config_expert_check": 1,
+    "config_observer_video": 1,
+    "config_video": 1,
+    "config_video_fps": 1,
+    "config_execute": 1,
+    "config_release_unused_cuda_cache": 1,
+    "config_protocol": 1,
+    "config_inference_profile": 1,
+    "config_moe_backend": 1,
+    "scene_replay_sha": 1,
+    "shard_completed": 2,
+    "runtime_fp32": 2,
+    "runtime_original_learned_fp32": 2,
+    "runtime_own_norm": 2,
+    "runtime_relative_arm_absolute_gripper": 2,
+    "runtime_robot_yaml": 2,
+    "shard_250": 2,
+    "key_in_reference": 500,
+    "complete_policy": 500,
+    "expert_not_launched": 500,
+    "policy_index": 500,
+    "setup_language_seed": 500,
+    "instruction": 500,
+    "fixed_instruction_source": 500,
+    "ledger_episode_equal": 500,
+    "instruction_parameters": 500,
+    "paired_guard": 500,
+    "three_camera_metadata_sha": 500,
+    "reference_episode_binding": 500,
+    "scene_replay_policy_only": 500,
+    "entry_policy_only": 500,
+    "video_request": 500,
+    "paired_receipt_equal": 500,
+    "completed_chunk_count": 500,
+    "action_budget": 500,
+    "actual_initial_joints": 500,
+    "finite_50x14_prediction": 5752,
+    "action_block_progress": 5752,
+    "final_action_count": 500,
+    "initial_png_exists": 1500,
+    "actual_initial_rgb_sha": 1500,
+    "both_video_metadata": 1000,
+    "complete_video_recorded": 1000,
+    "completed_unique500": 1,
+    "100_groups5": 1
+  },
+  "issues": [],
+  "folders": [
+    "/root/shared-nvme/lingbot-eval-team/runs/eval-232fb68a8d15/shards/0",
+    "/root/shared-nvme/lingbot-eval-team/runs/eval-232fb68a8d15/shards/1"
+  ],
+  "reference_sha256": "ec14ae2092bca38a689feca77b98dc89317bf9add20b820dd67e2d4bd503dd20",
+  "scene_replay_sha256": "e7d34a4f042d81bee8c0bf5183f982032f6fe7c0ee9c68f43e8d294526612397",
+  "gpu_compute_processes": "",
+  "runtime": [
+    {
+      "shard": 0,
+      "path": "/root/shared-nvme/lingbot-eval-team/runs/eval-232fb68a8d15/shards/0/server-runtime.json",
+      "sha256": "a757734310130c239260a7657b7e6d780968a2fc3b5493090dcd8fe515e24e36",
+      "dtype": "fp32",
+      "parameter_numel": {
+        "torch.float32": 6375906359
+      },
+      "learned_precision": {
+        "learned_tensors": 59,
+        "exact_saved_fp32_values": true,
+        "binding_sha256": "47c6c00a6c8623326fefa570d311a23cda3e3922a1e9bfd6a00dc90520360ef9"
+      },
+      "contract": {
+        "robot_config_path": "/root/shared-nvme/lingbot-eval-team/checkpoints/1b6e09f23423/robot_config.yaml",
+        "robot_config_sha256": "49d07e5dcff216df70abfed89c2eaf13c6a2aa12eba3d024d7b83a89e3bf70b5",
+        "normalization_sha256": "7e6ac279d147cb8422108d36216768111c19bb2113ca9eee1a23df22df238df0",
+        "norm_type": [
+          "{'arm.position': 'bounds_99_woclip'}",
+          "{'end.position': 'bounds_99_woclip'}",
+          "{'effector.position': 'bounds_99_woclip'}"
+        ],
+        "action_subtract_state": {
+          "action.arm.position": true,
+          "action.effector.position": false
+        },
+        "action_relative_type": {
+          "action.arm.position": "joint_delta",
+          "action.effector.position": "quaternion_local"
+        },
+        "action_features": [
+          "action.arm.position",
+          "action.effector.position"
+        ],
+        "state_features": [
+          "observation.state.arm.position",
+          "observation.state.effector.position"
+        ],
+        "chunk_size": 50,
+        "statistic_shapes": {
+          "observation.state.arm.position": {
+            "mean": [
+              12
+            ],
+            "std": [
+              12
+            ],
+            "q01": [
+              12
+            ],
+            "q02": [
+              12
+            ],
+            "q98": [
+              12
+            ],
+            "q99": [
+              12
+            ],
+            "min": [
+              12
+            ],
+            "max": [
+              12
+            ]
+          },
+          "observation.state.effector.position": {
+            "mean": [
+              2
+            ],
+            "std": [
+              2
+            ],
+            "q01": [
+              2
+            ],
+            "q02": [
+              2
+            ],
+            "q98": [
+              2
+            ],
+            "q99": [
+              2
+            ],
+            "min": [
+              2
+            ],
+            "max": [
+              2
+            ]
+          },
+          "action.effector.position": {
+            "mean": [
+              2
+            ],
+            "std": [
+              2
+            ],
+            "q01": [
+              2
+            ],
+            "q02": [
+              2
+            ],
+            "q98": [
+              2
+            ],
+            "q99": [
+              2
+            ],
+            "min": [
+              2
+            ],
+            "max": [
+              2
+            ]
+          },
+          "action.arm.position": {
+            "mean": [
+              50,
+              12
+            ],
+            "std": [
+              50,
+              12
+            ],
+            "q01": [
+              50,
+              12
+            ],
+            "q02": [
+              50,
+              12
+            ],
+            "q98": [
+              50,
+              12
+            ],
+            "q99": [
+              50,
+              12
+            ],
+            "min": [
+              50,
+              12
+            ],
+            "max": [
+              50,
+              12
+            ]
+          }
+        }
+      }
+    },
+    {
+      "shard": 1,
+      "path": "/root/shared-nvme/lingbot-eval-team/runs/eval-232fb68a8d15/shards/1/server-runtime.json",
+      "sha256": "a757734310130c239260a7657b7e6d780968a2fc3b5493090dcd8fe515e24e36",
+      "dtype": "fp32",
+      "parameter_numel": {
+        "torch.float32": 6375906359
+      },
+      "learned_precision": {
+        "learned_tensors": 59,
+        "exact_saved_fp32_values": true,
+        "binding_sha256": "47c6c00a6c8623326fefa570d311a23cda3e3922a1e9bfd6a00dc90520360ef9"
+      },
+      "contract": {
+        "robot_config_path": "/root/shared-nvme/lingbot-eval-team/checkpoints/1b6e09f23423/robot_config.yaml",
+        "robot_config_sha256": "49d07e5dcff216df70abfed89c2eaf13c6a2aa12eba3d024d7b83a89e3bf70b5",
+        "normalization_sha256": "7e6ac279d147cb8422108d36216768111c19bb2113ca9eee1a23df22df238df0",
+        "norm_type": [
+          "{'arm.position': 'bounds_99_woclip'}",
+          "{'end.position': 'bounds_99_woclip'}",
+          "{'effector.position': 'bounds_99_woclip'}"
+        ],
+        "action_subtract_state": {
+          "action.arm.position": true,
+          "action.effector.position": false
+        },
+        "action_relative_type": {
+          "action.arm.position": "joint_delta",
+          "action.effector.position": "quaternion_local"
+        },
+        "action_features": [
+          "action.arm.position",
+          "action.effector.position"
+        ],
+        "state_features": [
+          "observation.state.arm.position",
+          "observation.state.effector.position"
+        ],
+        "chunk_size": 50,
+        "statistic_shapes": {
+          "observation.state.arm.position": {
+            "mean": [
+              12
+            ],
+            "std": [
+              12
+            ],
+            "q01": [
+              12
+            ],
+            "q02": [
+              12
+            ],
+            "q98": [
+              12
+            ],
+            "q99": [
+              12
+            ],
+            "min": [
+              12
+            ],
+            "max": [
+              12
+            ]
+          },
+          "observation.state.effector.position": {
+            "mean": [
+              2
+            ],
+            "std": [
+              2
+            ],
+            "q01": [
+              2
+            ],
+            "q02": [
+              2
+            ],
+            "q98": [
+              2
+            ],
+            "q99": [
+              2
+            ],
+            "min": [
+              2
+            ],
+            "max": [
+              2
+            ]
+          },
+          "action.effector.position": {
+            "mean": [
+              2
+            ],
+            "std": [
+              2
+            ],
+            "q01": [
+              2
+            ],
+            "q02": [
+              2
+            ],
+            "q98": [
+              2
+            ],
+            "q99": [
+              2
+            ],
+            "min": [
+              2
+            ],
+            "max": [
+              2
+            ]
+          },
+          "action.arm.position": {
+            "mean": [
+              50,
+              12
+            ],
+            "std": [
+              50,
+              12
+            ],
+            "q01": [
+              50,
+              12
+            ],
+            "q02": [
+              50,
+              12
+            ],
+            "q98": [
+              50,
+              12
+            ],
+            "q99": [
+              50,
+              12
+            ],
+            "min": [
+              50,
+              12
+            ],
+            "max": [
+              50,
+              12
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "source_ledgers": [
+    {
+      "path": "/root/shared-nvme/lingbot-eval-team/runs/eval-232fb68a8d15/shards/0/evaluation/episodes.jsonl",
+      "bytes": 1448963,
+      "sha256": "4f6420a6d76c2993a017b60894f926022ee5382c063f73ad88f49846fbeb0ca7"
+    },
+    {
+      "path": "/root/shared-nvme/lingbot-eval-team/runs/eval-232fb68a8d15/shards/1/evaluation/episodes.jsonl",
+      "bytes": 1443678,
+      "sha256": "d9bd8c1c4e7fad87e3d779c288c32ab1fa07535757a4578ef995f274da4b56a7"
+    }
+  ],
+  "limits": [
+    "E0 historical inference used BF16; E1 actual parameter FP32 is not an identical-precision comparison",
+    "Training-side before/after export fixed-noise complete action audit was not supplied",
+    "Model processes started RNG independently; old model RNG stream was not restored",
+    "Development evaluation, not an official competition submission"
+  ]
+}

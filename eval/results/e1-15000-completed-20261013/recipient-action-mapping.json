@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "gpu_used": false,
+  "norm_sha256": "7e6ac279d147cb8422108d36216768111c19bb2113ca9eee1a23df22df238df0",
+  "robot_config_sha256": "49d07e5dcff216df70abfed89c2eaf13c6a2aa12eba3d024d7b83a89e3bf70b5",
+  "normalized_shape": [
+    50,
+    55
+  ],
+  "physical_shape": [
+    50,
+    14
+  ],
+  "relative_max_error": 2.7299278038128705e-07,
+  "physical_max_error": 3.313319476561105e-07,
+  "normalized_dtype": "torch.float32",
+  "physical_dtype": "torch.float64",
+  "state_added_once_per_horizon": true,
+  "absolute_grippers": true,
+  "export_vs_training_action_audit_available": false
+}

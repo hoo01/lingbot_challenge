@@ -1,0 +1,42 @@
+{
+  "job_id": "232fb68a8d15",
+  "scored": 500,
+  "completed": 500,
+  "timeout_zero": 0,
+  "success": 51,
+  "success_rate": 0.102,
+  "settings": {
+    "demo_clean": {
+      "scored": 250,
+      "e0_success": 33,
+      "e1_success": 28,
+      "f1_success": 29
+    },
+    "demo_randomized": {
+      "scored": 250,
+      "e0_success": 21,
+      "e1_success": 23,
+      "f1_success": 20
+    }
+  },
+  "paired_e0_e1": {
+    "both_failure": 432,
+    "both_success": 37,
+    "e0_only": 17,
+    "e1_only": 14
+  },
+  "task_delta_counts": {
+    "decrease": 7,
+    "equal": 38,
+    "increase": 5
+  },
+  "E0_success": 54,
+  "F1_success": 49,
+  "official_success": 449,
+  "E1_minus_E0_percentage_points": -0.6,
+  "E1_minus_F1_percentage_points": 0.4,
+  "total_actions": 286538,
+  "finite_prediction_chunks": 5752,
+  "initial_rgb_pngs_checked": 1500,
+  "all_expert_attempts": 0
+}

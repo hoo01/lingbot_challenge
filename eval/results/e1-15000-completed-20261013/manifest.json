@@ -1,0 +1,22 @@
+[
+  {
+    "file": "paired-outcomes.csv",
+    "bytes": 47341,
+    "sha256": "3a50d61f3a64a38fdd94fead552efcea63ee50b8f21adc34377f0a2eceb7dd2f"
+  },
+  {
+    "file": "verification.json",
+    "bytes": 10872,
+    "sha256": "ce0f9b52cbc96de04d0e781d9340e9857b5da9d74b3ede7b2960290639dc909f"
+  },
+  {
+    "file": "by-group.csv",
+    "bytes": 3944,
+    "sha256": "ff808addc4cbff38693af19e4c431357e0f0e107743c99571b672a6210cb91d9"
+  },
+  {
+    "file": "verify_e1_completion.py",
+    "bytes": 10361,
+    "sha256": "d8953ae03ef7681bd8a2e4666fc8a5aea77189389a2206cb1cf4befa63e07cff"
+  }
+]
