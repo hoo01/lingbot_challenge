@@ -15,8 +15,8 @@ min_free_disk_gib: 120
 device: cuda
 train_projections: true
 
-batch_size: 8
-gradient_accumulation: 4
+batch_size: 32
+gradient_accumulation: 1
 gradient_checkpointing: true
 
 chunk_size: 50

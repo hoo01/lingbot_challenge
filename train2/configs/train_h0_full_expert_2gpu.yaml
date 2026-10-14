@@ -16,9 +16,11 @@ min_free_disk_gib: 120
 device: cuda
 train_projections: true
 
-# 8 samples/rank × 2 ranks × 4 microbatches = global batch 64.
-batch_size: 8
-gradient_accumulation: 4
+# 80G profile: 32 samples/rank × 2 ranks × 1 microbatch = global batch 64.
+# This matches the upstream per-rank microbatch while retaining the proven
+# optimizer batch and processed-sample budget.
+batch_size: 32
+gradient_accumulation: 1
 gradient_checkpointing: true
 
 chunk_size: 50

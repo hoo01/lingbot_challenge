@@ -25,7 +25,7 @@ H0-A 正式配置为 [`configs/train_h0_full_expert_2gpu.yaml`](configs/train_h0
 
 - `expert_last_n_layers: -1`：训练完整 Action Expert；
 - `distributed_strategy: upstream_fsdp2`：使用已接入的上游 FSDP2；
-- `batch_size: 8`、`gradient_accumulation: 4`、两张 GPU：global batch 为 64；
+- `batch_size: 32`、`gradient_accumulation: 1`、两张 80G GPU：global batch 为 64；
 - `image_augment: false`：第一轮不混入新的视觉变量；
 - `save_every: 500`：H0-A 滚动保存并永久保留 5k、10k、15k；
 - 最终保存 FP32 HF 导出并执行 action audit。

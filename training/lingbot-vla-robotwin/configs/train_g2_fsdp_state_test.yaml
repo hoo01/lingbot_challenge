@@ -12,8 +12,8 @@ action_audit: true
 output_dir: /data/tmp/g2_fsdp_state_real_01
 device: cuda
 train_projections: true
-batch_size: 8
-gradient_accumulation: 4
+batch_size: 32
+gradient_accumulation: 1
 gradient_checkpointing: true
 chunk_size: 50
 action_chunk_tail: mask

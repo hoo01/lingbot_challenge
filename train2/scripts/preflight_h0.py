@@ -312,8 +312,9 @@ def validate_recipe(cfg: dict[str, Any], phase: str, world_size: int) -> int:
     require(cfg.get("device") == "cuda", "formal training device must be CUDA")
     require(cfg.get("output_dir") is None, "output_dir must be supplied explicitly by the launcher")
     require(cfg.get("min_free_disk_gib") == 120, "formal minimum free disk must remain 120 GiB")
-    require(cfg.get("batch_size") == 8, "validated per-rank batch size is 8")
-    require(cfg.get("gradient_accumulation") == 4, "validated gradient accumulation is 4")
+    require(cfg.get("batch_size") == 32, "validated 80G per-rank batch size is 32")
+    require(cfg.get("gradient_accumulation") == 1,
+            "validated 80G gradient accumulation is 1")
     global_batch = int(cfg["batch_size"]) * world_size * int(cfg["gradient_accumulation"])
     require(global_batch == 64, f"global batch is {global_batch}, expected 64")
     return global_batch
