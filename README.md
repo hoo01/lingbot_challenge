@@ -45,7 +45,7 @@ eval/：仿真评测与官方复测入口（由评测负责人维护）
 | 模块 | 负责内容 | 当前状态 | 详细说明 |
 | --- | --- | --- | --- |
 | `data/` | clean 数据下载、LeRobot v3.0 转换、manifest、norm stats、provenance 和校验 | 双 A100 机器已完成全量 50×50 数据及 SHA 验收 | [`data/README.md`](./data/README.md) |
-| `train/` | 实验设计、冻结配置、启动门禁、训练交付与证据 | H0-A 15k 已完成；历史 E0/F1 与双卡证据保留 | [`train/README.md`](./train/README.md) |
+| `train/` | 实验设计、冻结配置、启动门禁、训练交付与证据 | H0-A 15k 已完成；历史 E0/E1 与双卡证据保留 | [`train/README.md`](./train/README.md) |
 | `training/lingbot-vla-robotwin/` | 数据、模型、FSDP2、checkpoint、导出与审计的可复用运行时 | H0 两卡正式训练链路已验证 | 目录内源码与配置 |
 | `eval/` | 仿真环境、评测入口、结果与数值链路验收 | 基座/E0同seed开发对照完成；空机重建、子集/推理对比和数值验收缺口见交付清单 | [`eval/README.md`](./eval/README.md) |
 | `robotwin_clean_data_audit/` | 历史数据审计证据：兼容性、关节角与归一化统计对比 | 已完成；非正式训练输入 | 目录内报告 |

@@ -1,0 +1,5 @@
+# Executable shell entrypoints must remain runnable after a Windows checkout.
+*.sh text eol=lf
+
+# Evidence hashes describe the repository bytes; do not let core.autocrlf rewrite them.
+train/evidence/** text eol=lf

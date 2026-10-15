@@ -13,9 +13,8 @@
 | 路径 | 用途 |
 | --- | --- |
 | [`h0/`](h0/) | H0/G2 完整 Action Expert：设计、冻结配置、启动门禁、测试与最终训练记录 |
-| `backup_checkpoint.py` | 将最新可恢复 `training.pt` 及运行身份文件上传到 HF 私有模型仓库 |
-| `backup_checkpoint.sh` | 激活训练环境并调用备份脚本 |
-| `evidence/two_a100_2026-10-07/` | global batch 2/32/64 的日志、配置、metadata、SwanLab ID 与哈希清单 |
+| [`evidence/`](evidence/) | E0、E1 和双 A100 smoke 的轻量脱敏证据与统一索引 |
+| [`tools/`](tools/) | checkpoint 私有备份等训练交付工具 |
 
 历史单卡 wrapper、单任务 smoke YAML 和独立 SwanLab patch 已删除。双卡训练代码通过
 `server_patch/ddp_two_a100/0001`–`0005` 交付，其中 `0001` 是后续 DDP 补丁的基线依赖，
@@ -74,7 +73,7 @@ export PROJECT_ROOT=/data/lingbot-vla-robotwin
 export CONDA_ROOT=/home/linux/anaconda3
 export HF_ENDPOINT=https://huggingface.co
 
-bash train/backup_checkpoint.sh \
+bash train/tools/backup_checkpoint.sh \
   /data/lingbot-vla-robotwin/runs/e0_expert_partial_ddp \
   HumaLog/lingbot-vla-checkpoints \
   experiments/E0_EXPERIMENT_NAME
@@ -86,11 +85,6 @@ episode split、SwanLab run ID、metrics 与哈希清单。最终候选的完整
 
 ## 证据
 
-`evidence/two_a100_2026-10-07/` 包含：
-
-- `global_b2`：10-step DDP 正确性冒烟；
-- `global_b32`：每卡 batch 16 的 3-step 短测；
-- `global_b64`：每卡 batch 32 的 3-step 短测，最终默认；
-- `SHA256SUMS`：所有证据文件的内容哈希。
-
-详细结论见仓库根目录 `训练端_双A100_DDP冒烟交接.md`。
+全部历史训练证据、规模、完整性和新增实验的入库规则见
+[`evidence/README.md`](evidence/README.md)。当前 Git 内证据覆盖 E0、E1 和早期双 A100 smoke；
+H0 的设计与最终结论已经归档，独立轻量 evidence 包仍待从训练机收集。
