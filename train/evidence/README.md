@@ -10,6 +10,7 @@
 | [`two_a100_2026-10-07/`](two_a100_2026-10-07/) | 早期 2×A100 DDP；global batch 2/32/64 的 3/10-step smoke | 0.13 MiB | 配置、日志、metadata、SwanLab ID 和总 SHA 清单 |
 | [`e0_2026-10-08/`](e0_2026-10-08/) | E0；absolute action、最后两层 Action Expert，15k 正式训练 | 4.07 MiB | 25 项分发证据 SHA-256 已核对；不含权重 |
 | [`e1_shuweilin_20261011_080143/`](e1_shuweilin_20261011_080143/) | E1；relative arm、absolute gripper，15k 正式训练 | 7.70 MiB | 25 项分发证据 SHA-256 已核对；不含权重 |
+| [`lab_qv256_20261012/`](lab_qv256_20261012/) | Lab q/v-r256；四卡4090、全部2500 clean、相对MeanStd/L2与在线教师，20k | 轻量配置及审计包 | 四rank完成/八份读回、merge/reload审计、norm与SHA清单；HF上传状态见根目录交接页 |
 
 E0 的完整交接见 [`训练端_E0正式训练交接.md`](../../训练端_E0正式训练交接.md)，E1 见
 [`训练端_E1正式训练交接.md`](../../训练端_E1正式训练交接.md)。目录名保留原始实验 ID 或归档日期；

@@ -5,8 +5,9 @@
 [`training/lingbot-vla-robotwin/`](training/lingbot-vla-robotwin/)，各轮实验的冻结设计与入口位于
 [`train/`](train/)，避免再依赖机器外部的同名仓库。
 
-## 最新评测与交付（2026-10-15）
+## 最新评测与交付（2026-10-16）
 
+- [Lab QV256 20000步训练交接](训练端_Lab_QV256正式训练交接.md)：四卡4090、global batch128，语言q/v-r256、视觉与Action Expert训练，完整FP32模型及四卡恢复状态独立归档于私有仓库[HumaLog/Lab-QV256](https://huggingface.co/HumaLog/Lab-QV256)。本轮相对MeanStd/L2/在线教师和FP32基座路径与H0不同，证据见[train/evidence/lab_qv256_20261012/](train/evidence/lab_qv256_20261012/)。
 - [H0/G2 完整 Action Expert](train/h0/)：2×A800 80G、global batch 64 的 H0-A 已完成
   15,000 step，FP32 导出和独立 action audit 通过；冻结 continuation 判据未通过，停止于 15k。
   正式训练交接见 [`训练端_H0正式训练交接.md`](训练端_H0正式训练交接.md)，最终模型归档在

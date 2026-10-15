@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "step": 20000,
+  "independent_process": true,
+  "actual_parameter_dtype": "float32",
+  "parameter_elements": 6375906359,
+  "norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "reload_absolute_action_max_error": 1.1561431190187932e-07,
+  "reload_canonical_max_error": 0.0,
+  "action_shape": [
+    50,
+    14
+  ],
+  "sampler_steps": 10,
+  "audit_backend": "FP32_highest_eager_FA2_reference_MoE_compile_off",
+  "production_backend": "unchanged_official_defaults_v1",
+  "absolute_atol": 1e-06,
+  "absolute_rtol": 1e-06
+}

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "gpu_used": false,
+  "norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "robot_config_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+  "relative_max_error": 2.2751222950034844e-07,
+  "physical_max_error": 3.7114749851241413e-07,
+  "state_added_once_per_horizon": true,
+  "absolute_grippers": true,
+  "physical_shape": [
+    50,
+    14
+  ],
+  "export_and_reload_audits_available": true
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "seed": 42,
+  "global_batch": 128,
+  "steps": 20000,
+  "samples": 2560000,
+  "action_arm_statistics": [
+    50,
+    12
+  ],
+  "action_gripper_statistics": [
+    50,
+    2
+  ],
+  "same_absolute_gripper_minmax_rows": true,
+  "source_hashes_match_training_identity": true,
+  "norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "no_gpu_model_or_simulation": true
+}

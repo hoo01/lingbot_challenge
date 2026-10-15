@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scored": false,
+  "job_id": "252847b647ef",
+  "episodes": 4,
+  "finite_prediction_blocks": 56,
+  "expert_attempts": 0,
+  "initial_camera_pixels_recorded": 4,
+  "cross_host_camera_difference_preserved": true,
+  "norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "actual_FP32": true,
+  "physical_action_shape": [
+    50,
+    14
+  ]
+}

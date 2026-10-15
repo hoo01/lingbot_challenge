@@ -1,0 +1,80 @@
+[
+  {
+    "path": "training_config.yaml",
+    "source_sha256": "2735066ac420c4583448c290f706e788a18c02b5c6b54c53e676aac618076426",
+    "distributed_sha256": "0118528fabf50024506d30fa634b4fa288bf53227777c491db1b27332fcd5ae3",
+    "path_redacted": true
+  },
+  {
+    "path": "training_runtime_config.json",
+    "source_sha256": "92ffeec97f1793c48e0f09b96818ff849149aa29bb17b784b38afdbd2f02b5d6",
+    "distributed_sha256": "58204bd2cc4956aa9807065979136d8c070904b3d3b86204d4c60fc15706532e",
+    "path_redacted": true
+  },
+  {
+    "path": "run_metadata.json",
+    "source_sha256": "172da758e0c3ee220c0bf860a0abbe45566c66c340882615cbdef50474686275",
+    "distributed_sha256": "172da758e0c3ee220c0bf860a0abbe45566c66c340882615cbdef50474686275",
+    "path_redacted": false
+  },
+  {
+    "path": "assets/norm_stats.json",
+    "source_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+    "distributed_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+    "path_redacted": false
+  },
+  {
+    "path": "assets/norm_stats.provenance.json",
+    "source_sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682",
+    "distributed_sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682",
+    "path_redacted": false
+  },
+  {
+    "path": "assets/robotwin_relative.yaml",
+    "source_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+    "distributed_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+    "path_redacted": false
+  },
+  {
+    "path": "checkpoints/global_step_20000/hf_ckpt_fp32/export_audit.json",
+    "source_sha256": "72a7a2fda4b48740befefa28f9f7794b4a8dfc185db2de87153b372b5bdc2d12",
+    "distributed_sha256": "72a7a2fda4b48740befefa28f9f7794b4a8dfc185db2de87153b372b5bdc2d12",
+    "path_redacted": false
+  },
+  {
+    "path": "checkpoints/global_step_20000/hf_ckpt_fp32/action_reload_audit.json",
+    "source_sha256": "5765c3b0f05d3b4006acb8df9a3e0a7b3ee883377dec4ec117c38a427cdfc7d7",
+    "distributed_sha256": "5765c3b0f05d3b4006acb8df9a3e0a7b3ee883377dec4ec117c38a427cdfc7d7",
+    "path_redacted": false
+  },
+  {
+    "path": "checkpoints/global_step_20000/hf_ckpt_fp32/runtime-parameter-audit.json",
+    "source_sha256": "014fa9d9174991e858e3d3014cbf50ecb0aa89f3fcc6903823a44edf16458281",
+    "distributed_sha256": "014fa9d9174991e858e3d3014cbf50ecb0aa89f3fcc6903823a44edf16458281",
+    "path_redacted": false
+  },
+  {
+    "path": "checkpoints/global_step_20000/hf_ckpt_fp32/model.safetensors.index.json",
+    "source_sha256": "69ba71eba8ce3b066c03381aad7f83dcf154df3010c59bfa8e4fa262b3531cad",
+    "distributed_sha256": "69ba71eba8ce3b066c03381aad7f83dcf154df3010c59bfa8e4fa262b3531cad",
+    "path_redacted": false
+  },
+  {
+    "path": "evidence/recipient-action-mapping.json",
+    "source_sha256": "ae0a17f8e40406f8e4728ae7efe3b18da3ec7eca51cf11ac3d98a23a0decf3d3",
+    "distributed_sha256": "ae0a17f8e40406f8e4728ae7efe3b18da3ec7eca51cf11ac3d98a23a0decf3d3",
+    "path_redacted": false
+  },
+  {
+    "path": "evidence/gate-verification.json",
+    "source_sha256": "a915caf6e8c7de02d4feaedadc433d52bb54f16c788dd7ed143a6ada22f2f3a1",
+    "distributed_sha256": "a915caf6e8c7de02d4feaedadc433d52bb54f16c788dd7ed143a6ada22f2f3a1",
+    "path_redacted": false
+  },
+  {
+    "path": "evidence/training-completion.json",
+    "source_sha256": "f26d66ba7515e7eee074a88b3d8510a756c52b5691e64843dd05ff7ed743dcda",
+    "distributed_sha256": "8c5fc73ace03ed662f63cce897e0e80cb4284d1fd6e04d449e013f5b1a9ab1d9",
+    "path_redacted": true
+  }
+]
