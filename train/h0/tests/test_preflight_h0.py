@@ -8,10 +8,12 @@ import tempfile
 import unittest
 
 
-SCRIPT = Path(__file__).parents[1] / "scripts" / "preflight_h0.py"
-H0_CONFIG = Path(__file__).parents[1] / "configs" / "train_h0_full_expert_2gpu.yaml"
+H0_ROOT = Path(__file__).parents[1]
+REPO_ROOT = H0_ROOT.parents[1]
+SCRIPT = H0_ROOT / "scripts" / "preflight_h0.py"
+H0_CONFIG = H0_ROOT / "configs" / "train_h0_full_expert_2gpu.yaml"
 RUNTIME_CONFIG = (
-    Path(__file__).parents[2]
+    REPO_ROOT
     / "training"
     / "lingbot-vla-robotwin"
     / "configs"

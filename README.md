@@ -1,12 +1,15 @@
 # LingBot-VLA × RoboTwin 比赛工程
 
 本仓库是队内的工程交付仓，用来组织 RoboTwin clean 数据准备、LingBot-VLA 后训练、
-评测接口以及复现文档。实际模型代码基于参考工程
-[`EclipseaHime017/lingbot-vla-robotwin`](https://github.com/EclipseaHime017/lingbot-vla-robotwin)，
-两个仓库在训练机上分开放置，本仓库提供脚本、配置、审计结果和交接说明。
+实验配方、评测接口和复现文档。可复用训练运行时位于
+[`training/lingbot-vla-robotwin/`](training/lingbot-vla-robotwin/)，各轮实验的冻结设计与入口位于
+[`train/`](train/)，避免再依赖机器外部的同名仓库。
 
-## 最新评测与交付（2026-10-10）
+## 最新评测与交付（2026-10-15）
 
+- [H0/G2 完整 Action Expert](train/h0/)：2×A800 80G、global batch 64 的 H0-A 已完成
+  15,000 step，FP32 导出和独立 action audit 通过；冻结 continuation 判据未通过，停止于 15k。
+  最终模型归档在 [`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。
 - [原始基座与 E0 同种子对照](eval/results/baseline-e0-same-seed-20261010.md)：500个相同 task/setting/seed，基座49/500（9.8%）、E0 54/500（10.8%）。基座含4个900秒超时0分，双方输入与协议差异在报告中单列。
 - [E0 15000步完整报告](eval/results/e0-15000-final.md)：500个完整策略回合、54成功；这是分阶段开发评测，不是统一赛事成绩。实际评测模型为BF16保存、FP32执行版本，不等同于训练者保留FP32原值的导出。
 - [评测结果索引](eval/results/README.md)：成绩、成功seed、失败案例、精度审计和轻量证据。
@@ -25,7 +28,10 @@ data/：下载、转换、划分、归一化统计与完整性校验
         └── clean_norm_stats.provenance.json
         │
         ▼
-train/：环境、训练、日志、断点恢复、导出与异地备份
+train/：实验设计、冻结配置、启动门禁、训练交付与证据
+        │
+        ▼
+training/lingbot-vla-robotwin/：可复用训练运行时
         │
         ├── training.pt（可恢复状态）
         └── hf_ckpt/（评测/提交权重）
@@ -39,7 +45,8 @@ eval/：仿真评测与官方复测入口（由评测负责人维护）
 | 模块 | 负责内容 | 当前状态 | 详细说明 |
 | --- | --- | --- | --- |
 | `data/` | clean 数据下载、LeRobot v3.0 转换、manifest、norm stats、provenance 和校验 | 双 A100 机器已完成全量 50×50 数据及 SHA 验收 | [`data/README.md`](./data/README.md) |
-| `train/` | 环境安装、训练入口、恢复、SwanLab 日志、HF checkpoint 备份 | 单卡全链路与双 A100 DDP 真实数据冒烟均已验证 | [`train/README.md`](./train/README.md) |
+| `train/` | 实验设计、冻结配置、启动门禁、训练交付与证据 | H0-A 15k 已完成；历史 E0/F1 与双卡证据保留 | [`train/README.md`](./train/README.md) |
+| `training/lingbot-vla-robotwin/` | 数据、模型、FSDP2、checkpoint、导出与审计的可复用运行时 | H0 两卡正式训练链路已验证 | 目录内源码与配置 |
 | `eval/` | 仿真环境、评测入口、结果与数值链路验收 | 基座/E0同seed开发对照完成；空机重建、子集/推理对比和数值验收缺口见交付清单 | [`eval/README.md`](./eval/README.md) |
 | `robotwin_clean_data_audit/` | 历史数据审计证据：兼容性、关节角与归一化统计对比 | 已完成；非正式训练输入 | 目录内报告 |
 | `server_patch/` | 已验证或待目标机器验证、但尚未进入上游训练工程的补丁 | 单卡基线及双 A100 DDP 补丁已保存 | [`server_patch/ddp_two_a100/README.md`](./server_patch/ddp_two_a100/README.md) |
@@ -49,24 +56,28 @@ eval/：仿真评测与官方复测入口（由评测负责人维护）
 > `/data/lingbot-vla-robotwin/data/clean_manifest.json`、`clean_norm_stats.json`
 > 及与之匹配的 provenance 校验结果为准。
 
-## 两个仓库的关系
+## 代码与训练产物的边界
 
-建议在训练机上使用以下布局：
+训练机使用单仓库布局：
 
 ```text
-/data/lingbot_challenge/        # 本交付仓库
-/data/lingbot-vla-robotwin/     # 实际训练工程、模型和数据
+/data/lingbot_challenge/                              # Git 仓库
+/data/lingbot_challenge/train/h0/                     # H0 实验薄层
+/data/lingbot_challenge/training/lingbot-vla-robotwin/ # 可复用训练运行时
 ```
 
-本仓库不保存基座权重、原始数据、转换后视频、checkpoint、token 或 SwanLab 本地日志。
-脚本通过参数或 `PROJECT_ROOT` 操作实际训练工程。
+Git 不保存基座权重、原始数据、转换后视频、checkpoint、token 或 SwanLab 本地日志。
+这些产物位于训练机的数据盘，并按归档规则上传到私有 Hugging Face 仓库。
 
 归档原则：可复现代码、配置、文档和脱敏短测证据进 GitHub；正式训练的可恢复状态与
 候选权重进 HF 私有模型仓库；官方公开基座和 RoboTwin 原始数据只记录固定 revision，
 不重复上传。转换数据仅在许可证允许且确有跨机器复用需求时进入私有 Dataset 仓库或
 平台快照。详细矩阵见 `训练端_双A100_DDP冒烟交接.md`。
 
-### 当前归档状态（2026-10-07）
+### 历史归档状态（2026-10-07）
+
+以下内容记录 H0 开始前的双 A100 DDP 阶段，不代表当前 H0 归档状态；H0 的最终状态以
+[`train/h0/`](train/h0/) 为准。
 
 - 双 A100 的 global batch 2、32、64 三组真实数据短测日志、配置、运行元数据、
   episode split、SwanLab run ID 和 SHA-256 清单已经归档到
@@ -84,40 +95,15 @@ eval/：仿真评测与官方复测入口（由评测负责人维护）
 
 ```bash
 git clone https://github.com/hoo01/lingbot_challenge.git /data/lingbot_challenge
-git clone https://github.com/EclipseaHime017/lingbot-vla-robotwin.git /data/lingbot-vla-robotwin
-
-# 在完整训练工程上依次应用双卡补丁链（0001 是后续 DDP 补丁的基线依赖）
-cd /data/lingbot-vla-robotwin
-git checkout 02ba532
-git am /data/lingbot_challenge/server_patch/ddp_two_a100/0001-*.patch \
-       /data/lingbot_challenge/server_patch/ddp_two_a100/0002-*.patch \
-       /data/lingbot_challenge/server_patch/ddp_two_a100/0003-*.patch \
-       /data/lingbot_challenge/server_patch/ddp_two_a100/0004-*.patch \
-       /data/lingbot_challenge/server_patch/ddp_two_a100/0005-*.patch
-
-export CONDA_ROOT=/home/linux/anaconda3
-bash scripts/bootstrap.sh
-source scripts/activate.sh
-swanlab login
-
-# 正式双 A100 平台：下载并转换完整 50×50 clean 数据
-bash data/prepare_data.sh /data/lingbot-vla-robotwin
-
-# 数据验收后先做 10 step 双卡冒烟，不直接启动长训
-cd /data/lingbot-vla-robotwin
-bash scripts/train_ddp.sh \
-  --max-steps 10 \
-  --batch-size 1 \
-  --gradient-accumulation 1 \
-  --no-export \
-  --output-dir artifacts/ddp_smoke
+cd /data/lingbot_challenge
+python -m unittest discover -s train/h0/tests -v
 ```
 
-当前训练器已经在单张 A100 40GB 上完成真实数据训练、恢复、SwanLab 和 HF 异地备份
-验证，并在 2×A100-SXM4-40GB 上用完整 50-task clean 数据完成 10-step DDP 冒烟。
-本阶段目标是验证单卡代码到双卡 DDP 的可移植性，不包含正式长训。详细结果见
-[`训练端_双A100_DDP冒烟交接.md`](./训练端_双A100_DDP冒烟交接.md)。DDP 不会合并
-两张卡的显存，后续扩大解冻范围若单卡放不下，仍需 FSDP/ZeRO。
+环境、数据、preflight、smoke、恢复和正式启动的完整顺序见
+[`train/h0/README.md`](train/h0/README.md)。不要绕过该文档直接拼训练命令；启动器会绑定源码、
+数据、Norm、基座和配置身份。早期双 A100 DDP 补丁与真机冒烟仅作为历史证据保留在
+[`server_patch/ddp_two_a100/`](server_patch/ddp_two_a100/) 和
+[`train/evidence/two_a100_2026-10-07/`](train/evidence/two_a100_2026-10-07/)。
 
 ## 关键约束
 
@@ -135,6 +121,7 @@ bash scripts/train_ddp.sh \
 - 比赛分工与阶段交付清单：[`队内任务书_10.7前第一阶段.md`](./队内任务书_10.7前第一阶段.md)
 - 当前评测端GitHub交付清单：[`eval/交付与提交清单.md`](./eval/交付与提交清单.md)
 - 正式训练路线与实验矩阵：[`实验设计文档.md`](./实验设计文档.md)
+- H0/G2 最终设计、记录与复现入口：[`train/h0/`](./train/h0/)
 - 双 A100 全量数据与 DDP 真机冒烟交接：[`训练端_双A100_DDP冒烟交接.md`](./训练端_双A100_DDP冒烟交接.md)
 - 双 A100 代码补丁与真机验收：[`server_patch/ddp_two_a100/README.md`](./server_patch/ddp_two_a100/README.md)
 - 个人研究思路与待验证方向：`自查.md`（不属于工程 README）

@@ -1,8 +1,8 @@
-# 训练端交付
+# 训练实验与交付
 
-`train/` 只保留双 A100 阶段仍有效的交付内容：正式 checkpoint 备份工具和已经脱敏、
-带 SHA-256 的真机冒烟证据。训练实现、启动脚本和默认 YAML 均以完整训练仓库
-`/data/lingbot-vla-robotwin` 为准，不在两个仓库中维护重复副本。
+`train/` 保存各轮训练实验的冻结设计、配置、启动门禁、交付工具和脱敏证据。可复用的模型、
+数据与分布式训练实现统一维护在 [`training/lingbot-vla-robotwin/`](../training/lingbot-vla-robotwin/)；
+实验目录只保留为复现实验所需的薄层，不复制运行时源码。
 
 所有正式训练产物必须遵守仓库根目录的
 [`Checkpoint与模型归档守则.md`](../Checkpoint与模型归档守则.md)：按实验 ID 和
@@ -12,6 +12,7 @@
 
 | 路径 | 用途 |
 | --- | --- |
+| [`h0/`](h0/) | H0/G2 完整 Action Expert：设计、冻结配置、启动门禁、测试与最终训练记录 |
 | `backup_checkpoint.py` | 将最新可恢复 `training.pt` 及运行身份文件上传到 HF 私有模型仓库 |
 | `backup_checkpoint.sh` | 激活训练环境并调用备份脚本 |
 | `evidence/two_a100_2026-10-07/` | global batch 2/32/64 的日志、配置、metadata、SwanLab ID 与哈希清单 |
@@ -20,9 +21,21 @@
 `server_patch/ddp_two_a100/0001`–`0005` 交付，其中 `0001` 是后续 DDP 补丁的基线依赖，
 不能单独跳过。
 
-## 权威训练入口
+## H0 权威入口
 
-应用全部补丁后，在完整训练仓库执行：
+H0 已完成 15k 正式训练并停止加训。复现、检查、恢复和导出流程以
+[`h0/README.md`](h0/README.md) 为准，实验依据和最终判定见 [`h0/DESIGN.md`](h0/DESIGN.md)。
+最终 FP32 模型归档在 [`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。
+
+```bash
+cd /data/lingbot_challenge
+python -m unittest discover -s train/h0/tests -v
+bash train/h0/scripts/launch_h0.sh --check
+```
+
+## 历史 E0 双卡入口
+
+以下内容记录 H0 之前的 E0 双 A100 DDP 交付路径。应用全部补丁后，在完整训练仓库执行：
 
 ```bash
 cd /data/lingbot-vla-robotwin

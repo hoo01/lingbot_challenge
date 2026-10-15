@@ -29,10 +29,10 @@ H0 从官方允许的 `LingBot-VLA-v2-6b` 原始基座开始，使用完整 50 �
 
 | 路线 | 主要变化 | 开发评测 | 证据 |
 | --- | --- | ---: | --- |
-| 历史原始基座 | 不训练；历史 500 场景 | 52/500，10.4% | [`baseline.md`](../eval/results/baseline.md) |
-| 同 seed 原始基座 | 不训练；与 E0 对齐的 500 键，含 4 个超时零分 | 49/500，9.8% | [`baseline-e0-same-seed-20261010.md`](../eval/results/baseline-e0-same-seed-20261010.md) |
-| E0 | absolute action；最后两层 Expert + projections | 54/500，10.8% | [`e0-15000-final.md`](../eval/results/e0-15000-final.md) |
-| F1 | 在 E0 训练范围上加入 photometric augmentation | 49/500，9.8% | [`f1-15000-completed-20261012.md`](../eval/results/f1-15000-completed-20261012.md) |
+| 历史原始基座 | 不训练；历史 500 场景 | 52/500，10.4% | [`baseline.md`](../../eval/results/baseline.md) |
+| 同 seed 原始基座 | 不训练；与 E0 对齐的 500 键，含 4 个超时零分 | 49/500，9.8% | [`baseline-e0-same-seed-20261010.md`](../../eval/results/baseline-e0-same-seed-20261010.md) |
+| E0 | absolute action；最后两层 Expert + projections | 54/500，10.8% | [`e0-15000-final.md`](../../eval/results/e0-15000-final.md) |
+| F1 | 在 E0 训练范围上加入 photometric augmentation | 49/500，9.8% | [`f1-15000-completed-20261012.md`](../../eval/results/f1-15000-completed-20261012.md) |
 
 这些结果说明：
 

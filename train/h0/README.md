@@ -4,7 +4,12 @@
 
 `H0` 是本仓库的实验名称；训练运行时代码将同一配方称为 `G2`。本目录维护同一实验的三个冻结阶段：H0-A（0–15k）、H0-C1（15k–25k）和 H0-C2（25k–40k）。
 
-设计假设、变量控制、效果判定和失败后的决策见 [`H0_G2_实验设计文档.md`](H0_G2_实验设计文档.md)；本文只维护可执行操作步骤。
+设计假设、变量控制、效果判定和失败后的决策见 [`DESIGN.md`](DESIGN.md)；本文只维护可执行操作步骤。
+
+H0-A 已于 2026-10-15 正常完成 15,000 step。完整 FP32 导出及独立 action audit 均通过；冻结的
+validation 窗口改善为 `-0.77%`，未达到继续训练所需的 `+1%`，因此结论为 `STOP_AT_15K`，
+不启动 H0-C1。最终模型归档在 [`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。C1/C2 配置仅作为
+已验证的续训预案保留，不表示已经执行。
 
 ```text
 LingBot-VLA-v2-6b 原始基座
@@ -54,7 +59,7 @@ git clone \
 
 ```text
 /data/lingbot_challenge/                         Git 根目录
-/data/lingbot_challenge/train2/                  H0 配方和启动器
+/data/lingbot_challenge/train/h0/                H0 配方、设计文档和启动器
 /data/lingbot_challenge/training/lingbot-vla-robotwin/  训练运行时
 ```
 
@@ -113,7 +118,7 @@ data/clean_norm_stats.provenance.json
 preflight 的无 GPU 单元测试可在本机运行：
 
 ```bash
-python -m unittest discover -s train2/tests -v
+python -m unittest discover -s train/h0/tests -v
 ```
 
 ## 执行顺序
@@ -124,7 +129,7 @@ python -m unittest discover -s train2/tests -v
 
 ```bash
 cd /data/lingbot_challenge
-bash train2/scripts/launch_h0.sh --check
+bash train/h0/scripts/launch_h0.sh --check
 ```
 
 `--check` 不查询或占用 GPU；它会读取基座分片计算哈希，但不会加载模型。默认检查
@@ -140,14 +145,14 @@ training/lingbot-vla-robotwin/data/clean_norm_stats.provenance.json
 
 ```bash
 H0_NORM_PROVENANCE=/absolute/path/to/provenance.json \
-  bash train2/scripts/launch_h0.sh --check
+  bash train/h0/scripts/launch_h0.sh --check
 ```
 
 静态检查通过后，可以在仍无空闲 GPU 时预演正式启动。该命令同时确认目标 run
 目录尚不存在，只打印最终命令，不创建文件：
 
 ```bash
-bash train2/scripts/launch_h0.sh --dry-run
+bash train/h0/scripts/launch_h0.sh --dry-run
 ```
 
 ### 2. 两卡 toy DCP save/resume 单元验收
@@ -155,7 +160,7 @@ bash train2/scripts/launch_h0.sh --dry-run
 该测试使用 toy model，不需要正式模型和数据：
 
 ```bash
-bash train2/scripts/launch_h0.sh --state-test
+bash train/h0/scripts/launch_h0.sh --state-test
 ```
 
 ### 3. 真实模型和真实 Clean 数据 smoke
@@ -163,14 +168,14 @@ bash train2/scripts/launch_h0.sh --state-test
 默认 10 optimizer steps，不写 checkpoint、不导出、不连接 SwanLab：
 
 ```bash
-bash train2/scripts/launch_h0.sh --smoke
+bash train/h0/scripts/launch_h0.sh --smoke
 ```
 
 在正式开训前再跑 100 steps，并显式保存路径：
 
 ```bash
 SMOKE_RUN=/data/lingbot_challenge/training/lingbot-vla-robotwin/runs/h0_smoke100
-H0_OUTPUT_DIR="$SMOKE_RUN" bash train2/scripts/launch_h0.sh --smoke 100
+H0_OUTPUT_DIR="$SMOKE_RUN" bash train/h0/scripts/launch_h0.sh --smoke 100
 ```
 
 通过条件包括：两卡都参与、FSDP2 无错误、Expert 0–35 全部被包裹、loss/grad norm 有限，并记录峰值 allocated/reserved 显存与 step time。启动器会用 step 21–99 自动写出 `h0_timing_budget_initial.json/.md`；此时尚无真实 DCP 保存耗时，所以报告明确标记为 provisional，不能据此正式开训。
@@ -180,7 +185,7 @@ H0_OUTPUT_DIR="$SMOKE_RUN" bash train2/scripts/launch_h0.sh --smoke 100
 该测试先训练到 step 1 并保存 DCP，再启动两个新进程恢复并训练到 step 2：
 
 ```bash
-H0_SMOKE_RUN="$SMOKE_RUN" bash train2/scripts/launch_h0.sh --resume-test
+H0_SMOKE_RUN="$SMOKE_RUN" bash train/h0/scripts/launch_h0.sh --resume-test
 ```
 
 这一步和 toy DCP 测试不同：它会加载正式模型与 Clean 数据，并经过生产训练入口的 composable FSDP2 包装。设置 `H0_SMOKE_RUN` 后，启动器会把真实 DCP 保存耗时并入 smoke 统计，覆盖生成完整的 `h0_timing_budget.json/.md`；只有其中 `timing_gate_complete: true` 才通过时间门槛。
@@ -192,7 +197,7 @@ H0_SMOKE_RUN="$SMOKE_RUN" bash train2/scripts/launch_h0.sh --resume-test
 ```bash
 screen -S h0
 cd /data/lingbot_challenge
-bash train2/scripts/launch_h0.sh --launch
+bash train/h0/scripts/launch_h0.sh --launch
 ```
 
 启动器创建唯一 run 目录，记录 source commit、配置 SHA、provenance 路径、日志和退出码。不要复用已有输出目录。
@@ -200,7 +205,7 @@ bash train2/scripts/launch_h0.sh --launch
 到 step 500 后，使用正式 8-batch validation 和首次正式 DCP 耗时更新预算：
 
 ```bash
-python train2/scripts/plan_h0_timing.py \
+python train/h0/scripts/plan_h0_timing.py \
   --metrics /data/lingbot_challenge/training/lingbot-vla-robotwin/runs/<H0-A-run>/metrics.jsonl \
   --current-step 500 \
   --elapsed-rental-hours <开机至今小时数> \
@@ -214,7 +219,7 @@ python train2/scripts/plan_h0_timing.py \
 ### 6. 同为两卡的 DCP 恢复
 
 ```bash
-bash train2/scripts/launch_h0.sh --resume \
+bash train/h0/scripts/launch_h0.sh --resume \
   /data/lingbot_challenge/training/lingbot-vla-robotwin/runs/<run>/checkpoints/global_step_<N>
 ```
 
@@ -227,14 +232,14 @@ bash train2/scripts/launch_h0.sh --resume \
 H0-C 的独立配置、恒定 `5e-6` scheduler、父 checkpoint 身份/容量检查和独立输出协议已经实现。达到冻结判据后启动 C1：
 
 ```bash
-bash train2/scripts/launch_h0.sh --continue-c1 \
+bash train/h0/scripts/launch_h0.sh --continue-c1 \
   /data/lingbot_challenge/training/lingbot-vla-robotwin/runs/<H0-A-run>/checkpoints/global_step_15000
 ```
 
 C1 中断后用 `--resume-c1 <C1-checkpoint>` 原目录恢复。25k 仍达到相同改善判据且预算允许时启动 C2：
 
 ```bash
-bash train2/scripts/launch_h0.sh --continue-c2 \
+bash train/h0/scripts/launch_h0.sh --continue-c2 \
   /data/lingbot_challenge/training/lingbot-vla-robotwin/runs/<H0-C1-run>/checkpoints/global_step_25000
 ```
 

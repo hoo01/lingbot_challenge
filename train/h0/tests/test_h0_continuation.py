@@ -9,9 +9,10 @@ import unittest
 import yaml
 
 
-ROOT = Path(__file__).parents[2]
-PREFLIGHT_PATH = ROOT / "train2" / "scripts" / "preflight_h0.py"
-SCHEDULE_PATH = ROOT / "training" / "lingbot-vla-robotwin" / "src" / "lrvla" / "training_schedule.py"
+H0_ROOT = Path(__file__).parents[1]
+REPO_ROOT = H0_ROOT.parents[1]
+PREFLIGHT_PATH = H0_ROOT / "scripts" / "preflight_h0.py"
+SCHEDULE_PATH = REPO_ROOT / "training" / "lingbot-vla-robotwin" / "src" / "lrvla" / "training_schedule.py"
 
 
 def load_module(name: str, path: Path):
@@ -53,7 +54,7 @@ class ContinuationConfigTests(unittest.TestCase):
         )
         for phase, filename in cases:
             with self.subTest(phase=phase):
-                config = yaml.safe_load((ROOT / "train2" / "configs" / filename).read_text(encoding="utf-8"))
+                config = yaml.safe_load((H0_ROOT / "configs" / filename).read_text(encoding="utf-8"))
                 self.assertEqual(preflight.validate_recipe(config, phase, 2), 64)
 
     def test_c1_parent_must_be_the_frozen_15k_boundary(self) -> None:

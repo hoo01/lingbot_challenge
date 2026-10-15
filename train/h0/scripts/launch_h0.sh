@@ -4,17 +4,17 @@ set -Eeuo pipefail
 usage() {
     cat >&2 <<'EOF'
 Usage:
-  bash train2/scripts/launch_h0.sh --check
-  bash train2/scripts/launch_h0.sh --dry-run
-  bash train2/scripts/launch_h0.sh --state-test [OUTPUT_DIR]
-  bash train2/scripts/launch_h0.sh --smoke [STEPS]
-  bash train2/scripts/launch_h0.sh --resume-test [OUTPUT_DIR]
-  bash train2/scripts/launch_h0.sh --launch
-  bash train2/scripts/launch_h0.sh --resume CHECKPOINT_DIR
-  bash train2/scripts/launch_h0.sh --continue-c1 H0_A_STEP_15000_DCP
-  bash train2/scripts/launch_h0.sh --resume-c1 H0_C1_CHECKPOINT_DIR
-  bash train2/scripts/launch_h0.sh --continue-c2 H0_C1_STEP_25000_DCP
-  bash train2/scripts/launch_h0.sh --resume-c2 H0_C2_CHECKPOINT_DIR
+  bash train/h0/scripts/launch_h0.sh --check
+  bash train/h0/scripts/launch_h0.sh --dry-run
+  bash train/h0/scripts/launch_h0.sh --state-test [OUTPUT_DIR]
+  bash train/h0/scripts/launch_h0.sh --smoke [STEPS]
+  bash train/h0/scripts/launch_h0.sh --resume-test [OUTPUT_DIR]
+  bash train/h0/scripts/launch_h0.sh --launch
+  bash train/h0/scripts/launch_h0.sh --resume CHECKPOINT_DIR
+  bash train/h0/scripts/launch_h0.sh --continue-c1 H0_A_STEP_15000_DCP
+  bash train/h0/scripts/launch_h0.sh --resume-c1 H0_C1_CHECKPOINT_DIR
+  bash train/h0/scripts/launch_h0.sh --continue-c2 H0_C1_STEP_25000_DCP
+  bash train/h0/scripts/launch_h0.sh --resume-c2 H0_C2_CHECKPOINT_DIR
 
 Optional environment:
   TRAIN_ROOT             Runtime root (default: <challenge>/training/lingbot-vla-robotwin)
@@ -27,7 +27,7 @@ EOF
 }
 
 SELF_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-CHALLENGE_ROOT="$(cd "$SELF_ROOT/.." && pwd)"
+CHALLENGE_ROOT="$(cd "$SELF_ROOT/../.." && pwd)"
 TRAIN_ROOT="${TRAIN_ROOT:-${CHALLENGE_ROOT}/training/lingbot-vla-robotwin}"
 H0_NORM_PROVENANCE="${H0_NORM_PROVENANCE:-${TRAIN_ROOT}/data/clean_norm_stats.provenance.json}"
 CONFIG_A="$SELF_ROOT/configs/train_h0_full_expert_2gpu.yaml"
