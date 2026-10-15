@@ -9,7 +9,8 @@
 
 - [H0/G2 完整 Action Expert](train/h0/)：2×A800 80G、global batch 64 的 H0-A 已完成
   15,000 step，FP32 导出和独立 action audit 通过；冻结 continuation 判据未通过，停止于 15k。
-  最终模型归档在 [`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。
+  正式训练交接见 [`训练端_H0正式训练交接.md`](训练端_H0正式训练交接.md)，最终模型归档在
+  [`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。
 - [原始基座与 E0 同种子对照](eval/results/baseline-e0-same-seed-20261010.md)：500个相同 task/setting/seed，基座49/500（9.8%）、E0 54/500（10.8%）。基座含4个900秒超时0分，双方输入与协议差异在报告中单列。
 - [E0 15000步完整报告](eval/results/e0-15000-final.md)：500个完整策略回合、54成功；这是分阶段开发评测，不是统一赛事成绩。实际评测模型为BF16保存、FP32执行版本，不等同于训练者保留FP32原值的导出。
 - [评测结果索引](eval/results/README.md)：成绩、成功seed、失败案例、精度审计和轻量证据。
@@ -121,6 +122,7 @@ python -m unittest discover -s train/h0/tests -v
 - 比赛分工与阶段交付清单：[`队内任务书_10.7前第一阶段.md`](./队内任务书_10.7前第一阶段.md)
 - 当前评测端GitHub交付清单：[`eval/交付与提交清单.md`](./eval/交付与提交清单.md)
 - 正式训练路线与实验矩阵：[`实验设计文档.md`](./实验设计文档.md)
+- H0/G2 正式训练交接：[`训练端_H0正式训练交接.md`](./训练端_H0正式训练交接.md)
 - H0/G2 最终设计、记录与复现入口：[`train/h0/`](./train/h0/)
 - 双 A100 全量数据与 DDP 真机冒烟交接：[`训练端_双A100_DDP冒烟交接.md`](./训练端_双A100_DDP冒烟交接.md)
 - 双 A100 代码补丁与真机验收：[`server_patch/ddp_two_a100/README.md`](./server_patch/ddp_two_a100/README.md)

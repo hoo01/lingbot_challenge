@@ -24,7 +24,8 @@
 
 H0 已完成 15k 正式训练并停止加训。复现、检查、恢复和导出流程以
 [`h0/README.md`](h0/README.md) 为准，实验依据和最终判定见 [`h0/DESIGN.md`](h0/DESIGN.md)。
-最终 FP32 模型归档在 [`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。
+根目录正式训练交接见 [`../训练端_H0正式训练交接.md`](../训练端_H0正式训练交接.md)，最终 FP32
+模型归档在 [`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。
 
 ```bash
 cd /data/lingbot_challenge

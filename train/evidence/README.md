@@ -17,9 +17,10 @@ E0 的完整交接见 [`训练端_E0正式训练交接.md`](../../训练端_E0�
 
 ## H0 状态
 
-H0-A 15k 已完成，设计、实测摘要、停止决策和复现入口位于 [`train/h0/`](../h0/)，最终模型位于
-[`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。目前尚未从训练机归档独立的 H0 轻量 evidence 包；
-在拿到原始文件前只登记该缺口，不根据聊天记录重建或伪造收据。
+H0-A 15k 已完成，正式训练结果与待补项见
+[`训练端_H0正式训练交接.md`](../../训练端_H0正式训练交接.md)，设计、停止决策和复现入口位于
+[`train/h0/`](../h0/)，最终模型位于 [`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。目前尚未从训练机归档
+独立的 H0 轻量 evidence 包；在拿到原始文件前只登记该缺口，不根据聊天记录重建或伪造收据。
 
 建议后续补入：`preflight_receipt.json`、最终 `metrics_summary.json`、`action-audit.json`、
 `export.json`、`exit_code`、源码/配置身份和覆盖这些文件的 SHA-256 清单。完整 metrics 或日志只有在
