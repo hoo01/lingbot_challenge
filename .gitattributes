@@ -4,3 +4,6 @@
 # Evidence hashes describe the repository bytes; do not let core.autocrlf rewrite them.
 train/evidence/** text eol=lf
 train/lab_qv256/source/** text eol=lf
+
+# This archive retains original evidence bytes, including its recorded hashes.
+train/evidence/lab_qv256_20261012/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
