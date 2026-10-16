@@ -1,0 +1,12 @@
+{
+  "files": {
+    "verification.json": {
+      "bytes": 1729,
+      "sha256": "560a6bef0f7d5e71b35fe6e1ffe47d34aef8ab6e48f6cc4d860ef8c3df7ce0c5"
+    },
+    "paired-outcomes.csv": {
+      "bytes": 30349,
+      "sha256": "ce29af2b03169319611baa1465eb7893c5b4331202229516927f4e41d5ed413a"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "step": 18000,
+  "job_id": "6ee1e5d31f2b",
+  "model_id": "63ec23691d27",
+  "verified_at": "2026-10-15T11:27:43.863270+00:00",
+  "unique_keys": 500,
+  "groups": 100,
+  "completed": 500,
+  "timeout_zero": 0,
+  "success": 237,
+  "success_by_setting": {
+    "demo_clean": 167,
+    "demo_randomized": 70
+  },
+  "finite_prediction_chunks": 4339,
+  "initial_rgb_pngs_checked": 1500,
+  "terminal_pngs_checked": 1000,
+  "nonempty_video_metadata_checked": 1000,
+  "camera_differences": {
+    "head_camera": 500,
+    "left_camera": 500,
+    "right_camera": 500
+  },
+  "timeout_missing_fields": [],
+  "source_ledgers": [
+    {
+      "path": "/data/lingbotvla/eval-team-lab18000-20261014/runs/eval-6ee1e5d31f2b/evaluation/episodes.jsonl",
+      "bytes": 3049390,
+      "sha256": "8424fc7aa1d788abe815650c33c36c4cacfd6723c7846deca31a6f0fde62b531"
+    }
+  ],
+  "runtime_receipts": [
+    {
+      "path": "/data/lingbotvla/eval-team-lab18000-20261014/runs/eval-6ee1e5d31f2b/server-runtime.json",
+      "sha256": "55317c13cc59039806d139b6b146476eb8379d7efcdd09916f48f2422741b5a4"
+    }
+  ],
+  "limits": [
+    "Recorded cross-host RGB differences; not pixel-identical to E0.",
+    "E0 historical BF16 versus current FP32.",
+    "Reference action audit is not training/production bitwise equivalence.",
+    "Model process RNG is not restored across restarts.",
+    "Development evaluation; historical Xid109 root cause remains unproven."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "norm_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+  "robot_config_sha256": "2c2a26509fc9662a8ada64adaa7fa959627dd6dadc6b48b680c4285da2d8ffd8",
+  "normalization_binding": "H0 preflight exact SHA matches locally archived original bytes",
+  "H0_preflight_receipt_sha256": "dc21eebcb847b4db5493e0ead31efa250f52bba0b5058eebf20d85b0edd2397b",
+  "original_norm_provenance_sha256": "41c9b9abc58e27b78d8c4883ef115670e1cd05cc4b8f6f3f2eadb3085e853225",
+  "derived_inference_binding": true,
+  "action_mode": "absolute"
+}

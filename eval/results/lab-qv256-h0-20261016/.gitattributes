@@ -1,0 +1,2 @@
+# Override eval/.gitattributes: preserve every archived receipt's original bytes.
+** -text -eol whitespace=trailing-space,space-before-tab,cr-at-eol

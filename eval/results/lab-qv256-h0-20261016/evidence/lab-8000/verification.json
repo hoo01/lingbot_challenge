@@ -1,0 +1,571 @@
+{
+  "passed": true,
+  "verified_at": "2026-10-13T23:10:26.839194+00:00",
+  "job_id": "7cc771a96d5c",
+  "model_id": "f8ba918c658a",
+  "title": "Lab q/v-r256 · 8000 步 · E0固定50×2×5 · 相对关节 · 无专家与录像",
+  "status": "completed",
+  "completed_at": "2026-10-13T21:14:43.783055+00:00",
+  "unique_keys": 500,
+  "groups": 100,
+  "completed": 500,
+  "timeout_zero": 0,
+  "success": 186,
+  "success_by_setting": {
+    "demo_clean": 130,
+    "demo_randomized": 56
+  },
+  "denominator_by_setting": {
+    "demo_clean": 250,
+    "demo_randomized": 250
+  },
+  "host_counts": {
+    "rented5090": 172,
+    "soarm101": 328
+  },
+  "host_success": {
+    "rented5090": 66,
+    "soarm101": 120
+  },
+  "camera_equal_by_host": {
+    "rented5090": {
+      "head_camera": 172,
+      "left_camera": 172,
+      "right_camera": 172
+    },
+    "soarm101": {
+      "head_camera": 0,
+      "left_camera": 0,
+      "right_camera": 0
+    }
+  },
+  "camera_different_by_host": {
+    "rented5090": {
+      "head_camera": 0,
+      "left_camera": 0,
+      "right_camera": 0
+    },
+    "soarm101": {
+      "head_camera": 328,
+      "left_camera": 328,
+      "right_camera": 328
+    }
+  },
+  "total_actions": 235607,
+  "finite_prediction_chunks": 4795,
+  "initial_rgb_pngs_checked": 1500,
+  "terminal_pngs_checked": 1000,
+  "nonempty_video_files_metadata_checked": 1000,
+  "all_expert_attempts": 0,
+  "checks": {
+    "job_completed": 1,
+    "reference_unique500": 1,
+    "reference_sha": 1,
+    "config_fixed500": 1,
+    "config_precision": 1,
+    "config_checkpoint_id": 1,
+    "config_expert_check": 1,
+    "config_observer_video": 1,
+    "config_video": 1,
+    "config_video_fps": 1,
+    "config_execute": 1,
+    "config_release_unused_cuda_cache": 1,
+    "config_protocol": 1,
+    "config_inference_profile": 1,
+    "config_moe_backend": 1,
+    "scene_replay_sha": 1,
+    "camera_authorization_sha": 1,
+    "host_migration_receipt": 1,
+    "original_model_restore_bound": 1,
+    "restoration_receipt_unchanged": 1,
+    "E0_asset_enumeration_binding": 1,
+    "current_manifest_config": 1,
+    "metadata_prerequisite_bounded": 43,
+    "metadata_prerequisite_unchanged": 43,
+    "shard_completed": 2,
+    "runtime_fp32_all_parameters": 2,
+    "runtime_saved_parameter_values": 2,
+    "runtime_own_norm": 2,
+    "relative_arm_absolute_gripper": 2,
+    "runtime_robot_yaml": 2,
+    "runtime_inference_recipe": 2,
+    "original_prefix_exact_bytes": 2,
+    "shard_250": 2,
+    "key_in_reference": 500,
+    "complete_policy": 500,
+    "expert_not_launched": 500,
+    "fixed_policy_index": 500,
+    "fixed_seed": 500,
+    "fixed_instruction": 500,
+    "ledger_episode_equal": 500,
+    "fixed_instruction_parameters": 500,
+    "paired_input_guard": 500,
+    "reference_episode_binding": 500,
+    "paired_receipt_equal": 500,
+    "scene_replay_policy_only": 500,
+    "policy_entry_no_expert": 500,
+    "original_video_request": 500,
+    "completed_chunk_count": 500,
+    "action_budget": 500,
+    "actual_initial_joints": 500,
+    "finite_50x14_prediction": 4795,
+    "complete_action_block": 4795,
+    "final_action_count": 500,
+    "initial_png_exists": 1500,
+    "initial_png_actual_rgb_sha": 1500,
+    "camera_equality_record_truth": 1500,
+    "original_host_E0_pixel_identity": 172,
+    "head_observer_video_metadata": 1000,
+    "complete_video_file_metadata": 1000,
+    "video_no_extra_policy_steps": 1000,
+    "terminal_png_actual_rgb_sha": 1000,
+    "cross_host_camera_authorized": 328,
+    "completed_unique500": 1,
+    "100_groups_each5": 1,
+    "migration_partition_counts": 1,
+    "report_no_unhandled_errors": 1,
+    "GPU_compute_exited": 1,
+    "old_lab_maintenance_unchanged": 1
+  },
+  "issues": [],
+  "current_segment": "soarm-migration-20261013-2239",
+  "runtime": [
+    {
+      "shard": 0,
+      "path": "/data/lingbotvla/eval-team-lab8000-migrated-20261013/runs/eval-7cc771a96d5c/segments/soarm-migration-20261013-2239/shards/0/server-runtime.json",
+      "sha256": "f2547d74a15d5e8147edcfcecd0f8bb7e674b0fe6b2b45980266cd5a8592f5f1",
+      "dtype": "fp32",
+      "parameter_numel": {
+        "torch.float32": 6375906359
+      },
+      "precision_check": {
+        "learned_tensors": 1672,
+        "exact_saved_fp32_values": true,
+        "binding_sha256": "da11563841be6c935f50bc6b76bf778319e3a633b0e44735f36a290ea956bb48",
+        "audit_scope": "all_saved_model_parameters"
+      },
+      "contract": {
+        "robot_config_path": "/data/lingbotvla/eval-team-lab8000-migrated-20261013/checkpoints/f8ba918c658a/robot_config.yaml",
+        "robot_config_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+        "normalization_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+        "norm_type": [
+          "{'arm.position': 'meanstd'}",
+          "{'end.position': 'meanstd'}",
+          "{'effector.position': 'minmax'}"
+        ],
+        "action_subtract_state": {
+          "action.arm.position": true,
+          "action.effector.position": false
+        },
+        "action_relative_type": {
+          "action.arm.position": "joint",
+          "action.effector.position": "quaternion_local"
+        },
+        "action_features": [
+          "action.arm.position",
+          "action.effector.position"
+        ],
+        "state_features": [
+          "observation.state.arm.position",
+          "observation.state.effector.position"
+        ],
+        "chunk_size": 50,
+        "statistic_shapes": {
+          "observation.state.arm.position": {
+            "mean": [
+              12
+            ],
+            "std": [
+              12
+            ],
+            "min": [
+              12
+            ],
+            "max": [
+              12
+            ],
+            "count": []
+          },
+          "observation.state.effector.position": {
+            "mean": [
+              2
+            ],
+            "std": [
+              2
+            ],
+            "min": [
+              2
+            ],
+            "max": [
+              2
+            ],
+            "count": []
+          },
+          "action.arm.position": {
+            "mean": [
+              50,
+              12
+            ],
+            "std": [
+              50,
+              12
+            ],
+            "min": [
+              50,
+              12
+            ],
+            "max": [
+              50,
+              12
+            ],
+            "count": [
+              50
+            ]
+          },
+          "action.effector.position": {
+            "mean": [
+              50,
+              2
+            ],
+            "std": [
+              50,
+              2
+            ],
+            "min": [
+              50,
+              2
+            ],
+            "max": [
+              50,
+              2
+            ],
+            "count": [
+              50
+            ]
+          }
+        }
+      }
+    },
+    {
+      "shard": 1,
+      "path": "/data/lingbotvla/eval-team-lab8000-migrated-20261013/runs/eval-7cc771a96d5c/segments/soarm-migration-20261013-2239/shards/1/server-runtime.json",
+      "sha256": "f2547d74a15d5e8147edcfcecd0f8bb7e674b0fe6b2b45980266cd5a8592f5f1",
+      "dtype": "fp32",
+      "parameter_numel": {
+        "torch.float32": 6375906359
+      },
+      "precision_check": {
+        "learned_tensors": 1672,
+        "exact_saved_fp32_values": true,
+        "binding_sha256": "da11563841be6c935f50bc6b76bf778319e3a633b0e44735f36a290ea956bb48",
+        "audit_scope": "all_saved_model_parameters"
+      },
+      "contract": {
+        "robot_config_path": "/data/lingbotvla/eval-team-lab8000-migrated-20261013/checkpoints/f8ba918c658a/robot_config.yaml",
+        "robot_config_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+        "normalization_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+        "norm_type": [
+          "{'arm.position': 'meanstd'}",
+          "{'end.position': 'meanstd'}",
+          "{'effector.position': 'minmax'}"
+        ],
+        "action_subtract_state": {
+          "action.arm.position": true,
+          "action.effector.position": false
+        },
+        "action_relative_type": {
+          "action.arm.position": "joint",
+          "action.effector.position": "quaternion_local"
+        },
+        "action_features": [
+          "action.arm.position",
+          "action.effector.position"
+        ],
+        "state_features": [
+          "observation.state.arm.position",
+          "observation.state.effector.position"
+        ],
+        "chunk_size": 50,
+        "statistic_shapes": {
+          "observation.state.arm.position": {
+            "mean": [
+              12
+            ],
+            "std": [
+              12
+            ],
+            "min": [
+              12
+            ],
+            "max": [
+              12
+            ],
+            "count": []
+          },
+          "observation.state.effector.position": {
+            "mean": [
+              2
+            ],
+            "std": [
+              2
+            ],
+            "min": [
+              2
+            ],
+            "max": [
+              2
+            ],
+            "count": []
+          },
+          "action.arm.position": {
+            "mean": [
+              50,
+              12
+            ],
+            "std": [
+              50,
+              12
+            ],
+            "min": [
+              50,
+              12
+            ],
+            "max": [
+              50,
+              12
+            ],
+            "count": [
+              50
+            ]
+          },
+          "action.effector.position": {
+            "mean": [
+              50,
+              2
+            ],
+            "std": [
+              50,
+              2
+            ],
+            "min": [
+              50,
+              2
+            ],
+            "max": [
+              50,
+              2
+            ],
+            "count": [
+              50
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "source_ledgers": [
+    {
+      "shard": 0,
+      "path": "/data/lingbotvla/eval-team-lab8000-migrated-20261013/runs/eval-7cc771a96d5c/segments/soarm-migration-20261013-2239/shards/0/evaluation/episodes.jsonl",
+      "sha256": "83f4a5ec48f2f326fb5f13b68fa6141ca7ad61ee05850edd600ada53dbf1307f",
+      "bytes": 1512867,
+      "original_prefix_sha256": "f22cac660381d6f6b83f598f64c24b653e51b4853c4a663dd1d8f805c68d6e24",
+      "original_prefix_records": 80
+    },
+    {
+      "shard": 1,
+      "path": "/data/lingbotvla/eval-team-lab8000-migrated-20261013/runs/eval-7cc771a96d5c/segments/soarm-migration-20261013-2239/shards/1/evaluation/episodes.jsonl",
+      "sha256": "442bb29b8a8074fa3558b7e54c96cd1b280b5d15547e9d0e7412d387a6d13960",
+      "bytes": 1506505,
+      "original_prefix_sha256": "9a763fbeed25ad087a997da7853059c04af60261ca7605b0c0f5c8c7f7574bbb",
+      "original_prefix_records": 92
+    }
+  ],
+  "metadata_prerequisites": [
+    {
+      "path": "runs/eval-7cc771a96d5c/resume-requests/soarm-migration-20261013-2239/source-config.json",
+      "sha256": "0c2e98cb4f953b391981681d6899d850e780029e2d88b8562427e873b5c7a017"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/resume-requests/soarm-migration-20261013-2239/target-config.json",
+      "sha256": "d78213de151cd25d984339e6616a6efcc444828b467d1ba7f2ea64c36bb0836a"
+    },
+    {
+      "path": "artifacts/migration-soarm-20261013/host-migration.json",
+      "sha256": "eae7f1e44d742f5acaacb9eb1fc70b8da47b5d6b3562a9cfdbef100f9539fe88"
+    },
+    {
+      "path": "artifacts/migration-soarm-20261013/cross-host-camera-authorization.json",
+      "sha256": "aa8f07f4b5a7971bd37795e6cb5d4d83b7a99d282d57d8867333f1ac97594954"
+    },
+    {
+      "path": "incoming/Lab-qv256-step-8000-20261013/export8000/checkpoints/global_step_8000/hf_ckpt_fp32/model-restore-complete.json",
+      "sha256": "a36a5451e70361ad788e860301235cfbb98378ced27e4226f9670271efd85496"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/request.json",
+      "sha256": "fe5c4958d84a3e033ecc19603860cacf4f608c4a3451a1ee61b26fc2e99ea59a"
+    },
+    {
+      "path": "artifacts/migration-soarm-20261013/e0-enumeration.json",
+      "sha256": "a8007f917479f259ac1191595dce5761ab5b4125f295ca8e051ac119deeca3d9"
+    },
+    {
+      "path": "incoming/Lab-qv256-step-8000-20261013/paired-reference.json",
+      "sha256": "ec14ae2092bca38a689feca77b98dc89317bf9add20b820dd67e2d4bd503dd20"
+    },
+    {
+      "path": "incoming/Lab-qv256-step-8000-20261013/scene-replay.json",
+      "sha256": "e7d34a4f042d81bee8c0bf5183f982032f6fe7c0ee9c68f43e8d294526612397"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/shards/0/evaluation/episodes.jsonl",
+      "sha256": "f22cac660381d6f6b83f598f64c24b653e51b4853c4a663dd1d8f805c68d6e24"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/shards/0/evaluation/protocol.json",
+      "sha256": "84546cf7790c5267f74662d0e153a43df76d753b8f0b85d5b70152d37dad7610"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/shards/0/evaluation/worker-progress.json",
+      "sha256": "7f8be8067948227e1626bf103c7b8fc0296c78759360a7f91981e2b59c135a8a"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/shards/0/evaluation/execution-events.jsonl",
+      "sha256": "ca38ea213368be0705ef202a66d87d180bab1042ea82a42424a4b2256c9c0ef7"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/shards/1/evaluation/episodes.jsonl",
+      "sha256": "9a763fbeed25ad087a997da7853059c04af60261ca7605b0c0f5c8c7f7574bbb"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/shards/1/evaluation/protocol.json",
+      "sha256": "0c084709bb81fa2d9bec77fe162970b9dc516d99ae660703f1a6ce0017daed95"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/shards/1/evaluation/worker-progress.json",
+      "sha256": "2d6e7723894c8434385202fa0d6eecdf248f3c20ee4d3c7212fcc4a3d2eaad52"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/shards/1/evaluation/execution-events.jsonl",
+      "sha256": "a05966bbf1d9376e16df85fb8a1fcd725d67b0e06ac118a4b9599ce25ef873ba"
+    },
+    {
+      "path": "runs/eval-7cc771a96d5c/resume-requests/soarm-migration-20261013-2239/diagnosis.json",
+      "sha256": "566a00b4c8070f9753b9bdbc50cae176d4c6c74013a7d321ec0cf0acfd238dcf"
+    },
+    {
+      "path": "src/eval_platform/resume.py",
+      "sha256": "1851b39ce35f571219fb6468de487c54d6d7943e948dc4ef906c6fdac9ccb2eb"
+    },
+    {
+      "path": "src/eval_platform/host_migration.py",
+      "sha256": "29a93ee9cc7572ae49015d07c8f01ca4694305932e2d01f69b480d7b4d87c206"
+    },
+    {
+      "path": "src/eval_platform/store.py",
+      "sha256": "4bf30d04c91cc16c997e082df3127a373c4d852cfa4cdfb1e799678425b75fa4"
+    },
+    {
+      "path": "src/eval_platform/reports.py",
+      "sha256": "687e7a1be2eaffd4fdfbf880a2600d79ef6b78e24d44f3df061f5cf9482e38b7"
+    },
+    {
+      "path": "src/eval_platform/runner.py",
+      "sha256": "1fd57374b6effbea0ffed17d46238cf4801910fed3a0b670e9f1939158e72c8a"
+    },
+    {
+      "path": "src/eval_platform/scene_replay.py",
+      "sha256": "42250a472e1fa2c3c94c6e6eb2d27dcb5cd43cd090b13d7dcc77fc2b42641fa7"
+    },
+    {
+      "path": "src/eval_platform/camera_pairing.py",
+      "sha256": "cb8d6e8135156e7aba66f80aa1e8c5a95cce54eb49b0503684d4daf7dffb7cb6"
+    },
+    {
+      "path": "src/eval_platform/asset_enumeration.py",
+      "sha256": "86c2a7a45c547c10cd7495b659fcf083bdad3e5c73693918f22a0a7644d7fbc1"
+    },
+    {
+      "path": "src/eval_platform/paired_inputs.py",
+      "sha256": "8b86986d20ecd1c7c81b4a6030ecbd6cf2344019c488e001dc49097a4a3af57e"
+    },
+    {
+      "path": "src/eval_platform/weight_precision_audit.py",
+      "sha256": "fa37cecf7c13404be2fb8f1fca2111c1744b3e79161be8a2d5fc18ac9c23594f"
+    },
+    {
+      "path": "scripts/eval_dev_suite.py",
+      "sha256": "1b4cc908412eca2f1338fcc1540836f0b9026e0ae0599a9e46226ee88845383b"
+    },
+    {
+      "path": "scripts/eval_isolated.py",
+      "sha256": "10ebf08e10d503be4ee36434172a7c744e0f340ad4627b021ab2566ea1f800de"
+    },
+    {
+      "path": "scripts/eval_video.py",
+      "sha256": "80d0edbc2b61960148274814a9fccd62189145f14f0b6c21f1c76af1171fb105"
+    },
+    {
+      "path": "scripts/eval_policy_entry.py",
+      "sha256": "0e67fc4b3abeb8052ca3d09488ed59c9e4176bf0b47f0398cab750f9ec3bd703"
+    },
+    {
+      "path": "scripts/eval_policy_entry_sources.json",
+      "sha256": "485f7a6792aa4987c32ce68c6edbfbba5cf3d92ae71b3ee1c101ed7fc8e1781d"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/lingbotvla_cli.yaml",
+      "sha256": "9390cc19b46b878f086c49adc3e311e461ac4da63342e1ceabac9df66b7efce9"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/original_training_cli.yaml",
+      "sha256": "3f008ad4d874bdff3f6393f3cdf28ecf452929382566e3cb8c25ef0cf0a11220"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/norm_stats.json",
+      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/robot_config.yaml",
+      "sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/norm_stats.provenance.json",
+      "sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/action-audit.json",
+      "sha256": "d2b39d33a417f40e2e258c01a9c35f39223c1cef57cf24020fdcd2065c452e9d"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/checkpoints/global_step_0/hf_ckpt/config.json",
+      "sha256": "e76d58ce9cea251a4f310ddf6c2a90c7e6e76a43635d94d037f54d9d42bb8771"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/checkpoints/global_step_0/hf_ckpt/model.safetensors.index.json",
+      "sha256": "69ba71eba8ce3b066c03381aad7f83dcf154df3010c59bfa8e4fa262b3531cad"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/checkpoints/global_step_0/hf_ckpt/runtime-construction.json",
+      "sha256": "c56a5d82b54b257d27fb2dc2e6507d519434051a25deda83931f63c874e322c8"
+    },
+    {
+      "path": "checkpoints/f8ba918c658a/checkpoints/global_step_0/hf_ckpt/runtime-parameter-audit.json",
+      "sha256": "da11563841be6c935f50bc6b76bf778319e3a633b0e44735f36a290ea956bb48"
+    }
+  ],
+  "reference_sha256": "ec14ae2092bca38a689feca77b98dc89317bf9add20b820dd67e2d4bd503dd20",
+  "scene_replay_sha256": "e7d34a4f042d81bee8c0bf5183f982032f6fe7c0ee9c68f43e8d294526612397",
+  "camera_authorization_sha256": "aa8f07f4b5a7971bd37795e6cb5d4d83b7a99d282d57d8867333f1ac97594954",
+  "model_restore_receipt_sha256": "a36a5451e70361ad788e860301235cfbb98378ced27e4226f9670271efd85496",
+  "gpu_compute_processes": "",
+  "limits": [
+    "172 original rented-host episodes retained E0 initial RGB identity; the 328 soarm episodes use authorized recorded cross-host RGB differences. Fixed instruction, seed, parameters, index and joints remain checked.",
+    "E0 historical inference used BF16; this model has FP32 parameters, so precision is not identical.",
+    "The before/after merge and reload fixed-input/noise action audit used a common reference backend; it is not a claim of bitwise equality to training mixed precision or the production official backend.",
+    "Migration and model process restart did not restore the old model RNG stream.",
+    "Development evaluation, not an official competition submission.",
+    "The enumeration repair does not establish the cause or permanent resolution of the historical Xid109 fault."
+  ]
+}

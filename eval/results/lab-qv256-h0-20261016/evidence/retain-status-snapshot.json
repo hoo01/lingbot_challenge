@@ -1,0 +1,71 @@
+{
+  "read_at_utc": "2026-10-16T08:29:47.172689+00:00",
+  "local_controller_status_sha256": "02865bc1447b31b1551dcc32dd912a68a2c870b700470abbebde14e56f046fb8",
+  "controller_time": 1792139335.6036606,
+  "remote_snapshot_time": 1792139375.115821,
+  "phase": "four_parallel_candidates_fixed500_each",
+  "error": null,
+  "not_final": true,
+  "candidates": [
+    {
+      "alpha": 0.5,
+      "job": {
+        "id": "90a3a21ac094",
+        "title": "Lab20k RETAIN-LLM α=0.5 · 原E0固定500 · 相对关节 · 无专家 · 双路录像",
+        "status": "running",
+        "error": null
+      },
+      "model_id": "a842a7de014a",
+      "planned": 500,
+      "complete": 443,
+      "timeout_zero": 0,
+      "successes": 192,
+      "unhandled": 0
+    },
+    {
+      "alpha": 0.75,
+      "job": {
+        "id": "6b11847ce6a4",
+        "title": "Lab20k RETAIN-LLM α=0.75 · 原E0固定500 · 相对关节 · 无专家 · 双路录像",
+        "status": "running",
+        "error": null
+      },
+      "model_id": "6e747903edf3",
+      "planned": 500,
+      "complete": 449,
+      "timeout_zero": 0,
+      "successes": 211,
+      "unhandled": 0
+    },
+    {
+      "alpha": 0.8,
+      "job": {
+        "id": "0e02db56b04d",
+        "title": "Lab20k RETAIN-LLM α=0.8 · 原E0固定500 · 相对关节 · 无专家 · 双路录像",
+        "status": "running",
+        "error": null
+      },
+      "model_id": "925880904e4e",
+      "planned": 500,
+      "complete": 451,
+      "timeout_zero": 0,
+      "successes": 210,
+      "unhandled": 0
+    },
+    {
+      "alpha": 0.9,
+      "job": {
+        "id": "3c08467e9da4",
+        "title": "Lab20k RETAIN-LLM α=0.9 · 原E0固定500 · 相对关节 · 无专家 · 双路录像",
+        "status": "running",
+        "error": null
+      },
+      "model_id": "fd2dc0c07ff2",
+      "planned": 500,
+      "complete": 448,
+      "timeout_zero": 0,
+      "successes": 208,
+      "unhandled": 0
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "assembled_at_utc": "2026-10-16T08:29:47.172689+00:00",
+  "report_date": "2026-10-16",
+  "input_scope": "Local immutable completion receipts only; no remote completed-job query, weights/video read or rollout. RETAIN snapshot is incomplete and excluded from final scores.",
+  "reference_sha256": "ec14ae2092bca38a689feca77b98dc89317bf9add20b820dd67e2d4bd503dd20",
+  "files": {
+    "evidence/lab-8000/by-group.csv": "a1e61ac1fd4b9703347393a105667c0bca744312b37656baf020775b10db1a15",
+    "evidence/lab-8000/paired-outcomes.csv": "3f1ec2a198360eaf412b9b53592d5503d5545fbaccd3bcbaf1dee58e67c11d7d",
+    "evidence/lab-8000/verification.json": "d9530233eeec3038b7f1f89b69fbdd780738426c2fb07414af33d72bc3fd629f",
+    "evidence/lab-8000/verify_migrated8000_completion.py": "81121c071fd33377aef028f36d237fd12f518fed703ce558ac58ebcbeb158904",
+    "evidence/lab-8000/receipt-manifest.json": "aa645d63aba13e2d9ff7ea046c4c75f2fa3f89ab390487c02b724b7b8cfde402",
+    "evidence/lab-14000/verification.json": "b4229877bf2c3034b19aca2a8da9ed5e2fcb6fac98b11fd1ce3c4d5af75c68ed",
+    "evidence/lab-14000/paired-outcomes.csv": "e4bd6c44064d9b45b7838b76cded8dcad18fed81c15aadaa5df6485ba301b29f",
+    "evidence/lab-14000/receipt-manifest.json": "4608feddc44388df10726ccc9878be7beff60597fc16ae09912a8e6c17d4ec53",
+    "evidence/lab-16000/verification.json": "8f3a67af99f17711966dfbc66a155b897ad08bef131b617669b20515debb2833",
+    "evidence/lab-16000/paired-outcomes.csv": "5642513ecc18cee92147bf2061e7c4eacd02eebab49013548577f0302b9d7880",
+    "evidence/lab-16000/receipt-manifest.json": "141317de4636db81080a85384bf0e789d2937a2e7bbe873f85b9ba8b303c34ad",
+    "evidence/lab-18000/verification.json": "538518564565461e8cf5c65d338c0173619b6f75eed3401eb988edc8009a99f9",
+    "evidence/lab-18000/paired-outcomes.csv": "ee6c394cce3c4e0bfd2dbb07e7189e4e4c2c47a17a7b48c41f76a730d2ed0a8e",
+    "evidence/lab-18000/receipt-manifest.json": "5c126db81bf073a9fe94f02a5a273c51d03157f5366b69d7fce111e45bb630e0",
+    "evidence/lab-20000/verification.json": "58ff04a1afd0203a073df385943274494aa3512fdac8b82ced14dff4429f991a",
+    "evidence/lab-20000/paired-outcomes.csv": "e3a79aa193b11c359a7ac1e345423385dad9c66e31379f922dac49894108b24e",
+    "evidence/lab-20000/receipt-manifest.json": "80cc65cabfb00695e1befbeae66e08a37195ce4a056eadf49292f3bded892150",
+    "evidence/h0-15000/verification.json": "560a6bef0f7d5e71b35fe6e1ffe47d34aef8ab6e48f6cc4d860ef8c3df7ce0c5",
+    "evidence/h0-15000/paired-outcomes.csv": "ce29af2b03169319611baa1465eb7893c5b4331202229516927f4e41d5ed413a",
+    "evidence/h0-15000/receipt-manifest.json": "751664363be6c750cca6a49307fcba698175f5e243cac120fa8dc42bbc507bcb",
+    "evidence/paired-reference.json": "ec14ae2092bca38a689feca77b98dc89317bf9add20b820dd67e2d4bd503dd20",
+    "evidence/lab-training-completion.json": "d5e0a495f8f183c51a9276ba38a591050472073929e73469dd3909b1cf4269f1",
+    "evidence/h0-startup-verification.json": "06d2f1e0547b7b5a222ec5520e164e2b84821fa96d5772619a4783c9fac8532c",
+    "evidence/h0-original-action-audit.json": "8224db411480075ece72b37048ebe59a03faaf985759a9cec7391d42381ebbd2",
+    "evidence/h0-original-preflight.json": "dc21eebcb847b4db5493e0ead31efa250f52bba0b5058eebf20d85b0edd2397b",
+    "evidence/h0-published-cli.yaml": "01b91e0fdd2132250139b7493530e7a35dc54a47dd65b8e7718695d6cf91f1cb",
+    "evidence/h0-eval-norm-binding.json": "8a076c606513f0f7e269147532d89d6ea430dfb10c8bc89e6a34f31168329105",
+    "evidence/h0-eval-parameter-audit.json": "9160f354cd30550b933f29575a4540b000319eff1bd3e444e08a6e6d90ac1870",
+    "evidence/retain-status-snapshot.json": "9588c3763a5c28a39a0554af0e0872b9b6c225c8888cb0cb4a15a81de5a3e6da"
+  },
+  "runs": [
+    {
+      "id": "lab-8000",
+      "label": "Lab r256 8k",
+      "step": 8000,
+      "job_id": "7cc771a96d5c",
+      "model_id": "f8ba918c658a",
+      "original_local_receipt": "artifacts/lab-qv256-step8000-eval-20261013/completed-20261014-0705"
+    },
+    {
+      "id": "lab-14000",
+      "label": "Lab r256 14k",
+      "step": 14000,
+      "job_id": "4c46678e65fe",
+      "model_id": "3ef5e65bd332",
+      "original_local_receipt": "artifacts/lab-qv256-rolling-20261014/completed-14000"
+    },
+    {
+      "id": "lab-16000",
+      "label": "Lab r256 16k",
+      "step": 16000,
+      "job_id": "b31757398e92",
+      "model_id": "699af9858492",
+      "original_local_receipt": "artifacts/lab-qv256-rolling-20261014/completed-16000"
+    },
+    {
+      "id": "lab-18000",
+      "label": "Lab r256 18k",
+      "step": 18000,
+      "job_id": "6ee1e5d31f2b",
+      "model_id": "63ec23691d27",
+      "original_local_receipt": "artifacts/lab-qv256-rolling-20261014/completed-18000"
+    },
+    {
+      "id": "lab-20000",
+      "label": "Lab r256 20k",
+      "step": 20000,
+      "job_id": "52f2fcba9037",
+      "model_id": "b5b77a85461b",
+      "original_local_receipt": "artifacts/lab-qv256-rolling-20261014/completed-20000"
+    },
+    {
+      "id": "h0-15000",
+      "label": "H0 15k",
+      "step": 15000,
+      "job_id": "5dbebc941071",
+      "model_id": "b69e723177f9",
+      "original_local_receipt": "artifacts/h0-four4090-eval-20261015/completed"
+    }
+  ],
+  "identity_note": "H0 original HF preflight and previous training handoff record different source/config SHAs; retain both without claiming exact equality."
+}

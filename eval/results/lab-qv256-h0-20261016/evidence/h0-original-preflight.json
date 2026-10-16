@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-14T13:43:47.151716+00:00",
+  "source": {
+    "commit": "fe10d77962d53a0e5e16c26eaca4d4f323550d8f",
+    "dirty": false
+  },
+  "config": {
+    "path": "/autodl-fs/data/lingbot/lingbot_challenge/train2/configs/train_h0_full_expert_2gpu.yaml",
+    "sha256": "264e1af83aaa04293e399b79976d17c05fd001e92e2a2409bdc36cb940ea89d3",
+    "base_checkpoint": "models/lingbot-vla-v2-6b",
+    "distributed_strategy": "upstream_fsdp2",
+    "expert_last_n_layers": -1,
+    "experiment_phase": "h0-a"
+  },
+  "base": {
+    "path": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/models/lingbot-vla-v2-6b",
+    "identity_sha256": "2e727a4c9be84d1a9fe8952544fed421df65fd32b8e543f0bc468f6aeb508a81",
+    "shards": 6
+  },
+  "qwen": {
+    "path": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/models/Qwen3-VL-4B-Instruct",
+    "config_sha256": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d"
+  },
+  "vendor": {
+    "path": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/vendor/lingbot-vla-v2",
+    "revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6"
+  },
+  "data": {
+    "manifest": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/data/clean_manifest.json",
+    "manifest_sha256": "a4a4c28978d3a70ec0b46fb4cbafa8a3d47a721d0d151a4a5e6796c8ad3e383d",
+    "manifest_content_sha256": "9ea0522ab58a7e187ed60fd47fb8d83ecd330c0d2ea4a13850b5f12a0880fd67",
+    "clean_tasks": 50,
+    "clean_frames": 549787
+  },
+  "norm": {
+    "path": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/data/clean_norm_stats.json",
+    "sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+    "count": 494328,
+    "provenance": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/data/clean_norm_stats.provenance.json",
+    "provenance_sha256": "41c9b9abc58e27b78d8c4883ef115670e1cd05cc4b8f6f3f2eadb3085e853225"
+  },
+  "robot_config": {
+    "path": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/vendor/lingbot-vla-v2/configs/robot_configs/robotwin.yaml",
+    "sha256": "2c2a26509fc9662a8ada64adaa7fa959627dd6dadc6b48b680c4285da2d8ffd8",
+    "action_mode": "absolute"
+  },
+  "distributed": {
+    "world_size": 2,
+    "global_batch_size": 64
+  },
+  "storage": {
+    "output_dir": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/runs/h0_a_b32_20261014_214320",
+    "checked_ancestor": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/runs",
+    "device": 101,
+    "total_bytes": 214748364800,
+    "free_bytes": 155880914944,
+    "required_free_bytes": 128849018880
+  }
+}

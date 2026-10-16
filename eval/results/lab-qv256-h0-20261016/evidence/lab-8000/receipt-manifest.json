@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "name": "by-group.csv",
+      "bytes": 3944,
+      "sha256": "a1e61ac1fd4b9703347393a105667c0bca744312b37656baf020775b10db1a15"
+    },
+    {
+      "name": "paired-outcomes.csv",
+      "bytes": 52291,
+      "sha256": "3f1ec2a198360eaf412b9b53592d5503d5545fbaccd3bcbaf1dee58e67c11d7d"
+    },
+    {
+      "name": "verification.json",
+      "bytes": 19274,
+      "sha256": "d9530233eeec3038b7f1f89b69fbdd780738426c2fb07414af33d72bc3fd629f"
+    },
+    {
+      "name": "verify_migrated8000_completion.py",
+      "bytes": 16750,
+      "sha256": "81121c071fd33377aef028f36d237fd12f518fed703ce558ac58ebcbeb158904"
+    }
+  ]
+}

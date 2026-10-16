@@ -11,6 +11,10 @@ validation 窗口改善为 `-0.77%`，未达到继续训练所需的 `+1%`，因
 不启动 H0-C1。最终模型归档在 [`HumaLog/H0`](https://huggingface.co/HumaLog/H0)。C1/C2 配置仅作为
 已验证的续训预案保留，不表示已经执行。
 
+15k原固定500回合闭环评测现已完成：145/500（29.0%），500完整、0超时零分。
+Clean102/250、Randomized43/250；与Lab q/v-r256的联合结果、原始小回执、配对CSV及比较边界见
+[`../../eval/results/lab-qv256-h0-20261016.md`](../../eval/results/lab-qv256-h0-20261016.md)。
+
 ```text
 LingBot-VLA-v2-6b 原始基座
 + 官方 50 任务 Clean demonstration

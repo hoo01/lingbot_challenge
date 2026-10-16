@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "job_id": "5dbebc941071",
+  "model_id": "b69e723177f9",
+  "unscored_gate_id": "71ba5ee5e456",
+  "unscored_gate_finite_blocks": 55,
+  "unique_original_keys": 500,
+  "groups": 100,
+  "per_gpu": [
+    {
+      "shard": 0,
+      "episodes": 125,
+      "whole_groups": 25,
+      "by_setting": {
+        "demo_clean": 65,
+        "demo_randomized": 60
+      }
+    },
+    {
+      "shard": 1,
+      "episodes": 125,
+      "whole_groups": 25,
+      "by_setting": {
+        "demo_randomized": 65,
+        "demo_clean": 60
+      }
+    },
+    {
+      "shard": 2,
+      "episodes": 125,
+      "whole_groups": 25,
+      "by_setting": {
+        "demo_clean": 65,
+        "demo_randomized": 60
+      }
+    },
+    {
+      "shard": 3,
+      "episodes": 125,
+      "whole_groups": 25,
+      "by_setting": {
+        "demo_randomized": 65,
+        "demo_clean": 60
+      }
+    }
+  ],
+  "norm_sha256": "0b8b5ee5b2a1e9f8a658a5a84ade1dce58ba80cb92eaee122bee264ab99906c3",
+  "verified_formal_replicas": [
+    {
+      "shard": 0,
+      "gpu_uuid": "GPU-46fefc74-5822-a53a-3c00-05fc653a6120",
+      "runtime_exact_FP32": true,
+      "own_absolute_norm": true
+    },
+    {
+      "shard": 1,
+      "gpu_uuid": "GPU-3a28c04c-252a-abe3-ec72-d3c82a617fb5",
+      "runtime_exact_FP32": true,
+      "own_absolute_norm": true
+    },
+    {
+      "shard": 2,
+      "gpu_uuid": "GPU-53f778a4-c7a8-05a5-0e4d-58916917ad84",
+      "runtime_exact_FP32": true,
+      "own_absolute_norm": true
+    },
+    {
+      "shard": 3,
+      "gpu_uuid": "GPU-3c024348-f4a8-2835-c25a-8bcff27c3585",
+      "runtime_exact_FP32": true,
+      "own_absolute_norm": true
+    }
+  ],
+  "formal_shards_with_finite_actions": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "all_four_formal_replicas_verified": true,
+  "all_four_formal_shards_responding": true,
+  "limitations": [
+    "Actual cross-host RGB is recorded.",
+    "Historical BF16 and current FP32 differ.",
+    "Four processes start native model RNG at 42; the old single-process stream is not restored.",
+    "Development evaluation, not an official leaderboard score."
+  ]
+}

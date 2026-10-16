@@ -7,6 +7,7 @@
 
 ## 最新评测与交付（2026-10-16）
 
+- [Lab LoRA r256 与 H0 训练/评测报告](eval/results/lab-qv256-h0-20261016.md)：原固定500回合中，Lab20k为249/500（49.8%），H0-15k为145/500（29.0%）；均500完整、0超时零分。附8k–20k趋势、Clean/Randomized、逐任务/配对CSV及离线SHA复算。两套配方有多项差别，不作为LoRA单变量消融；RETAIN四系数仍在进行。
 - [Lab QV256 20000步训练交接](训练端_Lab_QV256正式训练交接.md)：四卡4090、global batch128，语言q/v-r256、视觉与Action Expert训练，完整FP32模型及四卡恢复状态独立归档于私有仓库[HumaLog/Lab-QV256](https://huggingface.co/HumaLog/Lab-QV256)。本轮相对MeanStd/L2/在线教师和FP32基座路径与H0不同，证据见[train/evidence/lab_qv256_20261012/](train/evidence/lab_qv256_20261012/)。
 - [H0/G2 完整 Action Expert](train/h0/)：2×A800 80G、global batch 64 的 H0-A 已完成
   15,000 step，FP32 导出和独立 action audit 通过；冻结 continuation 判据未通过，停止于 15k。
@@ -15,7 +16,7 @@
 - [原始基座与 E0 同种子对照](eval/results/baseline-e0-same-seed-20261010.md)：500个相同 task/setting/seed，基座49/500（9.8%）、E0 54/500（10.8%）。基座含4个900秒超时0分，双方输入与协议差异在报告中单列。
 - [E0 15000步完整报告](eval/results/e0-15000-final.md)：500个完整策略回合、54成功；这是分阶段开发评测，不是统一赛事成绩。实际评测模型为BF16保存、FP32执行版本，不等同于训练者保留FP32原值的导出。
 - [评测结果索引](eval/results/README.md)：成绩、成功seed、失败案例、精度审计和轻量证据。
-- [评测端GitHub交付清单](eval/交付与提交清单.md)：按队内任务书A8/B6列出脚本、文档、结果和验证材料，区分已完成项与缺口。权重按仓库归档守则存放。F1尚未训练完成，本仓库没有F1评测结果。
+- [评测端GitHub交付清单](eval/交付与提交清单.md)：按队内任务书A8/B6列出脚本、文档、结果和验证材料，区分已完成项与缺口。权重按仓库归档守则存放；已完成F1/E1等历史结果见[评测结果索引](eval/results/README.md)。
 
 ## 工程流程
 

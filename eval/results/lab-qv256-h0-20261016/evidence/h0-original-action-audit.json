@@ -1,0 +1,24 @@
+{
+  "export": "/autodl-fs/data/lingbot/lingbot_challenge/training/lingbot-vla-robotwin/runs/h0_a_b32_20261014_214320/checkpoints/global_step_15000/hf_ckpt_fp32",
+  "format": "complete_hf_fp32",
+  "shards": 50,
+  "tensors": 1708,
+  "storage_dtype": "torch.float32",
+  "reload_frozen_dtype": "torch.bfloat16",
+  "reload_trainable_dtype": "torch.bfloat16",
+  "execution_autocast": "torch.bfloat16",
+  "floating_input_dtype": "torch.bfloat16",
+  "normalized_shape": [
+    50,
+    55
+  ],
+  "physical_shape": [
+    50,
+    14
+  ],
+  "normalized_max_abs_error": 0.0,
+  "physical_max_abs_error": 0.0,
+  "normalized_allclose_1e6": true,
+  "physical_allclose_1e6": true,
+  "physical_finite": true
+}

@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "job_id": "5dbebc941071",
+  "model_id": "b69e723177f9",
+  "repo": "HumaLog/H0",
+  "revision": "2a6d763eb1662a723ec44a1f4323a85caa588b80",
+  "completed": 500,
+  "timeout_zero": 0,
+  "successes": 145,
+  "scored": 500,
+  "success_rate": 0.29,
+  "by_setting": {
+    "demo_clean": {
+      "scored": 250,
+      "successes": 102
+    },
+    "demo_randomized": {
+      "scored": 250,
+      "successes": 43
+    }
+  },
+  "unique_keys": 500,
+  "groups": 100,
+  "per_shard": [
+    125,
+    125,
+    125,
+    125
+  ],
+  "expert_attempts": 0,
+  "finite_50x14_blocks": 5139,
+  "initial_RGB_PNG_verified": 1500,
+  "terminal_PNG_verified": 1000,
+  "nonempty_video_metadata": 1000,
+  "preserved_timeout_video_files": 0,
+  "result_prefixes": [
+    {
+      "shard": 0,
+      "bytes": 818811,
+      "sha256": "f14f5aab5f1db43f7da8a4f3f0e98bf2acaf236267140d457c337d560acc97bd"
+    },
+    {
+      "shard": 1,
+      "bytes": 848214,
+      "sha256": "4305c52820e2b44b693ff6a072f17ba77e86ac138dcf7ff615903b12154a40d1"
+    },
+    {
+      "shard": 2,
+      "bytes": 849872,
+      "sha256": "51c99d4294810832335a15a85d461fba1ea00cda0666fda1ac1f6c8ed075fd95"
+    },
+    {
+      "shard": 3,
+      "bytes": 850627,
+      "sha256": "78474498f134ff98ed4722e04d74d7b4b68797f520487ed76865c8ec0126941e"
+    }
+  ],
+  "verified_time": 1792083992.54084,
+  "limitations": [
+    "Actual cross-host RGB equality is recorded, not assumed.",
+    "E0 historical BF16 and this FP32 evaluation differ.",
+    "H0 original action audit used BF16; the current backend is pinned official FP32.",
+    "Four processes each start native model RNG at 42; no original RNG stream was restored.",
+    "Development evaluation, not an official leaderboard score."
+  ]
+}
