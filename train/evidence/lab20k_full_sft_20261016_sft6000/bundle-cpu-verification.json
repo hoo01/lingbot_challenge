@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "step": 6000,
+  "metadata_sha_and_actual_file_sizes": true,
+  "norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "robot_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+  "parameter_tensors": 1672,
+  "gpu_used": false,
+  "no_new_model_actions": true,
+  "time": 1792326857.5009854
+}

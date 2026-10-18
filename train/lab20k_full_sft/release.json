@@ -1,0 +1,13 @@
+{
+  "repo_id": "HumaLog/Lab-QV256",
+  "revision": "ee6a059ce178641fab3f2d87ee2296accc49e812",
+  "prefix": "experiments/lab20k_full_sft_20261016/",
+  "step": 6000,
+  "parent_initial_step": 20000,
+  "model_directory": "checkpoints/global_step_6000/hf_ckpt_fp32",
+  "delivery_manifest_sha256": "efa5f16d845fbff674cb8aa6f03e38616eb7a096f064e16e6eb805604146d995",
+  "source_complete_sha256": "56554a1a222c3a83295bd8a5f3733205c496fb1c8d34d4ba13346555cf505cff",
+  "norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "robot_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+  "private": true
+}

@@ -1,0 +1,39 @@
+{
+  "clean_only": true,
+  "complete_50_tasks": true,
+  "episodes": 2500,
+  "tasks": 50,
+  "dataset_revision": "3dc3b798668feb99ac61cc9086d84cbcc3d79186",
+  "manifest_sha256": "911e7ea61baecd505368fe6d5eb70052827b989ba91f93b6d6d13d331df28e78",
+  "norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "robot_config_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+  "source_audit_sha256": "0a934693c49d5198bfc0b9ebb3f33080868de9cddff9374ac7b748679f2feafb",
+  "preparation_sha256": "8954fa3efb86174096a5cee3271f7a478363bc1d3fd49db80c64100c553434f4",
+  "source_manifest_sha256": "8b2ec95c61caa5daea818a8f5b9d0b7660dc651b24fa030203e17d8052825af5",
+  "data_copy": {
+    "verified": 2500,
+    "bytes": 35044845222,
+    "all_sha256_match": true,
+    "source_manifest_sha256": "8b2ec95c61caa5daea818a8f5b9d0b7660dc651b24fa030203e17d8052825af5"
+  },
+  "source_audit": {
+    "checked_episodes": 2500,
+    "seen_instruction_arrays_match": true,
+    "clean_archive_provenance_tasks": 50,
+    "source_revision": "3dc3b798668feb99ac61cc9086d84cbcc3d79186",
+    "parent_manifest_sha256": "8b2ec95c61caa5daea818a8f5b9d0b7660dc651b24fa030203e17d8052825af5",
+    "clean_source_manifest_sha256": "ef6850c493bc2c372d442408a51d3a8ec1c5b08c361854f79af354577f03ecf4"
+  },
+  "format": "official_raw_hdf5",
+  "chunk_size": 50,
+  "action_shape": [
+    50,
+    12
+  ],
+  "state_shape": [
+    12
+  ],
+  "padding_in_statistics": false,
+  "instructions": "original clean release seen lists",
+  "split": "all_2500_train"
+}

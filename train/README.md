@@ -14,6 +14,7 @@
 | --- | --- |
 | [`h0/`](h0/) | H0/G2 完整 Action Expert：设计、冻结配置、启动门禁、测试与最终训练记录 |
 | [`lab_qv256/`](lab_qv256/) | 独立Lab q/v-r256实验：四卡4090、20000步、MeanStd相对动作、完整FP32导出与恢复归档 |
+| [`lab20k_full_sft/`](lab20k_full_sft/) | Lab20k后全量SFT +6000完整FP32推理交付、固定HF revision及执行25/50步接口 |
 | [`evidence/`](evidence/) | E0、E1 和双 A100 smoke 的轻量脱敏证据与统一索引 |
 | [`tools/`](tools/) | checkpoint 私有备份等训练交付工具 |
 

@@ -1,0 +1,12 @@
+test_dark_uint8_rgb_keeps_its_original_units (test_delivery.InputTests.test_dark_uint8_rgb_keeps_its_original_units) ... ok
+test_promote_before_loading_saved_fp32_values (test_delivery.InputTests.test_promote_before_loading_saved_fp32_values) ... ok
+test_reject_manifest_from_a_different_release (test_delivery.InputTests.test_reject_manifest_from_a_different_release) ... ok
+test_reject_pre_normalized_float_images (test_delivery.InputTests.test_reject_pre_normalized_float_images) ... ok
+test_reject_wrong_or_nonfinite_joint_state (test_delivery.InputTests.test_reject_wrong_or_nonfinite_joint_state) ... ok
+test_execute25_replans_each_request (test_delivery.UpstreamPrefixTests.test_execute25_replans_each_request) ... ok
+test_execute50_baseline_keeps_full_prediction (test_delivery.UpstreamPrefixTests.test_execute50_baseline_keeps_full_prediction) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.025s
+
+OK

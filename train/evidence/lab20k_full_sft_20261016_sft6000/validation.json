@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "source_step": 6000,
+  "parent_initial_step": 20000,
+  "hf_revision": "ee6a059ce178641fab3f2d87ee2296accc49e812",
+  "cpu_behavior_tests": 7,
+  "metadata_bundle_cpu_passed": true,
+  "source_readbacks_equal": 8,
+  "export_parameter_tensors": 1672,
+  "persistent_buffers": 36,
+  "parameter_elements": 6375906359,
+  "all_export_readback_equal": true,
+  "gpu_model_or_simulation_run_in_this_delivery": false,
+  "optimizer_uploaded": false,
+  "time": 1792328948.232766
+}

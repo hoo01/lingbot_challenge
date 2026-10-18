@@ -1,0 +1,91 @@
+{
+  "step": 6000,
+  "world": 4,
+  "identity": {
+    "manifest.json": "911e7ea61baecd505368fe6d5eb70052827b989ba91f93b6d6d13d331df28e78",
+    "norm_stats.json": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+    "norm_stats.provenance.json": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682",
+    "robotwin_relative.yaml": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+    "input_inventory.json": "571d9653de7d04e70ec2ff4a19ac6dd7eb621f13df5483af65131923c07d2e3d",
+    "task_weights.csv": "9f095317a1576622cc5b1dcff7fb97a37ec55644f58840cfcb026ed0686cfefe",
+    "source-binding.json": "4d6810176363023117eaf3fdff5f6bd21f1db36aa13dc17e5fcca098b0322672",
+    "code": {
+      "policy.py": "eeb99a6c62767c27cb27d927365758c85a5b825aa891b00ab1ec9786ce83374e",
+      "recipe.py": "4fe41b48dc316401d7eec47200af26f4d53b7c18561f125c6ed7f6385ebc281e",
+      "images.py": "f7442cc408d53db1fec6444084dacd7102108c855d3795def771fe524a11dff9",
+      "data.py": "9b44de7a4f72f046186593acd4021e96e1e44ac8602ab66e5c97c9f46f822c08",
+      "checkpoint.py": "a0ce5aee013e64af962efcd4f1c35e5860f1365e4942215fef12aae7632d4152",
+      "train_full.py": "b1320cdcd2647ba73af46a5f987d3eaeb3d11ac7dff05ffaaf2a52baf14d8129",
+      "support.py": "957eb541b44c087fcd902621d921e06655286aee82e7ca6d5d191162f141e64d",
+      "base_recipe.py": "7420d7c46a3fcac11943f53363af8dc99c846bc9e1de48fccea2b8819d910e00"
+    },
+    "source_step": 20000,
+    "dense_full_sft": true,
+    "seed": 42,
+    "total_steps": 10000,
+    "microbatch": 16,
+    "accum": 2,
+    "global_batch": 128,
+    "learning_rates": {
+      "language": 1e-05,
+      "vision": 5e-06,
+      "action_expert": 2e-05,
+      "projections_alignment": 2e-05
+    },
+    "optimizer": "AdamW",
+    "warmup": 500,
+    "source_revision": "84afa4f2fbef16ad6d41dbb1c3b27967f2d7a8e6"
+  },
+  "receipts": {
+    "rank0": {
+      "step": 6000,
+      "bytes": 19129967544,
+      "sha256": "3e28f9de2b50dd86b9da0e168991f47e0df247b87f66c991b6374f69be5d8aed",
+      "readback_equal": true
+    },
+    "rank1": {
+      "step": 6000,
+      "bytes": 19129967544,
+      "sha256": "cb6592f8a2d440d79f801895244612adf9cf18ef55f4c096ce3ca4d93f45ebd1",
+      "readback_equal": true
+    },
+    "rank2": {
+      "step": 6000,
+      "bytes": 19129967544,
+      "sha256": "756dfcfe14929b9ab09156ec3fcb0d2b04be8b8b9ff317412efd6feda682a1b4",
+      "readback_equal": true
+    },
+    "rank3": {
+      "step": 6000,
+      "bytes": 19129958328,
+      "sha256": "f52783e3173c57148952f69c0f546bc3d5df8c38bf65d9ae4c190ba218d67574",
+      "readback_equal": true
+    },
+    "data_rank0": {
+      "step": 6000,
+      "bytes": 9193,
+      "sha256": "7e4e585c008d3be0fda5d816a3b459f8251eae5bb18bc380ee98b67cedca2b09",
+      "readback_equal": true
+    },
+    "data_rank1": {
+      "step": 6000,
+      "bytes": 9193,
+      "sha256": "ed7a5b799d613b663d53fbfd245cbc9cbcc78a7fd713e2558829f7ad8763067e",
+      "readback_equal": true
+    },
+    "data_rank2": {
+      "step": 6000,
+      "bytes": 9193,
+      "sha256": "0af82be59b3f9a29ac955efe730374e57e1192ae12df62f457f8863fa32a126b",
+      "readback_equal": true
+    },
+    "data_rank3": {
+      "step": 6000,
+      "bytes": 9193,
+      "sha256": "e9405bcc91700a28efcc9977948a9f4d34675b41888a85f024127f6b4f329b16",
+      "readback_equal": true
+    }
+  },
+  "retained": true,
+  "format": "dense_full_fp32_adam_prefetch_v1"
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "tests": 7,
+  "time": 1792327618.8801658,
+  "checked_sources": {
+    "contract.py": "9bdbd0879e3e757987841d3b554eaded47c2f9db29f0405df9e01bcdff19e20f",
+    "download.py": "a0f8d184eff54fd5a32d500b6965d961f7edc84fd76227c40f515c70ab2f8d7a",
+    "serve.py": "3e553ddce1673e26174e80c165e69c94aab813955eb57d13b42ccbe0066a1429",
+    "tests/test_delivery.py": "e9e0c7b601b39ef14e994fe75ee62921c2b17b6f363aea463638abc20fd37ea5"
+  },
+  "gpu_used": false,
+  "no_model_predictions": true
+}

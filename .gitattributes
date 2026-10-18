@@ -7,3 +7,4 @@ train/lab_qv256/source/** text eol=lf
 
 # This archive retains original evidence bytes, including its recorded hashes.
 train/evidence/lab_qv256_20261012/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+train/evidence/lab20k_full_sft_20261016_sft6000/** -text whitespace=trailing-space,space-before-tab,cr-at-eol

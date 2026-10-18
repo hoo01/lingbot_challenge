@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "step": 6000,
+  "parent_initial_step": 20000,
+  "source": "/mnt/raid1/lingbotvla_sft_from_lab20k_20261016/runs/formal_sft_10000/checkpoint_sft_006000",
+  "source_complete_sha256": "56554a1a222c3a83295bd8a5f3733205c496fb1c8d34d4ba13346555cf505cff",
+  "identity": {
+    "manifest.json": "911e7ea61baecd505368fe6d5eb70052827b989ba91f93b6d6d13d331df28e78",
+    "norm_stats.json": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+    "norm_stats.provenance.json": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682",
+    "robotwin_relative.yaml": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+    "input_inventory.json": "571d9653de7d04e70ec2ff4a19ac6dd7eb621f13df5483af65131923c07d2e3d",
+    "task_weights.csv": "9f095317a1576622cc5b1dcff7fb97a37ec55644f58840cfcb026ed0686cfefe",
+    "source-binding.json": "4d6810176363023117eaf3fdff5f6bd21f1db36aa13dc17e5fcca098b0322672",
+    "code": {
+      "policy.py": "eeb99a6c62767c27cb27d927365758c85a5b825aa891b00ab1ec9786ce83374e",
+      "recipe.py": "4fe41b48dc316401d7eec47200af26f4d53b7c18561f125c6ed7f6385ebc281e",
+      "images.py": "f7442cc408d53db1fec6444084dacd7102108c855d3795def771fe524a11dff9",
+      "data.py": "9b44de7a4f72f046186593acd4021e96e1e44ac8602ab66e5c97c9f46f822c08",
+      "checkpoint.py": "a0ce5aee013e64af962efcd4f1c35e5860f1365e4942215fef12aae7632d4152",
+      "train_full.py": "b1320cdcd2647ba73af46a5f987d3eaeb3d11ac7dff05ffaaf2a52baf14d8129",
+      "support.py": "957eb541b44c087fcd902621d921e06655286aee82e7ca6d5d191162f141e64d",
+      "base_recipe.py": "7420d7c46a3fcac11943f53363af8dc99c846bc9e1de48fccea2b8819d910e00"
+    },
+    "source_step": 20000,
+    "dense_full_sft": true,
+    "seed": 42,
+    "total_steps": 10000,
+    "microbatch": 16,
+    "accum": 2,
+    "global_batch": 128,
+    "learning_rates": {
+      "language": 1e-05,
+      "vision": 5e-06,
+      "action_expert": 2e-05,
+      "projections_alignment": 2e-05
+    },
+    "optimizer": "AdamW",
+    "warmup": 500,
+    "source_revision": "84afa4f2fbef16ad6d41dbb1c3b27967f2d7a8e6"
+  },
+  "files": [
+    {
+      "name": "model-00001.safetensors",
+      "bytes": 1671922240,
+      "sha256": "c889c298e7ffbf1bd23f901ae7ce7df4b0048a4070b56b514b1b12d727bea2f4"
+    },
+    {
+      "name": "model-00002.safetensors",
+      "bytes": 1859914176,
+      "sha256": "b3d4a2b366f90e6663250526395975201e0b423e0f506c65124fb63095b99958"
+    },
+    {
+      "name": "model-00003.safetensors",
+      "bytes": 1819395368,
+      "sha256": "47a259acf47a1167bdc33f91bee00665eb4c78cbd483b37c4ac9b27433e505f3"
+    },
+    {
+      "name": "model-00004.safetensors",
+      "bytes": 1814129872,
+      "sha256": "596230eb9070612853d811ca7d299516b97be679988d4543b5a71eadb4612b58"
+    },
+    {
+      "name": "model-00005.safetensors",
+      "bytes": 1819395424,
+      "sha256": "de22ba3ffb4cf44d4aa026b2ec507a6abcb6087186d99390f09a44ad4d8f3c35"
+    },
+    {
+      "name": "model-00006.safetensors",
+      "bytes": 1814129912,
+      "sha256": "062f5ae730f53beec9cab3be36da487189d84da01c12f08d073d692ccf24109f"
+    },
+    {
+      "name": "model-00007.safetensors",
+      "bytes": 1819395416,
+      "sha256": "7c379a357705972d0f20d723aeb09c8bf54b83fc6e32e66d5292d6fe441aac92"
+    },
+    {
+      "name": "model-00008.safetensors",
+      "bytes": 1814129912,
+      "sha256": "747dbf341dcf0a182e537659f3ad8c33f7be191eff48f81ab325957fce2f3938"
+    },
+    {
+      "name": "model-00009.safetensors",
+      "bytes": 1819395416,
+      "sha256": "9b373a85ce02049d75b5a1162bb175139af382fd7d457d402ec94269281a3a8e"
+    },
+    {
+      "name": "model-00010.safetensors",
+      "bytes": 1900004504,
+      "sha256": "abff19cd5fa9275389a6ad2262417d7b3d47c3e7583f849c806d049a5df0769f"
+    },
+    {
+      "name": "model-00011.safetensors",
+      "bytes": 1875706408,
+      "sha256": "85220156d9beda41af3a2f9c2bba59b6789fcbbb7158544292b5936199940bcb"
+    },
+    {
+      "name": "model-00012.safetensors",
+      "bytes": 1898586136,
+      "sha256": "afb1cf2df032375772c15c44fc16bf8550f7e2ec654a727ccabf4b8047b592d7"
+    },
+    {
+      "name": "model-00013.safetensors",
+      "bytes": 1873340696,
+      "sha256": "b61ada13c1608d201f8feb1325b0e699daded78c7f05441276c82f0a89576d03"
+    },
+    {
+      "name": "model-00014.safetensors",
+      "bytes": 1704443260,
+      "sha256": "529136fdcfab0363536f99c4f6bc642563e6af959f19ba14a13fef628f3d2e12"
+    },
+    {
+      "name": "complete.json",
+      "bytes": 3405,
+      "sha256": "56554a1a222c3a83295bd8a5f3733205c496fb1c8d34d4ba13346555cf505cff"
+    },
+    {
+      "name": "config.json",
+      "bytes": 5873,
+      "sha256": "2b4c3657370726bb316a504921a171f469304a725bfc5c5e49ad54413b8d529a"
+    },
+    {
+      "name": "export-started.json",
+      "bytes": 952,
+      "sha256": "08989345fde0a009842c43694070efd02d441dbd4823638b69ccfa6582f24e86"
+    },
+    {
+      "name": "lingbotvla_cli.yaml",
+      "bytes": 5297,
+      "sha256": "84cdab0e6acc7db13e1b9899e56c690cf764b434f2206a7a5476c05cc1ca9290"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 192017,
+      "sha256": "1e5f378f8d61997a4ccefe52739518f6a65c22728ed3ee46b0ce6d3edbe42599"
+    },
+    {
+      "name": "norm_stats.json",
+      "bytes": 94770,
+      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
+    },
+    {
+      "name": "norm_stats.provenance.json",
+      "bytes": 1549,
+      "sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682"
+    },
+    {
+      "name": "robotwin_relative.yaml",
+      "bytes": 1052,
+      "sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b"
+    },
+    {
+      "name": "runtime-construction.json",
+      "bytes": 97,
+      "sha256": "ddd244944c73a32e6aa7fe7c21e73c6aefd3d9bf8e37d91f70ac2a80912094e9"
+    },
+    {
+      "name": "runtime-parameter-audit.json",
+      "bytes": 264422,
+      "sha256": "d077d1aba527f860d2d16c806c4683d5b349953720c9ffb41ac8035befc9a7fc"
+    },
+    {
+      "name": "source-binding.json",
+      "bytes": 5525,
+      "sha256": "4d6810176363023117eaf3fdff5f6bd21f1db36aa13dc17e5fcca098b0322672"
+    }
+  ],
+  "parameter_elements": 6375906359,
+  "parameter_tensors": 1672,
+  "persistent_buffers": 36,
+  "runtime_parameter_audit_sha256": "d077d1aba527f860d2d16c806c4683d5b349953720c9ffb41ac8035befc9a7fc",
+  "gpu_used": false,
+  "training_modified": false,
+  "optimizer_transferred": false,
+  "time": 1792326407.5005083
+}

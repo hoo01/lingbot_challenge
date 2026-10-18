@@ -1,0 +1,4 @@
+{
+  "nonpersistent_buffer_initialization": "native",
+  "checkpoint_parameter_dtype": "float32"
+}
