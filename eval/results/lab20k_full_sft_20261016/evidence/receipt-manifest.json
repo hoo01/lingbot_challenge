@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "run_id": "eval-48a4a918600d",
+  "created_at": "2026-10-20T00:35:40.445989+00:00",
+  "files": [
+    {
+      "path": "paired-outcomes.csv",
+      "bytes": 56624,
+      "sha256": "8d0f50756a6e715b3755b066309ad4b793f7652e23c76648e4be90fce04b520d"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 4434,
+      "sha256": "b53231224e208d11a71ade9303b493b14ddd77810efaa8b4fde42d5f6fd9d844"
+    }
+  ]
+}

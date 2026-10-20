@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-20T00:35:40.445243+00:00",
+  "passed": true,
+  "run_id": "eval-48a4a918600d",
+  "model": {
+    "checkpoint_id": "641d8d031051",
+    "name": "lab20k full SFT global_step_6000",
+    "kind": "team_merged_checkpoint",
+    "original_source": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt",
+    "checkpoint": "/root/autodl-tmp/lingbot-eval/checkpoints/641d8d031051/checkpoints/global_step_0/hf_ckpt",
+    "normalization_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+    "robot_config_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+    "weight_shards": 14
+  },
+  "protocol": {
+    "name": "team_official_defaults_setup_fallback_v1",
+    "official_benchmark": false,
+    "tasks": 50,
+    "settings": [
+      "demo_clean",
+      "demo_randomized"
+    ],
+    "primary_seeds": [
+      100010,
+      100011,
+      100012,
+      100013,
+      100014
+    ],
+    "available_seeds": [
+      100010,
+      100011,
+      100012,
+      100013,
+      100014,
+      100015,
+      100016,
+      100017,
+      100018,
+      100019,
+      100020,
+      100021,
+      100022,
+      100023,
+      100024,
+      100025,
+      100026,
+      100027,
+      100028,
+      100029,
+      100030,
+      100031,
+      100032,
+      100033,
+      100034
+    ],
+    "valid_per_group": 5,
+    "setup_error_policy": "direct_fallback_seed",
+    "execute": 50,
+    "precision": "fp32",
+    "video": false,
+    "inference_profile": "official_defaults_v1",
+    "moe_backend": "official",
+    "recorded_server_id": "autodl-4080-b"
+  },
+  "results": {
+    "planned_valid": 500,
+    "attempted": 581,
+    "valid": 500,
+    "setup_errors": 81,
+    "other_errors": 0,
+    "successes": 249,
+    "success_rate": 0.498,
+    "groups": 100,
+    "unique_valid_keys": 500,
+    "primary_valid": 440,
+    "fallback_valid": 60,
+    "by_setting": {
+      "demo_clean": {
+        "valid": 250,
+        "successes": 162,
+        "success_rate": 0.648
+      },
+      "demo_randomized": {
+        "valid": 250,
+        "successes": 87,
+        "success_rate": 0.348
+      }
+    }
+  },
+  "checks": {
+    "expected_valid_episode_count": true,
+    "report_valid_count_matches": true,
+    "summary_valid_count_matches": true,
+    "success_count_matches": true,
+    "attempt_count_matches": true,
+    "setup_error_count_matches": true,
+    "no_unclassified_statuses": true,
+    "unique_valid_episode_keys": true,
+    "expected_group_count": true,
+    "valid_per_group": true,
+    "finite_episode_metrics": true,
+    "required_episode_files_present": true,
+    "checkpoint_id_matches": true,
+    "normalization_hash_matches": true,
+    "robot_config_hash_matches": true
+  },
+  "missing_episode_files": [],
+  "source_files": [
+    {
+      "path": "request.json",
+      "bytes": 2060,
+      "sha256": "87a95048dedb269137f0fd8e7115fd6825202bf2c6759512c832224954ce5818",
+      "role": "request"
+    },
+    {
+      "path": "report.json",
+      "bytes": 501609,
+      "sha256": "6932dd1fb27ed8f7e3e4841075010df0e6471a1b888e0dd9abf3afdb9fa0e900",
+      "role": "report"
+    },
+    {
+      "path": "evaluation/protocol.json",
+      "bytes": 4718,
+      "sha256": "1bb8c36f094031bfae9869dd887508521088cdd8bfce33fe4c7d4a25907ba329",
+      "role": "protocol"
+    },
+    {
+      "path": "evaluation/summary.json",
+      "bytes": 21350,
+      "sha256": "4d1ccef4901e70fcd0f46d1e2957b631d3ad328d6a2866b1e36d97aba7c571b7",
+      "role": "summary"
+    },
+    {
+      "path": "evaluation/episodes.jsonl",
+      "bytes": 400074,
+      "sha256": "760e2a4642ebbd4e98a6614f11fbb7ca96a131bd8ef1a9d1aea9f46e4e96b28e",
+      "role": "episodes"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 6348,
+      "sha256": "cc7ab2dfdb99d990489a5c97db3a6f6f64f8643877e5288c58ce520feaf04da6",
+      "role": "checkpoint_manifest"
+    }
+  ],
+  "limitations": [
+    "This run used the development fallback protocol; setup failures were replaced by later seeds until each task-setting group had five valid episodes.",
+    "paired-outcomes.csv contains the actual 500 valid keys. Pairwise comparison with another run is valid only on identical task-setting-seed keys.",
+    "Video recording was disabled for this run, so this receipt makes no video-completeness claim.",
+    "The recorded server_id is preserved as historical run metadata even if the server display name changed later."
+  ]
+}
