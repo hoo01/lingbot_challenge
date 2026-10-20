@@ -7,17 +7,25 @@
     "bytes": 196522,
     "sha256": "3881295f5a48ed476012c017d8bfc976227c501cb437625a3031499e56238a91"
   },
+  "loss-4090.csv": {
+    "bytes": 2222894,
+    "sha256": "ce661f83825c8391c510de65171342780823d6c667bad4d0f962d3fa1bbd8b86"
+  },
+  "loss-amd8.csv": {
+    "bytes": 1463452,
+    "sha256": "47fa020be191605a2f09d4b46d9d4b2edf8bbd56e8091fbdc2541d1a11fe0727"
+  },
   "loss-curves.png": {
     "bytes": 464818,
     "sha256": "3fd5159124636c69d095ad5ba700e65a064f107485ad1a2757d778a8edd3da9c"
   },
   "loss-summary.json": {
-    "bytes": 1422,
-    "sha256": "f8b7bb0df47624e146100b7bccdfd8adc25a1b8f35d79953b9cbad4617d4a3cf"
+    "bytes": 3260,
+    "sha256": "9eab6af8ad0f26196fcdf20fcd26cffd9e0465cf024ffe786bbfdb729a4bb545"
   },
   "README.md": {
-    "bytes": 1327,
-    "sha256": "504a2922b05c0020a222c2f1894eb157ab59a57312ba4ddd94cdf606993a9c3a"
+    "bytes": 3327,
+    "sha256": "d1129d9d9d8582e48484c15bf652aa764f150ebe18d9e190278f20262a353f6a"
   },
   "recipes.json": {
     "bytes": 3507,

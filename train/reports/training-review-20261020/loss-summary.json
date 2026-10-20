@@ -17,7 +17,29 @@
       "last_action": 0.0044727325439453125,
       "max_total": 0.8849983215332031,
       "max_total_step": 9453,
-      "source_sha256": "a572631fb124420b2fce0cb68e6a4d562ed9af1265f599244d779a956cf5f687"
+      "source_sha256": "a572631fb124420b2fce0cb68e6a4d562ed9af1265f599244d779a956cf5f687",
+      "csv": "loss-4090.csv",
+      "hardware": "4 x RTX4090 48GB",
+      "microbatch_per_rank": 16,
+      "gradient_accumulation": 2,
+      "world_size": 4,
+      "global_batch": 128,
+      "master_and_optimizer_precision": "FP32",
+      "vision_language_compute_precision": "BF16",
+      "action_compute_precision": "FP32",
+      "sampler": "task-weighted with replacement; switch after7000 with200-update transition",
+      "accepted_segments": [
+        {
+          "first_step": 1,
+          "last_step": 7000,
+          "stage": "initial_resampling"
+        },
+        {
+          "first_step": 7001,
+          "last_step": 12000,
+          "stage": "switched_resampling"
+        }
+      ]
     },
     "amd8": {
       "steps": 8000,
@@ -32,7 +54,46 @@
       "last_action": 0.0049896240234375,
       "max_total": 0.43308067321777344,
       "max_total_step": 2087,
-      "source_sha256": "29c52955864613309238314bb30ff06bec18601f5ebbe60b4285fcf6e78e2b05"
+      "source_sha256": "29c52955864613309238314bb30ff06bec18601f5ebbe60b4285fcf6e78e2b05",
+      "csv": "loss-amd8.csv",
+      "hardware": "8 x AMD W7900D 48GB",
+      "microbatch_per_rank": 16,
+      "gradient_accumulation": 2,
+      "world_size": 8,
+      "global_batch": 256,
+      "master_and_optimizer_precision": "FP32",
+      "vision_language_compute_precision": "BF16",
+      "action_compute_precision": "BF16",
+      "sampler": "official per-frame shuffle at original effective-frame proportions",
+      "accepted_segments": [
+        {
+          "first_step": 1,
+          "last_step": 2000,
+          "stage": "accepted_original_prefix"
+        },
+        {
+          "first_step": 2001,
+          "last_step": 8000,
+          "stage": "accepted_recovery"
+        }
+      ]
     }
-  }
+  },
+  "step_definition": "optimizer updates after the original Lab20k, starting at 1",
+  "logging_reduction": "mean across accumulation microbatches, then mean across all ranks",
+  "raw_values_preserved": true,
+  "separate_lineages": true,
+  "migration_amd8000_to_four4090_included": false,
+  "csv_fields": [
+    "route",
+    "step",
+    "total",
+    "flow_matching",
+    "depth",
+    "future_depth",
+    "video",
+    "sequence_wise",
+    "router_z",
+    "gradient_norm_before_clip"
+  ]
 }
