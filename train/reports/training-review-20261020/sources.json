@@ -1,0 +1,85 @@
+{
+  "description": "Local original receipt hashes; document summaries can be derived/redacted and have different hashes.",
+  "sources": {
+    "initial_sampling_table": {
+      "bytes": 7784,
+      "sha256": "9f095317a1576622cc5b1dcff7fb97a37ec55644f58840cfcb026ed0686cfefe"
+    },
+    "actual_switch7000_sampling_table": {
+      "bytes": 6263,
+      "sha256": "fab0610b2a9274ad81e862f56ab62eaca9c5e9cff3eb240bb0fa63ab35bfc7ff"
+    },
+    "new_continuation_filter_plan_original_bytes": {
+      "bytes": 172311,
+      "sha256": "2cf2131b82f61ded801cc63831385902ad34f20440c83d13f36423a2492bea85"
+    },
+    "matched2000_original20k_vs_sft5000": {
+      "bytes": 15288,
+      "sha256": "72ec587417b172c886da5f7938ff14ebf1ee82dd5c9dce762859cf67b91c324c"
+    },
+    "matched500_subset_comparison": {
+      "bytes": 2195,
+      "sha256": "4a556c919e2eca141d8c957b9b7e8eeff8e507cf0a39a7bb82ba41ef6ece1ee8"
+    },
+    "retain_four_candidates": {
+      "bytes": 2120,
+      "sha256": "051352bc97a430727a5bcb456bd4b3a285afd32d37ee5d6259485827111aa023"
+    },
+    "four4090_final12000_verification": {
+      "bytes": 4186,
+      "sha256": "757beae00170218f25c27c894e141df2f11ab14c273805dfc275ab9dc842d891"
+    },
+    "amd8000_mirror500_completion": {
+      "bytes": 1519,
+      "sha256": "5261e50305d90c40f59f76a93018edc7e537bcd876e4bb1852edcf277a972550"
+    },
+    "top12_spike_data_audit": {
+      "bytes": 14960,
+      "sha256": "3bdc915c93688c17796f0f20d7ade89d0cb6c1788175cef03d5dba6631370dae"
+    },
+    "four4090_initial_new_process_resume": {
+      "bytes": 1272,
+      "sha256": "a9c10a637f7be368bb4b443ce0aa8cbc11630ee482697dd1b6d3a1932218f894"
+    },
+    "four4090_switch7000_new_process_resume": {
+      "bytes": 1517,
+      "sha256": "7acb2a55c180b559f2c58a2871907b64617ac67c7290e9bbcb866de9311dd1ab"
+    },
+    "four4090_switch7000_formal_start": {
+      "bytes": 1252,
+      "sha256": "267bec752d107e8fb6683cb16802dae55e2b0b6da3db1dd411b1ea3a97f2ad12"
+    },
+    "amd2000_actual_recovery_start": {
+      "bytes": 4022,
+      "sha256": "347ed3ed7f5d615845b1bd4a5c5641314e4db8983a1ee4ceb3c0358e58c2a1e9"
+    },
+    "retained_curve_verification": {
+      "bytes": 3622,
+      "sha256": "e1ac694817e65f85a002b82de206f9e3c09a9b0bbae78f26e611a06b92b492da"
+    },
+    "four4090_retained_scalars": {
+      "bytes": 3156434,
+      "sha256": "a572631fb124420b2fce0cb68e6a4d562ed9af1265f599244d779a956cf5f687"
+    },
+    "amd8_retained_scalars": {
+      "bytes": 2118152,
+      "sha256": "29c52955864613309238314bb30ff06bec18601f5ebbe60b4285fcf6e78e2b05"
+    },
+    "loss-curves.png": {
+      "bytes": 464818,
+      "sha256": "3fd5159124636c69d095ad5ba700e65a064f107485ad1a2757d778a8edd3da9c"
+    },
+    "action-loss-smoothed.png": {
+      "bytes": 196522,
+      "sha256": "3881295f5a48ed476012c017d8bfc976227c501cb437625a3031499e56238a91"
+    },
+    "new_continuation_small_status": {
+      "bytes": 5046,
+      "sha256": "cd94be424941cb87e84bde7d39f3a809f3451e31df617d55492fd498e388e258"
+    },
+    "official_FAQ_live_20261020": {
+      "bytes": 56278,
+      "sha256": "cd747af1d31b2092550a8bb0b314807ec178efb1a494f36a0af3a4e1393be7e8"
+    }
+  }
+}

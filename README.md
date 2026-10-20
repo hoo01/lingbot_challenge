@@ -5,7 +5,9 @@
 [`training/lingbot-vla-robotwin/`](training/lingbot-vla-robotwin/)，各轮实验的冻结设计与入口位于
 [`train/`](train/)，避免再依赖机器外部的同名仓库。
 
-## 最新模型与评测交付（2026-10-18）
+## 最新训练与评测交付（2026-10-20）
+
+- [10月12日至20日训练策略与实验复盘](train/reports/training-strategies-20261012-20261020.md)：原Lab20k、RETAIN、4090全量SFT至+12000、AMD八卡至+8000及新迁移的配置与状态；含两阶段采样表、完整loss曲线、尖峰诊断、恢复验收和分协议评测结果。新AMD8000到4090续训在本文截稿时仍处于CPU重分片，不提前记为正式运行。
 
 - [Lab20k 后全量 SFT +6000 推理交接](train/lab20k_full_sft/README.md)：完整FP32模型、固定HF revision、原模型相对norm及队友启动脚本；支持保持H50预测、只执行25步后重新观测，也可用执行50步作对照。此次为模型发布，未新增+6000正式评测成绩。
 

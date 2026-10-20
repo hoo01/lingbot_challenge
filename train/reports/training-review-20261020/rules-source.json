@@ -1,0 +1,11 @@
+{
+  "checked_date_beijing": "2026-10-20",
+  "http_status": 200,
+  "source": "https://tianchi.aliyun.com/v3/proxy/competition/api/race/getDetail?raceId=532514",
+  "raw_response_sha256": "cd747af1d31b2092550a8bb0b314807ec178efb1a494f36a0af3a4e1393be7e8",
+  "training_data": "50 tasks x 50 official Clean demonstrations; no Randomized or external data",
+  "FAQ18": "Visual/state augmentation allowed; regenerated observations and extra simulator training rollouts prohibited",
+  "FAQ4_8_9_17": "Merged LoRA weights allowed; one final weight; no task-specific routing or multi-seed voting",
+  "FAQ13": "Five expert collection starts per scenario; attempts across different seeds count; policy evaluation continues after quota",
+  "FAQ10_12": "Aim for100 trials per task-setting; official retest decides ranking"
+}

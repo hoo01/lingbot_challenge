@@ -1,0 +1,42 @@
+{
+  ".gitattributes": {
+    "bytes": 136,
+    "sha256": "9cb72db1188761c4dcac68c5d31fc72af2d44d8f233a8452d2f252a51ed219de"
+  },
+  "action-loss-smoothed.png": {
+    "bytes": 196522,
+    "sha256": "3881295f5a48ed476012c017d8bfc976227c501cb437625a3031499e56238a91"
+  },
+  "loss-curves.png": {
+    "bytes": 464818,
+    "sha256": "3fd5159124636c69d095ad5ba700e65a064f107485ad1a2757d778a8edd3da9c"
+  },
+  "loss-summary.json": {
+    "bytes": 1422,
+    "sha256": "f8b7bb0df47624e146100b7bccdfd8adc25a1b8f35d79953b9cbad4617d4a3cf"
+  },
+  "README.md": {
+    "bytes": 1327,
+    "sha256": "504a2922b05c0020a222c2f1894eb157ab59a57312ba4ddd94cdf606993a9c3a"
+  },
+  "recipes.json": {
+    "bytes": 3507,
+    "sha256": "01ae7bc0eb9839d6ffe7320247d617fbcd5afb3d2331c181d525086f97d284c9"
+  },
+  "rules-source.json": {
+    "bytes": 821,
+    "sha256": "52f0394bbb58b0ed6e44bced2cae2f769962cd03bff1f6fdb31c59e85758a56d"
+  },
+  "sampling-after7000.csv": {
+    "bytes": 6263,
+    "sha256": "fab0610b2a9274ad81e862f56ab62eaca9c5e9cff3eb240bb0fa63ab35bfc7ff"
+  },
+  "sampling-initial.csv": {
+    "bytes": 7784,
+    "sha256": "9f095317a1576622cc5b1dcff7fb97a37ec55644f58840cfcb026ed0686cfefe"
+  },
+  "sources.json": {
+    "bytes": 3227,
+    "sha256": "5261c9172bbb7ef12322bbdad8cb40fac5b323ebfca28e1049c67c18585a1656"
+  }
+}

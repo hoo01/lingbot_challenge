@@ -1,0 +1,129 @@
+{
+  "summary_only_not_an_executable_launcher": true,
+  "norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "original_manifest_sha256": "911e7ea61baecd505368fe6d5eb70052827b989ba91f93b6d6d13d331df28e78",
+  "original20k_HF_revision": "84afa4f2fbef16ad6d41dbb1c3b27967f2d7a8e6",
+  "student_parameter_elements": 6375906359,
+  "student_parameter_tensors": 1672,
+  "persistent_buffers": 36,
+  "common_full_SFT": {
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0,
+    "foreach": false,
+    "fused": false,
+    "gradient_clip_global_norm": 1.0,
+    "peak_LR": {
+      "language": 1e-05,
+      "vision": 5e-06,
+      "action_expert": 2e-05,
+      "projections_alignment": 2e-05
+    },
+    "extra_MoE_LR_multiplier": false,
+    "warmup_optimizer_updates": 500,
+    "original_cosine_total": 10000,
+    "LR_floor_fraction": 0.2,
+    "teachers": "frozen",
+    "master_parameters": "FP32"
+  },
+  "routes": {
+    "original20k": {
+      "world": 4,
+      "microbatch": 32,
+      "accum": 1,
+      "global_batch": 128,
+      "updates": 20000,
+      "optimizer": "official_Muon_with_AdamW_fallback",
+      "LR_start": 0.0001,
+      "LR_min": 5e-05,
+      "warmup": 0,
+      "language_LoRA": {
+        "rank": 256,
+        "alpha": 512,
+        "modules": 72,
+        "targets": [
+          "q",
+          "v"
+        ]
+      },
+      "other_trainable_modules": [
+        "vision",
+        "action_expert",
+        "projection_alignment"
+      ],
+      "action_fp32": true
+    },
+    "four4090_full_SFT": {
+      "world": 4,
+      "microbatch": 16,
+      "accum": 2,
+      "global_batch": 128,
+      "final_step": 12000,
+      "original_sampling_updates": 7000,
+      "new_sampling_updates": 5000,
+      "transition_updates": 200,
+      "schedule": "original curve through7000; anchored cosine to12000",
+      "action_fp32": true,
+      "teacher_execution": "per_example_with_original_target_functions",
+      "checkpoints_retained": [
+        1000,
+        2000,
+        3000,
+        4000,
+        5000,
+        6000,
+        7000,
+        8000,
+        9000,
+        10000,
+        11000,
+        12000
+      ],
+      "status": "completed"
+    },
+    "amd8_full_SFT": {
+      "world": 8,
+      "microbatch": 16,
+      "accum": 2,
+      "global_batch": 256,
+      "planned_final_step": 10000,
+      "accepted_final_saved_step": 8000,
+      "action_fp32": false,
+      "teacher_execution": "full_microbatch16",
+      "sampler": "official_StatefulDistributedSampler",
+      "checkpoints_archived": [
+        2000,
+        4000,
+        6000,
+        8000
+      ],
+      "compiled_flex_adopted": false,
+      "original_remote_engineering_resume_gate": "waived_by_user_not_passed",
+      "status": "user_stopped"
+    },
+    "amd8000_to_four4090": {
+      "world": 4,
+      "microbatch": 16,
+      "accum": 4,
+      "global_batch": 256,
+      "source_step": 8000,
+      "target_step": 10000,
+      "optimizer": "inherited_AdamW_moments_groups_step8000",
+      "new_warmup": false,
+      "action_fp32": false,
+      "teacher_execution": "full_microbatch16",
+      "new_sampler_and_GPU_RNG_phase": true,
+      "eligible_start_frames": 549737,
+      "checkpoints_requested": [
+        9000,
+        10000
+      ],
+      "async_backup": "soarm101",
+      "snapshot_phase": "cpu_resharding_8_to_4"
+    }
+  }
+}

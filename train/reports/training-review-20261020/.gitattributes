@@ -1,0 +1,2 @@
+# Preserve the recorded evidence bytes and their hashes on every platform.
+* -text whitespace=trailing-space,space-before-tab,cr-at-eol

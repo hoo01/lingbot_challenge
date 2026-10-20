@@ -1,0 +1,38 @@
+{
+  "generated_at_beijing": "2026-10-20T19:04:07.980639+08:00",
+  "moving_average_window": 100,
+  "moving_average": "trailing inclusive, not centered",
+  "no_outliers_removed": true,
+  "routes": {
+    "four4090": {
+      "steps": 12000,
+      "first_step": 1,
+      "last_step": 12000,
+      "first500_total_mean": 0.013619781494140625,
+      "last500_total_mean": 0.011853080749511719,
+      "first500_action_mean": 0.00920636749267578,
+      "last500_action_mean": 0.0076675224304199215,
+      "last100_action_mean": 0.005839715003967285,
+      "last_total": 0.008617401123046875,
+      "last_action": 0.0044727325439453125,
+      "max_total": 0.8849983215332031,
+      "max_total_step": 9453,
+      "source_sha256": "a572631fb124420b2fce0cb68e6a4d562ed9af1265f599244d779a956cf5f687"
+    },
+    "amd8": {
+      "steps": 8000,
+      "first_step": 1,
+      "last_step": 8000,
+      "first500_total_mean": 0.013322036743164062,
+      "last500_total_mean": 0.009939498901367187,
+      "first500_action_mean": 0.008967214584350586,
+      "last500_action_mean": 0.005785075187683106,
+      "last100_action_mean": 0.005649862289428711,
+      "last_total": 0.0090789794921875,
+      "last_action": 0.0049896240234375,
+      "max_total": 0.43308067321777344,
+      "max_total_step": 2087,
+      "source_sha256": "29c52955864613309238314bb30ff06bec18601f5ebbe60b4285fcf6e78e2b05"
+    }
+  }
+}
