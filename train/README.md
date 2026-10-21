@@ -13,6 +13,7 @@
 | 路径 | 用途 |
 | --- | --- |
 | [`reports/training-strategies-20261012-20261020.md`](reports/training-strategies-20261012-20261020.md) | 近期训练复盘：LoRA到全量SFT、4090两阶段采样、AMD原帧采样、归一化/Adam验收、loss曲线与分协议成绩 |
+| [`r3_aug_ema_full_sft/`](r3_aug_ema_full_sft/) | 计划中的R3泛化训练：从已固定revision的Lab20k Full SFT +6000权重启动新阶段，采用强视觉增强、可审计数据过滤、全量SFT与容量门禁下的EMA；PACE作为独立推理协议验收 |
 | [`h0/`](h0/) | H0/G2 完整 Action Expert：设计、冻结配置、启动门禁、测试与最终训练记录 |
 | [`lab_qv256/`](lab_qv256/) | 独立Lab q/v-r256实验：四卡4090、20000步、MeanStd相对动作、完整FP32导出与恢复归档 |
 | [`lab20k_full_sft/`](lab20k_full_sft/) | Lab20k后全量SFT +6000完整FP32推理交付、固定HF revision及执行25/50步接口 |
