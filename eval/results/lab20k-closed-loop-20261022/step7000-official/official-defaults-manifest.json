@@ -1,0 +1,16 @@
+{
+  "kind": "team_merged_checkpoint",
+  "official_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+  "source_byte_layout": "git_blob_lf",
+  "source": "/root/autodl-tmp/lingbot-eval/third_party/lingbot-vla-v2-official-be969b8f",
+  "checkpoint": "/root/autodl-tmp/lingbot-eval/checkpoints/a922ba66c536/checkpoints/global_step_0/hf_ckpt",
+  "normalization": "/root/autodl-tmp/lingbot-eval/checkpoints/a922ba66c536/norm_stats.json",
+  "normalization_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "pristine_source_sha256": {
+    "deploy/lingbot_vla_v2_policy.py": "ede2f532ea9cf06acd49fadb6915c5b8da2caa09dbd342cfb82754f182f386d2",
+    "lingbotvla/models/vla/lingbot_vla/modeling_lingbot_vla_v2.py": "9b3c9a2ad6823f9d58da51b732477785a1e4db0d29db80e030e094c7b605e40c",
+    "lingbotvla/models/vla/lingbot_vla/qwen2_action_expert.py": "2221459c676c27eb70e13edd29d6e25c2c6008a1fc3f0b7c820b8abbbf11aff6"
+  },
+  "robot_config": "/root/autodl-tmp/lingbot-eval/checkpoints/a922ba66c536/robot_config.yaml",
+  "robot_config_sha256": "f4a1de74470ae9d7353bbfe7bdd173305bf391cecd05f4dd7f5276968e426c5e"
+}

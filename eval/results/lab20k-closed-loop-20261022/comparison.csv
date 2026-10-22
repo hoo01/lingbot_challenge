@@ -1,0 +1,5 @@
+archive,job_id,checkpoint,protocol,valid,successes,success_rate,clean_successes,randomized_successes,attempted,setup_errors,execution_errors,mean_execution_horizon,evaluation_wall_hours
+step6000-official,48a4a918600d,lab20k full SFT global_step_6000,team_official_defaults_setup_fallback_v1,500,249,0.498,162,87,581,81,0,50,11.00612436312529
+step6000-pace,95834709f412,lab20k full SFT global_step_6000,pace_v1,500,258,0.516,164,94,581,81,0,21.970757180156657,8.002681131050922
+step7000-official,7ee63959db2b,Lab20k-FullSFT-4090-step7000,team_official_defaults_setup_fallback_v1,500,249,0.498,170,79,581,81,0,50,10.854818934512117
+step8000-pace,5eb52c93c126,Lab20k FullSFT AMD8 global_step_8000,pace_v1,500,251,0.502,172,79,581,81,0,22.13169826875515,10.262759612912486

@@ -1,0 +1,30 @@
+{
+  "checkpoint": "/root/autodl-tmp/lingbot-eval/checkpoints/a922ba66c536/checkpoints/global_step_0/hf_ckpt",
+  "dtype": "fp32",
+  "execute": 50,
+  "matmul_precision": "high",
+  "moe_backend": "official",
+  "vision_device": "cuda",
+  "embedding_device": "cuda",
+  "flow_noise_generation": "upstream_native",
+  "sampling_seed_at_process_start": 42,
+  "sampling_seed_per_episode": null,
+  "use_compile": true,
+  "image_size": 256,
+  "num_steps": 10,
+  "vit_attn_implementation": "flash_attention_2",
+  "precompute_grid_thw": true,
+  "inference_profile": "official_defaults_v1",
+  "upstream_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+  "nonpersistent_buffer_initialization": "native",
+  "normalization_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "robot_config": "/root/autodl-tmp/lingbot-eval/checkpoints/a922ba66c536/robot_config.yaml",
+  "robot_config_sha256": "f4a1de74470ae9d7353bbfe7bdd173305bf391cecd05f4dd7f5276968e426c5e",
+  "action_subtract_state": {
+    "action.arm.position": true,
+    "action.effector.position": false
+  },
+  "action_relative_type": {
+    "action.arm.position": "joint"
+  }
+}

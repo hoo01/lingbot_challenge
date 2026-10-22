@@ -1,0 +1,11 @@
+{
+  "job_id": "95834709f412",
+  "recovered_at": "2026-10-20T11:56:56.210795+00:00",
+  "preserved_episode_records": 133,
+  "policy_completed": 116,
+  "setup_errors": 17,
+  "checkpoint_id": "9a64d1b0cf84",
+  "inference_profile": "pace_v1",
+  "database_backup": "/root/autodl-tmp/lingbot-eval/platform-state/queue.sqlite3.before-recovery-20261020T115656Z",
+  "resume_policy": "repeat only the interrupted/unrecorded episode, skip recorded outcomes"
+}

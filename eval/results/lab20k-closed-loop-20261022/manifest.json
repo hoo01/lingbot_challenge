@@ -1,0 +1,282 @@
+[
+  {
+    "file": ".gitattributes",
+    "bytes": 145,
+    "sha256": "8d84c75bae27dc57687bfdfeb4d1f7f6f6adeeb4f6e51e508d7571f0f21990e7"
+  },
+  {
+    "file": "README.md",
+    "bytes": 4611,
+    "sha256": "c6a2ed02820bd7ee4e6c683a0ef89f45c7b48f8900161933754ca87b3cb19256"
+  },
+  {
+    "file": "build_report_tables.py",
+    "bytes": 9950,
+    "sha256": "897b475fc43dd5699f80e815f429d8048cdb1cf74443eafc89684cdb75a893fc"
+  },
+  {
+    "file": "comparison.csv",
+    "bytes": 774,
+    "sha256": "46749d7f2c0a6b2ad521ccead30d937c878118c48e453821edd73ca550382a54"
+  },
+  {
+    "file": "step6000-official/by-group.csv",
+    "bytes": 6203,
+    "sha256": "8014b8887e0e62025df5f50432f6fec4a0cda97a2ea2ca6be60341d6acdfdfda"
+  },
+  {
+    "file": "step6000-official/by-task.csv",
+    "bytes": 2152,
+    "sha256": "87033f971aa25360a78fb99ea3e8423354aeae6c106d3ed1d0c084970d9e0ee1"
+  },
+  {
+    "file": "step6000-official/checkpoint.json",
+    "bytes": 6348,
+    "sha256": "cc7ab2dfdb99d990489a5c97db3a6f6f64f8643877e5288c58ce520feaf04da6"
+  },
+  {
+    "file": "step6000-official/episodes.csv",
+    "bytes": 114105,
+    "sha256": "8c098f921dfdafa27df0a26fef50c74f886fb910245f54a26e384e77baf9f996"
+  },
+  {
+    "file": "step6000-official/job.json",
+    "bytes": 2723,
+    "sha256": "7d2f32702b0cc2995049245ec3bc63a2597a5492b04cde5dd5ada5004881db6a"
+  },
+  {
+    "file": "step6000-official/official-defaults-manifest.json",
+    "bytes": 1125,
+    "sha256": "f1cc8a6a060e272d27f317b6db5a4e1d9ec2ef48604899ff1e2e586005653939"
+  },
+  {
+    "file": "step6000-official/report.json",
+    "bytes": 501609,
+    "sha256": "6932dd1fb27ed8f7e3e4841075010df0e6471a1b888e0dd9abf3afdb9fa0e900"
+  },
+  {
+    "file": "step6000-official/request.json",
+    "bytes": 2060,
+    "sha256": "87a95048dedb269137f0fd8e7115fd6825202bf2c6759512c832224954ce5818"
+  },
+  {
+    "file": "step6000-official/scores.csv",
+    "bytes": 6206,
+    "sha256": "386d8658aeaa0d3e8b77008daa9f584d474efcb1a467ef29ee11140b7792470c"
+  },
+  {
+    "file": "step6000-official/server-runtime.json",
+    "bytes": 1148,
+    "sha256": "5d437232b578c3bbf83c5c3906a8ed0d17ce33b00ff3f63edc94bacc06e8b48e"
+  },
+  {
+    "file": "step6000-official/summary.json",
+    "bytes": 1822,
+    "sha256": "569ff7bbd01e588b475c61ddd02479d418d6666d70d91a3b70d3b6d211ebe293"
+  },
+  {
+    "file": "step6000-official/timing.json",
+    "bytes": 198,
+    "sha256": "f9e2b1deee7c55f2202838b044cf3d10e26580ca24d529ce747e8759dc96c681"
+  },
+  {
+    "file": "step6000-pace/by-group.csv",
+    "bytes": 6207,
+    "sha256": "435b90ef896785cfb97aeda717f90c0e87d478f410593fc4e6d271a6e57672ce"
+  },
+  {
+    "file": "step6000-pace/by-task.csv",
+    "bytes": 2153,
+    "sha256": "fb37a124dd2cb82020118db2ba9e0094236ec3d2a18ba4ee35c435735c63a363"
+  },
+  {
+    "file": "step6000-pace/checkpoint.json",
+    "bytes": 6348,
+    "sha256": "56f5086be087c2b3a54dbc39a50d4490cad0ea0c127327120b2e770bf7072035"
+  },
+  {
+    "file": "step6000-pace/episodes.csv",
+    "bytes": 123403,
+    "sha256": "6ed962e36feaffb948be10854704bdb4b74ada9c6f2d5402f585d6ea1480a1cb"
+  },
+  {
+    "file": "step6000-pace/job.json",
+    "bytes": 2211,
+    "sha256": "db2973eb51c12a409238af7c0be0684b686c5af942e42b1bc749327127130137"
+  },
+  {
+    "file": "step6000-pace/official-defaults-manifest.json",
+    "bytes": 1125,
+    "sha256": "ba8c0892bd3633605c92992c870acb17ec80edaa6750313d1ea8f7bfcaa54fd4"
+  },
+  {
+    "file": "step6000-pace/recovery-20261020T115656Z.json",
+    "bytes": 447,
+    "sha256": "d8a29aa9fb22f9d0951b14129413b5f465bec86709c83b08c2c7114bbb838659"
+  },
+  {
+    "file": "step6000-pace/report.json",
+    "bytes": 696921,
+    "sha256": "47e0577061c55ae3751ea74048350f97196fcab6932a8413e2e9f3a568658c03"
+  },
+  {
+    "file": "step6000-pace/request.json",
+    "bytes": 1752,
+    "sha256": "8c75c2ce492fcdb3d351d94ae4e904805d2d7f5eb20bb2753228b1c67f7e6b6f"
+  },
+  {
+    "file": "step6000-pace/scores.csv",
+    "bytes": 6210,
+    "sha256": "1dd0677c0b5d81a4cf8786e08045936ff7d32a5cd96a2094c2638cb71c91e655"
+  },
+  {
+    "file": "step6000-pace/server-runtime.json",
+    "bytes": 6234,
+    "sha256": "ecf1d156bf7e296e628aaf74d1dca5713b71499f0538d82b0531a528b6904119"
+  },
+  {
+    "file": "step6000-pace/summary.json",
+    "bytes": 1923,
+    "sha256": "0fe4ae961320385577c2e98ff03ff72885407c959f2d9ccc1c7bb9d128f92139"
+  },
+  {
+    "file": "step6000-pace/timing.json",
+    "bytes": 201,
+    "sha256": "9287f2d765a9eaee0da27fc048bc75465183d30e0d30c4c6ced545def7300b72"
+  },
+  {
+    "file": "step7000-official/by-group.csv",
+    "bytes": 6200,
+    "sha256": "5f53949afe6bca73389e4683a4ebc7b745da05fcf0b9f601a51b46ca51bb950f"
+  },
+  {
+    "file": "step7000-official/by-task.csv",
+    "bytes": 2152,
+    "sha256": "5e745196c481ca185186befc415d01b3185431e3266b0a3a319ff63ff8442e78"
+  },
+  {
+    "file": "step7000-official/checkpoint.json",
+    "bytes": 6404,
+    "sha256": "4ad54cbdb02c5137f376cb1a25030ef9b85c31db1046f52076f5c9de5f4e3309"
+  },
+  {
+    "file": "step7000-official/episodes.csv",
+    "bytes": 113963,
+    "sha256": "389079c8b7687017319b66729f504c416860fa9bfd54929429f4bedda5651d43"
+  },
+  {
+    "file": "step7000-official/job.json",
+    "bytes": 2675,
+    "sha256": "72d9eeb14f2a1d8caa00f1eee22711618049b88bda0c77498b378d21199758e7"
+  },
+  {
+    "file": "step7000-official/official-defaults-manifest.json",
+    "bytes": 1125,
+    "sha256": "c426b9a6f1498a863a731a8a4927542c0eb8a215ba6faaab34b0f5c761f86dbe"
+  },
+  {
+    "file": "step7000-official/report.json",
+    "bytes": 501463,
+    "sha256": "19f6b7c841f9648305a3869aabf30334f926cf2595300d26dff0be4914a5932c"
+  },
+  {
+    "file": "step7000-official/request.json",
+    "bytes": 2058,
+    "sha256": "f2274fe1083703f96e338f43c354d31fc2b229fb38dae601b25fd19d655e94c6"
+  },
+  {
+    "file": "step7000-official/scores.csv",
+    "bytes": 6203,
+    "sha256": "d96be40f25e19527e656265163a5279ea1ce0db10f0e8813ce697d6ed0d4e610"
+  },
+  {
+    "file": "step7000-official/server-runtime.json",
+    "bytes": 1148,
+    "sha256": "14e357b0e337687edb41799caa976d282d6a4f0c12c271140053176a257b892d"
+  },
+  {
+    "file": "step7000-official/summary.json",
+    "bytes": 1824,
+    "sha256": "d74f8feb596f8719161e0dcc3ac0e5ca9468e30feee9bfe5f5f3ceea596b0030"
+  },
+  {
+    "file": "step7000-official/timing.json",
+    "bytes": 200,
+    "sha256": "dc05ff972e4ef7a1ac6acef4d59ee7b41fb411ae44ca8c195b471eae0240ba69"
+  },
+  {
+    "file": "step8000-pace/by-group.csv",
+    "bytes": 6209,
+    "sha256": "8ae5d5db31514d907e887700086baa4fd5108157bdbf2a2a6575e214fbbcd0f1"
+  },
+  {
+    "file": "step8000-pace/by-task.csv",
+    "bytes": 2152,
+    "sha256": "e3a8c3cdab29228cf3c2383352779473d5400b327110c8e91394051dcdc24ae3"
+  },
+  {
+    "file": "step8000-pace/checkpoint.json",
+    "bytes": 6412,
+    "sha256": "b366fb068c419fb03ec26a73a66f5301141826d93144eeec29bc7b00f93032e8"
+  },
+  {
+    "file": "step8000-pace/episodes.csv",
+    "bytes": 123444,
+    "sha256": "7f2fbda0a51ec79f4ca8f633104bf3580ec90733881dc5e722fd4733e5aba1de"
+  },
+  {
+    "file": "step8000-pace/job.json",
+    "bytes": 2159,
+    "sha256": "a3648fe9a602d37c8371451a9b04f2c1e018cf6e186e59df812b949636683647"
+  },
+  {
+    "file": "step8000-pace/launch.json",
+    "bytes": 114,
+    "sha256": "dc0b616b32454bd3b99a21c5e0860d9cdda952540a22b95ffdb576f477242425"
+  },
+  {
+    "file": "step8000-pace/official-defaults-manifest.json",
+    "bytes": 1125,
+    "sha256": "a4b2fdbf5651ca4bac36c5ad0eb1cfcfd38e409ff17550eb6c28260d3efe4b4b"
+  },
+  {
+    "file": "step8000-pace/report.json",
+    "bytes": 698478,
+    "sha256": "5ff11c4042daa620888a61441bea1e9ae130594232ce7aa4727c019bcb69f060"
+  },
+  {
+    "file": "step8000-pace/request.json",
+    "bytes": 1752,
+    "sha256": "ea949dd5ce949f8422c1cc88443d63b6ead259dfb63fe59bbb9a2057c5abd139"
+  },
+  {
+    "file": "step8000-pace/scores.csv",
+    "bytes": 6212,
+    "sha256": "84792c234b402ebc03ede4b4dec2c17c68e12d888d84d4de1f67a20e2ae5fa0f"
+  },
+  {
+    "file": "step8000-pace/server-runtime.json",
+    "bytes": 6234,
+    "sha256": "5283c174960cdc9d358d7b7598f9ac597742ffb157ffa38b34df7f5a798e9e0e"
+  },
+  {
+    "file": "step8000-pace/summary.json",
+    "bytes": 1916,
+    "sha256": "b2952ebaeefa41e7c887e65d26c4a2b63485d6b2d1e4a1d3d51aaf345cfd5b3d"
+  },
+  {
+    "file": "step8000-pace/timing.json",
+    "bytes": 200,
+    "sha256": "f81bce51b7fa9c6ed4cf26b663f85126e02cfc78055a7612115f6c81a2a9dd81"
+  },
+  {
+    "file": "summary.json",
+    "bytes": 8403,
+    "sha256": "ff558a248f62b82c317b11ea86afc427d1c3c388c8ecacabe48a44361ad452fd"
+  },
+  {
+    "file": "verification.json",
+    "bytes": 2317,
+    "sha256": "61d3e97897df24b7e8a152cfec84906cf1c8180848effa597d95276fcedc2af9"
+  }
+]

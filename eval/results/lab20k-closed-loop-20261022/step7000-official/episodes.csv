@@ -1,0 +1,582 @@
+task,setting,seed,status,success,actions,action_limit,chunks,mean_inference_ms,mean_execution_horizon,min_execution_horizon,max_execution_horizon,horizon_selector_fallbacks,autohorizon_fallbacks,seconds,expert_attempts,execution_segment,instruction
+adjust_bottle,demo_clean,100010,policy_completed,True,115,400,3,13010.624589398503,,,,,,79.48836015164852,0,original,Utilize the right arm to lift the green bottle with indented base while keeping it head-up.
+adjust_bottle,demo_clean,100011,policy_completed,True,119,400,3,513.8879294196764,,,,,,44.263019828125834,0,original,Pick the plastic drink bottle upright from the table
+adjust_bottle,demo_clean,100012,policy_completed,True,112,400,3,488.3067384362221,,,,,,40.99496595747769,0,original,Use the left arm to pick up the bottle with narrow top in the correct orientation
+adjust_bottle,demo_clean,100013,policy_completed,True,116,400,3,562.0726384222507,,,,,,41.36286548897624,0,original,Pick the brown bottle with red label up with the right arm ensuring it stays head-up.
+adjust_bottle,demo_clean,100014,setup_error,False,,,,,,,,,,22.528848374262452,0,original,
+adjust_bottle,demo_clean,100015,policy_completed,True,127,400,3,585.0751046091318,,,,,,42.67234103195369,0,original,Raise the dark drink bottle with logo in a head-up position
+adjust_bottle,demo_randomized,100010,policy_completed,True,115,400,3,561.8082458774248,,,,,,45.70662384852767,0,original,Pick up the green bottle from the table head-up.
+adjust_bottle,demo_randomized,100011,setup_error,False,,,,,,,,,,21.950576605275273,0,original,
+adjust_bottle,demo_randomized,100012,policy_completed,True,116,400,3,529.1854956497749,,,,,,46.25969263538718,0,original,Grab the brown bottle from the table with the right arm
+adjust_bottle,demo_randomized,100013,policy_completed,False,400,400,8,512.0196314528584,,,,,,61.00181806460023,0,original,Use the left arm to grab the green plastic bottle with ridged bottom upright
+adjust_bottle,demo_randomized,100014,setup_error,False,,,,,,,,,,21.64827078767121,0,original,
+adjust_bottle,demo_randomized,100015,policy_completed,True,113,400,3,536.382952084144,,,,,,44.10766650736332,0,original,Lift the green bottle from the table using the left arm.
+adjust_bottle,demo_randomized,100016,policy_completed,True,116,400,3,572.0949346820513,,,,,,47.74283034726977,0,original,Use the right arm to grab the brown bottle upright
+beat_block_hammer,demo_clean,100010,policy_completed,True,115,400,3,508.11595531801385,,,,,,40.40473982878029,0,original,Employ the right arm to grab the handheld medium claw hammer and hit.
+beat_block_hammer,demo_clean,100011,policy_completed,True,115,400,3,574.9869955082735,,,,,,38.94461982510984,0,original,Take the grippy handle hammer and hammer the block
+beat_block_hammer,demo_clean,100012,policy_completed,True,113,400,3,535.4797188192606,,,,,,39.19802307151258,0,original,Lift the medium-sized metal hammer and hit the block.
+beat_block_hammer,demo_clean,100013,policy_completed,True,112,400,3,495.6812572975953,,,,,,39.76429172605276,0,original,Lift the handheld medium claw hammer using the right arm to hit the block.
+beat_block_hammer,demo_clean,100014,policy_completed,True,112,400,3,518.882613008221,,,,,,41.59490856714547,0,original,Beat the block after grabbing the black and yellow hammer grip
+beat_block_hammer,demo_randomized,100010,policy_completed,False,400,400,8,533.7873112875968,,,,,,69.19850183650851,0,original,Grab the hammer with black handle and beat the block.
+beat_block_hammer,demo_randomized,100011,policy_completed,False,400,400,8,527.7034027967602,,,,,,64.48728485964239,0,original,Use the left arm to pick up the silver hammer head and claw.
+beat_block_hammer,demo_randomized,100012,policy_completed,False,400,400,8,540.3332146815956,,,,,,63.200397700071335,0,original,Grab the hammer with black handle and beat the block
+beat_block_hammer,demo_randomized,100013,policy_completed,False,400,400,8,494.78859873488545,,,,,,61.219950726255774,0,original,Use the left arm to grab the hammer with claw and smooth head then beat block
+beat_block_hammer,demo_randomized,100014,policy_completed,False,400,400,8,510.8567134011537,,,,,,63.83426709845662,0,original,Grab the silver hammer head and claw and hit the block
+blocks_ranking_rgb,demo_clean,100010,policy_completed,True,467,1200,10,459.56045649945736,,,,,,63.007919795811176,0,original,"Start with red block, followed by green block and blue block, placing them in order left to right."
+blocks_ranking_rgb,demo_clean,100011,policy_completed,True,450,1200,9,515.3724743674198,,,,,,62.12557006627321,0,original,"With the right arm, the left arm, and the right arm, place red block, green block, and blue block sequentially from left to right as red, green, blue."
+blocks_ranking_rgb,demo_clean,100012,policy_completed,False,1200,1200,24,499.5326877105981,,,,,,112.41639769636095,0,original,"Using the right arm, the right arm, and the right arm, arrange red block, green block, and blue block sequentially from left to right in a single row."
+blocks_ranking_rgb,demo_clean,100013,policy_completed,True,416,1200,9,509.32470584909123,,,,,,58.39063855819404,0,original,"Use the right arm to grab red block and position it on the left, then the left arm for green block, and the left arm for blue block."
+blocks_ranking_rgb,demo_clean,100014,policy_completed,True,437,1200,9,496.79039356609184,,,,,,61.480104411020875,0,original,"Grab and place red block first, followed by green block, and finish with blue block in a row."
+blocks_ranking_rgb,demo_randomized,100010,setup_error,False,,,,,,,,,,23.59210318699479,0,original,
+blocks_ranking_rgb,demo_randomized,100011,policy_completed,False,1200,1200,24,530.6621073589971,,,,,,115.68025627546012,0,original,"Place red block, green block, and blue block sequentially in a row, starting with red block."
+blocks_ranking_rgb,demo_randomized,100012,policy_completed,False,1200,1200,24,497.68124241381884,,,,,,110.60073622502387,0,original,"Set red block, green block, and blue block in a row from left to right in the order red, green, blue."
+blocks_ranking_rgb,demo_randomized,100013,policy_completed,True,565,1200,12,493.8650233671069,,,,,,71.56587458774447,0,original,"Arrange red block, green block, and blue block side by side, starting with red block on the left."
+blocks_ranking_rgb,demo_randomized,100014,policy_completed,True,1015,1200,21,504.08646020860897,,,,,,106.48289673030376,0,original,"Set red block on the left, then green block in the center, and finally blue block on the right."
+blocks_ranking_rgb,demo_randomized,100015,policy_completed,True,857,1200,18,522.5314170949989,,,,,,90.09244560822845,0,original,"Pick up red block, set it on the left. Then grab green block, position it next to red block. Finally, place blue block to the right of green block."
+blocks_ranking_size,demo_clean,100010,policy_completed,False,1200,1200,24,526.2500396153579,,,,,,113.146789168939,0,original,"Use the right arm, the left arm, and the right arm to center large block, medium block, and small block in order."
+blocks_ranking_size,demo_clean,100011,policy_completed,False,1200,1200,24,494.9495044226448,,,,,,107.68440824002028,0,original,"Grab large block, medium block, small block, and arrange them in size order at the center."
+blocks_ranking_size,demo_clean,100012,policy_completed,False,1200,1200,24,501.277885089318,,,,,,108.80309696681798,0,original,"Grab large block, medium block, and small block, set them centrally, ordered by size."
+blocks_ranking_size,demo_clean,100013,policy_completed,False,1200,1200,24,511.2180049375941,,,,,,115.36044279299676,0,original,"Pick large block first, medium block next, and small block last, and arrange them."
+blocks_ranking_size,demo_clean,100014,policy_completed,False,1200,1200,24,512.5564955330143,,,,,,113.96709381043911,0,original,"Arrange large block, medium block, small block in size order, largest on the left."
+blocks_ranking_size,demo_randomized,100010,policy_completed,False,1200,1200,24,489.93648736116785,,,,,,113.96887698583305,0,original,"Place large block, medium block, and small block at the table center."
+blocks_ranking_size,demo_randomized,100011,policy_completed,False,1200,1200,24,536.6262398504963,,,,,,111.00197467580438,0,original,"Take large block, medium block, and small block to the table center."
+blocks_ranking_size,demo_randomized,100012,policy_completed,False,1200,1200,24,524.3801716715097,,,,,,110.08890863507986,0,original,"Move large block, medium block, and small block to the table center."
+blocks_ranking_size,demo_randomized,100013,policy_completed,False,1200,1200,24,518.6268621279547,,,,,,116.97324971482158,0,original,"Move large block, medium block, and small block to the center, ordering largest to smallest."
+blocks_ranking_size,demo_randomized,100014,policy_completed,False,1200,1200,24,515.5973321913431,,,,,,118.63757145218551,0,original,"Place large block, medium block, and small block at the table center, largest to smallest."
+click_alarmclock,demo_clean,100010,policy_completed,True,64,400,2,508.4289079532027,,,,,,37.225381419062614,0,original,Press the center top button on the lightweight plastic alarm-clock with the right arm
+click_alarmclock,demo_clean,100011,policy_completed,True,69,400,2,513.6705590412021,,,,,,36.37067948281765,0,original,Tap the clock with black hands's top button with the right arm
+click_alarmclock,demo_clean,100012,policy_completed,True,63,400,2,513.5337756946683,,,,,,36.53918889909983,0,original,Direct the right arm to click the button found on the rectangular alarm-clock.
+click_alarmclock,demo_clean,100013,policy_completed,True,66,400,2,519.1647633910179,,,,,,35.39283023029566,0,original,Locate and press the top button on the lightweight plastic alarm-clock
+click_alarmclock,demo_clean,100014,policy_completed,True,61,400,2,511.31047029048204,,,,,,35.46655918285251,0,original,Use the right arm to press the alarm-clock with digital display's top button
+click_alarmclock,demo_randomized,100010,policy_completed,True,49,400,1,594.8455259203911,,,,,,43.009727543219924,0,original,Click the center top button of the blue alarm clock
+click_alarmclock,demo_randomized,100011,policy_completed,False,400,400,8,521.0330511908978,,,,,,58.93845365010202,0,original,Press the top button on the alarm-clock for bedside table
+click_alarmclock,demo_randomized,100012,policy_completed,False,400,400,8,508.40487028472126,,,,,,75.02108436450362,0,original,Click the top button of the blue alarm clock
+click_alarmclock,demo_randomized,100013,policy_completed,False,400,400,8,533.4736856166273,,,,,,70.47431517578661,0,original,Tap the center top button of the alarm clock with smooth finish
+click_alarmclock,demo_randomized,100014,policy_completed,False,400,400,8,497.41342361085117,,,,,,66.37907618843019,0,original,Click the top button of the alarm-clock for bedside table
+click_bell,demo_clean,100010,policy_completed,True,52,400,2,498.3229637145996,,,,,,34.23416662402451,0,original,Click the bell shaped like half-circle dome's <top center> using the right arm
+click_bell,demo_clean,100011,policy_completed,True,61,400,2,500.19331369549036,,,,,,34.65332330390811,0,original,Tap the top center of the plastic and metal bell.
+click_bell,demo_clean,100012,policy_completed,True,59,400,2,491.11059308052063,,,,,,38.183488747105,0,original,Ask the right arm to interact with the bell with black flat base's top.
+click_bell,demo_clean,100013,policy_completed,True,55,400,2,570.1374309137464,,,,,,38.55276361852884,0,original,Pinpoint the bell shaped like half-circle dome and click its top center.
+click_bell,demo_clean,100014,policy_completed,True,62,400,2,485.2456711232662,,,,,,37.0975292455405,0,original,Click the top center of the metal bell with plastic parts on table.
+click_bell,demo_randomized,100010,policy_completed,True,62,400,2,518.456457182765,,,,,,39.72319842502475,0,original,Use the right arm to press the palm-sized bell's top center.
+click_bell,demo_randomized,100011,policy_completed,False,400,400,8,529.0744241792709,,,,,,62.0827406141907,0,original,Click the top center of the bell with raised round top.
+click_bell,demo_randomized,100012,policy_completed,True,57,400,2,572.0432586967945,,,,,,42.311633517965674,0,original,Click the palm-sized bell's top center on the table.
+click_bell,demo_randomized,100013,policy_completed,True,59,400,2,491.75011459738016,,,,,,38.19530179537833,0,original,Use the left arm to press the lightweight bell with smooth surface's top center.
+click_bell,demo_randomized,100014,policy_completed,True,48,400,1,517.7128445357084,,,,,,41.325575549155474,0,original,Find the bell with raised round top and click its top center.
+dump_bin_bigbin,demo_clean,100010,policy_completed,True,290,600,6,511.9002377614379,,,,,,60.262667179107666,0,original,Use the arm to move the desk-sized white tabletrashbin and pour.
+dump_bin_bigbin,demo_clean,100011,policy_completed,True,292,600,6,500.5864646906654,,,,,,59.57977908104658,0,original,Grab the small light gray waste bin with arm and pour contents
+dump_bin_bigbin,demo_clean,100012,policy_completed,True,291,600,6,522.0199789231023,,,,,,57.09723556227982,0,original,Lift the bucket-shaped gray trashbin and pour its contents into bin.
+dump_bin_bigbin,demo_clean,100013,setup_error,False,,,,,,,,,,22.875188829377294,0,original,
+dump_bin_bigbin,demo_clean,100014,setup_error,False,,,,,,,,,,24.115510117262602,0,original,
+dump_bin_bigbin,demo_clean,100015,policy_completed,True,273,600,6,500.901294251283,,,,,,58.49524017237127,0,original,Take the light gray waste container and empty balls into the bin.
+dump_bin_bigbin,demo_clean,100016,policy_completed,True,112,600,3,551.0022689898809,,,,,,44.98323701880872,0,original,Lift the cylindrical small white trashbin and pour balls into the bin.
+dump_bin_bigbin,demo_randomized,100010,policy_completed,False,600,600,12,500.71189273148775,,,,,,75.38122651353478,0,original,Pick up the compact tabletop trashbin and pour it.
+dump_bin_bigbin,demo_randomized,100011,setup_error,False,,,,,,,,,,24.098480828106403,0,original,
+dump_bin_bigbin,demo_randomized,100012,setup_error,False,,,,,,,,,,25.12668151408434,0,original,
+dump_bin_bigbin,demo_randomized,100013,policy_completed,False,600,600,12,511.394954752177,,,,,,72.86792503669858,0,original,Pour the little tabletrashbin with smooth texture into the big bin.
+dump_bin_bigbin,demo_randomized,100014,setup_error,False,,,,,,,,,,22.565352091565728,0,original,
+dump_bin_bigbin,demo_randomized,100015,setup_error,False,,,,,,,,,,22.429767509922385,0,original,
+dump_bin_bigbin,demo_randomized,100016,policy_completed,True,131,600,3,534.6146877855062,,,,,,47.36656895466149,0,original,Pour the rectangular plastic bin into the big bin.
+dump_bin_bigbin,demo_randomized,100017,policy_completed,False,600,600,12,503.79403168335557,,,,,,75.58246007189155,0,original,"Pick up the rectangular plastic bin, pour balls into the bin."
+dump_bin_bigbin,demo_randomized,100018,setup_error,False,,,,,,,,,,23.315010307356715,0,original,
+dump_bin_bigbin,demo_randomized,100019,policy_completed,True,118,600,3,482.6277910421292,,,,,,48.794539492577314,0,original,Lift the desktop tabletrashbin for small trash and empty it.
+grab_roller,demo_clean,100010,policy_completed,True,89,400,2,526.3319471850991,,,,,,39.51183809712529,0,original,Take both arms to grasp the smooth cylindrical roller.
+grab_roller,demo_clean,100011,policy_completed,True,89,400,2,471.3986534625292,,,,,,40.02506735920906,0,original,Lift the palm-length roller off the table with both arms
+grab_roller,demo_clean,100012,policy_completed,True,83,400,2,526.5086675062776,,,,,,39.58749422803521,0,original,Pick up the medium-sized roller from the table directly.
+grab_roller,demo_clean,100013,policy_completed,True,86,400,2,502.4951184168458,,,,,,38.96326074935496,0,original,Firmly grip the smooth cylindrical roller on the table now.
+grab_roller,demo_clean,100014,policy_completed,True,82,400,2,484.5637287944555,,,,,,39.975118255242705,0,original,Take hold of the roller with smooth and shiny texture.
+grab_roller,demo_randomized,100010,setup_error,False,,,,,,,,,,23.09873258508742,0,original,
+grab_roller,demo_randomized,100011,policy_completed,False,400,400,8,501.59230502322316,,,,,,64.9060141518712,0,original,Use both arms to grab the roller with tapered ends.
+grab_roller,demo_randomized,100012,policy_completed,False,400,400,8,531.4155393280089,,,,,,62.50519414432347,0,original,Grab the wooden roller on the table using arms
+grab_roller,demo_randomized,100013,policy_completed,False,400,400,8,729.4799939263612,,,,,,64.59285460412502,0,original,Use arms to grab the light brown cylindrical roller.
+grab_roller,demo_randomized,100014,setup_error,False,,,,,,,,,,23.70596508309245,0,original,
+grab_roller,demo_randomized,100015,policy_completed,True,84,400,2,587.1241167187691,,,,,,43.477430084720254,0,original,Hold the smooth wooden roller with both arms.
+grab_roller,demo_randomized,100016,policy_completed,False,400,400,8,519.7170895989984,,,,,,61.02072539180517,0,original,Use arms to grab the wooden roller.
+handover_block,demo_clean,100010,policy_completed,False,800,800,16,522.5620395503938,,,,,,91.32941516302526,0,original,Hand over the red block to the right arm.
+handover_block,demo_clean,100011,policy_completed,False,800,800,16,506.12275896128267,,,,,,93.71981685981154,0,original,"Grasp the block in your left arm, pass it into the right, and place it onto the blue pad."
+handover_block,demo_clean,100012,policy_completed,True,255,800,6,507.1526865164439,,,,,,53.609290570020676,0,original,"Hold the red block, transfer to the right arm, then set it down."
+handover_block,demo_clean,100013,policy_completed,False,800,800,16,510.86899312213063,,,,,,85.32427302375436,0,original,Place the red block onto the blue pad using the right arm.
+handover_block,demo_clean,100014,policy_completed,True,281,800,6,534.7356665879488,,,,,,52.097697768360376,0,original,Move the red block using the left arm.
+handover_block,demo_randomized,100010,policy_completed,False,800,800,16,511.4401082973927,,,,,,98.30200628004968,0,original,Grab the red block with the left arm.
+handover_block,demo_randomized,100011,policy_completed,False,800,800,16,529.0376603370532,,,,,,92.12899586372077,0,original,Use the left arm to pick up the red block.
+handover_block,demo_randomized,100012,setup_error,False,,,,,,,,,,24.382007874548435,0,original,
+handover_block,demo_randomized,100013,policy_completed,False,800,800,16,522.2283194307238,,,,,,93.05314253084362,0,original,Pick up the red block and switch arms.
+handover_block,demo_randomized,100014,policy_completed,False,800,800,16,503.7879463052377,,,,,,100.88250168412924,0,original,Grab the red block with the left arm.
+handover_block,demo_randomized,100015,policy_completed,False,800,800,16,516.9990507420152,,,,,,92.49273726716638,0,original,"Grab the red block with the left arm, switch to the right arm, and set it on the blue pad."
+handover_mic,demo_clean,100010,policy_completed,True,206,600,5,485.15773490071297,,,,,,51.25193805247545,0,original,Lift the plastic teal microphone with slider and pass it across.
+handover_mic,demo_clean,100011,policy_completed,True,219,600,5,535.1029135286808,,,,,,50.1360008623451,0,original,Pick the microphone with slider switch from the surface and switch hands.
+handover_mic,demo_clean,100012,policy_completed,True,206,600,5,549.5393142104149,,,,,,57.70363171957433,0,original,Hold the microphone for recording sound securely and shift it to another arm.
+handover_mic,demo_clean,100013,policy_completed,True,211,600,5,513.0579743534327,,,,,,54.32621429860592,0,original,Hold the gray stem microphone with foam top and pass it to the other hand.
+handover_mic,demo_clean,100014,policy_completed,True,211,600,5,519.750053435564,,,,,,52.130144195631146,0,original,Hold the microphone with black tip and white body with one hand and transfer it
+handover_mic,demo_randomized,100010,setup_error,False,,,,,,,,,,32.58283175434917,0,original,
+handover_mic,demo_randomized,100011,policy_completed,False,600,600,12,4300.441131694242,,,,,,146.6449693320319,0,original,Use one arm to hold the compact microphone with two parts and hand it over.
+handover_mic,demo_randomized,100012,policy_completed,False,600,600,12,538.4212062538912,,,,,,121.67975978553295,0,original,Pick up the handheld microphone and transfer it to the other hand.
+handover_mic,demo_randomized,100013,policy_completed,True,249,600,5,523.3899135142565,,,,,,78.64546340797096,0,original,Pick up the long teal microphone with white grooves and hand it over
+handover_mic,demo_randomized,100014,policy_completed,False,600,600,12,535.5370511921743,,,,,,108.88031540904194,0,original,Pick up the switchable microphone with teal body and hand it over
+handover_mic,demo_randomized,100015,policy_completed,False,600,600,12,531.8475495247791,,,,,,107.90232430677861,0,original,Grab the microphone used for audio input and pass it to the other arm.
+hanging_mug,demo_clean,100010,policy_completed,True,298,900,6,521.7986768111587,,,,,,74.33923738170415,0,original,"Grab the ceramic mug with printed logo, rotate it, place it in the middle, and hang it on the smooth rack."
+hanging_mug,demo_clean,100011,policy_completed,False,900,900,18,541.1886383468906,,,,,,122.32517690211535,0,original,"Grab the medium-sized mug from the table, rotate it, place it, and hang it onto the rack with two rods sticking out."
+hanging_mug,demo_clean,100012,policy_completed,True,317,900,7,548.220929157521,,,,,,75.49727265257388,0,original,"Pick the mug with curved black handle using your left arm, turn it, set it on the table, and hang it on the dark gray rack with the right arm."
+hanging_mug,demo_clean,100013,policy_completed,False,900,900,18,544.3291824000577,,,,,,109.17382468469441,0,original,"Lift the ceramic mug with printed logo, turn it, place it back, and move it onto the metallic angular rack with rod pair with the right arm."
+hanging_mug,demo_clean,100014,policy_completed,False,900,900,18,520.6046333639986,,,,,,117.91219316516072,0,original,"Take the smooth white mug with curved handle, rotate it, set it on the table's center, then hang it onto the smooth dark gray rack."
+hanging_mug,demo_randomized,100010,policy_completed,False,900,900,18,461.73761883336635,,,,,,125.99589702673256,0,original,"Grab the beige mug from the table, rotate it, and set it in the center. Then hang the beige mug on the rack with straight and slanted rods."
+hanging_mug,demo_randomized,100011,setup_error,False,,,,,,,,,,31.290001547895372,0,original,
+hanging_mug,demo_randomized,100012,policy_completed,False,900,900,18,541.7412527215978,,,,,,131.3647187706083,0,original,"Pick the beige coffee mug with the left arm, rotate, place it, then hang it on the dark gray rack with flat back."
+hanging_mug,demo_randomized,100013,policy_completed,False,900,900,18,526.9008647236559,,,,,,130.38128585368395,0,original,"Grab the beige mug on the table, rotate it, set it down in the middle, then hang it onto the medium-sized rack."
+hanging_mug,demo_randomized,100014,policy_completed,False,900,900,18,557.7957863505516,,,,,,129.669373777695,0,original,"Grab the dark mug with a curved handle, turn it, set it on the table, then hang it on the rack with straight and slanted rods."
+hanging_mug,demo_randomized,100015,policy_completed,False,900,900,18,559.2384288708369,,,,,,115.52570927515626,0,original,"Grab the cylindrical mug with Starbucks logo on the table, rotate it, set it down in the middle, then hang it onto the rack with straight and slanted rods."
+lift_pot,demo_clean,100010,policy_completed,False,400,400,8,567.6359755452722,,,,,,72.06674850638956,0,original,"Place hands on the metal kitchenpot with brown handles, then lift."
+lift_pot,demo_clean,100011,policy_completed,True,105,400,3,511.59310682366294,,,,,,53.74259562976658,0,original,Lift the smooth gray kitchenpot up together
+lift_pot,demo_clean,100012,policy_completed,True,103,400,3,518.9340868964791,,,,,,50.053059969097376,0,original,Raise the medium-sized kitchenpot upward with both hands
+lift_pot,demo_clean,100013,policy_completed,False,400,400,8,486.20010691229254,,,,,,68.53937011864036,0,original,Use both arms to raise the metal kitchenpot with brown handles.
+lift_pot,demo_clean,100014,policy_completed,True,131,400,3,528.3132698386908,,,,,,50.19044889137149,0,original,Hold the kitchenpot for boiling and cooking firmly with arms
+lift_pot,demo_randomized,100010,setup_error,False,,,,,,,,,,26.08762343134731,0,original,
+lift_pot,demo_randomized,100011,policy_completed,False,400,400,8,518.8388843089342,,,,,,71.70083864592016,0,original,Lift the round pot with blue top upward using arms.
+lift_pot,demo_randomized,100012,policy_completed,False,400,400,8,496.7475343728438,,,,,,72.02252898272127,0,original,Lift the medium stove pot with both arms
+lift_pot,demo_randomized,100013,setup_error,False,,,,,,,,,,25.526156465522945,0,original,
+lift_pot,demo_randomized,100014,policy_completed,False,400,400,8,525.4097256110981,,,,,,77.44094912614673,0,original,Use both arms for the round pot with blue top
+lift_pot,demo_randomized,100015,setup_error,False,,,,,,,,,,25.968034495599568,0,original,
+lift_pot,demo_randomized,100016,policy_completed,False,400,400,8,520.0829086825252,,,,,,83.4968805136159,0,original,Lift the medium stove pot using both arms
+lift_pot,demo_randomized,100017,policy_completed,False,400,400,8,540.5089701525867,,,,,,81.56154338270426,0,original,Hold the dark gray cooking kitchenpot firmly and lift it
+move_can_pot,demo_clean,100010,policy_completed,False,400,400,8,486.08228645753115,,,,,,66.2964733382687,0,original,Lift the hand-held sauce container using the left arm and drop it beside the blue kitchenpot with smooth matte sides
+move_can_pot,demo_clean,100011,policy_completed,False,400,400,8,481.75808449741453,,,,,,71.35535795986652,0,original,Pick up the brown cap sauce storage can with the left arm and set by the medium silver pot for cooking
+move_can_pot,demo_clean,100012,policy_completed,False,400,400,8,481.7199045792222,,,,,,67.18432776723057,0,original,Use the left arm to lift the brown top white sauce can and place it near the medium-sized kitchenpot
+move_can_pot,demo_clean,100013,policy_completed,False,400,400,8,494.6219506673515,,,,,,68.84928543958813,0,original,Pick the medium sauce can with white lid up with the left arm then place near the pot with lid and sturdy handles
+move_can_pot,demo_clean,100014,policy_completed,True,164,400,4,515.0796638336033,,,,,,52.11363426409662,0,original,Lift the white sauce can with label and set it next to the black kitchenpot with silver and black handles
+move_can_pot,demo_randomized,100010,policy_completed,False,400,400,8,506.70876901131123,,,,,,81.18271211814135,0,original,Pick up the smooth cylindrical sauce can and move it near the blue kitchenpot
+move_can_pot,demo_randomized,100011,setup_error,False,,,,,,,,,,27.171084705740213,0,original,
+move_can_pot,demo_randomized,100012,policy_completed,False,400,400,8,480.98449769895524,,,,,,73.60957885161042,0,original,Pick up the sauce can with red lid and set it beside the medium black kitchenpot with lid
+move_can_pot,demo_randomized,100013,setup_error,False,,,,,,,,,,24.76387836970389,0,original,
+move_can_pot,demo_randomized,100014,setup_error,False,,,,,,,,,,25.871057313866913,0,original,
+move_can_pot,demo_randomized,100015,policy_completed,False,400,400,8,503.775030025281,,,,,,68.774124099873,0,original,Grab the sauce can with round ridged lid and place it beside the gray kitchenpot with rounded edges
+move_can_pot,demo_randomized,100016,policy_completed,False,400,400,8,495.55545405019075,,,,,,77.2633552197367,0,original,Use the right arm to pick up the metal body sauce can and move it beside the kitchenpot with smooth matte body
+move_can_pot,demo_randomized,100017,policy_completed,False,400,400,8,503.32174578215927,,,,,,70.04581829998642,0,original,Use the right arm to grab the sauce can with red lid and place it by the medium kitchenpot
+move_pillbottle_pad,demo_clean,100010,policy_completed,True,149,400,3,506.98541042705375,,,,,,49.87661080248654,0,original,Use the right arm to move the medium orange bottle with flat bottom to the pad
+move_pillbottle_pad,demo_clean,100011,policy_completed,True,157,400,4,517.7443004213274,,,,,,51.49316567461938,0,original,Move the bottle with teal top and bottom onto the pad using the right arm
+move_pillbottle_pad,demo_clean,100012,policy_completed,False,400,400,8,536.751517560333,,,,,,62.02618473023176,0,original,Move the white and orange storage bottle to the pad and let it rest there
+move_pillbottle_pad,demo_clean,100013,policy_completed,True,141,400,3,471.84022422879934,,,,,,45.90687645971775,0,original,Lift the medium orange bottle with flat bottom with the right arm and drop on pad
+move_pillbottle_pad,demo_clean,100014,policy_completed,False,400,400,8,476.2147245928645,,,,,,68.06339329760522,0,original,Grab the compact bottle with teal and white design with the right arm and move it to the pad.
+move_pillbottle_pad,demo_randomized,100010,policy_completed,False,400,400,8,489.61747146677226,,,,,,70.94479363411665,0,original,Pick the white bottle with teal ends and set it on the pad
+move_pillbottle_pad,demo_randomized,100011,policy_completed,False,400,400,8,510.80692058894783,,,,,,70.00090492796153,0,original,Use the left arm to grab the white cylindrical bottle and place it
+move_pillbottle_pad,demo_randomized,100012,setup_error,False,,,,,,,,,,25.837246662937105,0,original,
+move_pillbottle_pad,demo_randomized,100013,policy_completed,True,129,400,3,455.007563966016,,,,,,50.607003286480904,0,original,Pick the hand-sized orange capped bottle and set it onto the pad.
+move_pillbottle_pad,demo_randomized,100014,policy_completed,False,400,400,8,442.22340476699173,,,,,,67.82100463006645,0,original,Use the left arm to pick the bottle with smooth brown texture and place it.
+move_pillbottle_pad,demo_randomized,100015,policy_completed,True,134,400,3,509.7078752393524,,,,,,59.05674893036485,0,original,Pick the orange bottle and set it on the pad
+move_playingcard_away,demo_clean,100010,policy_completed,True,110,400,3,513.2748385270437,,,,,,52.79182693827897,0,original,"With the right arm, pick up the playing cards box with gold text and slide it outward."
+move_playingcard_away,demo_clean,100011,policy_completed,True,108,400,3,553.6839176590244,,,,,,54.81031670793891,0,original,Pick up the smooth playingcards pack and move it farther outward.
+move_playingcard_away,demo_clean,100012,policy_completed,True,109,400,3,561.4627435182532,,,,,,52.701907059177756,0,original,Move the small black box with cards off the table outward.
+move_playingcard_away,demo_clean,100013,policy_completed,True,110,400,3,551.959129050374,,,,,,50.93599150329828,0,original,Pick up the playing cards box with gold text using the right arm and shift it outward.
+move_playingcard_away,demo_clean,100014,policy_completed,True,110,400,3,555.4523132741451,,,,,,44.64766087476164,0,original,Move the blue and white playingcards packaging away from its position on the table.
+move_playingcard_away,demo_randomized,100010,policy_completed,False,400,400,8,528.637163573876,,,,,,77.30616732127964,0,original,Use the right arm to grab the small box for playingcards and move it outward.
+move_playingcard_away,demo_randomized,100011,policy_completed,False,400,400,8,553.9042094023898,,,,,,82.33971837069839,0,original,Grab the black box with smooth surface and move it off the table.
+move_playingcard_away,demo_randomized,100012,policy_completed,False,400,400,8,524.7393870959058,,,,,,79.86304932739586,0,original,Pick up the hard black box for card deck and move it outward.
+move_playingcard_away,demo_randomized,100013,policy_completed,False,400,400,8,570.8847559290007,,,,,,80.09383566584438,0,original,Use the left arm to grab the rectangular red playingcards holder and relocate it.
+move_playingcard_away,demo_randomized,100014,policy_completed,False,400,400,8,557.4831018457189,,,,,,78.60273382253945,0,original,Pick up the black box with smooth surface and move it outward.
+move_stapler_pad,demo_clean,100010,policy_completed,False,400,400,8,522.4947134265676,,,,,,72.76836588978767,0,original,the right arm places the blue stapler with silver staple tray on the Red mat.
+move_stapler_pad,demo_clean,100011,policy_completed,False,400,400,8,486.6381499450654,,,,,,72.68915315717459,0,original,Lift the curved red stapler to the Green mat using the right arm
+move_stapler_pad,demo_clean,100012,policy_completed,False,400,400,8,516.0670224577188,,,,,,65.67255241237581,0,original,Grab the blue stapler with white accents with the right arm and drop it on Blue mat.
+move_stapler_pad,demo_clean,100013,policy_completed,False,400,400,8,528.889152687043,,,,,,81.50991887692362,0,original,the right arm moves the blue stapler with black handle area to the Black mat.
+move_stapler_pad,demo_clean,100014,policy_completed,True,365,400,8,534.5673625124618,,,,,,72.56636273302138,0,original,Place the blue plastic stapler with silver metal on the Gray mat using the right arm
+move_stapler_pad,demo_randomized,100010,setup_error,False,,,,,,,,,,26.169601001776755,0,original,
+move_stapler_pad,demo_randomized,100011,policy_completed,False,400,400,8,502.7594150742516,,,,,,69.70565794501454,0,original,Place the hand-size bright blue stapler on the Red colored mat.
+move_stapler_pad,demo_randomized,100012,policy_completed,False,400,400,8,510.1188402622938,,,,,,73.65447887312621,0,original,Use the left arm to move the white stapler to the Green mat
+move_stapler_pad,demo_randomized,100013,policy_completed,False,400,400,8,489.6880586165935,,,,,,69.44527669996023,0,original,Use the left arm to move the metal and plastic stapler to Yellow mat
+move_stapler_pad,demo_randomized,100014,policy_completed,True,335,400,7,478.6817197288786,,,,,,66.01414041314274,0,original,Grab the blue stapler with smooth finish and set it on Green mat
+move_stapler_pad,demo_randomized,100015,policy_completed,False,400,400,8,462.0451629161835,,,,,,68.54183637257665,0,original,Move the small hand-sized stapler to the Magenta mat
+open_laptop,demo_clean,100010,policy_completed,True,138,700,3,478.4316361571352,,,,,,51.35761876683682,0,original,Lift the black laptop with smooth matte surface lid completely.
+open_laptop,demo_clean,100011,policy_completed,True,80,700,2,463.8919522985816,,,,,,44.46866304334253,0,original,Pull open the black screen laptop
+open_laptop,demo_clean,100012,policy_completed,True,141,700,3,519.0310850739479,,,,,,51.24103138130158,0,original,Use the left arm to open the laptop with silver keyboard.
+open_laptop,demo_clean,100013,policy_completed,True,187,700,4,523.7573904450983,,,,,,54.772754901088774,0,original,Fully open the the silver laptop with foldable parts.
+open_laptop,demo_clean,100014,policy_completed,False,700,700,14,490.94331204625115,,,,,,86.12557883094996,0,original,Lift the foldable laptop with patterned keyboard's lid upwards.
+open_laptop,demo_randomized,100010,setup_error,False,,,,,,,,,,28.855307097546756,0,original,
+open_laptop,demo_randomized,100011,policy_completed,False,700,700,14,500.3751848957368,,,,,,98.99608406983316,0,original,Lift the foldable laptop's lid fully.
+open_laptop,demo_randomized,100012,policy_completed,False,700,700,14,492.14428789647565,,,,,,90.82145195454359,0,original,Lift the black laptop fitting laptop bags using the right arm
+open_laptop,demo_randomized,100013,policy_completed,True,112,700,3,510.8603884776433,,,,,,53.43376026581973,0,original,Open the black laptop slightly rounded at edges with one motion.
+open_laptop,demo_randomized,100014,policy_completed,False,700,700,14,471.6427154572947,,,,,,97.21930948272347,0,original,Pull up the smooth black plastic laptop's lid.
+open_laptop,demo_randomized,100015,policy_completed,False,700,700,14,485.7488810749991,,,,,,100.79851291235536,0,original,Lift the black laptop's lid gently.
+open_microwave,demo_clean,100010,policy_completed,True,552,1500,12,486.31234855080646,,,,,,73.2549740364775,0,original,Open the microwave with glossy dark gray finish by grasping its handle.
+open_microwave,demo_clean,100011,policy_completed,True,434,1500,9,498.43446755160886,,,,,,67.29114718921483,0,original,Activate the door to open the microwave with knobs.
+open_microwave,demo_clean,100012,policy_completed,True,359,1500,8,465.99074895493686,,,,,,55.595532518811524,0,original,Pull the handle to open the countertop microwave.
+open_microwave,demo_clean,100013,policy_completed,True,588,1500,12,483.9477949620535,,,,,,69.68648087326437,0,original,Pull the handle to open the microwave with glossy dark gray finish.
+open_microwave,demo_clean,100014,policy_completed,True,382,1500,8,487.62283322867006,,,,,,63.48814815841615,0,original,Grasp the gray and yellow microwave with rounded edges's handle and pull to open.
+open_microwave,demo_randomized,100010,policy_completed,False,1500,1500,30,461.82895690823597,,,,,,120.23252558987588,0,original,Locate the dark gray microwave and open it using the left arm.
+open_microwave,demo_randomized,100011,policy_completed,False,1500,1500,30,486.6033765487373,,,,,,121.25913407560438,0,original,Open the kitchen microwave with slanted shape by pulling its door handle.
+open_microwave,demo_randomized,100012,policy_completed,True,502,1500,11,490.2422511950135,,,,,,67.89314245991409,0,original,Use the left arm to open the dark gray microwave.
+open_microwave,demo_randomized,100013,policy_completed,False,1500,1500,30,500.5690050000946,,,,,,121.64804031234235,0,original,Grab the medium-sized rectangular microwave with textured top's handle and pull to open it.
+open_microwave,demo_randomized,100014,policy_completed,False,1500,1500,30,529.9817977783581,,,,,,132.81479546800256,0,original,Move the left arm and open the kitchen microwave with slanted shape.
+pick_diverse_bottles,demo_clean,100010,setup_error,False,,,,,,,,,,31.38304297812283,0,original,
+pick_diverse_bottles,demo_clean,100011,setup_error,False,,,,,,,,,,32.39347805082798,0,original,
+pick_diverse_bottles,demo_clean,100012,policy_completed,True,108,400,3,555.4691329598427,,,,,,55.84181317407638,0,original,"Catch the bottle with narrow top, grab the smooth orange bottle next."
+pick_diverse_bottles,demo_clean,100013,policy_completed,True,105,400,3,540.8773714055618,,,,,,54.30669477023184,0,original,"Catch the brown bottle with red label, then grab the handheld brown bottle with white lid too."
+pick_diverse_bottles,demo_clean,100014,policy_completed,True,106,400,3,558.0430512006084,,,,,,54.528901730664074,0,original,Grab the cylindrical liquid bottle with yellow top using one arm and the beverage bottle with black body using the other.
+pick_diverse_bottles,demo_clean,100015,policy_completed,False,400,400,8,512.7500890521333,,,,,,78.51183027215302,0,original,"Catch the dark brown bottle with a squared body, then catch the yellow capped drink bottle."
+pick_diverse_bottles,demo_clean,100016,policy_completed,True,105,400,3,499.0851189941168,,,,,,47.48375488072634,0,original,Pick up the yellow plastic bottle with white top and then pick up the orange bottle.
+pick_diverse_bottles,demo_randomized,100010,policy_completed,True,104,400,3,559.1744237268964,,,,,,57.8543954975903,0,original,Grab the medium plastic bottle and the cylindrical plastic bottle for carrying water at the same time.
+pick_diverse_bottles,demo_randomized,100011,setup_error,False,,,,,,,,,,31.378743482753634,0,original,
+pick_diverse_bottles,demo_randomized,100012,setup_error,False,,,,,,,,,,32.58573335129768,0,original,
+pick_diverse_bottles,demo_randomized,100013,policy_completed,False,400,400,8,537.8116712672636,,,,,,76.42902531288564,0,original,"Use each arm to lift a bottle: the medium plastic bottle, then the liquid container dark brown plastic."
+pick_diverse_bottles,demo_randomized,100014,setup_error,False,,,,,,,,,,32.862391960807145,0,original,
+pick_diverse_bottles,demo_randomized,100015,setup_error,False,,,,,,,,,,33.135673926211894,0,original,
+pick_diverse_bottles,demo_randomized,100016,setup_error,False,,,,,,,,,,31.068128149956465,0,original,
+pick_diverse_bottles,demo_randomized,100017,setup_error,False,,,,,,,,,,34.53146116808057,0,original,
+pick_diverse_bottles,demo_randomized,100018,setup_error,False,,,,,,,,,,33.485607432201505,0,original,
+pick_diverse_bottles,demo_randomized,100019,setup_error,False,,,,,,,,,,31.82593223731965,0,original,
+pick_diverse_bottles,demo_randomized,100020,policy_completed,False,400,400,8,513.7937605613843,,,,,,79.5486800186336,0,original,Use each arm to grab the bottle with curved neck design and the white capped orange plastic bottle.
+pick_diverse_bottles,demo_randomized,100021,setup_error,False,,,,,,,,,,32.73763222526759,0,original,
+pick_diverse_bottles,demo_randomized,100022,setup_error,False,,,,,,,,,,31.755889298394322,0,original,
+pick_diverse_bottles,demo_randomized,100023,setup_error,False,,,,,,,,,,32.5035156654194,0,original,
+pick_diverse_bottles,demo_randomized,100024,policy_completed,False,400,400,8,568.5579562559724,,,,,,86.97776007000357,0,original,"Grab the brown bottle with one arm, grab the bottle with curved body with the other."
+pick_diverse_bottles,demo_randomized,100025,policy_completed,True,113,400,3,496.3596149658163,,,,,,56.85570229496807,0,original,Use each arm to grab the blue-capped plastic bottle and the bottle with yellow sticker label.
+pick_dual_bottles,demo_clean,100010,policy_completed,True,105,400,3,568.448847780625,,,,,,53.53226689994335,0,original,Pick up the brown bottle with red label and the medium green bottle using separate hands.
+pick_dual_bottles,demo_clean,100011,policy_completed,True,113,400,3,528.779297756652,,,,,,50.182375584729016,0,original,"Hold the plastic drink bottle in one hand, then hold the medium-sized green bottle in the other."
+pick_dual_bottles,demo_clean,100012,policy_completed,True,114,400,3,551.1073019976417,,,,,,59.853612751699984,0,original,"Grab the narrow-necked bottle with an arm, grab the smooth green bottle next."
+pick_dual_bottles,demo_clean,100013,policy_completed,True,99,400,2,540.3000493533909,,,,,,52.538791568018496,0,original,Use each arm to grab the brown bottle with red label and the green bottle with indented base.
+pick_dual_bottles,demo_clean,100014,policy_completed,True,103,400,3,540.556002718707,,,,,,51.555152552202344,0,original,"Secure the bottle with white neck and red top in one hand, the bottle with narrow top in other."
+pick_dual_bottles,demo_randomized,100010,policy_completed,False,400,400,8,533.181774080731,,,,,,76.36021048482507,0,original,"Pick the brown bottle, then pick the green plastic bottle with ridged bottom."
+pick_dual_bottles,demo_randomized,100011,policy_completed,False,400,400,8,546.1190034402534,,,,,,80.78678442630917,0,original,"Hold the plastic soda bottle in one hand, the green bottle in the other."
+pick_dual_bottles,demo_randomized,100012,policy_completed,False,400,400,8,553.6510918755084,,,,,,86.49286958947778,0,original,Pick up the bottle with red screw cap and the green bottle with white label using both arms.
+pick_dual_bottles,demo_randomized,100013,policy_completed,False,400,400,8,539.2299314262345,,,,,,81.10990143101662,0,original,Lift the brown bottle and the green bottle using both arms.
+pick_dual_bottles,demo_randomized,100014,setup_error,False,,,,,,,,,,33.950918754562736,0,original,
+pick_dual_bottles,demo_randomized,100015,policy_completed,False,400,400,8,520.3116873744875,,,,,,75.15955247357488,0,original,Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom simultaneously.
+place_a2b_left,demo_clean,100010,policy_completed,False,400,400,8,545.2397016342729,,,,,,72.1798293273896,0,original,Position the medium light brown coffee-box for coffee to the left of the box for playingcards.
+place_a2b_left,demo_clean,100011,policy_completed,False,400,400,8,543.3288022177294,,,,,,65.53191963676363,0,original,"Using the left arm, put the block made from wood on left of the small solid gray cleaning soap"
+place_a2b_left,demo_clean,100012,policy_completed,True,139,400,3,529.1731546943387,,,,,,44.94477513153106,0,original,Grab the metal and plastic stapler using the right arm and move left of the small puzzle cube
+place_a2b_left,demo_clean,100013,policy_completed,False,400,400,8,512.3357210541144,,,,,,67.07052058260888,0,original,Place the coffee-box with creamy coffee image on the left of the light teal toycar with white roof.
+place_a2b_left,demo_clean,100014,policy_completed,True,134,400,3,570.2726192151507,,,,,,54.229636836797,0,original,Move the palm-sized black and white phone to the left of the light brown coffee-box.
+place_a2b_left,demo_randomized,100010,policy_completed,True,134,400,3,548.1854155659676,,,,,,52.2550261169672,0,original,Use the left arm to put the black stapler left of the coffee-box with orange circle.
+place_a2b_left,demo_randomized,100011,policy_completed,False,400,400,8,553.9209861308336,,,,,,76.64727521967143,0,original,Set the rounded loaf bread on the left side of the dark phone with shiny finish.
+place_a2b_left,demo_randomized,100012,policy_completed,True,142,400,3,539.8093840728203,,,,,,51.99633667059243,0,original,Grab the skincare soap bar and place left of the palm-sized black stapler
+place_a2b_left,demo_randomized,100013,policy_completed,False,400,400,8,481.9603005889803,,,,,,70.6566847441718,0,original,"Use the right arm to place the black stapler left of the red, blue, green, yellow rubikscube."
+place_a2b_left,demo_randomized,100014,policy_completed,False,400,400,8,537.9407278960571,,,,,,78.41798114962876,0,original,Pick the handheld phone with silver frame and set it left of the orange block paired with green triangular piece.
+place_a2b_right,demo_clean,100010,policy_completed,False,400,400,8,524.5843430748209,,,,,,70.95804942958057,0,original,Grab the bell shaped like half-circle dome with the right arm and place it right of the golden bread.
+place_a2b_right,demo_clean,100011,policy_completed,False,400,400,8,512.3075181618333,,,,,,66.74648397602141,0,original,"With the right arm, move the box for coffee storage to the compact red playingcards pack's right."
+place_a2b_right,demo_clean,100012,policy_completed,False,400,400,8,526.0552582331002,,,,,,64.80121108982712,0,original,Grab the building block with green triangle shape using the left arm and place it right of the slim palm-sized phone.
+place_a2b_right,demo_clean,100013,policy_completed,False,400,400,8,583.4214497590438,,,,,,68.96710300818086,0,original,Position the brown block with wooden texture to the right of the flat rectangular box labeled coffee.
+place_a2b_right,demo_clean,100014,policy_completed,False,400,400,8,501.6068908153102,,,,,,68.93147233594209,0,original,Set the palm-sized black and white phone on the light brown coffee-box's right side
+place_a2b_right,demo_randomized,100010,policy_completed,True,234,400,5,521.901386603713,,,,,,68.91124748438597,0,original,Put the black stapler to the right of the coffee-box with orange circle.
+place_a2b_right,demo_randomized,100011,policy_completed,False,400,400,8,553.1197331147268,,,,,,71.74802924506366,0,original,Place the smooth metal bell on the flat-bottomed mouse's right side.
+place_a2b_right,demo_randomized,100012,policy_completed,False,400,400,8,531.4703918993473,,,,,,69.92379152774811,0,original,Place the skincare soap bar on the right of the palm-sized black stapler.
+place_a2b_right,demo_randomized,100013,policy_completed,False,400,400,8,520.7279247697443,,,,,,77.56689294800162,0,original,Place the small tea box rightward of the small packet of playingcards using the left arm
+place_a2b_right,demo_randomized,100014,policy_completed,False,400,400,8,532.9911365406588,,,,,,80.43047679960728,0,original,Put the handheld phone with silver frame to the right of the orange block paired with green triangular piece
+place_bread_basket,demo_clean,100010,policy_completed,False,700,700,14,682.6178166749222,,,,,,116.73409434221685,0,original,"Pick up both the golden brown loaf-shaped bread and the bread loaf with uneven edges, then place them in the breadbasket made of woven wood."
+place_bread_basket,demo_clean,100011,policy_completed,True,285,700,6,549.6900316017369,,,,,,65.97866983525455,0,original,Grab two breads the golden bread and the square-shaped bread piece and place in the breadbasket with rounded edges.
+place_bread_basket,demo_clean,100012,policy_completed,True,229,700,5,544.2506544291973,,,,,,60.21367307566106,0,original,Grab both the bread with golden crust and the small loaf with curved top with the dual arm and place in the two-hand-sized breadbasket.
+place_bread_basket,demo_clean,100013,policy_completed,False,700,700,14,531.7830273083279,,,,,,97.94114907085896,0,original,Take the bread loaf with uneven edges and the soft bread then place in the breadbasket with curved base.
+place_bread_basket,demo_clean,100014,policy_completed,False,700,700,14,559.2639058429215,,,,,,95.74529235064983,0,original,"Pick the small bread and the cuboid bread, place them in the medium breadbasket."
+place_bread_basket,demo_randomized,100010,policy_completed,False,700,700,14,532.0054336584041,,,,,,93.63388315588236,0,original,Grab the oval bread and the bread loaf medium-sized and drop it into the medium light brown breadbasket.
+place_bread_basket,demo_randomized,100011,policy_completed,True,133,700,3,565.7873212670287,,,,,,57.76222810707986,0,original,Place the soft bread with golden edges into the rectangular light brown breadbasket using the right arm
+place_bread_basket,demo_randomized,100012,policy_completed,False,700,700,14,514.523702673614,,,,,,111.31951707974076,0,original,Use the left arm to pick the bread with golden crust and the bread loaf with soft surface and place in the rectangular light brown breadbasket.
+place_bread_basket,demo_randomized,100013,policy_completed,False,700,700,14,521.7911169332053,,,,,,100.00214772392064,0,original,Use the left arm to pick the bread with golden crust and place in the white basket with beige bottom.
+place_bread_basket,demo_randomized,100014,policy_completed,True,282,700,6,554.6046167922517,,,,,,73.19494986068457,0,original,Grab the bread loaf with soft surface and the soft bread with golden edges and put them in the breadbasket with ridged texture.
+place_bread_skillet,demo_clean,100010,policy_completed,True,135,500,3,522.8781634941697,,,,,,57.629295816645026,0,original,Lift the golden brown bread using the left arm and move it to the black iron skillet for cooking
+place_bread_skillet,demo_clean,100011,policy_completed,True,135,500,3,564.3048966303468,,,,,,54.674437151290476,0,original,Pick the small loaf with curved top and transfer it to the black cooking tool skillet
+place_bread_skillet,demo_clean,100012,policy_completed,False,500,500,10,485.68937219679356,,,,,,79.77672451268882,0,original,Take the soft doughy bread with the right arm and drop into the skillet with looped handle
+place_bread_skillet,demo_clean,100013,policy_completed,False,500,500,10,557.8047288581729,,,,,,71.77210712432861,0,original,Pick up the bread with golden-brown crust with the left arm and drop it in the gray cooking pan with handle
+place_bread_skillet,demo_clean,100014,policy_completed,False,500,500,10,529.4231469742954,,,,,,81.27778682578355,0,original,Pick up the soft golden baked bread and place it in the versatile skillet for stovetop cooking.
+place_bread_skillet,demo_randomized,100010,policy_completed,True,129,500,3,532.938404319187,,,,,,62.874693154357374,0,original,Take the square bread with light spots and put it in the round black skillet
+place_bread_skillet,demo_randomized,100011,policy_completed,False,500,500,10,527.5082711130381,,,,,,86.13878065347672,0,original,Use the left arm to grab the rectangular bread loaf and set it in the smooth interior skillet
+place_bread_skillet,demo_randomized,100012,setup_error,False,,,,,,,,,,33.498013011179864,0,original,
+place_bread_skillet,demo_randomized,100013,policy_completed,False,500,500,10,514.4490025006235,,,,,,81.49056101869792,0,original,Move the oval bread to the dark skillet with shiny finish using the right arm.
+place_bread_skillet,demo_randomized,100014,policy_completed,False,500,500,10,562.5621143728495,,,,,,89.26814948022366,0,original,Grab the square bread with light spots and drop it into the blackish-gray cast iron skillet.
+place_bread_skillet,demo_randomized,100015,policy_completed,False,500,500,10,513.2605016231537,,,,,,84.34335379395634,0,original,Grab the palm-sized braided golden bread and place it into the medium black frying skillet.
+place_burger_fries,demo_clean,100010,policy_completed,True,227,500,5,533.2949250936508,,,,,,73.87970758974552,0,original,Take the yellow and green hamburg holder and the small red fries packet with both arms and set on the rectangular green tray.
+place_burger_fries,demo_clean,100011,policy_completed,True,233,500,5,515.1591006666422,,,,,,70.69663885608315,0,original,"Pick up the smooth white hamburg packaging, grab the red box with golden sticks, place them on the plastic tray for holding items"
+place_burger_fries,demo_clean,100012,policy_completed,True,229,500,5,534.49413664639,,,,,,71.27464787382632,0,original,"Grab the yellow and brown patterned hamburg and the crispy fries in hand-sized pouch, use both arms to set on the tray for serving items."
+place_burger_fries,demo_clean,100013,policy_completed,True,217,500,5,550.7810546085238,,,,,,70.01405893918127,0,original,"Lift the rounded hamburg with painted details and the Red fries box, placing them neatly on the single-piece dark green tray."
+place_burger_fries,demo_clean,100014,policy_completed,False,500,500,10,508.81737377494574,,,,,,97.41539272014052,0,original,Use both arms to move the hamburg with patterned brown surface and the Light yellow fries in red holder to the tray for holding objects.
+place_burger_fries,demo_randomized,100010,policy_completed,True,229,500,5,389.64882399886847,,,,,,72.29803461395204,0,original,"Pick the golden brown food within wrapper and the golden crispy fries inside red box, then place them on the rectangular bright orange serving tray."
+place_burger_fries,demo_randomized,100011,setup_error,False,,,,,,,,,,29.592250005342066,0,original,
+place_burger_fries,demo_randomized,100012,policy_completed,True,217,500,5,550.9991928935051,,,,,,62.76214364822954,0,original,"Grab the hamburg with curved surfaces and the golden crispy fries inside red box, then set them on the medium flat tray"
+place_burger_fries,demo_randomized,100013,setup_error,False,,,,,,,,,,33.307314618490636,0,original,
+place_burger_fries,demo_randomized,100014,policy_completed,True,217,500,5,516.4142018184066,,,,,,72.00131844822317,0,original,"Pick the hamburg with white and orange and the Golden fries in red carton box, place them on the medium green tray for carrying."
+place_burger_fries,demo_randomized,100015,policy_completed,True,205,500,5,532.0119814947248,,,,,,70.52078796271235,0,original,Pick up the cardboard hamburg box and the golden fries in red holder and place them on the medium beige plastic tray.
+place_burger_fries,demo_randomized,100016,policy_completed,True,218,500,5,567.4492480233312,,,,,,74.06822132505476,0,original,Place the stackable hamburg box and the hand-sized fries container onto the flat brown serving tray.
+place_can_basket,demo_clean,100010,policy_completed,False,700,700,14,498.7330337587212,,,,,,115.97725895792246,0,original,"Use the same arm to grab the cylindrical red drink can with logo, place in the plastic basket, and then lift the plastic basket."
+place_can_basket,demo_clean,100011,policy_completed,True,280,700,6,557.6626436474422,,,,,,78.00807630363852,0,original,"Lift the palm-sized drink can, place it in the basket made of woven wood, pick up the basket made of woven wood afterward."
+place_can_basket,demo_clean,100012,policy_completed,False,700,700,14,499.1829100597118,,,,,,108.68815032299608,0,original,"Place the white patterned brown metal can inside the handheld basket, then lift the handheld basket."
+place_can_basket,demo_clean,100013,policy_completed,True,242,700,5,495.919637195766,,,,,,72.56202546413988,0,original,"Pick the red soda can with green accents with the right arm, drop it in the wooden basket with curved handle, lift the wooden basket with curved handle with another arm."
+place_can_basket,demo_clean,100014,policy_completed,True,240,700,5,483.280017785728,,,,,,67.85398374125361,0,original,"Pick up the red beverage can with curved top, put it in the basket with black handle, and lift the basket with black handle."
+place_can_basket,demo_randomized,100010,policy_completed,False,700,700,14,529.6926564270897,,,,,,137.737298454158,0,original,"Grab the cylindrical can with bright colors, put it in the medium-sized basket with perforated texture, lift the medium-sized basket with perforated texture."
+place_can_basket,demo_randomized,100011,policy_completed,False,700,700,14,529.8202344482498,,,,,,135.23551727831364,0,original,"Use the right arm to pick up the gold and red soda can, put it into the basket with rounded edges, the other arm lifts the basket with rounded edges."
+place_can_basket,demo_randomized,100012,policy_completed,False,700,700,14,470.4682866244444,,,,,,151.75289537757635,0,original,"Grab the lightweight cylindrical metal can, drop it into the medium basket with smooth texture, lift the medium basket with smooth texture with another arm."
+place_can_basket,demo_randomized,100013,policy_completed,False,700,700,14,465.3830741133009,,,,,,162.8342986078933,0,original,"Use the left arm to pick the cylindrical can with bright colors, place it into the yellow basket with open slots, and lift the basket."
+place_can_basket,demo_randomized,100014,policy_completed,False,700,700,14,511.04426590193594,,,,,,154.19709196407348,0,original,"Grab the can with shiny smooth surface, drop it in the medium-sized basket with perforated texture, and lift the medium-sized basket with perforated texture."
+place_cans_plasticbox,demo_clean,100010,policy_completed,True,234,800,5,469.92655005306005,,,,,,74.43528403993696,0,original,"Pick the red soda can with green accents, place it inside the plasticbox with hinged lid, follow the same for the smooth light brown can."
+place_cans_plasticbox,demo_clean,100011,policy_completed,False,800,800,16,480.0167378853075,,,,,,127.72671562898904,0,original,Place the metal can with pull-tab top and the hand-sized red can for drinks into the blue box for storing things with dual arms
+place_cans_plasticbox,demo_clean,100012,policy_completed,True,235,800,5,490.4133629053831,,,,,,65.42672122456133,0,original,"Lift the green red metallic soda can, place it in the boxy light blue plasticbox, then repeat for the red can with gold illustrations."
+place_cans_plasticbox,demo_clean,100013,policy_completed,True,231,800,5,481.7360281944275,,,,,,58.53192896768451,0,original,"Lift the red can with gold illustrations, put it in the plasticbox with rounded corners and lid, then handle the Coca-Cola can similarly."
+place_cans_plasticbox,demo_clean,100014,policy_completed,False,800,800,16,497.98857589485124,,,,,,122.74553259182721,0,original,"Use both arms to grab the can with rounded cylindrical shape and the hand-sized red can for drinks, place them in the plasticbox for keeping items safe."
+place_cans_plasticbox,demo_randomized,100010,policy_completed,False,800,800,16,500.8628887590021,,,,,,113.0169465020299,0,original,"Pick the palm-sized red metal Coca-Cola can, place it into the hard plastic rectangular box, then repeat with the can with gold logo design."
+place_cans_plasticbox,demo_randomized,100011,policy_completed,False,800,800,16,523.7321633612737,,,,,,111.98085136990994,0,original,"Grab the light brown cylindrical can, drop it in the portable light blue storage plasticbox, and do the same for the palm-sized red metal Coca-Cola can."
+place_cans_plasticbox,demo_randomized,100012,policy_completed,False,800,800,16,492.12479463312775,,,,,,114.79315080307424,0,original,Grab the gold and red soda can and the cylindrical can with smooth surface and place them in the rectangular plasticbox
+place_cans_plasticbox,demo_randomized,100013,policy_completed,False,800,800,16,527.3757131071761,,,,,,131.5751531040296,0,original,"Lift the red can and the palm-sized red metal Coca-Cola can, drop both into the smooth exterior blue plasticbox."
+place_cans_plasticbox,demo_randomized,100014,policy_completed,True,665,800,14,519.5231018587947,,,,,,115.49406461417675,0,original,"Pick the can with gold logo design, set it in the rectangular plasticbox with locking clips, then repeat with the red can."
+place_container_plate,demo_clean,100010,policy_completed,True,126,400,3,524.9577133605877,,,,,,46.19333014823496,0,original,Use the ceramic bowl to place the container into the greenish-gray flat dinner plate
+place_container_plate,demo_clean,100011,policy_completed,True,135,400,3,490.5584501102567,,,,,,50.561192519031465,0,original,"Grab container using the glazed bowl with curved sides, transfer it to the smooth ceramic plate."
+place_container_plate,demo_clean,100012,policy_completed,True,146,400,3,527.9985011244813,,,,,,49.63028913363814,0,original,Use the cylindrical cup to grab the container and place it on the medium plate for food.
+place_container_plate,demo_clean,100013,policy_completed,False,400,400,8,490.7100627897307,,,,,,67.6690383227542,0,original,Use the silver cup with hollow design to place the container onto the greenish-gray flat dinner plate.
+place_container_plate,demo_clean,100014,policy_completed,True,139,400,3,533.1181098396579,,,,,,55.513926341198385,0,original,Stick the container onto the flat ceramic plate with smooth texture using the ceramic-like white cup.
+place_container_plate,demo_randomized,100010,policy_completed,False,400,400,8,559.545764583163,,,,,,81.83122340962291,0,original,"Grab container with the medium cup for liquids, place it on the gray plate."
+place_container_plate,demo_randomized,100011,policy_completed,True,140,400,3,534.0375884746512,,,,,,56.327534241601825,0,original,"Grab container with the glossy cup with floral patterns, place it on the gray plate for dining."
+place_container_plate,demo_randomized,100012,policy_completed,False,400,400,8,548.4569292748347,,,,,,78.48506921809167,0,original,Move the cup with white handle to set the container on the smooth round plate for serving
+place_container_plate,demo_randomized,100013,policy_completed,True,136,400,3,544.1371180738012,,,,,,62.95030372776091,0,original,Place the container onto the gray plate with the simple round bowl
+place_container_plate,demo_randomized,100014,setup_error,False,,,,,,,,,,30.55324350297451,0,original,
+place_container_plate,demo_randomized,100015,policy_completed,True,221,400,5,536.7267353460193,,,,,,70.31507439445704,0,original,Place the container onto the smooth round plate for serving with the medium-sized white serving bowl
+place_dual_shoes,demo_clean,100010,setup_error,False,,,,,,,,,,30.142276684753597,0,original,
+place_dual_shoes,demo_clean,100011,policy_completed,True,254,600,6,507.0611983537674,,,,,,70.04842367954552,0,original,"Set two the brown sole shoe into the the Nike-branded orange shoe-box, align tips to the left."
+place_dual_shoes,demo_clean,100012,policy_completed,True,235,600,5,530.5696692317724,,,,,,68.34083151165396,0,original,"Grab two the wearable foot protector shoe, tips left, place them carefully in the smooth bright orange box."
+place_dual_shoes,demo_clean,100013,policy_completed,True,249,600,5,514.9898640811443,,,,,,73.08635382913053,0,original,"Pick up two the rounded shoe with visible straps, tips left, drop them into the medium-sized box with Nike swoosh."
+place_dual_shoes,demo_clean,100014,policy_completed,False,600,600,12,508.5750489961356,,,,,,104.09652261529118,0,original,Set two the white and black combination shoe in the rectangular orange shoe-box with tips left.
+place_dual_shoes,demo_clean,100015,policy_completed,False,600,600,12,516.0805624909699,,,,,,108.06921398174018,0,original,"Use hands to grab two the white shoe with rubber bottom, tips left, drop into the bright orange shoe-box."
+place_dual_shoes,demo_randomized,100010,policy_completed,True,232,600,5,517.9093001410365,,,,,,70.73596028331667,0,original,"Lift two the smooth plastic shoe, tips pointing left, into the rectangular Nike box for shoes."
+place_dual_shoes,demo_randomized,100011,policy_completed,False,600,600,12,494.0485602710396,,,,,,78.91800081450492,0,original,"Grab two the medium adult shoe, point tips left, place in the medium cardboard shoe-box."
+place_dual_shoes,demo_randomized,100012,policy_completed,False,600,600,12,537.4096733673165,,,,,,95.46772949118167,0,original,"Grab two the brown shoe with green red stripes and set them in the orange box for keeping shoes, tips left."
+place_dual_shoes,demo_randomized,100013,policy_completed,False,600,600,12,532.9825778026134,,,,,,116.56726507935673,0,original,"Place two the smooth plastic shoe into the medium cardboard shoe-box, tips left."
+place_dual_shoes,demo_randomized,100014,policy_completed,True,243,600,5,499.0345351397991,,,,,,73.56434998847544,0,original,"Place two the synthetic shoe upper into the rectangular Nike box for shoes, tips left."
+place_empty_cup,demo_clean,100010,policy_completed,True,151,500,4,499.7155007440597,,,,,,54.359341595321894,0,original,Set the smooth blue cup for liquids down on the wooden coaster
+place_empty_cup,demo_clean,100011,policy_completed,True,153,500,4,474.80424121022224,,,,,,60.33603806979954,0,original,Move the cup for holding liquids to the smooth round palm-sized coaster using the arm.
+place_empty_cup,demo_clean,100012,policy_completed,True,157,500,4,475.61208973638713,,,,,,52.72419613506645,0,original,Carefully place the blue rounded-bottom cup onto the grainy texture coaster without arm
+place_empty_cup,demo_clean,100013,policy_completed,True,156,500,4,449.47265135124326,,,,,,48.283485017716885,0,original,Place the smooth blue cup for liquids on top of the flat surface gray wooden coaster
+place_empty_cup,demo_clean,100014,policy_completed,True,151,500,4,479.3555091600865,,,,,,46.39312892500311,0,original,Move the cup with smooth plastic surface to the coaster with circular shape and set it down.
+place_empty_cup,demo_randomized,100010,policy_completed,True,129,500,3,486.6829967747132,,,,,,54.85923506319523,0,original,Place the blue cup onto the small drink-protecting wooden coaster
+place_empty_cup,demo_randomized,100011,policy_completed,False,500,500,10,494.4069148041308,,,,,,85.05818480532616,0,original,Use arm to set the small smooth cup on the light gray coaster
+place_empty_cup,demo_randomized,100012,policy_completed,False,500,500,10,488.00603318959475,,,,,,88.87911641784012,0,original,Place the handheld round blue cup onto the disc-shaped light gray coaster.
+place_empty_cup,demo_randomized,100013,policy_completed,False,500,500,10,492.7419410087168,,,,,,88.73874242417514,0,original,Set the blue cup on top of the light gray coaster.
+place_empty_cup,demo_randomized,100014,policy_completed,True,126,500,3,485.5944033091267,,,,,,55.32768767140806,0,original,Place the small smooth cup onto the small drink-protecting wooden coaster gently.
+place_fan,demo_clean,100010,policy_completed,False,400,400,8,490.4613243415952,,,,,,61.87456961069256,0,original,"Lift the table fan with white finish, place it on the Coral mat, and ensure it's facing the robot."
+place_fan,demo_clean,100011,policy_completed,False,400,400,8,460.75495798140764,,,,,,68.71748443506658,0,original,"Grab the small cooling device fan with the right arm, making sure it faces the robot on the Coral mat."
+place_fan,demo_clean,100012,policy_completed,False,400,400,8,482.7398752095178,,,,,,66.98924726527184,0,original,"Take the smooth compact fan with the right arm, put it on the Blue mat, and make it face the robot"
+place_fan,demo_clean,100013,policy_completed,False,400,400,8,493.6057945014909,,,,,,68.2949925288558,0,original,Grab the table fan with white finish with the right arm and ensure it's positioned on the Silver mat facing the robot.
+place_fan,demo_clean,100014,policy_completed,False,400,400,8,495.4301544930786,,,,,,64.93528337311,0,original,"Pick the lightweight plastic adjustable fan, align it toward the robot, and drop it on the Gray mat."
+place_fan,demo_randomized,100010,policy_completed,True,161,400,4,494.5996862370521,,,,,,54.85313250683248,0,original,Pick up the beige circular blade fan and set it on the Navy mat facing the robot.
+place_fan,demo_randomized,100011,policy_completed,False,400,400,8,543.339413125068,,,,,,74.86476216744632,0,original,"Use the left arm to grab the white desk fan, then place it on the Red mat facing the robot."
+place_fan,demo_randomized,100012,policy_completed,False,400,400,8,509.7000813111663,,,,,,75.89700153283775,0,original,Grab the beige circular blade fan and set it on the Coral mat.
+place_fan,demo_randomized,100013,policy_completed,True,143,400,3,516.5153779089451,,,,,,53.111920800060034,0,original,Use the left arm to grab the off-white fan with beige accents and place it on the Yellow mat facing the robot.
+place_fan,demo_randomized,100014,policy_completed,False,400,400,8,525.476524955593,,,,,,76.61738940514624,0,original,Grab the white desk fan and set it on the Gray mat facing the robot.
+place_mouse_pad,demo_clean,100010,policy_completed,True,140,400,3,488.03976209213334,,,,,,53.211744424887,0,original,Pick up the the dark mouse with slight textured sides with the right arm and place it on the Red mat.
+place_mouse_pad,demo_clean,100011,policy_completed,True,149,400,3,512.0217613875866,,,,,,53.22985206916928,0,original,Grip the palm-fitting mouse using the right arm and move it to the Green mat.
+place_mouse_pad,demo_clean,100012,policy_completed,False,400,400,8,494.5056503638625,,,,,,66.08627615589648,0,original,Pick the mouse with curved ergonomic shape with the right arm and move it to the Blue mat.
+place_mouse_pad,demo_clean,100013,policy_completed,False,400,400,8,530.5597655242309,,,,,,64.31217620987445,0,original,Lift the the dark mouse with slight textured sides using the right arm and move it to the Black mat.
+place_mouse_pad,demo_clean,100014,policy_completed,False,400,400,8,544.1269467119128,,,,,,67.9575656382367,0,original,Grab the the dark gray mouse with smooth texture using the right arm and place it on the Gray mat.
+place_mouse_pad,demo_randomized,100010,policy_completed,False,400,400,8,514.395851874724,,,,,,73.58649627678096,0,original,Pick up the the flat-bottomed mouse and set it on the Red mat.
+place_mouse_pad,demo_randomized,100011,policy_completed,False,400,400,8,527.9443168547004,,,,,,68.39418186619878,0,original,Grab the the hand-sized black-gray mouse and position it on the Red mat.
+place_mouse_pad,demo_randomized,100012,policy_completed,False,400,400,8,508.4963134722784,,,,,,72.04848411120474,0,original,Grab the dark gray wireless mouse and set it on the Magenta mat.
+place_mouse_pad,demo_randomized,100013,setup_error,False,,,,,,,,,,30.901542448438704,0,original,
+place_mouse_pad,demo_randomized,100014,policy_completed,True,230,400,5,520.0782543048263,,,,,,66.00485056545585,0,original,Pick up the the hand-sized black-gray mouse and set it on the Green mat.
+place_mouse_pad,demo_randomized,100015,policy_completed,False,400,400,8,496.8363066436723,,,,,,76.40119015611708,0,original,Grab the hand-sized dark gray mouse and set it on Magenta mat.
+place_object_basket,demo_clean,100010,policy_completed,True,244,700,5,535.7449444010854,,,,,,73.06574660912156,0,original,Place the small pink car with smooth texture into the plastic basket and push the plastic basket slightly away.
+place_object_basket,demo_clean,100011,policy_completed,True,244,700,5,517.8913157433271,,,,,,65.71276559121907,0,original,Use one arm to place the smooth playingcards pack in the basket made of woven wood.
+place_object_basket,demo_clean,100012,policy_completed,True,224,700,5,487.4527169391513,,,,,,66.42539944220334,0,original,"Grab the small black box with cards, drop it in the handheld basket, shift the handheld basket."
+place_object_basket,demo_clean,100013,policy_completed,False,700,700,14,522.6888920712684,,,,,,112.8909323727712,0,original,"Use the right arm to pick the light teal toycar with white roof, then use the left arm for the wooden basket with curved handle."
+place_object_basket,demo_clean,100014,policy_completed,True,243,700,5,554.5011749491096,,,,,,76.46258174069226,0,original,Pick up the hand-sized toycar with white roof bars and set it inside the basket with black handle.
+place_object_basket,demo_randomized,100010,policy_completed,False,700,700,14,494.7141438190426,,,,,,130.76889650896192,0,original,Grab the pink toycar with white bumper and put it into the medium-sized basket with perforated texture.
+place_object_basket,demo_randomized,100011,setup_error,False,,,,,,,,,,26.08951009809971,0,original,
+place_object_basket,demo_randomized,100012,policy_completed,True,242,700,5,482.21829533576965,,,,,,75.81550533883274,0,original,Pick up the rectangular playingcards case with patterns and drop in the medium basket with smooth texture.
+place_object_basket,demo_randomized,100013,policy_completed,True,549,700,11,499.3953395804221,,,,,,114.5256959637627,0,original,"Grab the hard black box for card deck, put it in the yellow basket with open slots, move the yellow basket with open slots."
+place_object_basket,demo_randomized,100014,policy_completed,False,700,700,14,504.3873487572585,,,,,,135.81110460869968,0,original,Grab the rectangular playingcards pack and put it in the medium-sized basket with perforated texture.
+place_object_basket,demo_randomized,100015,setup_error,False,,,,,,,,,,26.97042112145573,0,original,
+place_object_basket,demo_randomized,100016,setup_error,False,,,,,,,,,,26.838643633760512,0,original,
+place_object_basket,demo_randomized,100017,setup_error,False,,,,,,,,,,27.706945886835456,0,original,
+place_object_basket,demo_randomized,100018,policy_completed,False,700,700,14,481.7160099877843,,,,,,128.04603705648333,0,original,"Move the plastic toycar to the medium-sized basket with perforated texture, then shift the medium-sized basket with perforated texture."
+place_object_scale,demo_clean,100010,policy_completed,True,136,400,3,509.2160714169343,,,,,,48.73308882582933,0,original,Lift the white dome bell with the right arm and position it on the electronicscale with black weighing pad
+place_object_scale,demo_clean,100011,policy_completed,True,142,400,3,489.4284615293145,,,,,,48.2838035877794,0,original,Move the stapler with rounded edges to the small rectangular electronicscale and leave it there.
+place_object_scale,demo_clean,100012,policy_completed,True,132,400,3,476.68513500442106,,,,,,45.062444960698485,0,original,Carry the compact tabletop bell with one arm to the electronicscale with smooth surface
+place_object_scale,demo_clean,100013,policy_completed,False,400,400,8,471.5988200623542,,,,,,59.607750004157424,0,original,Place the bell with protruding knob on the medium electronicscale with gold top after picking it
+place_object_scale,demo_clean,100014,policy_completed,False,400,400,8,479.3390034465119,,,,,,62.65501795616001,0,original,Pick up the brown-bottomed bell and set it on the modern electronicscale with durable design
+place_object_scale,demo_randomized,100010,policy_completed,True,140,400,3,485.91221993168193,,,,,,51.55671672243625,0,original,Grab the rectangular stapler with curved corners and drop it on the electronicscale
+place_object_scale,demo_randomized,100011,policy_completed,False,400,400,8,495.1422638259828,,,,,,68.01991934608668,0,original,Pick the medium-sized bell up and put it on the scale with rounded edges
+place_object_scale,demo_randomized,100012,policy_completed,False,400,400,8,490.3259174898267,,,,,,68.92444887384772,0,original,Grab the smooth metal bell and place it on the lightweight electronicscale for measuring weight.
+place_object_scale,demo_randomized,100013,policy_completed,False,400,400,8,488.96933265496045,,,,,,72.79794925544411,0,original,"With the left arm, grab the plastic stapler and position it on the electronicscale with rectangular base"
+place_object_scale,demo_randomized,100014,policy_completed,False,400,400,8,464.81103217229247,,,,,,73.4311203584075,0,original,Grab the lightweight bell with smooth surface and place it on the scale with rounded edges
+place_object_stand,demo_clean,100010,policy_completed,True,131,400,3,472.6718847329418,,,,,,42.992754525505006,0,original,Set the paper stapler with silver tray on the plastic displaystand using the right arm
+place_object_stand,demo_clean,100011,policy_completed,True,130,400,3,477.2999867176016,,,,,,46.027679541148245,0,original,Transfer the flat dark remotecontrol to the rectangular plastic displaystand securely with the right arm.
+place_object_stand,demo_clean,100012,policy_completed,True,138,400,3,550.4273539409041,,,,,,51.35802901908755,0,original,Place the metal and plastic stapler precisely on the rectangular displaystand.
+place_object_stand,demo_clean,100013,policy_completed,True,130,400,3,599.0139562636614,,,,,,52.03089659009129,0,original,Pick the bell shaped like half-circle dome and position it on the displaystand with rectangular hollow base
+place_object_stand,demo_clean,100014,policy_completed,True,134,400,3,497.30344644437236,,,,,,50.93153532408178,0,original,Pick up the toycar with black and orange wheels with the left arm and set it on the hollow black displaystand
+place_object_stand,demo_randomized,100010,policy_completed,True,120,400,3,516.6343028346697,,,,,,57.03375369310379,0,original,Use the left arm to place the black remote control on the angled rectangular metal displaystand
+place_object_stand,demo_randomized,100011,policy_completed,False,400,400,8,505.96382515504956,,,,,,81.56924148462713,0,original,Place the multi-colored rubikscube onto the tabletop-sized displaystand with the left arm
+place_object_stand,demo_randomized,100012,policy_completed,True,118,400,3,558.7255482872328,,,,,,53.32638621330261,0,original,Use the left arm to place the rubikscube for puzzle solving on the displaystand with hollow center.
+place_object_stand,demo_randomized,100013,policy_completed,False,400,400,8,543.0085924454033,,,,,,76.34474639967084,0,original,"Grab the palm-sized bell, then place it on the black displaystand"
+place_object_stand,demo_randomized,100014,policy_completed,False,400,400,8,502.96024687122554,,,,,,68.98457020707428,0,original,Use the right arm to grab the hand-size bright blue stapler and place it on the medium displaystand with smooth finish
+place_phone_stand,demo_clean,100010,policy_completed,True,119,400,3,561.0601790249348,,,,,,52.90282893832773,0,original,Move the metal and glass black phone onto the smooth brown phone holder.
+place_phone_stand,demo_clean,100011,policy_completed,False,400,400,8,546.2436369853094,,,,,,72.99635858647525,0,original,Take the rectangular phone with rounded corners to the phonestand with green hooks.
+place_phone_stand,demo_clean,100012,policy_completed,True,113,400,3,502.55413198222715,,,,,,51.50786001980305,0,original,Take the sleek black phone to the curved phonestand with phone slot.
+place_phone_stand,demo_clean,100013,policy_completed,False,400,400,8,544.6007424034178,,,,,,67.38427613768727,0,original,Move the phone with polished silver border onto the phonestand with curved edges.
+place_phone_stand,demo_clean,100014,policy_completed,True,119,400,3,531.6755995154381,,,,,,53.81573967728764,0,original,Move the rectangular phone onto the phonestand with curved edges.
+place_phone_stand,demo_randomized,100010,policy_completed,False,400,400,8,527.5789317674935,,,,,,72.38564013689756,0,original,Set the phone with shiny black back on the dark green phonestand.
+place_phone_stand,demo_randomized,100011,setup_error,False,,,,,,,,,,30.488612898625433,0,original,
+place_phone_stand,demo_randomized,100012,policy_completed,False,400,400,8,534.6682853996754,,,,,,75.14904193487018,0,original,Set the phone with rounded edges on the brown angled plastic phonestand.
+place_phone_stand,demo_randomized,100013,policy_completed,False,400,400,8,535.060893278569,,,,,,74.01055846456438,0,original,Set the palm-sized phone with glossy finish on the L-shaped smooth brown phonestand.
+place_phone_stand,demo_randomized,100014,policy_completed,False,400,400,8,504.74100676365197,,,,,,78.45946691557765,0,original,Set the phone with shiny black back on the adjustable phone holder.
+place_phone_stand,demo_randomized,100015,policy_completed,True,119,400,3,520.6691706553102,,,,,,57.60387747269124,0,original,Set the modern phone on the silver arm phonestand.
+place_shoe,demo_clean,100010,policy_completed,True,148,500,3,512.1374232694507,,,,,,51.675685128197074,0,original,Pick the the canvas shoe with grooved sole off the table and position it on the mat
+place_shoe,demo_clean,100011,policy_completed,False,500,500,10,527.7896317653358,,,,,,72.87858650274575,0,original,Retrieve the shoe with black accents from the table and set it on the mat
+place_shoe,demo_clean,100012,policy_completed,True,136,500,3,496.71931626896065,,,,,,53.01680292375386,0,original,Move the white shoe with red tag from the table to the mat in one fluid motion
+place_shoe,demo_clean,100013,policy_completed,True,147,500,3,536.6020429258546,,,,,,53.29099700786173,0,original,Take the the red shoe rounded at front off the table and put it on the mat
+place_shoe,demo_clean,100014,policy_completed,True,158,500,4,505.6286193430424,,,,,,58.71218337863684,0,original,Pick up the footwear with red top white sole and move it to the mat
+place_shoe,demo_randomized,100010,policy_completed,True,324,500,7,511.8303310924343,,,,,,80.26711513474584,0,original,Grab the the smooth plastic shoe from the table and set it on the mat
+place_shoe,demo_randomized,100011,setup_error,False,,,,,,,,,,29.15816070418805,0,original,
+place_shoe,demo_randomized,100012,policy_completed,False,500,500,10,511.76243871450424,,,,,,89.51317941304296,0,original,Grab the shoe with ribbed sole from the table and place it on the mat
+place_shoe,demo_randomized,100013,policy_completed,False,500,500,10,483.280164655298,,,,,,88.37645028810948,0,original,Use the left arm to lift the smooth white shoe with laces and drop it on the mat
+place_shoe,demo_randomized,100014,policy_completed,False,500,500,10,503.69244273751974,,,,,,82.31475153751671,0,original,Grab the white shoe with tongue logo and set it on the mat
+place_shoe,demo_randomized,100015,policy_completed,False,500,500,10,543.7062347307801,,,,,,88.61568953841925,0,original,Pick up the black shoe with white midsole from the table and set it on the mat
+press_stapler,demo_clean,100010,policy_completed,True,91,400,2,504.2745880782604,,,,,,52.09269044641405,0,original,Apply pressure to the blue stapler with silver staple tray firmly
+press_stapler,demo_clean,100011,policy_completed,True,132,400,3,518.0289161701998,,,,,,49.95548490062356,0,original,Press on the curved red stapler to activate it.
+press_stapler,demo_clean,100012,policy_completed,True,79,400,2,500.14737201854587,,,,,,41.03531740233302,0,original,Firmly push down on the blue stapler with white accents.
+press_stapler,demo_clean,100013,policy_completed,True,91,400,2,538.0777297541499,,,,,,50.88213066291064,0,original,Push down on the blue stapler with black handle area to staple
+press_stapler,demo_clean,100014,policy_completed,False,400,400,8,523.7109248992056,,,,,,76.46632322110236,0,original,Place pressure on the plastic stapler with metallic interior to staple.
+press_stapler,demo_randomized,100010,policy_completed,True,196,400,4,475.5176780745387,,,,,,66.0475686462596,0,original,Press down on the shiny red plastic stapler with the right arm
+press_stapler,demo_randomized,100011,policy_completed,False,400,400,8,503.708046162501,,,,,,79.36371053103358,0,original,Use the left arm to press on the hand-size bright blue stapler
+press_stapler,demo_randomized,100012,policy_completed,False,400,400,8,516.5453959489241,,,,,,92.71331124845892,0,original,Press down on the white stapler firmly using the left arm.
+press_stapler,demo_randomized,100013,policy_completed,False,400,400,8,503.06456233374774,,,,,,80.881412781775,0,original,Press the metal and plastic stapler firmly using your arm.
+press_stapler,demo_randomized,100014,policy_completed,True,284,400,6,512.4700342615446,,,,,,73.23262356873602,0,original,Push the blue stapler with smooth finish down with one arm the left arm.
+put_bottles_dustbin,demo_clean,100010,policy_completed,False,1700,1700,34,516.5351975216147,,,,,,161.80856007523835,0,original,"Move the yellow liquid container with green top, the transparent bottle, and the smooth plastic bottle to the rectangular black trash holder sequentially using the arms."
+put_bottles_dustbin,demo_clean,100011,policy_completed,False,1700,1700,34,527.3979556856348,,,,,,181.21445415075868,0,original,"Place the medium yellow cylindrical bottle, the bottle with ribbed design, and the plastic bottle with red cap in the trash bin using the arms."
+put_bottles_dustbin,demo_clean,100012,policy_completed,False,1700,1700,34,518.9288155559232,,,,,,163.42654610425234,0,original,"Using arms, grab the yellow bottle with smooth texture and place it in the dustbin with white inner bag, do the same for the cylindrical bottle and the red and black beverage bottle."
+put_bottles_dustbin,demo_clean,100013,policy_completed,True,485,1700,10,503.538640961051,,,,,,77.44775431137532,0,original,"Grab the yellow liquid container with green top and the water bottle with textured body, put them into the trash bin, and repeat for the red bottle."
+put_bottles_dustbin,demo_clean,100014,policy_completed,False,1700,1700,34,513.2759278640151,,,,,,158.95200004801154,0,original,"Use arms to move the cylindrical yellow bottle for holding liquids, the medium-sized water bottle, and the plastic bottle with red cap into the rectangular black trash holder."
+put_bottles_dustbin,demo_randomized,100010,policy_completed,True,1673,1700,34,529.4762734214173,,,,,,191.3874158980325,0,original,Pick up the plastic bottle with two distinct parts and toss it into the smooth surface dustbin; repeat for the bottle with blue highlights and the plastic bottle with ridges near bottom.
+put_bottles_dustbin,demo_randomized,100011,setup_error,False,,,,,,,,,,32.16082811541855,0,original,
+put_bottles_dustbin,demo_randomized,100012,setup_error,False,,,,,,,,,,31.81640741787851,0,original,
+put_bottles_dustbin,demo_randomized,100013,setup_error,False,,,,,,,,,,33.816313981078565,0,original,
+put_bottles_dustbin,demo_randomized,100014,setup_error,False,,,,,,,,,,28.9984772503376,0,original,
+put_bottles_dustbin,demo_randomized,100015,policy_completed,False,1700,1700,34,509.63060815325554,,,,,,166.45596557762474,0,original,"Pick up the plastic bottle with two distinct parts, the bottle with ridges, and the medium black bottle one by one and drop them into the smooth surface dustbin."
+put_bottles_dustbin,demo_randomized,100016,policy_completed,True,526,1700,11,535.3162295439026,,,,,,84.67445483338088,0,original,"Take each bottle the yellow bottle with elongated cylinder body, the plastic bottle, the medium black bottle one by one and place them in the simple black garbage bin."
+put_bottles_dustbin,demo_randomized,100017,policy_completed,False,1700,1700,34,522.4236256223829,,,,,,170.86308710742742,0,original,"Grab the plastic bottle with two distinct parts and place it in the curved rectangular trash can, then do the same for the bottle with ridges and the bottle with red screw cap."
+put_bottles_dustbin,demo_randomized,100018,policy_completed,False,1700,1700,34,512.0165559244068,,,,,,166.0067686373368,0,original,"Grab the yellow bottle with elongated cylinder body and place it in the simple black garbage bin, then do the same for the bottle with blue highlights and the plastic bottle with ridges near bottom."
+put_object_cabinet,demo_clean,100010,policy_completed,True,259,700,6,532.0999547839165,,,,,,58.354933474212885,0,original,Pull open the storage cabinet's drawer and place the tea box with floral designs into it.
+put_object_cabinet,demo_clean,100011,policy_completed,False,700,700,14,528.2709314487875,,,,,,100.11537507548928,0,original,Pull open the smooth-surface cabinet's drawer and place the glossy blue toycar inside it.
+put_object_cabinet,demo_clean,100012,policy_completed,True,268,700,6,486.4760256993274,,,,,,69.57542997598648,0,original,Open the light wood cabinet's drawer and move the small square rubikscube into it.
+put_object_cabinet,demo_clean,100013,policy_completed,False,700,700,14,525.1973616624517,,,,,,96.94956281874329,0,original,Access the cabinet with angled sides's drawer and set the black stapler with shiny interior inside.
+put_object_cabinet,demo_clean,100014,policy_completed,True,266,700,6,528.947400705268,,,,,,69.07460183650255,0,original,Pull open the medium-sized cabinet's drawer and place the office stapler with plastic and metal parts into it.
+put_object_cabinet,demo_randomized,100010,policy_completed,False,700,700,14,517.7638737617859,,,,,,105.17400946188718,0,original,Open the cabinet with light wood panels's drawer and set the brown soap inside with the other arm.
+put_object_cabinet,demo_randomized,100011,policy_completed,False,700,700,14,518.8096200249025,,,,,,110.76699488982558,0,original,Pull out the drawer of the slanted wooden cabinet and set the bread loaf with golden baked top into it.
+put_object_cabinet,demo_randomized,100012,policy_completed,False,700,700,14,516.2461388057897,,,,,,101.54587554838508,0,original,Pull out the drawer of the cabinet with smooth finish and set the oval-shaped soft bread into it.
+put_object_cabinet,demo_randomized,100013,policy_completed,False,700,700,14,509.51941404491663,,,,,,102.05028101801872,0,original,Open the slanted wooden cabinet's drawer and set the small loaf-shaped bread inside with the other arm.
+put_object_cabinet,demo_randomized,100014,policy_completed,True,260,700,6,501.31017637128633,,,,,,67.33268011175096,0,original,Open the cabinet with light wood panels's drawer and set the multi-colored rubikscube inside with the other arm.
+rotate_qrcode,demo_clean,100010,policy_completed,True,145,400,3,515.793195925653,,,,,,52.56667722668499,0,original,"Catch the black base with tilted gray panel, raise it, and turn it so the QR code faces you"
+rotate_qrcode,demo_clean,100011,policy_completed,False,400,400,8,528.2581204082817,,,,,,72.00552285090089,0,original,"Catch the smooth surface paymentsign with the right arm, then rotate it to make the QR code visible."
+rotate_qrcode,demo_clean,100012,policy_completed,False,400,400,8,539.3117535859346,,,,,,61.437986875884235,0,original,"Lift the payment sign with green logo with the right arm, then rotate it to make the qrcode visible."
+rotate_qrcode,demo_clean,100013,policy_completed,True,140,400,3,493.4517468015353,,,,,,46.43280421104282,0,original,"Use the right arm to grab the black base with tilted gray panel, lift, and turn it QR code forward"
+rotate_qrcode,demo_clean,100014,policy_completed,True,147,400,3,523.6128140240908,,,,,,55.268188524991274,0,original,"Catch the paymentsign with tilted rectangular panel, lift it, and rotate it QR code facing."
+rotate_qrcode,demo_randomized,100010,setup_error,False,,,,,,,,,,29.472536531277,0,original,
+rotate_qrcode,demo_randomized,100011,policy_completed,False,400,400,8,529.0005599381402,,,,,,76.88940664194524,0,original,"Grab the black triangular stand, lift it, and turn it to face you"
+rotate_qrcode,demo_randomized,100012,setup_error,False,,,,,,,,,,29.35985161177814,0,original,
+rotate_qrcode,demo_randomized,100013,policy_completed,False,400,400,8,506.26666005700827,,,,,,69.99777387734503,0,original,Pick up the paymentsign with angled support bars and rotate it to face its QR code toward you.
+rotate_qrcode,demo_randomized,100014,policy_completed,False,400,400,8,517.1081955777481,,,,,,73.09673039522022,0,original,Catch the black triangular stand on the table and pick it up.
+rotate_qrcode,demo_randomized,100015,policy_completed,False,400,400,8,532.064359402284,,,,,,74.8313573691994,0,original,Pick up the tabletop paymentsign and rotate it facing you.
+rotate_qrcode,demo_randomized,100016,policy_completed,False,400,400,8,520.4712066333741,,,,,,77.72463092859834,0,original,Pick up the sign for payment processing and rotate it to face its QR code toward you.
+scan_object,demo_clean,100010,policy_completed,False,500,500,10,509.9663241766393,,,,,,71.79361034650356,0,original,"the right arm grabs the handheld scanner, the left arm picks the small rectangular tea-box, and the handheld scanner scans the small rectangular tea-box."
+scan_object,demo_clean,100011,policy_completed,True,186,500,4,482.698175823316,,,,,,62.05809186119586,0,original,"Take the scanner with rectangular black end, then grab the glossy bright tea-box, and scan the glossy bright tea-box with the scanner with rectangular black end."
+scan_object,demo_clean,100012,policy_completed,False,500,500,10,497.6347541436553,,,,,,74.9380227420479,0,original,"Hold the handheld scanner, pick the tea box with beige edges, and scan the tea box with beige edges using the handheld scanner"
+scan_object,demo_clean,100013,policy_completed,False,500,500,10,512.6582579687238,,,,,,85.42113210912794,0,original,"Use the right arm to pick the L-shaped scanner for barcode reading, the left arm to grab the beige cube with golden leaf patterns, and scan the beige cube with golden leaf patterns using the L-shaped scanner for barcode reading."
+scan_object,demo_clean,100014,policy_completed,True,154,500,4,534.0262216050178,,,,,,56.709536615759134,0,original,"Hold the medium handheld scanner with the left arm and the leaf-patterned green tea storage with the right arm, then scan the leaf-patterned green tea storage using the medium handheld scanner."
+scan_object,demo_randomized,100010,setup_error,False,,,,,,,,,,30.935425988398492,0,original,
+scan_object,demo_randomized,100011,setup_error,False,,,,,,,,,,31.280896679498255,0,original,
+scan_object,demo_randomized,100012,policy_completed,False,500,500,10,514.253309648484,,,,,,79.69762995652854,0,original,"Pick the yellow and black scanner, grab the red tea-box with golden designs, and scan it with the yellow and black scanner."
+scan_object,demo_randomized,100013,policy_completed,False,500,500,10,484.7288992255926,,,,,,83.41260647587478,0,original,"Take the small scanner fits in hand, pick the glossy tea-box, and use the scanner to perform the scan."
+scan_object,demo_randomized,100014,policy_completed,True,160,500,4,538.4545330889523,,,,,,66.5987211894244,0,original,"Grab the handheld scanner with blue activation trigger in one hand and the rectangular green box for tea in the other, then scan the rectangular green box for tea with the handheld scanner with blue activation trigger."
+scan_object,demo_randomized,100015,policy_completed,True,182,500,4,564.8823804222047,,,,,,70.3251059576869,0,original,"Lift the handheld scanner with blue activation trigger in one hand and grab the box with green leafy patterns with the other, then scan it."
+scan_object,demo_randomized,100016,policy_completed,False,500,500,10,524.3470340967178,,,,,,93.27619225066155,0,original,"Take the yellow and black scanner, pick the cube tea box with shiny embossed patterns, and use the scanner to perform the scan."
+shake_bottle,demo_clean,100010,setup_error,False,,,,,,,,,,29.536581662483513,0,original,
+shake_bottle,demo_clean,100011,setup_error,False,,,,,,,,,,28.555645238608122,0,original,
+shake_bottle,demo_clean,100012,setup_error,False,,,,,,,,,,28.632069075480103,0,original,
+shake_bottle,demo_clean,100013,policy_completed,True,91,700,2,496.21624825522304,,,,,,45.73533410485834,0,original,Grab the light gray colored container bottle and give it a shake.
+shake_bottle,demo_clean,100014,setup_error,False,,,,,,,,,,30.725597077049315,0,original,
+shake_bottle,demo_clean,100015,policy_completed,True,96,700,2,541.8727886863053,,,,,,47.3092782497406,0,original,"Hold the dark brown bottle with a squared body, shake it briefly."
+shake_bottle,demo_clean,100016,setup_error,False,,,,,,,,,,29.451468266546726,0,original,
+shake_bottle,demo_clean,100017,setup_error,False,,,,,,,,,,25.026516515761614,0,original,
+shake_bottle,demo_clean,100018,policy_completed,True,98,700,2,557.1515704505146,,,,,,47.32243589684367,0,original,Take the plastic bottle using the left arm and give it a shake.
+shake_bottle,demo_clean,100019,setup_error,False,,,,,,,,,,30.56583310943097,0,original,
+shake_bottle,demo_clean,100020,policy_completed,True,93,700,2,565.0028162635863,,,,,,49.36999796144664,0,original,"Pick the smooth bottle, shake it with the left arm."
+shake_bottle,demo_clean,100021,policy_completed,True,95,700,2,532.242190092802,,,,,,48.789581888355315,0,original,Shake the bottle with flat sides and logo after holding it firmly.
+shake_bottle,demo_randomized,100010,policy_completed,True,86,700,2,506.366069894284,,,,,,47.208047301508486,0,original,Shake the brown bottle after picking it with the left arm.
+shake_bottle,demo_randomized,100011,policy_completed,False,700,700,14,463.28833512961864,,,,,,82.01822744309902,0,original,Pick up the blue-capped plastic bottle and shake it.
+shake_bottle,demo_randomized,100012,setup_error,False,,,,,,,,,,31.994588089175522,0,original,
+shake_bottle,demo_randomized,100013,policy_completed,False,700,700,14,527.7334599356566,,,,,,98.51370376441628,0,original,"Grab the gray bottle for holding drinks, shake it properly, then set it down."
+shake_bottle,demo_randomized,100014,policy_completed,True,83,700,2,513.7416087090969,,,,,,52.798213915899396,0,original,Pick up the label-covered orange bottle with the right arm and shake.
+shake_bottle,demo_randomized,100015,policy_completed,False,700,700,14,506.7768482092236,,,,,,81.95953466929495,0,original,Grab the green bottle and shake it.
+shake_bottle_horizontally,demo_clean,100010,setup_error,False,,,,,,,,,,28.017198473215103,0,original,
+shake_bottle_horizontally,demo_clean,100011,setup_error,False,,,,,,,,,,30.211860965006053,0,original,
+shake_bottle_horizontally,demo_clean,100012,setup_error,False,,,,,,,,,,31.235940125770867,0,original,
+shake_bottle_horizontally,demo_clean,100013,policy_completed,True,92,700,2,581.6028178669512,,,,,,49.49624178558588,0,original,Lift the light gray colored container bottle and shake it horizontally.
+shake_bottle_horizontally,demo_clean,100014,setup_error,False,,,,,,,,,,27.274538048543036,0,original,
+shake_bottle_horizontally,demo_clean,100015,policy_completed,True,95,700,2,555.5176273919642,,,,,,50.68416515737772,0,original,Use the right arm to grab the dark brown bottle with a squared body and shake horizontally.
+shake_bottle_horizontally,demo_clean,100016,setup_error,False,,,,,,,,,,32.0043858345598,0,original,
+shake_bottle_horizontally,demo_clean,100017,setup_error,False,,,,,,,,,,27.708298666402698,0,original,
+shake_bottle_horizontally,demo_clean,100018,policy_completed,True,98,700,2,546.8330411240458,,,,,,44.513052550144494,0,original,Use the left arm to pick the plastic bottle and shake it horizontally.
+shake_bottle_horizontally,demo_clean,100019,setup_error,False,,,,,,,,,,29.349947194568813,0,original,
+shake_bottle_horizontally,demo_clean,100020,policy_completed,True,92,700,2,486.6242464631796,,,,,,43.89800928160548,0,original,Simply shake the smooth bottle horizontally without the left arm details.
+shake_bottle_horizontally,demo_clean,100021,policy_completed,True,95,700,2,542.7635065279901,,,,,,39.690622206777334,0,original,Take hold of the bottle with flat sides and logo using the left arm and move horizontally.
+shake_bottle_horizontally,demo_randomized,100010,policy_completed,True,76,700,2,535.542388446629,,,,,,50.74916312750429,0,original,Grab the brown bottle with the left arm and shake horizontally.
+shake_bottle_horizontally,demo_randomized,100011,policy_completed,True,388,700,8,529.3521257117391,,,,,,78.0216507576406,0,original,Shake the blue-capped plastic bottle side-to-side after picking it up.
+shake_bottle_horizontally,demo_randomized,100012,setup_error,False,,,,,,,,,,30.362392637878656,0,original,
+shake_bottle_horizontally,demo_randomized,100013,policy_completed,False,700,700,14,531.9971160830131,,,,,,94.33225842565298,0,original,Use the right arm to pick the gray bottle for holding drinks and shake it.
+shake_bottle_horizontally,demo_randomized,100014,policy_completed,True,462,700,10,511.2528905272484,,,,,,78.56945150438696,0,original,Grab the label-covered orange bottle and shake it horizontally.
+shake_bottle_horizontally,demo_randomized,100015,policy_completed,True,80,700,2,563.1371005438268,,,,,,53.29640900250524,0,original,Shake the green bottle horizontally after grabbing.
+stack_blocks_three,demo_clean,100010,policy_completed,True,445,1200,9,494.79948667188484,,,,,,76.22794135194272,0,original,"Grab red block, green block, and blue block using the right arm, the left arm, the right arm, move them to the center, then stack them."
+stack_blocks_three,demo_clean,100011,policy_completed,True,457,1200,10,482.6557579450309,,,,,,74.56140839960426,0,original,"Shift red block, green block, and blue block to the center using the right arm, the left arm, the right arm, then pile blue block on green block, green block on red block."
+stack_blocks_three,demo_clean,100012,policy_completed,False,1200,1200,24,513.3528221243372,,,,,,131.11347587127239,0,original,"Position red block, green block, and blue block in the center and stack blue block on green block, followed by green block on red block."
+stack_blocks_three,demo_clean,100013,policy_completed,True,446,1200,9,525.5139531153771,,,,,,75.5441864086315,0,original,Stack blue block over green block and green block over red block after moving all blocks to the center.
+stack_blocks_three,demo_clean,100014,policy_completed,True,436,1200,9,491.54413522531587,,,,,,73.44707742612809,0,original,"Place red block, green block, and blue block at the center, then stack blue block onto green block and green block onto red block."
+stack_blocks_three,demo_randomized,100010,policy_completed,False,1200,1200,24,507.3463383208339,,,,,,135.1369541529566,0,original,"Move red block, green block, and blue block to the table's center and stack them."
+stack_blocks_three,demo_randomized,100011,policy_completed,False,1200,1200,24,498.2739947348212,,,,,,141.7674278654158,0,original,"Transfer red block, green block, and blue block to the middle, then stack blue block over green block and green block over red block."
+stack_blocks_three,demo_randomized,100012,policy_completed,False,1200,1200,24,529.1814399727931,,,,,,129.52713331207633,0,original,"Place red block, green block, and blue block at the table's center, then stack blue block on green block and green block on red block."
+stack_blocks_three,demo_randomized,100013,policy_completed,False,1200,1200,24,511.7437155762066,,,,,,131.92264905758202,0,original,"Bring red block, green block, and blue block to the center, stacking blue block on green block and green block on red block."
+stack_blocks_three,demo_randomized,100014,policy_completed,False,1200,1200,24,532.6046718206877,,,,,,143.53334086202085,0,original,"Move red block, green block, and blue block to the center of the table, then stack blue block on green block and green block on red block."
+stack_blocks_two,demo_clean,100010,policy_completed,True,294,800,6,505.51751209422946,,,,,,67.9629146521911,0,original,"the right arm relocates red block and the left arm moves green block, then stacks green block on red block."
+stack_blocks_two,demo_clean,100011,policy_completed,True,297,800,6,499.5842805753152,,,,,,62.29383063968271,0,original,"Place red block in the center, then move green block there and stack green block on red block."
+stack_blocks_two,demo_clean,100012,policy_completed,True,283,800,6,528.2266271921495,,,,,,52.23982469365001,0,original,"Move red block and green block to the center, using the right arm and the right arm, and stack green block on top of red block."
+stack_blocks_two,demo_clean,100013,policy_completed,True,287,800,6,545.6669301105043,,,,,,62.08190112374723,0,original,Shift red block and green block to the center and stack green block on red block.
+stack_blocks_two,demo_clean,100014,policy_completed,True,288,800,6,504.2200821141402,,,,,,63.50104392878711,0,original,Use the right arm to move red block and the left arm to stack green block.
+stack_blocks_two,demo_randomized,100010,policy_completed,True,309,800,7,502.9512654457773,,,,,,69.40367294847965,0,original,"Move red block and green block to the center, then stack green block on red block."
+stack_blocks_two,demo_randomized,100011,policy_completed,False,800,800,16,488.60559839522466,,,,,,98.34919781424105,0,original,"Bring red block and green block to the center, then position green block above red block."
+stack_blocks_two,demo_randomized,100012,policy_completed,False,800,800,16,505.73090743273497,,,,,,98.62586881965399,0,original,"Move red block and green block to the table's center, then stack green block on red block."
+stack_blocks_two,demo_randomized,100013,policy_completed,True,518,800,11,498.82869388569486,,,,,,79.04226639214903,0,original,"Move red block to the center, then put green block on top."
+stack_blocks_two,demo_randomized,100014,policy_completed,True,300,800,6,492.4446476312975,,,,,,64.4560289690271,0,original,"Place red block in the middle, then stack green block on it."
+stack_bowls_three,demo_clean,100010,policy_completed,True,444,1200,9,513.2554496328036,,,,,,76.50099930074066,0,original,"Align bowls the ceramic bowl with earthy brown trim in descending size, forming a stack."
+stack_bowls_three,demo_clean,100011,policy_completed,True,418,1200,9,517.9147282615304,,,,,,73.91725043207407,0,original,"Place the first the bowl with brown outer rim down, then stack the next two above it."
+stack_bowls_three,demo_clean,100012,policy_completed,True,439,1200,9,503.28018826742965,,,,,,75.3033502176404,0,original,Stack the small bowl with brown edge by arranging them sequentially.
+stack_bowls_three,demo_clean,100013,policy_completed,False,1200,1200,24,509.9871384445578,,,,,,129.8348890952766,0,original,Arrange the ceramic bowl with earthy brown trim with the largest bowl at the base.
+stack_bowls_three,demo_clean,100014,policy_completed,True,481,1200,10,431.2508035451174,,,,,,81.84528151527047,0,original,Place three the blue bowl with slightly rounded base on top of each other.
+stack_bowls_three,demo_randomized,100010,setup_error,False,,,,,,,,,,23.113888872787356,0,original,
+stack_bowls_three,demo_randomized,100011,setup_error,False,,,,,,,,,,30.21958579029888,0,original,
+stack_bowls_three,demo_randomized,100012,policy_completed,False,1200,1200,24,532.3323487925032,,,,,,125.94703607913107,0,original,Stack the three the smooth bowl with glossy finish one above the other.
+stack_bowls_three,demo_randomized,100013,setup_error,False,,,,,,,,,,30.456129191443324,0,original,
+stack_bowls_three,demo_randomized,100014,policy_completed,True,413,1200,9,516.3323316309187,,,,,,80.41174103785306,0,original,"Grab the small smooth brown-rimmed bowl, stack them one by one."
+stack_bowls_three,demo_randomized,100015,policy_completed,True,417,1200,9,525.2340474269456,,,,,,76.80025569349527,0,original,Grab the first the smooth bowl with glossy finish and stack the others on top.
+stack_bowls_three,demo_randomized,100016,policy_completed,True,446,1200,9,501.3531423691246,,,,,,83.68430837616324,0,original,"Stack the first the smooth bowl with glossy finish, then the second, then the third."
+stack_bowls_three,demo_randomized,100017,setup_error,False,,,,,,,,,,28.06898609455675,0,original,
+stack_bowls_three,demo_randomized,100018,policy_completed,True,473,1200,10,478.4655340947211,,,,,,85.09005023911595,0,original,Start stacking the small smooth brown-rimmed bowl from the bottom to the top.
+stack_bowls_two,demo_clean,100010,policy_completed,True,317,900,7,513.2600807451776,,,,,,64.54141678661108,0,original,"Place the ceramic bowl with earthy brown trim on the surface, then stack the ceramic bowl above it."
+stack_bowls_two,demo_clean,100011,policy_completed,True,281,900,6,498.88480283940834,,,,,,60.43766431044787,0,original,Position the glazed bowl with curved sides carefully on the bowl with brown outer rim.
+stack_bowls_two,demo_clean,100012,policy_completed,True,281,900,6,534.541678459694,,,,,,67.43085213843733,0,original,"Grasp the small bowl with brown edge, then use the arm to align and stack the bowl with shiny texture."
+stack_bowls_two,demo_clean,100013,policy_completed,True,301,900,7,512.9215630835721,,,,,,65.87812545709312,0,original,"Pick up the ceramic bowl with earthy brown trim, place it down, then position the ceramic bowl with earthy brown trim on top."
+stack_bowls_two,demo_clean,100014,policy_completed,True,281,900,6,506.6110634555419,,,,,,60.611500105820596,0,original,Place the blue bowl with slightly rounded base down and stack the small bowl with brown edge on top.
+stack_bowls_two,demo_randomized,100010,policy_completed,True,317,900,7,531.2676670561943,,,,,,70.76251321937889,0,original,"Place the smooth bowl with glossy finish down, then put the light blue bowl with darkened rim on top."
+stack_bowls_two,demo_randomized,100011,policy_completed,True,289,900,6,493.3786367376645,,,,,,68.13095245696604,0,original,"Take the small smooth brown-rimmed bowl, set it down, and stack the smooth bowl with glossy finish on top."
+stack_bowls_two,demo_randomized,100012,setup_error,False,,,,,,,,,,23.571995528414845,0,original,
+stack_bowls_two,demo_randomized,100013,policy_completed,True,291,900,6,495.8435967564583,,,,,,70.40866434760392,0,original,Pick up the smooth bowl with glossy finish and stack the smooth bowl with glossy finish above.
+stack_bowls_two,demo_randomized,100014,policy_completed,False,900,900,18,518.3539531814555,,,,,,101.321244684048,0,original,"Grab the small smooth brown-rimmed bowl, then set the light blue bowl with darkened rim on top."
+stack_bowls_two,demo_randomized,100015,policy_completed,True,273,900,6,561.0339385457337,,,,,,69.44192898925394,0,original,Grab the light blue bowl with darkened rim and stack the light blue bowl with darkened rim on it.
+stamp_seal,demo_clean,100010,policy_completed,True,133,400,3,517.4210667610168,,,,,,52.5637102201581,0,original,"Grab the hand-sized rectangular brown seal, align it with Coral"
+stamp_seal,demo_clean,100011,policy_completed,True,134,400,3,502.5698433940609,,,,,,46.21716798655689,0,original,Take the compact stamping seal and stamp it on Turquoise.
+stamp_seal,demo_clean,100012,policy_completed,False,400,400,8,511.74188521690667,,,,,,64.13369525875896,0,original,"Use the right arm, take the red seal for stamping, and apply to Blue."
+stamp_seal,demo_clean,100013,policy_completed,True,232,400,5,538.0613766610622,,,,,,54.07576259318739,0,original,Press the hand-sized rectangular brown seal firmly onto Silver
+stamp_seal,demo_clean,100014,policy_completed,True,261,400,6,508.6047640070319,,,,,,52.533091246150434,0,original,"the right arm picks the handheld seal with yellow bottom, stamps Blue"
+stamp_seal,demo_randomized,100010,policy_completed,False,400,400,8,525.7159490138292,,,,,,71.23952154070139,0,original,"Grab the round base seal, press onto Purple"
+stamp_seal,demo_randomized,100011,policy_completed,False,400,400,8,531.566278426908,,,,,,72.51130099222064,0,original,Pick the seal with smooth texture and stamp on Yellow
+stamp_seal,demo_randomized,100012,policy_completed,True,132,400,3,532.0413811132312,,,,,,54.918688838370144,0,original,Pick the reddish rectangular seal and stamp Cyan
+stamp_seal,demo_randomized,100013,policy_completed,False,400,400,8,495.7087723305449,,,,,,74.37579282652587,0,original,Pick the red seal on rectangular base to stamp Purple
+stamp_seal,demo_randomized,100014,setup_error,False,,,,,,,,,,32.224097094498575,0,original,
+stamp_seal,demo_randomized,100015,policy_completed,True,131,400,3,551.8013642479976,,,,,,55.8045553220436,0,original,Grab the solid brown seal and stamp Brown
+turn_switch,demo_clean,100010,policy_completed,True,69,400,2,536.2547026015818,,,,,,47.07562216743827,0,original,Click the gray switch with black buttons directly.
+turn_switch,demo_clean,100011,policy_completed,False,400,400,8,499.13520459085703,,,,,,62.193156192079186,0,original,Activate the switch with darker rectangle directly
+turn_switch,demo_clean,100012,policy_completed,False,400,400,8,489.5409813616425,,,,,,62.16060436051339,0,original,Deploy the left arm to press the switch with curved red toggle
+turn_switch,demo_clean,100013,policy_completed,True,63,400,2,508.5625033825636,,,,,,49.334885966964066,0,original,Activate the small square switch made of plastic with the right arm.
+turn_switch,demo_clean,100014,policy_completed,False,400,400,8,475.84997944068164,,,,,,61.02509623579681,0,original,Activate the switch for turning circuits on off via the right arm
+turn_switch,demo_randomized,100010,policy_completed,False,400,400,8,537.7498561283574,,,,,,69.88040520250797,0,original,Click the gray switch with the left arm.
+turn_switch,demo_randomized,100011,policy_completed,False,400,400,8,501.39917561318725,,,,,,63.943063172511756,0,original,Use the right arm to press the small beige switch with angular sides.
+turn_switch,demo_randomized,100012,policy_completed,False,400,400,8,467.44373824913055,,,,,,72.78229294717312,0,original,Direct the right arm to click the gray switch
+turn_switch,demo_randomized,100013,policy_completed,False,400,400,8,499.75577858276665,,,,,,69.91448466666043,0,original,Press the hand-sized square electrical switch using the right arm
+turn_switch,demo_randomized,100014,policy_completed,True,68,400,2,474.13272969424725,,,,,,48.24885957874358,0,original,Click the switch with angled edges with the right arm

@@ -1,0 +1,137 @@
+{
+  "id": "9a64d1b0cf84",
+  "name": "lab20k full SFT global_step_6000",
+  "checkpoint": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/checkpoints/global_step_0/hf_ckpt",
+  "cli": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/lingbotvla_cli.yaml",
+  "norm": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/norm_stats.json",
+  "norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "files": [
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00001.safetensors",
+      "bytes": 1671922240,
+      "mtime_ns": 1792336652691373757,
+      "sha256": "c889c298e7ffbf1bd23f901ae7ce7df4b0048a4070b56b514b1b12d727bea2f4"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00002.safetensors",
+      "bytes": 1859914176,
+      "mtime_ns": 1792337039217039394,
+      "sha256": "b3d4a2b366f90e6663250526395975201e0b423e0f506c65124fb63095b99958"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00003.safetensors",
+      "bytes": 1819395368,
+      "mtime_ns": 1792336824274515192,
+      "sha256": "47a259acf47a1167bdc33f91bee00665eb4c78cbd483b37c4ac9b27433e505f3"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00004.safetensors",
+      "bytes": 1814129872,
+      "mtime_ns": 1792337002021319957,
+      "sha256": "596230eb9070612853d811ca7d299516b97be679988d4543b5a71eadb4612b58"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00005.safetensors",
+      "bytes": 1819395424,
+      "mtime_ns": 1792338188485047327,
+      "sha256": "de22ba3ffb4cf44d4aa026b2ec507a6abcb6087186d99390f09a44ad4d8f3c35"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00006.safetensors",
+      "bytes": 1814129912,
+      "mtime_ns": 1792338513600161755,
+      "sha256": "062f5ae730f53beec9cab3be36da487189d84da01c12f08d073d692ccf24109f"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00007.safetensors",
+      "bytes": 1819395416,
+      "mtime_ns": 1792338212531593023,
+      "sha256": "7c379a357705972d0f20d723aeb09c8bf54b83fc6e32e66d5292d6fe441aac92"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00008.safetensors",
+      "bytes": 1814129912,
+      "mtime_ns": 1792338492561103144,
+      "sha256": "747dbf341dcf0a182e537659f3ad8c33f7be191eff48f81ab325957fce2f3938"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00009.safetensors",
+      "bytes": 1819395416,
+      "mtime_ns": 1792371630791117537,
+      "sha256": "9b373a85ce02049d75b5a1162bb175139af382fd7d457d402ec94269281a3a8e"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00010.safetensors",
+      "bytes": 1900004504,
+      "mtime_ns": 1792371693765837786,
+      "sha256": "abff19cd5fa9275389a6ad2262417d7b3d47c3e7583f849c806d049a5df0769f"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00011.safetensors",
+      "bytes": 1875706408,
+      "mtime_ns": 1792371521332889390,
+      "sha256": "85220156d9beda41af3a2f9c2bba59b6789fcbbb7158544292b5936199940bcb"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00012.safetensors",
+      "bytes": 1898586136,
+      "mtime_ns": 1792371767694184624,
+      "sha256": "afb1cf2df032375772c15c44fc16bf8550f7e2ec654a727ccabf4b8047b592d7"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00013.safetensors",
+      "bytes": 1873340696,
+      "mtime_ns": 1792372583113197639,
+      "sha256": "b61ada13c1608d201f8feb1325b0e699daded78c7f05441276c82f0a89576d03"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt/model-00014.safetensors",
+      "bytes": 1704443260,
+      "mtime_ns": 1792372489085376144,
+      "sha256": "529136fdcfab0363536f99c4f6bc642563e6af959f19ba14a13fef628f3d2e12"
+    }
+  ],
+  "notes": "",
+  "created": "2026-10-20T00:36:30.649372+00:00",
+  "original_source": "/root/autodl-tmp/lingbot-eval/incoming/lab20k_full_sft_20261016/hf_ckpt",
+  "kind": "team_merged_checkpoint",
+  "robot_config": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/robot_config.yaml",
+  "robot_config_sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b",
+  "inference_overrides": {
+    "use_compile": true,
+    "enable_fp32": true,
+    "enable_gradient_checkpointing": false,
+    "vit_attn_implementation": "flash_attention_2",
+    "precompute_grid_thw": true
+  },
+  "metadata_files": [
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/lingbotvla_cli.yaml",
+      "sha256": "dd134215281752f5175becd048e8141081026b4969de0670600c876bc93c154e"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/original_training_cli.yaml",
+      "sha256": "873504da1a5932caa011f2c14cbfdda565269b27c538f5a9f13bb6b3a0503228"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/norm_stats.json",
+      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/robot_config.yaml",
+      "sha256": "1ef96ff0d213561174813345f8674fc693f4831cde144e00e5b9781d7147876b"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/checkpoints/global_step_0/hf_ckpt/config.json",
+      "sha256": "2b4c3657370726bb316a504921a171f469304a725bfc5c5e49ad54413b8d529a"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/checkpoints/global_step_0/hf_ckpt/model.safetensors.index.json",
+      "sha256": "1e5f378f8d61997a4ccefe52739518f6a65c22728ed3ee46b0ce6d3edbe42599"
+    },
+    {
+      "path": "/root/autodl-tmp/lingbot-eval/checkpoints/9a64d1b0cf84/checkpoints/global_step_0/hf_ckpt/runtime-construction.json",
+      "sha256": "ddd244944c73a32e6aa7fe7c21e73c6aefd3d9bf8e37d91f70ac2a80912094e9"
+    }
+  ]
+}

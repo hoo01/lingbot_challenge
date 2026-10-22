@@ -1,0 +1,2 @@
+# Preserve archived evidence bytes and the SHA-256 manifest across platforms.
+** -text -eol whitespace=trailing-space,space-before-tab,cr-at-eol
