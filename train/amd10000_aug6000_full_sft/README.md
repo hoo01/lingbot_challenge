@@ -53,7 +53,7 @@
 
 ## 16000推理模型交付
 
-HF仓库：`HumaLog1/Lab20k-FullSFT-AMD8`（私有）。不可变目录：`experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/`。固定revision：正在上传，完成远端逐文件SHA核验后补记；当前尚未归档。
+HF仓库：`Humalog2/Lab20k-FullSFT-Aug16000`（私有）。不可变目录：`experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/`。固定revision：正在上传，完成远端逐文件SHA核验后补记；当前尚未归档。
 
 仅发布dense FP32学生权重、模型/推理配置、原norm与provenance、机器人字段映射及固定tokenizer/processor；不发布Adam、教师权重、RNG/loader状态或DINO缓存。完整文件通过SSH中转和官方HF SDK上传，不使用自定义16MiB文件片段。safetensors是常规模型分片，索引含全部1708个参数/buffer键。
 

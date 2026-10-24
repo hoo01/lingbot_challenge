@@ -1,0 +1,1 @@
+{"passed": true, "native_model_config_parses": true, "qwen_config_and_tokenizer_load_from_pinned_assets": true, "vocab_length": 151669, "chunk_size": 50, "flow_steps": 10, "persistent_teacher_files_not_loaded_by_student_head_construction": true, "teacher_paths_removed_only": true, "gpu_or_model_tensors_loaded": false}
