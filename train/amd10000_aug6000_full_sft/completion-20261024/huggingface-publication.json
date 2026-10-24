@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "repo": "Humalog2/Lab20k-FullSFT-Aug16000",
+  "private": true,
+  "revision": "2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1",
+  "prefix": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000",
+  "verified_files": [
+    {
+      "path": "assets/norm_stats.json",
+      "bytes": 94770,
+      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
+    },
+    {
+      "path": "assets/norm_stats.provenance.json",
+      "bytes": 1549,
+      "sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682"
+    },
+    {
+      "path": "assets/robotwin_relative.yaml",
+      "bytes": 1008,
+      "sha256": "f4a1de74470ae9d7353bbfe7bdd173305bf391cecd05f4dd7f5276968e426c5e"
+    },
+    {
+      "path": "processor/Qwen3-VL-4B-Instruct/chat_template.json",
+      "bytes": 5502,
+      "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
+    },
+    {
+      "path": "processor/Qwen3-VL-4B-Instruct/config.json",
+      "bytes": 1505,
+      "sha256": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d"
+    },
+    {
+      "path": "processor/Qwen3-VL-4B-Instruct/generation_config.json",
+      "bytes": 269,
+      "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44"
+    },
+    {
+      "path": "processor/Qwen3-VL-4B-Instruct/merges.txt",
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    {
+      "path": "processor/Qwen3-VL-4B-Instruct/preprocessor_config.json",
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    {
+      "path": "processor/Qwen3-VL-4B-Instruct/tokenizer.json",
+      "bytes": 7032403,
+      "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
+    },
+    {
+      "path": "processor/Qwen3-VL-4B-Instruct/tokenizer_config.json",
+      "bytes": 10868,
+      "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+    },
+    {
+      "path": "processor/Qwen3-VL-4B-Instruct/video_preprocessor_config.json",
+      "bytes": 385,
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+    },
+    {
+      "path": "processor/Qwen3-VL-4B-Instruct/vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/config.json",
+      "bytes": 5549,
+      "sha256": "71d3a0cbcb373c0671372ab3b19765be3fe993b82dca9e6d23d98af0d5ed965c"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model.safetensors.index.json",
+      "bytes": 192017,
+      "sha256": "5f372bc3bd5b10c612922b13ff341e866aff357b7baa39a4a1267d0628efd289"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/runtime-construction.json",
+      "bytes": 97,
+      "sha256": "ddd244944c73a32e6aa7fe7c21e73c6aefd3d9bf8e37d91f70ac2a80912094e9"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference-cli.yaml",
+      "bytes": 4306,
+      "sha256": "b18803fdacbcbe3010805ef3132ca074cb3bc8f87200434dcdad152e64025925"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference_config.json",
+      "bytes": 1482,
+      "sha256": "f57e381a869959918b06b61be3a595790b43cf8c0ae12f209d40981446cdd5fd"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00001.safetensors",
+      "bytes": 1671922240,
+      "sha256": "cb0ed6b5fa787ec495f3b4e80894d31a1afc35f1d3f9825dc4e4b47ac5cc1a79"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00002.safetensors",
+      "bytes": 1859914176,
+      "sha256": "f7c70a739e636dba915d11dd92d3eec99c0e2cb7c0f1dfbfe0e7acad2779ad67"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00003.safetensors",
+      "bytes": 1819395368,
+      "sha256": "e7044e2eac074b6253761e94b0bbcf34b4c6cd396e113729aa3b4ecf63c0b060"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00004.safetensors",
+      "bytes": 1814129872,
+      "sha256": "aad60c487ba1eab97018d736116551d75cff0861db9a0c38ed391c39a0119e41"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00005.safetensors",
+      "bytes": 1819395424,
+      "sha256": "7945b14f3f1f9d166baaa0603db28f76892ad90d4772a917d313eae36083811f"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00006.safetensors",
+      "bytes": 1814129912,
+      "sha256": "cfb1efa9c8033f7b732d9ae826b17cbbc69a101ae99deb90a2d60b2250bda9d4"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00007.safetensors",
+      "bytes": 1819395416,
+      "sha256": "9a2336312d8b87380d1ea5e994e1bcb76582ac6331939c791a7d493dd89ee277"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00008.safetensors",
+      "bytes": 1814129912,
+      "sha256": "5a814e7ba2eb91066cd3dd2b04baafd0d4ed6b15b2ef14d3353ef9bf37f4370d"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00009.safetensors",
+      "bytes": 1819395416,
+      "sha256": "b14e060acff7ab4decc1955da35c3da493338f942bd2aa1307b74ca10f77ea17"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00010.safetensors",
+      "bytes": 1900004504,
+      "sha256": "d39a357a7c6d8366befdabf38b4970b1e535b0ff20d7b0068747d358b3c64a6a"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00011.safetensors",
+      "bytes": 1875706408,
+      "sha256": "4fd7ace76b59f3eb08dcea4e07dba4617f5a2803b863bcdda10f920dd4e29a55"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00012.safetensors",
+      "bytes": 1898586136,
+      "sha256": "0934f7017298802d76ac5578cba508125f052b083e5020ca36faebe23478af50"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00013.safetensors",
+      "bytes": 1873340696,
+      "sha256": "ba8f4afc5d80cfc5d9c0b7aae4e0c04deca72d39b42366492f08666b4d4d648d"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model-00014.safetensors",
+      "bytes": 1704443260,
+      "sha256": "6f0e465fe385ab862d3a0159761687ec50777a06b3bb0e064f1e7711260b5e1f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1742,
+      "sha256": "0be7e3a5586b6c8da995a7243785b5ea1cff9155a4dbcbcc2480eed417fb523f"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/release-manifest.json",
+      "bytes": 7336,
+      "sha256": "04a65afd4b040f0b2cbadce4c08aa8a30ca22daae008b509116178a9ef14a079"
+    },
+    {
+      "path": "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/SHA256SUMS",
+      "bytes": 4754,
+      "sha256": "98708613c72e7d1479ba064d8bd8116eecb47be7e2c4b7f3a9ed26b3ed2c0ad8"
+    }
+  ],
+  "optimizer_uploaded": false,
+  "teacher_weights_uploaded": false,
+  "normalization_and_processor_included": true,
+  "manual_16MiB_transfer_parts": false
+}

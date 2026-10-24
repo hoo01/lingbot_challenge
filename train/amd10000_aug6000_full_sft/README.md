@@ -53,7 +53,7 @@
 
 ## 16000推理模型交付
 
-HF仓库：`Humalog2/Lab20k-FullSFT-Aug16000`（私有）。不可变目录：`experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/`。固定revision：正在上传，完成远端逐文件SHA核验后补记；当前尚未归档。
+HF仓库：`Humalog2/Lab20k-FullSFT-Aug16000`（私有）。不可变目录：`experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/`。已上传并按固定revision逐文件核验：[`2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1`](https://huggingface.co/Humalog2/Lab20k-FullSFT-Aug16000/tree/2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000)。14份权重的Hub LFS SHA256、所有小文件的固定revision下载SHA256与导出清单一致；仓库保持私有。
 
 仅发布dense FP32学生权重、模型/推理配置、原norm与provenance、机器人字段映射及固定tokenizer/processor；不发布Adam、教师权重、RNG/loader状态或DINO缓存。完整文件通过SSH中转和官方HF SDK上传，不使用自定义16MiB文件片段。safetensors是常规模型分片，索引含全部1708个参数/buffer键。
 
@@ -62,3 +62,22 @@ HF仓库：`Humalog2/Lab20k-FullSFT-Aug16000`（私有）。不可变目录：`e
 推理使用原生LingbotVlaV2Policy加载dense权重；RGB为uint8 HWC0..255，三相机top/left-wrist/right-wrist，processor缩放一次；H50预测、10flow，动作每个horizon均相对同一q[t]恢复。执行25或50步属于另外的评测协议，不能混算。CPU导出和HF文件哈希核验不等同于新增GPU推理/闭环评测。
 
 **本记录没有16000模型的新Clean/Randomized成绩。** 训练loss下降不能换算为成功率；也不与旧四卡、AMD8k或队友R3的不同协议成绩混排。
+
+下载时保留共享推理资产，可只取本候选而不下载旧8000步权重：
+
+```python
+from huggingface_hub import snapshot_download
+snapshot_download(
+    repo_id="Humalog2/Lab20k-FullSFT-Aug16000",
+    revision="2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1",
+    allow_patterns=[
+        "experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/*",
+        "assets/*",
+        "processor/*",
+        "README.md",
+    ],
+    local_dir="sft16000-inference",
+)
+```
+
+先使用本机已有HF登录；推理工作目录切换到下载根目录，再解析该实验的`inference-cli.yaml`。完整可恢复训练状态仍留在原四卡数据盘，本次HF只承担推理模型交付。
