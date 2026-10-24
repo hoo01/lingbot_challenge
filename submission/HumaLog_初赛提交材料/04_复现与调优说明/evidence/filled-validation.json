@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "entry": "train_entry.py",
+      "args": [
+        "--stage",
+        "base20k",
+        "--check-only"
+      ],
+      "passed": true
+    },
+    {
+      "entry": "train_entry.py",
+      "args": [
+        "--stage",
+        "aug16000",
+        "--check-only"
+      ],
+      "passed": true
+    },
+    {
+      "entry": "eval_entry.py",
+      "args": [
+        "--check-only"
+      ],
+      "passed": true
+    },
+    {
+      "entry": "check_package.py",
+      "args": [],
+      "passed": true
+    },
+    {
+      "entry": "prepare_assets.py",
+      "args": [
+        "--help"
+      ],
+      "passed": true
+    },
+    {
+      "entry": "probe_renderer.py",
+      "args": [
+        "--help"
+      ],
+      "passed": true
+    },
+    {
+      "shell_syntax": true,
+      "passed": true
+    },
+    {
+      "base20k_only_root_bindings_changed": true,
+      "passed": true
+    },
+    {
+      "result_compiler_cases": 7,
+      "passed": true,
+      "fixtures_temporary": true,
+      "real_results_written": false
+    }
+  ],
+  "python_sources": 221,
+  "markdown_links_resolved": true,
+  "new_gpu_jobs": 0,
+  "live_process_changes": 0,
+  "independent_gpu_validation": false,
+  "complete_training_pipeline_portability": false,
+  "real_results_written": false
+}

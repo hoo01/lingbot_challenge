@@ -1,0 +1,445 @@
+{
+  "adjust_bottle": {
+    "source_sha256": "4f76b35e718a4c5a364dae564d35d68268755818d9062e3ed4ff393d158d0548",
+    "object_expressions": {
+      "{A}": "f'001_bottle/base{self.model_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "beat_block_hammer": {
+    "source_sha256": "90269f15f9ce274fb5bcad703c47b0b552ff5a2f0a3ff62d12dbe9a553018014",
+    "object_expressions": {
+      "{A}": "'020_hammer/base0'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "blocks_ranking_rgb": {
+    "source_sha256": "0e632df38d9024e7952c0df7a1f59e3d011b537724e6e6588455dee4d4e6074b",
+    "object_expressions": {
+      "{A}": "'red block'",
+      "{B}": "'green block'",
+      "{C}": "'blue block'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "blocks_ranking_size": {
+    "source_sha256": "18ddb8ca5465f450ef03db292bcfc22e8e795fcb397f104fc24213a5fa063696",
+    "object_expressions": {
+      "{A}": "'large block'",
+      "{B}": "'medium block'",
+      "{C}": "'small block'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "click_alarmclock": {
+    "source_sha256": "f69a1ad4f1b483ab0dd82d8bad872e12047ed8d898f1fa4058de9e382ddeef49",
+    "object_expressions": {
+      "{A}": "f'046_alarm-clock/base{self.alarmclock_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "click_bell": {
+    "source_sha256": "a0b7673e6ef842738999acbccaaa3d01f86d62a147bb8387cb92163218db48ac",
+    "object_expressions": {
+      "{A}": "f'050_bell/base{self.bell_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "dump_bin_bigbin": {
+    "source_sha256": "3bd57fe9172d59731db1ccf1bc9605dfe3ef08a0f7224edc720ea4812c214611",
+    "object_expressions": {
+      "{A}": "f'063_tabletrashbin/base{self.deskbin_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "grab_roller": {
+    "source_sha256": "f0e1864199605acf59cf8982dded05129d873bb3934f200e47abafd918d41c89",
+    "object_expressions": {
+      "{A}": "f'102_roller/base{self.model_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "handover_block": {
+    "source_sha256": "5439712296d7e143d41f8e78b4ab86cd4fad7fb98f40f5f5abb067a462d17650",
+    "object_expressions": {},
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "handover_mic": {
+    "source_sha256": "41ed0f2561cc8f1ae2449ba405decd4f5d7e3b80243b60921598657551891b17",
+    "object_expressions": {
+      "{A}": "f'018_microphone/base{self.microphone_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "hanging_mug": {
+    "source_sha256": "8793ed6be6a80b18a10690767a1910c3c49a7a9e4887ecbdd48a191ca3e03034",
+    "object_expressions": {
+      "{A}": "f'039_mug/base{self.mug_id}'",
+      "{B}": "'040_rack/base0'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "lift_pot": {
+    "source_sha256": "347e06f3f9f82b1bc35882671bbbdea50b6e3c77fff0f7fb4449b024875402eb",
+    "object_expressions": {
+      "{A}": "f'{self.model_name}/base{self.model_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "move_can_pot": {
+    "source_sha256": "ea838bb2502199610eea6cc058a4ba5fc7abb01c3d8ee0705c44854ddca20186",
+    "object_expressions": {
+      "{A}": "f'060_kitchenpot/base{self.pot_id}'",
+      "{B}": "f'105_sauce-can/base{self.can_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "move_pillbottle_pad": {
+    "source_sha256": "a5db7c65db15c2273d1f9e99fab8fc00533a27b740a45161c9402d43b8aa6824",
+    "object_expressions": {
+      "{A}": "f'080_pillbottle/base{self.pillbottle_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "move_playingcard_away": {
+    "source_sha256": "edf557d5a29ab724860651e24398e03c400a71e4c82bdbf2cedd3958fbfb6cc2",
+    "object_expressions": {
+      "{A}": "f'081_playingcards/base{self.playingcards_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "move_stapler_pad": {
+    "source_sha256": "c2b7aa7bf4e896afc392a8cf1ac107b6982088a459c716de005a3412fcdedd6d",
+    "object_expressions": {
+      "{A}": "f'048_stapler/base{self.stapler_id}'",
+      "{B}": "self.color_name"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "open_laptop": {
+    "source_sha256": "b826d4f36513dba6df3c17b65f1251bf3dbe2994857ba672f4d06c5900c0cac0",
+    "object_expressions": {
+      "{A}": "f'{self.model_name}/base{self.model_id}'"
+    },
+    "score_prelude": "face_prod = get_face_prod(self.laptop.get_pose().q, [1, 0, 0], [1, 0, 0])\narm_tag = ArmTag('left' if face_prod > 0 else 'right')\nself.arm_tag = arm_tag",
+    "score_attributes": [
+      "arm_tag"
+    ]
+  },
+  "open_microwave": {
+    "source_sha256": "ad679b7753fc50487ba8034570e3b94aa7bfc84756048b94580fa3d2516a1bd0",
+    "object_expressions": {
+      "{A}": "f'{self.model_name}/base{self.model_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "pick_diverse_bottles": {
+    "source_sha256": "95ebb80fa96eafd0b7ff5518251c2a7aa42f22ef9b7cfdda4e80eac511f06151",
+    "object_expressions": {
+      "{A}": "f'001_bottle/base{self.bottle1_id}'",
+      "{B}": "f'001_bottle/base{self.bottle2_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "pick_dual_bottles": {
+    "source_sha256": "422f23510f3662405dcb5518d1ebe8a0270935849a4b02a2585615ff7bffc4ef",
+    "object_expressions": {
+      "{A}": "f'001_bottle/base13'",
+      "{B}": "f'001_bottle/base16'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_a2b_left": {
+    "source_sha256": "8603f48febcb5b5b534dc7d973ac4651264ebb9c6fb60f199d4d2adc9e14d7cd",
+    "object_expressions": {
+      "{A}": "f'{self.selected_modelname_A}/base{self.selected_model_id_A}'",
+      "{B}": "f'{self.selected_modelname_B}/base{self.selected_model_id_B}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_a2b_right": {
+    "source_sha256": "1225e32207912e15855deff8aa9d4fd2cf425b4c5eeaeaf1eb795daaba4ac6ae",
+    "object_expressions": {
+      "{A}": "f'{self.selected_modelname_A}/base{self.selected_model_id_A}'",
+      "{B}": "f'{self.selected_modelname_B}/base{self.selected_model_id_B}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_bread_basket": {
+    "source_sha256": "50c433166301a7f0ac8615d041cc51aa673746b5b7d6fcc0b6f29790c560c053",
+    "object_expressions": {
+      "{A}": "f'076_breadbasket/base{self.basket_id}'",
+      "{B}": "f'075_bread/base{self.bread_id[0]}'"
+    },
+    "score_prelude": "",
+    "score_attributes": [],
+    "second_bread": "f'075_bread/base{self.bread_id[1]}'"
+  },
+  "place_bread_skillet": {
+    "source_sha256": "b1fa08d7f23d8bcd933ea7d64904fea17f67dbe58101c66e42c6addbfdbbcd73",
+    "object_expressions": {
+      "{A}": "f'106_skillet/base{self.skillet_id}'",
+      "{B}": "f'075_bread/base{self.bread_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_burger_fries": {
+    "source_sha256": "19e8a3428e677839e7e51ae6488752acc940a7d2bc8ee54587c354b422ba6d2c",
+    "object_expressions": {
+      "{A}": "f'006_hamburg/base{self.object1_id}'",
+      "{B}": "f'008_tray/base{self.tray_id}'",
+      "{C}": "f'005_french-fries/base{self.object2_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_can_basket": {
+    "source_sha256": "9f24e5ac98146babe93c68cb46baaf1d7bf21e38dbfc7c0b29e7020ae764e7f0",
+    "object_expressions": {
+      "{A}": "f'{self.can_name}/base{self.can_id}'",
+      "{B}": "f'{self.basket_name}/base{self.basket_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_cans_plasticbox": {
+    "source_sha256": "5d004110de53d95c7a6fc7721f9136d96b9792a61b97686f7b5489ff7ec48a5f",
+    "object_expressions": {
+      "{A}": "f'071_can/base{self.object1_id}'",
+      "{B}": "f'062_plasticbox/base{self.plasticbox_id}'",
+      "{C}": "f'071_can/base{self.object2_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_container_plate": {
+    "source_sha256": "7a288f27f61e96fe905d5cfb80eb0a4fd8e490c829f2f02149951266012a3aee",
+    "object_expressions": {
+      "{A}": "f'003_plate/base{self.plate_id}'",
+      "{B}": "f'{self.actor_name}/base{self.container_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_dual_shoes": {
+    "source_sha256": "f35c4a133e1de567b274cbd15f158f585eb05e32aeb05be88839d249d0d7ab9e",
+    "object_expressions": {
+      "{A}": "f'041_shoe/base{self.shoe_id}'",
+      "{B}": "f'007_shoe-box/base0'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_empty_cup": {
+    "source_sha256": "424bbd61f990ebfffb283eb152d17103c2a990edd20f68229203a96a2fd4d581",
+    "object_expressions": {
+      "{A}": "'021_cup/base0'",
+      "{B}": "'019_coaster/base0'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_fan": {
+    "source_sha256": "7e8be55f1f26ce6128c254b50464edc438a96f272581ccb19827521bc679c237",
+    "object_expressions": {
+      "{A}": "f'099_fan/base{self.fan_id}'",
+      "{B}": "self.color_name"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_mouse_pad": {
+    "source_sha256": "369bf399d0fd6a2687abb7d80b8feb6101c8b5405d33f9de63bbbdaaea7b73d0",
+    "object_expressions": {
+      "{A}": "f'047_mouse/base{self.mouse_id}'",
+      "{B}": "f'{self.color_name}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_object_basket": {
+    "source_sha256": "e809bd3eabac48cb34589f164291b04b9e2fbf6cc1ebd8c4024c0af8e265ed48",
+    "object_expressions": {
+      "{A}": "f'{self.object_name}/base{self.object_id}'",
+      "{B}": "f'{self.basket_name}/base{self.basket_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_object_scale": {
+    "source_sha256": "555f04a2a2fa0a41ad8dfccd771579d1cc2686fc65ad6c7ef297c98f4c9ba310",
+    "object_expressions": {
+      "{A}": "f'072_electronicscale/base{self.scale_id}'",
+      "{B}": "f'{self.selected_modelname}/base{self.selected_model_id}'"
+    },
+    "score_prelude": "self.arm_tag = ArmTag('right' if self.object.get_pose().p[0] > 0 else 'left')",
+    "score_attributes": [
+      "arm_tag"
+    ]
+  },
+  "place_object_stand": {
+    "source_sha256": "0b4db3a679230ff3732b9bfdfcfaba3437bd5f942043de9921240118849e3fe8",
+    "object_expressions": {
+      "{A}": "f'{self.selected_modelname}/base{self.selected_model_id}'",
+      "{B}": "f'074_displaystand/base{self.displaystand_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_phone_stand": {
+    "source_sha256": "719cf84ebf997b8d15d0ef9f997d439da62d64067a292b6008433da3536a0216",
+    "object_expressions": {
+      "{A}": "f'077_phone/base{self.phone_id}'",
+      "{B}": "f'078_phonestand/base{self.stand_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "place_shoe": {
+    "source_sha256": "9e9b29eaca488f41617127070add87f33900c37db0d286a4c4b08e2138cbfc6f",
+    "object_expressions": {
+      "{A}": "f'041_shoe/base{self.shoe_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "press_stapler": {
+    "source_sha256": "69274cf09aa1d4ba51469621461683b5225b8f98cf7837f821e848196ce51f9c",
+    "object_expressions": {
+      "{A}": "f'048_stapler/base{self.stapler_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "put_bottles_dustbin": {
+    "source_sha256": "1c03a4b227daa7d285fa366944f1f75773e32dc6a7b73ab693217a13fcd42795",
+    "object_expressions": {
+      "{A}": "f'114_bottle/base{self.bottle_id[0]}'",
+      "{B}": "f'114_bottle/base{self.bottle_id[1]}'",
+      "{C}": "f'114_bottle/base{self.bottle_id[2]}'",
+      "{D}": "f'011_dustbin/base0'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "put_object_cabinet": {
+    "source_sha256": "1de25dd513b4ad29e158440eefb28fb050be95d557c7df1b87578168ff35a7b2",
+    "object_expressions": {
+      "{A}": "f'{self.selected_modelname}/base{self.selected_model_id}'",
+      "{B}": "f'036_cabinet/base{0}'"
+    },
+    "score_prelude": "arm_tag = ArmTag('right' if self.object.get_pose().p[0] > 0 else 'left')\nself.arm_tag = arm_tag\nself.origin_z = self.object.get_pose().p[2]",
+    "score_attributes": [
+      "arm_tag",
+      "origin_z"
+    ]
+  },
+  "rotate_qrcode": {
+    "source_sha256": "382165e22a2a52a73958ff69c662e57a4d1f0bc8cb7cecf3e9dd1f5ba11defa9",
+    "object_expressions": {
+      "{A}": "f'070_paymentsign/base{self.model_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "scan_object": {
+    "source_sha256": "860dfe2cc86d180096089bc87502c7904f7ce2efb64fb32620c1720ca0178c2b",
+    "object_expressions": {
+      "{A}": "f'112_tea-box/base{self.object_id}'",
+      "{B}": "f'024_scanner/base{self.scanner_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "shake_bottle": {
+    "source_sha256": "2e37395b302eb37ecac39b2a676ea119c4bf7a1dcc9e6df75cd683a5cf37b026",
+    "object_expressions": {
+      "{A}": "f'001_bottle/base{self.bottle_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "shake_bottle_horizontally": {
+    "source_sha256": "def5f373a3a289c946bb32c6d01145672432dbe1d2b71a10992e5280d5f8dead",
+    "object_expressions": {
+      "{A}": "f'001_bottle/base{self.bottle_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "stack_blocks_three": {
+    "source_sha256": "b19f1f1c5a3a2c7c7312a4e1b2e577ccd269ebb0c444c287fecbc16ff5b47fb9",
+    "object_expressions": {
+      "{A}": "'red block'",
+      "{B}": "'green block'",
+      "{C}": "'blue block'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "stack_blocks_two": {
+    "source_sha256": "4e92a679cb5be4ef87a1b842432c930560a2c9b539a4cbcee0161e2b2112f526",
+    "object_expressions": {
+      "{A}": "'red block'",
+      "{B}": "'green block'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "stack_bowls_three": {
+    "source_sha256": "95848e9c2987e64fef2cfd928128d7a19967ba600c57dc7a6b7f1c9ea5b358e6",
+    "object_expressions": {
+      "{A}": "f'002_bowl/base3'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "stack_bowls_two": {
+    "source_sha256": "3e3217c277d84a0838739d55a0061a9acb3315240b5a99c6607d9637ea719637",
+    "object_expressions": {
+      "{A}": "f'002_bowl/base3'",
+      "{B}": "f'002_bowl/base3'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "stamp_seal": {
+    "source_sha256": "28a159e27aa76459355fa1f81e962815c62ee6435727039d73664b7eb6731b82",
+    "object_expressions": {
+      "{A}": "f'100_seal/base{self.seal_id}'",
+      "{B}": "f'{self.color_name}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  },
+  "turn_switch": {
+    "source_sha256": "035e108a861f94f61369ba2221431e123b7ac231e8de683d8bf38090bf021f9a",
+    "object_expressions": {
+      "{A}": "f'056_switch/base{self.model_id}'"
+    },
+    "score_prelude": "",
+    "score_attributes": []
+  }
+}

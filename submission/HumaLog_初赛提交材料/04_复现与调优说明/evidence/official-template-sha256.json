@@ -1,0 +1,18 @@
+{
+  "代码材料目录要求.md": {
+    "bytes": 858,
+    "sha256": "73f27ef2dc09d093fc93e66ffda739f2813dc55053e7ddd34bab9ceb06b5f23a"
+  },
+  "初赛评测结果模板_JSON版.json": {
+    "bytes": 6176,
+    "sha256": "f3c2a028fc2d65001a4157f367de1e887cce3ec6efe863bdcdb7f16641511fa8"
+  },
+  "复现与调优说明模板.md": {
+    "bytes": 771,
+    "sha256": "bc9fdb4389302eaa1e3957aa5678f6ce8b283e0acf25e0514e815de658819323"
+  },
+  "真机Demo项目说明模板.md": {
+    "bytes": 496,
+    "sha256": "cc3ef52628f9d9488698079ff26c4e3c0d4714906581e54abf7de5ae1d971a7b"
+  }
+}

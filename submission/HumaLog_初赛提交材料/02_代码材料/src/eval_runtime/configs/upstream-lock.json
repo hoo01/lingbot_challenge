@@ -1,0 +1,17 @@
+{
+  "official_revision": "be969b8fd117fb70550c5d4bf4bc328211b5b1b6",
+  "pristine_source_sha256": {
+    "deploy/lingbot_vla_v2_policy.py": "ede2f532ea9cf06acd49fadb6915c5b8da2caa09dbd342cfb82754f182f386d2",
+    "lingbotvla/models/vla/lingbot_vla/modeling_lingbot_vla_v2.py": "9b3c9a2ad6823f9d58da51b732477785a1e4db0d29db80e030e094c7b605e40c",
+    "lingbotvla/models/vla/lingbot_vla/qwen2_action_expert.py": "2221459c676c27eb70e13edd29d6e25c2c6008a1fc3f0b7c820b8abbbf11aff6"
+  },
+  "normalization_sha256": "488ec6569c30dd69419358241efdb2e6c3488117768e7028a1e891be83e10db8",
+  "historical_crlf": {
+    "pristine_source_sha256": {
+      "deploy/lingbot_vla_v2_policy.py": "6c0044419bb35913955be62bfc2ab9fa3340475aad5e4c0695db0307e89e7b32",
+      "lingbotvla/models/vla/lingbot_vla/modeling_lingbot_vla_v2.py": "fc89f20138e0cc9c416137ce582fa85ecebee6de1880fe77c7237ba2c328e98b",
+      "lingbotvla/models/vla/lingbot_vla/qwen2_action_expert.py": "0141148030c297fd8aab8ef25f7f1783e5eca19135cc1d887141ec95d4c8725f"
+    },
+    "normalization_sha256": "9663de18b706c0faf4236f96dcfc977c11d3771245a18c61ee16bdc7ad4071b8"
+  }
+}

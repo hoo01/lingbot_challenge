@@ -1,0 +1,14 @@
+# Model payloads belong in the complete submission archive / Hugging Face.
+**/03_模型权重/checkpoint/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.gguf
+*.zip
+*.tar
+*.tar.gz
+__pycache__/
+*.py[cod]

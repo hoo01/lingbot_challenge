@@ -1,0 +1,77 @@
+{
+  "stage_start": 10000,
+  "stage_final": 16000,
+  "stage_optimizer_updates": 6000,
+  "scalar_scope": "post-geometry-switch 11001..16000 only; discarded old 11001..11061 excluded",
+  "rows": 5000,
+  "merged_overlap_equal": 735,
+  "all_losses_finite": true,
+  "blocks1000": [
+    {
+      "start": 11001,
+      "end": 12000,
+      "count": 1000,
+      "mean": 0.009898726145426433,
+      "median": 0.009344736735026041,
+      "maximum": 0.08606719970703125
+    },
+    {
+      "start": 12001,
+      "end": 13000,
+      "count": 1000,
+      "mean": 0.009006095250447592,
+      "median": 0.008538564046223957,
+      "maximum": 0.03147379557291667
+    },
+    {
+      "start": 13001,
+      "end": 14000,
+      "count": 1000,
+      "mean": 0.00841561508178711,
+      "median": 0.0078277587890625,
+      "maximum": 0.060512542724609375
+    },
+    {
+      "start": 14001,
+      "end": 15000,
+      "count": 1000,
+      "mean": 0.007961293538411459,
+      "median": 0.007481892903645833,
+      "maximum": 0.06314722696940105
+    },
+    {
+      "start": 15001,
+      "end": 16000,
+      "count": 1000,
+      "mean": 0.007570987701416016,
+      "median": 0.007073084513346354,
+      "maximum": 0.059549967447916664
+    }
+  ],
+  "final1000_first500": {
+    "start": 15001,
+    "end": 15500,
+    "count": 500,
+    "mean": 0.0075789019266764325,
+    "median": 0.007116953531901042,
+    "maximum": 0.024926503499348957
+  },
+  "final1000_last500": {
+    "start": 15501,
+    "end": 16000,
+    "count": 500,
+    "mean": 0.007563073476155599,
+    "median": 0.007015228271484375,
+    "maximum": 0.059549967447916664
+  },
+  "final1000_vs_previous1000_percent": -4.902542973856006,
+  "final1000_vs_first1000_percent": -23.515535330633586,
+  "clipped_updates_last1000": 0,
+  "maximum_gradient_last1000": 0.6892783641815186,
+  "ema": false,
+  "new_final16000_closed_loop_evaluation": false,
+  "source_files_sha256": {
+    "geometry-loss-history-20261024T085843Z": "770d371087dc955d3a78ae3772be8b96020d94a42ff17413cd16c83b40dcac17",
+    "final16000-20261024T114943Z": "8a53d0a21d8b3abaddd94f270db469771cce73760892145ea81cff1857a6d43b"
+  }
+}

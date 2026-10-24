@@ -1,0 +1,89 @@
+{
+  "status": "accepted_training_facts_extracted_from_completion_and_exact_code",
+  "phase_start": 10000,
+  "final_step": 16000,
+  "additional_updates": 6000,
+  "lineage": "official_base -> Lab20k -> AMD8000 -> CUDA10000 -> augmentation16000",
+  "world": 4,
+  "microbatch": 16,
+  "accum": 3,
+  "global_batch": 192,
+  "full_sft": true,
+  "fp32_master": true,
+  "fp32_adam_states": true,
+  "mixed_compute": true,
+  "optimizer": "inherited_AdamW",
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0,
+  "global_gradient_clip": 1.0,
+  "foreach": false,
+  "fused": false,
+  "rewarm": 300,
+  "initial_lrs": {
+    "language": 2e-06,
+    "vision": 1e-06,
+    "action": 4e-06,
+    "projections": 4e-06
+  },
+  "peak_lrs": {
+    "language": 1e-05,
+    "vision": 1e-05,
+    "action": 2e-05,
+    "projections": 2e-05
+  },
+  "cosine_updates": 5700,
+  "final_lr_ratio": 0.3,
+  "save_every": 1000,
+  "data": {
+    "clean_only": true,
+    "trajectories": 2500,
+    "tasks": 50,
+    "original_starts": 549787,
+    "filtered_starts": 549737,
+    "official_sampler": true,
+    "task_reweighting": false,
+    "key_window_reweighting": false,
+    "exclude_place_shoe_episode45_starts": [
+      95,
+      144
+    ],
+    "filter_sha256": "30e7c8c018e1d2110bc255a2f03051034a679afd01c122b68ec2052878f410c5"
+  },
+  "augmentation": {
+    "steady_branch_probabilities": {
+      "plain": 0.1,
+      "ordinary": 0.33,
+      "protected_background_rectangle": 0.5,
+      "whole_primary_mask": 0.07
+    },
+    "geometry_active_after_step": 11000,
+    "geometry_global_request_probability": 0.45,
+    "scale": [
+      0.9,
+      1.1
+    ],
+    "translation_each_axis_fraction_strictly_less_than": 0.06,
+    "rotation": false,
+    "shear": false,
+    "flip": false,
+    "wrists_geometry": false,
+    "rectangle_effective_area": [
+      0.05,
+      0.2
+    ],
+    "rectangles_may_be_clipped_to_safe_background": true,
+    "protected_pixel_overlap_allowed": false,
+    "fallback": "ordinary",
+    "main_mask_fill_raw255": 127.5,
+    "strong_student_weak_teacher": true,
+    "auxiliary_invalid_regions_masked": true
+  },
+  "ema": false,
+  "new_lora": false,
+  "frozen_teachers": true,
+  "source_identity_file": "frozen-training-identity.json"
+}

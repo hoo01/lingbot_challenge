@@ -1,0 +1,3 @@
+# Preserve frozen source, receipt and CSV bytes used by content hashes.
+* -text
+*.sh text eol=lf

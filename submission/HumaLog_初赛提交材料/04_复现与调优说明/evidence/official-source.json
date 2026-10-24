@@ -1,0 +1,9 @@
+{
+  "url": "https://tianchi.aliyun.com/v3/proxy/competition/api/race/getDetail?raceId=532514",
+  "http_status": 200,
+  "bytes": 56792,
+  "sha256": "dc62744893832f286db48555fa40111218edaaf5159211ce0bdaa0c2e96db812",
+  "success": true,
+  "retrieved_utc_recorded_at_preparation": "2026-10-24T15:58:57.095284+00:00",
+  "public_page": "https://tianchi.aliyun.com/competition/entrance/532514/information"
+}

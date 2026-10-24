@@ -1,0 +1,7 @@
+# Teacher runtime pins. Omit unused MLflow tracking, cloud storage, and PLY export.
+# MLflow requires pyarrow<20; plyfile 1.1.4 requires NumPy>=2, conflicting with core pins.
+accelerate==1.7.0
+python-json-logger==3.3.0
+click==8.1.7
+trimesh==4.5.1
+moderngl==5.12.0

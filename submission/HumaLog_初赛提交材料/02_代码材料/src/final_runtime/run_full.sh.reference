@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+source /mnt/raid1/lingbotvla_smoke_20261009/code/lab_teacher_smoke/env.sh
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONPATH="/mnt/raid1/lingbotvla_sft_aug6000_b192_20261022/train_geometryfix11000_requested:$ROOT/code/src:$ROOT/code/lingbot-vla-v2"
+export TRITON_CACHE_DIR="/mnt/raid1/lingbotvla_sft_aug6000_b192_20261022/cache/triton"
+export TORCHINDUCTOR_CACHE_DIR="/mnt/raid1/lingbotvla_sft_aug6000_b192_20261022/cache/inductor"
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=4
+cd /mnt/raid1/lingbotvla_sft_aug6000_b192_20261022
+exec torchrun --standalone --nnodes=1 --nproc_per_node=4 -- /mnt/raid1/lingbotvla_sft_aug6000_b192_20261022/train_geometryfix11000_requested/worker_bootstrap.py "$@"

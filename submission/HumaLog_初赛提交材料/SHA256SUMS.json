@@ -1,0 +1,1439 @@
+{
+  "schema_version": 1,
+  "local_document_copy": true,
+  "large_weight_bytes_staged_on_server": 25503888740,
+  "files": {
+    "01_评测结果/README.md": {
+      "bytes": 1009,
+      "sha256": "e0e3f85c24ed26ce49fd26b2a0ce1de8b94d791d2a842402f7b85cfa6d528f3a"
+    },
+    "01_评测结果/results.pending.json": {
+      "bytes": 9368,
+      "sha256": "c533124621f700d2b21c67c1ec2fbaaed0dece9d2c1b213eb9d9ae836ba0c936"
+    },
+    "02_代码材料/ASSETS.md": {
+      "bytes": 3742,
+      "sha256": "8916caf5fb91a099f80b29e42d93803e47003c82ba184e5b02368bdebe47cee1"
+    },
+    "02_代码材料/configs/assets/norm_stats.json": {
+      "bytes": 94770,
+      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
+    },
+    "02_代码材料/configs/assets/norm_stats.provenance.json": {
+      "bytes": 1549,
+      "sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682"
+    },
+    "02_代码材料/configs/assets/robotwin_relative.yaml": {
+      "bytes": 1008,
+      "sha256": "f4a1de74470ae9d7353bbfe7bdd173305bf391cecd05f4dd7f5276968e426c5e"
+    },
+    "02_代码材料/configs/data-filter-plan.json": {
+      "bytes": 161011,
+      "sha256": "30e7c8c018e1d2110bc255a2f03051034a679afd01c122b68ec2052878f410c5"
+    },
+    "02_代码材料/configs/eval-16000.accepted.json": {
+      "bytes": 10384,
+      "sha256": "1ff10f8eebc7e30e653cba96639810a7964dfe71403fb90c88d281514475a873"
+    },
+    "02_代码材料/configs/eval-contract.json": {
+      "bytes": 16255,
+      "sha256": "8508ec80bd206a42274d62a5bbe9331ecfe343fa4a31e1b64f302412f4199dae"
+    },
+    "02_代码材料/configs/frozen-training-identity.json": {
+      "bytes": 3820,
+      "sha256": "cbc9e649bc1992dc8bfc71d8578c3a87517cb1820f096090ecbe1caedd1a652f"
+    },
+    "02_代码材料/configs/inference-cli.yaml": {
+      "bytes": 4306,
+      "sha256": "b18803fdacbcbe3010805ef3132ca074cb3bc8f87200434dcdad152e64025925"
+    },
+    "02_代码材料/configs/inference_config.json": {
+      "bytes": 1482,
+      "sha256": "f57e381a869959918b06b61be3a595790b43cf8c0ae12f209d40981446cdd5fd"
+    },
+    "02_代码材料/configs/model-audit/runtime-construction.json": {
+      "bytes": 101,
+      "sha256": "db718f04ee250df0de4b757a910921aaba0d29626f0dd64ac7415638d2458c23"
+    },
+    "02_代码材料/configs/model-audit/runtime-parameter-audit.json": {
+      "bytes": 266598,
+      "sha256": "db7a26cca3d2488f95ec62d8bb7e9d1dcb595eb2884a362716e1ec7e9e5828c9"
+    },
+    "02_代码材料/configs/official-task-list.json": {
+      "bytes": 1366,
+      "sha256": "64d5ec85cf1880439a8aa7eb807066cd982b36ffc542e74cb85c6c5f152d94e5"
+    },
+    "02_代码材料/configs/robotwin-source-lock.json": {
+      "bytes": 23339,
+      "sha256": "7ed61b29b1290dc5db4d4ca187f4bfda978e465290af07cf233ebceb85709793"
+    },
+    "02_代码材料/configs/source-lock.json": {
+      "bytes": 2268,
+      "sha256": "0664fde20a5bffb8151355be89343106058efcc61de472cf822eb66ab0bc3f2c"
+    },
+    "02_代码材料/configs/submission-source-lock.json": {
+      "bytes": 26459,
+      "sha256": "d0a476c18bb6bb75dea8ce01d887c4855ae660f58b32a099f990296c9ff78327"
+    },
+    "02_代码材料/configs/train-aug6000.accepted.json": {
+      "bytes": 2315,
+      "sha256": "75428d997ff2e1161186ce5b5462b6383b8a53465edb5959a7adadb2c6ccfe78"
+    },
+    "02_代码材料/environment/observed-environments.json": {
+      "bytes": 10248,
+      "sha256": "3ca502f2069db948cd06dfa783a2e3eede926b3162bcf2c5921de6b0f88a5208"
+    },
+    "02_代码材料/environment/requirements-depth-runtime.txt": {
+      "bytes": 264,
+      "sha256": "4c3c513a85100fd95b8f60ccbc0355a9318cf3c3ee55a91ec545e0fdb3ef03a4"
+    },
+    "02_代码材料/environment/requirements-depth.txt": {
+      "bytes": 142,
+      "sha256": "a1ac0bb91fa6f95ed05fed1d1b5190b12f54f99b8fe8aac95bc477b621a538c8"
+    },
+    "02_代码材料/environment/requirements.txt": {
+      "bytes": 789,
+      "sha256": "3f80a93f566a43786cb2d15a2b20b7576b7a576fd6ddf78ad91ce846183cf2f3"
+    },
+    "02_代码材料/environment/sim.installed.txt": {
+      "bytes": 3172,
+      "sha256": "8746e8aca1128826421a0429f87579212de15da1883fb3f7f70482766497d7c4"
+    },
+    "02_代码材料/environment/train.installed.txt": {
+      "bytes": 3356,
+      "sha256": "0878ecadfcd3297d5762107d9f39b4e08bae5d47e85e8284942e32267c819a7c"
+    },
+    "02_代码材料/eval.sh": {
+      "bytes": 189,
+      "sha256": "bc8e71b0ac1ea146611d57055099859692ea5cdc6069705f02022bb5dcc1c887"
+    },
+    "02_代码材料/INSTALL.md": {
+      "bytes": 4461,
+      "sha256": "e8f21b902978bbd448455369ea4c65e1624687fea6b459dbe2ab968a5d78af6c"
+    },
+    "02_代码材料/licenses/LingBot-depth.LICENSE": {
+      "bytes": 11557,
+      "sha256": "7ff225cef2ae62d13819a84e18ce96460848a50425b9157ace4f53b70d460308"
+    },
+    "02_代码材料/licenses/LingBot-VLA-v2.LICENSE": {
+      "bytes": 11560,
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    "02_代码材料/licenses/MoGe.LICENSE": {
+      "bytes": 12724,
+      "sha256": "be23f97f4a4a7f0d5592a958a5f0a1ea2cda34aee75ffaff98284978bea32d7e"
+    },
+    "02_代码材料/licenses/RoboTwin.LICENSE": {
+      "bytes": 1101,
+      "sha256": "2aa88b4e1d3257a210a516ad3df3d7f322d03c4285e432d35976980cdb9622fa"
+    },
+    "02_代码材料/README.md": {
+      "bytes": 4288,
+      "sha256": "132afdaa97f84c508512f343640ff0265365dd35af5654ddad684dfbb11fab76"
+    },
+    "02_代码材料/src/base20k/fresh_recipe.py": {
+      "bytes": 4221,
+      "sha256": "7420d7c46a3fcac11943f53363af8dc99c846bc9e1de48fccea2b8819d910e00"
+    },
+    "02_代码材料/src/base20k/raw255_augmentation.py": {
+      "bytes": 1548,
+      "sha256": "bd51a0fa334d3f100740392c8c349a43aac6b13737cefe8f3cc15932ef36208e"
+    },
+    "02_代码材料/src/base20k/train.py": {
+      "bytes": 26487,
+      "sha256": "16d569d1284abadbaf483a4d753ebc3963ece864ab48a8a26537fbea71d5d519"
+    },
+    "02_代码材料/src/base20k/train_fresh.py": {
+      "bytes": 25213,
+      "sha256": "56def84178e073b51e91d7719d42568c329a6f9bff330110c26f152fd58b9ad4"
+    },
+    "02_代码材料/src/check_package.py": {
+      "bytes": 2453,
+      "sha256": "ed8004ca2f65002651dc3b7d3db30848e836306037cbc2b6035ad81b098d4d85"
+    },
+    "02_代码材料/src/data_helpers/lingbot_competition/__init__.py": {
+      "bytes": 66,
+      "sha256": "e5afd3c3f4917e8236c6e04cece94e0159bb46d28b56278ba1f64f946ecbf3e0"
+    },
+    "02_代码材料/src/data_helpers/lingbot_competition/data.py": {
+      "bytes": 8487,
+      "sha256": "572f504d93f54db786d01bd8467cd72e11feabd2a70972556bd638bbdcde5f63"
+    },
+    "02_代码材料/src/data_helpers/lingbot_competition/robotwin_codec.py": {
+      "bytes": 17675,
+      "sha256": "90df99c52d3f127a09f5960680113f17e8b3e25b2e3cb9117abdeb249d7a337e"
+    },
+    "02_代码材料/src/eval_entry.py": {
+      "bytes": 10532,
+      "sha256": "18f3914ca16ccdf93ee10d6fe17ce78b40d0ba505bc1f7d696b18e915e2d010f"
+    },
+    "02_代码材料/src/eval_runtime/configs/upstream-lock.json": {
+      "bytes": 1115,
+      "sha256": "a7d63198fceacb6e51aa61adc2a061d05ff8c6d96c4e5bd6b8c59237a4a8096f"
+    },
+    "02_代码材料/src/eval_runtime/scripts/audit_shard16000.py": {
+      "bytes": 5816,
+      "sha256": "504d51b5d06a2108679f2a4a6ba261d5d475783a9ced91c312fd3e1ef385eab4"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_adjust_bottle_smoke.py": {
+      "bytes": 6184,
+      "sha256": "8dc08f3ac9077cd788bff736e72bb473a3ba8a998274153403385d5e2f57fae4"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_dev_suite.py": {
+      "bytes": 40831,
+      "sha256": "3d15e0349962073b412e2219038cbbd60674799247741dfe1f207ae985a2add7"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_expert.py": {
+      "bytes": 4439,
+      "sha256": "59a0a3aefcd3f507225a61bc9c105faa84fff66efc836f26650b132628b02258"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_isolated.py": {
+      "bytes": 11636,
+      "sha256": "b7d23ed98a06bad46eb2cb73583154ff22268a3e5cee51b447141ae4ea8f03c3"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_official_flow.py": {
+      "bytes": 5866,
+      "sha256": "7af749244ffe235e13b3b7832783d7fb0227d7725ee2105e93aa51ca4e75407b"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_official_valid.py": {
+      "bytes": 5565,
+      "sha256": "54ed361656396ae9d2f813e0a1a78e0bc190ced410df0063327e5be30adec297"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_policy_entry.py": {
+      "bytes": 2394,
+      "sha256": "0e67fc4b3abeb8052ca3d09488ed59c9e4176bf0b47f0398cab750f9ec3bd703"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_policy_entry_sources.json": {
+      "bytes": 15322,
+      "sha256": "485f7a6792aa4987c32ce68c6edbfbba5cf3d92ae71b3ee1c101ed7fc8e1781d"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_protocol_contract.py": {
+      "bytes": 1953,
+      "sha256": "d4e1c13e43eec399c5ee4eaefd6cebdb5a36e55c80700b4daf0977d97ce3e6a6"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_research4.py": {
+      "bytes": 8078,
+      "sha256": "09d96c7e3f3d25f8e30a7aa74908d0d039aefa03a4493503d44326a8df875564"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_task_metadata.py": {
+      "bytes": 7052,
+      "sha256": "b304e4ec17db3c0b733d659e1f8d5ad56d94b16dcaa0b847c202db3c9eaaf715"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_telemetry.py": {
+      "bytes": 833,
+      "sha256": "cfc5645b24e9ddb9d21b6f50adbd0fcd3d036b92b1c79f270e90968d836a9285"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_traceback.py": {
+      "bytes": 1612,
+      "sha256": "ec46e51e95d70bf4456f08b097200019a40056b754817172e3f5b0da672274df"
+    },
+    "02_代码材料/src/eval_runtime/scripts/eval_video.py": {
+      "bytes": 12832,
+      "sha256": "80d0edbc2b61960148274814a9fccd62189145f14f0b6c21f1c76af1171fb105"
+    },
+    "02_代码材料/src/eval_runtime/scripts/normalization_check.py": {
+      "bytes": 4742,
+      "sha256": "55f47c8bf2a41b093875b4c56902f99c170d3c887f24f4fda1a6adb26306226c"
+    },
+    "02_代码材料/src/eval_runtime/scripts/run_shard16000.py": {
+      "bytes": 7618,
+      "sha256": "c6e95fb8c5214162daf48854c2f11a9951ac66ebe6f82bbf7082ca39772080f9"
+    },
+    "02_代码材料/src/eval_runtime/scripts/serve_official_checkpoint.py": {
+      "bytes": 7324,
+      "sha256": "c74fbe795a0bea75428e78776dea51df67df065d9482bc8baaed9b117985a4b1"
+    },
+    "02_代码材料/src/eval_runtime/scripts/team_eval.py": {
+      "bytes": 6944,
+      "sha256": "199e8192323310f7db0dadba61f519b2c26b4fddf93b4e5de68091c3210b428d"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/__init__.py": {
+      "bytes": 66,
+      "sha256": "eec9e511e2e1a2f453f9dba67fb7e6c27909518ef7a0919cd8fec24a51f2fa7c"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/app.py": {
+      "bytes": 6710,
+      "sha256": "105c00bf261d707a7d3da06171b8c2e9c8dffad436350309b5c5b5520c1959dc"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/asset_enumeration.py": {
+      "bytes": 4367,
+      "sha256": "835d0aa2bebe98b848edc24f832282741ecec95d9fcb4b61fab84d7974fbd446"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/camera_pairing.py": {
+      "bytes": 2726,
+      "sha256": "486b54929f3f565d84b42763f562d316e667e5bef5dc06c39fb61dc804ade26d"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/contracts.py": {
+      "bytes": 3388,
+      "sha256": "e36e913a0c0b6056fc3bf6959b69b58f5a5a4abe1cc2f1f9f7763f4cf0755079"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/expert_outcomes.py": {
+      "bytes": 2684,
+      "sha256": "6e2424cb6628f9827b41daa489626ea403b6e21fdaad2e4b9e6fedec2c23a6e8"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/expert_quota.py": {
+      "bytes": 4989,
+      "sha256": "a6589c02315cf8b04e71ea58c9dc10405e759eed79a97e7b7286295ea22b2888"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/fork2000_plan.py": {
+      "bytes": 3327,
+      "sha256": "26ef97142eef7a1ac1f8ce6e3de30f07df55c37cbd70dccc330b452d76ea9e79"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/fork2000_resume.py": {
+      "bytes": 1277,
+      "sha256": "070add0461c132237c168c3843e0878efdb56e49a0848c17caa4baedcd136201"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/fork2000_scope.py": {
+      "bytes": 117,
+      "sha256": "e28ccf83f207104680006692c900f5155a2a8771ce94ecef5d0baf967b9e51f9"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/host_migration.py": {
+      "bytes": 1050,
+      "sha256": "19efae9f148ac02028f5d7fcad9f4eac4e3a5624c525e325e94e4df6f704f4a9"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/paired_inputs.py": {
+      "bytes": 4074,
+      "sha256": "8b86986d20ecd1c7c81b4a6030ecbd6cf2344019c488e001dc49097a4a3af57e"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/planning.py": {
+      "bytes": 6073,
+      "sha256": "130254df2a2a40bf0da1a13d3d98b2ab7c0b391bb680a3092883b16962c34c57"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/reports.py": {
+      "bytes": 7820,
+      "sha256": "baae40fff9aba33ff3af0a4b882f846cf992049125b7e0a8df97f2501909e98c"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/resources.py": {
+      "bytes": 3166,
+      "sha256": "07211c9d4988565255554e1a02a67bad1da4db755e560ed5a5d8b424c0c1fba2"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/resume.py": {
+      "bytes": 24115,
+      "sha256": "c8a8a10a6a6144f5156a6f4ad102ddf087c41422dfc76a84b1534179c576153a"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/robot_contract.py": {
+      "bytes": 2455,
+      "sha256": "0a2647a0ff359fec75f853891e770d222cdc6aea41f3888230d10eadad626110"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/runner.py": {
+      "bytes": 9233,
+      "sha256": "a7c6b2f75089f252edbd0bee760c604cfd43a9b30b82c1902288c914b1e201b2"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/scene_replay.py": {
+      "bytes": 5010,
+      "sha256": "42250a472e1fa2c3c94c6e6eb2d27dcb5cd43cd090b13d7dcc77fc2b42641fa7"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/scheduling.py": {
+      "bytes": 578,
+      "sha256": "eb1baefd7551760fce812f878ae882e4994a5dceb9ecf4823ddd925a7c8e8fc5"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/servers.py": {
+      "bytes": 6647,
+      "sha256": "f0621e44955b3a2d56fb8970be70b0362bb87862b00d349e326d8dc312a8abc4"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/store.py": {
+      "bytes": 24116,
+      "sha256": "52b017fc39143409a380b7a3483239e69391de8f0099fb3a3d9fc6d74c87878e"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/timeout_outcomes.py": {
+      "bytes": 8900,
+      "sha256": "1440fc0e466b49ad5c042615dbbb6818357c3e5aaa7cf8020502be56ec28fefa"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/ui_app.py": {
+      "bytes": 219,
+      "sha256": "6514b8ba5df032e4ce917140bddfc72b24b0d38e7c28ecff5ad22d3eef8b42e2"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/ui_reports.py": {
+      "bytes": 7820,
+      "sha256": "baae40fff9aba33ff3af0a4b882f846cf992049125b7e0a8df97f2501909e98c"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/web/app.js": {
+      "bytes": 13962,
+      "sha256": "5c9ab683eb967b7121b082a3dabd427535645a55bcdfb1f1615e46eef00c2b97"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/web/index.html": {
+      "bytes": 9121,
+      "sha256": "5ab0ef122abfb387d6437666be4842cc0f3c9dd1c6c2f28430fdc30ccbc63d6e"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/web/style.css": {
+      "bytes": 9150,
+      "sha256": "f6e379220731a3d212679c3368e6fa21a462b188589ba3a1218fc20b3093e295"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/weight_precision_audit.py": {
+      "bytes": 3139,
+      "sha256": "950f26e2b59ceb8c8200faf18adc5a501efb936dfa580da850e75e093334a2ce"
+    },
+    "02_代码材料/src/eval_runtime/src/eval_platform/worker.py": {
+      "bytes": 3792,
+      "sha256": "81b95073a171ae8f76334f8b1cd2fee7ef24a18ef92cfdb606b07fbcfa10a0fe"
+    },
+    "02_代码材料/src/final_runtime/aug6000/__init__.py": {
+      "bytes": 266,
+      "sha256": "5d56cb5105cebdc897677ee2c4157aa7a569f62637afc037a1b87d28a568d9cf"
+    },
+    "02_代码材料/src/final_runtime/aug6000/allocation.py": {
+      "bytes": 2219,
+      "sha256": "9bcb31ca71eccbe5bd673781d4c9bed2e3604a99c549814ae9c8a4ea0d3151d6"
+    },
+    "02_代码材料/src/final_runtime/aug6000/foreground.py": {
+      "bytes": 10672,
+      "sha256": "3749f47a261d85b94b165efe7d10da80aa3c25353942e10c8bdba794c5747328"
+    },
+    "02_代码材料/src/final_runtime/aug6000/geometry.py": {
+      "bytes": 858,
+      "sha256": "faa5c5dc00e3e42d84e31132e4b972290f43b42d24481d06dce01d2b2c704fec"
+    },
+    "02_代码材料/src/final_runtime/aug6000/grounding.py": {
+      "bytes": 10785,
+      "sha256": "38328d2d2b04a3888219740f05c8169a0106c3838cc1fe3f84a9db7e045fca51"
+    },
+    "02_代码材料/src/final_runtime/aug6000/images.py": {
+      "bytes": 11401,
+      "sha256": "f05f2bd4800b879179d8482c78fab9f483598b991ff8147d6a0dbe4be6e24c5e"
+    },
+    "02_代码材料/src/final_runtime/aug6000/integration.py": {
+      "bytes": 4383,
+      "sha256": "eab7853b7199c5b585bb938e2b61d548596bbc38d498e6803a8b1af3726cdd48"
+    },
+    "02_代码材料/src/final_runtime/aug6000/losses.py": {
+      "bytes": 4997,
+      "sha256": "e7c9d84441491bfe7494a1cbfaad005dd6888f6da3ff634fdd43310c50fe0883"
+    },
+    "02_代码材料/src/final_runtime/aug6000/policy.py": {
+      "bytes": 5350,
+      "sha256": "9900c05c8b9bdb4488b0a7ed358458f75b9396c3c9b607136b4d3f4136a3c6ee"
+    },
+    "02_代码材料/src/final_runtime/aug6000/reader.py": {
+      "bytes": 6540,
+      "sha256": "afbe5d18c38c0c554bebea50375d104035beb96897da38c2d3762d87122529c0"
+    },
+    "02_代码材料/src/final_runtime/base_recipe.py": {
+      "bytes": 4221,
+      "sha256": "7420d7c46a3fcac11943f53363af8dc99c846bc9e1de48fccea2b8819d910e00"
+    },
+    "02_代码材料/src/final_runtime/checkpoint.py": {
+      "bytes": 12597,
+      "sha256": "4306920afb3f0644327484357b9c9e6de39b7e310f7873a050432168a977542f"
+    },
+    "02_代码材料/src/final_runtime/data.py": {
+      "bytes": 9009,
+      "sha256": "0511564cd9d36444df1c7901f43580535402f4d151807723523b3efc33715af4"
+    },
+    "02_代码材料/src/final_runtime/filtering.py": {
+      "bytes": 2095,
+      "sha256": "526fabf673b465c59522b51a6b74001f7bb23fbfe09240d34f4217b1fe88dd0d"
+    },
+    "02_代码材料/src/final_runtime/images.py": {
+      "bytes": 2977,
+      "sha256": "711369072773ee58a2389c6209067f6e93bb6cedcce62712dd2e48906b32178f"
+    },
+    "02_代码材料/src/final_runtime/official_sampler.py": {
+      "bytes": 1985,
+      "sha256": "9ef9dcd91fb180d14d0f0c1c5d13c4e4a28fadfcd2698dfafe0f4d27c67eb93e"
+    },
+    "02_代码材料/src/final_runtime/policy.py": {
+      "bytes": 2785,
+      "sha256": "6c0575387c5b33db633f6518cbfbf1aad78373db6a71270253e97995dc049ffc"
+    },
+    "02_代码材料/src/final_runtime/recipe.py": {
+      "bytes": 1719,
+      "sha256": "6237f19a196ddfba89d90b7f9ea2026ff412a08117d459a24bc467f45777144e"
+    },
+    "02_代码材料/src/final_runtime/run_full.sh.reference": {
+      "bytes": 748,
+      "sha256": "26bb1fc75aa0b3fd40eb4df1a1e804c71ba249b731aa7c63979b9d9e891c4d55"
+    },
+    "02_代码材料/src/final_runtime/stage_sampler.py": {
+      "bytes": 2943,
+      "sha256": "47c5094be76a05815ecd530c75c9d1143d3885c460a5899d608836513f4acd12"
+    },
+    "02_代码材料/src/final_runtime/support.py": {
+      "bytes": 25961,
+      "sha256": "957eb541b44c087fcd902621d921e06655286aee82e7ca6d5d191162f141e64d"
+    },
+    "02_代码材料/src/final_runtime/teacher_targets.py": {
+      "bytes": 2281,
+      "sha256": "47fdddfd45d1b643d67f90bdba598901356f0edf7b56ce48c0d7a3ff3b4438aa"
+    },
+    "02_代码材料/src/final_runtime/train_full.py": {
+      "bytes": 19326,
+      "sha256": "e921dee1df8e9907fc26f66a51787b9e135ad5f2cc65b854e36816fb7001ff8a"
+    },
+    "02_代码材料/src/final_runtime/worker_bootstrap.py": {
+      "bytes": 870,
+      "sha256": "aae9bc4250e3361e289e67230f4168bea35dac8110ef20623d4a868407f18c4c"
+    },
+    "02_代码材料/src/foreground/aug6000/__init__.py": {
+      "bytes": 266,
+      "sha256": "5d56cb5105cebdc897677ee2c4157aa7a569f62637afc037a1b87d28a568d9cf"
+    },
+    "02_代码材料/src/foreground/aug6000/allocation.py": {
+      "bytes": 2219,
+      "sha256": "9bcb31ca71eccbe5bd673781d4c9bed2e3604a99c549814ae9c8a4ea0d3151d6"
+    },
+    "02_代码材料/src/foreground/aug6000/foreground.py": {
+      "bytes": 10672,
+      "sha256": "3749f47a261d85b94b165efe7d10da80aa3c25353942e10c8bdba794c5747328"
+    },
+    "02_代码材料/src/foreground/aug6000/geometry.py": {
+      "bytes": 858,
+      "sha256": "faa5c5dc00e3e42d84e31132e4b972290f43b42d24481d06dce01d2b2c704fec"
+    },
+    "02_代码材料/src/foreground/aug6000/grounding.py": {
+      "bytes": 10785,
+      "sha256": "38328d2d2b04a3888219740f05c8169a0106c3838cc1fe3f84a9db7e045fca51"
+    },
+    "02_代码材料/src/foreground/aug6000/images.py": {
+      "bytes": 11401,
+      "sha256": "f05f2bd4800b879179d8482c78fab9f483598b991ff8147d6a0dbe4be6e24c5e"
+    },
+    "02_代码材料/src/foreground/aug6000/integration.py": {
+      "bytes": 4383,
+      "sha256": "eab7853b7199c5b585bb938e2b61d548596bbc38d498e6803a8b1af3726cdd48"
+    },
+    "02_代码材料/src/foreground/aug6000/losses.py": {
+      "bytes": 4997,
+      "sha256": "e7c9d84441491bfe7494a1cbfaad005dd6888f6da3ff634fdd43310c50fe0883"
+    },
+    "02_代码材料/src/foreground/aug6000/policy.py": {
+      "bytes": 5350,
+      "sha256": "9900c05c8b9bdb4488b0a7ed358458f75b9396c3c9b607136b4d3f4136a3c6ee"
+    },
+    "02_代码材料/src/foreground/aug6000/reader.py": {
+      "bytes": 6540,
+      "sha256": "afbe5d18c38c0c554bebea50375d104035beb96897da38c2d3762d87122529c0"
+    },
+    "02_代码材料/src/foreground/build_foreground_cache.py": {
+      "bytes": 6322,
+      "sha256": "6bdbedf2f37469c633558cd9c47cb902954eaba3ce095922890629eae03c78d5"
+    },
+    "02_代码材料/src/foreground/probe_grounding.py": {
+      "bytes": 11097,
+      "sha256": "03c73835c7acbdd7dec80e64862d8bd38ebd7ec4096091c6bfe4bfe633db9c72"
+    },
+    "02_代码材料/src/foreground/probe_grounding_refinement.py": {
+      "bytes": 8476,
+      "sha256": "91c4a59243173a6a4d3c2ed96966b1b8470f52febeb5d000fe493bf6f40a2792"
+    },
+    "02_代码材料/src/foreground/runtime/audit_supplement.py": {
+      "bytes": 4072,
+      "sha256": "150c2f9a535f5d7c5595e2dac5246f777ca004508a7eda66f14584c8114c14d8"
+    },
+    "02_代码材料/src/foreground/runtime/cache_policy.py": {
+      "bytes": 3476,
+      "sha256": "d37067bd9204324d5b48c8717884617a8acebce58df52e51f5c8a694352fd3cc"
+    },
+    "02_代码材料/src/foreground/runtime/cache_worker.py": {
+      "bytes": 6339,
+      "sha256": "2e79a73fe9b368c6e8504556e72a8331208f4c910edc2a062443ac5e61685a5b"
+    },
+    "02_代码材料/src/foreground/runtime/common.py": {
+      "bytes": 1084,
+      "sha256": "b869477e7bbe697584616ed47a9b109f7ec95ef091ebe24a70716a7ab4890fbb"
+    },
+    "02_代码材料/src/foreground/runtime/correct_foreground.py": {
+      "bytes": 1247,
+      "sha256": "333d14d0600be1ea16588cd287de80b884c3f16cbd68cc9973b9e69b0cb33f30"
+    },
+    "02_代码材料/src/foreground/runtime/finalize_foreground_worker.py": {
+      "bytes": 5114,
+      "sha256": "b951c4fdf42c9dc86e09a25da3ff4ca88cab4c29c0dcd769fb3b2cec7e973a5a"
+    },
+    "02_代码材料/src/foreground/runtime/task_prompts.py": {
+      "bytes": 3473,
+      "sha256": "a75ee2ea661fa9e925b73d61d24422a0f9dee49f91adc7a13c12721463b9fdff"
+    },
+    "02_代码材料/src/foreground/runtime/validate_boundary.py": {
+      "bytes": 4007,
+      "sha256": "44a178a19888d7bf31b54f42f80259a940cf45aadb991c17b3c5b60a48640e22"
+    },
+    "02_代码材料/src/lineage/amd8/async_checkpoint.py": {
+      "bytes": 10009,
+      "sha256": "ac4c28f7c9424bce6f947e051b02fa81ba0b8ea634e68041b6bbe6e49e04e335"
+    },
+    "02_代码材料/src/lineage/amd8/base_recipe.py": {
+      "bytes": 4221,
+      "sha256": "7420d7c46a3fcac11943f53363af8dc99c846bc9e1de48fccea2b8819d910e00"
+    },
+    "02_代码材料/src/lineage/amd8/checkpoint.py": {
+      "bytes": 15238,
+      "sha256": "8e0509848d853e1b10bcfe2bf1c7076d1e8be849e433bd5cda6d70b1ffa070b0"
+    },
+    "02_代码材料/src/lineage/amd8/data.py": {
+      "bytes": 8669,
+      "sha256": "49f81961568368d8058a9ba7b9366a04275bdd6956554d73d9c98fec86bf623f"
+    },
+    "02_代码材料/src/lineage/amd8/flex_compile.py": {
+      "bytes": 2357,
+      "sha256": "c02de689dd914bac47920c668e133d4d7d4f9e61843b1bc743740fb3a2b3d5a5"
+    },
+    "02_代码材料/src/lineage/amd8/images.py": {
+      "bytes": 2965,
+      "sha256": "f7442cc408d53db1fec6444084dacd7102108c855d3795def771fe524a11dff9"
+    },
+    "02_代码材料/src/lineage/amd8/official_sampler.py": {
+      "bytes": 1790,
+      "sha256": "ee9837af2c228fa7c84e1f058c87b31e2041a07d05267f5b73af1b2df596dd86"
+    },
+    "02_代码材料/src/lineage/amd8/policy.py": {
+      "bytes": 2391,
+      "sha256": "686becec2294243b652a48dd55686304ff7ef83b068e532c9a478126eafb5f9c"
+    },
+    "02_代码材料/src/lineage/amd8/recipe.py": {
+      "bytes": 1363,
+      "sha256": "d8f8545c7909a0026e89c982d299761349e03e4150cc0db801c8069d72fe39e8"
+    },
+    "02_代码材料/src/lineage/amd8/recovery_memory001/entry_observer.py": {
+      "bytes": 855,
+      "sha256": "6c486d937ccb17afc9bcea4c53ce135de0efbc04a39f25784575fa1e2bbaa239"
+    },
+    "02_代码材料/src/lineage/amd8/recovery_memory001/optimizer_audit.py": {
+      "bytes": 1047,
+      "sha256": "4a354a3cb7eda9233b5baf1e52e3af1ae345dd506fbd8a35c72ceabd80868351"
+    },
+    "02_代码材料/src/lineage/amd8/recovery_memory001/save_bounded.py": {
+      "bytes": 19138,
+      "sha256": "eaff82f5d1061bac8c17ac83c8aa63fc4aa24031a5f2541045725025079c8d80"
+    },
+    "02_代码材料/src/lineage/amd8/recovery_memory001/worker.py": {
+      "bytes": 1750,
+      "sha256": "986faa2c232ca1fc299fa5c723cdc80dc8dda33ad15c15d2f73f84d10b066f5c"
+    },
+    "02_代码材料/src/lineage/amd8/retained_checkpoint.py": {
+      "bytes": 8761,
+      "sha256": "9c4023f2a6c3be116d2ad3003660366955fa129e14cb9e226a26bd875482d0aa"
+    },
+    "02_代码材料/src/lineage/amd8/support.py": {
+      "bytes": 25961,
+      "sha256": "957eb541b44c087fcd902621d921e06655286aee82e7ca6d5d191162f141e64d"
+    },
+    "02_代码材料/src/lineage/amd8/teacher_targets.py": {
+      "bytes": 1318,
+      "sha256": "1d3bc3564ceb69ae187bd64d52b3ead04885686748b84a6ec422aa4d6761564b"
+    },
+    "02_代码材料/src/lineage/amd8/train_full.py": {
+      "bytes": 20605,
+      "sha256": "d9433ed2b9e3ec5ce61588733abf37fe56965d44a233c62792cc7ee747a755ab"
+    },
+    "02_代码材料/src/lineage/amd8/worker_bootstrap.py": {
+      "bytes": 972,
+      "sha256": "fca1cab4184eef243f3062ed1b8f1817d7a59186103327372682dc24bff0c5b8"
+    },
+    "02_代码材料/src/lineage/cuda8000/checkpoint.py": {
+      "bytes": 12602,
+      "sha256": "7d2388eb07d4a3f5c6c97dd69de385043743681ae71af00d6d1a26ca501e9d09"
+    },
+    "02_代码材料/src/lineage/cuda8000/checkpoint_extra.py": {
+      "bytes": 2958,
+      "sha256": "e5fb573042004e2d5ba6fb455643e4c7b0cb374a081903063fa568ae27a4503c"
+    },
+    "02_代码材料/src/lineage/cuda8000/data.py": {
+      "bytes": 9181,
+      "sha256": "d82784e140931d5130f13a315207741516768bcc29816ad69cca830783636a35"
+    },
+    "02_代码材料/src/lineage/cuda8000/filtering.py": {
+      "bytes": 2129,
+      "sha256": "524d9a6b50dbab214f9abf8a104b5de81b9c6522837841144be5c152814ca863"
+    },
+    "02_代码材料/src/lineage/cuda8000/images.py": {
+      "bytes": 3046,
+      "sha256": "95944ef3777d728abfb8ff583f9d06ceb43fd18892ffb4965ccefb95a1cb5c41"
+    },
+    "02_代码材料/src/lineage/cuda8000/official_sampler.py": {
+      "bytes": 2030,
+      "sha256": "e700b8ea085d085681a16785ed676d7c8fa20401248806a1cfd5d611de12cc7b"
+    },
+    "02_代码材料/src/lineage/cuda8000/policy.py": {
+      "bytes": 2528,
+      "sha256": "9e94791f40f34257f66afe23be3d81dddb7892e95735be865f41c4178b356e4d"
+    },
+    "02_代码材料/src/lineage/cuda8000/recipe.py": {
+      "bytes": 1400,
+      "sha256": "67ec803a80dccf7823b71d1f264946d57770da63a22575bed09ca9eedd3d0d07"
+    },
+    "02_代码材料/src/lineage/cuda8000/reshard.py": {
+      "bytes": 8575,
+      "sha256": "ee0a7304a47ea230c682c04f0161afbedd285ac2e4d663663edc662ada400a79"
+    },
+    "02_代码材料/src/lineage/cuda8000/teacher_targets.py": {
+      "bytes": 1341,
+      "sha256": "8d13d86cafc3040f7264af08e035272ada14e88f0bb68c1b59083acc0edae672"
+    },
+    "02_代码材料/src/lineage/cuda8000/train_full.py": {
+      "bytes": 17903,
+      "sha256": "2b3ca4b5aaf450cf4c226b81c35604c79d0a04b5abb98c31dd5e17276447a15a"
+    },
+    "02_代码材料/src/lineage/cuda8000/worker_bootstrap.py": {
+      "bytes": 860,
+      "sha256": "2c9812e6ae3aee9d5e2488de7055b863f226c9ceca709ab114a426c67a2c4b45"
+    },
+    "02_代码材料/src/merge_results.py": {
+      "bytes": 4489,
+      "sha256": "c5ba3353a9d62acbe093c3f9b95bbde7a127bf266e051c7f7fe43c405f247691"
+    },
+    "02_代码材料/src/prepare_assets.py": {
+      "bytes": 8858,
+      "sha256": "e47b81788ca632785071bba7cc556b0658be9faf8880eddf815655fbec53751f"
+    },
+    "02_代码材料/src/probe_renderer.py": {
+      "bytes": 3062,
+      "sha256": "6f62fb28704fc0048e21cba3440820bf47c4689bc849bb6e4f68720fac7444b4"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/adjust_bottle.json": {
+      "bytes": 2899,
+      "sha256": "fa82a82a7c64498407896ab171bf731eddd679bd2189b827404a8feb3ffb237b"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/beat_block_hammer.json": {
+      "bytes": 2697,
+      "sha256": "f2e419c385c80a3d8dac0bec0516b19eea6cdfa1985d754466afaff7211e8262"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/blocks_ranking_rgb.json": {
+      "bytes": 6313,
+      "sha256": "7bafb690d8e02604d5726975946997d679005c655400ba48fdd46957855f19c3"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/blocks_ranking_size.json": {
+      "bytes": 4655,
+      "sha256": "4ad638c230b384a1dab3e89a0f2b6f22b642ca6d78783737bbdfec6024cb47e0"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/click_alarmclock.json": {
+      "bytes": 2911,
+      "sha256": "46cc55f23d3224ff3bbdd5958b90d23fba6f2dbda0ac72471e0c5744697e0424"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/click_bell.json": {
+      "bytes": 2838,
+      "sha256": "226f74cb0691ab1954cf77ac1a7672afb1d709525f22e5dbe17f8ed3ae247f39"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/dump_bin_bigbin.json": {
+      "bytes": 2665,
+      "sha256": "cbd1922bc3b793289acb349b77061ec9a668e922403323162aee2ae1420148de"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/grab_roller.json": {
+      "bytes": 2498,
+      "sha256": "8913870868d6a7549e80241272e840279157fb421fca0de25f2754be29552d73"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/handover_block.json": {
+      "bytes": 4804,
+      "sha256": "8fed548a88ebeadc164889398e20532f622509c867c0a075653e2bf35b8daa19"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/handover_mic.json": {
+      "bytes": 3264,
+      "sha256": "99452881cf54850a3054ec4636327fadc5ac082562a1f1983d5383eec21e01dd"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/hanging_mug.json": {
+      "bytes": 5101,
+      "sha256": "e5bc861b815a35af4b278347de0ef1c0c3d3e0d1b3605e7fa9f7961dc4506c31"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/lift_pot.json": {
+      "bytes": 2362,
+      "sha256": "9b145355b15a87d72fa1561151d16d9a71faa242a3f287ffad546825c393f63b"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/move_can_pot.json": {
+      "bytes": 2946,
+      "sha256": "a82cfb64ee7d642b2b8c1da7cd9a0fcad522574782575653e1e89e740ab7afe5"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/move_pillbottle_pad.json": {
+      "bytes": 2869,
+      "sha256": "37fe85c95f87ac30506a597bfcd01064265cf0c09a8adb8fc5a91f54859f6d12"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/move_playingcard_away.json": {
+      "bytes": 3184,
+      "sha256": "c65cfdbc0bb65132adeeb8ffcd4ccc76d388df36fc3942b18b7b58e30f49b81b"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/move_stapler_pad.json": {
+      "bytes": 2770,
+      "sha256": "d10a15c9b652de96e2cb607f10347376474b5c8afcd58ba76458897bdae55e7b"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/open_laptop.json": {
+      "bytes": 2079,
+      "sha256": "f96ef444acfda857c968b2994b67d482fd0c277fed88612bb86cfb8e7689bef9"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/open_microwave.json": {
+      "bytes": 2600,
+      "sha256": "8a353e548865196cd5103aab644cd76eed4a50e139e4ded65545a86d489cfca5"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/pick_diverse_bottles.json": {
+      "bytes": 3007,
+      "sha256": "aa337dd698baa257a2baa1ed97b85b92269e40b24382ba3adac1fd6fd3371ce0"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/pick_dual_bottles.json": {
+      "bytes": 3097,
+      "sha256": "4c2dcffd9e744b08ed25b45d910e8630842a4cea8d3b767e488d0846cf3026d4"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_a2b_left.json": {
+      "bytes": 2787,
+      "sha256": "4b8a3c065fc3b37412efb393e54149f7ac35f24a275b87657383a2af727a34e9"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_a2b_right.json": {
+      "bytes": 2930,
+      "sha256": "c3466a444a36faf555bc16bf30b974c9a017ca2fa1c797887669dc6f55ca47b7"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_bread_basket.json": {
+      "bytes": 3782,
+      "sha256": "5c15c295a24599e674bbc8659f9c0ab30de6f5e9cc186852c5a7d230393ce48c"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_bread_skillet.json": {
+      "bytes": 2725,
+      "sha256": "d7adad5b48391d0b12edb59642dfa52f67eadf586515a88451f830fa4067a805"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_burger_fries.json": {
+      "bytes": 3357,
+      "sha256": "3e1170931f4b2c77f4402681d8c64a29b9ee642f3202d4a2816591c789724455"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_can_basket.json": {
+      "bytes": 4195,
+      "sha256": "8480c354bc347c10906c28d84bc811048a8544ef6d3b12520f57cb66bcbefe3b"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_cans_plasticbox.json": {
+      "bytes": 3601,
+      "sha256": "b7208838d80a71ddfd9f8457e5cece84848efe30354ad3f1a49e222bd01871c2"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_container_plate.json": {
+      "bytes": 3194,
+      "sha256": "77af29299c38e4604398f52930ed0be76d8f82e00fffe2d0926146abcb3d227c"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_dual_shoes.json": {
+      "bytes": 3642,
+      "sha256": "2309e0876358ab05f701c1bb58fb05a196ac0ad737a2b6ee53c6f7c24c099b42"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_empty_cup.json": {
+      "bytes": 2487,
+      "sha256": "95de3567883298db94e311e4c363f5474a9a7545dcbd55751b273f4e0523d86e"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_fan.json": {
+      "bytes": 4714,
+      "sha256": "915a824f58307dd30e7b13375dd901a906bead2fda3bb7be6c1d883a05658102"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_mouse_pad.json": {
+      "bytes": 3522,
+      "sha256": "a98691f9d9f5000cd736f128e971d1f2803ae60aa9a78c56d18c7e3658fe27ee"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_object_basket.json": {
+      "bytes": 3229,
+      "sha256": "d71d6c73bb50df066e86225c590e25e8e4f54cc1c16fbce3b530ce0e370f9d2b"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_object_scale.json": {
+      "bytes": 2793,
+      "sha256": "f2f55311cc540b79d50a767c4d07cd238e1c17ebdc23ef46bde5a31065baf7a2"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_object_stand.json": {
+      "bytes": 2639,
+      "sha256": "aeef2cb487f048bdbfa645fc401a76ac5115dca954ce551ea4e9453be6252277"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_phone_stand.json": {
+      "bytes": 559,
+      "sha256": "4b5ae75353cd562b515aa2118dd51f12f9b86aef70c09e3c257c3a34f61828e7"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/place_shoe.json": {
+      "bytes": 3792,
+      "sha256": "088ae335af61dfbe07a4948cc0b7246ca18f1013dde90f98e0f19eabca7cc1a1"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/press_stapler.json": {
+      "bytes": 2569,
+      "sha256": "7062168b216b2a5a6f575741ff834a07f88bca17ea885cd372460eb4d5a8bf82"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/put_bottles_dustbin.json": {
+      "bytes": 4356,
+      "sha256": "c0321d06f242eea50447fe9c9e5647b9c8399eef6b61b43243ca920e3eed55e1"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/put_object_cabinet.json": {
+      "bytes": 4646,
+      "sha256": "734f7c557b58a8a4588ebd4e431c6248aaebc7298cfa7e55ac74dc48d4ea1cb1"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/rotate_qrcode.json": {
+      "bytes": 3985,
+      "sha256": "a48d6c4bdebc043ea0e5745e909b7200f37fdce5c040202de87048c7db74a791"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/scan_object.json": {
+      "bytes": 4215,
+      "sha256": "0d641a174c056b17ea1d58c0305bd33e8c02f91a195877e6283f1d6e3005410b"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/shake_bottle.json": {
+      "bytes": 2653,
+      "sha256": "61d117ca33a468976114cc150029603f4b7d926d84d8dce25e8cd24f97e56787"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/shake_bottle_horizontally.json": {
+      "bytes": 3221,
+      "sha256": "58c4bacc87dbd400a17f86a59c6d109cf84fe21c656a1532eeb4ac2979f8085c"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/stack_blocks_three.json": {
+      "bytes": 6167,
+      "sha256": "d6b05f79328f1f9e6fd0a9a47443c1169e402a9d6d60eefbaee2ef5b2033fac6"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/stack_blocks_two.json": {
+      "bytes": 4562,
+      "sha256": "76cd955187082738dcf6d89484d9c2cef531fb4b69c9a47b3ce44634705b24fc"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/stack_bowls_three.json": {
+      "bytes": 3600,
+      "sha256": "3a951b0188d8300e9137d627d426075665fcf5f2e3dfca9789683aeec8e7053b"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/stack_bowls_two.json": {
+      "bytes": 3201,
+      "sha256": "9d86d73e6bac43a9f7057dad27fde71e60391f97acbd01188e048094c0b63185"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/stamp_seal.json": {
+      "bytes": 2320,
+      "sha256": "21ed41b709f7438bbef10a1cecd1a599f93c4af4aba4049e000de8dc00951ef1"
+    },
+    "02_代码材料/src/robotwin_overlay/description/task_instruction/turn_switch.json": {
+      "bytes": 2140,
+      "sha256": "c03ec558d8007b76a8f7908858030719c61a04501cb6a99d2e6515511c1790b8"
+    },
+    "02_代码材料/src/robotwin_overlay/description/utils/agent.py": {
+      "bytes": 1473,
+      "sha256": "6d241de9f053a8735410944775e9f0f3ae2031702ae687a5108b97bb28d4ce47"
+    },
+    "02_代码材料/src/robotwin_overlay/description/utils/clear_task_seen_unseen.py": {
+      "bytes": 641,
+      "sha256": "675fa1a43b5d401f9df472204be7f661af635c4b06c87697184525772341abb0"
+    },
+    "02_代码材料/src/robotwin_overlay/description/utils/convert_obj_glb.py": {
+      "bytes": 3488,
+      "sha256": "859f338f5a12f149822c080332985441543af851b19b229fb4355db2e2e1f7c9"
+    },
+    "02_代码材料/src/robotwin_overlay/description/utils/generate_episode_instructions.py": {
+      "bytes": 11926,
+      "sha256": "ef428fa9066c3025d41e2fabcbf894d1d4313bd12bee0a300d19d3d7d1158f24"
+    },
+    "02_代码材料/src/robotwin_overlay/description/utils/generate_object_description.py": {
+      "bytes": 7524,
+      "sha256": "a79d64808c82d5207e7242607ac74b3c3a0b8ae3ea7292d77b3a63fd2267e01f"
+    },
+    "02_代码材料/src/robotwin_overlay/description/utils/generate_task_description.py": {
+      "bytes": 4276,
+      "sha256": "f4ee096986113c029b6d808a0a597b7f24b569850caa6b85b93cd4e5545a46c7"
+    },
+    "02_代码材料/src/robotwin_overlay/description/utils/get_image_from_glb.py": {
+      "bytes": 35112,
+      "sha256": "796a6b9132255a5f351e31bb5b3b80efd5b8f537415f243be230d21337d9a554"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/__init__.py": {
+      "bytes": 52,
+      "sha256": "7c4063c61bfe1789dcc933c43923889a3f9e576ddb4f59a3599745df27e3adfc"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/_base_task.py": {
+      "bytes": 69247,
+      "sha256": "448f7152b65cb9102217cf5463aa821d72810ca56f63d5a797ec7bd43e23e101"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/_GLOBAL_CONFIGS.py": {
+      "bytes": 1557,
+      "sha256": "f3640d4d132531e1c4a72f1f27dd6312c95aadcb72ab43c638458cf994b5a4d4"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/adjust_bottle.py": {
+      "bytes": 2451,
+      "sha256": "4f76b35e718a4c5a364dae564d35d68268755818d9062e3ed4ff393d158d0548"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/beat_block_hammer.py": {
+      "bytes": 3012,
+      "sha256": "90269f15f9ce274fb5bcad703c47b0b552ff5a2f0a3ff62d12dbe9a553018014"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/blocks_ranking_rgb.py": {
+      "bytes": 5916,
+      "sha256": "0e632df38d9024e7952c0df7a1f59e3d011b537724e6e6588455dee4d4e6074b"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/blocks_ranking_size.py": {
+      "bytes": 6026,
+      "sha256": "18ddb8ca5465f450ef03db292bcfc22e8e795fcb397f104fc24213a5fa063696"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/camera/__init__.py": {
+      "bytes": 22,
+      "sha256": "c666ede4ebee6fd286a444c8fa966e1bf2034a2fd1fe1a04c7f8a55fd0ba6df6"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/camera/camera.py": {
+      "bytes": 25220,
+      "sha256": "e4d17e99c8a68f44a12bef248a2164f52206efeaf24168172b778cc1e32832dd"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/click_alarmclock.py": {
+      "bytes": 3437,
+      "sha256": "f69a1ad4f1b483ab0dd82d8bad872e12047ed8d898f1fa4058de9e382ddeef49"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/click_bell.py": {
+      "bytes": 3040,
+      "sha256": "a0b7673e6ef842738999acbccaaa3d01f86d62a147bb8387cb92163218db48ac"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/dump_bin_bigbin.py": {
+      "bytes": 5784,
+      "sha256": "3bd57fe9172d59731db1ccf1bc9605dfe3ef08a0f7224edc720ea4812c214611"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/grab_roller.py": {
+      "bytes": 1993,
+      "sha256": "f0e1864199605acf59cf8982dded05129d873bb3934f200e47abafd918d41c89"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/handover_block.py": {
+      "bytes": 3818,
+      "sha256": "5439712296d7e143d41f8e78b4ab86cd4fad7fb98f40f5f5abb067a462d17650"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/handover_mic.py": {
+      "bytes": 4224,
+      "sha256": "41ed0f2561cc8f1ae2449ba405decd4f5d7e3b80243b60921598657551891b17"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/hanging_mug.py": {
+      "bytes": 3591,
+      "sha256": "8793ed6be6a80b18a10690767a1910c3c49a7a9e4887ecbdd48a191ca3e03034"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/lift_pot.py": {
+      "bytes": 2354,
+      "sha256": "347e06f3f9f82b1bc35882671bbbdea50b6e3c77fff0f7fb4449b024875402eb"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/move_can_pot.py": {
+      "bytes": 4043,
+      "sha256": "ea838bb2502199610eea6cc058a4ba5fc7abb01c3d8ee0705c44854ddca20186"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/move_pillbottle_pad.py": {
+      "bytes": 3545,
+      "sha256": "a5db7c65db15c2273d1f9e99fab8fc00533a27b740a45161c9402d43b8aa6824"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/move_playingcard_away.py": {
+      "bytes": 2290,
+      "sha256": "edf557d5a29ab724860651e24398e03c400a71e4c82bdbf2cedd3958fbfb6cc2"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/move_stapler_pad.py": {
+      "bytes": 4057,
+      "sha256": "c2b7aa7bf4e896afc392a8cf1ac107b6982088a459c716de005a3412fcdedd6d"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/open_laptop.py": {
+      "bytes": 2367,
+      "sha256": "b826d4f36513dba6df3c17b65f1251bf3dbe2994857ba672f4d06c5900c0cac0"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/open_microwave.py": {
+      "bytes": 3472,
+      "sha256": "ad679b7753fc50487ba8034570e3b94aa7bfc84756048b94580fa3d2516a1bd0"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/pick_diverse_bottles.py": {
+      "bytes": 3672,
+      "sha256": "95ebb80fa96eafd0b7ff5518251c2a7aa42f22ef9b7cfdda4e80eac511f06151"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/pick_dual_bottles.py": {
+      "bytes": 3599,
+      "sha256": "422f23510f3662405dcb5518d1ebe8a0270935849a4b02a2585615ff7bffc4ef"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_a2b_left.py": {
+      "bytes": 5751,
+      "sha256": "8603f48febcb5b5b534dc7d973ac4651264ebb9c6fb60f199d4d2adc9e14d7cd"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_a2b_right.py": {
+      "bytes": 5890,
+      "sha256": "1225e32207912e15855deff8aa9d4fd2cf425b4c5eeaeaf1eb795daaba4ac6ae"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_bread_basket.py": {
+      "bytes": 7731,
+      "sha256": "50c433166301a7f0ac8615d041cc51aa673746b5b7d6fcc0b6f29790c560c053"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_bread_skillet.py": {
+      "bytes": 4197,
+      "sha256": "b1fa08d7f23d8bcd933ea7d64904fea17f67dbe58101c66e42c6addbfdbbcd73"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_burger_fries.py": {
+      "bytes": 4540,
+      "sha256": "19e8a3428e677839e7e51ae6488752acc940a7d2bc8ee54587c354b422ba6d2c"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_can_basket.py": {
+      "bytes": 6339,
+      "sha256": "9f24e5ac98146babe93c68cb46baaf1d7bf21e38dbfc7c0b29e7020ae764e7f0"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_cans_plasticbox.py": {
+      "bytes": 4579,
+      "sha256": "5d004110de53d95c7a6fc7721f9136d96b9792a61b97686f7b5489ff7ec48a5f"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_container_plate.py": {
+      "bytes": 3490,
+      "sha256": "7a288f27f61e96fe905d5cfb80eb0a4fd8e490c829f2f02149951266012a3aee"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_dual_shoes.py": {
+      "bytes": 5664,
+      "sha256": "f35c4a133e1de567b274cbd15f158f585eb05e32aeb05be88839d249d0d7ab9e"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_empty_cup.py": {
+      "bytes": 3386,
+      "sha256": "424bbd61f990ebfffb283eb152d17103c2a990edd20f68229203a96a2fd4d581"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_fan.py": {
+      "bytes": 4163,
+      "sha256": "7e8be55f1f26ce6128c254b50464edc438a96f272581ccb19827521bc679c237"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_mouse_pad.py": {
+      "bytes": 4291,
+      "sha256": "369bf399d0fd6a2687abb7d80b8feb6101c8b5405d33f9de63bbbdaaea7b73d0"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_object_basket.py": {
+      "bytes": 6249,
+      "sha256": "e809bd3eabac48cb34589f164291b04b9e2fbf6cc1ebd8c4024c0af8e265ed48"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_object_scale.py": {
+      "bytes": 4807,
+      "sha256": "555f04a2a2fa0a41ad8dfccd771579d1cc2686fc65ad6c7ef297c98f4c9ba310"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_object_stand.py": {
+      "bytes": 4938,
+      "sha256": "0b4db3a679230ff3732b9bfdfcfaba3437bd5f942043de9921240118849e3fe8"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_phone_stand.py": {
+      "bytes": 3434,
+      "sha256": "719cf84ebf997b8d15d0ef9f997d439da62d64067a292b6008433da3536a0216"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/place_shoe.py": {
+      "bytes": 3550,
+      "sha256": "9e9b29eaca488f41617127070add87f33900c37db0d286a4c4b08e2138cbfc6f"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/press_stapler.py": {
+      "bytes": 2163,
+      "sha256": "69274cf09aa1d4ba51469621461683b5225b8f98cf7837f821e848196ce51f9c"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/put_bottles_dustbin.py": {
+      "bytes": 5950,
+      "sha256": "1c03a4b227daa7d285fa366944f1f75773e32dc6a7b73ab693217a13fcd42795"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/put_object_cabinet.py": {
+      "bytes": 4490,
+      "sha256": "1de25dd513b4ad29e158440eefb28fb050be95d557c7df1b87578168ff35a7b2"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/robot/__init__.py": {
+      "bytes": 44,
+      "sha256": "dd712aa0e0201076c7b9e751581e108081a08fdd927270390656c9a2e3d7cbc7"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/robot/ik.py": {
+      "bytes": 7,
+      "sha256": "0e478b525adbeeb1b1de7674e1a00353d1d75eee666537ff0c1c13d3187322fe"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/robot/planner.py": {
+      "bytes": 17282,
+      "sha256": "f1012345542483f4cfbac64880a266b7ee0d4a64362d5ec6fd6985ed9c34b564"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/robot/robot.py": {
+      "bytes": 31721,
+      "sha256": "3dcd80acc8cab489a4c5edb507cc460dab1724be0226b8d5c4c1b218dee605cb"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/rotate_qrcode.py": {
+      "bytes": 2726,
+      "sha256": "382165e22a2a52a73958ff69c662e57a4d1f0bc8cb7cecf3e9dd1f5ba11defa9"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/scan_object.py": {
+      "bytes": 4218,
+      "sha256": "860dfe2cc86d180096089bc87502c7904f7ce2efb64fb32620c1720ca0178c2b"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/shake_bottle.py": {
+      "bytes": 3152,
+      "sha256": "2e37395b302eb37ecac39b2a676ea119c4bf7a1dcc9e6df75cd683a5cf37b026"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/shake_bottle_horizontally.py": {
+      "bytes": 3797,
+      "sha256": "def5f373a3a289c946bb32c6d01145672432dbe1d2b71a10992e5280d5f8dead"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/stack_blocks_three.py": {
+      "bytes": 5007,
+      "sha256": "b19f1f1c5a3a2c7c7312a4e1b2e577ccd269ebb0c444c287fecbc16ff5b47fb9"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/stack_blocks_two.py": {
+      "bytes": 4492,
+      "sha256": "4e92a679cb5be4ef87a1b842432c930560a2c9b539a4cbcee0161e2b2112f526"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/stack_bowls_three.py": {
+      "bytes": 4660,
+      "sha256": "95848e9c2987e64fef2cfd928128d7a19967ba600c57dc7a6b7f1c9ea5b358e6"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/stack_bowls_two.py": {
+      "bytes": 4457,
+      "sha256": "3e3217c277d84a0838739d55a0061a9acb3315240b5a99c6607d9637ea719637"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/stamp_seal.py": {
+      "bytes": 4456,
+      "sha256": "28a159e27aa76459355fa1f81e962815c62ee6435727039d73664b7eb6731b82"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/turn_switch.py": {
+      "bytes": 1433,
+      "sha256": "035e108a861f94f61369ba2221431e123b7ac231e8de683d8bf38090bf021f9a"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/__init__.py": {
+      "bytes": 292,
+      "sha256": "d3a670160e83b2467c232f5cbbfffcfc987e3bf0a03617fcf853989e4416d979"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/action.py": {
+      "bytes": 2862,
+      "sha256": "7bf69e226b98ae7f5b21a523f722271530885cf4778873900f3564003a9b591d"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/actor_utils.py": {
+      "bytes": 6282,
+      "sha256": "252d43c526b23adcf4ba549fec64a49f037fc4a24e9edd1998e5f60d3e13d5d9"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/create_actor.py": {
+      "bytes": 21406,
+      "sha256": "6bababee8e70da2460b2bbf47d3b5fbb20ccf73368782a7be596a63c962dce6d"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/get_camera_config.py": {
+      "bytes": 497,
+      "sha256": "d3a167ed2dd6785d42b81ec5cfd244b93b1e327e01439af9d76120acbb69246e"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/images_to_video.py": {
+      "bytes": 1495,
+      "sha256": "5abee46ae85afc47005acb964bfff2501fabd9b593b2cba8b851585c93619cd7"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/parse_hdf5.py": {
+      "bytes": 1817,
+      "sha256": "0a7c47157e38ad742aa8ef10192021264e66fbae03344b12be526262c0e13c51"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/pkl2hdf5.py": {
+      "bytes": 3575,
+      "sha256": "e119b4093c25f881c535a041bf1895e182ba00564d6ca57f6d6fe4fb62b2666c"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/rand_create_actor.py": {
+      "bytes": 4852,
+      "sha256": "6c409ff1d97528b9dc654d39cc34683f51af6e797c1c5d92c076c29c09f9bedb"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/rand_create_cluttered_actor.py": {
+      "bytes": 8999,
+      "sha256": "87199b296e199b91701365f94247ee593946eb6b4567ba2e4f7af6960560d41a"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/save_file.py": {
+      "bytes": 1038,
+      "sha256": "8922f52adca31b73ac30701624eb0d917cb94b8703630bfdd371db39099284c9"
+    },
+    "02_代码材料/src/robotwin_overlay/envs/utils/transforms.py": {
+      "bytes": 19015,
+      "sha256": "b8ec2a27275868dc476ca1e2c2c8264fdc2f8a907278ed531b53d13e82b338ca"
+    },
+    "02_代码材料/src/robotwin_overlay/script/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "02_代码材料/src/robotwin_overlay/script/_task_config_template.json": {
+      "bytes": 886,
+      "sha256": "18e214550d94f6f2c88cfeaff310df389421f706117134191ad31da7f4a4ec6a"
+    },
+    "02_代码材料/src/robotwin_overlay/script/add_annotation.py": {
+      "bytes": 13106,
+      "sha256": "b78f829cd5650fb648e61d6d49d20346d6c01980e81054a366bc4194ebe627aa"
+    },
+    "02_代码材料/src/robotwin_overlay/script/collect_data.py": {
+      "bytes": 9663,
+      "sha256": "e51d8dca1afd843206187a72537dc467d1db07bd1c860055ad59e47b181c81ab"
+    },
+    "02_代码材料/src/robotwin_overlay/script/create_messy_data.py": {
+      "bytes": 45902,
+      "sha256": "fc10fa2ab578f094ba93ea65312b149bb5ae41551646fef1bef4417c4ff557cf"
+    },
+    "02_代码材料/src/robotwin_overlay/script/create_object_data.py": {
+      "bytes": 45837,
+      "sha256": "8b2dd2f62392812349b0e3025fcb416c1ea6962338f9f792fceaf517e427ef9f"
+    },
+    "02_代码材料/src/robotwin_overlay/script/eval_policy.py": {
+      "bytes": 12995,
+      "sha256": "8b16c766a9c401163418b425e413ebe7f4127d6b132b9c7c4d6b6f8752d57681"
+    },
+    "02_代码材料/src/robotwin_overlay/script/eval_policy_client.py": {
+      "bytes": 18488,
+      "sha256": "8a41acbfa5011a7d120aec719463c6c100bd89aef7d3cdf722153a7b6fa590d3"
+    },
+    "02_代码材料/src/robotwin_overlay/script/policy_model_server.py": {
+      "bytes": 9636,
+      "sha256": "50187c3c1d82145c9ef8f3f15b0177eddea502c7cdecd004c83cf6b6bb6b1c8c"
+    },
+    "02_代码材料/src/robotwin_overlay/script/test_render.py": {
+      "bytes": 2303,
+      "sha256": "4426c0e313e51995d28858bc2c264ba01ce28fcc56275a56e9efff682f2f84f8"
+    },
+    "02_代码材料/src/robotwin_overlay/script/update_embodiment_config_path.py": {
+      "bytes": 3878,
+      "sha256": "d7a32079dd533195051134c5780b2641f29837409104ad6f570a6c2546b134e0"
+    },
+    "02_代码材料/src/robotwin_overlay/task_config/_camera_config.yml": {
+      "bytes": 154,
+      "sha256": "dc80a40552e0fad25d58cf0141302ceba66d22409b5091bed235ad2f10cbce7f"
+    },
+    "02_代码材料/src/robotwin_overlay/task_config/_config_template.yml": {
+      "bytes": 708,
+      "sha256": "4fd45b0a1013fa09dddf8c954c2740f80786b027c1d42aae5bf47875209e7bbf"
+    },
+    "02_代码材料/src/robotwin_overlay/task_config/_embodiment_config.yml": {
+      "bytes": 285,
+      "sha256": "b0a198ff27bf6bf6b73162d2d1adafc7e73fcdf53f39943e67e40fee15bd83fa"
+    },
+    "02_代码材料/src/robotwin_overlay/task_config/_eval_step_limit.yml": {
+      "bytes": 1077,
+      "sha256": "41c62bd26184977bae45aee555edd0cc21de5cddf560c2595921fc23a1e3b551"
+    },
+    "02_代码材料/src/robotwin_overlay/task_config/demo_clean.yml": {
+      "bytes": 873,
+      "sha256": "8ee5d0d07daecf7599b8d89b44776b700c7c60da24cd6317e176e6798d8cb11e"
+    },
+    "02_代码材料/src/robotwin_overlay/task_config/demo_randomized.yml": {
+      "bytes": 879,
+      "sha256": "a5a371f17188f602ff611154efce5299836a01a5e16d4b0f9b4bdbf6c714eb89"
+    },
+    "02_代码材料/src/train_entry.py": {
+      "bytes": 5225,
+      "sha256": "3775b4a3a97eaa850c907fc2d615936a4dc27e93204ccaa41097cfb7388e0518"
+    },
+    "02_代码材料/src/validate_results.py": {
+      "bytes": 2853,
+      "sha256": "387e5ec5b9949fbc66dd455241d4713837b27063de37a97d3ae04ee5a1f66a00"
+    },
+    "02_代码材料/train.sh": {
+      "bytes": 190,
+      "sha256": "e940b23805a89d4017ddc54300de5b6e3a469092513aacf8353cc476b1c47028"
+    },
+    "02_代码材料/TRAINING.md": {
+      "bytes": 3140,
+      "sha256": "99b7422919c2c7a609b26b53a70aabb0108c2c51171926155c36f596d561b6b9"
+    },
+    "02_代码材料/第三方模块说明.md": {
+      "bytes": 1608,
+      "sha256": "d6c585775a7fd45ba7b2bc0416b0a3459e48b7fa65e3fb9ec1d1afa440c8c231"
+    },
+    "03_模型权重/checkpoint/assets/norm_stats.json": {
+      "bytes": 94770,
+      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
+    },
+    "03_模型权重/checkpoint/assets/norm_stats.provenance.json": {
+      "bytes": 1549,
+      "sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682"
+    },
+    "03_模型权重/checkpoint/assets/robotwin_relative.yaml": {
+      "bytes": 1008,
+      "sha256": "f4a1de74470ae9d7353bbfe7bdd173305bf391cecd05f4dd7f5276968e426c5e"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/config.json": {
+      "bytes": 5549,
+      "sha256": "71d3a0cbcb373c0671372ab3b19765be3fe993b82dca9e6d23d98af0d5ed965c"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model.safetensors.index.json": {
+      "bytes": 192017,
+      "sha256": "5f372bc3bd5b10c612922b13ff341e866aff357b7baa39a4a1267d0628efd289"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/runtime-construction.json": {
+      "bytes": 97,
+      "sha256": "ddd244944c73a32e6aa7fe7c21e73c6aefd3d9bf8e37d91f70ac2a80912094e9"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference-cli.yaml": {
+      "bytes": 4306,
+      "sha256": "b18803fdacbcbe3010805ef3132ca074cb3bc8f87200434dcdad152e64025925"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference_config.json": {
+      "bytes": 1482,
+      "sha256": "f57e381a869959918b06b61be3a595790b43cf8c0ae12f209d40981446cdd5fd"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/chat_template.json": {
+      "bytes": 5502,
+      "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/config.json": {
+      "bytes": 1505,
+      "sha256": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/generation_config.json": {
+      "bytes": 269,
+      "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/preprocessor_config.json": {
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer.json": {
+      "bytes": 7032403,
+      "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer_config.json": {
+      "bytes": 10868,
+      "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/video_preprocessor_config.json": {
+      "bytes": 385,
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "03_模型权重/checkpoint/README.md": {
+      "bytes": 1742,
+      "sha256": "0be7e3a5586b6c8da995a7243785b5ea1cff9155a4dbcbcc2480eed417fb523f"
+    },
+    "03_模型权重/model_manifest.json": {
+      "bytes": 12815,
+      "sha256": "e8e609c638c221209a0e2a4f493c4ed46968e9c159bcfbf95e2e3aac5c9e279f"
+    },
+    "03_模型权重/README.md": {
+      "bytes": 994,
+      "sha256": "0d2ad0ff3405d0af18ebf37fc269d5d77e78562fca475bfe8de0a92bd60a23f0"
+    },
+    "04_复现与调优说明/evidence/completion-receipts.json": {
+      "bytes": 13253,
+      "sha256": "ffa686f7e3f10b0ac87dfda7db6232962f03ab08cada435fcd028af59ff33e08"
+    },
+    "04_复现与调优说明/evidence/filled-validation.json": {
+      "bytes": 1359,
+      "sha256": "20fc7e2cd8ebc127480f830f07ab405e5666b577e40e2df73631724713a27ee4"
+    },
+    "04_复现与调优说明/evidence/frozen-training-identity.json": {
+      "bytes": 3820,
+      "sha256": "cbc9e649bc1992dc8bfc71d8578c3a87517cb1820f096090ecbe1caedd1a652f"
+    },
+    "04_复现与调优说明/evidence/groundingdino-public-model.json": {
+      "bytes": 1375,
+      "sha256": "eb3cfe810c70ae15c801575fe3cecf3c2de89eddfc4082322cd6a726528a750f"
+    },
+    "04_复现与调优说明/evidence/huggingface-publication.json": {
+      "bytes": 7794,
+      "sha256": "7ae98a7c08bc2015fd4b17d53741d3dcd92c297a5627051c84f3f8366b0d6903"
+    },
+    "04_复现与调优说明/evidence/inference-export-verification.json": {
+      "bytes": 2916,
+      "sha256": "46d10da98c653c23238d3eeb466532c552343b6087b4d9bec5bf46b0e9b48b1b"
+    },
+    "04_复现与调优说明/evidence/inference-native-config-verification.json": {
+      "bytes": 320,
+      "sha256": "dc50f3512bf6b11592db5d15bcf56b8835477092e13d5fc6079039f3e9d65021"
+    },
+    "04_复现与调优说明/evidence/loss-scalars-11001-16000.csv": {
+      "bytes": 1520195,
+      "sha256": "94a38e788b641ff4dc54632ff1a67f56efd65f2af1728481bf4faf26b33b7c07"
+    },
+    "04_复现与调优说明/evidence/loss-summary.json": {
+      "bytes": 2115,
+      "sha256": "98a778e7b13ab82bfdf716fe1ff3dff526df98204a146f7bff99f319954d2d25"
+    },
+    "04_复现与调优说明/evidence/official-source.json": {
+      "bytes": 410,
+      "sha256": "16d94e8ba1a3582513399acc583363a24c56839317f887f340c1eeba44321957"
+    },
+    "04_复现与调优说明/evidence/official-template-sha256.json": {
+      "bytes": 595,
+      "sha256": "ff2057a2b2cd64070eb238a8f67971b3f7fa2c9c5f92261cb9183e925b4630ec"
+    },
+    "04_复现与调优说明/evidence/version-index.md": {
+      "bytes": 2364,
+      "sha256": "d32efaacc6bf66d0f76d75c7790e0f0243f7eabe1d45cf59a416f2324ee9e7c6"
+    },
+    "04_复现与调优说明/evidence/weight-staging-receipt.json": {
+      "bytes": 5032,
+      "sha256": "4a4cd37b013e422b62ef3024d4f909baad340a3bd3f548bb11a6bb8888137c35"
+    },
+    "04_复现与调优说明/figures/action-loss-final1000.png": {
+      "bytes": 325004,
+      "sha256": "2225c3de1142c314f85934933c7894bac43cc1c77099e0887a2c1fe82acde7a9"
+    },
+    "04_复现与调优说明/figures/loss-final5000.png": {
+      "bytes": 361092,
+      "sha256": "d4eeefec04d5ce4907aa962556a14a2d2e7dc6bed64d8ce3b9b1a501a44a99cf"
+    },
+    "04_复现与调优说明/reproduction_report.md": {
+      "bytes": 15451,
+      "sha256": "44605443fb873b0987d5a7db45242bfed60abb7e41e2f2797e10b49c15af0e1d"
+    },
+    "06_小红书创作活动/xiaohongshu_info.md": {
+      "bytes": 419,
+      "sha256": "fc7c3bda01792f9a24fde75652003e279a267fe9f589a28c42b76d30a7938916"
+    },
+    "README.md": {
+      "bytes": 1245,
+      "sha256": "f7ff2d71e58736d79c9c6d7e91dfbc046cac163977a98fc3f301aa1aa5d5bda5"
+    },
+    "submission-status.json": {
+      "bytes": 1804,
+      "sha256": "423a4260e3daecfdab96164a0efb14b9e883d88aea5c4e717914ae46c33abdc7"
+    }
+  }
+}

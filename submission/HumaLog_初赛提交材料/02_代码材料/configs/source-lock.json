@@ -1,0 +1,30 @@
+{
+  "kind": "exact_formal_training_source_snapshot",
+  "portable_entrypoint_verified": false,
+  "file_count": 23,
+  "files": {
+    "aug6000/__init__.py": "5d56cb5105cebdc897677ee2c4157aa7a569f62637afc037a1b87d28a568d9cf",
+    "aug6000/allocation.py": "9bcb31ca71eccbe5bd673781d4c9bed2e3604a99c549814ae9c8a4ea0d3151d6",
+    "aug6000/foreground.py": "3749f47a261d85b94b165efe7d10da80aa3c25353942e10c8bdba794c5747328",
+    "aug6000/geometry.py": "faa5c5dc00e3e42d84e31132e4b972290f43b42d24481d06dce01d2b2c704fec",
+    "aug6000/grounding.py": "38328d2d2b04a3888219740f05c8169a0106c3838cc1fe3f84a9db7e045fca51",
+    "aug6000/images.py": "f05f2bd4800b879179d8482c78fab9f483598b991ff8147d6a0dbe4be6e24c5e",
+    "aug6000/integration.py": "eab7853b7199c5b585bb938e2b61d548596bbc38d498e6803a8b1af3726cdd48",
+    "aug6000/losses.py": "e7c9d84441491bfe7494a1cbfaad005dd6888f6da3ff634fdd43310c50fe0883",
+    "aug6000/policy.py": "9900c05c8b9bdb4488b0a7ed358458f75b9396c3c9b607136b4d3f4136a3c6ee",
+    "aug6000/reader.py": "afbe5d18c38c0c554bebea50375d104035beb96897da38c2d3762d87122529c0",
+    "base_recipe.py": "7420d7c46a3fcac11943f53363af8dc99c846bc9e1de48fccea2b8819d910e00",
+    "checkpoint.py": "4306920afb3f0644327484357b9c9e6de39b7e310f7873a050432168a977542f",
+    "data.py": "0511564cd9d36444df1c7901f43580535402f4d151807723523b3efc33715af4",
+    "filtering.py": "526fabf673b465c59522b51a6b74001f7bb23fbfe09240d34f4217b1fe88dd0d",
+    "images.py": "711369072773ee58a2389c6209067f6e93bb6cedcce62712dd2e48906b32178f",
+    "official_sampler.py": "9ef9dcd91fb180d14d0f0c1c5d13c4e4a28fadfcd2698dfafe0f4d27c67eb93e",
+    "policy.py": "6c0575387c5b33db633f6518cbfbf1aad78373db6a71270253e97995dc049ffc",
+    "recipe.py": "6237f19a196ddfba89d90b7f9ea2026ff412a08117d459a24bc467f45777144e",
+    "stage_sampler.py": "47c5094be76a05815ecd530c75c9d1143d3885c460a5899d608836513f4acd12",
+    "support.py": "957eb541b44c087fcd902621d921e06655286aee82e7ca6d5d191162f141e64d",
+    "teacher_targets.py": "47fdddfd45d1b643d67f90bdba598901356f0edf7b56ce48c0d7a3ff3b4438aa",
+    "train_full.py": "e921dee1df8e9907fc26f66a51787b9e135ad5f2cc65b854e36816fb7001ff8a",
+    "worker_bootstrap.py": "aae9bc4250e3361e289e67230f4168bea35dac8110ef20623d4a868407f18c4c"
+  }
+}

@@ -136,3 +136,8 @@ python -m unittest discover -s train/h0/tests -v
 - 双 A100 代码补丁与真机验收：[`server_patch/ddp_two_a100/README.md`](./server_patch/ddp_two_a100/README.md)
 - 个人研究思路与待验证方向：`自查.md`（不属于工程 README）
 - 官方规则整理：`官方文档/`
+
+
+## 初赛提交资料
+
+[HumaLog提交文档、训练与评测代码、loss及复现记录](submission/README.md)。模型权重单独存放于Hugging Face；该目录保留实际验收状态。
