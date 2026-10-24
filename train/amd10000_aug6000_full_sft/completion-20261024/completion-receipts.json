@@ -1,0 +1,416 @@
+{
+  "passed": true,
+  "completed_at_beijing": "2026-10-24T19:43:12+08:00",
+  "final_step": 16000,
+  "formal_rank_results": [
+    {
+      "rank": 0,
+      "present": true,
+      "passed": true,
+      "status": "passed",
+      "final_step": 16000,
+      "microbatch": 16,
+      "accum": 3,
+      "global_batch": 192,
+      "role": "formal",
+      "bytes": 2344081,
+      "sha256": "d7799ab862310269abd075dfcb4ce4ce765da033234445c68cf3040e046029ad"
+    },
+    {
+      "rank": 1,
+      "present": true,
+      "passed": true,
+      "status": "passed",
+      "final_step": 16000,
+      "microbatch": 16,
+      "accum": 3,
+      "global_batch": 192,
+      "role": "formal",
+      "bytes": 2342045,
+      "sha256": "219c5738ced5da61766b9f9ad27516b058fa39e567d94375eecd62ca25b18fba"
+    },
+    {
+      "rank": 2,
+      "present": true,
+      "passed": true,
+      "status": "passed",
+      "final_step": 16000,
+      "microbatch": 16,
+      "accum": 3,
+      "global_batch": 192,
+      "role": "formal",
+      "bytes": 2344958,
+      "sha256": "a01c2ac5f8a584d0b3bf8d4cfb7b3d51f13648287d1289f9f9bb4150d4f09796"
+    },
+    {
+      "rank": 3,
+      "present": true,
+      "passed": true,
+      "status": "passed",
+      "final_step": 16000,
+      "microbatch": 16,
+      "accum": 3,
+      "global_batch": 192,
+      "role": "formal",
+      "bytes": 2345188,
+      "sha256": "e4987714d6bbcb9fda342db26eccaf4f55983ddb48f1e9aced25d5266c200839"
+    }
+  ],
+  "checkpoints": [
+    {
+      "step": 11000,
+      "passed": true,
+      "world": 4,
+      "readbacks": 8,
+      "all_readbacks_equal": true,
+      "complete_sha256": "4e23fe8c407b1a47dc932541df92d7067c2c64a2a9e512cbe03059fd63ce1a41",
+      "receipts": {
+        "rank0": {
+          "step": 11000,
+          "bytes": 19129974840,
+          "sha256": "640f677656fbab8be0649720d53a798644a4feb0df0cd3310a173a2894cdddc0",
+          "readback_equal": true
+        },
+        "rank1": {
+          "step": 11000,
+          "bytes": 19129974840,
+          "sha256": "6cd6dc2afa06661571fdbc5563f6bf500cb7017b3ef0e153aa44294a01b986dd",
+          "readback_equal": true
+        },
+        "rank2": {
+          "step": 11000,
+          "bytes": 19129974840,
+          "sha256": "9ced21cb0712eb80f829e697503790439a71de0c3c978363243934b994fd552c",
+          "readback_equal": true
+        },
+        "rank3": {
+          "step": 11000,
+          "bytes": 19129965624,
+          "sha256": "9aad1c8aaade58d0c5094126d0ebb04f8b84dfa3c8828cc63e6b5a4f779e97ce",
+          "readback_equal": true
+        },
+        "data_rank0": {
+          "step": 11000,
+          "bytes": 12009,
+          "sha256": "a066aa8fd51919d97305ab8a59e67f0d4a3a492d36b1d42833f40da5f5daefed",
+          "readback_equal": true
+        },
+        "data_rank1": {
+          "step": 11000,
+          "bytes": 12009,
+          "sha256": "6d1e6618ef5820e85c04ef23ad80896e37ea123a47bad017b1f5c614cc3ac932",
+          "readback_equal": true
+        },
+        "data_rank2": {
+          "step": 11000,
+          "bytes": 12009,
+          "sha256": "362c4ec2d1ba3a6f75b12267292a4e113d20fc0f7eac9f55b63e189e7668026f",
+          "readback_equal": true
+        },
+        "data_rank3": {
+          "step": 11000,
+          "bytes": 12009,
+          "sha256": "54e8968dfcb264a7d7dfe9a10b82fb62b143218b012b194dcd813b502820302b",
+          "readback_equal": true
+        }
+      }
+    },
+    {
+      "step": 12000,
+      "passed": true,
+      "world": 4,
+      "readbacks": 8,
+      "all_readbacks_equal": true,
+      "complete_sha256": "0748bb451c1ce04b06d8b9e6633780f13691e618ca91cde15a482b9e4793b120",
+      "receipts": {
+        "rank0": {
+          "step": 12000,
+          "bytes": 19129975032,
+          "sha256": "da926d752d79bbe931afdca7e97695578205fc6cc3efb544dce6f5081f9860ce",
+          "readback_equal": true
+        },
+        "rank1": {
+          "step": 12000,
+          "bytes": 19129975032,
+          "sha256": "4dc97b1ed7559fe995de979694367baf8e252b6a04d62b1eabbf09add58cd5f4",
+          "readback_equal": true
+        },
+        "rank2": {
+          "step": 12000,
+          "bytes": 19129975032,
+          "sha256": "1fa8befc286731fed4e99ebb51f4510af84f9ed6cfef98d01fd2c31c2252b61f",
+          "readback_equal": true
+        },
+        "rank3": {
+          "step": 12000,
+          "bytes": 19129965816,
+          "sha256": "504b76591e5be54df915ba2b2de7eab5ed322d1d2a006c18c92e8b7c1b536028",
+          "readback_equal": true
+        },
+        "data_rank0": {
+          "step": 12000,
+          "bytes": 12201,
+          "sha256": "512cf650d41e89db06343511c7da8626eb9436f8cdad009d6c2d9f6b16ef42dd",
+          "readback_equal": true
+        },
+        "data_rank1": {
+          "step": 12000,
+          "bytes": 12201,
+          "sha256": "b8049034fe22a967cc42c96a16d9446cb6aa05f210cdb9cd25c247fce2e18abb",
+          "readback_equal": true
+        },
+        "data_rank2": {
+          "step": 12000,
+          "bytes": 12201,
+          "sha256": "7ddd0cd1b0a6ad24efc14ac46d21afe1e45e925c548fbcecbca61f69346057ed",
+          "readback_equal": true
+        },
+        "data_rank3": {
+          "step": 12000,
+          "bytes": 12201,
+          "sha256": "b1cb7a4495fd5fd1647b7f776ca4c8773b6e3668fc7bebf87f8c117df861d656",
+          "readback_equal": true
+        }
+      }
+    },
+    {
+      "step": 13000,
+      "passed": true,
+      "world": 4,
+      "readbacks": 8,
+      "all_readbacks_equal": true,
+      "complete_sha256": "3b7a198b32946e30b35866e88dfb9a3cc8592d7d38b363391ff58d74ac75d784",
+      "receipts": {
+        "rank0": {
+          "step": 13000,
+          "bytes": 19129975032,
+          "sha256": "409622fdc4bc33b6518cc6e021fcca71fe19bc169580bdb8494d1680352fa446",
+          "readback_equal": true
+        },
+        "rank1": {
+          "step": 13000,
+          "bytes": 19129975032,
+          "sha256": "d1547bdaa0b7aeb52b1fdf05e7f6b6fe1a0c3aaaec22351c84036e4b4962eb9e",
+          "readback_equal": true
+        },
+        "rank2": {
+          "step": 13000,
+          "bytes": 19129975032,
+          "sha256": "fedfdfaea5acc73f997f3c293e20230020c0b47af57d90dfc4f0aee9c3971198",
+          "readback_equal": true
+        },
+        "rank3": {
+          "step": 13000,
+          "bytes": 19129965816,
+          "sha256": "320d1b6de6e0aaaff7aa86012e91e935414817ee15638f70a0543d0ae91d2d48",
+          "readback_equal": true
+        },
+        "data_rank0": {
+          "step": 13000,
+          "bytes": 12201,
+          "sha256": "0c0bc94b9057645f181bd838e82c71aa5e729a0573fbb487c1adfea5029b4b73",
+          "readback_equal": true
+        },
+        "data_rank1": {
+          "step": 13000,
+          "bytes": 12201,
+          "sha256": "4581d67c98bdfac7acf8f236cf13dd5fa244d48b5cfc7d753a8347b37026eddc",
+          "readback_equal": true
+        },
+        "data_rank2": {
+          "step": 13000,
+          "bytes": 12201,
+          "sha256": "d6004db9ef584410a17f099bbc6a34aee0834cfa6deac054a92e82f6150cd90d",
+          "readback_equal": true
+        },
+        "data_rank3": {
+          "step": 13000,
+          "bytes": 12201,
+          "sha256": "9e588a41ea53832ecf37b4cee1a1598e9cab73ed9d6c8955db6c9bec28818a96",
+          "readback_equal": true
+        }
+      }
+    },
+    {
+      "step": 14000,
+      "passed": true,
+      "world": 4,
+      "readbacks": 8,
+      "all_readbacks_equal": true,
+      "complete_sha256": "3c395992aa69775c0762b3e8d0a421285c6590a8d8244aad099273f99cb8dbff",
+      "receipts": {
+        "rank0": {
+          "step": 14000,
+          "bytes": 19129975032,
+          "sha256": "af134a68ba545596654031b0e676cca4e42f83468c6b15579d85d65361f10ec5",
+          "readback_equal": true
+        },
+        "rank1": {
+          "step": 14000,
+          "bytes": 19129975032,
+          "sha256": "9ecef78a71bc64148bc543c37f76210997c67737d8b43b2a2f51a3fdd72b5033",
+          "readback_equal": true
+        },
+        "rank2": {
+          "step": 14000,
+          "bytes": 19129975032,
+          "sha256": "4fb6a8fdac296c7f3bcd1a57b5b6680cb2cc8cde272e8d990abcaf213bc88b2a",
+          "readback_equal": true
+        },
+        "rank3": {
+          "step": 14000,
+          "bytes": 19129965816,
+          "sha256": "1235ddda8524a1dd32ddc7cf52305327999580151587d729b3b27cfac417d04a",
+          "readback_equal": true
+        },
+        "data_rank0": {
+          "step": 14000,
+          "bytes": 12201,
+          "sha256": "3424c8adb1937a5f5b6e4f0d4f548c7b71ef2cfb7cd4ed4c551f0f06b0c027e9",
+          "readback_equal": true
+        },
+        "data_rank1": {
+          "step": 14000,
+          "bytes": 12201,
+          "sha256": "6395df6e1ff9c612078cb6dbb095e8590449b9baca1dc602f0f5d71ab38780d6",
+          "readback_equal": true
+        },
+        "data_rank2": {
+          "step": 14000,
+          "bytes": 12201,
+          "sha256": "7a904feab91d7e15bbccef96f480e9b01b9dc591b327be862c7bd70b51bca724",
+          "readback_equal": true
+        },
+        "data_rank3": {
+          "step": 14000,
+          "bytes": 12201,
+          "sha256": "17df3c288b8757ed237a304c442d2722ffc23edf602535fbd686e937ef6a5980",
+          "readback_equal": true
+        }
+      }
+    },
+    {
+      "step": 15000,
+      "passed": true,
+      "world": 4,
+      "readbacks": 8,
+      "all_readbacks_equal": true,
+      "complete_sha256": "52a00c32c5ab8b65b105baf7eae9fed79d84a7c89e8c8f6f97ce684c5f7a1e3a",
+      "receipts": {
+        "rank0": {
+          "step": 15000,
+          "bytes": 19129975032,
+          "sha256": "8d33f9f2bdd775ea705bc1cbdf1032c4540f07cd84286298a4c2ead9b54a790f",
+          "readback_equal": true
+        },
+        "rank1": {
+          "step": 15000,
+          "bytes": 19129975032,
+          "sha256": "f77418b144dab4c5b46e8fbc6c713c64dee03a025e09a6a3c91342b09927f11c",
+          "readback_equal": true
+        },
+        "rank2": {
+          "step": 15000,
+          "bytes": 19129975032,
+          "sha256": "e8575937f336db2850313afa756d1b1f2fb6f6ba0f75a7872debc26367091fe1",
+          "readback_equal": true
+        },
+        "rank3": {
+          "step": 15000,
+          "bytes": 19129965816,
+          "sha256": "a8556ff596b9c943855378eeeb8426a9dfc1ecd7d00a8a6acf3bc3d7e66101ec",
+          "readback_equal": true
+        },
+        "data_rank0": {
+          "step": 15000,
+          "bytes": 12201,
+          "sha256": "d61bbf2d2db215445199dfee0474ae8d535104991219715b41b116f9365e3d5c",
+          "readback_equal": true
+        },
+        "data_rank1": {
+          "step": 15000,
+          "bytes": 12201,
+          "sha256": "e2d59f52cf2d949537119d95ac3dce5c331668e9ac8e9622fa5787b996ee45f6",
+          "readback_equal": true
+        },
+        "data_rank2": {
+          "step": 15000,
+          "bytes": 12201,
+          "sha256": "859ddf1eca442a43e38803c6f88775b44f5dc549912d04c9dcd83fd1fe351a61",
+          "readback_equal": true
+        },
+        "data_rank3": {
+          "step": 15000,
+          "bytes": 12201,
+          "sha256": "688f035f9c3617398638960cf444d17fb23ad15e5c0b2206899aa970c15ef392",
+          "readback_equal": true
+        }
+      }
+    },
+    {
+      "step": 16000,
+      "passed": true,
+      "world": 4,
+      "readbacks": 8,
+      "all_readbacks_equal": true,
+      "complete_sha256": "59d62f44ff25e35818357145fdb741f9c037c3278e87c3d5f17325e72589012b",
+      "receipts": {
+        "rank0": {
+          "step": 16000,
+          "bytes": 19129975032,
+          "sha256": "8201465d0270d46dacd4a6df40ac2cb5601c7e35530b9c22077d95cb2cd1dcc2",
+          "readback_equal": true
+        },
+        "rank1": {
+          "step": 16000,
+          "bytes": 19129975032,
+          "sha256": "7d0db4b13ee3efd6829bc023238291cd143849edcf7f193c0f5a1eb7edd00035",
+          "readback_equal": true
+        },
+        "rank2": {
+          "step": 16000,
+          "bytes": 19129975032,
+          "sha256": "878e038a85d577c10478b8c8bb9bfe9207265804a072b459bff6561752da50d1",
+          "readback_equal": true
+        },
+        "rank3": {
+          "step": 16000,
+          "bytes": 19129965816,
+          "sha256": "2aa4886dec11e10c3dc993d55036029881d4e701fe8878186201af9606741310",
+          "readback_equal": true
+        },
+        "data_rank0": {
+          "step": 16000,
+          "bytes": 12201,
+          "sha256": "0ab641b4a39f8a8b07bd55719801ba87e30629396b21acf62748b48f7e14a78e",
+          "readback_equal": true
+        },
+        "data_rank1": {
+          "step": 16000,
+          "bytes": 12201,
+          "sha256": "6caecca49431a260da4396c6ee5218e5c50c90a15bb775863154d54d4a9afd32",
+          "readback_equal": true
+        },
+        "data_rank2": {
+          "step": 16000,
+          "bytes": 12201,
+          "sha256": "e69a823ce17dcfc33ea37dab00180d08ebd75cf27c88860963b9aec457de9f16",
+          "readback_equal": true
+        },
+        "data_rank3": {
+          "step": 16000,
+          "bytes": 12201,
+          "sha256": "a20c61a8ba6f83613c10445a9f720350afa6af36ed5b03eaba01bc0851677899",
+          "readback_equal": true
+        }
+      }
+    }
+  ],
+  "total_readbacks": 48,
+  "final_save_and_readback_seconds": {
+    "16000": 1190.5599455833435
+  },
+  "soarm_backup_performed": false,
+  "normalization_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "data_filter_sha256": "30e7c8c018e1d2110bc255a2f03051034a679afd01c122b68ec2052878f410c5"
+}

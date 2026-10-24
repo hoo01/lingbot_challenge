@@ -1,5 +1,7 @@
 # LingBot-VLA × RoboTwin 比赛工程
 
+- [2026-10-24：AMD8000→四卡增强至16000完成、最终推理模型与最后5000步曲线](train/amd10000_aug6000_full_sft/README.md)
+
 本仓库是队内的工程交付仓，用来组织 RoboTwin clean 数据准备、LingBot-VLA 后训练、
 实验配方、评测接口和复现文档。可复用训练运行时位于
 [`training/lingbot-vla-robotwin/`](training/lingbot-vla-robotwin/)，各轮实验的冻结设计与入口位于

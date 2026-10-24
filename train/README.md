@@ -1,5 +1,7 @@
 # 训练实验与交付
 
+- [AMD8000→四卡增强至16000完成：实际配方、归一化/教师一致性、完整保存读回和最终模型](amd10000_aug6000_full_sft/README.md)
+
 `train/` 保存各轮训练实验的冻结设计、配置、启动门禁、交付工具和脱敏证据。可复用的模型、
 数据与分布式训练实现统一维护在 [`training/lingbot-vla-robotwin/`](../training/lingbot-vla-robotwin/)；
 实验目录只保留为复现实验所需的薄层，不复制运行时源码。
