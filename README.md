@@ -1,5 +1,8 @@
 # LingBot-VLA × RoboTwin 比赛工程
 
+- [Aug16000完整3000回合结果](eval/results/aug16000-clean-random-3000-20261025.md)：Clean1090/1500（72.67%）、Random589/1500（39.27%），综合55.97%；含逐任务成绩和原始回执。
+
+
 - [2026-10-24：AMD8000→四卡增强至16000完成、最终推理模型与最后5000步曲线](train/amd10000_aug6000_full_sft/README.md)
 
 本仓库是队内的工程交付仓，用来组织 RoboTwin clean 数据准备、LingBot-VLA 后训练、

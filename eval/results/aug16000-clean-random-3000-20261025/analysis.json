@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "model_revision": "2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1",
+  "protocol_sha256": "8508ec80bd206a42274d62a5bbe9331ecfe343fa4a31e1b64f302412f4199dae",
+  "total_scored": 3000,
+  "groups": 100,
+  "per_group": 30,
+  "clean": {
+    "success": 1090,
+    "scored": 1500,
+    "rate": 0.7266666666666667,
+    "timeouts": 0
+  },
+  "random": {
+    "success": 589,
+    "scored": 1500,
+    "rate": 0.39266666666666666,
+    "timeouts": 0
+  },
+  "mean_rate": 0.5596666666666666,
+  "interpretation": "Clean uses5090 and Random uses4090, different environment/RNG; descriptive setting results, no pure hardware/augmentation causal claim",
+  "time": 1792896873.6329887
+}

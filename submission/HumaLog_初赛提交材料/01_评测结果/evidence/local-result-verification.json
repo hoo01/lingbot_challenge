@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "model_revision": "2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1",
+  "protocol_sha256": "8508ec80bd206a42274d62a5bbe9331ecfe343fa4a31e1b64f302412f4199dae",
+  "total_scored": 3000,
+  "unique_scored_keys": 3000,
+  "groups": 100,
+  "per_group": 30,
+  "clean": {
+    "successes": 1090,
+    "attempts": 1500,
+    "success_rate": 0.7266666666666667
+  },
+  "randomized": {
+    "successes": 589,
+    "attempts": 1500,
+    "success_rate": 0.39266666666666666
+  },
+  "total": {
+    "successes": 1679,
+    "attempts": 3000,
+    "success_rate": 0.5596666666666666
+  },
+  "scored_policy_timeouts": 0,
+  "non_scored_native_initialization_errors": 432,
+  "prepolicy_engineering_errors_preserved": 2,
+  "finite_h50_blocks": 47104,
+  "rgb_pngs": 18000,
+  "video_disabled_verified": true,
+  "all_six_actual_runtime_acceptances_passed": true,
+  "all_six_local_readbacks_passed": true,
+  "completed_host_network_reads": 0,
+  "large_weights_or_images_read": false,
+  "official_style_expert_screening": false,
+  "independent_portable_release_gpu_acceptance": false
+}

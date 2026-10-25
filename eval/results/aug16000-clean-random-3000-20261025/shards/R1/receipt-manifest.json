@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "shard_id": "R1",
+  "revision": "2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1",
+  "protocol_sha256": "8508ec80bd206a42274d62a5bbe9331ecfe343fa4a31e1b64f302412f4199dae",
+  "files": {
+    "verification.json": {
+      "bytes": 842,
+      "sha256": "e22e583e774e4f4c2b8bb8687260673ced83de7c04a87fd12e0bb5a82cffdaf2"
+    },
+    "outcomes.csv": {
+      "bytes": 79997,
+      "sha256": "fd8852fdb5e7527f6326d11e9ce7453823e1bffb7c639d62d549b3be3061cc51"
+    },
+    "by-group.csv": {
+      "bytes": 598,
+      "sha256": "eeef4385467524c447b1e1ca2507dd36c8547f4cfc142631f3d9b6c49b7fc75e"
+    },
+    "non-scored-errors.csv": {
+      "bytes": 41390,
+      "sha256": "c7d2859c0e4b3ca2117c8fa532c383f61bdc73a1fab85156df6a848606b93636"
+    }
+  }
+}

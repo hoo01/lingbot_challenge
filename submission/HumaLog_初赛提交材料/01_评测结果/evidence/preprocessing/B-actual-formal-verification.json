@@ -1,0 +1,101 @@
+{
+  "tensors": {
+    "images": {
+      "dtype": "torch.float32",
+      "shape": [
+        3,
+        256,
+        1536
+      ],
+      "sha256": "8390d61c2ddf83744f070350935f86fd65907dc4fd5aa2ee4592ec6bb0d1b729"
+    },
+    "img_masks": {
+      "dtype": "torch.bool",
+      "shape": [
+        3
+      ],
+      "sha256": "75c8fd04ad916aec3e3d5cb76a452b116b3d4d0912a0a485e9fb8e3d240e210c"
+    },
+    "state": {
+      "dtype": "torch.float32",
+      "shape": [
+        55
+      ],
+      "sha256": "7346f4818f39a7f8a538c9a72121c490ed330b2515417531d2f59b7777fd97ba"
+    },
+    "lang_tokens": {
+      "dtype": "torch.int64",
+      "shape": [
+        72
+      ],
+      "sha256": "5eff8b4445191945946a2dfc5eab4d2c577962d1a2c3f01d9f8bde37789233e4"
+    },
+    "lang_masks": {
+      "dtype": "torch.bool",
+      "shape": [
+        72
+      ],
+      "sha256": "59ea0146556a8ce2f8e0277d1accd09f906e41ecba51394ffa94d415070cba09"
+    },
+    "actions": {
+      "dtype": "torch.float32",
+      "shape": [
+        50,
+        55
+      ],
+      "sha256": "d4957b5b5c11798ae58c4aa65dec33a04526b88e0a4aa4e33addfccfc8b858b4"
+    },
+    "action_is_pad": {
+      "dtype": "torch.float32",
+      "shape": [
+        50
+      ],
+      "sha256": "6d9c54dee5660c46886f32d80e57e9dd0ffa57ee0cd2a762b036d9c8e0c3a33a"
+    },
+    "joint_mask": {
+      "dtype": "torch.bool",
+      "shape": [
+        50,
+        55
+      ],
+      "sha256": "ab3406e1664221ac127a846dad82d99f2c179200a0886db2b97c86d5121dd29f"
+    },
+    "state_joint_mask": {
+      "dtype": "torch.bool",
+      "shape": [
+        55
+      ],
+      "sha256": "3562a2a94ce31d066afd68f998fbc1921900ce67396915082263013096cdd8c9"
+    },
+    "action_joint_mask": {
+      "dtype": "torch.bool",
+      "shape": [
+        55
+      ],
+      "sha256": "3562a2a94ce31d066afd68f998fbc1921900ce67396915082263013096cdd8c9"
+    },
+    "image_grid_thw": {
+      "dtype": "torch.int64",
+      "shape": [
+        3,
+        3
+      ],
+      "sha256": "74db1921dc69fb6393b27f658d905fb5510509178e1aa276505332f3d6b1fcaa"
+    }
+  },
+  "roundtrip": {
+    "passed": true,
+    "atol": 1e-06,
+    "rtol": 1e-06,
+    "max_absolute_error": 1.1796119636642288e-16,
+    "native_normalizer_arithmetic_dtype": "torch.float64",
+    "relative_arm_same_q_t_all_horizons": true,
+    "gripper_absolute_minmax": true,
+    "raw_rgb_no_inferred_units": true
+  },
+  "cpu_only": true,
+  "native_preprocessing_source_sha256": "ede2f532ea9cf06acd49fadb6915c5b8da2caa09dbd342cfb82754f182f386d2",
+  "passed": true,
+  "actual_formal_input_sha256": "ab1894252587ad1bf55761ff8b3648b5de97b09bc1206eb45f8835c65826ac72",
+  "no_additional_model_or_scene": true
+}

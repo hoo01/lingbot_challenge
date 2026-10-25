@@ -1,0 +1,14 @@
+task,setting,scored,success,policy_timeout,non_scored
+adjust_bottle,demo_randomized,30,24,0,12
+click_alarmclock,demo_randomized,30,19,0,1
+handover_block,demo_randomized,30,5,0,6
+move_can_pot,demo_randomized,30,4,0,5
+open_laptop,demo_randomized,30,9,0,3
+place_a2b_left,demo_randomized,30,12,0,3
+place_burger_fries,demo_randomized,30,17,0,9
+place_dual_shoes,demo_randomized,30,13,0,5
+place_object_basket,demo_randomized,30,18,0,8
+place_shoe,demo_randomized,30,13,0,6
+rotate_qrcode,demo_randomized,30,3,0,3
+stack_blocks_three,demo_randomized,30,8,0,3
+stamp_seal,demo_randomized,30,5,0,7

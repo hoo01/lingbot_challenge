@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "time": 1792888234.4933689,
+  "files": {
+    "by-group.csv": {
+      "bytes": 598,
+      "sha256": "eeef4385467524c447b1e1ca2507dd36c8547f4cfc142631f3d9b6c49b7fc75e"
+    },
+    "non-scored-errors.csv": {
+      "bytes": 41390,
+      "sha256": "c7d2859c0e4b3ca2117c8fa532c383f61bdc73a1fab85156df6a848606b93636"
+    },
+    "outcomes.csv": {
+      "bytes": 79997,
+      "sha256": "fd8852fdb5e7527f6326d11e9ce7453823e1bffb7c639d62d549b3be3061cc51"
+    },
+    "receipt-manifest.json": {
+      "bytes": 751,
+      "sha256": "398e98a6897d6c373dce53d97583bb48375909764a262a28ef6c60f9aac08d58"
+    },
+    "verification.json": {
+      "bytes": 842,
+      "sha256": "e22e583e774e4f4c2b8bb8687260673ced83de7c04a87fd12e0bb5a82cffdaf2"
+    }
+  },
+  "permanent_local_only": true
+}

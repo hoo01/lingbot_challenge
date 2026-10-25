@@ -26,6 +26,6 @@ hf download Humalog2/Lab20k-FullSFT-Aug16000 \
 
 ## 当前验收状态
 
-CPU源码／入口、shell语法及结果汇总行为已检查。真实评测结果汇总、完整训练的跨阶段衔接和独立GPU复现仍待完成，材料状态保持DRAFT_NOT_READY_TO_SUBMIT。pending结果不代表最终成绩。
+3000回合实测已完成：Clean1090/1500（72.67%）、Random589/1500（39.27%）、综合55.97%。正式results.json、逐任务成绩、六分片回执和实际运行环境验收已补齐。完整训练的跨阶段衔接及新发行入口独立GPU复现仍待完成，材料继续保留DRAFT_NOT_READY_TO_SUBMIT状态。
 
 ![最后5000步loss](HumaLog_初赛提交材料/04_复现与调优说明/figures/loss-final5000.png)

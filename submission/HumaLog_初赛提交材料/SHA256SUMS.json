@@ -3,13 +3,289 @@
   "local_document_copy": true,
   "large_weight_bytes_staged_on_server": 25503888740,
   "files": {
-    "01_评测结果/README.md": {
-      "bytes": 1009,
-      "sha256": "e0e3f85c24ed26ce49fd26b2a0ce1de8b94d791d2a842402f7b85cfa6d528f3a"
+    "03_模型权重/checkpoint/assets/norm_stats.json": {
+      "bytes": 94770,
+      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
     },
-    "01_评测结果/results.pending.json": {
-      "bytes": 9368,
-      "sha256": "c533124621f700d2b21c67c1ec2fbaaed0dece9d2c1b213eb9d9ae836ba0c936"
+    "03_模型权重/checkpoint/assets/norm_stats.provenance.json": {
+      "bytes": 1549,
+      "sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682"
+    },
+    "03_模型权重/checkpoint/assets/robotwin_relative.yaml": {
+      "bytes": 1008,
+      "sha256": "f4a1de74470ae9d7353bbfe7bdd173305bf391cecd05f4dd7f5276968e426c5e"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/config.json": {
+      "bytes": 5549,
+      "sha256": "71d3a0cbcb373c0671372ab3b19765be3fe993b82dca9e6d23d98af0d5ed965c"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model.safetensors.index.json": {
+      "bytes": 192017,
+      "sha256": "5f372bc3bd5b10c612922b13ff341e866aff357b7baa39a4a1267d0628efd289"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/runtime-construction.json": {
+      "bytes": 97,
+      "sha256": "ddd244944c73a32e6aa7fe7c21e73c6aefd3d9bf8e37d91f70ac2a80912094e9"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference-cli.yaml": {
+      "bytes": 4306,
+      "sha256": "b18803fdacbcbe3010805ef3132ca074cb3bc8f87200434dcdad152e64025925"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference_config.json": {
+      "bytes": 1482,
+      "sha256": "f57e381a869959918b06b61be3a595790b43cf8c0ae12f209d40981446cdd5fd"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/chat_template.json": {
+      "bytes": 5502,
+      "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/config.json": {
+      "bytes": 1505,
+      "sha256": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/generation_config.json": {
+      "bytes": 269,
+      "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/preprocessor_config.json": {
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer.json": {
+      "bytes": 7032403,
+      "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer_config.json": {
+      "bytes": 10868,
+      "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/video_preprocessor_config.json": {
+      "bytes": 385,
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "03_模型权重/checkpoint/README.md": {
+      "bytes": 1742,
+      "sha256": "0be7e3a5586b6c8da995a7243785b5ea1cff9155a4dbcbcc2480eed417fb523f"
+    },
+    "01_评测结果/by-task.csv": {
+      "bytes": 2858,
+      "sha256": "7e6a1fb0a2016923954ebfffae207673c2565f01501485088cda9b714961772a"
+    },
+    "01_评测结果/evidence/analysis.json": {
+      "bytes": 697,
+      "sha256": "c0e7069ee8341e75d4ca3bc268ee614e31df3c6ad26bb6a0fac3e2a6417dbbae"
+    },
+    "01_评测结果/evidence/by-task.csv": {
+      "bytes": 2858,
+      "sha256": "7e6a1fb0a2016923954ebfffae207673c2565f01501485088cda9b714961772a"
+    },
+    "01_评测结果/evidence/completion-marker.json": {
+      "bytes": 201,
+      "sha256": "286efe48fbf32eaf3e61a266b5cdd1d61dfd8724f575f407260e41edf6884074"
+    },
+    "01_评测结果/evidence/local-result-verification.json": {
+      "bytes": 1098,
+      "sha256": "b8c70cfbebf08217f7ab736c08a808f95f139e4aea1c53e960b2767b36997ba4"
+    },
+    "01_评测结果/evidence/outcomes.csv": {
+      "bytes": 623266,
+      "sha256": "af6ad326186d5c47d52b4e844ac0c247d53209561a5176cf983040413debf3b4"
+    },
+    "01_评测结果/evidence/preprocessing/B-actual-formal-verification.json": {
+      "bytes": 2736,
+      "sha256": "0bc55cf9f549222475a2b574f2a17a9ae4064911c3656876ac7132642868d3ce"
+    },
+    "01_评测结果/evidence/preprocessing/lab-actual-formal-verification.json": {
+      "bytes": 2748,
+      "sha256": "835e2535fc6fa447fced4e2266db725e1e2413ded635aea7b993c755e12f85b0"
+    },
+    "01_评测结果/evidence/provenance-manifest.json": {
+      "bytes": 7615,
+      "sha256": "6bd138d9efb2e343a4c34c2eebbc1b05abf3fa972fc1346db19cdf3ce71ab683"
+    },
+    "01_评测结果/evidence/shards/C0/actual-startup-acceptance.json": {
+      "bytes": 2055,
+      "sha256": "e66f3eab8b44ad262fc9ae7a20195281e370c41d1e77f4cc1dea2b409b93f7fa"
+    },
+    "01_评测结果/evidence/shards/C0/by-group.csv": {
+      "bytes": 1198,
+      "sha256": "d240735566e4eb1f861fa6850a9ca858e0f8eb8a36cecde85d83766b3db1138e"
+    },
+    "01_评测结果/evidence/shards/C0/local-readback-verification.json": {
+      "bytes": 814,
+      "sha256": "08842607b7c49aace525e73e3b300076d59fa289cef909e9ee50063edebbf332"
+    },
+    "01_评测结果/evidence/shards/C0/non-scored-errors.csv": {
+      "bytes": 26475,
+      "sha256": "3ae1fbda3bba085d52b35e573a78581e09ac5ab24a23c66d2cee3fb18ef048df"
+    },
+    "01_评测结果/evidence/shards/C0/outcomes.csv": {
+      "bytes": 181158,
+      "sha256": "258015cf347f0792ac40940398c0434c3af0a0f0c9d7ee6bea83ac2c5a512ec5"
+    },
+    "01_评测结果/evidence/shards/C0/receipt-manifest.json": {
+      "bytes": 753,
+      "sha256": "c0c45eaba4aa5bd3a243ac0738f7841100bc9963d06ce7c1b8a44ce9c62bfbc6"
+    },
+    "01_评测结果/evidence/shards/C0/verification.json": {
+      "bytes": 720,
+      "sha256": "22e7405ad301a1168b5a9de8690ab589f4c7c6d36bf9b1b0f34c3bbdb3ff4a2e"
+    },
+    "01_评测结果/evidence/shards/C1/actual-startup-acceptance.json": {
+      "bytes": 2185,
+      "sha256": "344f5127399e6bca8754b39b69dcee63e909e820b111b257ee236b532372bc4d"
+    },
+    "01_评测结果/evidence/shards/C1/by-group.csv": {
+      "bytes": 835,
+      "sha256": "91d03f2e4dfedc3e3f530b6cd044eb459096d3c033afa5a7b1b3ec090689074b"
+    },
+    "01_评测结果/evidence/shards/C1/local-readback-verification.json": {
+      "bytes": 813,
+      "sha256": "de01d80c6f9f644ce95d1c5a5bb290fce4836e48ee400323790b00efbe3cf0c1"
+    },
+    "01_评测结果/evidence/shards/C1/non-scored-errors.csv": {
+      "bytes": 60063,
+      "sha256": "378e2103d5473b4c926d771d555fae3bb83320df6b61ae7657e7dace8a26ef54"
+    },
+    "01_评测结果/evidence/shards/C1/outcomes.csv": {
+      "bytes": 121278,
+      "sha256": "f8b2372dd6171f5a18a6de0369cdc3ed36c2d57022b2492b812088dc182adbd8"
+    },
+    "01_评测结果/evidence/shards/C1/receipt-manifest.json": {
+      "bytes": 752,
+      "sha256": "3eefcefdda641887fcc76173658d45eac9505148ab3c6dbbe334ea88374ec30a"
+    },
+    "01_评测结果/evidence/shards/C1/verification.json": {
+      "bytes": 716,
+      "sha256": "50ef03a6b0ba2f113b886c518b75b67c66dc74e39ab3d5706d277a8219314cb9"
+    },
+    "01_评测结果/evidence/shards/R0/actual-startup-acceptance.json": {
+      "bytes": 2060,
+      "sha256": "f382db3f25e0da18c21628097b397ddd477b5f24451f46da62552fb032d18e34"
+    },
+    "01_评测结果/evidence/shards/R0/by-group.csv": {
+      "bytes": 598,
+      "sha256": "67a1ba0369549d6c2223666142c5065d97cf119e0f0f376ef41c05ec05bafbfd"
+    },
+    "01_评测结果/evidence/shards/R0/local-readback-verification.json": {
+      "bytes": 812,
+      "sha256": "34642441dbe49f7d04696bb876dc5186deb34478585cedabd45e1f81abc07ab8"
+    },
+    "01_评测结果/evidence/shards/R0/non-scored-errors.csv": {
+      "bytes": 57619,
+      "sha256": "ec687315720fd879f6d885d4f178353fbb02c42adf92b9296831943980146edb"
+    },
+    "01_评测结果/evidence/shards/R0/outcomes.csv": {
+      "bytes": 79931,
+      "sha256": "63976857aeefd9e60edb5b8d82a2d9aa910c875768b8841a72496fe70d60a7bb"
+    },
+    "01_评测结果/evidence/shards/R0/receipt-manifest.json": {
+      "bytes": 751,
+      "sha256": "22d695094d288644f4f3a9436c2c0df61c575330eaddd9b860afd81f27b262d3"
+    },
+    "01_评测结果/evidence/shards/R0/verification.json": {
+      "bytes": 698,
+      "sha256": "76dbefe3fabdc6dbe0d7f32efdf3fcfbc1e98848f04b1fa2a43563da4e5b9ed4"
+    },
+    "01_评测结果/evidence/shards/R1/actual-startup-acceptance.json": {
+      "bytes": 2064,
+      "sha256": "938ea15ca1f713d0b8ebfcf1352063af866f156aa8a178d868fcc921f36275ea"
+    },
+    "01_评测结果/evidence/shards/R1/by-group.csv": {
+      "bytes": 598,
+      "sha256": "eeef4385467524c447b1e1ca2507dd36c8547f4cfc142631f3d9b6c49b7fc75e"
+    },
+    "01_评测结果/evidence/shards/R1/local-readback-verification.json": {
+      "bytes": 812,
+      "sha256": "acde508454de65080a25d66c2896df6aa14c8b72cf92da3351515dfea1313a9e"
+    },
+    "01_评测结果/evidence/shards/R1/non-scored-errors.csv": {
+      "bytes": 41390,
+      "sha256": "c7d2859c0e4b3ca2117c8fa532c383f61bdc73a1fab85156df6a848606b93636"
+    },
+    "01_评测结果/evidence/shards/R1/outcomes.csv": {
+      "bytes": 79997,
+      "sha256": "fd8852fdb5e7527f6326d11e9ce7453823e1bffb7c639d62d549b3be3061cc51"
+    },
+    "01_评测结果/evidence/shards/R1/receipt-manifest.json": {
+      "bytes": 751,
+      "sha256": "398e98a6897d6c373dce53d97583bb48375909764a262a28ef6c60f9aac08d58"
+    },
+    "01_评测结果/evidence/shards/R1/verification.json": {
+      "bytes": 842,
+      "sha256": "e22e583e774e4f4c2b8bb8687260673ced83de7c04a87fd12e0bb5a82cffdaf2"
+    },
+    "01_评测结果/evidence/shards/R2/actual-startup-acceptance.json": {
+      "bytes": 2065,
+      "sha256": "e73e749c659e4c7f619b02bf5c01a5ecec25d9ca32225c610175d70b78b59069"
+    },
+    "01_评测结果/evidence/shards/R2/by-group.csv": {
+      "bytes": 590,
+      "sha256": "c19895e567fb590800399943bad90239844cea683b84cfb93e1e766ea5367dd3"
+    },
+    "01_评测结果/evidence/shards/R2/local-readback-verification.json": {
+      "bytes": 813,
+      "sha256": "7dc492da95b8ff161abdc113cd9727077dbe87f9ee5941db5978ac592fbb0dec"
+    },
+    "01_评测结果/evidence/shards/R2/non-scored-errors.csv": {
+      "bytes": 117673,
+      "sha256": "a52b550b8c8c39858ba16b235046857014fdbf1ca978902958d4ca5750d20c9d"
+    },
+    "01_评测结果/evidence/shards/R2/outcomes.csv": {
+      "bytes": 74676,
+      "sha256": "1760a0ab5c53f5c530d8606e9d01f74f18b3a52140a16f3fb800e708e89c1c8f"
+    },
+    "01_评测结果/evidence/shards/R2/receipt-manifest.json": {
+      "bytes": 752,
+      "sha256": "0f3ed06cda5247a86673ad588cce81d7aff1a5aac8e458e0e8a6c134c2d4feed"
+    },
+    "01_评测结果/evidence/shards/R2/verification.json": {
+      "bytes": 701,
+      "sha256": "1eb3f0a8555b8a601976a42ed5a8c783c86516aca261824ff25d1582b0932be5"
+    },
+    "01_评测结果/evidence/shards/R3/actual-startup-acceptance.json": {
+      "bytes": 2065,
+      "sha256": "e423d46b882f7cefb4c204c5e8244d328ebb0d285889d14240c5e43f14c07799"
+    },
+    "01_评测结果/evidence/shards/R3/by-group.csv": {
+      "bytes": 589,
+      "sha256": "d42734f17a41ce3f72beb433af3c1f3658986c862b3cb4b14b9a3c5c11cd89c5"
+    },
+    "01_评测结果/evidence/shards/R3/local-readback-verification.json": {
+      "bytes": 810,
+      "sha256": "d340e98eaa8cf2532566693b1ae10cc014693b86df45598dbef82c0e5ff6826e"
+    },
+    "01_评测结果/evidence/shards/R3/non-scored-errors.csv": {
+      "bytes": 62957,
+      "sha256": "a5f986ffbd532fbbd9c3cc9de3662c129e82aa34f476c1cb987ff95911cfe787"
+    },
+    "01_评测结果/evidence/shards/R3/outcomes.csv": {
+      "bytes": 74714,
+      "sha256": "6b646b25d69cd53d750f78b46f83752cd0a2a6d468c2cd520c375f761edef556"
+    },
+    "01_评测结果/evidence/shards/R3/receipt-manifest.json": {
+      "bytes": 751,
+      "sha256": "c07ca8fb574c2ba560f49ffb218d63b9408f0f7062d14b35f977cfb6a19bab46"
+    },
+    "01_评测结果/evidence/shards/R3/verification.json": {
+      "bytes": 842,
+      "sha256": "a3c3a8a6a68cd403b0fba08221d7709165eec25dfbb06bdafb903c7e35c95aa9"
+    },
+    "01_评测结果/README.md": {
+      "bytes": 1159,
+      "sha256": "6e8ac7824086e67095941a6d677d59b2bb93f22134b604b263e755e628e2f866"
+    },
+    "01_评测结果/results.json": {
+      "bytes": 8941,
+      "sha256": "da2e84b8e97162cfbf5967eff2ff4034d8ccdfb3c6dc9ac3f984bce07fcc3009"
     },
     "02_代码材料/ASSETS.md": {
       "bytes": 3742,
@@ -128,8 +404,8 @@
       "sha256": "2aa88b4e1d3257a210a516ad3df3d7f322d03c4285e432d35976980cdb9622fa"
     },
     "02_代码材料/README.md": {
-      "bytes": 4288,
-      "sha256": "132afdaa97f84c508512f343640ff0265365dd35af5654ddad684dfbb11fab76"
+      "bytes": 4626,
+      "sha256": "ea2283c4170719f16bdfd0f36844922f29ee5e6fe0f2785720bd3289bb8db3ff"
     },
     "02_代码材料/src/base20k/fresh_recipe.py": {
       "bytes": 4221,
@@ -1279,78 +1555,6 @@
       "bytes": 1608,
       "sha256": "d6c585775a7fd45ba7b2bc0416b0a3459e48b7fa65e3fb9ec1d1afa440c8c231"
     },
-    "03_模型权重/checkpoint/assets/norm_stats.json": {
-      "bytes": 94770,
-      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
-    },
-    "03_模型权重/checkpoint/assets/norm_stats.provenance.json": {
-      "bytes": 1549,
-      "sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682"
-    },
-    "03_模型权重/checkpoint/assets/robotwin_relative.yaml": {
-      "bytes": 1008,
-      "sha256": "f4a1de74470ae9d7353bbfe7bdd173305bf391cecd05f4dd7f5276968e426c5e"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/config.json": {
-      "bytes": 5549,
-      "sha256": "71d3a0cbcb373c0671372ab3b19765be3fe993b82dca9e6d23d98af0d5ed965c"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model.safetensors.index.json": {
-      "bytes": 192017,
-      "sha256": "5f372bc3bd5b10c612922b13ff341e866aff357b7baa39a4a1267d0628efd289"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/runtime-construction.json": {
-      "bytes": 97,
-      "sha256": "ddd244944c73a32e6aa7fe7c21e73c6aefd3d9bf8e37d91f70ac2a80912094e9"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference-cli.yaml": {
-      "bytes": 4306,
-      "sha256": "b18803fdacbcbe3010805ef3132ca074cb3bc8f87200434dcdad152e64025925"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference_config.json": {
-      "bytes": 1482,
-      "sha256": "f57e381a869959918b06b61be3a595790b43cf8c0ae12f209d40981446cdd5fd"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/chat_template.json": {
-      "bytes": 5502,
-      "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/config.json": {
-      "bytes": 1505,
-      "sha256": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/generation_config.json": {
-      "bytes": 269,
-      "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/merges.txt": {
-      "bytes": 1671839,
-      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/preprocessor_config.json": {
-      "bytes": 390,
-      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer.json": {
-      "bytes": 7032403,
-      "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer_config.json": {
-      "bytes": 10868,
-      "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/video_preprocessor_config.json": {
-      "bytes": 385,
-      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/vocab.json": {
-      "bytes": 2776833,
-      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
-    },
-    "03_模型权重/checkpoint/README.md": {
-      "bytes": 1742,
-      "sha256": "0be7e3a5586b6c8da995a7243785b5ea1cff9155a4dbcbcc2480eed417fb523f"
-    },
     "03_模型权重/model_manifest.json": {
       "bytes": 12815,
       "sha256": "e8e609c638c221209a0e2a4f493c4ed46968e9c159bcfbf95e2e3aac5c9e279f"
@@ -1415,25 +1619,29 @@
       "bytes": 325004,
       "sha256": "2225c3de1142c314f85934933c7894bac43cc1c77099e0887a2c1fe82acde7a9"
     },
+    "04_复现与调优说明/figures/eval-success-by-task.png": {
+      "bytes": 224126,
+      "sha256": "947199023c131a64ea5aeb275d30a2068434b470090edb4a192af5d49e72bfa4"
+    },
     "04_复现与调优说明/figures/loss-final5000.png": {
       "bytes": 361092,
       "sha256": "d4eeefec04d5ce4907aa962556a14a2d2e7dc6bed64d8ce3b9b1a501a44a99cf"
     },
     "04_复现与调优说明/reproduction_report.md": {
-      "bytes": 15451,
-      "sha256": "44605443fb873b0987d5a7db45242bfed60abb7e41e2f2797e10b49c15af0e1d"
+      "bytes": 16763,
+      "sha256": "a98769909a041371d92327ece87c5afcf7a8ab44f6125cf338967aa41071def1"
     },
     "06_小红书创作活动/xiaohongshu_info.md": {
       "bytes": 419,
       "sha256": "fc7c3bda01792f9a24fde75652003e279a267fe9f589a28c42b76d30a7938916"
     },
     "README.md": {
-      "bytes": 1245,
-      "sha256": "f7ff2d71e58736d79c9c6d7e91dfbc046cac163977a98fc3f301aa1aa5d5bda5"
+      "bytes": 1305,
+      "sha256": "e241aa241440fc20740f049eca9b5efb9349718f286138a4a14464c19b6daf39"
     },
     "submission-status.json": {
-      "bytes": 1804,
-      "sha256": "423a4260e3daecfdab96164a0efb14b9e883d88aea5c4e717914ae46c33abdc7"
+      "bytes": 3244,
+      "sha256": "400c3a77636b6fffcecd86bec46b48bbeb4857b4eaeac3c49964a4e1f5053bee"
     }
   }
 }

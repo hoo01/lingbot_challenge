@@ -7,14 +7,13 @@
   "model_revision": "2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1",
   "final_training_completed": true,
   "source_files_exact_sha_verified": 23,
-  "final_results_verified": false,
+  "final_results_verified": true,
   "weights_staged": true,
   "portable_train_entry_verified": false,
   "portable_eval_entry_verified": false,
   "zip_created": false,
   "uploaded_to_tianchi": false,
   "missing_items": [
-    "本候选最终逐回合CPU审计回执及官方results.json",
     "基座到最终模型的完整跨阶段自动衔接：LoRA导出、AMD/CUDA配置、前景/清单和完整Adam身份迁移",
     "发行入口在独立GPU环境的真实加载、图像预处理、动作反归一化及保存恢复验收",
     "仿真二进制/资产和site-packages调整在独立新环境的安装验证",
@@ -40,5 +39,48 @@
     "sim": 155
   },
   "full_lineage_portability": false,
-  "independent_gpu_reproduction_verified": false
+  "independent_gpu_reproduction_verified": false,
+  "results_schema_validated": true,
+  "evaluation_completed": true,
+  "evaluation_total_scored": 3000,
+  "evaluation_groups": 100,
+  "evaluation_attempts_per_group": 30,
+  "evaluation_counts": {
+    "passed": true,
+    "model_revision": "2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1",
+    "protocol_sha256": "8508ec80bd206a42274d62a5bbe9331ecfe343fa4a31e1b64f302412f4199dae",
+    "total_scored": 3000,
+    "unique_scored_keys": 3000,
+    "groups": 100,
+    "per_group": 30,
+    "clean": {
+      "successes": 1090,
+      "attempts": 1500,
+      "success_rate": 0.7266666666666667
+    },
+    "randomized": {
+      "successes": 589,
+      "attempts": 1500,
+      "success_rate": 0.39266666666666666
+    },
+    "total": {
+      "successes": 1679,
+      "attempts": 3000,
+      "success_rate": 0.5596666666666666
+    },
+    "scored_policy_timeouts": 0,
+    "non_scored_native_initialization_errors": 432,
+    "prepolicy_engineering_errors_preserved": 2,
+    "finite_h50_blocks": 47104,
+    "rgb_pngs": 18000,
+    "video_disabled_verified": true,
+    "all_six_actual_runtime_acceptances_passed": true,
+    "all_six_local_readbacks_passed": true,
+    "completed_host_network_reads": 0,
+    "large_weights_or_images_read": false,
+    "official_style_expert_screening": false,
+    "independent_portable_release_gpu_acceptance": false
+  },
+  "actual_evaluation_runtime_acceptance_verified": true,
+  "evaluation_evidence": "01_评测结果/evidence/local-result-verification.json"
 }

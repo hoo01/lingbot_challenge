@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "shard_id": "R1",
+  "root": "/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R1",
+  "revision": "2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1",
+  "protocol_sha256": "8508ec80bd206a42274d62a5bbe9331ecfe343fa4a31e1b64f302412f4199dae",
+  "scored": 390,
+  "success": 155,
+  "groups": 13,
+  "per_group": 30,
+  "timeout": 0,
+  "non_scored": 49,
+  "finite_h50_blocks": 6394,
+  "rgb_pngs": 2340,
+  "video_disabled_verified": true,
+  "source_complete_sha256": "59d62f44ff25e35818357145fdb741f9c037c3278e87c3d5f17325e72589012b",
+  "runtime_parameter_audit_sha256": "db7a26cca3d2488f95ec62d8bb7e9d1dcb595eb2884a362716e1ec7e9e5828c9",
+  "time": 1792888240.3194642,
+  "prepolicy_engineering_errors_preserved": 1,
+  "verify_resume_sha256": "f7029e95ec5807ce6e264bdaf8ced9a342bad353421b64c1087e653c446a579d"
+}

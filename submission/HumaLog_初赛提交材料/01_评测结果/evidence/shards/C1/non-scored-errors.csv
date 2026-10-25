@@ -1,0 +1,622 @@
+task,setting,seed,status,success,expert_attempts,native_initialization_error,policy_entered,error
+dump_bin_bigbin,demo_clean,100000,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100000), unstable objects: garbage
+"
+pick_diverse_bottles,demo_clean,100001,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100001), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100003,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100003), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100004,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100004), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_clean,100005,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100005), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100006,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100006), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_clean,100008,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100008), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100010,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100010), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100011,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100011), unstable objects: 001_bottle, 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100002,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100002), unstable objects: 001_bottle
+"
+dump_bin_bigbin,demo_clean,100006,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100006), unstable objects: garbage
+"
+dump_bin_bigbin,demo_clean,100008,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100008), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_clean,100009,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100009), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_clean,100013,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100013), unstable objects: garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_clean,100014,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100014), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+pick_diverse_bottles,demo_clean,100017,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100017), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100018,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100018), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100019,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100019), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_clean,100020,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100020), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100021,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100021), unstable objects: 001_bottle
+"
+place_dual_shoes,demo_clean,100005,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/place_dual_shoes.py"", line 11, in setup_demo
+    super()._init_task_env_(table_height_bias=-0.1, **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100005), unstable objects: 041_shoe
+"
+place_dual_shoes,demo_clean,100010,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/place_dual_shoes.py"", line 11, in setup_demo
+    super()._init_task_env_(table_height_bias=-0.1, **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100010), unstable objects: 041_shoe
+"
+shake_bottle_horizontally,demo_clean,100007,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100007), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100008,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100008), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100010,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100010), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100011,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100011), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100012,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100012), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100014,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100014), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100016,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100016), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100017,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100017), unstable objects: 001_bottle
+"
+dump_bin_bigbin,demo_clean,100018,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100018), unstable objects: garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_clean,100020,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100020), unstable objects: garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_clean,100021,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100021), unstable objects: garbage, garbage
+"
+pick_diverse_bottles,demo_clean,100025,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100025), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100028,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100028), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100019,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100019), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100022,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100022), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100024,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100024), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100026,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100026), unstable objects: 001_bottle
+"
+dump_bin_bigbin,demo_clean,100025,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100025), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_clean,100026,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100026), unstable objects: garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_clean,100028,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100028), unstable objects: garbage
+"
+dump_bin_bigbin,demo_clean,100030,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100030), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+pick_diverse_bottles,demo_clean,100031,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100031), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100032,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100032), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_clean,100033,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100033), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100034,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100034), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100035,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100035), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_clean,100038,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100038), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_clean,100039,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100039), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100040,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100040), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100041,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100041), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_clean,100043,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100043), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100044,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100044), unstable objects: 001_bottle
+"
+place_dual_shoes,demo_clean,100017,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/place_dual_shoes.py"", line 11, in setup_demo
+    super()._init_task_env_(table_height_bias=-0.1, **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100017), unstable objects: 041_shoe
+"
+shake_bottle_horizontally,demo_clean,100030,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100030), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100031,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100031), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100034,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100034), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100048,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100048), unstable objects: 001_bottle, 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100036,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100036), unstable objects: 001_bottle
+"
+shake_bottle_horizontally,demo_clean,100037,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/shake_bottle_horizontally.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100037), unstable objects: 001_bottle
+"
+dump_bin_bigbin,demo_clean,100039,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100039), unstable objects: garbage, garbage
+"
+dump_bin_bigbin,demo_clean,100040,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100040), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+pick_diverse_bottles,demo_clean,100052,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100052), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_clean,100053,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100053), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100056,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100056), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100057,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100057), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100060,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100060), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_clean,100061,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/root/shared-nvme/lingbotvla-inference8000-5090-20261022-fork-01a1454a/experiments/AUG16000-C1/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100061), unstable objects: 001_bottle
+"

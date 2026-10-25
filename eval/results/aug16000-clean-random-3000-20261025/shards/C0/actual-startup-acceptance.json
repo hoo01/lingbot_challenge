@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "time": 1792859256.3496413,
+  "source_step": 16000,
+  "physical_gpu_uuid": "GPU-fdc1a403-52a1-d291-48a1-052d99fad119",
+  "model_actual_pid": 2228680,
+  "model_start_ticks": "103083444",
+  "model_CUDA_VISIBLE_DEVICES": "GPU-fdc1a403-52a1-d291-48a1-052d99fad119",
+  "model_CUDA_UUID": "fdc1a403-52a1-d291-48a1-052d99fad119",
+  "driver_device_minor": 0,
+  "actual_NVML_compute_apps": [
+    {
+      "host_pid": 2228680,
+      "gpu_uuid": "GPU-fdc1a403-52a1-d291-48a1-052d99fad119",
+      "used_mib": 25486
+    },
+    {
+      "host_pid": 2237207,
+      "gpu_uuid": "GPU-fdc1a403-52a1-d291-48a1-052d99fad119",
+      "used_mib": 1635
+    }
+  ],
+  "actual_renderer_binding": {
+    "passed": true,
+    "physical_gpu_uuid": "GPU-fdc1a403-52a1-d291-48a1-052d99fad119",
+    "actual_pci_bus_id": "0000:01:00.0",
+    "cuda_id": 0,
+    "name": "NVIDIA GeForce RTX 5090"
+  },
+  "FP32_values_all1672_and36": true,
+  "own_norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "normalization_roundtrip": {
+    "passed": true,
+    "atol": 1e-06,
+    "rtol": 1e-06,
+    "max_absolute_error": 1.1796119636642288e-16,
+    "native_normalizer_arithmetic_dtype": "torch.float64",
+    "relative_arm_same_q_t_all_horizons": true,
+    "gripper_absolute_minmax": true,
+    "raw_rgb_no_inferred_units": true
+  },
+  "first_formal": {
+    "task": "adjust_bottle",
+    "setting": "demo_clean",
+    "actual_seed": 100001
+  },
+  "first_actual_prefix": 25,
+  "video": false,
+  "observer_video": false,
+  "files_sha256": {
+    "artifacts/started.json": "b30f5bb26e3c560d320509059e719eb39b96073674d26ca390316cdaf0bc9acd",
+    "run/server-runtime.json": "c4562c80bf8cb79b71ee6554958faff0ebe65f6227a24d9a9120da6554879532",
+    "run/first-preprocessing.json": "4f2e52b8334fe5657396817d6b75fd26d2f54c6da7a965eecf743c091d6fecf1",
+    "artifacts/eval2000-scope.json": "a885925db8fea69b4d0595a808c90c1a73841f877ae952084ac18a279348d433"
+  },
+  "host_PID_not_assumed_equal_container_PID": true
+}

@@ -1,0 +1,1279 @@
+task,setting,seed,status,success,expert_attempts,native_initialization_error,policy_entered,error
+dump_bin_bigbin,demo_randomized,100000,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100000), unstable objects: garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100001,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100001), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100002,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100002), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100004,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100004), unstable objects: garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100005,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100005), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100008,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100008), unstable objects: garbage, garbage, garbage, garbage, garbage, 066_vinegar
+"
+dump_bin_bigbin,demo_randomized,100009,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100009), unstable objects: 066_vinegar
+"
+dump_bin_bigbin,demo_randomized,100011,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100011), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100012,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100012), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100002,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100002), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100003,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100003), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100004,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100004), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100006,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100006), unstable objects: 001_bottle
+"
+place_bread_basket,demo_randomized,100002,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_bread_basket.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100002), unstable objects: can
+"
+place_cans_plasticbox,demo_randomized,100001,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_cans_plasticbox.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100001), unstable objects: 114_bottle
+"
+place_fan,demo_randomized,100001,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_fan.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100001), unstable objects: 086_woodenblock
+"
+place_fan,demo_randomized,100004,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_fan.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100004), unstable objects: 099_fan
+"
+place_object_stand,demo_randomized,100000,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_object_stand.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100000), unstable objects: 114_bottle
+"
+place_object_stand,demo_randomized,100005,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_object_stand.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100005), unstable objects: 001_bottle
+"
+put_bottles_dustbin,demo_randomized,100001,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100001), unstable objects: 114_bottle, 114_bottle
+"
+put_bottles_dustbin,demo_randomized,100002,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100002), unstable objects: 066_vinegar
+"
+shake_bottle,demo_randomized,100000,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100000), unstable objects: spoon
+"
+shake_bottle,demo_randomized,100005,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100005), unstable objects: 001_bottle
+"
+shake_bottle,demo_randomized,100006,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100006), unstable objects: 001_bottle
+"
+stack_bowls_three,demo_randomized,100004,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100004), unstable objects: 066_vinegar
+"
+dump_bin_bigbin,demo_randomized,100014,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100014), unstable objects: garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100015,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100015), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100018,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100018), unstable objects: garbage, garbage
+"
+move_playingcard_away,demo_randomized,100006,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/move_playingcard_away.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100006), unstable objects: 088_wineglass
+"
+pick_diverse_bottles,demo_randomized,100011,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100011), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100012,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100012), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100014,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100014), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100015,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100015), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100016,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100016), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100017,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100017), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100018,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100018), unstable objects: 001_bottle, 066_vinegar
+"
+pick_diverse_bottles,demo_randomized,100019,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100019), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100021,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100021), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100022,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100022), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100023,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100023), unstable objects: 001_bottle, 080_pillbottle
+"
+place_fan,demo_randomized,100007,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_fan.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100007), unstable objects: 093_brush-pen
+"
+place_fan,demo_randomized,100008,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_fan.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100008), unstable objects: spoon
+"
+put_bottles_dustbin,demo_randomized,100007,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100007), unstable objects: 093_brush-pen
+"
+put_bottles_dustbin,demo_randomized,100011,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100011), unstable objects: 059_pencup
+"
+put_bottles_dustbin,demo_randomized,100012,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100012), unstable objects: 114_bottle, 019_coaster
+"
+put_bottles_dustbin,demo_randomized,100013,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100013), unstable objects: 066_vinegar
+"
+put_bottles_dustbin,demo_randomized,100014,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100014), unstable objects: 071_can, snack_package
+"
+shake_bottle,demo_randomized,100009,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100009), unstable objects: 088_wineglass
+"
+shake_bottle,demo_randomized,100012,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100012), unstable objects: 001_bottle
+"
+stack_bowls_three,demo_randomized,100010,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100010), unstable objects: 086_woodenblock
+"
+stack_bowls_three,demo_randomized,100011,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100011), unstable objects: 088_wineglass
+"
+blocks_ranking_rgb,demo_randomized,100010,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/blocks_ranking_rgb.py"", line 11, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100010), unstable objects: 066_vinegar
+"
+dump_bin_bigbin,demo_randomized,100022,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100022), unstable objects: garbage
+"
+dump_bin_bigbin,demo_randomized,100024,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100024), unstable objects: garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100025,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100025), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100028,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100028), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100030,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100030), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100031,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100031), unstable objects: 114_bottle
+"
+dump_bin_bigbin,demo_randomized,100032,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100032), unstable objects: 088_wineglass
+"
+hanging_mug,demo_randomized,100011,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/hanging_mug.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100011), unstable objects: 086_woodenblock
+"
+move_playingcard_away,demo_randomized,100015,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/move_playingcard_away.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100015), unstable objects: 065_soy-sauce
+"
+pick_diverse_bottles,demo_randomized,100028,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100028), unstable objects: 001_bottle
+"
+place_fan,demo_randomized,100015,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_fan.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100015), unstable objects: 099_fan
+"
+place_fan,demo_randomized,100016,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_fan.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100016), unstable objects: 001_bottle
+"
+place_fan,demo_randomized,100018,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_fan.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100018), unstable objects: 001_bottle
+"
+place_object_stand,demo_randomized,100015,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_object_stand.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100015), unstable objects: 086_woodenblock
+"
+shake_bottle,demo_randomized,100019,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100019), unstable objects: 001_bottle
+"
+stack_bowls_three,demo_randomized,100013,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100013), unstable objects: spoon
+"
+stack_bowls_three,demo_randomized,100017,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100017), unstable objects: 088_wineglass
+"
+stack_bowls_three,demo_randomized,100019,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100019), unstable objects: 066_vinegar
+"
+dump_bin_bigbin,demo_randomized,100034,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100034), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100035,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100035), unstable objects: garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100036,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100036), unstable objects: garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100037,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100037), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100039,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100039), unstable objects: garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100040,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100040), unstable objects: garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100043,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100043), unstable objects: garbage, garbage, garbage, garbage, garbage, 114_bottle
+"
+dump_bin_bigbin,demo_randomized,100044,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100044), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100045,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100045), unstable objects: garbage, 088_wineglass
+"
+dump_bin_bigbin,demo_randomized,100047,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100047), unstable objects: garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100048,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100048), unstable objects: garbage, garbage, garbage
+"
+hanging_mug,demo_randomized,100017,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/hanging_mug.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100017), unstable objects: 066_vinegar
+"
+hanging_mug,demo_randomized,100019,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/hanging_mug.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100019), unstable objects: 088_wineglass
+"
+move_playingcard_away,demo_randomized,100018,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/move_playingcard_away.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100018), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100031,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100031), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100034,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100034), unstable objects: 001_bottle, 001_bottle
+"
+place_cans_plasticbox,demo_randomized,100016,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_cans_plasticbox.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100016), unstable objects: 001_bottle, 088_wineglass
+"
+place_fan,demo_randomized,100024,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_fan.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100024), unstable objects: 086_woodenblock
+"
+put_bottles_dustbin,demo_randomized,100023,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100023), unstable objects: 114_bottle
+"
+put_bottles_dustbin,demo_randomized,100027,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100027), unstable objects: spoon, bowl
+"
+shake_bottle,demo_randomized,100023,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100023), unstable objects: 001_bottle
+"
+shake_bottle,demo_randomized,100026,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100026), unstable objects: can
+"
+stack_bowls_three,demo_randomized,100022,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100022), unstable objects: 086_woodenblock
+"
+stack_bowls_three,demo_randomized,100026,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100026), unstable objects: 065_soy-sauce
+"
+dump_bin_bigbin,demo_randomized,100050,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100050), unstable objects: garbage, garbage, 086_woodenblock
+"
+dump_bin_bigbin,demo_randomized,100051,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100051), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100052,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100052), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100053,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100053), unstable objects: garbage, garbage, garbage, garbage, garbage, 001_bottle
+"
+dump_bin_bigbin,demo_randomized,100058,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100058), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100059,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100059), unstable objects: garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100060,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100060), unstable objects: garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100061,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100061), unstable objects: garbage, garbage, garbage
+"
+hanging_mug,demo_randomized,100027,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/hanging_mug.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100027), unstable objects: 086_woodenblock
+"
+pick_diverse_bottles,demo_randomized,100039,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100039), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100040,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100040), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100041,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100041), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100042,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100042), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100044,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100044), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100045,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100045), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100046,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100046), unstable objects: 001_bottle, 066_vinegar
+"
+pick_diverse_bottles,demo_randomized,100047,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100047), unstable objects: 001_bottle, 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100049,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100049), unstable objects: 001_bottle, 001_bottle
+"
+put_bottles_dustbin,demo_randomized,100032,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100032), unstable objects: 113_coffee-box
+"
+shake_bottle,demo_randomized,100028,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100028), unstable objects: 001_bottle, 018_microphone
+"
+shake_bottle,demo_randomized,100031,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100031), unstable objects: 001_bottle, 018_microphone, 076_breadbasket
+"
+shake_bottle,demo_randomized,100033,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100033), unstable objects: 001_bottle
+"
+shake_bottle,demo_randomized,100034,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100034), unstable objects: 001_bottle
+"
+shake_bottle,demo_randomized,100036,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100036), unstable objects: 001_bottle
+"
+dump_bin_bigbin,demo_randomized,100063,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100063), unstable objects: garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100064,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100064), unstable objects: garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100065,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100065), unstable objects: 066_vinegar
+"
+dump_bin_bigbin,demo_randomized,100067,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100067), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100068,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100068), unstable objects: garbage, garbage
+"
+dump_bin_bigbin,demo_randomized,100069,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100069), unstable objects: 065_soy-sauce
+"
+dump_bin_bigbin,demo_randomized,100071,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/dump_bin_bigbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100071), unstable objects: garbage, garbage, garbage, garbage, garbage
+"
+move_playingcard_away,demo_randomized,100028,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/move_playingcard_away.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100028), unstable objects: 066_vinegar
+"
+move_playingcard_away,demo_randomized,100032,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/move_playingcard_away.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100032), unstable objects: 086_woodenblock
+"
+move_playingcard_away,demo_randomized,100034,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/move_playingcard_away.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100034), unstable objects: 088_wineglass
+"
+pick_diverse_bottles,demo_randomized,100052,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100052), unstable objects: 001_bottle, 001_bottle, spoon
+"
+pick_diverse_bottles,demo_randomized,100053,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100053), unstable objects: 001_bottle
+"
+pick_diverse_bottles,demo_randomized,100055,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/pick_diverse_bottles.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100055), unstable objects: 001_bottle
+"
+place_fan,demo_randomized,100036,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_fan.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwargs)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100036), unstable objects: 086_woodenblock, 001_bottle
+"
+place_object_stand,demo_randomized,100029,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_object_stand.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100029), unstable objects: 001_bottle
+"
+place_object_stand,demo_randomized,100030,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/place_object_stand.py"", line 12, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100030), unstable objects: 049_shampoo, 114_bottle
+"
+put_bottles_dustbin,demo_randomized,100036,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/put_bottles_dustbin.py"", line 10, in setup_demo
+    super()._init_task_env_(table_xy_bias=[0.3, 0], **kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100036), unstable objects: 114_bottle
+"
+shake_bottle,demo_randomized,100040,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100040), unstable objects: 001_bottle
+"
+shake_bottle,demo_randomized,100042,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100042), unstable objects: 001_bottle
+"
+shake_bottle,demo_randomized,100044,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100044), unstable objects: 088_wineglass
+"
+shake_bottle,demo_randomized,100045,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100045), unstable objects: 001_bottle, 073_rubikscube
+"
+shake_bottle,demo_randomized,100046,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/shake_bottle.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100046), unstable objects: 001_bottle, 066_vinegar
+"
+stack_bowls_three,demo_randomized,100034,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100034), unstable objects: 101_milk-tea
+"
+stack_bowls_three,demo_randomized,100038,setup_error,False,0,True,False,"Traceback (most recent call last):
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/scripts/eval_dev_suite.py"", line 425, in main
+    env.setup_demo(now_ep_num=episode, seed=seed, is_test=True, **config)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/stack_bowls_three.py"", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File ""/mnt/raid1/lingbotvla_eval_aug16000_cr30_seed0_20261024/experiments/AUG16000-R2/third_party/RoboTwin/envs/_base_task.py"", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(100038), unstable objects: 066_vinegar
+"

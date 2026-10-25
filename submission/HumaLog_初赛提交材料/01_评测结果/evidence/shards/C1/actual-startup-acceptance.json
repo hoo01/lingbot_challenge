@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "time": 1792861611.5753098,
+  "source_step": 16000,
+  "physical_gpu_uuid": "GPU-ee90603f-7086-93bf-fa1a-4ebe80992143",
+  "model_actual_pid": 557303,
+  "model_start_ticks": "228010756",
+  "model_CUDA_VISIBLE_DEVICES": "GPU-ee90603f-7086-93bf-fa1a-4ebe80992143",
+  "model_CUDA_UUID": "ee90603f-7086-93bf-fa1a-4ebe80992143",
+  "driver_device_minor": 0,
+  "actual_NVML_compute_apps": [
+    {
+      "host_pid": 557303,
+      "gpu_uuid": "GPU-ee90603f-7086-93bf-fa1a-4ebe80992143",
+      "used_mib": 25440
+    },
+    {
+      "host_pid": 561655,
+      "gpu_uuid": "GPU-ee90603f-7086-93bf-fa1a-4ebe80992143",
+      "used_mib": 3217
+    },
+    {
+      "host_pid": 561655,
+      "gpu_uuid": "GPU-ee90603f-7086-93bf-fa1a-4ebe80992143",
+      "used_mib": 3217
+    }
+  ],
+  "actual_renderer_binding": {
+    "passed": true,
+    "physical_gpu_uuid": "GPU-ee90603f-7086-93bf-fa1a-4ebe80992143",
+    "actual_pci_bus_id": "0000:16:00.0",
+    "cuda_id": 0,
+    "name": "NVIDIA GeForce RTX 5090"
+  },
+  "FP32_values_all1672_and36": true,
+  "own_norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "normalization_roundtrip": {
+    "passed": true,
+    "atol": 1e-06,
+    "rtol": 1e-06,
+    "max_absolute_error": 1.1796119636642288e-16,
+    "native_normalizer_arithmetic_dtype": "torch.float64",
+    "relative_arm_same_q_t_all_horizons": true,
+    "gripper_absolute_minmax": true,
+    "raw_rgb_no_inferred_units": true
+  },
+  "first_formal": {
+    "task": "beat_block_hammer",
+    "setting": "demo_clean",
+    "actual_seed": 100000
+  },
+  "first_actual_prefix": 25,
+  "video": false,
+  "observer_video": false,
+  "files_sha256": {
+    "artifacts/started.json": "d7002c43e407e1a0e8dbe3b6ff505f06c430e6f46b6a24496574fcb619173394",
+    "run/server-runtime.json": "28f9e3ebfac568b10e664785e6c2b9b3c81e970b489bb32a7d4fdc44eb374ea5",
+    "run/first-preprocessing.json": "5178c8fdfca80f2f338c6722923c038fa9250c84ab65d31f648e51a591b0fe6f",
+    "artifacts/eval2000-scope.json": "47ef9b4e9e6fa0475f43302492ba8ac634d804f39e87c46f2116a37b6cc77b58"
+  },
+  "host_PID_not_assumed_equal_container_PID": true
+}

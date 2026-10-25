@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "time": 1792860945.0781593,
+  "source_step": 16000,
+  "physical_gpu_uuid": "GPU-3a28c04c-252a-abe3-ec72-d3c82a617fb5",
+  "model_actual_pid": 2340519,
+  "model_start_ticks": "112209100",
+  "model_CUDA_VISIBLE_DEVICES": "GPU-3a28c04c-252a-abe3-ec72-d3c82a617fb5",
+  "model_CUDA_UUID": "3a28c04c-252a-abe3-ec72-d3c82a617fb5",
+  "driver_device_minor": 1,
+  "actual_NVML_compute_apps": [
+    {
+      "host_pid": 2340519,
+      "gpu_uuid": "GPU-3a28c04c-252a-abe3-ec72-d3c82a617fb5",
+      "used_mib": 25252
+    },
+    {
+      "host_pid": 2341356,
+      "gpu_uuid": "GPU-3a28c04c-252a-abe3-ec72-d3c82a617fb5",
+      "used_mib": 5479
+    }
+  ],
+  "actual_renderer_binding": {
+    "passed": true,
+    "physical_gpu_uuid": "GPU-3a28c04c-252a-abe3-ec72-d3c82a617fb5",
+    "actual_pci_bus_id": "0000:65:00.0",
+    "cuda_id": 0,
+    "name": "NVIDIA GeForce RTX 4090"
+  },
+  "FP32_values_all1672_and36": true,
+  "own_norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "normalization_roundtrip": {
+    "passed": true,
+    "atol": 1e-06,
+    "rtol": 1e-06,
+    "max_absolute_error": 1.1796119636642288e-16,
+    "native_normalizer_arithmetic_dtype": "torch.float64",
+    "relative_arm_same_q_t_all_horizons": true,
+    "gripper_absolute_minmax": true,
+    "raw_rgb_no_inferred_units": true
+  },
+  "first_formal": {
+    "task": "beat_block_hammer",
+    "setting": "demo_randomized",
+    "actual_seed": 100000
+  },
+  "first_actual_prefix": 25,
+  "video": false,
+  "observer_video": false,
+  "files_sha256": {
+    "artifacts/started.json": "492e9cac32d58863d8d4385500384d4f4d47cabcbf49ee385eb8de48acab6e4f",
+    "run/server-runtime.json": "583be6d2ca1a84f3ba2ffb62dfa53e0a064287ed11b05663f0d65083a20a73bb",
+    "run/first-preprocessing.json": "5527a4b289d92df317c9c74b8aac050c2a0b296486988a240caba6c42d9c1a2e",
+    "artifacts/eval2000-scope.json": "66b99facc0c15476ef150df52711c93996c4c71755bf288a5eb4378f5461cac0"
+  },
+  "host_PID_not_assumed_equal_container_PID": true
+}

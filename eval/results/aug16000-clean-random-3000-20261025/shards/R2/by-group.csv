@@ -1,0 +1,13 @@
+task,setting,scored,success,policy_timeout,non_scored
+blocks_ranking_rgb,demo_randomized,30,19,0,1
+dump_bin_bigbin,demo_randomized,30,9,0,45
+hanging_mug,demo_randomized,30,1,0,4
+move_playingcard_away,demo_randomized,30,19,0,6
+pick_diverse_bottles,demo_randomized,30,7,0,30
+place_bread_basket,demo_randomized,30,9,0,1
+place_cans_plasticbox,demo_randomized,30,11,0,2
+place_fan,demo_randomized,30,13,0,9
+place_object_stand,demo_randomized,30,21,0,5
+put_bottles_dustbin,demo_randomized,30,9,0,11
+shake_bottle,demo_randomized,30,21,0,18
+stack_bowls_three,demo_randomized,30,19,0,10

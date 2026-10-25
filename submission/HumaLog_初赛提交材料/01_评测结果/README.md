@@ -1,9 +1,21 @@
-# 评测结果待填
+# 16000步模型评测结果
 
-results.pending.json保留官方schema_version=1、team_id、results.clean/randomized以及各50任务attempts/successes结构，team_id为字符串1380507。null表示待完成，不是0次测试，也不是0成功。
+50任务×Clean30＋Random30，共3000计分回合，100组全部完成。
 
-当前没有本次提交可用的16000模型完整评测计数，故不生成results.json。后续仅从同一HF revision、冻结协议和已核验逐回合账本汇总。计划为每组30，共3000；若未测满按真实次数披露，不伪造或外推。
+| 设置 | 成功／次数 | 成功率 |
+|---|---:|---:|
+| Clean | 1090/1500 | 72.67% |
+| Random | 589/1500 | 39.27% |
+| 合计／两设置均值 | 1679/3000 | 55.97% |
 
-官网建议每组尽量测100；FAQ允许时间或算力不足时按实测提交，最终以官方复测为准，覆盖更充分者有优先考虑。JSON只写次数，不写百分比，不附加自定义成功率字段。
+正式提交文件为[results.json](results.json)，严格沿官方计数字段，team_id为字符串1380507；每项attempts=30，successes由真实账本统计。[逐任务CSV](by-task.csv)与[原始证据](evidence/)随附。
 
-校验器：在02_代码材料目录运行`python src/validate_results.py ../01_评测结果/results.json`。它检查字段、50任务、团队ID、整数计数及0<=successes<=attempts；不替代逐回合来源和模型身份审计。pending文件必须被它拒绝。
+六分片的原始小回执、本地读回SHA、模型与协议一致性、3000个唯一计分键、100组各30均已核对。0策略超时；432次原生策略前初始化错误及2次策略前工程错误分开保留，不计入3000策略分母，已有计分未重跑。
+
+Clean使用两5090，Random使用四4090；同一FP32模型，官方seed0对应候选100000起，H50预测／前25执行，无专家、无录像。本轮为开发评测，官方复测与其专家筛选口径另行区分。
+
+在代码材料目录验证：
+
+```bash
+python -B src/validate_results.py ../01_评测结果/results.json --expected-attempts 30
+```

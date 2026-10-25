@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "time": 1792861314.271134,
+  "source_step": 16000,
+  "physical_gpu_uuid": "GPU-3c024348-f4a8-2835-c25a-8bcff27c3585",
+  "model_actual_pid": 2346890,
+  "model_start_ticks": "112243823",
+  "model_CUDA_VISIBLE_DEVICES": "GPU-3c024348-f4a8-2835-c25a-8bcff27c3585",
+  "model_CUDA_UUID": "3c024348-f4a8-2835-c25a-8bcff27c3585",
+  "driver_device_minor": 3,
+  "actual_NVML_compute_apps": [
+    {
+      "host_pid": 2346890,
+      "gpu_uuid": "GPU-3c024348-f4a8-2835-c25a-8bcff27c3585",
+      "used_mib": 25252
+    },
+    {
+      "host_pid": 2348410,
+      "gpu_uuid": "GPU-3c024348-f4a8-2835-c25a-8bcff27c3585",
+      "used_mib": 5479
+    }
+  ],
+  "actual_renderer_binding": {
+    "passed": true,
+    "physical_gpu_uuid": "GPU-3c024348-f4a8-2835-c25a-8bcff27c3585",
+    "actual_pci_bus_id": "0000:e3:00.0",
+    "cuda_id": 0,
+    "name": "NVIDIA GeForce RTX 4090"
+  },
+  "FP32_values_all1672_and36": true,
+  "own_norm_sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d",
+  "normalization_roundtrip": {
+    "passed": true,
+    "atol": 1e-06,
+    "rtol": 1e-06,
+    "max_absolute_error": 1.1796119636642288e-16,
+    "native_normalizer_arithmetic_dtype": "torch.float64",
+    "relative_arm_same_q_t_all_horizons": true,
+    "gripper_absolute_minmax": true,
+    "raw_rgb_no_inferred_units": true
+  },
+  "first_formal": {
+    "task": "blocks_ranking_size",
+    "setting": "demo_randomized",
+    "actual_seed": 100000
+  },
+  "first_actual_prefix": 25,
+  "video": false,
+  "observer_video": false,
+  "files_sha256": {
+    "artifacts/started.json": "20d7e0bc1b579b10f3886b7dfa12176fe3e8e9a8575fd840328494ea42193e72",
+    "run/server-runtime.json": "0e8375212927f69d87da4b4530e5282d84321346aacede8ed39df9572eb9f8ba",
+    "run/first-preprocessing.json": "dea71a4d3d3c633f937b2e41347557a62ff3a414a8a1e5d0044960510f0ea440",
+    "artifacts/eval2000-scope.json": "f6bb4e53c473857847533e6fdbedf78842b5094997fa577e14099da7608a5a61"
+  },
+  "host_PID_not_assumed_equal_container_PID": true
+}
