@@ -3,78 +3,6 @@
   "local_document_copy": true,
   "large_weight_bytes_staged_on_server": 25503888740,
   "files": {
-    "03_模型权重/checkpoint/assets/norm_stats.json": {
-      "bytes": 94770,
-      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
-    },
-    "03_模型权重/checkpoint/assets/norm_stats.provenance.json": {
-      "bytes": 1549,
-      "sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682"
-    },
-    "03_模型权重/checkpoint/assets/robotwin_relative.yaml": {
-      "bytes": 1008,
-      "sha256": "f4a1de74470ae9d7353bbfe7bdd173305bf391cecd05f4dd7f5276968e426c5e"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/config.json": {
-      "bytes": 5549,
-      "sha256": "71d3a0cbcb373c0671372ab3b19765be3fe993b82dca9e6d23d98af0d5ed965c"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model.safetensors.index.json": {
-      "bytes": 192017,
-      "sha256": "5f372bc3bd5b10c612922b13ff341e866aff357b7baa39a4a1267d0628efd289"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/runtime-construction.json": {
-      "bytes": 97,
-      "sha256": "ddd244944c73a32e6aa7fe7c21e73c6aefd3d9bf8e37d91f70ac2a80912094e9"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference-cli.yaml": {
-      "bytes": 4306,
-      "sha256": "b18803fdacbcbe3010805ef3132ca074cb3bc8f87200434dcdad152e64025925"
-    },
-    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference_config.json": {
-      "bytes": 1482,
-      "sha256": "f57e381a869959918b06b61be3a595790b43cf8c0ae12f209d40981446cdd5fd"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/chat_template.json": {
-      "bytes": 5502,
-      "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/config.json": {
-      "bytes": 1505,
-      "sha256": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/generation_config.json": {
-      "bytes": 269,
-      "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/merges.txt": {
-      "bytes": 1671839,
-      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/preprocessor_config.json": {
-      "bytes": 390,
-      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer.json": {
-      "bytes": 7032403,
-      "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer_config.json": {
-      "bytes": 10868,
-      "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/video_preprocessor_config.json": {
-      "bytes": 385,
-      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
-    },
-    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/vocab.json": {
-      "bytes": 2776833,
-      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
-    },
-    "03_模型权重/checkpoint/README.md": {
-      "bytes": 1742,
-      "sha256": "0be7e3a5586b6c8da995a7243785b5ea1cff9155a4dbcbcc2480eed417fb523f"
-    },
     "01_评测结果/by-task.csv": {
       "bytes": 2858,
       "sha256": "7e6a1fb0a2016923954ebfffae207673c2565f01501485088cda9b714961772a"
@@ -404,8 +332,8 @@
       "sha256": "2aa88b4e1d3257a210a516ad3df3d7f322d03c4285e432d35976980cdb9622fa"
     },
     "02_代码材料/README.md": {
-      "bytes": 4626,
-      "sha256": "ea2283c4170719f16bdfd0f36844922f29ee5e6fe0f2785720bd3289bb8db3ff"
+      "bytes": 4882,
+      "sha256": "5f34c9566ae85af041dd2a0f858d064bb0f4d5bedbd6d0788352299f5c449dba"
     },
     "02_代码材料/src/base20k/fresh_recipe.py": {
       "bytes": 4221,
@@ -1548,12 +1476,84 @@
       "sha256": "e940b23805a89d4017ddc54300de5b6e3a469092513aacf8353cc476b1c47028"
     },
     "02_代码材料/TRAINING.md": {
-      "bytes": 3140,
-      "sha256": "99b7422919c2c7a609b26b53a70aabb0108c2c51171926155c36f596d561b6b9"
+      "bytes": 2998,
+      "sha256": "2a6436b234491a0b19406e11e13e61cc681936972e4f5e6b362a78fb1c0bbc64"
     },
     "02_代码材料/第三方模块说明.md": {
       "bytes": 1608,
       "sha256": "d6c585775a7fd45ba7b2bc0416b0a3459e48b7fa65e3fb9ec1d1afa440c8c231"
+    },
+    "03_模型权重/checkpoint/assets/norm_stats.json": {
+      "bytes": 94770,
+      "sha256": "b24e6a7ccf44fa3ecc9dbbe060cf9b0937cf3307bc2a68232bc98c4578c22f6d"
+    },
+    "03_模型权重/checkpoint/assets/norm_stats.provenance.json": {
+      "bytes": 1549,
+      "sha256": "e8972312554df7a8dc8ea5941a462c78ed56e357b24b3aa117fe9a4d65820682"
+    },
+    "03_模型权重/checkpoint/assets/robotwin_relative.yaml": {
+      "bytes": 1008,
+      "sha256": "f4a1de74470ae9d7353bbfe7bdd173305bf391cecd05f4dd7f5276968e426c5e"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/config.json": {
+      "bytes": 5549,
+      "sha256": "71d3a0cbcb373c0671372ab3b19765be3fe993b82dca9e6d23d98af0d5ed965c"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/model.safetensors.index.json": {
+      "bytes": 192017,
+      "sha256": "5f372bc3bd5b10c612922b13ff341e866aff357b7baa39a4a1267d0628efd289"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/hf_ckpt_fp32/runtime-construction.json": {
+      "bytes": 97,
+      "sha256": "ddd244944c73a32e6aa7fe7c21e73c6aefd3d9bf8e37d91f70ac2a80912094e9"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference-cli.yaml": {
+      "bytes": 4306,
+      "sha256": "b18803fdacbcbe3010805ef3132ca074cb3bc8f87200434dcdad152e64025925"
+    },
+    "03_模型权重/checkpoint/experiments/amd8_to4090_aug6000_20261022/checkpoints/global_step_16000/inference_config.json": {
+      "bytes": 1482,
+      "sha256": "f57e381a869959918b06b61be3a595790b43cf8c0ae12f209d40981446cdd5fd"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/chat_template.json": {
+      "bytes": 5502,
+      "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/config.json": {
+      "bytes": 1505,
+      "sha256": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/generation_config.json": {
+      "bytes": 269,
+      "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/preprocessor_config.json": {
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer.json": {
+      "bytes": 7032403,
+      "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/tokenizer_config.json": {
+      "bytes": 10868,
+      "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/video_preprocessor_config.json": {
+      "bytes": 385,
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+    },
+    "03_模型权重/checkpoint/processor/Qwen3-VL-4B-Instruct/vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "03_模型权重/checkpoint/README.md": {
+      "bytes": 1742,
+      "sha256": "0be7e3a5586b6c8da995a7243785b5ea1cff9155a4dbcbcc2480eed417fb523f"
     },
     "03_模型权重/model_manifest.json": {
       "bytes": 12815,
@@ -1562,6 +1562,10 @@
     "03_模型权重/README.md": {
       "bytes": 994,
       "sha256": "0d2ad0ff3405d0af18ebf37fc269d5d77e78562fca475bfe8de0a92bd60a23f0"
+    },
+    "04_复现与调优说明/evidence/additional-materials-manifest.json": {
+      "bytes": 2124,
+      "sha256": "b47612a79ad271c58f41dabe8f7b65da7078c3858282a59264131ce8a2beed5d"
     },
     "04_复现与调优说明/evidence/completion-receipts.json": {
       "bytes": 13253,
@@ -1628,20 +1632,33 @@
       "sha256": "d4eeefec04d5ce4907aa962556a14a2d2e7dc6bed64d8ce3b9b1a501a44a99cf"
     },
     "04_复现与调优说明/reproduction_report.md": {
-      "bytes": 16763,
-      "sha256": "a98769909a041371d92327ece87c5afcf7a8ab44f6125cf338967aa41071def1"
+      "bytes": 17793,
+      "sha256": "c8a619b0aae5384c6d5e2d5cb5fa8b0cd4818057ea68f307ad3dbfa0e73a4aa5"
+    },
+    "05_真机创新可选任务/demo_report.md": {
+      "bytes": 3804,
+      "sha256": "1a105e322cdefd1871420b5094d31792d137b55854446d02cb88984b52cd62cf"
+    },
+    "05_真机创新可选任务/demo_video.mp4": {
+      "bytes": 6355632,
+      "sha256": "f065e946e8728e40d3d36284e1f43a0439bda73f7d6db997980b703674e8e426"
     },
     "06_小红书创作活动/xiaohongshu_info.md": {
-      "bytes": 419,
-      "sha256": "fc7c3bda01792f9a24fde75652003e279a267fe9f589a28c42b76d30a7938916"
+      "bytes": 308,
+      "sha256": "f3395d34634df391720140d77db3f0c121bb0147da20867f02bfe24301d3184d"
     },
     "README.md": {
-      "bytes": 1305,
-      "sha256": "e241aa241440fc20740f049eca9b5efb9349718f286138a4a14464c19b6daf39"
+      "bytes": 1685,
+      "sha256": "cdf12cd841612ff8e38c1d34afc2786eb16aa70291e8a1561bb6357c3d1f0a85"
     },
     "submission-status.json": {
-      "bytes": 3244,
-      "sha256": "400c3a77636b6fffcecd86bec46b48bbeb4857b4eaeac3c49964a4e1f5053bee"
+      "bytes": 4191,
+      "sha256": "203293b1074589b996cd9244c02cc29eaf43f32c990cc03453fd95da86193c1b"
+    },
+    "评委运行入口说明.md": {
+      "bytes": 2274,
+      "sha256": "c051cf54f9874bbd8c5ae9e3a1255b45d240999fa748767aabe5a0bf3569eb0f"
     }
-  }
+  },
+  "updated_date": "2026-10-25"
 }

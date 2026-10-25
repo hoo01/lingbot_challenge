@@ -8,7 +8,7 @@
 
 | 路径 | 用途 |
 |---|---|
-| train.sh、src/train_entry.py | 基座20k训练；最终增强段完整状态恢复 |
+| train.sh、src/train_entry.py | 可配置目录的基座20k训练；另保留内部增强段历史恢复分支 |
 | eval.sh、src/eval_entry.py | 新目录的16000模型Clean／Random评测 |
 | src/base20k | 原20k数值实现，仅将数据和运行根目录改为环境变量 |
 | src/lineage/amd8、cuda8000 | 八卡SFT、8000→10000迁移及保存内存修复实现 |
@@ -31,11 +31,11 @@ bash train.sh --stage base20k --assets "$WORK/assets" --runtime-root "$WORK/base
 bash train.sh --stage base20k --assets "$WORK/assets" --runtime-root "$WORK/base20k" --run formal_base20k
 ```
 
-完整阶段、Adam衔接、11000边界恢复与前景生产入口见[TRAINING.md](TRAINING.md)。基座20k入口完成目录参数适配；跨阶段一键复现仍有身份和路径衔接待验收，详情如实列于该文档。
+完整阶段、Adam衔接与前景生产源码见[TRAINING.md](TRAINING.md)。基座20k入口完成目录参数适配；从基座到最终模型的各阶段统一入口仍待完成独立验收。11000步是内部断点，不是评委必须提供的输入；历史恢复分支不等于完整训练复现入口。
 
 ## Clean与Random
 
-安装与真实渲染检查后，在本目录执行：
+此入口直接加载最终模型，不需要原服务器路径、中间训练断点或optimizer状态。安装与本机真实渲染检查后，在本目录执行；WORK为运行者自选的新目录：
 
 ```bash
 bash eval.sh --check-only

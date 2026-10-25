@@ -1,0 +1,65 @@
+{
+  "source_archive": "提交材料(1).zip",
+  "archive_bytes": 6261298,
+  "archive_sha256": "60e0b0cbaa591a02ae22b7ddf59c7aa4ed5f50e278342766c96093a17a9b2b5e",
+  "files": [
+    {
+      "path": "05_真机创新任务/demo_report.md",
+      "bytes": 3654,
+      "sha256": "b65f391d8bafb0becca23b154362dbf4efb32a91290201cb561a19d1f3c4905b"
+    },
+    {
+      "path": "05_真机创新任务/demo_video.mp4",
+      "bytes": 6355632,
+      "sha256": "f065e946e8728e40d3d36284e1f43a0439bda73f7d6db997980b703674e8e426"
+    },
+    {
+      "path": "06_小红书创作活动/xiaohongshu_info.md",
+      "bytes": 65,
+      "sha256": "d5c0f5bd5e2f66221b04ff1016d504fc2e9ce24c6010b6b971e40c0210c6a0ea"
+    }
+  ],
+  "mapping": {
+    "05_真机创新任务/demo_video.mp4": "05_真机创新可选任务/demo_video.mp4",
+    "05_真机创新任务/demo_report.md": "05_真机创新可选任务/demo_report.md",
+    "06_小红书创作活动/xiaohongshu_info.md": "06_小红书创作活动/xiaohongshu_info.md"
+  },
+  "confirmed_by_team": {
+    "model": "LingBot-VLA",
+    "training_method": "full_parameter_SFT",
+    "confirmation_date": "2026-10-25",
+    "autonomous_execution": true,
+    "no_manual_teleoperation": true,
+    "no_hardcoded_actions": true,
+    "no_editing_or_splicing": true
+  },
+  "video_unchanged": true,
+  "video_metadata": {
+    "file": "demo_video.mp4",
+    "bytes": 6355632,
+    "sha256": "f065e946e8728e40d3d36284e1f43a0439bda73f7d6db997980b703674e8e426",
+    "tracks": [
+      {
+        "width": 1280.0,
+        "height": 612.0,
+        "timescale": 90000,
+        "duration_seconds": 17.833333333333332,
+        "handler": "vide",
+        "codec": "avc1",
+        "sample_count": 535,
+        "samples_per_second": 30.000000000000004
+      },
+      {
+        "width": 0.0,
+        "height": 0.0,
+        "timescale": 48000,
+        "duration_seconds": 17.834333333333333,
+        "handler": "soun",
+        "codec": "mp4a",
+        "sample_count": 836,
+        "samples_per_second": 46.87587611909613
+      }
+    ],
+    "no_transcoding": true
+  }
+}

@@ -16,33 +16,16 @@ SFT保持同一55维映射、相对臂／绝对夹爪统计和冻结教师。800
 
 train.sh的base20k分支使用原数值实现，仅对两个根目录做环境变量适配，spawn worker继承相同路径。prepare_assets.py生成新路径的真实输入索引，train.sh --data-only检查实际reader，正式分支启动4-rank torchrun。每次选新的run名，完整保存；身份记录对应发行代码和实际输入。
 
-## 最终边界恢复入口
+## 重新训练、继续训练与模型评测
 
-最终23文件保留严格身份绑定。复现11000→16000边界时，在专用容器的目录空间中提供：
+从官方基座重新训练时，运行者自行指定公开资产与新工作目录，各阶段产生后续阶段需要的模型和optimizer状态。无需原服务器账号，也无需在评委机器上复刻本团队的磁盘挂载路径。
 
-```text
-/mnt/raid1/lingbotvla_smoke_20261009/
-  code/lingbot-vla-v2/、code/src/、models/、datasets/
-/mnt/raid1/lingbotvla_sft_amd8000_to10000_20261020/
-  incoming/model8000/、artifacts/、完整10000状态
-/mnt/raid1/lingbotvla_sft_aug6000_b192_20261022/
-  train_geometryfix11000_requested/  ← src/final_runtime原文件
-  artifacts/                       ← 原清单、过滤、来源和实际恢复gate
-  foreground/manifest.reviewed.json及逐轨迹缓存
-  runs/formal_aug6000_b192/checkpoint_sft_011000/
-```
+11000步是本团队将主视角几何增强切换为45%时的内部训练断点。`src/final_runtime`保留实际数值实现与当时的身份校验，`train.sh --stage aug16000`目前仍是对应内部完整状态的历史恢复分支，不能将它当作从官方基座直接开始训练的便携入口。
 
-```bash
-bash train.sh --stage aug16000 \
-  --runtime-root /mnt/raid1/lingbotvla_sft_aug6000_b192_20261022 \
-  --resume /mnt/raid1/lingbotvla_sft_aug6000_b192_20261022/runs/formal_aug6000_b192/checkpoint_sft_011000 \
-  --run reproduce_aug16000
-```
-
-输入为完整4份model／Adam与4份data／RNG分片，complete及readback绑定实际内容。入口检查实际ready-for-formal回执；推理dense分片只包含学生权重和推理资产。
+完整断点包含4份model／Adam、4份data／RNG分片，以及文件内容与配置校验；它只用于继续训练和核查训练状态。提交模型的评测使用`eval.sh`加载最终dense权重、processor、robot配置和norm，不读取上述中间断点、Adam或旧训练验收文件。
 
 ## 跨阶段复现剩余工作
 
-发行材料已提供各阶段数值实现、保存修复、重分片和前景生产源码。基座20k入口完成目录适配；其它历史阶段保留原路径和严格身份检查。将基座训练自动衔接到最终模型，还需统一LoRA dense导出、AMD／CUDA启动配置、10000→11000原配置、前景缓存和完整Adam状态的目录迁移，并做独立GPU验收。
+发行材料已提供各阶段数值实现、保存修复、重分片和前景生产源码。基座20k入口完成目录适配；其它历史阶段保留原运行记录。将基座训练衔接到最终模型，还需统一LoRA dense导出、AMD／CUDA启动配置、10000→11000配置和前景缓存准备，令新运行自行产生并验证中间状态，再做独立GPU验收。这是发行代码的整合工作，不是要求评委补交本团队的历史文件。
 
 完整训练一键复现仍列为待验收项。已完成的原训练结果、最终源码身份、推理包完整性和新发行入口的独立运行验证分别记录。

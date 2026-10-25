@@ -3,7 +3,7 @@
   "status": "DRAFT_NOT_READY_TO_SUBMIT",
   "team_name": "HumaLog",
   "team_id": "1380507",
-  "real_robot_demo": false,
+  "real_robot_demo": true,
   "model_revision": "2b1e8a52668d38dbc91a01bf0d83085ba7a8f8a1",
   "final_training_completed": true,
   "source_files_exact_sha_verified": 23,
@@ -14,11 +14,11 @@
   "zip_created": false,
   "uploaded_to_tianchi": false,
   "missing_items": [
-    "基座到最终模型的完整跨阶段自动衔接：LoRA导出、AMD/CUDA配置、前景/清单和完整Adam身份迁移",
-    "发行入口在独立GPU环境的真实加载、图像预处理、动作反归一化及保存恢复验收",
-    "仿真二进制/资产和site-packages调整在独立新环境的安装验证",
-    "如参加小红书活动，填写团队账号及原创链接",
-    "最终完整ZIP校验及天池提交"
+    "基座到最终模型的分阶段便携训练衔接及独立GPU验收（由新运行产生中间状态，不要求评委提供原服务器路径或历史断点）",
+    "发行评测入口在新安装GPU环境的独立运行验收",
+    "仿真二进制、资产和安装调整在新环境的验证",
+    "小红书笔记公开可访问性与两个活动话题确认",
+    "合入实际模型权重后的最终完整ZIP校验及天池提交"
   ],
   "prepared_date": "2026-10-24",
   "online_training_reads": 0,
@@ -82,5 +82,22 @@
     "independent_portable_release_gpu_acceptance": false
   },
   "actual_evaluation_runtime_acceptance_verified": true,
-  "evaluation_evidence": "01_评测结果/evidence/local-result-verification.json"
+  "evaluation_evidence": "01_评测结果/evidence/local-result-verification.json",
+  "real_robot_demo_materials_integrated": true,
+  "real_robot_demo_model": "LingBot-VLA",
+  "real_robot_demo_training": "full_parameter_SFT",
+  "real_robot_demo_autonomous_execution_team_confirmed": true,
+  "real_robot_demo_video_unmodified": true,
+  "social_activity_information_filled": true,
+  "social_account": "Elowyn",
+  "social_note_url": "https://xhslink.cn/o/7b8cCmUEsoy",
+  "social_note_public_page_independently_verified": false,
+  "reviewer_guide": "评委运行入口说明.md",
+  "inference_requires_training_optimizer": false,
+  "inference_requires_intermediate_checkpoint": false,
+  "original_server_paths_required_for_inference": false,
+  "supplementary_materials_source": "04_复现与调优说明/evidence/additional-materials-manifest.json",
+  "materials_only_zip_created": true,
+  "materials_only_zip_name": "HumaLog_文档代码结果与Demo_不含模型.zip",
+  "complete_weight_zip_created": false
 }

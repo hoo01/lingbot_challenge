@@ -14,7 +14,7 @@
 | 模型归档 | [HumaLog 16000步模型](https://huggingface.co/Humalog2/Lab20k-FullSFT-Aug16000) |
 | 代码与模型版本 | 见[附录：版本与文件校验索引](evidence/version-index.md) |
 | 规模 | 6,375,906,359参数，1672个参数tensor，36个持久buffer |
-| 真机创新任务 | 本次暂不提交 |
+| 真机创新任务 | 双SO101物体交接，LingBot-VLA全参数SFT；见[Demo项目说明](../05_真机创新可选任务/demo_report.md) |
 
 模型名称中的16000指Lab20k之后的续训累计步数，沿本训练流程共完成36000次正式optimizer更新。
 
@@ -33,7 +33,7 @@
 
 后续8000＋2000＋6000步均为全参数SFT，全部学生参数参与更新，教师保持冻结；沿用原有效帧比例采样，EMA关闭。
 
-最终11000切换后使用的23个核心源码文件位于代码材料src/final_runtime。分阶段实现、安装与入口见代码材料README.md、INSTALL.md及TRAINING.md；跨阶段身份迁移和独立GPU复现按实际验收状态记录。
+最终11000切换后使用的23个核心源码文件位于代码材料src/final_runtime。分阶段实现、安装与入口见代码材料README.md、INSTALL.md及TRAINING.md；跨阶段身份迁移和独立GPU复现按实际验收状态记录。运行者自行选择资产和工作目录；内部11000步断点不是模型评测的前置条件，从基座重新训练时由阶段流程自行产生中间状态。
 
 ### 2.2 原始帧索引与数据清理
 
@@ -149,7 +149,7 @@ FP32主参数、Adam矩及保存参数与模块混合精度计算分开记录。
 
 模型交付目录为03_模型权重/checkpoint，保留发布包内的相对目录结构、processor与norm，推理配置入口为inference-cli.yaml。14份FP32权重共25,503,888,740字节，逐文件身份见model_manifest.json。
 
-模型入口与文件清单见03_模型权重/model_manifest.json。HF仓库作为模型来源归档，提交文件使用与其一致的完整checkpoint。
+模型入口与文件清单见03_模型权重/model_manifest.json。HF仓库作为模型来源归档，提交文件使用与其一致的完整checkpoint。最终模型评测不需要Adam状态、中间断点或本团队原服务器路径。
 
 评测入口为代码材料eval.sh，显式指定checkpoint-root、setting、GPU、端口及新工作目录。Clean与Random的完整命令见代码材料README.md，安装、公开资产与真实渲染检查分别见INSTALL.md和ASSETS.md。实际16000评测源码、RoboTwin任务／配置快照与两个运行环境版本已一并归档。
 
@@ -201,3 +201,9 @@ results.json保持schema_version、team_id、results及clean／randomized下50�
 - [赛事提交说明](https://tianchi.aliyun.com/competition/entrance/532514/information)，于2026-10-24核对。
 - 训练完成记录、导出说明、逐步loss和曲线保存在evidence目录。
 - 模型、代码、数据与公开模块的精确版本及文件校验信息见[版本与文件校验索引](evidence/version-index.md)。
+
+## 7. 真机创新Demo与小红书活动
+
+真机Demo采用两台SO101从臂和LeRobot数据／设备接口，基于LingBot-VLA使用真机示范进行全参数SFT，展示桌面物体抓取、双臂交接和接收臂转移。原视频及按官方模板整理的说明见[05_真机创新可选任务](../05_真机创新可选任务/demo_report.md)。原视频约17.83秒，材料整理未转码或剪辑；完整任务成功率未提供重复试验统计，末段放置的可见性限制在项目说明中保留。
+
+小红书活动账号为Elowyn，团队提供的笔记链接及活动信息见[06_小红书创作活动](../06_小红书创作活动/xiaohongshu_info.md)。
